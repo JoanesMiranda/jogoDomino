@@ -66,7 +66,7 @@ public class TelaInicial extends JFrame {
 		btnCadastro.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				@SuppressWarnings("unused")
-				Cadastro telaCadastro = new Cadastro();
+				TelaCadastro telaCadastro = new TelaCadastro();
 			}
 		});
 		btnCadastro.setForeground(Color.BLACK);

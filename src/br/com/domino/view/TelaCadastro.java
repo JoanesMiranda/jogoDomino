@@ -24,7 +24,7 @@ import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 import java.awt.event.ActionEvent;
 
-public class Cadastro extends JFrame {
+public class TelaCadastro extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JTextField txtNome;
@@ -40,7 +40,7 @@ public class Cadastro extends JFrame {
 	JLabel lblMostrarAvatar;
 	private JTextField txtLogin;
 
-	public Cadastro() {
+	public TelaCadastro() {
 		setLocation(new Point(500, 170));
 		getContentPane().setBackground(Color.WHITE);
 		setBackground(Color.WHITE);
