@@ -180,7 +180,8 @@ public class TelaDoJogo extends JFrame {
 		btnpeca1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
-				System.out.println(l1 = array.get(0).toString());
+
+				l1 = array.get(0).toString();
 				if (aux == 1) {
 					btnpeca1.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
@@ -223,7 +224,7 @@ public class TelaDoJogo extends JFrame {
 		btnpeca2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
-				System.out.println(l2 = array.get(1).toString());
+				l2 = array.get(1).toString();
 				if (aux == 1) {
 					btnpeca2.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l2 + ".png"));
@@ -267,7 +268,7 @@ public class TelaDoJogo extends JFrame {
 		btnpeca3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
-				System.out.println(l3 = array.get(2).toString());
+				l3 = array.get(2).toString();
 				if (aux == 1) {
 					btnpeca3.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l3 + ".png"));
@@ -311,7 +312,7 @@ public class TelaDoJogo extends JFrame {
 		btnpeca4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
-				System.out.println(l4 = array.get(3).toString());
+				l4 = array.get(3).toString();
 				if (aux == 1) {
 					btnpeca4.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l4 + ".png"));
@@ -355,7 +356,7 @@ public class TelaDoJogo extends JFrame {
 		btnpeca5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
-				System.out.println(l5 = array.get(4).toString());
+				l5 = array.get(4).toString();
 				if (aux == 1) {
 					btnpeca5.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l5 + ".png"));
@@ -399,10 +400,10 @@ public class TelaDoJogo extends JFrame {
 		btnpeca6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
-				System.out.println(l6 = array.get(5).toString());
+				l6 = array.get(5).toString();
 				if (aux == 1) {
 					btnpeca6.setEnabled(false);
-					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l6 + ".png"));
+					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l6 + ".png"));
 				} else {
 					if (aux == 2) {
 						btnpeca6.setEnabled(false);
@@ -443,7 +444,7 @@ public class TelaDoJogo extends JFrame {
 		btnpeca7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
-				System.out.println(l7 = array.get(6).toString());
+				l7 = array.get(6).toString();
 				if (aux == 1) {
 					btnpeca7.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l7 + ".png"));
@@ -490,7 +491,7 @@ public class TelaDoJogo extends JFrame {
 				l8 = array.get(7).toString();
 				if (aux == 1) {
 					btnpeca8.setEnabled(false);
-					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l8 + ".png"));
+					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l8 + ".png"));
 				} else {
 					if (aux == 2) {
 						btnpeca8.setEnabled(false);
@@ -532,7 +533,7 @@ public class TelaDoJogo extends JFrame {
 				l9 = array.get(8).toString();
 				if (aux == 1) {
 					btnpeca9.setEnabled(false);
-					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l9 + ".png"));
+					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l9 + ".png"));
 				} else {
 					if (aux == 2) {
 						btnpeca9.setEnabled(false);
@@ -575,7 +576,7 @@ public class TelaDoJogo extends JFrame {
 				l10 = array.get(9).toString();
 				if (aux == 1) {
 					btnpeca10.setEnabled(false);
-					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l10 + ".png"));
+					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l10 + ".png"));
 				} else {
 					if (aux == 2) {
 						btnpeca10.setEnabled(false);
@@ -617,7 +618,7 @@ public class TelaDoJogo extends JFrame {
 				l11 = array.get(10).toString();
 				if (aux == 1) {
 					btnpeca11.setEnabled(false);
-					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l11 + ".png"));
+					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l11 + ".png"));
 				} else {
 					if (aux == 2) {
 						btnpeca11.setEnabled(false);
@@ -659,7 +660,7 @@ public class TelaDoJogo extends JFrame {
 				l12 = array.get(11).toString();
 				if (aux == 1) {
 					btnpeca12.setEnabled(false);
-					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l12 + ".png"));
+					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l12 + ".png"));
 				} else {
 					if (aux == 2) {
 						btnpeca12.setEnabled(false);
@@ -702,7 +703,7 @@ public class TelaDoJogo extends JFrame {
 				l13 = array.get(12).toString();
 				if (aux == 1) {
 					btnpeca13.setEnabled(false);
-					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l13 + ".png"));
+					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l13 + ".png"));
 				} else {
 					if (aux == 2) {
 						btnpeca13.setEnabled(false);
@@ -744,7 +745,7 @@ public class TelaDoJogo extends JFrame {
 				l14 = array.get(13).toString();
 				if (aux == 1) {
 					btnpeca14.setEnabled(false);
-					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l14 + ".png"));
+					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l14 + ".png"));
 				} else {
 					if (aux == 2) {
 						btnpeca14.setEnabled(false);
@@ -786,7 +787,7 @@ public class TelaDoJogo extends JFrame {
 				l15 = array.get(14).toString();
 				if (aux == 1) {
 					btnpeca15.setEnabled(false);
-					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l15 + ".png"));
+					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l15 + ".png"));
 				} else {
 					if (aux == 2) {
 						btnpeca15.setEnabled(false);
@@ -829,7 +830,7 @@ public class TelaDoJogo extends JFrame {
 				l16 = array.get(15).toString();
 				if (aux == 1) {
 					btnpeca16.setEnabled(false);
-					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l16 + ".png"));
+					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l16 + ".png"));
 				} else {
 					if (aux == 2) {
 						btnpeca16.setEnabled(false);
@@ -868,10 +869,10 @@ public class TelaDoJogo extends JFrame {
 		btnpeca17.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
-				l7 = array.get(16).toString();
+				l17 = array.get(16).toString();
 				if (aux == 1) {
 					btnpeca17.setEnabled(false);
-					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l17 + ".png"));
+					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l17 + ".png"));
 				} else {
 					if (aux == 2) {
 						btnpeca17.setEnabled(false);
@@ -912,10 +913,10 @@ public class TelaDoJogo extends JFrame {
 		btnpeca18.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
-				l8 = array.get(17).toString();
+				l18 = array.get(17).toString();
 				if (aux == 1) {
 					btnpeca18.setEnabled(false);
-					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l18 + ".png"));
+					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l18 + ".png"));
 				} else {
 					if (aux == 2) {
 						btnpeca18.setEnabled(false);
@@ -957,7 +958,7 @@ public class TelaDoJogo extends JFrame {
 				l19 = array.get(18).toString();
 				if (aux == 1) {
 					btnpeca19.setEnabled(false);
-					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l19 + ".png"));
+					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l19 + ".png"));
 				} else {
 					if (aux == 2) {
 						btnpeca19.setEnabled(false);
@@ -1000,7 +1001,7 @@ public class TelaDoJogo extends JFrame {
 				l20 = array.get(19).toString();
 				if (aux == 1) {
 					btnpeca20.setEnabled(false);
-					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l20 + ".png"));
+					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l20 + ".png"));
 				} else {
 					if (aux == 2) {
 						btnpeca20.setEnabled(false);
@@ -1043,7 +1044,7 @@ public class TelaDoJogo extends JFrame {
 				l21 = array.get(20).toString();
 				if (aux == 1) {
 					btnpeca21.setEnabled(false);
-					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l21 + ".png"));
+					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l21 + ".png"));
 				} else {
 					if (aux == 2) {
 						btnpeca21.setEnabled(false);
@@ -1085,7 +1086,7 @@ public class TelaDoJogo extends JFrame {
 				l22 = array.get(21).toString();
 				if (aux == 1) {
 					btnpeca22.setEnabled(false);
-					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l22 + ".png"));
+					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l22 + ".png"));
 				} else {
 					if (aux == 2) {
 						btnpeca22.setEnabled(false);
@@ -1127,7 +1128,7 @@ public class TelaDoJogo extends JFrame {
 				l23 = array.get(22).toString();
 				if (aux == 1) {
 					btnpeca23.setEnabled(false);
-					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l23 + ".png"));
+					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l23 + ".png"));
 				} else {
 					if (aux == 2) {
 						btnpeca23.setEnabled(false);
@@ -1169,7 +1170,7 @@ public class TelaDoJogo extends JFrame {
 				l24 = array.get(23).toString();
 				if (aux == 1) {
 					btnpeca24.setEnabled(false);
-					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l24 + ".png"));
+					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l24 + ".png"));
 				} else {
 					if (aux == 2) {
 						btnpeca24.setEnabled(false);
@@ -1211,7 +1212,7 @@ public class TelaDoJogo extends JFrame {
 				l25 = array.get(24).toString();
 				if (aux == 1) {
 					btnpeca25.setEnabled(false);
-					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l25 + ".png"));
+					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l25 + ".png"));
 				} else {
 					if (aux == 2) {
 						btnpeca25.setEnabled(false);
@@ -1253,7 +1254,7 @@ public class TelaDoJogo extends JFrame {
 				l26 = array.get(25).toString();
 				if (aux == 1) {
 					btnpeca26.setEnabled(false);
-					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l26 + ".png"));
+					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l26 + ".png"));
 				} else {
 					if (aux == 2) {
 						btnpeca26.setEnabled(false);
@@ -1295,7 +1296,7 @@ public class TelaDoJogo extends JFrame {
 				l27 = array.get(26).toString();
 				if (aux == 1) {
 					btnpeca27.setEnabled(false);
-					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l27 + ".png"));
+					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l27 + ".png"));
 				} else {
 					if (aux == 2) {
 						btnpeca27.setEnabled(false);
@@ -1337,7 +1338,7 @@ public class TelaDoJogo extends JFrame {
 				l28 = array.get(27).toString();
 				if (aux == 1) {
 					btnpeca28.setEnabled(false);
-					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
+					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
 				} else {
 					if (aux == 2) {
 						btnpeca28.setEnabled(false);

@@ -4,11 +4,11 @@ import java.util.Random;
 
 public class Aleatorio {
 
-	public int[] geraNumerosAleatorios() {
+	public Integer[] geraNumerosAleatorios() {
 
 		Random gerador = new Random();
-		int numero;
-		int[] array = new int[28];
+		Integer numero;
+		Integer[] array = new Integer[28];
 
 		for (int i = 0; i < array.length; i++) {
 
