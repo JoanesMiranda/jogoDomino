@@ -6,5 +6,4 @@ public class Main {
 		TelaInicial tela = new TelaInicial();
 		tela.setVisible(true);
 	}
-
 }

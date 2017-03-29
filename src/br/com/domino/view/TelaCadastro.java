@@ -83,17 +83,18 @@ public class TelaCadastro extends JFrame {
 			@SuppressWarnings("deprecation")
 			public void actionPerformed(ActionEvent arg0) {
 				boolean salvo = false;
-				
+
 				if (txtNome.getText().isEmpty() || txtLogin.getText().isEmpty()
 						|| passwordFieldSenha.getText().isEmpty()) {
-					
+
 					JOptionPane.showMessageDialog(null, "Os Campos de Cadastro Não Podem Ficar Vazios");
-					
+
 				} else {
-					// recupera nome e caminho do icone avatar e envia para a classe do usuario.
+					// recupera nome e caminho do icone avatar e envia para a
+					// classe do usuario.
 					Usuario user = new Usuario();
 					user.setNome(txtNome.getText());
-					
+
 					// pegando apenas a posição do jComboBox para salvar no BD.
 					user.setAvatar(combo.getSelectedIndex());
 
@@ -105,37 +106,41 @@ public class TelaCadastro extends JFrame {
 						e.printStackTrace();
 					}
 
-					// recupera login, senha e ultimo id do usuario, envia para classe login
-					Login l = new Login();
-					l.setLogin(txtLogin.getText());
-					l.setSenha(passwordFieldSenha.getText());
+					if (passwordFieldSenha.getText().length() < 6 || passwordFieldSenha.getText().length() > 8) {
+						JOptionPane.showMessageDialog(null, "A senha deve ter no minimo 6 digitos e no maximo 8");
+					} else {
+						// recupera login, senha e ultimo id do usuario, envia
+						// para classe login
+						Login l = new Login();
+						l.setLogin(txtLogin.getText());
+						l.setSenha(passwordFieldSenha.getText());
 
-					// recupera o ultimo ID do usuario salvo no BD
-					UsuarioController uc = new UsuarioController();
-					try {
-						l.setUsuario(uc.recuperaUltimoId(txtNome.getText()));
-					} catch (Exception e) {
-						e.printStackTrace();
-					}
-
-					// enviar as informações para serem salvas no BD
-					LoginController lc = new LoginController();
-					try {
-						if(salvo == true){
-							lc.salvar(l);
-							JOptionPane.showMessageDialog(null, "Dados Salvo com Sucesso");
+						// recupera o ultimo ID do usuario salvo no BD
+						UsuarioController uc = new UsuarioController();
+						try {
+							l.setUsuario(uc.recuperaUltimoId(txtNome.getText()));
+						} catch (Exception e) {
+							e.printStackTrace();
 						}
-						
-					} catch (Exception e) {
-						e.printStackTrace();
+
+						// enviar as informações para serem salvas no BD
+						LoginController lc = new LoginController();
+						try {
+							if (salvo == true) {
+								lc.salvar(l);
+								JOptionPane.showMessageDialog(null, "Dados Salvo com Sucesso");
+							}
+
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
+
+						txtNome.setText("");
+						txtLogin.setText("");
+						passwordFieldSenha.setText("");
+						combo.setSelectedIndex(0);
 					}
-
-					txtNome.setText("");
-					txtLogin.setText("");
-					passwordFieldSenha.setText("");
-					combo.setSelectedIndex(0);
 				}
-
 			}
 		});
 		btnSalvar.setBounds(47, 292, 100, 50);

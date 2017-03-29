@@ -21,7 +21,6 @@ import javax.swing.JPasswordField;
 
 public class TelaLogin extends JFrame {
 
-	
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTextField txtLogin;
@@ -62,6 +61,7 @@ public class TelaLogin extends JFrame {
 		JButton btnEntrar = new JButton(entrar);
 		btnEntrar.addActionListener(new ActionListener() {
 
+			@SuppressWarnings("static-access")
 			public void actionPerformed(ActionEvent arg0) {
 
 				LoginController login = new LoginController();
@@ -69,18 +69,13 @@ public class TelaLogin extends JFrame {
 					@SuppressWarnings("deprecation")
 					boolean valor = login.loginUsuario(txtLogin.getText(), passwordFieldSenha.getText());
 					if (valor == true) {
-						
-						
 						dispose();
 						TelaDoNivel td = new TelaDoNivel();
 						td.Tnivel();
-						
-						
 					} else {
 						JOptionPane.showMessageDialog(null, "Usuario ou Senha Invalida");
 					}
 				} catch (Exception e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
@@ -100,9 +95,6 @@ public class TelaLogin extends JFrame {
 		lbllogin.setForeground(Color.BLACK);
 		lbllogin.setBounds(197, 64, 100, 87);
 		contentPane.add(lbllogin);
-		
-		
-		
 
 		JLabel lblbackground = new JLabel("");
 		lblbackground.setFont(new Font("Arial", Font.PLAIN, 18));

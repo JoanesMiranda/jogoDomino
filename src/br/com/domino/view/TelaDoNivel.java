@@ -11,14 +11,18 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-public class TelaDoNivel extends JFrame{
+public class TelaDoNivel extends JFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JFrame frame;
 
 	/**
 	 * Launch the application.
 	 */
-	
+
 	public static void Tnivel() {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -38,7 +42,7 @@ public class TelaDoNivel extends JFrame{
 	public TelaDoNivel() {
 		initialize();
 	}
-	
+
 	public void Screen() {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -57,6 +61,7 @@ public class TelaDoNivel extends JFrame{
 	 */
 	private void initialize() {
 		frame = new JFrame();
+		frame.setResizable(false);
 		frame.setBounds(100, 100, 422, 300);
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
@@ -67,8 +72,8 @@ public class TelaDoNivel extends JFrame{
 		btnNewButton.addActionListener(new ActionListener() {
 
 			public void actionPerformed(ActionEvent e) {
-				TelaDoJogoPrincipal sc = new TelaDoJogoPrincipal();
-				sc.Screen();
+				TelaDoJogo sc = new TelaDoJogo();
+				sc.setVisible(true);
 				frame.dispose();
 			}
 		});
@@ -80,8 +85,8 @@ public class TelaDoNivel extends JFrame{
 		btnDificil.setFont(new Font("Sylfaen", Font.BOLD, 13));
 		btnDificil.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				TelaDoJogoPrincipal sc = new TelaDoJogoPrincipal();
-				sc.Screen();
+				TelaDoJogo sc = new TelaDoJogo();
+				sc.setVisible(true);
 				frame.dispose();
 			}
 		});
