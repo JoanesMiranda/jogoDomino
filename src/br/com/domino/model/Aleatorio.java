@@ -1,27 +1,23 @@
 package br.com.domino.model;
 
-import java.util.Random;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class Aleatorio {
 
-	public Integer[] geraNumerosAleatorios() {
+	public int[] geraNumerosAleatorios() {
 
-		Random gerador = new Random();
-		Integer numero;
-		Integer[] array = new Integer[28];
-
-		for (int i = 0; i < array.length; i++) {
-
-			numero = gerador.nextInt(27) + 1;
-			for (int j = 0; j < array.length; j++) {
-				if (numero == array[j] && j != i) {
-					numero = gerador.nextInt(27) + 1;
-				} else {
-					array[i] = numero;
-				}
-			}
+		int[] array = new int[28];
+		List<Integer> numeros = new ArrayList<Integer>();
+		for (int i = 0; i < 28; i++) {
+		    numeros.add(i);
+		}
+		 Collections.shuffle(numeros);
+		for (int i = 0; i < 28; i++) {
+		   System.out.println(array[i] = numeros.get(i));
 		}
 		return array;
 	}
-
+		
 }

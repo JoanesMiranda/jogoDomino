@@ -1,7 +1,6 @@
 package br.com.domino.view;
 
 import java.awt.GridLayout;
-
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -9,14 +8,15 @@ import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-
 import br.com.domino.model.Aleatorio;
-
 import java.awt.Font;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.awt.event.ActionEvent;
+import javax.swing.border.LineBorder;
+import java.awt.Color;
 
 public class TelaDoJogo extends JFrame {
 
@@ -27,6 +27,7 @@ public class TelaDoJogo extends JFrame {
 	Aleatorio al = new Aleatorio();
 
 	private static final long serialVersionUID = 1L;
+	private JButton btnhumano10;
 
 	public TelaDoJogo() {
 
@@ -81,6 +82,10 @@ public class TelaDoJogo extends JFrame {
 		panel_pecasMaquina.setLayout(new GridLayout(1, 20, 0, 0));
 
 		JButton btnmaquina1 = new JButton("");
+		btnmaquina1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
 		JButton btnmaquina2 = new JButton("");
 		JButton btnmaquina3 = new JButton("");
 		JButton btnmaquina4 = new JButton("");
@@ -140,7 +145,7 @@ public class TelaDoJogo extends JFrame {
 		JButton btnhumano7 = new JButton("");
 		JButton btnhumano8 = new JButton("");
 		JButton btnhumano9 = new JButton("");
-		JButton btnhumano10 = new JButton("");
+		btnhumano10 = new JButton("");
 		JButton btnhumano11 = new JButton("");
 		JButton btnhumano12 = new JButton("");
 		JButton btnhumano13 = new JButton("");
@@ -180,43 +185,112 @@ public class TelaDoJogo extends JFrame {
 		btnpeca1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
-
 				l1 = array.get(0).toString();
-				if (aux == 1) {
+				switch (aux) {
+				case 1:
 					btnpeca1.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
-				} else {
-					if (aux == 2) {
-						btnpeca1.setEnabled(false);
-						btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
-					} else {
-						if (aux == 3) {
-							btnpeca1.setEnabled(false);
-							btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
-						} else {
-							if (aux == 4) {
-								btnpeca1.setEnabled(false);
-								btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
-							} else {
-								if (aux == 5) {
-									btnpeca1.setEnabled(false);
-									btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
-								} else {
-									if (aux == 6) {
-										btnpeca1.setEnabled(false);
-										btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
-									} else {
-										if (aux == 7) {
-											btnpeca1.setEnabled(false);
-											btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
-										}
-									}
-								}
-							}
-						}
-					}
+					break;
+				case 2:
+					btnpeca1.setEnabled(false);
+					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					break;
+				case 3:
+					btnpeca1.setEnabled(false);
+					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					break;
+				case 4:
+					btnpeca1.setEnabled(false);
+					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					break;
+				case 5:
+					btnpeca1.setEnabled(false);
+					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					break;
+				case 6:
+					btnpeca1.setEnabled(false);
+					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					break;
+				case 7:
+					btnpeca1.setEnabled(false);
+					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					break;
+				case 8:
+					btnpeca1.setEnabled(false);
+					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					break;
+				case 9:
+					btnpeca1.setEnabled(false);
+					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					break;
+				case 10:
+					btnpeca1.setEnabled(false);
+					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					break;
+				case 11:
+					btnpeca1.setEnabled(false);
+					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					break;
+				case 12:
+					btnpeca1.setEnabled(false);
+					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					break;
+				case 13:
+					btnpeca1.setEnabled(false);
+					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					break;
+				case 14:
+					btnpeca1.setEnabled(false);
+					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					break;
+
+				default:
+					JOptionPane.showMessageDialog(null, "Peças esgotadas");
+					break;
 				}
 
+				// l1 = array.get(0).toString();
+				// if (aux == 1) {
+				// btnpeca1.setEnabled(false);
+				// btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l1
+				// + ".png"));
+				// } else {
+				// if (aux == 2) {
+				// btnpeca1.setEnabled(false);
+				// btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l1
+				// + ".png"));
+				// } else {
+				// if (aux == 3) {
+				// btnpeca1.setEnabled(false);
+				// btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l1
+				// + ".png"));
+				// } else {
+				// if (aux == 4) {
+				// btnpeca1.setEnabled(false);
+				// btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l1
+				// + ".png"));
+				// } else {
+				// if (aux == 5) {
+				// btnpeca1.setEnabled(false);
+				// btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l1
+				// + ".png"));
+				// } else {
+				// if (aux == 6) {
+				// btnpeca1.setEnabled(false);
+				// btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l1
+				// + ".png"));
+				// } else {
+				// if (aux == 7) {
+				// btnpeca1.setEnabled(false);
+				// btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l1
+				// + ".png"));
+				// }
+				// }
+				// }
+				// }
+				// }
+				// }
+				// }
 			}
 		});
 
@@ -225,40 +299,110 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				l2 = array.get(1).toString();
-				if (aux == 1) {
+				switch (aux) {
+				case 1:
 					btnpeca2.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l2 + ".png"));
-				} else {
-					if (aux == 2) {
-						btnpeca2.setEnabled(false);
-						btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l2 + ".png"));
-					} else {
-						if (aux == 3) {
-							btnpeca2.setEnabled(false);
-							btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l2 + ".png"));
-						} else {
-							if (aux == 4) {
-								btnpeca2.setEnabled(false);
-								btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l2 + ".png"));
-							} else {
-								if (aux == 5) {
-									btnpeca2.setEnabled(false);
-									btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l2 + ".png"));
-								} else {
-									if (aux == 6) {
-										btnpeca2.setEnabled(false);
-										btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l2 + ".png"));
-									} else {
-										if (aux == 7) {
-											btnpeca2.setEnabled(false);
-											btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l2 + ".png"));
-										}
-									}
-								}
-							}
-						}
-					}
+					break;
+				case 2:
+					btnpeca2.setEnabled(false);
+					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l2 + ".png"));
+					break;
+				case 3:
+					btnpeca2.setEnabled(false);
+					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l2 + ".png"));
+					break;
+				case 4:
+					btnpeca2.setEnabled(false);
+					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l2 + ".png"));
+					break;
+				case 5:
+					btnpeca2.setEnabled(false);
+					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l2 + ".png"));
+					break;
+				case 6:
+					btnpeca2.setEnabled(false);
+					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l2 + ".png"));
+					break;
+				case 7:
+					btnpeca2.setEnabled(false);
+					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l2 + ".png"));
+					break;
+				case 8:
+					btnpeca2.setEnabled(false);
+					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l2 + ".png"));
+					break;
+				case 9:
+					btnpeca2.setEnabled(false);
+					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l2 + ".png"));
+					break;
+				case 10:
+					btnpeca2.setEnabled(false);
+					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l2 + ".png"));
+					break;
+				case 11:
+					btnpeca2.setEnabled(false);
+					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l2 + ".png"));
+					break;
+				case 12:
+					btnpeca2.setEnabled(false);
+					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l2 + ".png"));
+					break;
+				case 13:
+					btnpeca2.setEnabled(false);
+					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l2 + ".png"));
+					break;
+				case 14:
+					btnpeca2.setEnabled(false);
+					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l2 + ".png"));
+					break;
+
+				default:
+					JOptionPane.showMessageDialog(null, "Peças esgotadas");
+					break;
 				}
+
+				// if (aux == 1) {
+				// btnpeca2.setEnabled(false);
+				// btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l2
+				// + ".png"));
+				// } else {
+				// if (aux == 2) {
+				// btnpeca2.setEnabled(false);
+				// btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l2
+				// + ".png"));
+				// } else {
+				// if (aux == 3) {
+				// btnpeca2.setEnabled(false);
+				// btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l2
+				// + ".png"));
+				// } else {
+				// if (aux == 4) {
+				// btnpeca2.setEnabled(false);
+				// btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l2
+				// + ".png"));
+				// } else {
+				// if (aux == 5) {
+				// btnpeca2.setEnabled(false);
+				// btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l2
+				// + ".png"));
+				// } else {
+				// if (aux == 6) {
+				// btnpeca2.setEnabled(false);
+				// btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l2
+				// + ".png"));
+				// } else {
+				// if (aux == 7) {
+				// btnpeca2.setEnabled(false);
+				// btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l2
+				// + ".png"));
+				// }
+				// }
+				// }
+				// }
+				// }
+				// }
+				// }
 
 			}
 
@@ -269,40 +413,111 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				l3 = array.get(2).toString();
-				if (aux == 1) {
+
+				switch (aux) {
+				case 1:
 					btnpeca3.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l3 + ".png"));
-				} else {
-					if (aux == 2) {
-						btnpeca3.setEnabled(false);
-						btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l3 + ".png"));
-					} else {
-						if (aux == 3) {
-							btnpeca3.setEnabled(false);
-							btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l3 + ".png"));
-						} else {
-							if (aux == 4) {
-								btnpeca3.setEnabled(false);
-								btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l3 + ".png"));
-							} else {
-								if (aux == 5) {
-									btnpeca3.setEnabled(false);
-									btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l3 + ".png"));
-								} else {
-									if (aux == 6) {
-										btnpeca3.setEnabled(false);
-										btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l3 + ".png"));
-									} else {
-										if (aux == 7) {
-											btnpeca3.setEnabled(false);
-											btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l3 + ".png"));
-										}
-									}
-								}
-							}
-						}
-					}
+					break;
+				case 2:
+					btnpeca3.setEnabled(false);
+					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l3 + ".png"));
+					break;
+				case 3:
+					btnpeca3.setEnabled(false);
+					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l3 + ".png"));
+					break;
+				case 4:
+					btnpeca3.setEnabled(false);
+					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l3 + ".png"));
+					break;
+				case 5:
+					btnpeca3.setEnabled(false);
+					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l3 + ".png"));
+					break;
+				case 6:
+					btnpeca3.setEnabled(false);
+					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l3 + ".png"));
+					break;
+				case 7:
+					btnpeca3.setEnabled(false);
+					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l3 + ".png"));
+					break;
+				case 8:
+					btnpeca3.setEnabled(false);
+					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l3 + ".png"));
+					break;
+				case 9:
+					btnpeca3.setEnabled(false);
+					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l3 + ".png"));
+					break;
+				case 10:
+					btnpeca3.setEnabled(false);
+					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l3 + ".png"));
+					break;
+				case 11:
+					btnpeca3.setEnabled(false);
+					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l3 + ".png"));
+					break;
+				case 12:
+					btnpeca3.setEnabled(false);
+					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l3 + ".png"));
+					break;
+				case 13:
+					btnpeca3.setEnabled(false);
+					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l3 + ".png"));
+					break;
+				case 14:
+					btnpeca3.setEnabled(false);
+					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l3 + ".png"));
+					break;
+
+				default:
+					JOptionPane.showMessageDialog(null, "Peças esgotadas");
+					break;
 				}
+
+				// if (aux == 1) {
+				// btnpeca3.setEnabled(false);
+				// btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l3
+				// + ".png"));
+				// } else {
+				// if (aux == 2) {
+				// btnpeca3.setEnabled(false);
+				// btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l3
+				// + ".png"));
+				// } else {
+				// if (aux == 3) {
+				// btnpeca3.setEnabled(false);
+				// btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l3
+				// + ".png"));
+				// } else {
+				// if (aux == 4) {
+				// btnpeca3.setEnabled(false);
+				// btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l3
+				// + ".png"));
+				// } else {
+				// if (aux == 5) {
+				// btnpeca3.setEnabled(false);
+				// btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l3
+				// + ".png"));
+				// } else {
+				// if (aux == 6) {
+				// btnpeca3.setEnabled(false);
+				// btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l3
+				// + ".png"));
+				// } else {
+				// if (aux == 7) {
+				// btnpeca3.setEnabled(false);
+				// btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l3
+				// + ".png"));
+				// }
+				// }
+				// }
+				// }
+				// }
+				// }
+				// }
 
 			}
 
@@ -313,40 +528,111 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				l4 = array.get(3).toString();
-				if (aux == 1) {
+
+				switch (aux) {
+				case 1:
 					btnpeca4.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l4 + ".png"));
-				} else {
-					if (aux == 2) {
-						btnpeca4.setEnabled(false);
-						btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l4 + ".png"));
-					} else {
-						if (aux == 3) {
-							btnpeca4.setEnabled(false);
-							btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l4 + ".png"));
-						} else {
-							if (aux == 4) {
-								btnpeca4.setEnabled(false);
-								btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l4 + ".png"));
-							} else {
-								if (aux == 5) {
-									btnpeca4.setEnabled(false);
-									btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l4 + ".png"));
-								} else {
-									if (aux == 6) {
-										btnpeca4.setEnabled(false);
-										btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l4 + ".png"));
-									} else {
-										if (aux == 7) {
-											btnpeca4.setEnabled(false);
-											btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l4 + ".png"));
-										}
-									}
-								}
-							}
-						}
-					}
+					break;
+				case 2:
+					btnpeca4.setEnabled(false);
+					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l4 + ".png"));
+					break;
+				case 3:
+					btnpeca4.setEnabled(false);
+					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l4 + ".png"));
+					break;
+				case 4:
+					btnpeca4.setEnabled(false);
+					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l4 + ".png"));
+					break;
+				case 5:
+					btnpeca4.setEnabled(false);
+					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l4 + ".png"));
+					break;
+				case 6:
+					btnpeca4.setEnabled(false);
+					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l4 + ".png"));
+					break;
+				case 7:
+					btnpeca4.setEnabled(false);
+					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l4 + ".png"));
+					break;
+				case 8:
+					btnpeca4.setEnabled(false);
+					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l4 + ".png"));
+					break;
+				case 9:
+					btnpeca4.setEnabled(false);
+					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l4 + ".png"));
+					break;
+				case 10:
+					btnpeca4.setEnabled(false);
+					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l4 + ".png"));
+					break;
+				case 11:
+					btnpeca4.setEnabled(false);
+					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l4 + ".png"));
+					break;
+				case 12:
+					btnpeca4.setEnabled(false);
+					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l4 + ".png"));
+					break;
+				case 13:
+					btnpeca4.setEnabled(false);
+					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l4 + ".png"));
+					break;
+				case 14:
+					btnpeca4.setEnabled(false);
+					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l4 + ".png"));
+					break;
+
+				default:
+					JOptionPane.showMessageDialog(null, "Peças esgotadas");
+					break;
 				}
+
+				// if (aux == 1) {
+				// btnpeca4.setEnabled(false);
+				// btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l4
+				// + ".png"));
+				// } else {
+				// if (aux == 2) {
+				// btnpeca4.setEnabled(false);
+				// btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l4
+				// + ".png"));
+				// } else {
+				// if (aux == 3) {
+				// btnpeca4.setEnabled(false);
+				// btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l4
+				// + ".png"));
+				// } else {
+				// if (aux == 4) {
+				// btnpeca4.setEnabled(false);
+				// btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l4
+				// + ".png"));
+				// } else {
+				// if (aux == 5) {
+				// btnpeca4.setEnabled(false);
+				// btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l4
+				// + ".png"));
+				// } else {
+				// if (aux == 6) {
+				// btnpeca4.setEnabled(false);
+				// btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l4
+				// + ".png"));
+				// } else {
+				// if (aux == 7) {
+				// btnpeca4.setEnabled(false);
+				// btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l4
+				// + ".png"));
+				// }
+				// }
+				// }
+				// }
+				// }
+				// }
+				// }
 
 			}
 
@@ -357,40 +643,111 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				l5 = array.get(4).toString();
-				if (aux == 1) {
+
+				switch (aux) {
+				case 1:
 					btnpeca5.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l5 + ".png"));
-				} else {
-					if (aux == 2) {
-						btnpeca5.setEnabled(false);
-						btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l5 + ".png"));
-					} else {
-						if (aux == 3) {
-							btnpeca5.setEnabled(false);
-							btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l5 + ".png"));
-						} else {
-							if (aux == 4) {
-								btnpeca5.setEnabled(false);
-								btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l5 + ".png"));
-							} else {
-								if (aux == 5) {
-									btnpeca5.setEnabled(false);
-									btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l5 + ".png"));
-								} else {
-									if (aux == 6) {
-										btnpeca5.setEnabled(false);
-										btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l5 + ".png"));
-									} else {
-										if (aux == 7) {
-											btnpeca5.setEnabled(false);
-											btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l5 + ".png"));
-										}
-									}
-								}
-							}
-						}
-					}
+					break;
+				case 2:
+					btnpeca5.setEnabled(false);
+					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l5 + ".png"));
+					break;
+				case 3:
+					btnpeca5.setEnabled(false);
+					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l5 + ".png"));
+					break;
+				case 4:
+					btnpeca5.setEnabled(false);
+					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l5 + ".png"));
+					break;
+				case 5:
+					btnpeca5.setEnabled(false);
+					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l5 + ".png"));
+					break;
+				case 6:
+					btnpeca5.setEnabled(false);
+					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l5 + ".png"));
+					break;
+				case 7:
+					btnpeca5.setEnabled(false);
+					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l5 + ".png"));
+					break;
+				case 8:
+					btnpeca5.setEnabled(false);
+					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l5 + ".png"));
+					break;
+				case 9:
+					btnpeca5.setEnabled(false);
+					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l5 + ".png"));
+					break;
+				case 10:
+					btnpeca5.setEnabled(false);
+					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l5 + ".png"));
+					break;
+				case 11:
+					btnpeca5.setEnabled(false);
+					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l5 + ".png"));
+					break;
+				case 12:
+					btnpeca5.setEnabled(false);
+					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l5 + ".png"));
+					break;
+				case 13:
+					btnpeca5.setEnabled(false);
+					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l5 + ".png"));
+					break;
+				case 14:
+					btnpeca5.setEnabled(false);
+					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l5 + ".png"));
+					break;
+
+				default:
+					JOptionPane.showMessageDialog(null, "Peças esgotadas");
+					break;
 				}
+
+				// if (aux == 1) {
+				// btnpeca5.setEnabled(false);
+				// btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l5
+				// + ".png"));
+				// } else {
+				// if (aux == 2) {
+				// btnpeca5.setEnabled(false);
+				// btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l5
+				// + ".png"));
+				// } else {
+				// if (aux == 3) {
+				// btnpeca5.setEnabled(false);
+				// btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l5
+				// + ".png"));
+				// } else {
+				// if (aux == 4) {
+				// btnpeca5.setEnabled(false);
+				// btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l5
+				// + ".png"));
+				// } else {
+				// if (aux == 5) {
+				// btnpeca5.setEnabled(false);
+				// btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l5
+				// + ".png"));
+				// } else {
+				// if (aux == 6) {
+				// btnpeca5.setEnabled(false);
+				// btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l5
+				// + ".png"));
+				// } else {
+				// if (aux == 7) {
+				// btnpeca5.setEnabled(false);
+				// btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l5
+				// + ".png"));
+				// }
+				// }
+				// }
+				// }
+				// }
+				// }
+				// }
 
 			}
 
@@ -401,40 +758,111 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				l6 = array.get(5).toString();
-				if (aux == 1) {
+
+				switch (aux) {
+				case 1:
 					btnpeca6.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l6 + ".png"));
-				} else {
-					if (aux == 2) {
-						btnpeca6.setEnabled(false);
-						btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l6 + ".png"));
-					} else {
-						if (aux == 3) {
-							btnpeca6.setEnabled(false);
-							btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l6 + ".png"));
-						} else {
-							if (aux == 4) {
-								btnpeca6.setEnabled(false);
-								btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l6 + ".png"));
-							} else {
-								if (aux == 5) {
-									btnpeca6.setEnabled(false);
-									btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l6 + ".png"));
-								} else {
-									if (aux == 6) {
-										btnpeca6.setEnabled(false);
-										btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l6 + ".png"));
-									} else {
-										if (aux == 7) {
-											btnpeca6.setEnabled(false);
-											btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l6 + ".png"));
-										}
-									}
-								}
-							}
-						}
-					}
+					break;
+				case 2:
+					btnpeca6.setEnabled(false);
+					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l6 + ".png"));
+					break;
+				case 3:
+					btnpeca6.setEnabled(false);
+					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l6 + ".png"));
+					break;
+				case 4:
+					btnpeca6.setEnabled(false);
+					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l6 + ".png"));
+					break;
+				case 5:
+					btnpeca6.setEnabled(false);
+					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l6 + ".png"));
+					break;
+				case 6:
+					btnpeca6.setEnabled(false);
+					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l6 + ".png"));
+					break;
+				case 7:
+					btnpeca6.setEnabled(false);
+					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l6 + ".png"));
+					break;
+				case 8:
+					btnpeca6.setEnabled(false);
+					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l6 + ".png"));
+					break;
+				case 9:
+					btnpeca6.setEnabled(false);
+					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l6 + ".png"));
+					break;
+				case 10:
+					btnpeca6.setEnabled(false);
+					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l6 + ".png"));
+					break;
+				case 11:
+					btnpeca6.setEnabled(false);
+					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l6 + ".png"));
+					break;
+				case 12:
+					btnpeca6.setEnabled(false);
+					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l6 + ".png"));
+					break;
+				case 13:
+					btnpeca6.setEnabled(false);
+					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l6 + ".png"));
+					break;
+				case 14:
+					btnpeca6.setEnabled(false);
+					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l6 + ".png"));
+					break;
+
+				default:
+					JOptionPane.showMessageDialog(null, "Peças esgotadas");
+					break;
 				}
+
+				// if (aux == 1) {
+				// btnpeca6.setEnabled(false);
+				// btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l6
+				// + ".png"));
+				// } else {
+				// if (aux == 2) {
+				// btnpeca6.setEnabled(false);
+				// btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l6
+				// + ".png"));
+				// } else {
+				// if (aux == 3) {
+				// btnpeca6.setEnabled(false);
+				// btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l6
+				// + ".png"));
+				// } else {
+				// if (aux == 4) {
+				// btnpeca6.setEnabled(false);
+				// btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l6
+				// + ".png"));
+				// } else {
+				// if (aux == 5) {
+				// btnpeca6.setEnabled(false);
+				// btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l6
+				// + ".png"));
+				// } else {
+				// if (aux == 6) {
+				// btnpeca6.setEnabled(false);
+				// btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l6
+				// + ".png"));
+				// } else {
+				// if (aux == 7) {
+				// btnpeca6.setEnabled(false);
+				// btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l6
+				// + ".png"));
+				// }
+				// }
+				// }
+				// }
+				// }
+				// }
+				// }
 
 			}
 
@@ -445,40 +873,111 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				l7 = array.get(6).toString();
-				if (aux == 1) {
+
+				switch (aux) {
+				case 1:
 					btnpeca7.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l7 + ".png"));
-				} else {
-					if (aux == 2) {
-						btnpeca7.setEnabled(false);
-						btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l7 + ".png"));
-					} else {
-						if (aux == 3) {
-							btnpeca7.setEnabled(false);
-							btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l7 + ".png"));
-						} else {
-							if (aux == 4) {
-								btnpeca7.setEnabled(false);
-								btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l7 + ".png"));
-							} else {
-								if (aux == 5) {
-									btnpeca7.setEnabled(false);
-									btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l7 + ".png"));
-								} else {
-									if (aux == 6) {
-										btnpeca7.setEnabled(false);
-										btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l7 + ".png"));
-									} else {
-										if (aux == 7) {
-											btnpeca7.setEnabled(false);
-											btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l7 + ".png"));
-										}
-									}
-								}
-							}
-						}
-					}
+					break;
+				case 2:
+					btnpeca7.setEnabled(false);
+					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l7 + ".png"));
+					break;
+				case 3:
+					btnpeca7.setEnabled(false);
+					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l7 + ".png"));
+					break;
+				case 4:
+					btnpeca7.setEnabled(false);
+					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l7 + ".png"));
+					break;
+				case 5:
+					btnpeca7.setEnabled(false);
+					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l7 + ".png"));
+					break;
+				case 6:
+					btnpeca7.setEnabled(false);
+					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l7 + ".png"));
+					break;
+				case 7:
+					btnpeca7.setEnabled(false);
+					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l7 + ".png"));
+					break;
+				case 8:
+					btnpeca7.setEnabled(false);
+					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l7 + ".png"));
+					break;
+				case 9:
+					btnpeca7.setEnabled(false);
+					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l7 + ".png"));
+					break;
+				case 10:
+					btnpeca7.setEnabled(false);
+					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l7 + ".png"));
+					break;
+				case 11:
+					btnpeca7.setEnabled(false);
+					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l7 + ".png"));
+					break;
+				case 12:
+					btnpeca7.setEnabled(false);
+					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l7 + ".png"));
+					break;
+				case 13:
+					btnpeca7.setEnabled(false);
+					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l7 + ".png"));
+					break;
+				case 14:
+					btnpeca7.setEnabled(false);
+					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l7 + ".png"));
+					break;
+
+				default:
+					JOptionPane.showMessageDialog(null, "Peças esgotadas");
+					break;
 				}
+
+				// if (aux == 1) {
+				// btnpeca7.setEnabled(false);
+				// btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l7
+				// + ".png"));
+				// } else {
+				// if (aux == 2) {
+				// btnpeca7.setEnabled(false);
+				// btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l7
+				// + ".png"));
+				// } else {
+				// if (aux == 3) {
+				// btnpeca7.setEnabled(false);
+				// btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l7
+				// + ".png"));
+				// } else {
+				// if (aux == 4) {
+				// btnpeca7.setEnabled(false);
+				// btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l7
+				// + ".png"));
+				// } else {
+				// if (aux == 5) {
+				// btnpeca7.setEnabled(false);
+				// btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l7
+				// + ".png"));
+				// } else {
+				// if (aux == 6) {
+				// btnpeca7.setEnabled(false);
+				// btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l7
+				// + ".png"));
+				// } else {
+				// if (aux == 7) {
+				// btnpeca7.setEnabled(false);
+				// btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l7
+				// + ".png"));
+				// }
+				// }
+				// }
+				// }
+				// }
+				// }
+				// }
 
 			}
 
@@ -489,40 +988,111 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				l8 = array.get(7).toString();
-				if (aux == 1) {
+
+				switch (aux) {
+				case 1:
 					btnpeca8.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l8 + ".png"));
-				} else {
-					if (aux == 2) {
-						btnpeca8.setEnabled(false);
-						btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l8 + ".png"));
-					} else {
-						if (aux == 3) {
-							btnpeca8.setEnabled(false);
-							btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l8 + ".png"));
-						} else {
-							if (aux == 4) {
-								btnpeca8.setEnabled(false);
-								btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l8 + ".png"));
-							} else {
-								if (aux == 5) {
-									btnpeca8.setEnabled(false);
-									btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l8 + ".png"));
-								} else {
-									if (aux == 6) {
-										btnpeca8.setEnabled(false);
-										btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l8 + ".png"));
-									} else {
-										if (aux == 7) {
-											btnpeca8.setEnabled(false);
-											btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l8 + ".png"));
-										}
-									}
-								}
-							}
-						}
-					}
+					break;
+				case 2:
+					btnpeca8.setEnabled(false);
+					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l8 + ".png"));
+					break;
+				case 3:
+					btnpeca8.setEnabled(false);
+					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l8 + ".png"));
+					break;
+				case 4:
+					btnpeca8.setEnabled(false);
+					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l8 + ".png"));
+					break;
+				case 5:
+					btnpeca8.setEnabled(false);
+					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l8 + ".png"));
+					break;
+				case 6:
+					btnpeca8.setEnabled(false);
+					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l8 + ".png"));
+					break;
+				case 7:
+					btnpeca8.setEnabled(false);
+					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l8 + ".png"));
+					break;
+				case 8:
+					btnpeca8.setEnabled(false);
+					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l8 + ".png"));
+					break;
+				case 9:
+					btnpeca8.setEnabled(false);
+					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l8 + ".png"));
+					break;
+				case 10:
+					btnpeca8.setEnabled(false);
+					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l8 + ".png"));
+					break;
+				case 11:
+					btnpeca8.setEnabled(false);
+					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l8 + ".png"));
+					break;
+				case 12:
+					btnpeca8.setEnabled(false);
+					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l8 + ".png"));
+					break;
+				case 13:
+					btnpeca8.setEnabled(false);
+					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l8 + ".png"));
+					break;
+				case 14:
+					btnpeca8.setEnabled(false);
+					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l8 + ".png"));
+					break;
+
+				default:
+					JOptionPane.showMessageDialog(null, "Peças esgotadas");
+					break;
 				}
+
+				// if (aux == 1) {
+				// btnpeca8.setEnabled(false);
+				// btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l8
+				// + ".png"));
+				// } else {
+				// if (aux == 2) {
+				// btnpeca8.setEnabled(false);
+				// btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l8
+				// + ".png"));
+				// } else {
+				// if (aux == 3) {
+				// btnpeca8.setEnabled(false);
+				// btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l8
+				// + ".png"));
+				// } else {
+				// if (aux == 4) {
+				// btnpeca8.setEnabled(false);
+				// btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l8
+				// + ".png"));
+				// } else {
+				// if (aux == 5) {
+				// btnpeca8.setEnabled(false);
+				// btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l8
+				// + ".png"));
+				// } else {
+				// if (aux == 6) {
+				// btnpeca8.setEnabled(false);
+				// btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l8
+				// + ".png"));
+				// } else {
+				// if (aux == 7) {
+				// btnpeca8.setEnabled(false);
+				// btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l8
+				// + ".png"));
+				// }
+				// }
+				// }
+				// }
+				// }
+				// }
+				// }
 			}
 		});
 
@@ -531,40 +1101,110 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				l9 = array.get(8).toString();
-				if (aux == 1) {
+
+				switch (aux) {
+				case 1:
 					btnpeca9.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l9 + ".png"));
-				} else {
-					if (aux == 2) {
-						btnpeca9.setEnabled(false);
-						btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l9 + ".png"));
-					} else {
-						if (aux == 3) {
-							btnpeca9.setEnabled(false);
-							btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l9 + ".png"));
-						} else {
-							if (aux == 4) {
-								btnpeca9.setEnabled(false);
-								btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l9 + ".png"));
-							} else {
-								if (aux == 5) {
-									btnpeca9.setEnabled(false);
-									btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l9 + ".png"));
-								} else {
-									if (aux == 6) {
-										btnpeca9.setEnabled(false);
-										btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l9 + ".png"));
-									} else {
-										if (aux == 7) {
-											btnpeca9.setEnabled(false);
-											btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l9 + ".png"));
-										}
-									}
-								}
-							}
-						}
-					}
+					break;
+				case 2:
+					btnpeca9.setEnabled(false);
+					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l9 + ".png"));
+					break;
+				case 3:
+					btnpeca9.setEnabled(false);
+					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l9 + ".png"));
+					break;
+				case 4:
+					btnpeca9.setEnabled(false);
+					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l9 + ".png"));
+					break;
+				case 5:
+					btnpeca9.setEnabled(false);
+					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l9 + ".png"));
+					break;
+				case 6:
+					btnpeca9.setEnabled(false);
+					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l9 + ".png"));
+					break;
+				case 7:
+					btnpeca9.setEnabled(false);
+					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l9 + ".png"));
+					break;
+				case 8:
+					btnpeca9.setEnabled(false);
+					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l9 + ".png"));
+					break;
+				case 9:
+					btnpeca9.setEnabled(false);
+					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l9 + ".png"));
+					break;
+				case 10:
+					btnpeca9.setEnabled(false);
+					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l9 + ".png"));
+					break;
+				case 11:
+					btnpeca9.setEnabled(false);
+					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l9 + ".png"));
+					break;
+				case 12:
+					btnpeca9.setEnabled(false);
+					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l9 + ".png"));
+					break;
+				case 13:
+					btnpeca9.setEnabled(false);
+					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l9 + ".png"));
+					break;
+				case 14:
+					btnpeca9.setEnabled(false);
+					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l9 + ".png"));
+					break;
+
+				default:
+					JOptionPane.showMessageDialog(null, "Peças esgotadas");
+					break;
 				}
+				// if (aux == 1) {
+				// btnpeca9.setEnabled(false);
+				// btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l9
+				// + ".png"));
+				// } else {
+				// if (aux == 2) {
+				// btnpeca9.setEnabled(false);
+				// btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l9
+				// + ".png"));
+				// } else {
+				// if (aux == 3) {
+				// btnpeca9.setEnabled(false);
+				// btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l9
+				// + ".png"));
+				// } else {
+				// if (aux == 4) {
+				// btnpeca9.setEnabled(false);
+				// btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l9
+				// + ".png"));
+				// } else {
+				// if (aux == 5) {
+				// btnpeca9.setEnabled(false);
+				// btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l9
+				// + ".png"));
+				// } else {
+				// if (aux == 6) {
+				// btnpeca9.setEnabled(false);
+				// btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l9
+				// + ".png"));
+				// } else {
+				// if (aux == 7) {
+				// btnpeca9.setEnabled(false);
+				// btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l9
+				// + ".png"));
+				// }
+				// }
+				// }
+				// }
+				// }
+				// }
+				// }
 
 			}
 		});
@@ -574,40 +1214,110 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				l10 = array.get(9).toString();
-				if (aux == 1) {
+
+				switch (aux) {
+				case 1:
 					btnpeca10.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l10 + ".png"));
-				} else {
-					if (aux == 2) {
-						btnpeca10.setEnabled(false);
-						btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l10 + ".png"));
-					} else {
-						if (aux == 3) {
-							btnpeca10.setEnabled(false);
-							btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l10 + ".png"));
-						} else {
-							if (aux == 4) {
-								btnpeca10.setEnabled(false);
-								btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l10 + ".png"));
-							} else {
-								if (aux == 5) {
-									btnpeca10.setEnabled(false);
-									btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l10 + ".png"));
-								} else {
-									if (aux == 6) {
-										btnpeca10.setEnabled(false);
-										btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l10 + ".png"));
-									} else {
-										if (aux == 7) {
-											btnpeca10.setEnabled(false);
-											btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l10 + ".png"));
-										}
-									}
-								}
-							}
-						}
-					}
+					break;
+				case 2:
+					btnpeca10.setEnabled(false);
+					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l10 + ".png"));
+					break;
+				case 3:
+					btnpeca10.setEnabled(false);
+					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l10 + ".png"));
+					break;
+				case 4:
+					btnpeca10.setEnabled(false);
+					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l10 + ".png"));
+					break;
+				case 5:
+					btnpeca10.setEnabled(false);
+					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l10 + ".png"));
+					break;
+				case 6:
+					btnpeca10.setEnabled(false);
+					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l10 + ".png"));
+					break;
+				case 7:
+					btnpeca10.setEnabled(false);
+					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l10 + ".png"));
+					break;
+				case 8:
+					btnpeca10.setEnabled(false);
+					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l10 + ".png"));
+					break;
+				case 9:
+					btnpeca10.setEnabled(false);
+					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l10 + ".png"));
+					break;
+				case 10:
+					btnpeca10.setEnabled(false);
+					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l10 + ".png"));
+					break;
+				case 11:
+					btnpeca10.setEnabled(false);
+					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l10 + ".png"));
+					break;
+				case 12:
+					btnpeca10.setEnabled(false);
+					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l10 + ".png"));
+					break;
+				case 13:
+					btnpeca10.setEnabled(false);
+					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l10 + ".png"));
+					break;
+				case 14:
+					btnpeca10.setEnabled(false);
+					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l10 + ".png"));
+					break;
+
+				default:
+					JOptionPane.showMessageDialog(null, "Peças esgotadas");
+					break;
 				}
+				// if (aux == 1) {
+				// btnpeca10.setEnabled(false);
+				// btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l10
+				// + ".png"));
+				// } else {
+				// if (aux == 2) {
+				// btnpeca10.setEnabled(false);
+				// btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l10
+				// + ".png"));
+				// } else {
+				// if (aux == 3) {
+				// btnpeca10.setEnabled(false);
+				// btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l10
+				// + ".png"));
+				// } else {
+				// if (aux == 4) {
+				// btnpeca10.setEnabled(false);
+				// btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l10
+				// + ".png"));
+				// } else {
+				// if (aux == 5) {
+				// btnpeca10.setEnabled(false);
+				// btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l10
+				// + ".png"));
+				// } else {
+				// if (aux == 6) {
+				// btnpeca10.setEnabled(false);
+				// btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l10
+				// + ".png"));
+				// } else {
+				// if (aux == 7) {
+				// btnpeca10.setEnabled(false);
+				// btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l10
+				// + ".png"));
+				// }
+				// }
+				// }
+				// }
+				// }
+				// }
+				// }
 			}
 		});
 
@@ -616,40 +1326,110 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				l11 = array.get(10).toString();
-				if (aux == 1) {
+
+				switch (aux) {
+				case 1:
 					btnpeca11.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l11 + ".png"));
-				} else {
-					if (aux == 2) {
-						btnpeca11.setEnabled(false);
-						btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l11 + ".png"));
-					} else {
-						if (aux == 3) {
-							btnpeca11.setEnabled(false);
-							btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l11 + ".png"));
-						} else {
-							if (aux == 4) {
-								btnpeca11.setEnabled(false);
-								btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l11 + ".png"));
-							} else {
-								if (aux == 5) {
-									btnpeca11.setEnabled(false);
-									btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l11 + ".png"));
-								} else {
-									if (aux == 6) {
-										btnpeca11.setEnabled(false);
-										btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l11 + ".png"));
-									} else {
-										if (aux == 7) {
-											btnpeca11.setEnabled(false);
-											btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l11 + ".png"));
-										}
-									}
-								}
-							}
-						}
-					}
+					break;
+				case 2:
+					btnpeca11.setEnabled(false);
+					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l11 + ".png"));
+					break;
+				case 3:
+					btnpeca11.setEnabled(false);
+					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l11 + ".png"));
+					break;
+				case 4:
+					btnpeca11.setEnabled(false);
+					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l11 + ".png"));
+					break;
+				case 5:
+					btnpeca11.setEnabled(false);
+					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l11 + ".png"));
+					break;
+				case 6:
+					btnpeca11.setEnabled(false);
+					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l11 + ".png"));
+					break;
+				case 7:
+					btnpeca11.setEnabled(false);
+					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l11 + ".png"));
+					break;
+				case 8:
+					btnpeca11.setEnabled(false);
+					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l11 + ".png"));
+					break;
+				case 9:
+					btnpeca11.setEnabled(false);
+					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l11 + ".png"));
+					break;
+				case 10:
+					btnpeca11.setEnabled(false);
+					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l11 + ".png"));
+					break;
+				case 11:
+					btnpeca11.setEnabled(false);
+					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l11 + ".png"));
+					break;
+				case 12:
+					btnpeca11.setEnabled(false);
+					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l11 + ".png"));
+					break;
+				case 13:
+					btnpeca11.setEnabled(false);
+					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l11 + ".png"));
+					break;
+				case 14:
+					btnpeca11.setEnabled(false);
+					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l11 + ".png"));
+					break;
+
+				default:
+					JOptionPane.showMessageDialog(null, "Peças esgotadas");
+					break;
 				}
+				// if (aux == 1) {
+				// btnpeca11.setEnabled(false);
+				// btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l11
+				// + ".png"));
+				// } else {
+				// if (aux == 2) {
+				// btnpeca11.setEnabled(false);
+				// btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l11
+				// + ".png"));
+				// } else {
+				// if (aux == 3) {
+				// btnpeca11.setEnabled(false);
+				// btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l11
+				// + ".png"));
+				// } else {
+				// if (aux == 4) {
+				// btnpeca11.setEnabled(false);
+				// btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l11
+				// + ".png"));
+				// } else {
+				// if (aux == 5) {
+				// btnpeca11.setEnabled(false);
+				// btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l11
+				// + ".png"));
+				// } else {
+				// if (aux == 6) {
+				// btnpeca11.setEnabled(false);
+				// btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l11
+				// + ".png"));
+				// } else {
+				// if (aux == 7) {
+				// btnpeca11.setEnabled(false);
+				// btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l11
+				// + ".png"));
+				// }
+				// }
+				// }
+				// }
+				// }
+				// }
+				// }
 			}
 		});
 
@@ -658,40 +1438,110 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				l12 = array.get(11).toString();
-				if (aux == 1) {
+
+				switch (aux) {
+				case 1:
 					btnpeca12.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l12 + ".png"));
-				} else {
-					if (aux == 2) {
-						btnpeca12.setEnabled(false);
-						btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l12 + ".png"));
-					} else {
-						if (aux == 3) {
-							btnpeca12.setEnabled(false);
-							btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l12 + ".png"));
-						} else {
-							if (aux == 4) {
-								btnpeca12.setEnabled(false);
-								btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l12 + ".png"));
-							} else {
-								if (aux == 5) {
-									btnpeca12.setEnabled(false);
-									btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l12 + ".png"));
-								} else {
-									if (aux == 6) {
-										btnpeca12.setEnabled(false);
-										btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l12 + ".png"));
-									} else {
-										if (aux == 7) {
-											btnpeca12.setEnabled(false);
-											btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l12 + ".png"));
-										}
-									}
-								}
-							}
-						}
-					}
+					break;
+				case 2:
+					btnpeca12.setEnabled(false);
+					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l12 + ".png"));
+					break;
+				case 3:
+					btnpeca12.setEnabled(false);
+					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l12 + ".png"));
+					break;
+				case 4:
+					btnpeca12.setEnabled(false);
+					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l12 + ".png"));
+					break;
+				case 5:
+					btnpeca12.setEnabled(false);
+					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l12 + ".png"));
+					break;
+				case 6:
+					btnpeca12.setEnabled(false);
+					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l12 + ".png"));
+					break;
+				case 7:
+					btnpeca12.setEnabled(false);
+					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l12 + ".png"));
+					break;
+				case 8:
+					btnpeca12.setEnabled(false);
+					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l12 + ".png"));
+					break;
+				case 9:
+					btnpeca12.setEnabled(false);
+					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l12 + ".png"));
+					break;
+				case 10:
+					btnpeca12.setEnabled(false);
+					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l12 + ".png"));
+					break;
+				case 11:
+					btnpeca12.setEnabled(false);
+					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l12 + ".png"));
+					break;
+				case 12:
+					btnpeca12.setEnabled(false);
+					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l12 + ".png"));
+					break;
+				case 13:
+					btnpeca12.setEnabled(false);
+					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l12 + ".png"));
+					break;
+				case 14:
+					btnpeca12.setEnabled(false);
+					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l12 + ".png"));
+					break;
+
+				default:
+					JOptionPane.showMessageDialog(null, "Peças esgotadas");
+					break;
 				}
+				// if (aux == 1) {
+				// btnpeca12.setEnabled(false);
+				// btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l12
+				// + ".png"));
+				// } else {
+				// if (aux == 2) {
+				// btnpeca12.setEnabled(false);
+				// btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l12
+				// + ".png"));
+				// } else {
+				// if (aux == 3) {
+				// btnpeca12.setEnabled(false);
+				// btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l12
+				// + ".png"));
+				// } else {
+				// if (aux == 4) {
+				// btnpeca12.setEnabled(false);
+				// btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l12
+				// + ".png"));
+				// } else {
+				// if (aux == 5) {
+				// btnpeca12.setEnabled(false);
+				// btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l12
+				// + ".png"));
+				// } else {
+				// if (aux == 6) {
+				// btnpeca12.setEnabled(false);
+				// btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l12
+				// + ".png"));
+				// } else {
+				// if (aux == 7) {
+				// btnpeca12.setEnabled(false);
+				// btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l12
+				// + ".png"));
+				// }
+				// }
+				// }
+				// }
+				// }
+				// }
+				// }
 
 			}
 		});
@@ -701,40 +1551,110 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				l13 = array.get(12).toString();
-				if (aux == 1) {
+
+				switch (aux) {
+				case 1:
 					btnpeca13.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l13 + ".png"));
-				} else {
-					if (aux == 2) {
-						btnpeca13.setEnabled(false);
-						btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l13 + ".png"));
-					} else {
-						if (aux == 3) {
-							btnpeca13.setEnabled(false);
-							btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l13 + ".png"));
-						} else {
-							if (aux == 4) {
-								btnpeca13.setEnabled(false);
-								btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l13 + ".png"));
-							} else {
-								if (aux == 5) {
-									btnpeca13.setEnabled(false);
-									btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l13 + ".png"));
-								} else {
-									if (aux == 6) {
-										btnpeca13.setEnabled(false);
-										btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l13 + ".png"));
-									} else {
-										if (aux == 7) {
-											btnpeca13.setEnabled(false);
-											btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l13 + ".png"));
-										}
-									}
-								}
-							}
-						}
-					}
+					break;
+				case 2:
+					btnpeca13.setEnabled(false);
+					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l13 + ".png"));
+					break;
+				case 3:
+					btnpeca13.setEnabled(false);
+					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l13 + ".png"));
+					break;
+				case 4:
+					btnpeca13.setEnabled(false);
+					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l13 + ".png"));
+					break;
+				case 5:
+					btnpeca13.setEnabled(false);
+					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l13 + ".png"));
+					break;
+				case 6:
+					btnpeca13.setEnabled(false);
+					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l13 + ".png"));
+					break;
+				case 7:
+					btnpeca13.setEnabled(false);
+					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l13 + ".png"));
+					break;
+				case 8:
+					btnpeca13.setEnabled(false);
+					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l13 + ".png"));
+					break;
+				case 9:
+					btnpeca13.setEnabled(false);
+					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l13 + ".png"));
+					break;
+				case 10:
+					btnpeca13.setEnabled(false);
+					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l13 + ".png"));
+					break;
+				case 11:
+					btnpeca13.setEnabled(false);
+					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l13 + ".png"));
+					break;
+				case 12:
+					btnpeca13.setEnabled(false);
+					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l13 + ".png"));
+					break;
+				case 13:
+					btnpeca13.setEnabled(false);
+					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l13 + ".png"));
+					break;
+				case 14:
+					btnpeca13.setEnabled(false);
+					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l13 + ".png"));
+					break;
+
+				default:
+					JOptionPane.showMessageDialog(null, "Peças esgotadas");
+					break;
 				}
+				// if (aux == 1) {
+				// btnpeca13.setEnabled(false);
+				// btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l13
+				// + ".png"));
+				// } else {
+				// if (aux == 2) {
+				// btnpeca13.setEnabled(false);
+				// btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l13
+				// + ".png"));
+				// } else {
+				// if (aux == 3) {
+				// btnpeca13.setEnabled(false);
+				// btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l13
+				// + ".png"));
+				// } else {
+				// if (aux == 4) {
+				// btnpeca13.setEnabled(false);
+				// btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l13
+				// + ".png"));
+				// } else {
+				// if (aux == 5) {
+				// btnpeca13.setEnabled(false);
+				// btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l13
+				// + ".png"));
+				// } else {
+				// if (aux == 6) {
+				// btnpeca13.setEnabled(false);
+				// btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l13
+				// + ".png"));
+				// } else {
+				// if (aux == 7) {
+				// btnpeca13.setEnabled(false);
+				// btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l13
+				// + ".png"));
+				// }
+				// }
+				// }
+				// }
+				// }
+				// }
+				// }
 			}
 		});
 
@@ -743,40 +1663,110 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				l14 = array.get(13).toString();
-				if (aux == 1) {
+
+				switch (aux) {
+				case 1:
 					btnpeca14.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l14 + ".png"));
-				} else {
-					if (aux == 2) {
-						btnpeca14.setEnabled(false);
-						btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l14 + ".png"));
-					} else {
-						if (aux == 3) {
-							btnpeca14.setEnabled(false);
-							btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l14 + ".png"));
-						} else {
-							if (aux == 4) {
-								btnpeca14.setEnabled(false);
-								btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l14 + ".png"));
-							} else {
-								if (aux == 5) {
-									btnpeca14.setEnabled(false);
-									btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l14 + ".png"));
-								} else {
-									if (aux == 6) {
-										btnpeca14.setEnabled(false);
-										btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l14 + ".png"));
-									} else {
-										if (aux == 7) {
-											btnpeca14.setEnabled(false);
-											btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l14 + ".png"));
-										}
-									}
-								}
-							}
-						}
-					}
+					break;
+				case 2:
+					btnpeca14.setEnabled(false);
+					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l14 + ".png"));
+					break;
+				case 3:
+					btnpeca14.setEnabled(false);
+					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l14 + ".png"));
+					break;
+				case 4:
+					btnpeca14.setEnabled(false);
+					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l14 + ".png"));
+					break;
+				case 5:
+					btnpeca14.setEnabled(false);
+					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l14 + ".png"));
+					break;
+				case 6:
+					btnpeca14.setEnabled(false);
+					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l14 + ".png"));
+					break;
+				case 7:
+					btnpeca14.setEnabled(false);
+					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l14 + ".png"));
+					break;
+				case 8:
+					btnpeca14.setEnabled(false);
+					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l14 + ".png"));
+					break;
+				case 9:
+					btnpeca14.setEnabled(false);
+					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l14 + ".png"));
+					break;
+				case 10:
+					btnpeca14.setEnabled(false);
+					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l14 + ".png"));
+					break;
+				case 11:
+					btnpeca14.setEnabled(false);
+					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l14 + ".png"));
+					break;
+				case 12:
+					btnpeca14.setEnabled(false);
+					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l14 + ".png"));
+					break;
+				case 13:
+					btnpeca14.setEnabled(false);
+					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l14 + ".png"));
+					break;
+				case 14:
+					btnpeca14.setEnabled(false);
+					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l14 + ".png"));
+					break;
+
+				default:
+					JOptionPane.showMessageDialog(null, "Peças esgotadas");
+					break;
 				}
+				// if (aux == 1) {
+				// btnpeca14.setEnabled(false);
+				// btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l14
+				// + ".png"));
+				// } else {
+				// if (aux == 2) {
+				// btnpeca14.setEnabled(false);
+				// btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l14
+				// + ".png"));
+				// } else {
+				// if (aux == 3) {
+				// btnpeca14.setEnabled(false);
+				// btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l14
+				// + ".png"));
+				// } else {
+				// if (aux == 4) {
+				// btnpeca14.setEnabled(false);
+				// btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l14
+				// + ".png"));
+				// } else {
+				// if (aux == 5) {
+				// btnpeca14.setEnabled(false);
+				// btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l14
+				// + ".png"));
+				// } else {
+				// if (aux == 6) {
+				// btnpeca14.setEnabled(false);
+				// btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l14
+				// + ".png"));
+				// } else {
+				// if (aux == 7) {
+				// btnpeca14.setEnabled(false);
+				// btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l14
+				// + ".png"));
+				// }
+				// }
+				// }
+				// }
+				// }
+				// }
+				// }
 			}
 		});
 
@@ -785,40 +1775,110 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				l15 = array.get(14).toString();
-				if (aux == 1) {
+
+				switch (aux) {
+				case 1:
 					btnpeca15.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l15 + ".png"));
-				} else {
-					if (aux == 2) {
-						btnpeca15.setEnabled(false);
-						btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l15 + ".png"));
-					} else {
-						if (aux == 3) {
-							btnpeca15.setEnabled(false);
-							btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l15 + ".png"));
-						} else {
-							if (aux == 4) {
-								btnpeca15.setEnabled(false);
-								btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l15 + ".png"));
-							} else {
-								if (aux == 5) {
-									btnpeca15.setEnabled(false);
-									btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l15 + ".png"));
-								} else {
-									if (aux == 6) {
-										btnpeca15.setEnabled(false);
-										btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l15 + ".png"));
-									} else {
-										if (aux == 7) {
-											btnpeca15.setEnabled(false);
-											btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l15 + ".png"));
-										}
-									}
-								}
-							}
-						}
-					}
+					break;
+				case 2:
+					btnpeca15.setEnabled(false);
+					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l15 + ".png"));
+					break;
+				case 3:
+					btnpeca15.setEnabled(false);
+					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l15 + ".png"));
+					break;
+				case 4:
+					btnpeca15.setEnabled(false);
+					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l15 + ".png"));
+					break;
+				case 5:
+					btnpeca15.setEnabled(false);
+					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l15 + ".png"));
+					break;
+				case 6:
+					btnpeca15.setEnabled(false);
+					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l15 + ".png"));
+					break;
+				case 7:
+					btnpeca15.setEnabled(false);
+					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l15 + ".png"));
+					break;
+				case 8:
+					btnpeca15.setEnabled(false);
+					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l15 + ".png"));
+					break;
+				case 9:
+					btnpeca15.setEnabled(false);
+					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l15 + ".png"));
+					break;
+				case 10:
+					btnpeca15.setEnabled(false);
+					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l15 + ".png"));
+					break;
+				case 11:
+					btnpeca15.setEnabled(false);
+					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l15 + ".png"));
+					break;
+				case 12:
+					btnpeca15.setEnabled(false);
+					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l15 + ".png"));
+					break;
+				case 13:
+					btnpeca15.setEnabled(false);
+					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l15 + ".png"));
+					break;
+				case 14:
+					btnpeca15.setEnabled(false);
+					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l15 + ".png"));
+					break;
+
+				default:
+					JOptionPane.showMessageDialog(null, "Peças esgotadas");
+					break;
 				}
+				// if (aux == 1) {
+				// btnpeca15.setEnabled(false);
+				// btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l15
+				// + ".png"));
+				// } else {
+				// if (aux == 2) {
+				// btnpeca15.setEnabled(false);
+				// btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l15
+				// + ".png"));
+				// } else {
+				// if (aux == 3) {
+				// btnpeca15.setEnabled(false);
+				// btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l15
+				// + ".png"));
+				// } else {
+				// if (aux == 4) {
+				// btnpeca15.setEnabled(false);
+				// btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l15
+				// + ".png"));
+				// } else {
+				// if (aux == 5) {
+				// btnpeca15.setEnabled(false);
+				// btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l15
+				// + ".png"));
+				// } else {
+				// if (aux == 6) {
+				// btnpeca15.setEnabled(false);
+				// btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l15
+				// + ".png"));
+				// } else {
+				// if (aux == 7) {
+				// btnpeca15.setEnabled(false);
+				// btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l15
+				// + ".png"));
+				// }
+				// }
+				// }
+				// }
+				// }
+				// }
+				// }
 
 			}
 		});
@@ -828,40 +1888,110 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				l16 = array.get(15).toString();
-				if (aux == 1) {
+
+				switch (aux) {
+				case 1:
 					btnpeca16.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l16 + ".png"));
-				} else {
-					if (aux == 2) {
-						btnpeca16.setEnabled(false);
-						btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l16 + ".png"));
-					} else {
-						if (aux == 3) {
-							btnpeca16.setEnabled(false);
-							btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l16 + ".png"));
-						} else {
-							if (aux == 4) {
-								btnpeca16.setEnabled(false);
-								btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l16 + ".png"));
-							} else {
-								if (aux == 5) {
-									btnpeca16.setEnabled(false);
-									btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l16 + ".png"));
-								} else {
-									if (aux == 6) {
-										btnpeca16.setEnabled(false);
-										btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l16 + ".png"));
-									} else {
-										if (aux == 7) {
-											btnpeca16.setEnabled(false);
-											btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l16 + ".png"));
-										}
-									}
-								}
-							}
-						}
-					}
+					break;
+				case 2:
+					btnpeca16.setEnabled(false);
+					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l16 + ".png"));
+					break;
+				case 3:
+					btnpeca16.setEnabled(false);
+					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l16 + ".png"));
+					break;
+				case 4:
+					btnpeca16.setEnabled(false);
+					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l16 + ".png"));
+					break;
+				case 5:
+					btnpeca16.setEnabled(false);
+					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l16 + ".png"));
+					break;
+				case 6:
+					btnpeca16.setEnabled(false);
+					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l16 + ".png"));
+					break;
+				case 7:
+					btnpeca16.setEnabled(false);
+					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l16 + ".png"));
+					break;
+				case 8:
+					btnpeca16.setEnabled(false);
+					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l16 + ".png"));
+					break;
+				case 9:
+					btnpeca16.setEnabled(false);
+					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l16 + ".png"));
+					break;
+				case 10:
+					btnpeca16.setEnabled(false);
+					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l16 + ".png"));
+					break;
+				case 11:
+					btnpeca16.setEnabled(false);
+					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l16 + ".png"));
+					break;
+				case 12:
+					btnpeca16.setEnabled(false);
+					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l16 + ".png"));
+					break;
+				case 13:
+					btnpeca16.setEnabled(false);
+					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l16 + ".png"));
+					break;
+				case 14:
+					btnpeca16.setEnabled(false);
+					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l16 + ".png"));
+					break;
+
+				default:
+					JOptionPane.showMessageDialog(null, "Peças esgotadas");
+					break;
 				}
+				// if (aux == 1) {
+				// btnpeca16.setEnabled(false);
+				// btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l16
+				// + ".png"));
+				// } else {
+				// if (aux == 2) {
+				// btnpeca16.setEnabled(false);
+				// btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l16
+				// + ".png"));
+				// } else {
+				// if (aux == 3) {
+				// btnpeca16.setEnabled(false);
+				// btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l16
+				// + ".png"));
+				// } else {
+				// if (aux == 4) {
+				// btnpeca16.setEnabled(false);
+				// btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l16
+				// + ".png"));
+				// } else {
+				// if (aux == 5) {
+				// btnpeca16.setEnabled(false);
+				// btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l16
+				// + ".png"));
+				// } else {
+				// if (aux == 6) {
+				// btnpeca16.setEnabled(false);
+				// btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l16
+				// + ".png"));
+				// } else {
+				// if (aux == 7) {
+				// btnpeca16.setEnabled(false);
+				// btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l16
+				// + ".png"));
+				// }
+				// }
+				// }
+				// }
+				// }
+				// }
+				// }
 			}
 		});
 
@@ -870,40 +2000,110 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				l17 = array.get(16).toString();
-				if (aux == 1) {
+
+				switch (aux) {
+				case 1:
 					btnpeca17.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l17 + ".png"));
-				} else {
-					if (aux == 2) {
-						btnpeca17.setEnabled(false);
-						btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l17 + ".png"));
-					} else {
-						if (aux == 3) {
-							btnpeca17.setEnabled(false);
-							btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l17 + ".png"));
-						} else {
-							if (aux == 4) {
-								btnpeca17.setEnabled(false);
-								btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l17 + ".png"));
-							} else {
-								if (aux == 5) {
-									btnpeca17.setEnabled(false);
-									btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l17 + ".png"));
-								} else {
-									if (aux == 6) {
-										btnpeca17.setEnabled(false);
-										btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l17 + ".png"));
-									} else {
-										if (aux == 7) {
-											btnpeca17.setEnabled(false);
-											btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l17 + ".png"));
-										}
-									}
-								}
-							}
-						}
-					}
+					break;
+				case 2:
+					btnpeca17.setEnabled(false);
+					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l17 + ".png"));
+					break;
+				case 3:
+					btnpeca17.setEnabled(false);
+					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l17 + ".png"));
+					break;
+				case 4:
+					btnpeca17.setEnabled(false);
+					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l17 + ".png"));
+					break;
+				case 5:
+					btnpeca17.setEnabled(false);
+					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l17 + ".png"));
+					break;
+				case 6:
+					btnpeca17.setEnabled(false);
+					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l17 + ".png"));
+					break;
+				case 7:
+					btnpeca17.setEnabled(false);
+					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l17 + ".png"));
+					break;
+				case 8:
+					btnpeca17.setEnabled(false);
+					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l17 + ".png"));
+					break;
+				case 9:
+					btnpeca17.setEnabled(false);
+					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l17 + ".png"));
+					break;
+				case 10:
+					btnpeca17.setEnabled(false);
+					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l17 + ".png"));
+					break;
+				case 11:
+					btnpeca17.setEnabled(false);
+					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l17 + ".png"));
+					break;
+				case 12:
+					btnpeca17.setEnabled(false);
+					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l17 + ".png"));
+					break;
+				case 13:
+					btnpeca17.setEnabled(false);
+					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l17 + ".png"));
+					break;
+				case 14:
+					btnpeca17.setEnabled(false);
+					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l17 + ".png"));
+					break;
+
+				default:
+					JOptionPane.showMessageDialog(null, "Peças esgotadas");
+					break;
 				}
+				// if (aux == 1) {
+				// btnpeca17.setEnabled(false);
+				// btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l17
+				// + ".png"));
+				// } else {
+				// if (aux == 2) {
+				// btnpeca17.setEnabled(false);
+				// btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l17
+				// + ".png"));
+				// } else {
+				// if (aux == 3) {
+				// btnpeca17.setEnabled(false);
+				// btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l17
+				// + ".png"));
+				// } else {
+				// if (aux == 4) {
+				// btnpeca17.setEnabled(false);
+				// btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l17
+				// + ".png"));
+				// } else {
+				// if (aux == 5) {
+				// btnpeca17.setEnabled(false);
+				// btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l17
+				// + ".png"));
+				// } else {
+				// if (aux == 6) {
+				// btnpeca17.setEnabled(false);
+				// btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l17
+				// + ".png"));
+				// } else {
+				// if (aux == 7) {
+				// btnpeca17.setEnabled(false);
+				// btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l17
+				// + ".png"));
+				// }
+				// }
+				// }
+				// }
+				// }
+				// }
+				// }
 
 			}
 
@@ -914,40 +2114,110 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				l18 = array.get(17).toString();
-				if (aux == 1) {
+
+				switch (aux) {
+				case 1:
 					btnpeca18.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l18 + ".png"));
-				} else {
-					if (aux == 2) {
-						btnpeca18.setEnabled(false);
-						btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l18 + ".png"));
-					} else {
-						if (aux == 3) {
-							btnpeca18.setEnabled(false);
-							btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l18 + ".png"));
-						} else {
-							if (aux == 4) {
-								btnpeca18.setEnabled(false);
-								btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l18 + ".png"));
-							} else {
-								if (aux == 5) {
-									btnpeca18.setEnabled(false);
-									btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l18 + ".png"));
-								} else {
-									if (aux == 6) {
-										btnpeca18.setEnabled(false);
-										btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l18 + ".png"));
-									} else {
-										if (aux == 7) {
-											btnpeca18.setEnabled(false);
-											btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l18 + ".png"));
-										}
-									}
-								}
-							}
-						}
-					}
+					break;
+				case 2:
+					btnpeca18.setEnabled(false);
+					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l18 + ".png"));
+					break;
+				case 3:
+					btnpeca18.setEnabled(false);
+					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l18 + ".png"));
+					break;
+				case 4:
+					btnpeca18.setEnabled(false);
+					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l18 + ".png"));
+					break;
+				case 5:
+					btnpeca18.setEnabled(false);
+					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l18 + ".png"));
+					break;
+				case 6:
+					btnpeca18.setEnabled(false);
+					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l18 + ".png"));
+					break;
+				case 7:
+					btnpeca18.setEnabled(false);
+					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l18 + ".png"));
+					break;
+				case 8:
+					btnpeca18.setEnabled(false);
+					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l18 + ".png"));
+					break;
+				case 9:
+					btnpeca18.setEnabled(false);
+					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l18 + ".png"));
+					break;
+				case 10:
+					btnpeca18.setEnabled(false);
+					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l18 + ".png"));
+					break;
+				case 11:
+					btnpeca18.setEnabled(false);
+					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l18 + ".png"));
+					break;
+				case 12:
+					btnpeca18.setEnabled(false);
+					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l18 + ".png"));
+					break;
+				case 13:
+					btnpeca18.setEnabled(false);
+					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l18 + ".png"));
+					break;
+				case 14:
+					btnpeca18.setEnabled(false);
+					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l18 + ".png"));
+					break;
+
+				default:
+					JOptionPane.showMessageDialog(null, "Peças esgotadas");
+					break;
 				}
+				// if (aux == 1) {
+				// btnpeca18.setEnabled(false);
+				// btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l18
+				// + ".png"));
+				// } else {
+				// if (aux == 2) {
+				// btnpeca18.setEnabled(false);
+				// btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l18
+				// + ".png"));
+				// } else {
+				// if (aux == 3) {
+				// btnpeca18.setEnabled(false);
+				// btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l18
+				// + ".png"));
+				// } else {
+				// if (aux == 4) {
+				// btnpeca18.setEnabled(false);
+				// btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l18
+				// + ".png"));
+				// } else {
+				// if (aux == 5) {
+				// btnpeca18.setEnabled(false);
+				// btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l18
+				// + ".png"));
+				// } else {
+				// if (aux == 6) {
+				// btnpeca18.setEnabled(false);
+				// btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l18
+				// + ".png"));
+				// } else {
+				// if (aux == 7) {
+				// btnpeca18.setEnabled(false);
+				// btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l18
+				// + ".png"));
+				// }
+				// }
+				// }
+				// }
+				// }
+				// }
+				// }
 			}
 		});
 
@@ -956,40 +2226,110 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				l19 = array.get(18).toString();
-				if (aux == 1) {
+
+				switch (aux) {
+				case 1:
 					btnpeca19.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l19 + ".png"));
-				} else {
-					if (aux == 2) {
-						btnpeca19.setEnabled(false);
-						btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l19 + ".png"));
-					} else {
-						if (aux == 3) {
-							btnpeca19.setEnabled(false);
-							btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l19 + ".png"));
-						} else {
-							if (aux == 4) {
-								btnpeca19.setEnabled(false);
-								btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l19 + ".png"));
-							} else {
-								if (aux == 5) {
-									btnpeca19.setEnabled(false);
-									btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l19 + ".png"));
-								} else {
-									if (aux == 6) {
-										btnpeca19.setEnabled(false);
-										btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l19 + ".png"));
-									} else {
-										if (aux == 7) {
-											btnpeca19.setEnabled(false);
-											btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l19 + ".png"));
-										}
-									}
-								}
-							}
-						}
-					}
+					break;
+				case 2:
+					btnpeca19.setEnabled(false);
+					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l19 + ".png"));
+					break;
+				case 3:
+					btnpeca19.setEnabled(false);
+					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l19 + ".png"));
+					break;
+				case 4:
+					btnpeca19.setEnabled(false);
+					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l19 + ".png"));
+					break;
+				case 5:
+					btnpeca19.setEnabled(false);
+					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l19 + ".png"));
+					break;
+				case 6:
+					btnpeca19.setEnabled(false);
+					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l19 + ".png"));
+					break;
+				case 7:
+					btnpeca19.setEnabled(false);
+					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l19 + ".png"));
+					break;
+				case 8:
+					btnpeca19.setEnabled(false);
+					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l19 + ".png"));
+					break;
+				case 9:
+					btnpeca19.setEnabled(false);
+					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l19 + ".png"));
+					break;
+				case 10:
+					btnpeca19.setEnabled(false);
+					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l19 + ".png"));
+					break;
+				case 11:
+					btnpeca19.setEnabled(false);
+					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l19 + ".png"));
+					break;
+				case 12:
+					btnpeca19.setEnabled(false);
+					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l19 + ".png"));
+					break;
+				case 13:
+					btnpeca19.setEnabled(false);
+					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l19 + ".png"));
+					break;
+				case 14:
+					btnpeca19.setEnabled(false);
+					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l19 + ".png"));
+					break;
+
+				default:
+					JOptionPane.showMessageDialog(null, "Peças esgotadas");
+					break;
 				}
+				// if (aux == 1) {
+				// btnpeca19.setEnabled(false);
+				// btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l19
+				// + ".png"));
+				// } else {
+				// if (aux == 2) {
+				// btnpeca19.setEnabled(false);
+				// btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l19
+				// + ".png"));
+				// } else {
+				// if (aux == 3) {
+				// btnpeca19.setEnabled(false);
+				// btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l19
+				// + ".png"));
+				// } else {
+				// if (aux == 4) {
+				// btnpeca19.setEnabled(false);
+				// btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l19
+				// + ".png"));
+				// } else {
+				// if (aux == 5) {
+				// btnpeca19.setEnabled(false);
+				// btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l19
+				// + ".png"));
+				// } else {
+				// if (aux == 6) {
+				// btnpeca19.setEnabled(false);
+				// btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l19
+				// + ".png"));
+				// } else {
+				// if (aux == 7) {
+				// btnpeca19.setEnabled(false);
+				// btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l19
+				// + ".png"));
+				// }
+				// }
+				// }
+				// }
+				// }
+				// }
+				// }
 
 			}
 		});
@@ -999,40 +2339,110 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				l20 = array.get(19).toString();
-				if (aux == 1) {
+
+				switch (aux) {
+				case 1:
 					btnpeca20.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l20 + ".png"));
-				} else {
-					if (aux == 2) {
-						btnpeca20.setEnabled(false);
-						btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l20 + ".png"));
-					} else {
-						if (aux == 3) {
-							btnpeca20.setEnabled(false);
-							btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l20 + ".png"));
-						} else {
-							if (aux == 4) {
-								btnpeca20.setEnabled(false);
-								btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l20 + ".png"));
-							} else {
-								if (aux == 5) {
-									btnpeca20.setEnabled(false);
-									btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l20 + ".png"));
-								} else {
-									if (aux == 6) {
-										btnpeca20.setEnabled(false);
-										btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l20 + ".png"));
-									} else {
-										if (aux == 7) {
-											btnpeca20.setEnabled(false);
-											btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l20 + ".png"));
-										}
-									}
-								}
-							}
-						}
-					}
+					break;
+				case 2:
+					btnpeca20.setEnabled(false);
+					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l20 + ".png"));
+					break;
+				case 3:
+					btnpeca20.setEnabled(false);
+					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l20 + ".png"));
+					break;
+				case 4:
+					btnpeca20.setEnabled(false);
+					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l20 + ".png"));
+					break;
+				case 5:
+					btnpeca20.setEnabled(false);
+					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l20 + ".png"));
+					break;
+				case 6:
+					btnpeca20.setEnabled(false);
+					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l20 + ".png"));
+					break;
+				case 7:
+					btnpeca20.setEnabled(false);
+					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l20 + ".png"));
+					break;
+				case 8:
+					btnpeca20.setEnabled(false);
+					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l20 + ".png"));
+					break;
+				case 9:
+					btnpeca20.setEnabled(false);
+					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l20 + ".png"));
+					break;
+				case 10:
+					btnpeca20.setEnabled(false);
+					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l20 + ".png"));
+					break;
+				case 11:
+					btnpeca20.setEnabled(false);
+					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l20 + ".png"));
+					break;
+				case 12:
+					btnpeca20.setEnabled(false);
+					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l20 + ".png"));
+					break;
+				case 13:
+					btnpeca20.setEnabled(false);
+					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l20 + ".png"));
+					break;
+				case 14:
+					btnpeca20.setEnabled(false);
+					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l20 + ".png"));
+					break;
+
+				default:
+					JOptionPane.showMessageDialog(null, "Peças esgotadas");
+					break;
 				}
+				// if (aux == 1) {
+				// btnpeca20.setEnabled(false);
+				// btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l20
+				// + ".png"));
+				// } else {
+				// if (aux == 2) {
+				// btnpeca20.setEnabled(false);
+				// btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l20
+				// + ".png"));
+				// } else {
+				// if (aux == 3) {
+				// btnpeca20.setEnabled(false);
+				// btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l20
+				// + ".png"));
+				// } else {
+				// if (aux == 4) {
+				// btnpeca20.setEnabled(false);
+				// btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l20
+				// + ".png"));
+				// } else {
+				// if (aux == 5) {
+				// btnpeca20.setEnabled(false);
+				// btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l20
+				// + ".png"));
+				// } else {
+				// if (aux == 6) {
+				// btnpeca20.setEnabled(false);
+				// btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l20
+				// + ".png"));
+				// } else {
+				// if (aux == 7) {
+				// btnpeca20.setEnabled(false);
+				// btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l20
+				// + ".png"));
+				// }
+				// }
+				// }
+				// }
+				// }
+				// }
+				// }
 
 			}
 		});
@@ -1042,40 +2452,110 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				l21 = array.get(20).toString();
-				if (aux == 1) {
+
+				switch (aux) {
+				case 1:
 					btnpeca21.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l21 + ".png"));
-				} else {
-					if (aux == 2) {
-						btnpeca21.setEnabled(false);
-						btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l21 + ".png"));
-					} else {
-						if (aux == 3) {
-							btnpeca21.setEnabled(false);
-							btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l21 + ".png"));
-						} else {
-							if (aux == 4) {
-								btnpeca21.setEnabled(false);
-								btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l21 + ".png"));
-							} else {
-								if (aux == 5) {
-									btnpeca21.setEnabled(false);
-									btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l21 + ".png"));
-								} else {
-									if (aux == 6) {
-										btnpeca21.setEnabled(false);
-										btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l21 + ".png"));
-									} else {
-										if (aux == 7) {
-											btnpeca21.setEnabled(false);
-											btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l21 + ".png"));
-										}
-									}
-								}
-							}
-						}
-					}
+					break;
+				case 2:
+					btnpeca21.setEnabled(false);
+					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l21 + ".png"));
+					break;
+				case 3:
+					btnpeca21.setEnabled(false);
+					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l21 + ".png"));
+					break;
+				case 4:
+					btnpeca21.setEnabled(false);
+					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l21 + ".png"));
+					break;
+				case 5:
+					btnpeca21.setEnabled(false);
+					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l21 + ".png"));
+					break;
+				case 6:
+					btnpeca21.setEnabled(false);
+					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l21 + ".png"));
+					break;
+				case 7:
+					btnpeca21.setEnabled(false);
+					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l21 + ".png"));
+					break;
+				case 8:
+					btnpeca21.setEnabled(false);
+					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l21 + ".png"));
+					break;
+				case 9:
+					btnpeca21.setEnabled(false);
+					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l21 + ".png"));
+					break;
+				case 10:
+					btnpeca21.setEnabled(false);
+					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l21 + ".png"));
+					break;
+				case 11:
+					btnpeca21.setEnabled(false);
+					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l21 + ".png"));
+					break;
+				case 12:
+					btnpeca21.setEnabled(false);
+					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l21 + ".png"));
+					break;
+				case 13:
+					btnpeca21.setEnabled(false);
+					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l21 + ".png"));
+					break;
+				case 14:
+					btnpeca21.setEnabled(false);
+					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l21 + ".png"));
+					break;
+
+				default:
+					JOptionPane.showMessageDialog(null, "Peças esgotadas");
+					break;
 				}
+				// if (aux == 1) {
+				// btnpeca21.setEnabled(false);
+				// btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l21
+				// + ".png"));
+				// } else {
+				// if (aux == 2) {
+				// btnpeca21.setEnabled(false);
+				// btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l21
+				// + ".png"));
+				// } else {
+				// if (aux == 3) {
+				// btnpeca21.setEnabled(false);
+				// btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l21
+				// + ".png"));
+				// } else {
+				// if (aux == 4) {
+				// btnpeca21.setEnabled(false);
+				// btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l21
+				// + ".png"));
+				// } else {
+				// if (aux == 5) {
+				// btnpeca21.setEnabled(false);
+				// btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l21
+				// + ".png"));
+				// } else {
+				// if (aux == 6) {
+				// btnpeca21.setEnabled(false);
+				// btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l21
+				// + ".png"));
+				// } else {
+				// if (aux == 7) {
+				// btnpeca21.setEnabled(false);
+				// btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l21
+				// + ".png"));
+				// }
+				// }
+				// }
+				// }
+				// }
+				// }
+				// }
 			}
 		});
 
@@ -1084,40 +2564,110 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				l22 = array.get(21).toString();
-				if (aux == 1) {
+
+				switch (aux) {
+				case 1:
 					btnpeca22.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l22 + ".png"));
-				} else {
-					if (aux == 2) {
-						btnpeca22.setEnabled(false);
-						btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l22 + ".png"));
-					} else {
-						if (aux == 3) {
-							btnpeca22.setEnabled(false);
-							btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l22 + ".png"));
-						} else {
-							if (aux == 4) {
-								btnpeca22.setEnabled(false);
-								btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l22 + ".png"));
-							} else {
-								if (aux == 5) {
-									btnpeca22.setEnabled(false);
-									btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l22 + ".png"));
-								} else {
-									if (aux == 6) {
-										btnpeca22.setEnabled(false);
-										btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l22 + ".png"));
-									} else {
-										if (aux == 7) {
-											btnpeca22.setEnabled(false);
-											btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l22 + ".png"));
-										}
-									}
-								}
-							}
-						}
-					}
+					break;
+				case 2:
+					btnpeca22.setEnabled(false);
+					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l22 + ".png"));
+					break;
+				case 3:
+					btnpeca22.setEnabled(false);
+					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l22 + ".png"));
+					break;
+				case 4:
+					btnpeca22.setEnabled(false);
+					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l22 + ".png"));
+					break;
+				case 5:
+					btnpeca22.setEnabled(false);
+					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l22 + ".png"));
+					break;
+				case 6:
+					btnpeca22.setEnabled(false);
+					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l22 + ".png"));
+					break;
+				case 7:
+					btnpeca22.setEnabled(false);
+					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l22 + ".png"));
+					break;
+				case 8:
+					btnpeca22.setEnabled(false);
+					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l22 + ".png"));
+					break;
+				case 9:
+					btnpeca22.setEnabled(false);
+					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l22 + ".png"));
+					break;
+				case 10:
+					btnpeca22.setEnabled(false);
+					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l22 + ".png"));
+					break;
+				case 11:
+					btnpeca22.setEnabled(false);
+					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l22 + ".png"));
+					break;
+				case 12:
+					btnpeca22.setEnabled(false);
+					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l22 + ".png"));
+					break;
+				case 13:
+					btnpeca22.setEnabled(false);
+					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l22 + ".png"));
+					break;
+				case 14:
+					btnpeca22.setEnabled(false);
+					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l22 + ".png"));
+					break;
+
+				default:
+					JOptionPane.showMessageDialog(null, "Peças esgotadas");
+					break;
 				}
+				// if (aux == 1) {
+				// btnpeca22.setEnabled(false);
+				// btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l22
+				// + ".png"));
+				// } else {
+				// if (aux == 2) {
+				// btnpeca22.setEnabled(false);
+				// btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l22
+				// + ".png"));
+				// } else {
+				// if (aux == 3) {
+				// btnpeca22.setEnabled(false);
+				// btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l22
+				// + ".png"));
+				// } else {
+				// if (aux == 4) {
+				// btnpeca22.setEnabled(false);
+				// btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l22
+				// + ".png"));
+				// } else {
+				// if (aux == 5) {
+				// btnpeca22.setEnabled(false);
+				// btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l22
+				// + ".png"));
+				// } else {
+				// if (aux == 6) {
+				// btnpeca22.setEnabled(false);
+				// btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l22
+				// + ".png"));
+				// } else {
+				// if (aux == 7) {
+				// btnpeca22.setEnabled(false);
+				// btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l22
+				// + ".png"));
+				// }
+				// }
+				// }
+				// }
+				// }
+				// }
+				// }
 			}
 		});
 
@@ -1126,40 +2676,110 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				l23 = array.get(22).toString();
-				if (aux == 1) {
+
+				switch (aux) {
+				case 1:
 					btnpeca23.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l23 + ".png"));
-				} else {
-					if (aux == 2) {
-						btnpeca23.setEnabled(false);
-						btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l23 + ".png"));
-					} else {
-						if (aux == 3) {
-							btnpeca23.setEnabled(false);
-							btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l23 + ".png"));
-						} else {
-							if (aux == 4) {
-								btnpeca23.setEnabled(false);
-								btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l23 + ".png"));
-							} else {
-								if (aux == 5) {
-									btnpeca23.setEnabled(false);
-									btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l23 + ".png"));
-								} else {
-									if (aux == 6) {
-										btnpeca23.setEnabled(false);
-										btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l23 + ".png"));
-									} else {
-										if (aux == 7) {
-											btnpeca23.setEnabled(false);
-											btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l23 + ".png"));
-										}
-									}
-								}
-							}
-						}
-					}
+					break;
+				case 2:
+					btnpeca23.setEnabled(false);
+					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l23 + ".png"));
+					break;
+				case 3:
+					btnpeca23.setEnabled(false);
+					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l23 + ".png"));
+					break;
+				case 4:
+					btnpeca23.setEnabled(false);
+					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l23 + ".png"));
+					break;
+				case 5:
+					btnpeca23.setEnabled(false);
+					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l23 + ".png"));
+					break;
+				case 6:
+					btnpeca23.setEnabled(false);
+					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l23 + ".png"));
+					break;
+				case 7:
+					btnpeca23.setEnabled(false);
+					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l23 + ".png"));
+					break;
+				case 8:
+					btnpeca23.setEnabled(false);
+					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l23 + ".png"));
+					break;
+				case 9:
+					btnpeca23.setEnabled(false);
+					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l23 + ".png"));
+					break;
+				case 10:
+					btnpeca23.setEnabled(false);
+					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l23 + ".png"));
+					break;
+				case 11:
+					btnpeca23.setEnabled(false);
+					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l23 + ".png"));
+					break;
+				case 12:
+					btnpeca23.setEnabled(false);
+					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l23 + ".png"));
+					break;
+				case 13:
+					btnpeca23.setEnabled(false);
+					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l23 + ".png"));
+					break;
+				case 14:
+					btnpeca23.setEnabled(false);
+					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l23 + ".png"));
+					break;
+
+				default:
+					JOptionPane.showMessageDialog(null, "Peças esgotadas");
+					break;
 				}
+				// if (aux == 1) {
+				// btnpeca23.setEnabled(false);
+				// btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l23
+				// + ".png"));
+				// } else {
+				// if (aux == 2) {
+				// btnpeca23.setEnabled(false);
+				// btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l23
+				// + ".png"));
+				// } else {
+				// if (aux == 3) {
+				// btnpeca23.setEnabled(false);
+				// btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l23
+				// + ".png"));
+				// } else {
+				// if (aux == 4) {
+				// btnpeca23.setEnabled(false);
+				// btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l23
+				// + ".png"));
+				// } else {
+				// if (aux == 5) {
+				// btnpeca23.setEnabled(false);
+				// btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l23
+				// + ".png"));
+				// } else {
+				// if (aux == 6) {
+				// btnpeca23.setEnabled(false);
+				// btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l23
+				// + ".png"));
+				// } else {
+				// if (aux == 7) {
+				// btnpeca23.setEnabled(false);
+				// btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l23
+				// + ".png"));
+				// }
+				// }
+				// }
+				// }
+				// }
+				// }
+				// }
 			}
 		});
 
@@ -1168,40 +2788,110 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				l24 = array.get(23).toString();
-				if (aux == 1) {
+
+				switch (aux) {
+				case 1:
 					btnpeca24.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l24 + ".png"));
-				} else {
-					if (aux == 2) {
-						btnpeca24.setEnabled(false);
-						btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l24 + ".png"));
-					} else {
-						if (aux == 3) {
-							btnpeca24.setEnabled(false);
-							btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l24 + ".png"));
-						} else {
-							if (aux == 4) {
-								btnpeca24.setEnabled(false);
-								btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l24 + ".png"));
-							} else {
-								if (aux == 5) {
-									btnpeca24.setEnabled(false);
-									btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l24 + ".png"));
-								} else {
-									if (aux == 6) {
-										btnpeca24.setEnabled(false);
-										btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l24 + ".png"));
-									} else {
-										if (aux == 7) {
-											btnpeca24.setEnabled(false);
-											btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l24 + ".png"));
-										}
-									}
-								}
-							}
-						}
-					}
+					break;
+				case 2:
+					btnpeca24.setEnabled(false);
+					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l24 + ".png"));
+					break;
+				case 3:
+					btnpeca24.setEnabled(false);
+					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l24 + ".png"));
+					break;
+				case 4:
+					btnpeca24.setEnabled(false);
+					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l24 + ".png"));
+					break;
+				case 5:
+					btnpeca24.setEnabled(false);
+					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l24 + ".png"));
+					break;
+				case 6:
+					btnpeca24.setEnabled(false);
+					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l24 + ".png"));
+					break;
+				case 7:
+					btnpeca24.setEnabled(false);
+					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l24 + ".png"));
+					break;
+				case 8:
+					btnpeca24.setEnabled(false);
+					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l24 + ".png"));
+					break;
+				case 9:
+					btnpeca24.setEnabled(false);
+					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l24 + ".png"));
+					break;
+				case 10:
+					btnpeca24.setEnabled(false);
+					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l24 + ".png"));
+					break;
+				case 11:
+					btnpeca24.setEnabled(false);
+					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l24 + ".png"));
+					break;
+				case 12:
+					btnpeca24.setEnabled(false);
+					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l24 + ".png"));
+					break;
+				case 13:
+					btnpeca24.setEnabled(false);
+					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l24 + ".png"));
+					break;
+				case 14:
+					btnpeca24.setEnabled(false);
+					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l24 + ".png"));
+					break;
+
+				default:
+					JOptionPane.showMessageDialog(null, "Peças esgotadas");
+					break;
 				}
+				// if (aux == 1) {
+				// btnpeca24.setEnabled(false);
+				// btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l24
+				// + ".png"));
+				// } else {
+				// if (aux == 2) {
+				// btnpeca24.setEnabled(false);
+				// btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l24
+				// + ".png"));
+				// } else {
+				// if (aux == 3) {
+				// btnpeca24.setEnabled(false);
+				// btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l24
+				// + ".png"));
+				// } else {
+				// if (aux == 4) {
+				// btnpeca24.setEnabled(false);
+				// btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l24
+				// + ".png"));
+				// } else {
+				// if (aux == 5) {
+				// btnpeca24.setEnabled(false);
+				// btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l24
+				// + ".png"));
+				// } else {
+				// if (aux == 6) {
+				// btnpeca24.setEnabled(false);
+				// btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l24
+				// + ".png"));
+				// } else {
+				// if (aux == 7) {
+				// btnpeca24.setEnabled(false);
+				// btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l24
+				// + ".png"));
+				// }
+				// }
+				// }
+				// }
+				// }
+				// }
+				// }
 			}
 		});
 
@@ -1210,40 +2900,110 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				l25 = array.get(24).toString();
-				if (aux == 1) {
+
+				switch (aux) {
+				case 1:
 					btnpeca25.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l25 + ".png"));
-				} else {
-					if (aux == 2) {
-						btnpeca25.setEnabled(false);
-						btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l25 + ".png"));
-					} else {
-						if (aux == 3) {
-							btnpeca25.setEnabled(false);
-							btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l25 + ".png"));
-						} else {
-							if (aux == 4) {
-								btnpeca25.setEnabled(false);
-								btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l25 + ".png"));
-							} else {
-								if (aux == 5) {
-									btnpeca25.setEnabled(false);
-									btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l25 + ".png"));
-								} else {
-									if (aux == 6) {
-										btnpeca25.setEnabled(false);
-										btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l25 + ".png"));
-									} else {
-										if (aux == 7) {
-											btnpeca25.setEnabled(false);
-											btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l25 + ".png"));
-										}
-									}
-								}
-							}
-						}
-					}
+					break;
+				case 2:
+					btnpeca25.setEnabled(false);
+					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l25 + ".png"));
+					break;
+				case 3:
+					btnpeca25.setEnabled(false);
+					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l25 + ".png"));
+					break;
+				case 4:
+					btnpeca25.setEnabled(false);
+					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l25 + ".png"));
+					break;
+				case 5:
+					btnpeca25.setEnabled(false);
+					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l25 + ".png"));
+					break;
+				case 6:
+					btnpeca25.setEnabled(false);
+					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l25 + ".png"));
+					break;
+				case 7:
+					btnpeca25.setEnabled(false);
+					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l25 + ".png"));
+					break;
+				case 8:
+					btnpeca25.setEnabled(false);
+					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l25 + ".png"));
+					break;
+				case 9:
+					btnpeca25.setEnabled(false);
+					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l25 + ".png"));
+					break;
+				case 10:
+					btnpeca25.setEnabled(false);
+					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l25 + ".png"));
+					break;
+				case 11:
+					btnpeca25.setEnabled(false);
+					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l25 + ".png"));
+					break;
+				case 12:
+					btnpeca25.setEnabled(false);
+					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l25 + ".png"));
+					break;
+				case 13:
+					btnpeca25.setEnabled(false);
+					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l25 + ".png"));
+					break;
+				case 14:
+					btnpeca25.setEnabled(false);
+					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l25 + ".png"));
+					break;
+
+				default:
+					JOptionPane.showMessageDialog(null, "Peças esgotadas");
+					break;
 				}
+				// if (aux == 1) {
+				// btnpeca25.setEnabled(false);
+				// btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l25
+				// + ".png"));
+				// } else {
+				// if (aux == 2) {
+				// btnpeca25.setEnabled(false);
+				// btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l25
+				// + ".png"));
+				// } else {
+				// if (aux == 3) {
+				// btnpeca25.setEnabled(false);
+				// btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l25
+				// + ".png"));
+				// } else {
+				// if (aux == 4) {
+				// btnpeca25.setEnabled(false);
+				// btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l25
+				// + ".png"));
+				// } else {
+				// if (aux == 5) {
+				// btnpeca25.setEnabled(false);
+				// btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l25
+				// + ".png"));
+				// } else {
+				// if (aux == 6) {
+				// btnpeca25.setEnabled(false);
+				// btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l25
+				// + ".png"));
+				// } else {
+				// if (aux == 7) {
+				// btnpeca25.setEnabled(false);
+				// btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l25
+				// + ".png"));
+				// }
+				// }
+				// }
+				// }
+				// }
+				// }
+				// }
 			}
 		});
 
@@ -1252,40 +3012,111 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				l26 = array.get(25).toString();
-				if (aux == 1) {
+
+				switch (aux) {
+				case 1:
 					btnpeca26.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l26 + ".png"));
-				} else {
-					if (aux == 2) {
-						btnpeca26.setEnabled(false);
-						btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l26 + ".png"));
-					} else {
-						if (aux == 3) {
-							btnpeca26.setEnabled(false);
-							btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l26 + ".png"));
-						} else {
-							if (aux == 4) {
-								btnpeca26.setEnabled(false);
-								btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l26 + ".png"));
-							} else {
-								if (aux == 5) {
-									btnpeca26.setEnabled(false);
-									btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l26 + ".png"));
-								} else {
-									if (aux == 6) {
-										btnpeca26.setEnabled(false);
-										btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l26 + ".png"));
-									} else {
-										if (aux == 7) {
-											btnpeca26.setEnabled(false);
-											btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l26 + ".png"));
-										}
-									}
-								}
-							}
-						}
-					}
+					break;
+				case 2:
+					btnpeca26.setEnabled(false);
+					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l26 + ".png"));
+					break;
+				case 3:
+					btnpeca26.setEnabled(false);
+					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l26 + ".png"));
+					break;
+				case 4:
+					btnpeca26.setEnabled(false);
+					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l26 + ".png"));
+					break;
+				case 5:
+					btnpeca26.setEnabled(false);
+					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l26 + ".png"));
+					break;
+				case 6:
+					btnpeca26.setEnabled(false);
+					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l26 + ".png"));
+					break;
+				case 7:
+					btnpeca26.setEnabled(false);
+					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l26 + ".png"));
+					break;
+				case 8:
+					btnpeca26.setEnabled(false);
+					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l26 + ".png"));
+					break;
+				case 9:
+					btnpeca26.setEnabled(false);
+					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l26 + ".png"));
+					break;
+				case 10:
+					btnpeca26.setEnabled(false);
+					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l26 + ".png"));
+					break;
+				case 11:
+					btnpeca26.setEnabled(false);
+					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l26 + ".png"));
+					break;
+				case 12:
+					btnpeca26.setEnabled(false);
+					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l26 + ".png"));
+					break;
+				case 13:
+					btnpeca26.setEnabled(false);
+					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l26 + ".png"));
+					break;
+				case 14:
+					btnpeca26.setEnabled(false);
+					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l26 + ".png"));
+					break;
+
+				default:
+					JOptionPane.showMessageDialog(null, "Peças esgotadas");
+					break;
 				}
+
+				// if (aux == 1) {
+				// btnpeca26.setEnabled(false);
+				// btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l26
+				// + ".png"));
+				// } else {
+				// if (aux == 2) {
+				// btnpeca26.setEnabled(false);
+				// btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l26
+				// + ".png"));
+				// } else {
+				// if (aux == 3) {
+				// btnpeca26.setEnabled(false);
+				// btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l26
+				// + ".png"));
+				// } else {
+				// if (aux == 4) {
+				// btnpeca26.setEnabled(false);
+				// btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l26
+				// + ".png"));
+				// } else {
+				// if (aux == 5) {
+				// btnpeca26.setEnabled(false);
+				// btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l26
+				// + ".png"));
+				// } else {
+				// if (aux == 6) {
+				// btnpeca26.setEnabled(false);
+				// btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l26
+				// + ".png"));
+				// } else {
+				// if (aux == 7) {
+				// btnpeca26.setEnabled(false);
+				// btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l26
+				// + ".png"));
+				// }
+				// }
+				// }
+				// }
+				// }
+				// }
+				// }
 			}
 		});
 
@@ -1294,40 +3125,111 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				l27 = array.get(26).toString();
-				if (aux == 1) {
+
+				switch (aux) {
+				case 1:
 					btnpeca27.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l27 + ".png"));
-				} else {
-					if (aux == 2) {
-						btnpeca27.setEnabled(false);
-						btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l27 + ".png"));
-					} else {
-						if (aux == 3) {
-							btnpeca27.setEnabled(false);
-							btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l27 + ".png"));
-						} else {
-							if (aux == 4) {
-								btnpeca27.setEnabled(false);
-								btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l27 + ".png"));
-							} else {
-								if (aux == 5) {
-									btnpeca27.setEnabled(false);
-									btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l27 + ".png"));
-								} else {
-									if (aux == 6) {
-										btnpeca27.setEnabled(false);
-										btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l27 + ".png"));
-									} else {
-										if (aux == 7) {
-											btnpeca27.setEnabled(false);
-											btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l23 + ".png"));
-										}
-									}
-								}
-							}
-						}
-					}
+					break;
+				case 2:
+					btnpeca27.setEnabled(false);
+					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l27 + ".png"));
+					break;
+				case 3:
+					btnpeca27.setEnabled(false);
+					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l27 + ".png"));
+					break;
+				case 4:
+					btnpeca27.setEnabled(false);
+					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l27 + ".png"));
+					break;
+				case 5:
+					btnpeca27.setEnabled(false);
+					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l27 + ".png"));
+					break;
+				case 6:
+					btnpeca27.setEnabled(false);
+					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l27 + ".png"));
+					break;
+				case 7:
+					btnpeca27.setEnabled(false);
+					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l27 + ".png"));
+					break;
+				case 8:
+					btnpeca27.setEnabled(false);
+					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l27 + ".png"));
+					break;
+				case 9:
+					btnpeca27.setEnabled(false);
+					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l27 + ".png"));
+					break;
+				case 10:
+					btnpeca27.setEnabled(false);
+					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l27 + ".png"));
+					break;
+				case 11:
+					btnpeca27.setEnabled(false);
+					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l27 + ".png"));
+					break;
+				case 12:
+					btnpeca27.setEnabled(false);
+					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l27 + ".png"));
+					break;
+				case 13:
+					btnpeca27.setEnabled(false);
+					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l27 + ".png"));
+					break;
+				case 14:
+					btnpeca27.setEnabled(false);
+					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l27 + ".png"));
+					break;
+
+				default:
+					JOptionPane.showMessageDialog(null, "Peças esgotadas");
+					break;
 				}
+
+				// if (aux == 1) {
+				// btnpeca27.setEnabled(false);
+				// btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l27
+				// + ".png"));
+				// } else {
+				// if (aux == 2) {
+				// btnpeca27.setEnabled(false);
+				// btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l27
+				// + ".png"));
+				// } else {
+				// if (aux == 3) {
+				// btnpeca27.setEnabled(false);
+				// btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l27
+				// + ".png"));
+				// } else {
+				// if (aux == 4) {
+				// btnpeca27.setEnabled(false);
+				// btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l27
+				// + ".png"));
+				// } else {
+				// if (aux == 5) {
+				// btnpeca27.setEnabled(false);
+				// btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l27
+				// + ".png"));
+				// } else {
+				// if (aux == 6) {
+				// btnpeca27.setEnabled(false);
+				// btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l27
+				// + ".png"));
+				// } else {
+				// if (aux == 7) {
+				// btnpeca27.setEnabled(false);
+				// btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l23
+				// + ".png"));
+				// }
+				// }
+				// }
+				// }
+				// }
+				// }
+				// }
 			}
 		});
 
@@ -1336,40 +3238,111 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				l28 = array.get(27).toString();
-				if (aux == 1) {
+
+				switch (aux) {
+				case 1:
 					btnpeca28.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
-				} else {
-					if (aux == 2) {
-						btnpeca28.setEnabled(false);
-						btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
-					} else {
-						if (aux == 3) {
-							btnpeca28.setEnabled(false);
-							btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
-						} else {
-							if (aux == 4) {
-								btnpeca28.setEnabled(false);
-								btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
-							} else {
-								if (aux == 5) {
-									btnpeca28.setEnabled(false);
-									btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
-								} else {
-									if (aux == 6) {
-										btnpeca28.setEnabled(false);
-										btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
-									} else {
-										if (aux == 7) {
-											btnpeca28.setEnabled(false);
-											btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
-										}
-									}
-								}
-							}
-						}
-					}
+					break;
+				case 2:
+					btnpeca28.setEnabled(false);
+					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
+					break;
+				case 3:
+					btnpeca28.setEnabled(false);
+					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
+					break;
+				case 4:
+					btnpeca28.setEnabled(false);
+					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
+					break;
+				case 5:
+					btnpeca28.setEnabled(false);
+					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
+					break;
+				case 6:
+					btnpeca28.setEnabled(false);
+					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
+					break;
+				case 7:
+					btnpeca28.setEnabled(false);
+					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
+					break;
+				case 8:
+					btnpeca28.setEnabled(false);
+					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
+					break;
+				case 9:
+					btnpeca28.setEnabled(false);
+					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
+					break;
+				case 10:
+					btnpeca28.setEnabled(false);
+					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
+					break;
+				case 11:
+					btnpeca28.setEnabled(false);
+					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
+					break;
+				case 12:
+					btnpeca28.setEnabled(false);
+					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
+					break;
+				case 13:
+					btnpeca28.setEnabled(false);
+					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
+					break;
+				case 14:
+					btnpeca28.setEnabled(false);
+					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
+					break;
+
+				default:
+					JOptionPane.showMessageDialog(null, "Peças esgotadas");
+					break;
 				}
+
+				// if (aux == 1) {
+				// btnpeca28.setEnabled(false);
+				// btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l28
+				// + ".png"));
+				// } else {
+				// if (aux == 2) {
+				// btnpeca28.setEnabled(false);
+				// btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l28
+				// + ".png"));
+				// } else {
+				// if (aux == 3) {
+				// btnpeca28.setEnabled(false);
+				// btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l28
+				// + ".png"));
+				// } else {
+				// if (aux == 4) {
+				// btnpeca28.setEnabled(false);
+				// btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l28
+				// + ".png"));
+				// } else {
+				// if (aux == 5) {
+				// btnpeca28.setEnabled(false);
+				// btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l28
+				// + ".png"));
+				// } else {
+				// if (aux == 6) {
+				// btnpeca28.setEnabled(false);
+				// btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l28
+				// + ".png"));
+				// } else {
+				// if (aux == 7) {
+				// btnpeca28.setEnabled(false);
+				// btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l28
+				// + ".png"));
+				// }
+				// }
+				// }
+				// }
+				// }
+				// }
+				// }
 			}
 		});
 
@@ -1403,8 +3376,150 @@ public class TelaDoJogo extends JFrame {
 		panel_pecasAescolher.add(btnpeca28);
 
 		JPanel panel_tabuleiro = new JPanel();
-		panel_tabuleiro.setBounds(361, 124, 989, 426);
+		panel_tabuleiro.setBorder(new LineBorder(Color.RED, 1, true));
+		panel_tabuleiro.setBounds(361, 124, 979, 426);
 		getContentPane().add(panel_tabuleiro);
+		panel_tabuleiro.setLayout(null);
+
+		JButton button = new JButton("");
+		button.setEnabled(false);
+		button.setBounds(385, 176, 70, 35);
+		panel_tabuleiro.add(button);
+
+		JButton button_1 = new JButton("");
+		button_1.setEnabled(false);
+		button_1.setBounds(385, 210, 35, 70);
+		panel_tabuleiro.add(button_1);
+
+		JButton button_2 = new JButton("");
+		button_2.setEnabled(false);
+		button_2.setBounds(454, 176, 70, 35);
+		panel_tabuleiro.add(button_2);
+
+		JButton button_3 = new JButton("");
+		button_3.setEnabled(false);
+		button_3.setBounds(315, 245, 70, 35);
+		panel_tabuleiro.add(button_3);
+
+		JButton button_4 = new JButton("");
+		button_4.setEnabled(false);
+		button_4.setBounds(524, 176, 70, 35);
+		panel_tabuleiro.add(button_4);
+
+		JButton button_5 = new JButton("");
+		button_5.setEnabled(false);
+		button_5.setBounds(594, 245, 70, 35);
+		panel_tabuleiro.add(button_5);
+
+		JButton button_6 = new JButton("");
+		button_6.setEnabled(false);
+		button_6.setBounds(315, 279, 35, 70);
+		panel_tabuleiro.add(button_6);
+
+		JButton button_7 = new JButton("");
+		button_7.setEnabled(false);
+		button_7.setBounds(870, 315, 70, 35);
+		panel_tabuleiro.add(button_7);
+
+		JButton button_8 = new JButton("");
+		button_8.setEnabled(false);
+		button_8.setBounds(246, 314, 70, 35);
+		panel_tabuleiro.add(button_8);
+
+		JButton button_9 = new JButton("");
+		button_9.setEnabled(false);
+		button_9.setBounds(177, 314, 70, 35);
+		panel_tabuleiro.add(button_9);
+
+		JButton button_10 = new JButton("");
+		button_10.setEnabled(false);
+		button_10.setBounds(108, 314, 70, 35);
+		panel_tabuleiro.add(button_10);
+
+		JButton button_11 = new JButton("");
+		button_11.setEnabled(false);
+		button_11.setBounds(39, 314, 70, 35);
+		panel_tabuleiro.add(button_11);
+
+		JButton button_12 = new JButton("");
+		button_12.setEnabled(false);
+		button_12.setBounds(39, 245, 35, 70);
+		panel_tabuleiro.add(button_12);
+
+		JButton button_13 = new JButton("");
+		button_13.setEnabled(false);
+		button_13.setBounds(39, 176, 35, 70);
+		panel_tabuleiro.add(button_13);
+
+		JButton button_14 = new JButton("");
+		button_14.setEnabled(false);
+		button_14.setBounds(559, 210, 35, 70);
+		panel_tabuleiro.add(button_14);
+
+		JButton button_15 = new JButton("");
+		button_15.setEnabled(false);
+		button_15.setBounds(629, 280, 35, 70);
+		panel_tabuleiro.add(button_15);
+
+		JButton button_16 = new JButton("");
+		button_16.setEnabled(false);
+		button_16.setBounds(663, 315, 70, 35);
+		panel_tabuleiro.add(button_16);
+
+		JButton button_17 = new JButton("");
+		button_17.setEnabled(false);
+		button_17.setBounds(732, 315, 70, 35);
+		panel_tabuleiro.add(button_17);
+
+		JButton button_18 = new JButton("");
+		button_18.setEnabled(false);
+		button_18.setBounds(801, 315, 70, 35);
+		panel_tabuleiro.add(button_18);
+
+		JButton button_19 = new JButton("");
+		button_19.setEnabled(false);
+		button_19.setBounds(870, 74, 70, 35);
+		panel_tabuleiro.add(button_19);
+
+		JButton button_20 = new JButton("");
+		button_20.setEnabled(false);
+		button_20.setBounds(905, 246, 35, 70);
+		panel_tabuleiro.add(button_20);
+
+		JButton button_21 = new JButton("");
+		button_21.setEnabled(false);
+		button_21.setBounds(905, 177, 35, 70);
+		panel_tabuleiro.add(button_21);
+
+		JButton button_22 = new JButton("");
+		button_22.setEnabled(false);
+		button_22.setBounds(905, 108, 35, 70);
+		panel_tabuleiro.add(button_22);
+
+		JButton button_24 = new JButton("");
+		button_24.setEnabled(false);
+		button_24.setBounds(39, 107, 35, 70);
+		panel_tabuleiro.add(button_24);
+
+		JButton button_25 = new JButton("");
+		button_25.setEnabled(false);
+		button_25.setBounds(39, 72, 70, 35);
+		panel_tabuleiro.add(button_25);
+
+		JButton button_26 = new JButton("");
+		button_26.setEnabled(false);
+		button_26.setBounds(108, 72, 70, 35);
+		panel_tabuleiro.add(button_26);
+
+		JButton button_27 = new JButton("");
+		button_27.setEnabled(false);
+		button_27.setBounds(177, 72, 70, 35);
+		panel_tabuleiro.add(button_27);
+
+		JButton button_23 = new JButton("");
+		button_23.setEnabled(false);
+		button_23.setBounds(801, 74, 70, 35);
+		panel_tabuleiro.add(button_23);
 
 		JLabel lblEscolhaSuasPecas = new JLabel("Escolha Suas Pecas");
 		lblEscolhaSuasPecas.setFont(new Font("Times New Roman", Font.BOLD, 18));
