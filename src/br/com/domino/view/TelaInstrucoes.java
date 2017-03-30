@@ -2,8 +2,11 @@ package br.com.domino.view;
 
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -15,8 +18,8 @@ public class TelaInstrucoes extends JFrame {
 	private JPanel contentPane;
 	private JLabel labelTitulo;
 	private JLabel labelTexto;
-	private JButton btnProx = new JButton("Proximo");
-	private JButton btnAnt = new JButton("Voltar");
+	private JButton btnProx = new JButton(new ImageIcon(".//resource//imagens//proximo.png"));
+	private JButton btnAnt = new JButton(new ImageIcon(".//resource//imagens//voltar.png"));
 	private static int cont;
 	private String titulo1 = "História do Dominó";
 	private String titulo2 = "O Jogo";
@@ -30,6 +33,7 @@ public class TelaInstrucoes extends JFrame {
 	private String texto4 = "<html><p>O jogo deve girar em torno de rodadas, vence uma rodada o jogador que vencer partidas e conquistar 6 pontos primeiro.<br><h1>Controles</h1>Para colocar uma pedra, deve-se simplesmente clicar sobre ela. <br><h1>Fim do Jogo</h1>O jogo acaba quando alguém bate (ficar sem pedras na mão) ou quando o jogo fica fechado, ou seja, quando não é mais possível baixar pedras e o repositório de peças estiver vazio vencerá o jogador que possuir a menor valor da soma de todas as peças em sua mão.</p></html>";
 	private String texto5 = "<html><p>A pontuação deverá ser dada da seguinte forma:<br>1.Um ponto para o jogar que terminar o jogo em uma das cabeças com peça simples(Batida normal).<br>2.Dois pontos para o jogador que terminar o jogo em uma das cabeças com carroça(Batida Carroça).<br>3.Três pontos para o jogador que terminar o jogo com uma peça normal que possa ser jogada em qualquer uma das duas cabeças(Batida Lá e Lô).<br>4.Seis pontos para o jogador que terminar o jogo com uma carroça que possa ser jogada em qualquer uma das duas cabeças(Batida Quadrada ou batida Cruzada).<br>Ao final de cada rodada pontuaÃ§Ã£o do jogador deve ser salva para que seja adicionada ao Rank.</p></html>";
 	private String texto6 = "<html><p>Por Pontos - Quando um jogador bate, ele recebe pontos equivalentes as pedras nas mãos dos adversários, caso o jogo seja fechado o jogador que possuir menos pontos é o vencedor, e ganha todos os pontos dos jogadores adversários, no caso de empate os jogadores que empataram ganham os pontos dos adversários.<br><br>Por Batidas - Apenas uma batida simples ganha o jogo. Se o jogo for fechado o jogador que possuir menos pontos será o vencedor. no caso de empate os jogadores que empataram dividem as fichas.<br><br><h1>Ranking por Pontos</h1>Para participar do ranking deste jogo, é necessário estar cadastrado.</p></html>";
+	private JLabel lblFundoinstrucao;
 
 	public TelaInstrucoes() {
 
@@ -38,6 +42,7 @@ public class TelaInstrucoes extends JFrame {
 		setBounds(400, 400, 450, 300);
 		setSize(644, 410);
 		setLocationRelativeTo(null);
+		setIconImage(Toolkit.getDefaultToolkit().getImage(".//resource//imagens//help.png"));
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -45,6 +50,7 @@ public class TelaInstrucoes extends JFrame {
 
 		labelTitulo = new JLabel();
 		labelTitulo.setText(titulo1);
+		labelTitulo.setForeground(Color.white);
 		labelTexto = new JLabel();
 		labelTexto.setText(texto1);
 
@@ -52,6 +58,7 @@ public class TelaInstrucoes extends JFrame {
 		labelTitulo.setBounds(90, 30, 300, 23);
 
 		labelTexto.setFont(new Font("Courier New", Font.CENTER_BASELINE, 14));
+		labelTexto.setForeground(Color.white);
 		labelTexto.setBounds(90, 50, 500, 300);
 
 		contentPane.add(labelTitulo);
@@ -59,7 +66,7 @@ public class TelaInstrucoes extends JFrame {
 
 		btnProx.setForeground(Color.BLACK);
 		btnProx.setBackground(Color.WHITE);
-		btnProx.setBounds(460, 340, 124, 23);
+		btnProx.setBounds(460, 335, 100, 47);
 		btnProx.addActionListener(new ActionListener() {
 
 			@Override
@@ -73,7 +80,7 @@ public class TelaInstrucoes extends JFrame {
 
 		btnAnt.setForeground(Color.BLACK);
 		btnAnt.setBackground(Color.WHITE);
-		btnAnt.setBounds(340, 340, 124, 23);
+		btnAnt.setBounds(338, 335, 100, 47);
 		btnAnt.setVisible(false);
 		btnAnt.addActionListener(new ActionListener() {
 
@@ -86,6 +93,10 @@ public class TelaInstrucoes extends JFrame {
 		});
 
 		contentPane.add(btnAnt);
+		
+		lblFundoinstrucao = new JLabel(new ImageIcon(".//resource//imagens//fundoInstrucao.png"));
+		lblFundoinstrucao.setBounds(0, 0, 638, 382);
+		contentPane.add(lblFundoinstrucao);
 
 	}
 
@@ -152,5 +163,4 @@ public class TelaInstrucoes extends JFrame {
 		}
 
 	}
-
 }

@@ -50,9 +50,19 @@ public class TelaDoJogo extends JFrame {
 		mnMenu.add(mntmSalvarJogo);
 
 		JMenuItem mntmInstrues = new JMenuItem("Instru\u00E7\u00F5es");
+		mntmInstrues.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new TelaInstrucoes().setVisible(true);
+			}
+		});
 		mnMenu.add(mntmInstrues);
 
 		JMenuItem mntmSair = new JMenuItem("Sair");
+		mntmSair.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				dispose();
+			}
+		});
 		mnMenu.add(mntmSair);
 		getContentPane().setLayout(null);
 
