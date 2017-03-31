@@ -3,6 +3,8 @@ package br.com.domino.view;
 import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
+import java.awt.Point;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -62,7 +64,8 @@ public class TelaDoNivel extends JFrame {
 	private void initialize() {
 		frame = new JFrame();
 		frame.setResizable(false);
-		frame.setBounds(100, 100, 422, 300);
+		frame.setIconImage(Toolkit.getDefaultToolkit().getImage(".//resource//imagens//pretaicon.png"));
+		frame.setBounds(500, 170, 400, 280);
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 
@@ -83,6 +86,7 @@ public class TelaDoNivel extends JFrame {
 		JButton btnDificil = new JButton("Dificil");
 		btnDificil.setIcon(new ImageIcon(".//resource//imagens//dificil.png"));
 		btnDificil.setFont(new Font("Sylfaen", Font.BOLD, 13));
+		btnDificil.setEnabled(false);
 		btnDificil.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				TelaDoJogo sc = new TelaDoJogo();
