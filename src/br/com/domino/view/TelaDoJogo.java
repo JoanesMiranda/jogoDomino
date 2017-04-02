@@ -125,7 +125,7 @@ public class TelaDoJogo extends JFrame {
 
 		ArrayList<Pecas> array = new ArrayList<Pecas>();
 
-		for (Pecas pecas : al.geraNumerosAleatorios()) {
+		for (Pecas pecas : al.embaralhaPedrasDomino()) {
 			array.add(pecas);
 		}
 
@@ -230,19 +230,106 @@ public class TelaDoJogo extends JFrame {
 		getContentPane().add(panel_pecasJogador);
 		panel_pecasJogador.setLayout(new GridLayout(1, 20, 0, 0));
 
-		// verifica de quem é a vez do jogo;
-		// this.vezDoJogo = al.maiorPedra(arrayH, arrayH);
-
-		// if (vezDoJogo == true) {
-		// desabilitaBotoesMaquina();
-		// } else {
-		// desabilitaBotoesHumano();
-		// }
 
 		btnhumano1 = new JButton("");
 		btnhumano1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				/**
+				++aux2;
+				Pecas p = array.get(0);
+				String ladoa = p.getLadoDireito().toString();
+				String ladob = p.getLadoEsquerdo().toString();
 
+				l1 = ladoa + ladob;
+
+				switch (aux2) {
+				case 1:
+					arrayH.add(p);
+					btnpeca1.setEnabled(false);
+					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					break;
+				case 2:
+					arrayH.add(p);
+					btnpeca1.setEnabled(false);
+					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					break;
+				case 3:
+					arrayH.add(p);
+					btnpeca1.setEnabled(false);
+					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					break;
+				case 4:
+					arrayH.add(p);
+					btnpeca1.setEnabled(false);
+					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					break;
+				case 5:
+					arrayH.add(p);
+					btnpeca1.setEnabled(false);
+					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					break;
+				case 6:
+					arrayH.add(p);
+					btnpeca1.setEnabled(false);
+					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					break;
+				case 7:
+					arrayH.add(p);
+					btnpeca1.setEnabled(false);
+					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					break;
+				case 8:
+					arrayM.add(p);
+					btnpeca1.setEnabled(false);
+					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					break;
+				case 9:
+					arrayM.add(p);
+					btnpeca1.setEnabled(false);
+					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					break;
+				case 10:
+					arrayM.add(p);
+					btnpeca1.setEnabled(false);
+					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					break;
+				case 11:
+					arrayM.add(p);
+					btnpeca1.setEnabled(false);
+					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					break;
+				case 12:
+					arrayM.add(p);
+					btnpeca1.setEnabled(false);
+					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					break;
+				case 13:
+					arrayM.add(p);
+					btnpeca1.setEnabled(false);
+					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					break;
+				case 14:
+					arrayM.add(p);
+					btnpeca1.setEnabled(false);
+					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					break;
+
+				default:
+
+					JOptionPane.showMessageDialog(null, "Peças esgotadas");
+					vezDoJogo = al.jogaprimeiro(arrayH, arrayM);
+					if (vezDoJogo == true) {
+						desabilitaBotoesMaquina();
+					} else {
+						desabilitaBotoesHumano();
+					}
+
+					break;
+				}
+				
+				
+				
+				**/
 			}
 		});
 		btnhumano2 = new JButton("");
@@ -378,12 +465,12 @@ public class TelaDoJogo extends JFrame {
 				default:
 
 					JOptionPane.showMessageDialog(null, "Peças esgotadas");
-					// vezDoJogo = al.maiorPedra(arrayH, arrayM);
-					// if (vezDoJogo == true) {
-					// desabilitaBotoesMaquina();
-					// } else {
-					// desabilitaBotoesHumano();
-					// }
+					vezDoJogo = al.jogaprimeiro(arrayH, arrayM);
+					if (vezDoJogo == true) {
+						desabilitaBotoesMaquina();
+					} else {
+						desabilitaBotoesHumano();
+					}
 
 					break;
 				}

@@ -6,10 +6,10 @@ import java.util.List;
 
 public class Actions {
 
-	public List<Pecas> geraNumerosAleatorios() {
-		
+	public List<Pecas> embaralhaPedrasDomino() {
+
 		List<Pecas> pecas = new ArrayList<Pecas>();
-		
+
 		Pecas p0 = new Pecas(0, 0);
 		Pecas p1 = new Pecas(0, 1);
 		Pecas p2 = new Pecas(0, 2);
@@ -29,7 +29,7 @@ public class Actions {
 		Pecas p25 = new Pecas(2, 5);
 		Pecas p26 = new Pecas(2, 6);
 		Pecas p33 = new Pecas(3, 3);
-		Pecas p34 = new Pecas(4, 4);
+		Pecas p34 = new Pecas(3, 4);
 		Pecas p35 = new Pecas(3, 5);
 		Pecas p36 = new Pecas(3, 6);
 		Pecas p44 = new Pecas(4, 4);
@@ -71,28 +71,44 @@ public class Actions {
 		Collections.shuffle(pecas);
 		return pecas;
 	}
-	
 
-	// verifica qual dos arrays(homem ou maquina), possui a maior pedra para inicicar a partida.
-	public boolean maiorPedra(ArrayList<Integer> arrayH, ArrayList<Integer> arrayM) {
-		int maxH = arrayH.get(0);
-		int maxM = arrayH.get(0);
+	ArrayList<Pecas> humano, maquina;
 
-		for (int i = 0; i < arrayH.size(); i++) {
-			if (arrayH.get(i) > maxH) {
-				maxH = arrayH.get(i);
+	public boolean jogaprimeiro(ArrayList<Pecas> humano, ArrayList<Pecas> maquina) {
+
+		int somaladosmaquina;
+		int somaladoshumano = 0;
+		int maiorHumano = 0;
+		int maiorMaquina = 0;
+		this.humano = humano;
+		this.maquina = maquina;
+
+		// busca Maior Humano
+
+		for (Pecas x : humano) {
+			somaladoshumano = x.getLadoDireito() + x.getLadoEsquerdo();
+			if (somaladoshumano > maiorHumano) {
+				maiorHumano = somaladoshumano;
+				somaladoshumano = 0;
 			}
 		}
-		for (int i = 0; i < arrayM.size(); i++) {
-			if (arrayM.get(i) > maxM) {
-				maxM = arrayM.get(i);
+
+		// busca Maior Maquina
+		for (Pecas x : maquina) {
+			somaladosmaquina = x.getLadoDireito() + x.getLadoEsquerdo();
+			if (somaladosmaquina > maiorHumano) {
+				maiorMaquina = somaladosmaquina;
+				somaladosmaquina = 0;
 			}
 		}
-		// se a maior pedra for do homen retorma true, caso contrario retorna false.
-		if (maxH > maxM) {
+
+		// retorna verdadeiro se maior for humano falso se maquina for maior
+		if (maiorHumano > maiorMaquina) {
+
 			return true;
 		} else {
 			return false;
 		}
+
 	}
 }
