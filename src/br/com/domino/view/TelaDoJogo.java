@@ -64,6 +64,35 @@ public class TelaDoJogo extends JFrame {
 	JButton btnmaquina17;
 	JButton btnmaquina18;
 
+	JButton btn_1;
+	JButton btn_2;
+	JButton btn_3;
+	JButton btn_4;
+	JButton btn_5;
+	JButton btn_6;
+	JButton btn_7;
+	JButton btn_8;
+	JButton btn_9;
+	JButton btn_10;
+	JButton btn_11;
+	JButton btn_12;
+	JButton btn_13;
+	JButton btn_14;
+	JButton btn_15;
+	JButton btn_16;
+	JButton btn_17;
+	JButton btn_18;
+	JButton btn_19;
+	JButton btn_20;
+	JButton btn_21;
+	JButton btn_22;
+	JButton btn_23;
+	JButton btn_24;
+	JButton btn_25;
+	JButton btn_26;
+	JButton btn_27;
+	JButton btn_28;
+
 	public void desabilitaBotoesHumano() {
 		btnhumano1.setEnabled(false);
 		btnhumano2.setEnabled(false);
@@ -83,6 +112,27 @@ public class TelaDoJogo extends JFrame {
 		btnhumano16.setEnabled(false);
 		btnhumano17.setEnabled(false);
 		btnhumano18.setEnabled(false);
+	}
+
+	public void habilitaBotoesHumano() {
+		btnhumano1.setEnabled(true);
+		btnhumano2.setEnabled(true);
+		btnhumano3.setEnabled(true);
+		btnhumano4.setEnabled(true);
+		btnhumano5.setEnabled(true);
+		btnhumano6.setEnabled(true);
+		btnhumano7.setEnabled(true);
+		btnhumano8.setEnabled(true);
+		btnhumano9.setEnabled(true);
+		btnhumano10.setEnabled(true);
+		btnhumano11.setEnabled(true);
+		btnhumano12.setEnabled(true);
+		btnhumano13.setEnabled(true);
+		btnhumano14.setEnabled(true);
+		btnhumano15.setEnabled(true);
+		btnhumano16.setEnabled(true);
+		btnhumano17.setEnabled(true);
+		btnhumano18.setEnabled(true);
 	}
 
 	public void desabilitaBotoesMaquina() {
@@ -106,6 +156,27 @@ public class TelaDoJogo extends JFrame {
 		btnmaquina18.setEnabled(false);
 	}
 
+	public void habilitaBotoesMaquina() {
+		btnmaquina1.setEnabled(true);
+		btnmaquina2.setEnabled(true);
+		btnmaquina3.setEnabled(true);
+		btnmaquina4.setEnabled(true);
+		btnmaquina5.setEnabled(true);
+		btnmaquina6.setEnabled(true);
+		btnmaquina7.setEnabled(true);
+		btnmaquina8.setEnabled(true);
+		btnmaquina9.setEnabled(true);
+		btnmaquina10.setEnabled(true);
+		btnmaquina11.setEnabled(true);
+		btnmaquina12.setEnabled(true);
+		btnmaquina13.setEnabled(true);
+		btnmaquina14.setEnabled(true);
+		btnmaquina15.setEnabled(true);
+		btnmaquina16.setEnabled(true);
+		btnmaquina17.setEnabled(true);
+		btnmaquina18.setEnabled(true);
+	}
+
 	int aux = 0;
 	int aux2 = 0;
 	Actions al = new Actions();
@@ -114,10 +185,19 @@ public class TelaDoJogo extends JFrame {
 	ArrayList<Pecas> arrayM = new ArrayList<Pecas>();
 
 	// se true a vez do jogo é do humano se false a vez do jogo é da maquina
-	boolean vezDoJogo = false;
+
+	public void habilitaDesabilitaBotoes(boolean vezDoJogo) {
+		if (vezDoJogo == true) {
+			desabilitaBotoesMaquina();
+			habilitaBotoesHumano();
+		} else {
+			desabilitaBotoesHumano();
+			habilitaBotoesMaquina();
+		}
+	}
 
 	// recebe todas as pedras do caminho do jogo do domino
-	Pecas[] arrayTabuleiro = new Pecas[57];
+	ArrayList<Pecas> arrayTabuleiro = new ArrayList<Pecas>();
 
 	private static final long serialVersionUID = 1L;
 
@@ -230,11 +310,9 @@ public class TelaDoJogo extends JFrame {
 		getContentPane().add(panel_pecasJogador);
 		panel_pecasJogador.setLayout(new GridLayout(1, 20, 0, 0));
 
-
 		btnhumano1 = new JButton("");
 		btnhumano1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				/**
 				++aux2;
 				Pecas p = array.get(0);
 				String ladoa = p.getLadoDireito().toString();
@@ -244,92 +322,93 @@ public class TelaDoJogo extends JFrame {
 
 				switch (aux2) {
 				case 1:
-					arrayH.add(p);
-					btnpeca1.setEnabled(false);
-					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					if (arrayTabuleiro.size() == 0) {
+						arrayTabuleiro.add(p);
+						btnhumano1.setEnabled(false);
+						btn_1.setEnabled(true);
+						btn_1.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, 0, p) == true) {
+							arrayTabuleiro.add(p);
+							btnhumano1.setEnabled(false);
+							btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+						} else {
+							JOptionPane.showMessageDialog(null, "Pedra diferente");
+						}
+					}
+					habilitaDesabilitaBotoes(false);
+
 					break;
 				case 2:
 					arrayH.add(p);
-					btnpeca1.setEnabled(false);
-					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					btnhumano1.setEnabled(false);
+					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
 					break;
 				case 3:
 					arrayH.add(p);
-					btnpeca1.setEnabled(false);
-					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					btnhumano1.setEnabled(false);
+					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
 					break;
 				case 4:
 					arrayH.add(p);
-					btnpeca1.setEnabled(false);
-					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					btnhumano1.setEnabled(false);
+					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
 					break;
 				case 5:
 					arrayH.add(p);
-					btnpeca1.setEnabled(false);
-					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					btnhumano1.setEnabled(false);
+					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
 					break;
 				case 6:
 					arrayH.add(p);
-					btnpeca1.setEnabled(false);
-					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					btnhumano1.setEnabled(false);
+					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
 					break;
 				case 7:
 					arrayH.add(p);
-					btnpeca1.setEnabled(false);
-					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					btnhumano1.setEnabled(false);
+					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
 					break;
 				case 8:
 					arrayM.add(p);
-					btnpeca1.setEnabled(false);
-					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					btnhumano1.setEnabled(false);
+					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
 					break;
 				case 9:
 					arrayM.add(p);
-					btnpeca1.setEnabled(false);
-					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					btnhumano1.setEnabled(false);
+					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
 					break;
 				case 10:
 					arrayM.add(p);
-					btnpeca1.setEnabled(false);
-					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					btnhumano1.setEnabled(false);
+					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
 					break;
 				case 11:
 					arrayM.add(p);
-					btnpeca1.setEnabled(false);
-					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					btnhumano1.setEnabled(false);
+					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
 					break;
 				case 12:
 					arrayM.add(p);
-					btnpeca1.setEnabled(false);
-					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					btnhumano1.setEnabled(false);
+					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
 					break;
 				case 13:
 					arrayM.add(p);
-					btnpeca1.setEnabled(false);
-					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					btnhumano1.setEnabled(false);
+					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
 					break;
 				case 14:
 					arrayM.add(p);
-					btnpeca1.setEnabled(false);
-					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					btnhumano1.setEnabled(false);
+					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
 					break;
 
 				default:
-
 					JOptionPane.showMessageDialog(null, "Peças esgotadas");
-					vezDoJogo = al.jogaprimeiro(arrayH, arrayM);
-					if (vezDoJogo == true) {
-						desabilitaBotoesMaquina();
-					} else {
-						desabilitaBotoesHumano();
-					}
-
 					break;
 				}
-				
-				
-				
-				**/
 			}
 		});
 		btnhumano2 = new JButton("");
@@ -463,16 +542,18 @@ public class TelaDoJogo extends JFrame {
 					break;
 
 				default:
-
 					JOptionPane.showMessageDialog(null, "Peças esgotadas");
-					vezDoJogo = al.jogaprimeiro(arrayH, arrayM);
-					if (vezDoJogo == true) {
+					break;
+				}
+				// verifica de quem é a vez do jogo
+
+				if (arrayM.size() == 7) {
+
+					if (al.jogaPrimeiro(arrayH, arrayM) == true) {
 						desabilitaBotoesMaquina();
 					} else {
 						desabilitaBotoesHumano();
 					}
-
-					break;
 				}
 
 			}
@@ -562,6 +643,15 @@ public class TelaDoJogo extends JFrame {
 				default:
 					JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					break;
+				}
+				// verifica de quem é a vez do jogo
+				if (arrayM.size() == 7) {
+
+					if (al.jogaPrimeiro(arrayH, arrayM) == true) {
+						desabilitaBotoesMaquina();
+					} else {
+						desabilitaBotoesHumano();
+					}
 				}
 
 			}
@@ -654,6 +744,14 @@ public class TelaDoJogo extends JFrame {
 					JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					break;
 				}
+				// verifica de quem é a vez do jogo
+				if (arrayM.size() == 7) {
+					if (al.jogaPrimeiro(arrayH, arrayM) == true) {
+						desabilitaBotoesMaquina();
+					} else {
+						desabilitaBotoesHumano();
+					}
+				}
 			}
 
 		});
@@ -744,6 +842,14 @@ public class TelaDoJogo extends JFrame {
 				default:
 					JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					break;
+				}
+				// verifica de quem é a vez do jogo
+				if (arrayM.size() == 7) {
+					if (al.jogaPrimeiro(arrayH, arrayM) == true) {
+						desabilitaBotoesMaquina();
+					} else {
+						desabilitaBotoesHumano();
+					}
 				}
 
 			}
@@ -836,6 +942,14 @@ public class TelaDoJogo extends JFrame {
 					JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					break;
 				}
+				if (arrayM.size() == 7) {
+
+					if (al.jogaPrimeiro(arrayH, arrayM) == true) {
+						desabilitaBotoesMaquina();
+					} else {
+						desabilitaBotoesHumano();
+					}
+				}
 
 			}
 
@@ -926,6 +1040,15 @@ public class TelaDoJogo extends JFrame {
 				default:
 					JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					break;
+				}
+				// verifica de quem é a vez do jogo
+				if (arrayM.size() == 7) {
+
+					if (al.jogaPrimeiro(arrayH, arrayM) == true) {
+						desabilitaBotoesMaquina();
+					} else {
+						desabilitaBotoesHumano();
+					}
 				}
 
 			}
@@ -1018,6 +1141,15 @@ public class TelaDoJogo extends JFrame {
 					JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					break;
 				}
+				// verifica de quem é a vez do jogo
+				if (arrayM.size() == 7) {
+
+					if (al.jogaPrimeiro(arrayH, arrayM) == true) {
+						desabilitaBotoesMaquina();
+					} else {
+						desabilitaBotoesHumano();
+					}
+				}
 
 			}
 
@@ -1109,6 +1241,15 @@ public class TelaDoJogo extends JFrame {
 					JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					break;
 				}
+				// verifica de quem é a vez do jogo
+				if (arrayM.size() == 7) {
+
+					if (al.jogaPrimeiro(arrayH, arrayM) == true) {
+						desabilitaBotoesMaquina();
+					} else {
+						desabilitaBotoesHumano();
+					}
+				}
 
 			}
 		});
@@ -1198,6 +1339,15 @@ public class TelaDoJogo extends JFrame {
 				default:
 					JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					break;
+				}
+				// verifica de quem é a vez do jogo
+				if (arrayM.size() == 7) {
+
+					if (al.jogaPrimeiro(arrayH, arrayM) == true) {
+						desabilitaBotoesMaquina();
+					} else {
+						desabilitaBotoesHumano();
+					}
 				}
 
 			}
@@ -1289,6 +1439,15 @@ public class TelaDoJogo extends JFrame {
 					JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					break;
 				}
+				// verifica de quem é a vez do jogo
+				if (arrayM.size() == 7) {
+
+					if (al.jogaPrimeiro(arrayH, arrayM) == true) {
+						desabilitaBotoesMaquina();
+					} else {
+						desabilitaBotoesHumano();
+					}
+				}
 
 			}
 		});
@@ -1378,6 +1537,15 @@ public class TelaDoJogo extends JFrame {
 				default:
 					JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					break;
+				}
+				// verifica de quem é a vez do jogo
+				if (arrayM.size() == 7) {
+
+					if (al.jogaPrimeiro(arrayH, arrayM) == true) {
+						desabilitaBotoesMaquina();
+					} else {
+						desabilitaBotoesHumano();
+					}
 				}
 
 			}
@@ -1469,6 +1637,15 @@ public class TelaDoJogo extends JFrame {
 					JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					break;
 				}
+				// verifica de quem é a vez do jogo
+				if (arrayM.size() == 7) {
+
+					if (al.jogaPrimeiro(arrayH, arrayM) == true) {
+						desabilitaBotoesMaquina();
+					} else {
+						desabilitaBotoesHumano();
+					}
+				}
 
 			}
 		});
@@ -1558,6 +1735,15 @@ public class TelaDoJogo extends JFrame {
 				default:
 					JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					break;
+				}
+				// verifica de quem é a vez do jogo
+				if (arrayM.size() == 7) {
+
+					if (al.jogaPrimeiro(arrayH, arrayM) == true) {
+						desabilitaBotoesMaquina();
+					} else {
+						desabilitaBotoesHumano();
+					}
 				}
 
 			}
@@ -1649,6 +1835,15 @@ public class TelaDoJogo extends JFrame {
 					JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					break;
 				}
+				// verifica de quem é a vez do jogo
+				if (arrayM.size() == 7) {
+
+					if (al.jogaPrimeiro(arrayH, arrayM) == true) {
+						desabilitaBotoesMaquina();
+					} else {
+						desabilitaBotoesHumano();
+					}
+				}
 
 			}
 		});
@@ -1737,6 +1932,15 @@ public class TelaDoJogo extends JFrame {
 				default:
 					JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					break;
+				}
+				// verifica de quem é a vez do jogo
+				if (arrayM.size() == 7) {
+
+					if (al.jogaPrimeiro(arrayH, arrayM) == true) {
+						desabilitaBotoesMaquina();
+					} else {
+						desabilitaBotoesHumano();
+					}
 				}
 
 			}
@@ -1828,6 +2032,15 @@ public class TelaDoJogo extends JFrame {
 					JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					break;
 				}
+				// verifica de quem é a vez do jogo
+				if (arrayM.size() == 7) {
+
+					if (al.jogaPrimeiro(arrayH, arrayM) == true) {
+						desabilitaBotoesMaquina();
+					} else {
+						desabilitaBotoesHumano();
+					}
+				}
 
 			}
 		});
@@ -1917,6 +2130,15 @@ public class TelaDoJogo extends JFrame {
 				default:
 					JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					break;
+				}
+				// verifica de quem é a vez do jogo
+				if (arrayM.size() == 7) {
+
+					if (al.jogaPrimeiro(arrayH, arrayM) == true) {
+						desabilitaBotoesMaquina();
+					} else {
+						desabilitaBotoesHumano();
+					}
 				}
 
 			}
@@ -2009,6 +2231,15 @@ public class TelaDoJogo extends JFrame {
 					JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					break;
 				}
+				// verifica de quem é a vez do jogo
+				if (arrayM.size() == 7) {
+
+					if (al.jogaPrimeiro(arrayH, arrayM) == true) {
+						desabilitaBotoesMaquina();
+					} else {
+						desabilitaBotoesHumano();
+					}
+				}
 
 			}
 		});
@@ -2098,6 +2329,15 @@ public class TelaDoJogo extends JFrame {
 				default:
 					JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					break;
+				}
+				// verifica de quem é a vez do jogo
+				if (arrayM.size() == 7) {
+
+					if (al.jogaPrimeiro(arrayH, arrayM) == true) {
+						desabilitaBotoesMaquina();
+					} else {
+						desabilitaBotoesHumano();
+					}
 				}
 
 			}
@@ -2189,6 +2429,15 @@ public class TelaDoJogo extends JFrame {
 					JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					break;
 				}
+				// verifica de quem é a vez do jogo
+				if (arrayM.size() == 7) {
+
+					if (al.jogaPrimeiro(arrayH, arrayM) == true) {
+						desabilitaBotoesMaquina();
+					} else {
+						desabilitaBotoesHumano();
+					}
+				}
 
 			}
 		});
@@ -2278,6 +2527,15 @@ public class TelaDoJogo extends JFrame {
 				default:
 					JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					break;
+				}
+				// verifica de quem é a vez do jogo
+				if (arrayM.size() == 7) {
+
+					if (al.jogaPrimeiro(arrayH, arrayM) == true) {
+						desabilitaBotoesMaquina();
+					} else {
+						desabilitaBotoesHumano();
+					}
 				}
 
 			}
@@ -2369,6 +2627,15 @@ public class TelaDoJogo extends JFrame {
 					JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					break;
 				}
+				// verifica de quem é a vez do jogo
+				if (arrayM.size() == 7) {
+
+					if (al.jogaPrimeiro(arrayH, arrayM) == true) {
+						desabilitaBotoesMaquina();
+					} else {
+						desabilitaBotoesHumano();
+					}
+				}
 
 			}
 		});
@@ -2458,6 +2725,15 @@ public class TelaDoJogo extends JFrame {
 				default:
 					JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					break;
+				}
+				// verifica de quem é a vez do jogo
+				if (arrayM.size() == 7) {
+
+					if (al.jogaPrimeiro(arrayH, arrayM) == true) {
+						desabilitaBotoesMaquina();
+					} else {
+						desabilitaBotoesHumano();
+					}
 				}
 
 			}
@@ -2549,6 +2825,15 @@ public class TelaDoJogo extends JFrame {
 					JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					break;
 				}
+				// verifica de quem é a vez do jogo
+				if (arrayM.size() == 7) {
+
+					if (al.jogaPrimeiro(arrayH, arrayM) == true) {
+						desabilitaBotoesMaquina();
+					} else {
+						desabilitaBotoesHumano();
+					}
+				}
 
 			}
 		});
@@ -2639,6 +2924,15 @@ public class TelaDoJogo extends JFrame {
 					JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					break;
 				}
+				// verifica de quem é a vez do jogo
+				if (arrayM.size() == 7) {
+
+					if (al.jogaPrimeiro(arrayH, arrayM) == true) {
+						desabilitaBotoesMaquina();
+					} else {
+						desabilitaBotoesHumano();
+					}
+				}
 
 			}
 		});
@@ -2728,6 +3022,15 @@ public class TelaDoJogo extends JFrame {
 				default:
 					JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					break;
+				}
+				// verifica de quem é a vez do jogo
+				if (arrayM.size() == 7) {
+
+					if (al.jogaPrimeiro(arrayH, arrayM) == true) {
+						desabilitaBotoesMaquina();
+					} else {
+						desabilitaBotoesHumano();
+					}
 				}
 
 			}
@@ -2820,6 +3123,15 @@ public class TelaDoJogo extends JFrame {
 					JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					break;
 				}
+				// verifica de quem é a vez do jogo
+				if (arrayM.size() == 7) {
+
+					if (al.jogaPrimeiro(arrayH, arrayM) == true) {
+						desabilitaBotoesMaquina();
+					} else {
+						desabilitaBotoesHumano();
+					}
+				}
 
 			}
 		});
@@ -2910,6 +3222,15 @@ public class TelaDoJogo extends JFrame {
 					JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					break;
 				}
+				// verifica de quem é a vez do jogo
+				if (arrayM.size() == 7) {
+
+					if (al.jogaPrimeiro(arrayH, arrayM) == true) {
+						desabilitaBotoesMaquina();
+					} else {
+						desabilitaBotoesHumano();
+					}
+				}
 			}
 		});
 
@@ -2948,153 +3269,157 @@ public class TelaDoJogo extends JFrame {
 		getContentPane().add(panel_tabuleiro);
 		panel_tabuleiro.setLayout(null);
 
-		JButton btn_e1 = new JButton("");
-		btn_e1.setEnabled(false);
-		btn_e1.setBounds(385, 176, 70, 35);
-		panel_tabuleiro.add(btn_e1);
+		btn_14 = new JButton("");
+		btn_14.setEnabled(false);
+		btn_14.setBounds(385, 176, 70, 35);
+		panel_tabuleiro.add(btn_14);
 
-		JButton btn_e2 = new JButton("");
-		btn_e2.addActionListener(new ActionListener() {
+		btn_13 = new JButton("");
+		btn_13.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		btn_e2.setEnabled(false);
-		btn_e2.setBounds(385, 210, 35, 70);
-		panel_tabuleiro.add(btn_e2);
+		btn_13.setEnabled(false);
+		btn_13.setBounds(385, 210, 35, 70);
+		panel_tabuleiro.add(btn_13);
 
-		JButton btn_centro = new JButton("");
-		btn_centro.setEnabled(false);
-		btn_centro.setBounds(454, 176, 70, 35);
-		panel_tabuleiro.add(btn_centro);
+		btn_15 = new JButton("");
+		btn_15.setEnabled(false);
+		btn_15.setBounds(454, 176, 70, 35);
+		panel_tabuleiro.add(btn_15);
 
-		JButton btn_e3 = new JButton("");
-		btn_e3.setEnabled(false);
-		btn_e3.setBounds(315, 245, 70, 35);
-		panel_tabuleiro.add(btn_e3);
+		btn_12 = new JButton("");
+		btn_12.setEnabled(false);
+		btn_12.setBounds(315, 245, 70, 35);
+		panel_tabuleiro.add(btn_12);
 
-		JButton btn_d1 = new JButton("");
-		btn_d1.setEnabled(false);
-		btn_d1.setBounds(524, 176, 70, 35);
-		panel_tabuleiro.add(btn_d1);
+		btn_16 = new JButton("");
+		btn_16.setEnabled(false);
+		btn_16.setBounds(524, 176, 70, 35);
+		panel_tabuleiro.add(btn_16);
 
-		JButton btn_d3 = new JButton("");
-		btn_d3.setEnabled(false);
-		btn_d3.setBounds(594, 245, 70, 35);
-		panel_tabuleiro.add(btn_d3);
+		btn_18 = new JButton("");
+		btn_18.setEnabled(false);
+		btn_18.setBounds(594, 245, 70, 35);
+		panel_tabuleiro.add(btn_18);
 
-		JButton btn_e4 = new JButton("");
-		btn_e4.setEnabled(false);
-		btn_e4.setBounds(315, 279, 35, 70);
-		panel_tabuleiro.add(btn_e4);
+		btn_11 = new JButton("");
+		btn_11.setEnabled(false);
+		btn_11.setBounds(315, 279, 35, 70);
+		panel_tabuleiro.add(btn_11);
 
-		JButton btn_d8 = new JButton("");
-		btn_d8.setEnabled(false);
-		btn_d8.setBounds(870, 315, 70, 35);
-		panel_tabuleiro.add(btn_d8);
+		btn_23 = new JButton("");
+		btn_23.setEnabled(false);
+		btn_23.setBounds(870, 315, 70, 35);
+		panel_tabuleiro.add(btn_23);
 
-		JButton btn_e5 = new JButton("");
-		btn_e5.setEnabled(false);
-		btn_e5.setBounds(246, 314, 70, 35);
-		panel_tabuleiro.add(btn_e5);
+		btn_10 = new JButton("");
+		btn_10.setEnabled(false);
+		btn_10.setBounds(246, 314, 70, 35);
+		panel_tabuleiro.add(btn_10);
 
-		JButton btn_e6 = new JButton("");
-		btn_e6.setEnabled(false);
-		btn_e6.setBounds(177, 314, 70, 35);
-		panel_tabuleiro.add(btn_e6);
+		btn_9 = new JButton("");
+		btn_9.setEnabled(false);
+		btn_9.setBounds(177, 314, 70, 35);
+		panel_tabuleiro.add(btn_9);
 
-		JButton btn_e7 = new JButton("");
-		btn_e7.setEnabled(false);
-		btn_e7.setBounds(108, 314, 70, 35);
-		panel_tabuleiro.add(btn_e7);
+		btn_8 = new JButton("");
+		btn_8.setEnabled(false);
+		btn_8.setBounds(108, 314, 70, 35);
+		panel_tabuleiro.add(btn_8);
 
-		JButton btn_e8 = new JButton("");
-		btn_e8.setEnabled(false);
-		btn_e8.setBounds(39, 314, 70, 35);
-		panel_tabuleiro.add(btn_e8);
+		btn_7 = new JButton("");
+		btn_7.setEnabled(false);
+		btn_7.setBounds(39, 314, 70, 35);
+		panel_tabuleiro.add(btn_7);
 
-		JButton btn_e9 = new JButton("");
-		btn_e9.setEnabled(false);
-		btn_e9.setBounds(39, 245, 35, 70);
-		panel_tabuleiro.add(btn_e9);
+		btn_6 = new JButton("");
+		btn_6.setEnabled(false);
+		btn_6.setBounds(39, 245, 35, 70);
+		panel_tabuleiro.add(btn_6);
 
-		JButton btn_e10 = new JButton("");
-		btn_e10.setEnabled(false);
-		btn_e10.setBounds(39, 176, 35, 70);
-		panel_tabuleiro.add(btn_e10);
+		btn_5 = new JButton("");
+		btn_5.setEnabled(false);
+		btn_5.setBounds(39, 176, 35, 70);
+		panel_tabuleiro.add(btn_5);
 
-		JButton btn_d2 = new JButton("");
-		btn_d2.setEnabled(false);
-		btn_d2.setBounds(559, 210, 35, 70);
-		panel_tabuleiro.add(btn_d2);
+		btn_17 = new JButton("");
+		btn_17.setEnabled(false);
+		btn_17.setBounds(559, 210, 35, 70);
+		panel_tabuleiro.add(btn_17);
 
-		JButton btn_d4 = new JButton("");
-		btn_d4.setEnabled(false);
-		btn_d4.setBounds(629, 280, 35, 70);
-		panel_tabuleiro.add(btn_d4);
+		btn_19 = new JButton("");
+		btn_19.setEnabled(false);
+		btn_19.setBounds(629, 280, 35, 70);
+		panel_tabuleiro.add(btn_19);
 
-		JButton btn_d5 = new JButton("");
-		btn_d5.setEnabled(false);
-		btn_d5.setBounds(663, 315, 70, 35);
-		panel_tabuleiro.add(btn_d5);
+		btn_20 = new JButton("");
+		btn_20.setEnabled(false);
+		btn_20.setBounds(663, 315, 70, 35);
+		panel_tabuleiro.add(btn_20);
 
-		JButton btn_d6 = new JButton("");
-		btn_d6.setEnabled(false);
-		btn_d6.setBounds(732, 315, 70, 35);
-		panel_tabuleiro.add(btn_d6);
+		btn_21 = new JButton("");
+		btn_21.setEnabled(false);
+		btn_21.setBounds(732, 315, 70, 35);
+		panel_tabuleiro.add(btn_21);
 
-		JButton btn_d7 = new JButton("");
-		btn_d7.setEnabled(false);
-		btn_d7.setBounds(801, 315, 70, 35);
-		panel_tabuleiro.add(btn_d7);
+		btn_22 = new JButton("");
+		btn_22.setEnabled(false);
+		btn_22.setBounds(801, 315, 70, 35);
+		panel_tabuleiro.add(btn_22);
 
-		JButton btn_d12 = new JButton("");
-		btn_d12.setEnabled(false);
-		btn_d12.setBounds(870, 74, 70, 35);
-		panel_tabuleiro.add(btn_d12);
+		btn_27 = new JButton("");
+		btn_27.setEnabled(false);
+		btn_27.setBounds(870, 74, 70, 35);
+		panel_tabuleiro.add(btn_27);
 
-		JButton btn_d9 = new JButton("");
-		btn_d9.setEnabled(false);
-		btn_d9.setBounds(905, 246, 35, 70);
-		panel_tabuleiro.add(btn_d9);
+		btn_24 = new JButton("");
+		btn_24.setEnabled(false);
+		btn_24.setBounds(905, 246, 35, 70);
+		panel_tabuleiro.add(btn_24);
 
-		JButton btn_d10 = new JButton("");
-		btn_d10.setEnabled(false);
-		btn_d10.setBounds(905, 177, 35, 70);
-		panel_tabuleiro.add(btn_d10);
+		btn_25 = new JButton("");
+		btn_25.setEnabled(false);
+		btn_25.setBounds(905, 177, 35, 70);
+		panel_tabuleiro.add(btn_25);
 
-		JButton btn_d11 = new JButton("");
-		btn_d11.addActionListener(new ActionListener() {
+		btn_26 = new JButton("");
+		btn_26.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 			}
 		});
-		btn_d11.setEnabled(false);
-		btn_d11.setBounds(905, 108, 35, 70);
-		panel_tabuleiro.add(btn_d11);
+		btn_26.setEnabled(false);
+		btn_26.setBounds(905, 108, 35, 70);
+		panel_tabuleiro.add(btn_26);
 
-		JButton btn_e11 = new JButton("");
-		btn_e11.setEnabled(false);
-		btn_e11.setBounds(39, 107, 35, 70);
-		panel_tabuleiro.add(btn_e11);
+		btn_4 = new JButton("");
+		btn_4.setEnabled(false);
+		btn_4.setBounds(39, 107, 35, 70);
+		panel_tabuleiro.add(btn_4);
 
-		JButton btn_e12 = new JButton("");
-		btn_e12.setEnabled(false);
-		btn_e12.setBounds(39, 72, 70, 35);
-		panel_tabuleiro.add(btn_e12);
+		btn_3 = new JButton("");
+		btn_3.setEnabled(false);
+		btn_3.setBounds(39, 72, 70, 35);
+		panel_tabuleiro.add(btn_3);
 
-		JButton btn_e13 = new JButton("");
-		btn_e13.setEnabled(false);
-		btn_e13.setBounds(108, 72, 70, 35);
-		panel_tabuleiro.add(btn_e13);
+		btn_2 = new JButton("");
+		btn_2.setEnabled(false);
+		btn_2.setBounds(108, 72, 70, 35);
+		panel_tabuleiro.add(btn_2);
 
-		JButton btn_e14 = new JButton("");
-		btn_e14.setEnabled(false);
-		btn_e14.setBounds(177, 72, 70, 35);
-		panel_tabuleiro.add(btn_e14);
+		btn_1 = new JButton("");
+		btn_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
+		btn_1.setEnabled(false);
+		btn_1.setBounds(177, 72, 70, 35);
+		panel_tabuleiro.add(btn_1);
 
-		JButton btn_d13 = new JButton("");
-		btn_d13.setEnabled(false);
-		btn_d13.setBounds(801, 74, 70, 35);
-		panel_tabuleiro.add(btn_d13);
+		btn_28 = new JButton("");
+		btn_28.setEnabled(false);
+		btn_28.setBounds(801, 74, 70, 35);
+		panel_tabuleiro.add(btn_28);
 
 		JLabel lblEscolhaSuasPecas = new JLabel("Escolha Suas Pecas");
 		lblEscolhaSuasPecas.setFont(new Font("Times New Roman", Font.BOLD, 18));

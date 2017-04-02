@@ -74,7 +74,7 @@ public class Actions {
 
 	ArrayList<Pecas> humano, maquina;
 
-	public boolean jogaprimeiro(ArrayList<Pecas> humano, ArrayList<Pecas> maquina) {
+	public boolean jogaPrimeiro(ArrayList<Pecas> humano, ArrayList<Pecas> maquina) {
 
 		int somaladosmaquina;
 		int somaladoshumano = 0;
@@ -109,6 +109,52 @@ public class Actions {
 		} else {
 			return false;
 		}
-
 	}
+	
+	public boolean verificaLadosPedra(ArrayList<Pecas> tabuleiro, int posicao, Pecas peca){
+		
+		if(tabuleiro.get(tabuleiro.size() -1).getLadoDireito() == peca.getLadoEsquerdo()){
+			
+			return true;
+		}else{
+			return false;
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
