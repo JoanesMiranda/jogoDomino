@@ -18,8 +18,8 @@ public class PecasController {
 				PreparedStatement stm = conexao.conn.
 						prepareStatement("INSERT INTO pecas (valor_topo,valor_inferior,peca_associada,"
 								+ "fk_estado_do_jogo) VALUES (?,?,?,?)");
-				stm.setInt(1,p.getValorTopo());
-				stm.setInt(2, p.getValorInferior());
+				stm.setInt(1,p.getLadoDireito());
+				stm.setInt(2, p.getLadoEsquerdo());
 				stm.setInt(3, p.getPecaAssociada());
 				stm.setInt(4,p.getEstadoDoJogo());
 				stm.execute();

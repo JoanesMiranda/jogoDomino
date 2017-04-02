@@ -11,6 +11,8 @@ import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import br.com.domino.model.Actions;
+import br.com.domino.model.Pecas;
+
 import java.awt.Font;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -23,21 +25,108 @@ public class TelaDoJogo extends JFrame {
 	String l1 = "", l2 = "", l3 = "", l4 = "", l5 = "", l6 = "", l7 = "", l8 = "", l9 = "", l10 = "", l11 = "",
 			l12 = "", l13 = "", l14 = "", l15 = "", l16 = "", l17 = "", l18 = "", l19 = "", l20 = "", l21 = "",
 			l22 = "", l23 = "", l24 = "", l25 = "", l26 = "", l27 = "", l28 = "";
+
+	JButton btnhumano1;
+	JButton btnhumano2;
+	JButton btnhumano3;
+	JButton btnhumano4;
+	JButton btnhumano5;
+	JButton btnhumano6;
+	JButton btnhumano7;
+	JButton btnhumano8;
+	JButton btnhumano9;
+	JButton btnhumano10;
+	JButton btnhumano11;
+	JButton btnhumano12;
+	JButton btnhumano13;
+	JButton btnhumano14;
+	JButton btnhumano15;
+	JButton btnhumano16;
+	JButton btnhumano17;
+	JButton btnhumano18;
+
+	JButton btnmaquina1;
+	JButton btnmaquina2;
+	JButton btnmaquina3;
+	JButton btnmaquina4;
+	JButton btnmaquina5;
+	JButton btnmaquina6;
+	JButton btnmaquina7;
+	JButton btnmaquina8;
+	JButton btnmaquina9;
+	JButton btnmaquina10;
+	JButton btnmaquina11;
+	JButton btnmaquina12;
+	JButton btnmaquina13;
+	JButton btnmaquina14;
+	JButton btnmaquina15;
+	JButton btnmaquina16;
+	JButton btnmaquina17;
+	JButton btnmaquina18;
+
+	public void desabilitaBotoesHumano() {
+		btnhumano1.setEnabled(false);
+		btnhumano2.setEnabled(false);
+		btnhumano3.setEnabled(false);
+		btnhumano4.setEnabled(false);
+		btnhumano5.setEnabled(false);
+		btnhumano6.setEnabled(false);
+		btnhumano7.setEnabled(false);
+		btnhumano8.setEnabled(false);
+		btnhumano9.setEnabled(false);
+		btnhumano10.setEnabled(false);
+		btnhumano11.setEnabled(false);
+		btnhumano12.setEnabled(false);
+		btnhumano13.setEnabled(false);
+		btnhumano14.setEnabled(false);
+		btnhumano15.setEnabled(false);
+		btnhumano16.setEnabled(false);
+		btnhumano17.setEnabled(false);
+		btnhumano18.setEnabled(false);
+	}
+
+	public void desabilitaBotoesMaquina() {
+		btnmaquina1.setEnabled(false);
+		btnmaquina2.setEnabled(false);
+		btnmaquina3.setEnabled(false);
+		btnmaquina4.setEnabled(false);
+		btnmaquina5.setEnabled(false);
+		btnmaquina6.setEnabled(false);
+		btnmaquina7.setEnabled(false);
+		btnmaquina8.setEnabled(false);
+		btnmaquina9.setEnabled(false);
+		btnmaquina10.setEnabled(false);
+		btnmaquina11.setEnabled(false);
+		btnmaquina12.setEnabled(false);
+		btnmaquina13.setEnabled(false);
+		btnmaquina14.setEnabled(false);
+		btnmaquina15.setEnabled(false);
+		btnmaquina16.setEnabled(false);
+		btnmaquina17.setEnabled(false);
+		btnmaquina18.setEnabled(false);
+	}
+
 	int aux = 0;
+	int aux2 = 0;
 	Actions al = new Actions();
 
 	ArrayList<Integer> arrayH = new ArrayList<Integer>();
 	ArrayList<Integer> arrayM = new ArrayList<Integer>();
 
+	// se true a vez do jogo é do humano se false a vez do jogo é da maquina
+	boolean vezDoJogo = false;
+
+	// recebe todas as pedras do caminho do jogo do domino
+	int[] arrayTabuleiro = new int[57];
+
 	private static final long serialVersionUID = 1L;
-	private JButton btnhumano10;
 
 	public TelaDoJogo() {
 
-		ArrayList<Integer> array = new ArrayList<Integer>();
+		ArrayList<Pecas> array = new ArrayList<Pecas>();
 
-		for (int num : al.geraNumerosAleatorios()) {
-			array.add(num);
+		for (Pecas pecas : al.geraNumerosAleatorios()) {
+			array.add(pecas);
 		}
 
 		JMenuBar menuBar = new JMenuBar();
@@ -94,28 +183,28 @@ public class TelaDoJogo extends JFrame {
 		getContentPane().add(panel_pecasMaquina);
 		panel_pecasMaquina.setLayout(new GridLayout(1, 20, 0, 0));
 
-		JButton btnmaquina1 = new JButton("");
+		btnmaquina1 = new JButton("");
 		btnmaquina1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 			}
 		});
-		JButton btnmaquina2 = new JButton("");
-		JButton btnmaquina3 = new JButton("");
-		JButton btnmaquina4 = new JButton("");
-		JButton btnmaquina5 = new JButton("");
-		JButton btnmaquina6 = new JButton("");
-		JButton btnmaquina7 = new JButton("");
-		JButton btnmaquina8 = new JButton("");
-		JButton btnmaquina9 = new JButton("");
-		JButton btnmaquina10 = new JButton("");
-		JButton btnmaquina11 = new JButton("");
-		JButton btnmaquina12 = new JButton("");
-		JButton btnmaquina13 = new JButton("");
-		JButton btnmaquina14 = new JButton("");
-		JButton btnmaquina15 = new JButton("");
-		JButton btnmaquina16 = new JButton("");
-		JButton btnmaquina17 = new JButton("");
-		JButton btnmaquina18 = new JButton("");
+		btnmaquina2 = new JButton("");
+		btnmaquina3 = new JButton("");
+		btnmaquina4 = new JButton("");
+		btnmaquina5 = new JButton("");
+		btnmaquina6 = new JButton("");
+		btnmaquina7 = new JButton("");
+		btnmaquina8 = new JButton("");
+		btnmaquina9 = new JButton("");
+		btnmaquina10 = new JButton("");
+		btnmaquina11 = new JButton("");
+		btnmaquina12 = new JButton("");
+		btnmaquina13 = new JButton("");
+		btnmaquina14 = new JButton("");
+		btnmaquina15 = new JButton("");
+		btnmaquina16 = new JButton("");
+		btnmaquina17 = new JButton("");
+		btnmaquina18 = new JButton("");
 
 		panel_pecasMaquina.add(btnmaquina1);
 		panel_pecasMaquina.add(btnmaquina2);
@@ -141,32 +230,123 @@ public class TelaDoJogo extends JFrame {
 		getContentPane().add(panel_pecasJogador);
 		panel_pecasJogador.setLayout(new GridLayout(1, 20, 0, 0));
 
-		JButton btnhumano1 = new JButton("");
+		// verifica de quem é a vez do jogo;
+		// this.vezDoJogo = al.maiorPedra(arrayH, arrayH);
+
+		// if(vezDoJogo == true){
+		// desabilitaBotoesMaquina();
+		// }else{
+		// desabilitaBotoesHumano();
+		// }
+
+		btnhumano1 = new JButton("");
 		btnhumano1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				++aux2;
+				// vezDoJogo = al.maiorPedra(array, array);
+
+				l1 = al.geraNumerosAleatorios().get(0).toString();
+				switch (aux) {
+				case 1:
+					arrayTabuleiro[29] = Integer.parseInt(l1);
+					btnhumano1.setEnabled(false);
+					// btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" +
+					// l1 + ".png"));
+					break;
+				case 2:
+					arrayH.add(Integer.parseInt(l1));
+					// btnpeca1.setEnabled(false);
+					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					break;
+				case 3:
+					arrayH.add(Integer.parseInt(l1));
+					// btnpeca1.setEnabled(false);
+					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					break;
+				case 4:
+					arrayH.add(Integer.parseInt(l1));
+					// btnpeca1.setEnabled(false);
+					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					break;
+				case 5:
+					arrayH.add(Integer.parseInt(l1));
+					// btnpeca1.setEnabled(false);
+					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					break;
+				case 6:
+					arrayH.add(Integer.parseInt(l1));
+					// btnpeca1.setEnabled(false);
+					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					break;
+				case 7:
+					arrayH.add(Integer.parseInt(l1));
+					// btnpeca1.setEnabled(false);
+					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					break;
+				case 8:
+					arrayM.add(Integer.parseInt(l1));
+					// btnpeca1.setEnabled(false);
+					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					break;
+				case 9:
+					arrayM.add(Integer.parseInt(l1));
+					// btnpeca1.setEnabled(false);
+					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					break;
+				case 10:
+					arrayM.add(Integer.parseInt(l1));
+					// btnpeca1.setEnabled(false);
+					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					break;
+				case 11:
+					arrayM.add(Integer.parseInt(l1));
+					// btnpeca1.setEnabled(false);
+					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					break;
+				case 12:
+					arrayM.add(Integer.parseInt(l1));
+					// btnpeca1.setEnabled(false);
+					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					break;
+				case 13:
+					arrayM.add(Integer.parseInt(l1));
+					// btnpeca1.setEnabled(false);
+					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					break;
+				case 14:
+					arrayM.add(Integer.parseInt(l1));
+					// btnpeca1.setEnabled(false);
+					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					break;
+
+				default:
+					JOptionPane.showMessageDialog(null, "Peças esgotadas");
+					break;
+				}
+
 			}
 		});
-		JButton btnhumano2 = new JButton("");
+		btnhumano2 = new JButton("");
 		btnhumano2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		JButton btnhumano3 = new JButton("");
-		JButton btnhumano4 = new JButton("");
-		JButton btnhumano5 = new JButton("");
-		JButton btnhumano6 = new JButton("");
-		JButton btnhumano7 = new JButton("");
-		JButton btnhumano8 = new JButton("");
-		JButton btnhumano9 = new JButton("");
+		btnhumano3 = new JButton("");
+		btnhumano4 = new JButton("");
+		btnhumano5 = new JButton("");
+		btnhumano6 = new JButton("");
+		btnhumano7 = new JButton("");
+		btnhumano8 = new JButton("");
+		btnhumano9 = new JButton("");
 		btnhumano10 = new JButton("");
-		JButton btnhumano11 = new JButton("");
-		JButton btnhumano12 = new JButton("");
-		JButton btnhumano13 = new JButton("");
-		JButton btnhumano14 = new JButton("");
-		JButton btnhumano15 = new JButton("");
-		JButton btnhumano16 = new JButton("");
-		JButton btnhumano17 = new JButton("");
-		JButton btnhumano18 = new JButton("");
+		btnhumano11 = new JButton("");
+		btnhumano12 = new JButton("");
+		btnhumano13 = new JButton("");
+		btnhumano14 = new JButton("");
+		btnhumano15 = new JButton("");
+		btnhumano16 = new JButton("");
+		btnhumano17 = new JButton("");
+		btnhumano18 = new JButton("");
 
 		panel_pecasJogador.add(btnhumano1);
 		panel_pecasJogador.add(btnhumano2);
@@ -198,7 +378,12 @@ public class TelaDoJogo extends JFrame {
 		btnpeca1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
-				l1 = array.get(0).toString();
+				Pecas p = array.get(0);
+				String ladoa = p.getLadoDireito().toString();
+				String ladob = p.getLadoEsquerdo().toString();
+
+				l1 = ladoa + ladob;
+
 				switch (aux) {
 				case 1:
 					arrayH.add(Integer.parseInt(l1));
@@ -272,7 +457,15 @@ public class TelaDoJogo extends JFrame {
 					break;
 
 				default:
+
 					JOptionPane.showMessageDialog(null, "Peças esgotadas");
+					vezDoJogo = al.maiorPedra(arrayH, arrayM);
+					if (vezDoJogo == true) {
+						desabilitaBotoesMaquina();
+					} else {
+						desabilitaBotoesHumano();
+					}
+
 					break;
 				}
 
@@ -283,7 +476,11 @@ public class TelaDoJogo extends JFrame {
 		btnpeca2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
-				l2 = array.get(1).toString();
+				Pecas p = array.get(1);
+				String ladoa = p.getLadoDireito().toString();
+				String ladob = p.getLadoEsquerdo().toString();
+
+				l2 = ladoa + ladob;
 				switch (aux) {
 				case 1:
 					arrayH.add(Integer.parseInt(l2));
@@ -369,7 +566,11 @@ public class TelaDoJogo extends JFrame {
 		btnpeca3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
-				l3 = array.get(2).toString();
+				Pecas p = array.get(2);
+				String ladoa = p.getLadoDireito().toString();
+				String ladob = p.getLadoEsquerdo().toString();
+
+				l3 = ladoa + ladob;
 
 				switch (aux) {
 				case 1:
@@ -455,7 +656,11 @@ public class TelaDoJogo extends JFrame {
 		btnpeca4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
-				l4 = array.get(3).toString();
+				Pecas p = array.get(3);
+				String ladoa = p.getLadoDireito().toString();
+				String ladob = p.getLadoEsquerdo().toString();
+
+				l4 = ladoa + ladob;
 
 				switch (aux) {
 				case 1:
@@ -543,7 +748,11 @@ public class TelaDoJogo extends JFrame {
 		btnpeca5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
-				l5 = array.get(4).toString();
+				Pecas p = array.get(4);
+				String ladoa = p.getLadoDireito().toString();
+				String ladob = p.getLadoEsquerdo().toString();
+
+				l5 = ladoa + ladob;
 
 				switch (aux) {
 				case 1:
@@ -630,7 +839,11 @@ public class TelaDoJogo extends JFrame {
 		btnpeca6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
-				l6 = array.get(5).toString();
+				Pecas p = array.get(5);
+				String ladoa = p.getLadoDireito().toString();
+				String ladob = p.getLadoEsquerdo().toString();
+
+				l6 = ladoa + ladob;
 
 				switch (aux) {
 				case 1:
@@ -717,7 +930,11 @@ public class TelaDoJogo extends JFrame {
 		btnpeca7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
-				l7 = array.get(6).toString();
+				Pecas p = array.get(6);
+				String ladoa = p.getLadoDireito().toString();
+				String ladob = p.getLadoEsquerdo().toString();
+
+				l7 = ladoa + ladob;
 
 				switch (aux) {
 				case 1:
@@ -804,7 +1021,11 @@ public class TelaDoJogo extends JFrame {
 		btnpeca8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
-				l8 = array.get(7).toString();
+				Pecas p = array.get(7);
+				String ladoa = p.getLadoDireito().toString();
+				String ladob = p.getLadoEsquerdo().toString();
+
+				l8 = ladoa + ladob;
 
 				switch (aux) {
 				case 1:
@@ -890,7 +1111,11 @@ public class TelaDoJogo extends JFrame {
 		btnpeca9.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
-				l9 = array.get(8).toString();
+				Pecas p = array.get(8);
+				String ladoa = p.getLadoDireito().toString();
+				String ladob = p.getLadoEsquerdo().toString();
+
+				l9 = ladoa + ladob;
 
 				switch (aux) {
 				case 1:
@@ -976,7 +1201,11 @@ public class TelaDoJogo extends JFrame {
 		btnpeca10.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
-				l10 = array.get(9).toString();
+				Pecas p = array.get(9);
+				String ladoa = p.getLadoDireito().toString();
+				String ladob = p.getLadoEsquerdo().toString();
+
+				l10 = ladoa + ladob;
 
 				switch (aux) {
 				case 1:
@@ -1062,7 +1291,11 @@ public class TelaDoJogo extends JFrame {
 		btnpeca11.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
-				l11 = array.get(10).toString();
+				Pecas p = array.get(10);
+				String ladoa = p.getLadoDireito().toString();
+				String ladob = p.getLadoEsquerdo().toString();
+
+				l11 = ladoa + ladob;
 
 				switch (aux) {
 				case 1:
@@ -1148,7 +1381,11 @@ public class TelaDoJogo extends JFrame {
 		btnpeca12.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
-				l12 = array.get(11).toString();
+				Pecas p = array.get(11);
+				String ladoa = p.getLadoDireito().toString();
+				String ladob = p.getLadoEsquerdo().toString();
+
+				l12 = ladoa + ladob;
 
 				switch (aux) {
 				case 1:
@@ -1234,7 +1471,11 @@ public class TelaDoJogo extends JFrame {
 		btnpeca13.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
-				l13 = array.get(12).toString();
+				Pecas p = array.get(12);
+				String ladoa = p.getLadoDireito().toString();
+				String ladob = p.getLadoEsquerdo().toString();
+
+				l13 = ladoa + ladob;
 
 				switch (aux) {
 				case 1:
@@ -1320,7 +1561,11 @@ public class TelaDoJogo extends JFrame {
 		btnpeca14.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
-				l14 = array.get(13).toString();
+				Pecas p = array.get(13);
+				String ladoa = p.getLadoDireito().toString();
+				String ladob = p.getLadoEsquerdo().toString();
+
+				l14 = ladoa + ladob;
 
 				switch (aux) {
 				case 1:
@@ -1406,8 +1651,11 @@ public class TelaDoJogo extends JFrame {
 		btnpeca15.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
-				l15 = array.get(14).toString();
+				Pecas p = array.get(14);
+				String ladoa = p.getLadoDireito().toString();
+				String ladob = p.getLadoEsquerdo().toString();
 
+				l15 = ladoa + ladob;
 				switch (aux) {
 				case 1:
 					arrayH.add(Integer.parseInt(l15));
@@ -1492,7 +1740,11 @@ public class TelaDoJogo extends JFrame {
 		btnpeca16.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
-				l16 = array.get(15).toString();
+				Pecas p = array.get(15);
+				String ladoa = p.getLadoDireito().toString();
+				String ladob = p.getLadoEsquerdo().toString();
+
+				l16 = ladoa + ladob;
 
 				switch (aux) {
 				case 1:
@@ -1578,7 +1830,11 @@ public class TelaDoJogo extends JFrame {
 		btnpeca17.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
-				l17 = array.get(16).toString();
+				Pecas p = array.get(16);
+				String ladoa = p.getLadoDireito().toString();
+				String ladob = p.getLadoEsquerdo().toString();
+
+				l17 = ladoa + ladob;
 
 				switch (aux) {
 				case 1:
@@ -1665,7 +1921,11 @@ public class TelaDoJogo extends JFrame {
 		btnpeca18.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
-				l18 = array.get(17).toString();
+				Pecas p = array.get(17);
+				String ladoa = p.getLadoDireito().toString();
+				String ladob = p.getLadoEsquerdo().toString();
+
+				l18 = ladoa + ladob;
 
 				switch (aux) {
 				case 1:
@@ -1751,7 +2011,11 @@ public class TelaDoJogo extends JFrame {
 		btnpeca19.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
-				l19 = array.get(18).toString();
+				Pecas p = array.get(18);
+				String ladoa = p.getLadoDireito().toString();
+				String ladob = p.getLadoEsquerdo().toString();
+
+				l19 = ladoa + ladob;
 
 				switch (aux) {
 				case 1:
@@ -1837,7 +2101,11 @@ public class TelaDoJogo extends JFrame {
 		btnpeca20.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
-				l20 = array.get(19).toString();
+				Pecas p = array.get(19);
+				String ladoa = p.getLadoDireito().toString();
+				String ladob = p.getLadoEsquerdo().toString();
+
+				l20 = ladoa + ladob;
 
 				switch (aux) {
 				case 1:
@@ -1923,7 +2191,11 @@ public class TelaDoJogo extends JFrame {
 		btnpeca21.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
-				l21 = array.get(20).toString();
+				Pecas p = array.get(20);
+				String ladoa = p.getLadoDireito().toString();
+				String ladob = p.getLadoEsquerdo().toString();
+
+				l21 = ladoa + ladob;
 
 				switch (aux) {
 				case 1:
@@ -2009,7 +2281,11 @@ public class TelaDoJogo extends JFrame {
 		btnpeca22.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
-				l22 = array.get(21).toString();
+				Pecas p = array.get(21);
+				String ladoa = p.getLadoDireito().toString();
+				String ladob = p.getLadoEsquerdo().toString();
+
+				l22 = ladoa + ladob;
 
 				switch (aux) {
 				case 1:
@@ -2095,7 +2371,11 @@ public class TelaDoJogo extends JFrame {
 		btnpeca23.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
-				l23 = array.get(22).toString();
+				Pecas p = array.get(22);
+				String ladoa = p.getLadoDireito().toString();
+				String ladob = p.getLadoEsquerdo().toString();
+
+				l23 = ladoa + ladob;
 
 				switch (aux) {
 				case 1:
@@ -2181,7 +2461,11 @@ public class TelaDoJogo extends JFrame {
 		btnpeca24.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
-				l24 = array.get(23).toString();
+				Pecas p = array.get(23);
+				String ladoa = p.getLadoDireito().toString();
+				String ladob = p.getLadoEsquerdo().toString();
+
+				l24 = ladoa + ladob;
 
 				switch (aux) {
 				case 1:
@@ -2267,7 +2551,11 @@ public class TelaDoJogo extends JFrame {
 		btnpeca25.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
-				l25 = array.get(24).toString();
+				Pecas p = array.get(24);
+				String ladoa = p.getLadoDireito().toString();
+				String ladob = p.getLadoEsquerdo().toString();
+
+				l25 = ladoa + ladob;
 
 				switch (aux) {
 				case 1:
@@ -2353,7 +2641,11 @@ public class TelaDoJogo extends JFrame {
 		btnpeca26.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
-				l26 = array.get(25).toString();
+				Pecas p = array.get(25);
+				String ladoa = p.getLadoDireito().toString();
+				String ladob = p.getLadoEsquerdo().toString();
+
+				l26 = ladoa + ladob;
 
 				switch (aux) {
 				case 1:
@@ -2440,6 +2732,11 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				l27 = array.get(26).toString();
+				Pecas p = array.get(26);
+				String ladoa = p.getLadoDireito().toString();
+				String ladob = p.getLadoEsquerdo().toString();
+
+				l27 = ladoa+ladob;
 
 				switch (aux) {
 				case 1:
@@ -2525,7 +2822,11 @@ public class TelaDoJogo extends JFrame {
 		btnpeca28.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
-				l28 = array.get(27).toString();
+				Pecas p = array.get(27);
+				String ladoa = p.getLadoDireito().toString();
+				String ladob = p.getLadoEsquerdo().toString();
+
+				l28 = ladoa + ladob;
 
 				switch (aux) {
 				case 1:
@@ -2641,145 +2942,153 @@ public class TelaDoJogo extends JFrame {
 		getContentPane().add(panel_tabuleiro);
 		panel_tabuleiro.setLayout(null);
 
-		JButton button = new JButton("");
-		button.setEnabled(false);
-		button.setBounds(385, 176, 70, 35);
-		panel_tabuleiro.add(button);
+		JButton btn_e1 = new JButton("");
+		btn_e1.setEnabled(false);
+		btn_e1.setBounds(385, 176, 70, 35);
+		panel_tabuleiro.add(btn_e1);
 
-		JButton button_1 = new JButton("");
-		button_1.setEnabled(false);
-		button_1.setBounds(385, 210, 35, 70);
-		panel_tabuleiro.add(button_1);
+		JButton btn_e2 = new JButton("");
+		btn_e2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btn_e2.setEnabled(false);
+		btn_e2.setBounds(385, 210, 35, 70);
+		panel_tabuleiro.add(btn_e2);
 
-		JButton button_2 = new JButton("");
-		button_2.setEnabled(false);
-		button_2.setBounds(454, 176, 70, 35);
-		panel_tabuleiro.add(button_2);
+		JButton btn_centro = new JButton("");
+		btn_centro.setEnabled(false);
+		btn_centro.setBounds(454, 176, 70, 35);
+		panel_tabuleiro.add(btn_centro);
 
-		JButton button_3 = new JButton("");
-		button_3.setEnabled(false);
-		button_3.setBounds(315, 245, 70, 35);
-		panel_tabuleiro.add(button_3);
+		JButton btn_e3 = new JButton("");
+		btn_e3.setEnabled(false);
+		btn_e3.setBounds(315, 245, 70, 35);
+		panel_tabuleiro.add(btn_e3);
 
-		JButton button_4 = new JButton("");
-		button_4.setEnabled(false);
-		button_4.setBounds(524, 176, 70, 35);
-		panel_tabuleiro.add(button_4);
+		JButton btn_d1 = new JButton("");
+		btn_d1.setEnabled(false);
+		btn_d1.setBounds(524, 176, 70, 35);
+		panel_tabuleiro.add(btn_d1);
 
-		JButton button_5 = new JButton("");
-		button_5.setEnabled(false);
-		button_5.setBounds(594, 245, 70, 35);
-		panel_tabuleiro.add(button_5);
+		JButton btn_d3 = new JButton("");
+		btn_d3.setEnabled(false);
+		btn_d3.setBounds(594, 245, 70, 35);
+		panel_tabuleiro.add(btn_d3);
 
-		JButton button_6 = new JButton("");
-		button_6.setEnabled(false);
-		button_6.setBounds(315, 279, 35, 70);
-		panel_tabuleiro.add(button_6);
+		JButton btn_e4 = new JButton("");
+		btn_e4.setEnabled(false);
+		btn_e4.setBounds(315, 279, 35, 70);
+		panel_tabuleiro.add(btn_e4);
 
-		JButton button_7 = new JButton("");
-		button_7.setEnabled(false);
-		button_7.setBounds(870, 315, 70, 35);
-		panel_tabuleiro.add(button_7);
+		JButton btn_d8 = new JButton("");
+		btn_d8.setEnabled(false);
+		btn_d8.setBounds(870, 315, 70, 35);
+		panel_tabuleiro.add(btn_d8);
 
-		JButton button_8 = new JButton("");
-		button_8.setEnabled(false);
-		button_8.setBounds(246, 314, 70, 35);
-		panel_tabuleiro.add(button_8);
+		JButton btn_e5 = new JButton("");
+		btn_e5.setEnabled(false);
+		btn_e5.setBounds(246, 314, 70, 35);
+		panel_tabuleiro.add(btn_e5);
 
-		JButton button_9 = new JButton("");
-		button_9.setEnabled(false);
-		button_9.setBounds(177, 314, 70, 35);
-		panel_tabuleiro.add(button_9);
+		JButton btn_e6 = new JButton("");
+		btn_e6.setEnabled(false);
+		btn_e6.setBounds(177, 314, 70, 35);
+		panel_tabuleiro.add(btn_e6);
 
-		JButton button_10 = new JButton("");
-		button_10.setEnabled(false);
-		button_10.setBounds(108, 314, 70, 35);
-		panel_tabuleiro.add(button_10);
+		JButton btn_e7 = new JButton("");
+		btn_e7.setEnabled(false);
+		btn_e7.setBounds(108, 314, 70, 35);
+		panel_tabuleiro.add(btn_e7);
 
-		JButton button_11 = new JButton("");
-		button_11.setEnabled(false);
-		button_11.setBounds(39, 314, 70, 35);
-		panel_tabuleiro.add(button_11);
+		JButton btn_e8 = new JButton("");
+		btn_e8.setEnabled(false);
+		btn_e8.setBounds(39, 314, 70, 35);
+		panel_tabuleiro.add(btn_e8);
 
-		JButton button_12 = new JButton("");
-		button_12.setEnabled(false);
-		button_12.setBounds(39, 245, 35, 70);
-		panel_tabuleiro.add(button_12);
+		JButton btn_e9 = new JButton("");
+		btn_e9.setEnabled(false);
+		btn_e9.setBounds(39, 245, 35, 70);
+		panel_tabuleiro.add(btn_e9);
 
-		JButton button_13 = new JButton("");
-		button_13.setEnabled(false);
-		button_13.setBounds(39, 176, 35, 70);
-		panel_tabuleiro.add(button_13);
+		JButton btn_e10 = new JButton("");
+		btn_e10.setEnabled(false);
+		btn_e10.setBounds(39, 176, 35, 70);
+		panel_tabuleiro.add(btn_e10);
 
-		JButton button_14 = new JButton("");
-		button_14.setEnabled(false);
-		button_14.setBounds(559, 210, 35, 70);
-		panel_tabuleiro.add(button_14);
+		JButton btn_d2 = new JButton("");
+		btn_d2.setEnabled(false);
+		btn_d2.setBounds(559, 210, 35, 70);
+		panel_tabuleiro.add(btn_d2);
 
-		JButton button_15 = new JButton("");
-		button_15.setEnabled(false);
-		button_15.setBounds(629, 280, 35, 70);
-		panel_tabuleiro.add(button_15);
+		JButton btn_d4 = new JButton("");
+		btn_d4.setEnabled(false);
+		btn_d4.setBounds(629, 280, 35, 70);
+		panel_tabuleiro.add(btn_d4);
 
-		JButton button_16 = new JButton("");
-		button_16.setEnabled(false);
-		button_16.setBounds(663, 315, 70, 35);
-		panel_tabuleiro.add(button_16);
+		JButton btn_d5 = new JButton("");
+		btn_d5.setEnabled(false);
+		btn_d5.setBounds(663, 315, 70, 35);
+		panel_tabuleiro.add(btn_d5);
 
-		JButton button_17 = new JButton("");
-		button_17.setEnabled(false);
-		button_17.setBounds(732, 315, 70, 35);
-		panel_tabuleiro.add(button_17);
+		JButton btn_d6 = new JButton("");
+		btn_d6.setEnabled(false);
+		btn_d6.setBounds(732, 315, 70, 35);
+		panel_tabuleiro.add(btn_d6);
 
-		JButton button_18 = new JButton("");
-		button_18.setEnabled(false);
-		button_18.setBounds(801, 315, 70, 35);
-		panel_tabuleiro.add(button_18);
+		JButton btn_d7 = new JButton("");
+		btn_d7.setEnabled(false);
+		btn_d7.setBounds(801, 315, 70, 35);
+		panel_tabuleiro.add(btn_d7);
 
-		JButton button_19 = new JButton("");
-		button_19.setEnabled(false);
-		button_19.setBounds(870, 74, 70, 35);
-		panel_tabuleiro.add(button_19);
+		JButton btn_d12 = new JButton("");
+		btn_d12.setEnabled(false);
+		btn_d12.setBounds(870, 74, 70, 35);
+		panel_tabuleiro.add(btn_d12);
 
-		JButton button_20 = new JButton("");
-		button_20.setEnabled(false);
-		button_20.setBounds(905, 246, 35, 70);
-		panel_tabuleiro.add(button_20);
+		JButton btn_d9 = new JButton("");
+		btn_d9.setEnabled(false);
+		btn_d9.setBounds(905, 246, 35, 70);
+		panel_tabuleiro.add(btn_d9);
 
-		JButton button_21 = new JButton("");
-		button_21.setEnabled(false);
-		button_21.setBounds(905, 177, 35, 70);
-		panel_tabuleiro.add(button_21);
+		JButton btn_d10 = new JButton("");
+		btn_d10.setEnabled(false);
+		btn_d10.setBounds(905, 177, 35, 70);
+		panel_tabuleiro.add(btn_d10);
 
-		JButton button_22 = new JButton("");
-		button_22.setEnabled(false);
-		button_22.setBounds(905, 108, 35, 70);
-		panel_tabuleiro.add(button_22);
+		JButton btn_d11 = new JButton("");
+		btn_d11.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
+		btn_d11.setEnabled(false);
+		btn_d11.setBounds(905, 108, 35, 70);
+		panel_tabuleiro.add(btn_d11);
 
-		JButton button_24 = new JButton("");
-		button_24.setEnabled(false);
-		button_24.setBounds(39, 107, 35, 70);
-		panel_tabuleiro.add(button_24);
+		JButton btn_e11 = new JButton("");
+		btn_e11.setEnabled(false);
+		btn_e11.setBounds(39, 107, 35, 70);
+		panel_tabuleiro.add(btn_e11);
 
-		JButton button_25 = new JButton("");
-		button_25.setEnabled(false);
-		button_25.setBounds(39, 72, 70, 35);
-		panel_tabuleiro.add(button_25);
+		JButton btn_e12 = new JButton("");
+		btn_e12.setEnabled(false);
+		btn_e12.setBounds(39, 72, 70, 35);
+		panel_tabuleiro.add(btn_e12);
 
-		JButton button_26 = new JButton("");
-		button_26.setEnabled(false);
-		button_26.setBounds(108, 72, 70, 35);
-		panel_tabuleiro.add(button_26);
+		JButton btn_e13 = new JButton("");
+		btn_e13.setEnabled(false);
+		btn_e13.setBounds(108, 72, 70, 35);
+		panel_tabuleiro.add(btn_e13);
 
-		JButton button_27 = new JButton("");
-		button_27.setEnabled(false);
-		button_27.setBounds(177, 72, 70, 35);
-		panel_tabuleiro.add(button_27);
+		JButton btn_e14 = new JButton("");
+		btn_e14.setEnabled(false);
+		btn_e14.setBounds(177, 72, 70, 35);
+		panel_tabuleiro.add(btn_e14);
 
-		JButton button_23 = new JButton("");
-		button_23.setEnabled(false);
-		button_23.setBounds(801, 74, 70, 35);
-		panel_tabuleiro.add(button_23);
+		JButton btn_d13 = new JButton("");
+		btn_d13.setEnabled(false);
+		btn_d13.setBounds(801, 74, 70, 35);
+		panel_tabuleiro.add(btn_d13);
 
 		JLabel lblEscolhaSuasPecas = new JLabel("Escolha Suas Pecas");
 		lblEscolhaSuasPecas.setFont(new Font("Times New Roman", Font.BOLD, 18));

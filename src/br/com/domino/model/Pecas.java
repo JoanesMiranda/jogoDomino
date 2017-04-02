@@ -2,25 +2,34 @@ package br.com.domino.model;
 
 public class Pecas {
 
-	private Integer valorTopo;
-	private Integer valorInferior;
+	private Integer ladoDireito;
+	private Integer ladoEsquerdo;
 	private Integer pecaAssociada;
 	private int estadoDoJogo;
 
-	public Integer getValorTopo() {
-		return valorTopo;
+	public Pecas() {
+
 	}
 
-	public void setValorTopo(Integer valorTopo) {
-		this.valorTopo = valorTopo;
+	public Pecas(Integer ladoDireito, Integer ladoEsquerdo) {
+		this.ladoDireito = ladoDireito;
+		this.ladoEsquerdo = ladoEsquerdo;
 	}
 
-	public Integer getValorInferior() {
-		return valorInferior;
+	public Integer getLadoDireito() {
+		return ladoDireito;
 	}
 
-	public void setValorInferior(Integer valorInferior) {
-		this.valorInferior = valorInferior;
+	public void setLadoDireito(Integer ladoDireito) {
+		this.ladoDireito = ladoDireito;
+	}
+
+	public Integer getLadoEsquerdo() {
+		return ladoEsquerdo;
+	}
+
+	public void setLadoEsquerdo(Integer ladoEsquerdo) {
+		this.ladoEsquerdo = ladoEsquerdo;
 	}
 
 	public Integer getPecaAssociada() {
