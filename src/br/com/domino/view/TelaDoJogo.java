@@ -110,14 +110,14 @@ public class TelaDoJogo extends JFrame {
 	int aux2 = 0;
 	Actions al = new Actions();
 
-	ArrayList<Integer> arrayH = new ArrayList<Integer>();
-	ArrayList<Integer> arrayM = new ArrayList<Integer>();
+	ArrayList<Pecas> arrayH = new ArrayList<Pecas>();
+	ArrayList<Pecas> arrayM = new ArrayList<Pecas>();
 
 	// se true a vez do jogo é do humano se false a vez do jogo é da maquina
 	boolean vezDoJogo = false;
 
 	// recebe todas as pedras do caminho do jogo do domino
-	int[] arrayTabuleiro = new int[57];
+	Pecas[] arrayTabuleiro = new Pecas[57];
 
 	private static final long serialVersionUID = 1L;
 
@@ -233,96 +233,15 @@ public class TelaDoJogo extends JFrame {
 		// verifica de quem é a vez do jogo;
 		// this.vezDoJogo = al.maiorPedra(arrayH, arrayH);
 
-		// if(vezDoJogo == true){
+		// if (vezDoJogo == true) {
 		// desabilitaBotoesMaquina();
-		// }else{
+		// } else {
 		// desabilitaBotoesHumano();
 		// }
 
 		btnhumano1 = new JButton("");
 		btnhumano1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				++aux2;
-				// vezDoJogo = al.maiorPedra(array, array);
-
-				l1 = al.geraNumerosAleatorios().get(0).toString();
-				switch (aux) {
-				case 1:
-					arrayTabuleiro[29] = Integer.parseInt(l1);
-					btnhumano1.setEnabled(false);
-					// btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" +
-					// l1 + ".png"));
-					break;
-				case 2:
-					arrayH.add(Integer.parseInt(l1));
-					// btnpeca1.setEnabled(false);
-					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
-					break;
-				case 3:
-					arrayH.add(Integer.parseInt(l1));
-					// btnpeca1.setEnabled(false);
-					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
-					break;
-				case 4:
-					arrayH.add(Integer.parseInt(l1));
-					// btnpeca1.setEnabled(false);
-					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
-					break;
-				case 5:
-					arrayH.add(Integer.parseInt(l1));
-					// btnpeca1.setEnabled(false);
-					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
-					break;
-				case 6:
-					arrayH.add(Integer.parseInt(l1));
-					// btnpeca1.setEnabled(false);
-					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
-					break;
-				case 7:
-					arrayH.add(Integer.parseInt(l1));
-					// btnpeca1.setEnabled(false);
-					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
-					break;
-				case 8:
-					arrayM.add(Integer.parseInt(l1));
-					// btnpeca1.setEnabled(false);
-					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
-					break;
-				case 9:
-					arrayM.add(Integer.parseInt(l1));
-					// btnpeca1.setEnabled(false);
-					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
-					break;
-				case 10:
-					arrayM.add(Integer.parseInt(l1));
-					// btnpeca1.setEnabled(false);
-					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
-					break;
-				case 11:
-					arrayM.add(Integer.parseInt(l1));
-					// btnpeca1.setEnabled(false);
-					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
-					break;
-				case 12:
-					arrayM.add(Integer.parseInt(l1));
-					// btnpeca1.setEnabled(false);
-					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
-					break;
-				case 13:
-					arrayM.add(Integer.parseInt(l1));
-					// btnpeca1.setEnabled(false);
-					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
-					break;
-				case 14:
-					arrayM.add(Integer.parseInt(l1));
-					// btnpeca1.setEnabled(false);
-					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
-					break;
-
-				default:
-					JOptionPane.showMessageDialog(null, "Peças esgotadas");
-					break;
-				}
 
 			}
 		});
@@ -386,72 +305,72 @@ public class TelaDoJogo extends JFrame {
 
 				switch (aux) {
 				case 1:
-					arrayH.add(Integer.parseInt(l1));
+					arrayH.add(p);
 					btnpeca1.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
 					break;
 				case 2:
-					arrayH.add(Integer.parseInt(l1));
+					arrayH.add(p);
 					btnpeca1.setEnabled(false);
 					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
 					break;
 				case 3:
-					arrayH.add(Integer.parseInt(l1));
+					arrayH.add(p);
 					btnpeca1.setEnabled(false);
 					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
 					break;
 				case 4:
-					arrayH.add(Integer.parseInt(l1));
+					arrayH.add(p);
 					btnpeca1.setEnabled(false);
 					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
 					break;
 				case 5:
-					arrayH.add(Integer.parseInt(l1));
+					arrayH.add(p);
 					btnpeca1.setEnabled(false);
 					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
 					break;
 				case 6:
-					arrayH.add(Integer.parseInt(l1));
+					arrayH.add(p);
 					btnpeca1.setEnabled(false);
 					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
 					break;
 				case 7:
-					arrayH.add(Integer.parseInt(l1));
+					arrayH.add(p);
 					btnpeca1.setEnabled(false);
 					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
 					break;
 				case 8:
-					arrayM.add(Integer.parseInt(l1));
+					arrayM.add(p);
 					btnpeca1.setEnabled(false);
 					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
 					break;
 				case 9:
-					arrayM.add(Integer.parseInt(l1));
+					arrayM.add(p);
 					btnpeca1.setEnabled(false);
 					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
 					break;
 				case 10:
-					arrayM.add(Integer.parseInt(l1));
+					arrayM.add(p);
 					btnpeca1.setEnabled(false);
 					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
 					break;
 				case 11:
-					arrayM.add(Integer.parseInt(l1));
+					arrayM.add(p);
 					btnpeca1.setEnabled(false);
 					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
 					break;
 				case 12:
-					arrayM.add(Integer.parseInt(l1));
+					arrayM.add(p);
 					btnpeca1.setEnabled(false);
 					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
 					break;
 				case 13:
-					arrayM.add(Integer.parseInt(l1));
+					arrayM.add(p);
 					btnpeca1.setEnabled(false);
 					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
 					break;
 				case 14:
-					arrayM.add(Integer.parseInt(l1));
+					arrayM.add(p);
 					btnpeca1.setEnabled(false);
 					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
 					break;
@@ -459,12 +378,12 @@ public class TelaDoJogo extends JFrame {
 				default:
 
 					JOptionPane.showMessageDialog(null, "Peças esgotadas");
-					vezDoJogo = al.maiorPedra(arrayH, arrayM);
-					if (vezDoJogo == true) {
-						desabilitaBotoesMaquina();
-					} else {
-						desabilitaBotoesHumano();
-					}
+					// vezDoJogo = al.maiorPedra(arrayH, arrayM);
+					// if (vezDoJogo == true) {
+					// desabilitaBotoesMaquina();
+					// } else {
+					// desabilitaBotoesHumano();
+					// }
 
 					break;
 				}
@@ -483,72 +402,72 @@ public class TelaDoJogo extends JFrame {
 				l2 = ladoa + ladob;
 				switch (aux) {
 				case 1:
-					arrayH.add(Integer.parseInt(l2));
+					arrayH.add(p);
 					btnpeca2.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l2 + ".png"));
 					break;
 				case 2:
-					arrayH.add(Integer.parseInt(l2));
+					arrayH.add(p);
 					btnpeca2.setEnabled(false);
 					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l2 + ".png"));
 					break;
 				case 3:
-					arrayH.add(Integer.parseInt(l2));
+					arrayH.add(p);
 					btnpeca2.setEnabled(false);
 					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l2 + ".png"));
 					break;
 				case 4:
-					arrayH.add(Integer.parseInt(l2));
+					arrayH.add(p);
 					btnpeca2.setEnabled(false);
 					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l2 + ".png"));
 					break;
 				case 5:
-					arrayH.add(Integer.parseInt(l2));
+					arrayH.add(p);
 					btnpeca2.setEnabled(false);
 					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l2 + ".png"));
 					break;
 				case 6:
-					arrayH.add(Integer.parseInt(l2));
+					arrayH.add(p);
 					btnpeca2.setEnabled(false);
 					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l2 + ".png"));
 					break;
 				case 7:
-					arrayH.add(Integer.parseInt(l2));
+					arrayH.add(p);
 					btnpeca2.setEnabled(false);
 					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l2 + ".png"));
 					break;
 				case 8:
-					arrayM.add(Integer.parseInt(l2));
+					arrayM.add(p);
 					btnpeca2.setEnabled(false);
 					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l2 + ".png"));
 					break;
 				case 9:
-					arrayM.add(Integer.parseInt(l2));
+					arrayM.add(p);
 					btnpeca2.setEnabled(false);
 					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l2 + ".png"));
 					break;
 				case 10:
-					arrayM.add(Integer.parseInt(l2));
+					arrayM.add(p);
 					btnpeca2.setEnabled(false);
 					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l2 + ".png"));
 					break;
 				case 11:
-					arrayM.add(Integer.parseInt(l2));
+					arrayM.add(p);
 					btnpeca2.setEnabled(false);
 					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l2 + ".png"));
 					break;
 				case 12:
-					arrayM.add(Integer.parseInt(l2));
+					arrayM.add(p);
 					btnpeca2.setEnabled(false);
 					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l2 + ".png"));
 					break;
 				case 13:
-					arrayM.add(Integer.parseInt(l2));
+					arrayM.add(p);
 					btnpeca2.setEnabled(false);
 					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l2 + ".png"));
 					break;
 				case 14:
-					arrayM.add(Integer.parseInt(l2));
+					arrayM.add(p);
 					btnpeca2.setEnabled(false);
 					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l2 + ".png"));
 					break;
@@ -574,72 +493,72 @@ public class TelaDoJogo extends JFrame {
 
 				switch (aux) {
 				case 1:
-					arrayH.add(Integer.parseInt(l3));
+					arrayH.add(p);
 					btnpeca3.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l3 + ".png"));
 					break;
 				case 2:
-					arrayH.add(Integer.parseInt(l3));
+					arrayH.add(p);
 					btnpeca3.setEnabled(false);
 					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l3 + ".png"));
 					break;
 				case 3:
-					arrayH.add(Integer.parseInt(l3));
+					arrayH.add(p);
 					btnpeca3.setEnabled(false);
 					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l3 + ".png"));
 					break;
 				case 4:
-					arrayH.add(Integer.parseInt(l3));
+					arrayH.add(p);
 					btnpeca3.setEnabled(false);
 					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l3 + ".png"));
 					break;
 				case 5:
-					arrayH.add(Integer.parseInt(l3));
+					arrayH.add(p);
 					btnpeca3.setEnabled(false);
 					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l3 + ".png"));
 					break;
 				case 6:
-					arrayH.add(Integer.parseInt(l3));
+					arrayH.add(p);
 					btnpeca3.setEnabled(false);
 					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l3 + ".png"));
 					break;
 				case 7:
-					arrayH.add(Integer.parseInt(l3));
+					arrayH.add(p);
 					btnpeca3.setEnabled(false);
 					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l3 + ".png"));
 					break;
 				case 8:
-					arrayM.add(Integer.parseInt(l3));
+					arrayM.add(p);
 					btnpeca3.setEnabled(false);
 					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l3 + ".png"));
 					break;
 				case 9:
-					arrayM.add(Integer.parseInt(l3));
+					arrayM.add(p);
 					btnpeca3.setEnabled(false);
 					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l3 + ".png"));
 					break;
 				case 10:
-					arrayM.add(Integer.parseInt(l3));
+					arrayM.add(p);
 					btnpeca3.setEnabled(false);
 					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l3 + ".png"));
 					break;
 				case 11:
-					arrayM.add(Integer.parseInt(l3));
+					arrayM.add(p);
 					btnpeca3.setEnabled(false);
 					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l3 + ".png"));
 					break;
 				case 12:
-					arrayM.add(Integer.parseInt(l3));
+					arrayM.add(p);
 					btnpeca3.setEnabled(false);
 					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l3 + ".png"));
 					break;
 				case 13:
-					arrayM.add(Integer.parseInt(l3));
+					arrayM.add(p);
 					btnpeca3.setEnabled(false);
 					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l3 + ".png"));
 					break;
 				case 14:
-					arrayM.add(Integer.parseInt(l3));
+					arrayM.add(p);
 					btnpeca3.setEnabled(false);
 					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l3 + ".png"));
 					break;
@@ -664,73 +583,73 @@ public class TelaDoJogo extends JFrame {
 
 				switch (aux) {
 				case 1:
-					arrayH.add(Integer.parseInt(l4));
+					arrayH.add(p);
 					btnpeca4.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l4 + ".png"));
 					break;
 				case 2:
-					arrayH.add(Integer.parseInt(l4));
+					arrayH.add(p);
 					btnpeca4.setEnabled(false);
 					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l4 + ".png"));
 					break;
 				case 3:
-					arrayH.add(Integer.parseInt(l4));
+					arrayH.add(p);
 					btnpeca4.setEnabled(false);
 					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l4 + ".png"));
 					break;
 				case 4:
-					arrayH.add(Integer.parseInt(l4));
+					arrayH.add(p);
 					btnpeca4.setEnabled(false);
 					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l4 + ".png"));
 					break;
 				case 5:
-					arrayH.add(Integer.parseInt(l4));
+					arrayH.add(p);
 					btnpeca4.setEnabled(false);
 					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l4 + ".png"));
 					break;
 				case 6:
-					arrayH.add(Integer.parseInt(l4));
+					arrayH.add(p);
 					btnpeca4.setEnabled(false);
 					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l4 + ".png"));
 					break;
 				case 7:
-					arrayH.add(Integer.parseInt(l4));
+					arrayH.add(p);
 					btnpeca4.setEnabled(false);
 					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l4 + ".png"));
 					break;
 				case 8:
-					arrayM.add(Integer.parseInt(l4));
+					arrayM.add(p);
 					btnpeca4.setEnabled(false);
 					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l4 + ".png"));
 
 					break;
 				case 9:
-					arrayM.add(Integer.parseInt(l4));
+					arrayM.add(p);
 					btnpeca4.setEnabled(false);
 					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l4 + ".png"));
 					break;
 				case 10:
-					arrayM.add(Integer.parseInt(l4));
+					arrayM.add(p);
 					btnpeca4.setEnabled(false);
 					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l4 + ".png"));
 					break;
 				case 11:
-					arrayM.add(Integer.parseInt(l4));
+					arrayM.add(p);
 					btnpeca4.setEnabled(false);
 					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l4 + ".png"));
 					break;
 				case 12:
-					arrayM.add(Integer.parseInt(l4));
+					arrayM.add(p);
 					btnpeca4.setEnabled(false);
 					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l4 + ".png"));
 					break;
 				case 13:
-					arrayM.add(Integer.parseInt(l4));
+					arrayM.add(p);
 					btnpeca4.setEnabled(false);
 					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l4 + ".png"));
 					break;
 				case 14:
-					arrayM.add(Integer.parseInt(l4));
+					arrayM.add(p);
 					btnpeca4.setEnabled(false);
 					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l4 + ".png"));
 					break;
@@ -756,72 +675,72 @@ public class TelaDoJogo extends JFrame {
 
 				switch (aux) {
 				case 1:
-					arrayH.add(Integer.parseInt(l5));
+					arrayH.add(p);
 					btnpeca5.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l5 + ".png"));
 					break;
 				case 2:
-					arrayH.add(Integer.parseInt(l5));
+					arrayH.add(p);
 					btnpeca5.setEnabled(false);
 					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l5 + ".png"));
 					break;
 				case 3:
-					arrayH.add(Integer.parseInt(l5));
+					arrayH.add(p);
 					btnpeca5.setEnabled(false);
 					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l5 + ".png"));
 					break;
 				case 4:
-					arrayH.add(Integer.parseInt(l5));
+					arrayH.add(p);
 					btnpeca5.setEnabled(false);
 					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l5 + ".png"));
 					break;
 				case 5:
-					arrayH.add(Integer.parseInt(l5));
+					arrayH.add(p);
 					btnpeca5.setEnabled(false);
 					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l5 + ".png"));
 					break;
 				case 6:
-					arrayH.add(Integer.parseInt(l5));
+					arrayH.add(p);
 					btnpeca5.setEnabled(false);
 					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l5 + ".png"));
 					break;
 				case 7:
-					arrayH.add(Integer.parseInt(l5));
+					arrayH.add(p);
 					btnpeca5.setEnabled(false);
 					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l5 + ".png"));
 					break;
 				case 8:
-					arrayM.add(Integer.parseInt(l5));
+					arrayM.add(p);
 					btnpeca5.setEnabled(false);
 					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l5 + ".png"));
 					break;
 				case 9:
-					arrayM.add(Integer.parseInt(l5));
+					arrayM.add(p);
 					btnpeca5.setEnabled(false);
 					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l5 + ".png"));
 					break;
 				case 10:
-					arrayM.add(Integer.parseInt(l5));
+					arrayM.add(p);
 					btnpeca5.setEnabled(false);
 					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l5 + ".png"));
 					break;
 				case 11:
-					arrayM.add(Integer.parseInt(l5));
+					arrayM.add(p);
 					btnpeca5.setEnabled(false);
 					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l5 + ".png"));
 					break;
 				case 12:
-					arrayM.add(Integer.parseInt(l5));
+					arrayM.add(p);
 					btnpeca5.setEnabled(false);
 					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l5 + ".png"));
 					break;
 				case 13:
-					arrayM.add(Integer.parseInt(l5));
+					arrayM.add(p);
 					btnpeca5.setEnabled(false);
 					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l5 + ".png"));
 					break;
 				case 14:
-					arrayM.add(Integer.parseInt(l5));
+					arrayM.add(p);
 					btnpeca5.setEnabled(false);
 					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l5 + ".png"));
 					break;
@@ -847,72 +766,72 @@ public class TelaDoJogo extends JFrame {
 
 				switch (aux) {
 				case 1:
-					arrayH.add(Integer.parseInt(l6));
+					arrayH.add(p);
 					btnpeca6.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l6 + ".png"));
 					break;
 				case 2:
-					arrayH.add(Integer.parseInt(l6));
+					arrayH.add(p);
 					btnpeca6.setEnabled(false);
 					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l6 + ".png"));
 					break;
 				case 3:
-					arrayH.add(Integer.parseInt(l6));
+					arrayH.add(p);
 					btnpeca6.setEnabled(false);
 					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l6 + ".png"));
 					break;
 				case 4:
-					arrayH.add(Integer.parseInt(l6));
+					arrayH.add(p);
 					btnpeca6.setEnabled(false);
 					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l6 + ".png"));
 					break;
 				case 5:
-					arrayH.add(Integer.parseInt(l6));
+					arrayH.add(p);
 					btnpeca6.setEnabled(false);
 					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l6 + ".png"));
 					break;
 				case 6:
-					arrayH.add(Integer.parseInt(l6));
+					arrayH.add(p);
 					btnpeca6.setEnabled(false);
 					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l6 + ".png"));
 					break;
 				case 7:
-					arrayH.add(Integer.parseInt(l6));
+					arrayH.add(p);
 					btnpeca6.setEnabled(false);
 					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l6 + ".png"));
 					break;
 				case 8:
-					arrayM.add(Integer.parseInt(l6));
+					arrayM.add(p);
 					btnpeca6.setEnabled(false);
 					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l6 + ".png"));
 					break;
 				case 9:
-					arrayM.add(Integer.parseInt(l6));
+					arrayM.add(p);
 					btnpeca6.setEnabled(false);
 					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l6 + ".png"));
 					break;
 				case 10:
-					arrayM.add(Integer.parseInt(l6));
+					arrayM.add(p);
 					btnpeca6.setEnabled(false);
 					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l6 + ".png"));
 					break;
 				case 11:
-					arrayM.add(Integer.parseInt(l6));
+					arrayM.add(p);
 					btnpeca6.setEnabled(false);
 					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l6 + ".png"));
 					break;
 				case 12:
-					arrayM.add(Integer.parseInt(l6));
+					arrayM.add(p);
 					btnpeca6.setEnabled(false);
 					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l6 + ".png"));
 					break;
 				case 13:
-					arrayM.add(Integer.parseInt(l6));
+					arrayM.add(p);
 					btnpeca6.setEnabled(false);
 					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l6 + ".png"));
 					break;
 				case 14:
-					arrayM.add(Integer.parseInt(l6));
+					arrayM.add(p);
 					btnpeca6.setEnabled(false);
 					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l6 + ".png"));
 					break;
@@ -938,72 +857,72 @@ public class TelaDoJogo extends JFrame {
 
 				switch (aux) {
 				case 1:
-					arrayH.add(Integer.parseInt(l7));
+					arrayH.add(p);
 					btnpeca7.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l7 + ".png"));
 					break;
 				case 2:
-					arrayH.add(Integer.parseInt(l7));
+					arrayH.add(p);
 					btnpeca7.setEnabled(false);
 					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l7 + ".png"));
 					break;
 				case 3:
-					arrayH.add(Integer.parseInt(l7));
+					arrayH.add(p);
 					btnpeca7.setEnabled(false);
 					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l7 + ".png"));
 					break;
 				case 4:
-					arrayH.add(Integer.parseInt(l7));
+					arrayH.add(p);
 					btnpeca7.setEnabled(false);
 					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l7 + ".png"));
 					break;
 				case 5:
-					arrayH.add(Integer.parseInt(l7));
+					arrayH.add(p);
 					btnpeca7.setEnabled(false);
 					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l7 + ".png"));
 					break;
 				case 6:
-					arrayH.add(Integer.parseInt(l7));
+					arrayH.add(p);
 					btnpeca7.setEnabled(false);
 					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l7 + ".png"));
 					break;
 				case 7:
-					arrayH.add(Integer.parseInt(l7));
+					arrayH.add(p);
 					btnpeca7.setEnabled(false);
 					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l7 + ".png"));
 					break;
 				case 8:
-					arrayM.add(Integer.parseInt(l7));
+					arrayM.add(p);
 					btnpeca7.setEnabled(false);
 					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l7 + ".png"));
 					break;
 				case 9:
-					arrayM.add(Integer.parseInt(l7));
+					arrayM.add(p);
 					btnpeca7.setEnabled(false);
 					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l7 + ".png"));
 					break;
 				case 10:
-					arrayM.add(Integer.parseInt(l7));
+					arrayM.add(p);
 					btnpeca7.setEnabled(false);
 					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l7 + ".png"));
 					break;
 				case 11:
-					arrayM.add(Integer.parseInt(l7));
+					arrayM.add(p);
 					btnpeca7.setEnabled(false);
 					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l7 + ".png"));
 					break;
 				case 12:
-					arrayM.add(Integer.parseInt(l7));
+					arrayM.add(p);
 					btnpeca7.setEnabled(false);
 					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l7 + ".png"));
 					break;
 				case 13:
-					arrayM.add(Integer.parseInt(l7));
+					arrayM.add(p);
 					btnpeca7.setEnabled(false);
 					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l7 + ".png"));
 					break;
 				case 14:
-					arrayM.add(Integer.parseInt(l7));
+					arrayM.add(p);
 					btnpeca7.setEnabled(false);
 					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l7 + ".png"));
 					break;
@@ -1029,72 +948,72 @@ public class TelaDoJogo extends JFrame {
 
 				switch (aux) {
 				case 1:
-					arrayH.add(Integer.parseInt(l8));
+					arrayH.add(p);
 					btnpeca8.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l8 + ".png"));
 					break;
 				case 2:
-					arrayH.add(Integer.parseInt(l8));
+					arrayH.add(p);
 					btnpeca8.setEnabled(false);
 					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l8 + ".png"));
 					break;
 				case 3:
-					arrayH.add(Integer.parseInt(l8));
+					arrayH.add(p);
 					btnpeca8.setEnabled(false);
 					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l8 + ".png"));
 					break;
 				case 4:
-					arrayH.add(Integer.parseInt(l8));
+					arrayH.add(p);
 					btnpeca8.setEnabled(false);
 					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l8 + ".png"));
 					break;
 				case 5:
-					arrayH.add(Integer.parseInt(l8));
+					arrayH.add(p);
 					btnpeca8.setEnabled(false);
 					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l8 + ".png"));
 					break;
 				case 6:
-					arrayH.add(Integer.parseInt(l8));
+					arrayH.add(p);
 					btnpeca8.setEnabled(false);
 					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l8 + ".png"));
 					break;
 				case 7:
-					arrayH.add(Integer.parseInt(l8));
+					arrayH.add(p);
 					btnpeca8.setEnabled(false);
 					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l8 + ".png"));
 					break;
 				case 8:
-					arrayM.add(Integer.parseInt(l8));
+					arrayM.add(p);
 					btnpeca8.setEnabled(false);
 					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l8 + ".png"));
 					break;
 				case 9:
-					arrayM.add(Integer.parseInt(l8));
+					arrayM.add(p);
 					btnpeca8.setEnabled(false);
 					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l8 + ".png"));
 					break;
 				case 10:
-					arrayM.add(Integer.parseInt(l8));
+					arrayM.add(p);
 					btnpeca8.setEnabled(false);
 					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l8 + ".png"));
 					break;
 				case 11:
-					arrayM.add(Integer.parseInt(l8));
+					arrayM.add(p);
 					btnpeca8.setEnabled(false);
 					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l8 + ".png"));
 					break;
 				case 12:
-					arrayM.add(Integer.parseInt(l8));
+					arrayM.add(p);
 					btnpeca8.setEnabled(false);
 					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l8 + ".png"));
 					break;
 				case 13:
-					arrayM.add(Integer.parseInt(l8));
+					arrayM.add(p);
 					btnpeca8.setEnabled(false);
 					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l8 + ".png"));
 					break;
 				case 14:
-					arrayM.add(Integer.parseInt(l8));
+					arrayM.add(p);
 					btnpeca8.setEnabled(false);
 					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l8 + ".png"));
 					break;
@@ -1119,72 +1038,72 @@ public class TelaDoJogo extends JFrame {
 
 				switch (aux) {
 				case 1:
-					arrayH.add(Integer.parseInt(l9));
+					arrayH.add(p);
 					btnpeca9.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l9 + ".png"));
 					break;
 				case 2:
-					arrayH.add(Integer.parseInt(l9));
+					arrayH.add(p);
 					btnpeca9.setEnabled(false);
 					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l9 + ".png"));
 					break;
 				case 3:
-					arrayH.add(Integer.parseInt(l9));
+					arrayH.add(p);
 					btnpeca9.setEnabled(false);
 					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l9 + ".png"));
 					break;
 				case 4:
-					arrayH.add(Integer.parseInt(l9));
+					arrayH.add(p);
 					btnpeca9.setEnabled(false);
 					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l9 + ".png"));
 					break;
 				case 5:
-					arrayH.add(Integer.parseInt(l9));
+					arrayH.add(p);
 					btnpeca9.setEnabled(false);
 					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l9 + ".png"));
 					break;
 				case 6:
-					arrayH.add(Integer.parseInt(l9));
+					arrayH.add(p);
 					btnpeca9.setEnabled(false);
 					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l9 + ".png"));
 					break;
 				case 7:
-					arrayH.add(Integer.parseInt(l9));
+					arrayH.add(p);
 					btnpeca9.setEnabled(false);
 					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l9 + ".png"));
 					break;
 				case 8:
-					arrayM.add(Integer.parseInt(l9));
+					arrayM.add(p);
 					btnpeca9.setEnabled(false);
 					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l9 + ".png"));
 					break;
 				case 9:
-					arrayM.add(Integer.parseInt(l9));
+					arrayM.add(p);
 					btnpeca9.setEnabled(false);
 					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l9 + ".png"));
 					break;
 				case 10:
-					arrayM.add(Integer.parseInt(l9));
+					arrayM.add(p);
 					btnpeca9.setEnabled(false);
 					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l9 + ".png"));
 					break;
 				case 11:
-					arrayM.add(Integer.parseInt(l9));
+					arrayM.add(p);
 					btnpeca9.setEnabled(false);
 					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l9 + ".png"));
 					break;
 				case 12:
-					arrayM.add(Integer.parseInt(l9));
+					arrayM.add(p);
 					btnpeca9.setEnabled(false);
 					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l9 + ".png"));
 					break;
 				case 13:
-					arrayM.add(Integer.parseInt(l9));
+					arrayM.add(p);
 					btnpeca9.setEnabled(false);
 					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l9 + ".png"));
 					break;
 				case 14:
-					arrayM.add(Integer.parseInt(l9));
+					arrayM.add(p);
 					btnpeca9.setEnabled(false);
 					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l9 + ".png"));
 					break;
@@ -1209,72 +1128,72 @@ public class TelaDoJogo extends JFrame {
 
 				switch (aux) {
 				case 1:
-					arrayH.add(Integer.parseInt(l10));
+					arrayH.add(p);
 					btnpeca10.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l10 + ".png"));
 					break;
 				case 2:
-					arrayH.add(Integer.parseInt(l10));
+					arrayH.add(p);
 					btnpeca10.setEnabled(false);
 					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l10 + ".png"));
 					break;
 				case 3:
-					arrayH.add(Integer.parseInt(l10));
+					arrayH.add(p);
 					btnpeca10.setEnabled(false);
 					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l10 + ".png"));
 					break;
 				case 4:
-					arrayH.add(Integer.parseInt(l10));
+					arrayH.add(p);
 					btnpeca10.setEnabled(false);
 					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l10 + ".png"));
 					break;
 				case 5:
-					arrayH.add(Integer.parseInt(l10));
+					arrayH.add(p);
 					btnpeca10.setEnabled(false);
 					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l10 + ".png"));
 					break;
 				case 6:
-					arrayH.add(Integer.parseInt(l10));
+					arrayH.add(p);
 					btnpeca10.setEnabled(false);
 					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l10 + ".png"));
 					break;
 				case 7:
-					arrayH.add(Integer.parseInt(l10));
+					arrayH.add(p);
 					btnpeca10.setEnabled(false);
 					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l10 + ".png"));
 					break;
 				case 8:
-					arrayM.add(Integer.parseInt(l10));
+					arrayM.add(p);
 					btnpeca10.setEnabled(false);
 					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l10 + ".png"));
 					break;
 				case 9:
-					arrayM.add(Integer.parseInt(l10));
+					arrayM.add(p);
 					btnpeca10.setEnabled(false);
 					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l10 + ".png"));
 					break;
 				case 10:
-					arrayM.add(Integer.parseInt(l10));
+					arrayM.add(p);
 					btnpeca10.setEnabled(false);
 					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l10 + ".png"));
 					break;
 				case 11:
-					arrayM.add(Integer.parseInt(l10));
+					arrayM.add(p);
 					btnpeca10.setEnabled(false);
 					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l10 + ".png"));
 					break;
 				case 12:
-					arrayM.add(Integer.parseInt(l10));
+					arrayM.add(p);
 					btnpeca10.setEnabled(false);
 					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l10 + ".png"));
 					break;
 				case 13:
-					arrayM.add(Integer.parseInt(l10));
+					arrayM.add(p);
 					btnpeca10.setEnabled(false);
 					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l10 + ".png"));
 					break;
 				case 14:
-					arrayM.add(Integer.parseInt(l10));
+					arrayM.add(p);
 					btnpeca10.setEnabled(false);
 					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l10 + ".png"));
 					break;
@@ -1299,72 +1218,72 @@ public class TelaDoJogo extends JFrame {
 
 				switch (aux) {
 				case 1:
-					arrayH.add(Integer.parseInt(l11));
+					arrayH.add(p);
 					btnpeca11.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l11 + ".png"));
 					break;
 				case 2:
-					arrayH.add(Integer.parseInt(l11));
+					arrayH.add(p);
 					btnpeca11.setEnabled(false);
 					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l11 + ".png"));
 					break;
 				case 3:
-					arrayH.add(Integer.parseInt(l11));
+					arrayH.add(p);
 					btnpeca11.setEnabled(false);
 					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l11 + ".png"));
 					break;
 				case 4:
-					arrayH.add(Integer.parseInt(l11));
+					arrayH.add(p);
 					btnpeca11.setEnabled(false);
 					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l11 + ".png"));
 					break;
 				case 5:
-					arrayH.add(Integer.parseInt(l11));
+					arrayH.add(p);
 					btnpeca11.setEnabled(false);
 					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l11 + ".png"));
 					break;
 				case 6:
-					arrayH.add(Integer.parseInt(l11));
+					arrayH.add(p);
 					btnpeca11.setEnabled(false);
 					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l11 + ".png"));
 					break;
 				case 7:
-					arrayH.add(Integer.parseInt(l11));
+					arrayH.add(p);
 					btnpeca11.setEnabled(false);
 					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l11 + ".png"));
 					break;
 				case 8:
-					arrayM.add(Integer.parseInt(l11));
+					arrayM.add(p);
 					btnpeca11.setEnabled(false);
 					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l11 + ".png"));
 					break;
 				case 9:
-					arrayM.add(Integer.parseInt(l11));
+					arrayM.add(p);
 					btnpeca11.setEnabled(false);
 					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l11 + ".png"));
 					break;
 				case 10:
-					arrayM.add(Integer.parseInt(l11));
+					arrayM.add(p);
 					btnpeca11.setEnabled(false);
 					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l11 + ".png"));
 					break;
 				case 11:
-					arrayM.add(Integer.parseInt(l11));
+					arrayM.add(p);
 					btnpeca11.setEnabled(false);
 					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l11 + ".png"));
 					break;
 				case 12:
-					arrayM.add(Integer.parseInt(l11));
+					arrayM.add(p);
 					btnpeca11.setEnabled(false);
 					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l11 + ".png"));
 					break;
 				case 13:
-					arrayM.add(Integer.parseInt(l11));
+					arrayM.add(p);
 					btnpeca11.setEnabled(false);
 					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l11 + ".png"));
 					break;
 				case 14:
-					arrayM.add(Integer.parseInt(l11));
+					arrayM.add(p);
 					btnpeca11.setEnabled(false);
 					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l11 + ".png"));
 					break;
@@ -1389,72 +1308,72 @@ public class TelaDoJogo extends JFrame {
 
 				switch (aux) {
 				case 1:
-					arrayH.add(Integer.parseInt(l12));
+					arrayH.add(p);
 					btnpeca12.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l12 + ".png"));
 					break;
 				case 2:
-					arrayH.add(Integer.parseInt(l12));
+					arrayH.add(p);
 					btnpeca12.setEnabled(false);
 					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l12 + ".png"));
 					break;
 				case 3:
-					arrayH.add(Integer.parseInt(l12));
+					arrayH.add(p);
 					btnpeca12.setEnabled(false);
 					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l12 + ".png"));
 					break;
 				case 4:
-					arrayH.add(Integer.parseInt(l12));
+					arrayH.add(p);
 					btnpeca12.setEnabled(false);
 					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l12 + ".png"));
 					break;
 				case 5:
-					arrayH.add(Integer.parseInt(l12));
+					arrayH.add(p);
 					btnpeca12.setEnabled(false);
 					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l12 + ".png"));
 					break;
 				case 6:
-					arrayH.add(Integer.parseInt(l12));
+					arrayH.add(p);
 					btnpeca12.setEnabled(false);
 					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l12 + ".png"));
 					break;
 				case 7:
-					arrayH.add(Integer.parseInt(l12));
+					arrayH.add(p);
 					btnpeca12.setEnabled(false);
 					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l12 + ".png"));
 					break;
 				case 8:
-					arrayM.add(Integer.parseInt(l12));
+					arrayM.add(p);
 					btnpeca12.setEnabled(false);
 					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l12 + ".png"));
 					break;
 				case 9:
-					arrayM.add(Integer.parseInt(l12));
+					arrayM.add(p);
 					btnpeca12.setEnabled(false);
 					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l12 + ".png"));
 					break;
 				case 10:
-					arrayM.add(Integer.parseInt(l12));
+					arrayM.add(p);
 					btnpeca12.setEnabled(false);
 					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l12 + ".png"));
 					break;
 				case 11:
-					arrayM.add(Integer.parseInt(l12));
+					arrayM.add(p);
 					btnpeca12.setEnabled(false);
 					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l12 + ".png"));
 					break;
 				case 12:
-					arrayM.add(Integer.parseInt(l12));
+					arrayM.add(p);
 					btnpeca12.setEnabled(false);
 					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l12 + ".png"));
 					break;
 				case 13:
-					arrayM.add(Integer.parseInt(l12));
+					arrayM.add(p);
 					btnpeca12.setEnabled(false);
 					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l12 + ".png"));
 					break;
 				case 14:
-					arrayM.add(Integer.parseInt(l12));
+					arrayM.add(p);
 					btnpeca12.setEnabled(false);
 					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l12 + ".png"));
 					break;
@@ -1479,72 +1398,72 @@ public class TelaDoJogo extends JFrame {
 
 				switch (aux) {
 				case 1:
-					arrayH.add(Integer.parseInt(l13));
+					arrayH.add(p);
 					btnpeca13.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l13 + ".png"));
 					break;
 				case 2:
-					arrayH.add(Integer.parseInt(l13));
+					arrayH.add(p);
 					btnpeca13.setEnabled(false);
 					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l13 + ".png"));
 					break;
 				case 3:
-					arrayH.add(Integer.parseInt(l13));
+					arrayH.add(p);
 					btnpeca13.setEnabled(false);
 					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l13 + ".png"));
 					break;
 				case 4:
-					arrayH.add(Integer.parseInt(l13));
+					arrayH.add(p);
 					btnpeca13.setEnabled(false);
 					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l13 + ".png"));
 					break;
 				case 5:
-					arrayH.add(Integer.parseInt(l13));
+					arrayH.add(p);
 					btnpeca13.setEnabled(false);
 					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l13 + ".png"));
 					break;
 				case 6:
-					arrayH.add(Integer.parseInt(l13));
+					arrayH.add(p);
 					btnpeca13.setEnabled(false);
 					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l13 + ".png"));
 					break;
 				case 7:
-					arrayH.add(Integer.parseInt(l13));
+					arrayH.add(p);
 					btnpeca13.setEnabled(false);
 					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l13 + ".png"));
 					break;
 				case 8:
-					arrayM.add(Integer.parseInt(l13));
+					arrayM.add(p);
 					btnpeca13.setEnabled(false);
 					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l13 + ".png"));
 					break;
 				case 9:
-					arrayM.add(Integer.parseInt(l13));
+					arrayM.add(p);
 					btnpeca13.setEnabled(false);
 					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l13 + ".png"));
 					break;
 				case 10:
-					arrayM.add(Integer.parseInt(l13));
+					arrayM.add(p);
 					btnpeca13.setEnabled(false);
 					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l13 + ".png"));
 					break;
 				case 11:
-					arrayM.add(Integer.parseInt(l13));
+					arrayM.add(p);
 					btnpeca13.setEnabled(false);
 					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l13 + ".png"));
 					break;
 				case 12:
-					arrayM.add(Integer.parseInt(l13));
+					arrayM.add(p);
 					btnpeca13.setEnabled(false);
 					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l13 + ".png"));
 					break;
 				case 13:
-					arrayM.add(Integer.parseInt(l13));
+					arrayM.add(p);
 					btnpeca13.setEnabled(false);
 					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l13 + ".png"));
 					break;
 				case 14:
-					arrayM.add(Integer.parseInt(l13));
+					arrayM.add(p);
 					btnpeca13.setEnabled(false);
 					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l13 + ".png"));
 					break;
@@ -1569,72 +1488,72 @@ public class TelaDoJogo extends JFrame {
 
 				switch (aux) {
 				case 1:
-					arrayH.add(Integer.parseInt(l14));
+					arrayH.add(p);
 					btnpeca14.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l14 + ".png"));
 					break;
 				case 2:
-					arrayH.add(Integer.parseInt(l14));
+					arrayH.add(p);
 					btnpeca14.setEnabled(false);
 					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l14 + ".png"));
 					break;
 				case 3:
-					arrayH.add(Integer.parseInt(l14));
+					arrayH.add(p);
 					btnpeca14.setEnabled(false);
 					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l14 + ".png"));
 					break;
 				case 4:
-					arrayH.add(Integer.parseInt(l14));
+					arrayH.add(p);
 					btnpeca14.setEnabled(false);
 					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l14 + ".png"));
 					break;
 				case 5:
-					arrayH.add(Integer.parseInt(l14));
+					arrayH.add(p);
 					btnpeca14.setEnabled(false);
 					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l14 + ".png"));
 					break;
 				case 6:
-					arrayH.add(Integer.parseInt(l14));
+					arrayH.add(p);
 					btnpeca14.setEnabled(false);
 					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l14 + ".png"));
 					break;
 				case 7:
-					arrayH.add(Integer.parseInt(l14));
+					arrayH.add(p);
 					btnpeca14.setEnabled(false);
 					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l14 + ".png"));
 					break;
 				case 8:
-					arrayM.add(Integer.parseInt(l14));
+					arrayM.add(p);
 					btnpeca14.setEnabled(false);
 					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l14 + ".png"));
 					break;
 				case 9:
-					arrayM.add(Integer.parseInt(l14));
+					arrayM.add(p);
 					btnpeca14.setEnabled(false);
 					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l14 + ".png"));
 					break;
 				case 10:
-					arrayM.add(Integer.parseInt(l14));
+					arrayM.add(p);
 					btnpeca14.setEnabled(false);
 					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l14 + ".png"));
 					break;
 				case 11:
-					arrayM.add(Integer.parseInt(l14));
+					arrayM.add(p);
 					btnpeca14.setEnabled(false);
 					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l14 + ".png"));
 					break;
 				case 12:
-					arrayM.add(Integer.parseInt(l14));
+					arrayM.add(p);
 					btnpeca14.setEnabled(false);
 					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l14 + ".png"));
 					break;
 				case 13:
-					arrayM.add(Integer.parseInt(l14));
+					arrayM.add(p);
 					btnpeca14.setEnabled(false);
 					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l14 + ".png"));
 					break;
 				case 14:
-					arrayM.add(Integer.parseInt(l14));
+					arrayM.add(p);
 					btnpeca14.setEnabled(false);
 					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l14 + ".png"));
 					break;
@@ -1658,72 +1577,72 @@ public class TelaDoJogo extends JFrame {
 				l15 = ladoa + ladob;
 				switch (aux) {
 				case 1:
-					arrayH.add(Integer.parseInt(l15));
+					arrayH.add(p);
 					btnpeca15.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l15 + ".png"));
 					break;
 				case 2:
-					arrayH.add(Integer.parseInt(l15));
+					arrayH.add(p);
 					btnpeca15.setEnabled(false);
 					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l15 + ".png"));
 					break;
 				case 3:
-					arrayH.add(Integer.parseInt(l15));
+					arrayH.add(p);
 					btnpeca15.setEnabled(false);
 					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l15 + ".png"));
 					break;
 				case 4:
-					arrayH.add(Integer.parseInt(l15));
+					arrayH.add(p);
 					btnpeca15.setEnabled(false);
 					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l15 + ".png"));
 					break;
 				case 5:
-					arrayH.add(Integer.parseInt(l15));
+					arrayH.add(p);
 					btnpeca15.setEnabled(false);
 					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l15 + ".png"));
 					break;
 				case 6:
-					arrayH.add(Integer.parseInt(l15));
+					arrayH.add(p);
 					btnpeca15.setEnabled(false);
 					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l15 + ".png"));
 					break;
 				case 7:
-					arrayH.add(Integer.parseInt(l15));
+					arrayH.add(p);
 					btnpeca15.setEnabled(false);
 					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l15 + ".png"));
 					break;
 				case 8:
-					arrayM.add(Integer.parseInt(l15));
+					arrayM.add(p);
 					btnpeca15.setEnabled(false);
 					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l15 + ".png"));
 					break;
 				case 9:
-					arrayM.add(Integer.parseInt(l15));
+					arrayM.add(p);
 					btnpeca15.setEnabled(false);
 					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l15 + ".png"));
 					break;
 				case 10:
-					arrayM.add(Integer.parseInt(l15));
+					arrayM.add(p);
 					btnpeca15.setEnabled(false);
 					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l15 + ".png"));
 					break;
 				case 11:
-					arrayM.add(Integer.parseInt(l15));
+					arrayM.add(p);
 					btnpeca15.setEnabled(false);
 					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l15 + ".png"));
 					break;
 				case 12:
-					arrayM.add(Integer.parseInt(l15));
+					arrayM.add(p);
 					btnpeca15.setEnabled(false);
 					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l15 + ".png"));
 					break;
 				case 13:
-					arrayM.add(Integer.parseInt(l15));
+					arrayM.add(p);
 					btnpeca15.setEnabled(false);
 					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l15 + ".png"));
 					break;
 				case 14:
-					arrayM.add(Integer.parseInt(l15));
+					arrayM.add(p);
 					btnpeca15.setEnabled(false);
 					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l15 + ".png"));
 					break;
@@ -1748,72 +1667,72 @@ public class TelaDoJogo extends JFrame {
 
 				switch (aux) {
 				case 1:
-					arrayH.add(Integer.parseInt(l16));
+					arrayH.add(p);
 					btnpeca16.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l16 + ".png"));
 					break;
 				case 2:
-					arrayH.add(Integer.parseInt(l16));
+					arrayH.add(p);
 					btnpeca16.setEnabled(false);
 					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l16 + ".png"));
 					break;
 				case 3:
-					arrayH.add(Integer.parseInt(l16));
+					arrayH.add(p);
 					btnpeca16.setEnabled(false);
 					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l16 + ".png"));
 					break;
 				case 4:
-					arrayH.add(Integer.parseInt(l16));
+					arrayH.add(p);
 					btnpeca16.setEnabled(false);
 					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l16 + ".png"));
 					break;
 				case 5:
-					arrayH.add(Integer.parseInt(l16));
+					arrayH.add(p);
 					btnpeca16.setEnabled(false);
 					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l16 + ".png"));
 					break;
 				case 6:
-					arrayH.add(Integer.parseInt(l16));
+					arrayH.add(p);
 					btnpeca16.setEnabled(false);
 					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l16 + ".png"));
 					break;
 				case 7:
-					arrayH.add(Integer.parseInt(l16));
+					arrayH.add(p);
 					btnpeca16.setEnabled(false);
 					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l16 + ".png"));
 					break;
 				case 8:
-					arrayM.add(Integer.parseInt(l16));
+					arrayM.add(p);
 					btnpeca16.setEnabled(false);
 					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l16 + ".png"));
 					break;
 				case 9:
-					arrayM.add(Integer.parseInt(l16));
+					arrayM.add(p);
 					btnpeca16.setEnabled(false);
 					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l16 + ".png"));
 					break;
 				case 10:
-					arrayM.add(Integer.parseInt(l16));
+					arrayM.add(p);
 					btnpeca16.setEnabled(false);
 					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l16 + ".png"));
 					break;
 				case 11:
-					arrayM.add(Integer.parseInt(l16));
+					arrayM.add(p);
 					btnpeca16.setEnabled(false);
 					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l16 + ".png"));
 					break;
 				case 12:
-					arrayM.add(Integer.parseInt(l16));
+					arrayM.add(p);
 					btnpeca16.setEnabled(false);
 					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l16 + ".png"));
 					break;
 				case 13:
-					arrayM.add(Integer.parseInt(l16));
+					arrayM.add(p);
 					btnpeca16.setEnabled(false);
 					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l16 + ".png"));
 					break;
 				case 14:
-					arrayM.add(Integer.parseInt(l16));
+					arrayM.add(p);
 					btnpeca16.setEnabled(false);
 					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l16 + ".png"));
 					break;
@@ -1838,72 +1757,72 @@ public class TelaDoJogo extends JFrame {
 
 				switch (aux) {
 				case 1:
-					arrayH.add(Integer.parseInt(l17));
+					arrayH.add(p);
 					btnpeca17.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l17 + ".png"));
 					break;
 				case 2:
-					arrayH.add(Integer.parseInt(l17));
+					arrayH.add(p);
 					btnpeca17.setEnabled(false);
 					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l17 + ".png"));
 					break;
 				case 3:
-					arrayH.add(Integer.parseInt(l17));
+					arrayH.add(p);
 					btnpeca17.setEnabled(false);
 					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l17 + ".png"));
 					break;
 				case 4:
-					arrayH.add(Integer.parseInt(l17));
+					arrayH.add(p);
 					btnpeca17.setEnabled(false);
 					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l17 + ".png"));
 					break;
 				case 5:
-					arrayH.add(Integer.parseInt(l17));
+					arrayH.add(p);
 					btnpeca17.setEnabled(false);
 					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l17 + ".png"));
 					break;
 				case 6:
-					arrayH.add(Integer.parseInt(l17));
+					arrayH.add(p);
 					btnpeca17.setEnabled(false);
 					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l17 + ".png"));
 					break;
 				case 7:
-					arrayH.add(Integer.parseInt(l17));
+					arrayH.add(p);
 					btnpeca17.setEnabled(false);
 					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l17 + ".png"));
 					break;
 				case 8:
-					arrayM.add(Integer.parseInt(l17));
+					arrayM.add(p);
 					btnpeca17.setEnabled(false);
 					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l17 + ".png"));
 					break;
 				case 9:
-					arrayM.add(Integer.parseInt(l17));
+					arrayM.add(p);
 					btnpeca17.setEnabled(false);
 					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l17 + ".png"));
 					break;
 				case 10:
-					arrayM.add(Integer.parseInt(l17));
+					arrayM.add(p);
 					btnpeca17.setEnabled(false);
 					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l17 + ".png"));
 					break;
 				case 11:
-					arrayM.add(Integer.parseInt(l17));
+					arrayM.add(p);
 					btnpeca17.setEnabled(false);
 					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l17 + ".png"));
 					break;
 				case 12:
-					arrayM.add(Integer.parseInt(l17));
+					arrayM.add(p);
 					btnpeca17.setEnabled(false);
 					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l17 + ".png"));
 					break;
 				case 13:
-					arrayM.add(Integer.parseInt(l17));
+					arrayM.add(p);
 					btnpeca17.setEnabled(false);
 					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l17 + ".png"));
 					break;
 				case 14:
-					arrayM.add(Integer.parseInt(l17));
+					arrayM.add(p);
 					btnpeca17.setEnabled(false);
 					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l17 + ".png"));
 					break;
@@ -1929,72 +1848,72 @@ public class TelaDoJogo extends JFrame {
 
 				switch (aux) {
 				case 1:
-					arrayH.add(Integer.parseInt(l18));
+					arrayH.add(p);
 					btnpeca18.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l18 + ".png"));
 					break;
 				case 2:
-					arrayH.add(Integer.parseInt(l18));
+					arrayH.add(p);
 					btnpeca18.setEnabled(false);
 					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l18 + ".png"));
 					break;
 				case 3:
-					arrayH.add(Integer.parseInt(l18));
+					arrayH.add(p);
 					btnpeca18.setEnabled(false);
 					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l18 + ".png"));
 					break;
 				case 4:
-					arrayH.add(Integer.parseInt(l18));
+					arrayH.add(p);
 					btnpeca18.setEnabled(false);
 					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l18 + ".png"));
 					break;
 				case 5:
-					arrayH.add(Integer.parseInt(l18));
+					arrayH.add(p);
 					btnpeca18.setEnabled(false);
 					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l18 + ".png"));
 					break;
 				case 6:
-					arrayH.add(Integer.parseInt(l18));
+					arrayH.add(p);
 					btnpeca18.setEnabled(false);
 					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l18 + ".png"));
 					break;
 				case 7:
-					arrayH.add(Integer.parseInt(l18));
+					arrayH.add(p);
 					btnpeca18.setEnabled(false);
 					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l18 + ".png"));
 					break;
 				case 8:
-					arrayM.add(Integer.parseInt(l18));
+					arrayM.add(p);
 					btnpeca18.setEnabled(false);
 					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l18 + ".png"));
 					break;
 				case 9:
-					arrayM.add(Integer.parseInt(l18));
+					arrayM.add(p);
 					btnpeca18.setEnabled(false);
 					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l18 + ".png"));
 					break;
 				case 10:
-					arrayM.add(Integer.parseInt(l18));
+					arrayM.add(p);
 					btnpeca18.setEnabled(false);
 					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l18 + ".png"));
 					break;
 				case 11:
-					arrayM.add(Integer.parseInt(l18));
+					arrayM.add(p);
 					btnpeca18.setEnabled(false);
 					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l18 + ".png"));
 					break;
 				case 12:
-					arrayM.add(Integer.parseInt(l18));
+					arrayM.add(p);
 					btnpeca18.setEnabled(false);
 					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l18 + ".png"));
 					break;
 				case 13:
-					arrayM.add(Integer.parseInt(l18));
+					arrayM.add(p);
 					btnpeca18.setEnabled(false);
 					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l18 + ".png"));
 					break;
 				case 14:
-					arrayM.add(Integer.parseInt(l18));
+					arrayM.add(p);
 					btnpeca18.setEnabled(false);
 					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l18 + ".png"));
 					break;
@@ -2019,72 +1938,72 @@ public class TelaDoJogo extends JFrame {
 
 				switch (aux) {
 				case 1:
-					arrayH.add(Integer.parseInt(l19));
+					arrayH.add(p);
 					btnpeca19.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l19 + ".png"));
 					break;
 				case 2:
-					arrayH.add(Integer.parseInt(l19));
+					arrayH.add(p);
 					btnpeca19.setEnabled(false);
 					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l19 + ".png"));
 					break;
 				case 3:
-					arrayH.add(Integer.parseInt(l19));
+					arrayH.add(p);
 					btnpeca19.setEnabled(false);
 					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l19 + ".png"));
 					break;
 				case 4:
-					arrayH.add(Integer.parseInt(l19));
+					arrayH.add(p);
 					btnpeca19.setEnabled(false);
 					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l19 + ".png"));
 					break;
 				case 5:
-					arrayH.add(Integer.parseInt(l19));
+					arrayH.add(p);
 					btnpeca19.setEnabled(false);
 					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l19 + ".png"));
 					break;
 				case 6:
-					arrayH.add(Integer.parseInt(l19));
+					arrayH.add(p);
 					btnpeca19.setEnabled(false);
 					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l19 + ".png"));
 					break;
 				case 7:
-					arrayH.add(Integer.parseInt(l19));
+					arrayH.add(p);
 					btnpeca19.setEnabled(false);
 					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l19 + ".png"));
 					break;
 				case 8:
-					arrayM.add(Integer.parseInt(l19));
+					arrayM.add(p);
 					btnpeca19.setEnabled(false);
 					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l19 + ".png"));
 					break;
 				case 9:
-					arrayM.add(Integer.parseInt(l19));
+					arrayM.add(p);
 					btnpeca19.setEnabled(false);
 					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l19 + ".png"));
 					break;
 				case 10:
-					arrayM.add(Integer.parseInt(l19));
+					arrayM.add(p);
 					btnpeca19.setEnabled(false);
 					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l19 + ".png"));
 					break;
 				case 11:
-					arrayM.add(Integer.parseInt(l19));
+					arrayM.add(p);
 					btnpeca19.setEnabled(false);
 					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l19 + ".png"));
 					break;
 				case 12:
-					arrayM.add(Integer.parseInt(l19));
+					arrayM.add(p);
 					btnpeca19.setEnabled(false);
 					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l19 + ".png"));
 					break;
 				case 13:
-					arrayM.add(Integer.parseInt(l19));
+					arrayM.add(p);
 					btnpeca19.setEnabled(false);
 					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l19 + ".png"));
 					break;
 				case 14:
-					arrayM.add(Integer.parseInt(l19));
+					arrayM.add(p);
 					btnpeca19.setEnabled(false);
 					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l19 + ".png"));
 					break;
@@ -2109,72 +2028,72 @@ public class TelaDoJogo extends JFrame {
 
 				switch (aux) {
 				case 1:
-					arrayH.add(Integer.parseInt(l20));
+					arrayH.add(p);
 					btnpeca20.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l20 + ".png"));
 					break;
 				case 2:
-					arrayH.add(Integer.parseInt(l20));
+					arrayH.add(p);
 					btnpeca20.setEnabled(false);
 					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l20 + ".png"));
 					break;
 				case 3:
-					arrayH.add(Integer.parseInt(l20));
+					arrayH.add(p);
 					btnpeca20.setEnabled(false);
 					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l20 + ".png"));
 					break;
 				case 4:
-					arrayH.add(Integer.parseInt(l20));
+					arrayH.add(p);
 					btnpeca20.setEnabled(false);
 					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l20 + ".png"));
 					break;
 				case 5:
-					arrayH.add(Integer.parseInt(l20));
+					arrayH.add(p);
 					btnpeca20.setEnabled(false);
 					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l20 + ".png"));
 					break;
 				case 6:
-					arrayH.add(Integer.parseInt(l20));
+					arrayH.add(p);
 					btnpeca20.setEnabled(false);
 					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l20 + ".png"));
 					break;
 				case 7:
-					arrayH.add(Integer.parseInt(l20));
+					arrayH.add(p);
 					btnpeca20.setEnabled(false);
 					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l20 + ".png"));
 					break;
 				case 8:
-					arrayM.add(Integer.parseInt(l20));
+					arrayM.add(p);
 					btnpeca20.setEnabled(false);
 					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l20 + ".png"));
 					break;
 				case 9:
-					arrayM.add(Integer.parseInt(l20));
+					arrayM.add(p);
 					btnpeca20.setEnabled(false);
 					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l20 + ".png"));
 					break;
 				case 10:
-					arrayM.add(Integer.parseInt(l20));
+					arrayM.add(p);
 					btnpeca20.setEnabled(false);
 					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l20 + ".png"));
 					break;
 				case 11:
-					arrayM.add(Integer.parseInt(l20));
+					arrayM.add(p);
 					btnpeca20.setEnabled(false);
 					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l20 + ".png"));
 					break;
 				case 12:
-					arrayM.add(Integer.parseInt(l20));
+					arrayM.add(p);
 					btnpeca20.setEnabled(false);
 					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l20 + ".png"));
 					break;
 				case 13:
-					arrayM.add(Integer.parseInt(l20));
+					arrayM.add(p);
 					btnpeca20.setEnabled(false);
 					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l20 + ".png"));
 					break;
 				case 14:
-					arrayM.add(Integer.parseInt(l20));
+					arrayM.add(p);
 					btnpeca20.setEnabled(false);
 					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l20 + ".png"));
 					break;
@@ -2199,72 +2118,72 @@ public class TelaDoJogo extends JFrame {
 
 				switch (aux) {
 				case 1:
-					arrayH.add(Integer.parseInt(l21));
+					arrayH.add(p);
 					btnpeca21.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l21 + ".png"));
 					break;
 				case 2:
-					arrayH.add(Integer.parseInt(l21));
+					arrayH.add(p);
 					btnpeca21.setEnabled(false);
 					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l21 + ".png"));
 					break;
 				case 3:
-					arrayH.add(Integer.parseInt(l21));
+					arrayH.add(p);
 					btnpeca21.setEnabled(false);
 					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l21 + ".png"));
 					break;
 				case 4:
-					arrayH.add(Integer.parseInt(l21));
+					arrayH.add(p);
 					btnpeca21.setEnabled(false);
 					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l21 + ".png"));
 					break;
 				case 5:
-					arrayH.add(Integer.parseInt(l21));
+					arrayH.add(p);
 					btnpeca21.setEnabled(false);
 					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l21 + ".png"));
 					break;
 				case 6:
-					arrayH.add(Integer.parseInt(l21));
+					arrayH.add(p);
 					btnpeca21.setEnabled(false);
 					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l21 + ".png"));
 					break;
 				case 7:
-					arrayH.add(Integer.parseInt(l21));
+					arrayH.add(p);
 					btnpeca21.setEnabled(false);
 					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l21 + ".png"));
 					break;
 				case 8:
-					arrayM.add(Integer.parseInt(l21));
+					arrayM.add(p);
 					btnpeca21.setEnabled(false);
 					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l21 + ".png"));
 					break;
 				case 9:
-					arrayM.add(Integer.parseInt(l21));
+					arrayM.add(p);
 					btnpeca21.setEnabled(false);
 					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l21 + ".png"));
 					break;
 				case 10:
-					arrayM.add(Integer.parseInt(l21));
+					arrayM.add(p);
 					btnpeca21.setEnabled(false);
 					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l21 + ".png"));
 					break;
 				case 11:
-					arrayM.add(Integer.parseInt(l21));
+					arrayM.add(p);
 					btnpeca21.setEnabled(false);
 					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l21 + ".png"));
 					break;
 				case 12:
-					arrayM.add(Integer.parseInt(l21));
+					arrayM.add(p);
 					btnpeca21.setEnabled(false);
 					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l21 + ".png"));
 					break;
 				case 13:
-					arrayM.add(Integer.parseInt(l21));
+					arrayM.add(p);
 					btnpeca21.setEnabled(false);
 					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l21 + ".png"));
 					break;
 				case 14:
-					arrayM.add(Integer.parseInt(l21));
+					arrayM.add(p);
 					btnpeca21.setEnabled(false);
 					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l21 + ".png"));
 					break;
@@ -2289,72 +2208,72 @@ public class TelaDoJogo extends JFrame {
 
 				switch (aux) {
 				case 1:
-					arrayH.add(Integer.parseInt(l22));
+					arrayH.add(p);
 					btnpeca22.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l22 + ".png"));
 					break;
 				case 2:
-					arrayH.add(Integer.parseInt(l22));
+					arrayH.add(p);
 					btnpeca22.setEnabled(false);
 					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l22 + ".png"));
 					break;
 				case 3:
-					arrayH.add(Integer.parseInt(l22));
+					arrayH.add(p);
 					btnpeca22.setEnabled(false);
 					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l22 + ".png"));
 					break;
 				case 4:
-					arrayH.add(Integer.parseInt(l22));
+					arrayH.add(p);
 					btnpeca22.setEnabled(false);
 					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l22 + ".png"));
 					break;
 				case 5:
-					arrayH.add(Integer.parseInt(l22));
+					arrayH.add(p);
 					btnpeca22.setEnabled(false);
 					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l22 + ".png"));
 					break;
 				case 6:
-					arrayH.add(Integer.parseInt(l22));
+					arrayH.add(p);
 					btnpeca22.setEnabled(false);
 					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l22 + ".png"));
 					break;
 				case 7:
-					arrayH.add(Integer.parseInt(l22));
+					arrayH.add(p);
 					btnpeca22.setEnabled(false);
 					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l22 + ".png"));
 					break;
 				case 8:
-					arrayM.add(Integer.parseInt(l22));
+					arrayM.add(p);
 					btnpeca22.setEnabled(false);
 					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l22 + ".png"));
 					break;
 				case 9:
-					arrayM.add(Integer.parseInt(l22));
+					arrayM.add(p);
 					btnpeca22.setEnabled(false);
 					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l22 + ".png"));
 					break;
 				case 10:
-					arrayM.add(Integer.parseInt(l22));
+					arrayM.add(p);
 					btnpeca22.setEnabled(false);
 					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l22 + ".png"));
 					break;
 				case 11:
-					arrayM.add(Integer.parseInt(l22));
+					arrayM.add(p);
 					btnpeca22.setEnabled(false);
 					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l22 + ".png"));
 					break;
 				case 12:
-					arrayM.add(Integer.parseInt(l22));
+					arrayM.add(p);
 					btnpeca22.setEnabled(false);
 					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l22 + ".png"));
 					break;
 				case 13:
-					arrayM.add(Integer.parseInt(l22));
+					arrayM.add(p);
 					btnpeca22.setEnabled(false);
 					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l22 + ".png"));
 					break;
 				case 14:
-					arrayM.add(Integer.parseInt(l22));
+					arrayM.add(p);
 					btnpeca22.setEnabled(false);
 					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l22 + ".png"));
 					break;
@@ -2379,72 +2298,72 @@ public class TelaDoJogo extends JFrame {
 
 				switch (aux) {
 				case 1:
-					arrayH.add(Integer.parseInt(l23));
+					arrayH.add(p);
 					btnpeca23.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l23 + ".png"));
 					break;
 				case 2:
-					arrayH.add(Integer.parseInt(l23));
+					arrayH.add(p);
 					btnpeca23.setEnabled(false);
 					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l23 + ".png"));
 					break;
 				case 3:
-					arrayH.add(Integer.parseInt(l23));
+					arrayH.add(p);
 					btnpeca23.setEnabled(false);
 					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l23 + ".png"));
 					break;
 				case 4:
-					arrayH.add(Integer.parseInt(l23));
+					arrayH.add(p);
 					btnpeca23.setEnabled(false);
 					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l23 + ".png"));
 					break;
 				case 5:
-					arrayH.add(Integer.parseInt(l23));
+					arrayH.add(p);
 					btnpeca23.setEnabled(false);
 					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l23 + ".png"));
 					break;
 				case 6:
-					arrayH.add(Integer.parseInt(l23));
+					arrayH.add(p);
 					btnpeca23.setEnabled(false);
 					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l23 + ".png"));
 					break;
 				case 7:
-					arrayH.add(Integer.parseInt(l23));
+					arrayH.add(p);
 					btnpeca23.setEnabled(false);
 					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l23 + ".png"));
 					break;
 				case 8:
-					arrayM.add(Integer.parseInt(l23));
+					arrayM.add(p);
 					btnpeca23.setEnabled(false);
 					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l23 + ".png"));
 					break;
 				case 9:
-					arrayM.add(Integer.parseInt(l23));
+					arrayM.add(p);
 					btnpeca23.setEnabled(false);
 					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l23 + ".png"));
 					break;
 				case 10:
-					arrayM.add(Integer.parseInt(l23));
+					arrayM.add(p);
 					btnpeca23.setEnabled(false);
 					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l23 + ".png"));
 					break;
 				case 11:
-					arrayM.add(Integer.parseInt(l23));
+					arrayM.add(p);
 					btnpeca23.setEnabled(false);
 					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l23 + ".png"));
 					break;
 				case 12:
-					arrayM.add(Integer.parseInt(l23));
+					arrayM.add(p);
 					btnpeca23.setEnabled(false);
 					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l23 + ".png"));
 					break;
 				case 13:
-					arrayM.add(Integer.parseInt(l23));
+					arrayM.add(p);
 					btnpeca23.setEnabled(false);
 					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l23 + ".png"));
 					break;
 				case 14:
-					arrayM.add(Integer.parseInt(l23));
+					arrayM.add(p);
 					btnpeca23.setEnabled(false);
 					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l23 + ".png"));
 					break;
@@ -2469,72 +2388,72 @@ public class TelaDoJogo extends JFrame {
 
 				switch (aux) {
 				case 1:
-					arrayH.add(Integer.parseInt(l24));
+					arrayH.add(p);
 					btnpeca24.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l24 + ".png"));
 					break;
 				case 2:
-					arrayH.add(Integer.parseInt(l24));
+					arrayH.add(p);
 					btnpeca24.setEnabled(false);
 					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l24 + ".png"));
 					break;
 				case 3:
-					arrayH.add(Integer.parseInt(l24));
+					arrayH.add(p);
 					btnpeca24.setEnabled(false);
 					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l24 + ".png"));
 					break;
 				case 4:
-					arrayH.add(Integer.parseInt(l24));
+					arrayH.add(p);
 					btnpeca24.setEnabled(false);
 					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l24 + ".png"));
 					break;
 				case 5:
-					arrayH.add(Integer.parseInt(l24));
+					arrayH.add(p);
 					btnpeca24.setEnabled(false);
 					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l24 + ".png"));
 					break;
 				case 6:
-					arrayH.add(Integer.parseInt(l24));
+					arrayH.add(p);
 					btnpeca24.setEnabled(false);
 					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l24 + ".png"));
 					break;
 				case 7:
-					arrayH.add(Integer.parseInt(l24));
+					arrayH.add(p);
 					btnpeca24.setEnabled(false);
 					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l24 + ".png"));
 					break;
 				case 8:
-					arrayM.add(Integer.parseInt(l24));
+					arrayM.add(p);
 					btnpeca24.setEnabled(false);
 					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l24 + ".png"));
 					break;
 				case 9:
-					arrayM.add(Integer.parseInt(l24));
+					arrayM.add(p);
 					btnpeca24.setEnabled(false);
 					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l24 + ".png"));
 					break;
 				case 10:
-					arrayM.add(Integer.parseInt(l24));
+					arrayM.add(p);
 					btnpeca24.setEnabled(false);
 					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l24 + ".png"));
 					break;
 				case 11:
-					arrayM.add(Integer.parseInt(l24));
+					arrayM.add(p);
 					btnpeca24.setEnabled(false);
 					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l24 + ".png"));
 					break;
 				case 12:
-					arrayM.add(Integer.parseInt(l24));
+					arrayM.add(p);
 					btnpeca24.setEnabled(false);
 					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l24 + ".png"));
 					break;
 				case 13:
-					arrayM.add(Integer.parseInt(l24));
+					arrayM.add(p);
 					btnpeca24.setEnabled(false);
 					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l24 + ".png"));
 					break;
 				case 14:
-					arrayM.add(Integer.parseInt(l24));
+					arrayM.add(p);
 					btnpeca24.setEnabled(false);
 					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l24 + ".png"));
 					break;
@@ -2559,72 +2478,72 @@ public class TelaDoJogo extends JFrame {
 
 				switch (aux) {
 				case 1:
-					arrayH.add(Integer.parseInt(l25));
+					arrayH.add(p);
 					btnpeca25.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l25 + ".png"));
 					break;
 				case 2:
-					arrayH.add(Integer.parseInt(l25));
+					arrayH.add(p);
 					btnpeca25.setEnabled(false);
 					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l25 + ".png"));
 					break;
 				case 3:
-					arrayH.add(Integer.parseInt(l25));
+					arrayH.add(p);
 					btnpeca25.setEnabled(false);
 					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l25 + ".png"));
 					break;
 				case 4:
-					arrayH.add(Integer.parseInt(l25));
+					arrayH.add(p);
 					btnpeca25.setEnabled(false);
 					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l25 + ".png"));
 					break;
 				case 5:
-					arrayH.add(Integer.parseInt(l25));
+					arrayH.add(p);
 					btnpeca25.setEnabled(false);
 					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l25 + ".png"));
 					break;
 				case 6:
-					arrayH.add(Integer.parseInt(l25));
+					arrayH.add(p);
 					btnpeca25.setEnabled(false);
 					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l25 + ".png"));
 					break;
 				case 7:
-					arrayH.add(Integer.parseInt(l25));
+					arrayH.add(p);
 					btnpeca25.setEnabled(false);
 					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l25 + ".png"));
 					break;
 				case 8:
-					arrayM.add(Integer.parseInt(l25));
+					arrayM.add(p);
 					btnpeca25.setEnabled(false);
 					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l25 + ".png"));
 					break;
 				case 9:
-					arrayM.add(Integer.parseInt(l25));
+					arrayM.add(p);
 					btnpeca25.setEnabled(false);
 					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l25 + ".png"));
 					break;
 				case 10:
-					arrayM.add(Integer.parseInt(l25));
+					arrayM.add(p);
 					btnpeca25.setEnabled(false);
 					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l25 + ".png"));
 					break;
 				case 11:
-					arrayM.add(Integer.parseInt(l25));
+					arrayM.add(p);
 					btnpeca25.setEnabled(false);
 					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l25 + ".png"));
 					break;
 				case 12:
-					arrayM.add(Integer.parseInt(l25));
+					arrayM.add(p);
 					btnpeca25.setEnabled(false);
 					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l25 + ".png"));
 					break;
 				case 13:
-					arrayM.add(Integer.parseInt(l25));
+					arrayM.add(p);
 					btnpeca25.setEnabled(false);
 					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l25 + ".png"));
 					break;
 				case 14:
-					arrayM.add(Integer.parseInt(l25));
+					arrayM.add(p);
 					btnpeca25.setEnabled(false);
 					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l25 + ".png"));
 					break;
@@ -2649,72 +2568,72 @@ public class TelaDoJogo extends JFrame {
 
 				switch (aux) {
 				case 1:
-					arrayH.add(Integer.parseInt(l26));
+					arrayH.add(p);
 					btnpeca26.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l26 + ".png"));
 					break;
 				case 2:
-					arrayH.add(Integer.parseInt(l26));
+					arrayH.add(p);
 					btnpeca26.setEnabled(false);
 					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l26 + ".png"));
 					break;
 				case 3:
-					arrayH.add(Integer.parseInt(l26));
+					arrayH.add(p);
 					btnpeca26.setEnabled(false);
 					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l26 + ".png"));
 					break;
 				case 4:
-					arrayH.add(Integer.parseInt(l26));
+					arrayH.add(p);
 					btnpeca26.setEnabled(false);
 					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l26 + ".png"));
 					break;
 				case 5:
-					arrayH.add(Integer.parseInt(l26));
+					arrayH.add(p);
 					btnpeca26.setEnabled(false);
 					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l26 + ".png"));
 					break;
 				case 6:
-					arrayH.add(Integer.parseInt(l26));
+					arrayH.add(p);
 					btnpeca26.setEnabled(false);
 					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l26 + ".png"));
 					break;
 				case 7:
-					arrayH.add(Integer.parseInt(l26));
+					arrayH.add(p);
 					btnpeca26.setEnabled(false);
 					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l26 + ".png"));
 					break;
 				case 8:
-					arrayM.add(Integer.parseInt(l26));
+					arrayM.add(p);
 					btnpeca26.setEnabled(false);
 					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l26 + ".png"));
 					break;
 				case 9:
-					arrayM.add(Integer.parseInt(l26));
+					arrayM.add(p);
 					btnpeca26.setEnabled(false);
 					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l26 + ".png"));
 					break;
 				case 10:
-					arrayM.add(Integer.parseInt(l26));
+					arrayM.add(p);
 					btnpeca26.setEnabled(false);
 					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l26 + ".png"));
 					break;
 				case 11:
-					arrayM.add(Integer.parseInt(l26));
+					arrayM.add(p);
 					btnpeca26.setEnabled(false);
 					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l26 + ".png"));
 					break;
 				case 12:
-					arrayM.add(Integer.parseInt(l26));
+					arrayM.add(p);
 					btnpeca26.setEnabled(false);
 					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l26 + ".png"));
 					break;
 				case 13:
-					arrayM.add(Integer.parseInt(l26));
+					arrayM.add(p);
 					btnpeca26.setEnabled(false);
 					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l26 + ".png"));
 					break;
 				case 14:
-					arrayM.add(Integer.parseInt(l26));
+					arrayM.add(p);
 					btnpeca26.setEnabled(false);
 					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l26 + ".png"));
 					break;
@@ -2736,76 +2655,76 @@ public class TelaDoJogo extends JFrame {
 				String ladoa = p.getLadoDireito().toString();
 				String ladob = p.getLadoEsquerdo().toString();
 
-				l27 = ladoa+ladob;
+				l27 = ladoa + ladob;
 
 				switch (aux) {
 				case 1:
-					arrayH.add(Integer.parseInt(l27));
+					arrayH.add(p);
 					btnpeca27.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l27 + ".png"));
 					break;
 				case 2:
-					arrayH.add(Integer.parseInt(l27));
+					arrayH.add(p);
 					btnpeca27.setEnabled(false);
 					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l27 + ".png"));
 					break;
 				case 3:
-					arrayH.add(Integer.parseInt(l27));
+					arrayH.add(p);
 					btnpeca27.setEnabled(false);
 					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l27 + ".png"));
 					break;
 				case 4:
-					arrayH.add(Integer.parseInt(l27));
+					arrayH.add(p);
 					btnpeca27.setEnabled(false);
 					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l27 + ".png"));
 					break;
 				case 5:
-					arrayH.add(Integer.parseInt(l27));
+					arrayH.add(p);
 					btnpeca27.setEnabled(false);
 					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l27 + ".png"));
 					break;
 				case 6:
-					arrayH.add(Integer.parseInt(l27));
+					arrayH.add(p);
 					btnpeca27.setEnabled(false);
 					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l27 + ".png"));
 					break;
 				case 7:
-					arrayH.add(Integer.parseInt(l27));
+					arrayH.add(p);
 					btnpeca27.setEnabled(false);
 					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l27 + ".png"));
 					break;
 				case 8:
-					arrayM.add(Integer.parseInt(l27));
+					arrayM.add(p);
 					btnpeca27.setEnabled(false);
 					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l27 + ".png"));
 					break;
 				case 9:
-					arrayM.add(Integer.parseInt(l27));
+					arrayM.add(p);
 					btnpeca27.setEnabled(false);
 					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l27 + ".png"));
 					break;
 				case 10:
-					arrayM.add(Integer.parseInt(l27));
+					arrayM.add(p);
 					btnpeca27.setEnabled(false);
 					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l27 + ".png"));
 					break;
 				case 11:
-					arrayM.add(Integer.parseInt(l27));
+					arrayM.add(p);
 					btnpeca27.setEnabled(false);
 					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l27 + ".png"));
 					break;
 				case 12:
-					arrayM.add(Integer.parseInt(l27));
+					arrayM.add(p);
 					btnpeca27.setEnabled(false);
 					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l27 + ".png"));
 					break;
 				case 13:
-					arrayM.add(Integer.parseInt(l27));
+					arrayM.add(p);
 					btnpeca27.setEnabled(false);
 					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l27 + ".png"));
 					break;
 				case 14:
-					arrayM.add(Integer.parseInt(l27));
+					arrayM.add(p);
 					btnpeca27.setEnabled(false);
 					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l27 + ".png"));
 					break;
@@ -2830,72 +2749,72 @@ public class TelaDoJogo extends JFrame {
 
 				switch (aux) {
 				case 1:
-					arrayH.add(Integer.parseInt(l28));
+					arrayH.add(p);
 					btnpeca28.setEnabled(false);
 					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
 					break;
 				case 2:
-					arrayH.add(Integer.parseInt(l28));
+					arrayH.add(p);
 					btnpeca28.setEnabled(false);
 					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
 					break;
 				case 3:
-					arrayH.add(Integer.parseInt(l28));
+					arrayH.add(p);
 					btnpeca28.setEnabled(false);
 					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
 					break;
 				case 4:
-					arrayH.add(Integer.parseInt(l28));
+					arrayH.add(p);
 					btnpeca28.setEnabled(false);
 					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
 					break;
 				case 5:
-					arrayH.add(Integer.parseInt(l28));
+					arrayH.add(p);
 					btnpeca28.setEnabled(false);
 					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
 					break;
 				case 6:
-					arrayH.add(Integer.parseInt(l28));
+					arrayH.add(p);
 					btnpeca28.setEnabled(false);
 					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
 					break;
 				case 7:
-					arrayH.add(Integer.parseInt(l28));
+					arrayH.add(p);
 					btnpeca28.setEnabled(false);
 					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
 					break;
 				case 8:
-					arrayM.add(Integer.parseInt(l28));
+					arrayM.add(p);
 					btnpeca28.setEnabled(false);
 					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
 					break;
 				case 9:
-					arrayM.add(Integer.parseInt(l28));
+					arrayM.add(p);
 					btnpeca28.setEnabled(false);
 					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
 					break;
 				case 10:
-					arrayM.add(Integer.parseInt(l28));
+					arrayM.add(p);
 					btnpeca28.setEnabled(false);
 					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
 					break;
 				case 11:
-					arrayM.add(Integer.parseInt(l28));
+					arrayM.add(p);
 					btnpeca28.setEnabled(false);
 					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
 					break;
 				case 12:
-					arrayM.add(Integer.parseInt(l28));
+					arrayM.add(p);
 					btnpeca28.setEnabled(false);
 					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
 					break;
 				case 13:
-					arrayM.add(Integer.parseInt(l28));
+					arrayM.add(p);
 					btnpeca28.setEnabled(false);
 					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
 					break;
 				case 14:
-					arrayM.add(Integer.parseInt(l28));
+					arrayM.add(p);
 					btnpeca28.setEnabled(false);
 					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
 					break;

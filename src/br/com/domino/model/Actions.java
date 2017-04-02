@@ -71,9 +71,9 @@ public class Actions {
 		Collections.shuffle(pecas);
 		return pecas;
 	}
+	
 
-	// verifica qual dos arrays(homem ou maquina), possui a maior pedra para
-	// inciicar a partida.
+	// verifica qual dos arrays(homem ou maquina), possui a maior pedra para inicicar a partida.
 	public boolean maiorPedra(ArrayList<Integer> arrayH, ArrayList<Integer> arrayM) {
 		int maxH = arrayH.get(0);
 		int maxM = arrayH.get(0);
@@ -88,13 +88,11 @@ public class Actions {
 				maxM = arrayM.get(i);
 			}
 		}
-		// se a maior pedra for do homen retorma true, caso contrario retorma
-		// false.
+		// se a maior pedra for do homen retorma true, caso contrario retorna false.
 		if (maxH > maxM) {
 			return true;
 		} else {
 			return false;
 		}
-
 	}
 }
