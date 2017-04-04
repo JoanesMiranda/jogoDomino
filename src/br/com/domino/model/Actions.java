@@ -22,7 +22,7 @@ public class Actions {
 		Pecas p13 = new Pecas(1, 3);
 		Pecas p14 = new Pecas(1, 4);
 		Pecas p15 = new Pecas(1, 5);
-		Pecas p17 = new Pecas(1, 7);
+		Pecas p16 = new Pecas(1, 6);
 		Pecas p22 = new Pecas(2, 2);
 		Pecas p23 = new Pecas(2, 3);
 		Pecas p24 = new Pecas(2, 4);
@@ -51,7 +51,7 @@ public class Actions {
 		pecas.add(p13);
 		pecas.add(p14);
 		pecas.add(p15);
-		pecas.add(p17);
+		pecas.add(p16);
 		pecas.add(p22);
 		pecas.add(p23);
 		pecas.add(p24);
@@ -114,13 +114,14 @@ public class Actions {
 		public int verificaLadosPedra(ArrayList<Pecas> tabuleiro, Pecas peca){
 			int retorno = 0;
 			
-			if(tabuleiro.get(tabuleiro.size() -1).getLadoEsquerdo() == peca.getLadoEsquerdo()){
-				retorno = 1; // usa peças horizontais1
+			if(tabuleiro.get(tabuleiro.size()-1).getLadoEsquerdo() == peca.getLadoEsquerdo()){
+				retorno = 1; // usa peças horizontais2 - usa a peça invertida
 			}
-			if(tabuleiro.get(tabuleiro.size() -1).getLadoEsquerdo() == peca.getLadoDireito()){
-				retorno = 2; // usa peças horizontais2
+			if(tabuleiro.get(tabuleiro.size()-1).getLadoEsquerdo() == peca.getLadoDireito()){
+				retorno = 2; // usa peças horizontais1 - usa a mesma peça
 			}
 			return retorno;
+			
 		}
 	}
 	
