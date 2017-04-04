@@ -331,11 +331,12 @@ public class TelaDoJogo extends JFrame {
 
 					} else {
 						if (al.verificaLadosPedra(arrayTabuleiro, p1) == 1) {
-							//obs: tem que inverteros valores antes de inserir no array.
+							// obs: tem que inverteros valores antes de inserir
+							// no array.
 							Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano1.setEnabled(false);
-							
+
 							btn_1.setEnabled(true);
 							btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
 						} else {
@@ -361,7 +362,8 @@ public class TelaDoJogo extends JFrame {
 						btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
 					} else {
 						if (al.verificaLadosPedra(arrayTabuleiro, p1) == 1) {
-							arrayTabuleiro.add(p1);
+							Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
 							btnhumano1.setEnabled(false);
 							btn_2.setEnabled(true);
 							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
@@ -386,7 +388,8 @@ public class TelaDoJogo extends JFrame {
 						btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
 					} else {
 						if (al.verificaLadosPedra(arrayTabuleiro, p1) == 1) {
-							arrayTabuleiro.add(p1);
+							Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
 							btnhumano1.setEnabled(false);
 							btn_3.setEnabled(true);
 							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
@@ -411,10 +414,11 @@ public class TelaDoJogo extends JFrame {
 						btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
 					} else {
 						if (al.verificaLadosPedra(arrayTabuleiro, p1) == 1) {
-							arrayTabuleiro.add(p1);
+							Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
 							btnhumano1.setEnabled(false);
 							btn_4.setEnabled(true);
-							btn_4.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l1 + ".png"));
+							btn_4.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedra(arrayTabuleiro, p1) == 2) {
 								arrayTabuleiro.add(p1);
@@ -436,7 +440,8 @@ public class TelaDoJogo extends JFrame {
 						btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
 					} else {
 						if (al.verificaLadosPedra(arrayTabuleiro, p1) == 1) {
-							arrayTabuleiro.add(p1);
+							Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
 							btnhumano1.setEnabled(false);
 							btn_5.setEnabled(true);
 							btn_5.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
@@ -461,7 +466,8 @@ public class TelaDoJogo extends JFrame {
 						btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
 					} else {
 						if (al.verificaLadosPedra(arrayTabuleiro, p1) == 1) {
-							arrayTabuleiro.add(p1);
+							Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
 							btnhumano1.setEnabled(false);
 							btn_6.setEnabled(true);
 							btn_6.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
@@ -486,7 +492,8 @@ public class TelaDoJogo extends JFrame {
 						btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
 					} else {
 						if (al.verificaLadosPedra(arrayTabuleiro, p1) == 1) {
-							arrayTabuleiro.add(p1);
+							Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
 							btnhumano1.setEnabled(false);
 							btn_7.setEnabled(true);
 							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
@@ -530,7 +537,8 @@ public class TelaDoJogo extends JFrame {
 						btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l2 + ".png"));
 					} else {
 						if (al.verificaLadosPedra(arrayTabuleiro, p2) == 1) {
-							arrayTabuleiro.add(p2);
+							Pecas novop = new Pecas(p2.getLadoDireito(), p2.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
 							btnhumano2.setEnabled(false);
 							btn_1.setEnabled(true);
 							btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
@@ -557,7 +565,8 @@ public class TelaDoJogo extends JFrame {
 						btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l2 + ".png"));
 					} else {
 						if (al.verificaLadosPedra(arrayTabuleiro, p2) == 1) {
-							arrayTabuleiro.add(p2);
+							Pecas novop = new Pecas(p2.getLadoDireito(), p2.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
 							btnhumano2.setEnabled(false);
 							btn_2.setEnabled(true);
 							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
@@ -582,7 +591,8 @@ public class TelaDoJogo extends JFrame {
 						btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l2 + ".png"));
 					} else {
 						if (al.verificaLadosPedra(arrayTabuleiro, p2) == 1) {
-							arrayTabuleiro.add(p2);
+							Pecas novop = new Pecas(p2.getLadoDireito(), p2.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
 							btnhumano2.setEnabled(false);
 							btn_3.setEnabled(true);
 							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
@@ -607,7 +617,8 @@ public class TelaDoJogo extends JFrame {
 						btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l2 + ".png"));
 					} else {
 						if (al.verificaLadosPedra(arrayTabuleiro, p2) == 1) {
-							arrayTabuleiro.add(p2);
+							Pecas novop = new Pecas(p2.getLadoDireito(), p2.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
 							btnhumano2.setEnabled(false);
 							btn_4.setEnabled(true);
 							btn_4.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
@@ -616,7 +627,7 @@ public class TelaDoJogo extends JFrame {
 								arrayTabuleiro.add(p2);
 								btnhumano2.setEnabled(false);
 								btn_4.setEnabled(true);
-								btn_4.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l2 + ".png"));
+								btn_4.setIcon(new ImageIcon(".//resource//pecas//verticais1//" + l2 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -632,7 +643,8 @@ public class TelaDoJogo extends JFrame {
 						btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l2 + ".png"));
 					} else {
 						if (al.verificaLadosPedra(arrayTabuleiro, p2) == 1) {
-							arrayTabuleiro.add(p2);
+							Pecas novop = new Pecas(p2.getLadoDireito(), p2.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
 							btnhumano2.setEnabled(false);
 							btn_5.setEnabled(true);
 							btn_5.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
@@ -657,7 +669,8 @@ public class TelaDoJogo extends JFrame {
 						btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l2 + ".png"));
 					} else {
 						if (al.verificaLadosPedra(arrayTabuleiro, p2) == 1) {
-							arrayTabuleiro.add(p2);
+							Pecas novop = new Pecas(p2.getLadoDireito(), p2.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
 							btnhumano2.setEnabled(false);
 							btn_6.setEnabled(true);
 							btn_6.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
@@ -682,7 +695,8 @@ public class TelaDoJogo extends JFrame {
 						btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l2 + ".png"));
 					} else {
 						if (al.verificaLadosPedra(arrayTabuleiro, p2) == 1) {
-							arrayTabuleiro.add(p2);
+							Pecas novop = new Pecas(p2.getLadoDireito(), p2.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
 							btnhumano2.setEnabled(false);
 							btn_7.setEnabled(true);
 							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
@@ -727,7 +741,8 @@ public class TelaDoJogo extends JFrame {
 						btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l3 + ".png"));
 					} else {
 						if (al.verificaLadosPedra(arrayTabuleiro, p3) == 1) {
-							arrayTabuleiro.add(p3);
+							Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
 							btnhumano3.setEnabled(false);
 							btn_1.setEnabled(true);
 							btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
@@ -753,7 +768,8 @@ public class TelaDoJogo extends JFrame {
 						btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l3 + ".png"));
 					} else {
 						if (al.verificaLadosPedra(arrayTabuleiro, p3) == 1) {
-							arrayTabuleiro.add(p3);
+							Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
 							btnhumano3.setEnabled(false);
 							btn_2.setEnabled(true);
 							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
@@ -778,7 +794,8 @@ public class TelaDoJogo extends JFrame {
 						btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l3 + ".png"));
 					} else {
 						if (al.verificaLadosPedra(arrayTabuleiro, p3) == 1) {
-							arrayTabuleiro.add(p3);
+							Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
 							btnhumano3.setEnabled(false);
 							btn_3.setEnabled(true);
 							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
@@ -803,7 +820,8 @@ public class TelaDoJogo extends JFrame {
 						btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l3 + ".png"));
 					} else {
 						if (al.verificaLadosPedra(arrayTabuleiro, p3) == 1) {
-							arrayTabuleiro.add(p3);
+							Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
 							btnhumano2.setEnabled(false);
 							btn_4.setEnabled(true);
 							btn_4.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
@@ -828,7 +846,8 @@ public class TelaDoJogo extends JFrame {
 						btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l3 + ".png"));
 					} else {
 						if (al.verificaLadosPedra(arrayTabuleiro, p3) == 1) {
-							arrayTabuleiro.add(p3);
+							Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
 							btnhumano2.setEnabled(false);
 							btn_5.setEnabled(true);
 							btn_5.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
@@ -853,7 +872,8 @@ public class TelaDoJogo extends JFrame {
 						btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l3 + ".png"));
 					} else {
 						if (al.verificaLadosPedra(arrayTabuleiro, p3) == 1) {
-							arrayTabuleiro.add(p3);
+							Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
 							btnhumano3.setEnabled(false);
 							btn_6.setEnabled(true);
 							btn_6.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
@@ -878,7 +898,8 @@ public class TelaDoJogo extends JFrame {
 						btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l3 + ".png"));
 					} else {
 						if (al.verificaLadosPedra(arrayTabuleiro, p3) == 1) {
-							arrayTabuleiro.add(p3);
+							Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
 							btnhumano3.setEnabled(false);
 							btn_7.setEnabled(true);
 							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
@@ -923,7 +944,8 @@ public class TelaDoJogo extends JFrame {
 						btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l4 + ".png"));
 					} else {
 						if (al.verificaLadosPedra(arrayTabuleiro, p4) == 1) {
-							arrayTabuleiro.add(p4);
+							Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
 							btnhumano4.setEnabled(false);
 							btn_1.setEnabled(true);
 							btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
@@ -949,7 +971,8 @@ public class TelaDoJogo extends JFrame {
 						btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l4 + ".png"));
 					} else {
 						if (al.verificaLadosPedra(arrayTabuleiro, p4) == 1) {
-							arrayTabuleiro.add(p4);
+							Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
 							btnhumano4.setEnabled(false);
 							btn_2.setEnabled(true);
 							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
@@ -974,7 +997,8 @@ public class TelaDoJogo extends JFrame {
 						btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l4 + ".png"));
 					} else {
 						if (al.verificaLadosPedra(arrayTabuleiro, p4) == 1) {
-							arrayTabuleiro.add(p4);
+							Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
 							btnhumano4.setEnabled(false);
 							btn_3.setEnabled(true);
 							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
@@ -999,7 +1023,8 @@ public class TelaDoJogo extends JFrame {
 						btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l4 + ".png"));
 					} else {
 						if (al.verificaLadosPedra(arrayTabuleiro, p4) == 1) {
-							arrayTabuleiro.add(p4);
+							Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
 							btnhumano4.setEnabled(false);
 							btn_4.setEnabled(true);
 							btn_4.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
@@ -1024,7 +1049,8 @@ public class TelaDoJogo extends JFrame {
 						btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l4 + ".png"));
 					} else {
 						if (al.verificaLadosPedra(arrayTabuleiro, p4) == 1) {
-							arrayTabuleiro.add(p4);
+							Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
 							btnhumano4.setEnabled(false);
 							btn_5.setEnabled(true);
 							btn_5.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
@@ -1049,7 +1075,8 @@ public class TelaDoJogo extends JFrame {
 						btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l4 + ".png"));
 					} else {
 						if (al.verificaLadosPedra(arrayTabuleiro, p4) == 1) {
-							arrayTabuleiro.add(p4);
+							Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
 							btnhumano4.setEnabled(false);
 							btn_6.setEnabled(true);
 							btn_6.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
@@ -1074,7 +1101,8 @@ public class TelaDoJogo extends JFrame {
 						btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l4 + ".png"));
 					} else {
 						if (al.verificaLadosPedra(arrayTabuleiro, p4) == 1) {
-							arrayTabuleiro.add(p4);
+							Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
 							btnhumano4.setEnabled(false);
 							btn_7.setEnabled(true);
 							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
@@ -1100,10 +1128,615 @@ public class TelaDoJogo extends JFrame {
 		btnhumano5 = new JButton("");
 		btnhumano5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+
+				++aux2;
+				Pecas p5 = arrayH.get(4);
+				String ladoa = p5.getLadoEsquerdo().toString();
+				String ladob = p5.getLadoDireito().toString();
+
+				System.out.println(l5 = ladoa + ladob);
+
+				switch (aux2) {
+				case 1:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p5);
+						btnhumano5.setEnabled(false);
+						btn_1.setEnabled(true);
+						btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l5 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p5) == 1) {
+							Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
+							btnhumano5.setEnabled(false);
+							btn_1.setEnabled(true);
+							btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+						} else {
+							if (al.verificaLadosPedra(arrayTabuleiro, p5) == 2) {
+								arrayTabuleiro.add(p5);
+								btnhumano5.setEnabled(false);
+								btn_1.setEnabled(true);
+								btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l5 + ".png"));
+
+							} else {
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+								--aux2;
+							}
+						}
+					}
+
+					break;
+				case 2:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p5);
+						btnhumano5.setEnabled(false);
+						btn_2.setEnabled(true);
+						btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l5 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p5) == 1) {
+							Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
+							btnhumano5.setEnabled(false);
+							btn_2.setEnabled(true);
+							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+						} else {
+							if (al.verificaLadosPedra(arrayTabuleiro, p5) == 2) {
+								arrayTabuleiro.add(p5);
+								btnhumano5.setEnabled(false);
+								btn_2.setEnabled(true);
+								btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l5 + ".png"));
+							} else {
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+								--aux2;
+							}
+						}
+					}
+					break;
+				case 3:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p5);
+						btnhumano5.setEnabled(false);
+						btn_3.setEnabled(true);
+						btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l5 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p5) == 1) {
+							Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
+							btnhumano5.setEnabled(false);
+							btn_3.setEnabled(true);
+							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+						} else {
+							if (al.verificaLadosPedra(arrayTabuleiro, p5) == 2) {
+								arrayTabuleiro.add(p5);
+								btnhumano5.setEnabled(false);
+								btn_3.setEnabled(true);
+								btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l5 + ".png"));
+							} else {
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+								--aux2;
+							}
+						}
+					}
+					break;
+				case 4:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p5);
+						btnhumano5.setEnabled(false);
+						btn_4.setEnabled(true);
+						btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l5 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p5) == 1) {
+							Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
+							btnhumano5.setEnabled(false);
+							btn_4.setEnabled(true);
+							btn_4.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
+						} else {
+							if (al.verificaLadosPedra(arrayTabuleiro, p5) == 2) {
+								arrayTabuleiro.add(p5);
+								btnhumano5.setEnabled(false);
+								btn_4.setEnabled(true);
+								btn_4.setIcon(new ImageIcon(".//resource//pecas//verticais1//" + l5 + ".png"));
+							} else {
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+								--aux2;
+							}
+						}
+					}
+					break;
+				case 5:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p5);
+						btnhumano5.setEnabled(false);
+						btn_5.setEnabled(true);
+						btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l5 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p5) == 1) {
+							Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
+							btnhumano5.setEnabled(false);
+							btn_5.setEnabled(true);
+							btn_5.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
+						} else {
+							if (al.verificaLadosPedra(arrayTabuleiro, p5) == 2) {
+								arrayTabuleiro.add(p5);
+								btnhumano5.setEnabled(false);
+								btn_5.setEnabled(true);
+								btn_5.setIcon(new ImageIcon(".//resource//pecas//verticais1//" + l5 + ".png"));
+							} else {
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+								--aux2;
+							}
+						}
+					}
+					break;
+				case 6:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p5);
+						btnhumano5.setEnabled(false);
+						btn_6.setEnabled(true);
+						btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l5 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p5) == 1) {
+							Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
+							btnhumano5.setEnabled(false);
+							btn_6.setEnabled(true);
+							btn_6.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
+						} else {
+							if (al.verificaLadosPedra(arrayTabuleiro, p5) == 2) {
+								arrayTabuleiro.add(p5);
+								btnhumano5.setEnabled(false);
+								btn_6.setEnabled(true);
+								btn_6.setIcon(new ImageIcon(".//resource//pecas//verticais1//" + l5 + ".png"));
+							} else {
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+								--aux2;
+							}
+						}
+					}
+					break;
+				case 7:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p5);
+						btnhumano5.setEnabled(false);
+						btn_7.setEnabled(true);
+						btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l5 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p5) == 1) {
+							Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
+							btnhumano5.setEnabled(false);
+							btn_7.setEnabled(true);
+							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+						} else {
+							if (al.verificaLadosPedra(arrayTabuleiro, p5) == 2) {
+								arrayTabuleiro.add(p5);
+								btnhumano5.setEnabled(false);
+								btn_7.setEnabled(true);
+								btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + l5 + ".png"));
+							} else {
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+								--aux2;
+							}
+						}
+					}
+					break;
+
+				default:
+					JOptionPane.showMessageDialog(null, "Peças esgotadas");
+					break;
+				}
+
 			}
 		});
 		btnhumano6 = new JButton("");
+		btnhumano6.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+
+				++aux2;
+				Pecas p6 = arrayH.get(5);
+				String ladoa = p6.getLadoEsquerdo().toString();
+				String ladob = p6.getLadoDireito().toString();
+
+				System.out.println(l6 = ladoa + ladob);
+
+				switch (aux2) {
+				case 1:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p6);
+						btnhumano6.setEnabled(false);
+						btn_1.setEnabled(true);
+						btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l6 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p6) == 1) {
+							Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
+							btnhumano2.setEnabled(false);
+							btn_1.setEnabled(true);
+							btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+						} else {
+							if (al.verificaLadosPedra(arrayTabuleiro, p6) == 2) {
+								arrayTabuleiro.add(p6);
+								btnhumano6.setEnabled(false);
+								btn_1.setEnabled(true);
+								btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l6 + ".png"));
+
+							} else {
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+								--aux2;
+							}
+						}
+					}
+
+					break;
+				case 2:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p6);
+						btnhumano6.setEnabled(false);
+						btn_2.setEnabled(true);
+						btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l6 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p6) == 1) {
+							Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
+							btnhumano6.setEnabled(false);
+							btn_2.setEnabled(true);
+							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+						} else {
+							if (al.verificaLadosPedra(arrayTabuleiro, p6) == 2) {
+								arrayTabuleiro.add(p6);
+								btnhumano6.setEnabled(false);
+								btn_2.setEnabled(true);
+								btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l6 + ".png"));
+							} else {
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+								--aux2;
+							}
+						}
+					}
+					break;
+				case 3:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p6);
+						btnhumano6.setEnabled(false);
+						btn_3.setEnabled(true);
+						btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l6 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p6) == 1) {
+							Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
+							btnhumano6.setEnabled(false);
+							btn_3.setEnabled(true);
+							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+						} else {
+							if (al.verificaLadosPedra(arrayTabuleiro, p6) == 2) {
+								arrayTabuleiro.add(p6);
+								btnhumano6.setEnabled(false);
+								btn_3.setEnabled(true);
+								btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l6 + ".png"));
+							} else {
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+								--aux2;
+							}
+						}
+					}
+					break;
+				case 4:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p6);
+						btnhumano6.setEnabled(false);
+						btn_4.setEnabled(true);
+						btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l6 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p6) == 1) {
+							Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
+							btnhumano6.setEnabled(false);
+							btn_4.setEnabled(true);
+							btn_4.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
+						} else {
+							if (al.verificaLadosPedra(arrayTabuleiro, p6) == 2) {
+								arrayTabuleiro.add(p6);
+								btnhumano6.setEnabled(false);
+								btn_4.setEnabled(true);
+								btn_4.setIcon(new ImageIcon(".//resource//pecas//verticais1//" + l6 + ".png"));
+							} else {
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+								--aux2;
+							}
+						}
+					}
+					break;
+				case 5:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p6);
+						btnhumano6.setEnabled(false);
+						btn_5.setEnabled(true);
+						btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l6 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p6) == 1) {
+							Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
+							btnhumano6.setEnabled(false);
+							btn_5.setEnabled(true);
+							btn_5.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
+						} else {
+							if (al.verificaLadosPedra(arrayTabuleiro, p6) == 2) {
+								arrayTabuleiro.add(p6);
+								btnhumano6.setEnabled(false);
+								btn_5.setEnabled(true);
+								btn_5.setIcon(new ImageIcon(".//resource//pecas//verticais1//" + l6 + ".png"));
+							} else {
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+								--aux2;
+							}
+						}
+					}
+					break;
+				case 6:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p6);
+						btnhumano6.setEnabled(false);
+						btn_6.setEnabled(true);
+						btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l6 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p6) == 1) {
+							Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
+							btnhumano6.setEnabled(false);
+							btn_6.setEnabled(true);
+							btn_6.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
+						} else {
+							if (al.verificaLadosPedra(arrayTabuleiro, p6) == 2) {
+								arrayTabuleiro.add(p6);
+								btnhumano6.setEnabled(false);
+								btn_6.setEnabled(true);
+								btn_6.setIcon(new ImageIcon(".//resource//pecas//verticais1//" + l6 + ".png"));
+							} else {
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+								--aux2;
+							}
+						}
+					}
+					break;
+				case 7:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p6);
+						btnhumano6.setEnabled(false);
+						btn_7.setEnabled(true);
+						btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l6 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p6) == 1) {
+							Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
+							btnhumano6.setEnabled(false);
+							btn_7.setEnabled(true);
+							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+						} else {
+							if (al.verificaLadosPedra(arrayTabuleiro, p6) == 2) {
+								arrayTabuleiro.add(p6);
+								btnhumano6.setEnabled(false);
+								btn_7.setEnabled(true);
+								btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + l6 + ".png"));
+							} else {
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+								--aux2;
+							}
+						}
+					}
+					break;
+
+				default:
+					JOptionPane.showMessageDialog(null, "Peças esgotadas");
+					break;
+				}
+
+			}
+		});
 		btnhumano7 = new JButton("");
+		btnhumano7.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+				++aux2;
+				Pecas p7 = arrayH.get(6);
+				String ladoa = p7.getLadoEsquerdo().toString();
+				String ladob = p7.getLadoDireito().toString();
+
+				System.out.println(l7 = ladoa + ladob);
+
+				switch (aux2) {
+				case 1:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p7);
+						btnhumano7.setEnabled(false);
+						btn_1.setEnabled(true);
+						btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l7 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p7) == 1) {
+							Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
+							btnhumano7.setEnabled(false);
+							btn_1.setEnabled(true);
+							btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+						} else {
+							if (al.verificaLadosPedra(arrayTabuleiro, p7) == 2) {
+								arrayTabuleiro.add(p7);
+								btnhumano7.setEnabled(false);
+								btn_1.setEnabled(true);
+								btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l7 + ".png"));
+
+							} else {
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+								--aux2;
+							}
+						}
+					}
+
+					break;
+				case 2:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p7);
+						btnhumano7.setEnabled(false);
+						btn_2.setEnabled(true);
+						btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l7 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p7) == 1) {
+							Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
+							btnhumano7.setEnabled(false);
+							btn_2.setEnabled(true);
+							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+						} else {
+							if (al.verificaLadosPedra(arrayTabuleiro, p7) == 2) {
+								arrayTabuleiro.add(p7);
+								btnhumano7.setEnabled(false);
+								btn_2.setEnabled(true);
+								btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l7 + ".png"));
+							} else {
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+								--aux2;
+							}
+						}
+					}
+					break;
+				case 3:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p7);
+						btnhumano7.setEnabled(false);
+						btn_3.setEnabled(true);
+						btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l7 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p7) == 1) {
+							Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
+							btnhumano7.setEnabled(false);
+							btn_3.setEnabled(true);
+							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+						} else {
+							if (al.verificaLadosPedra(arrayTabuleiro, p7) == 2) {
+								arrayTabuleiro.add(p7);
+								btnhumano7.setEnabled(false);
+								btn_3.setEnabled(true);
+								btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l7 + ".png"));
+							} else {
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+								--aux2;
+							}
+						}
+					}
+					break;
+				case 4:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p7);
+						btnhumano7.setEnabled(false);
+						btn_4.setEnabled(true);
+						btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l7 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p7) == 1) {
+							Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
+							btnhumano7.setEnabled(false);
+							btn_4.setEnabled(true);
+							btn_4.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
+						} else {
+							if (al.verificaLadosPedra(arrayTabuleiro, p7) == 2) {
+								arrayTabuleiro.add(p7);
+								btnhumano7.setEnabled(false);
+								btn_4.setEnabled(true);
+								btn_4.setIcon(new ImageIcon(".//resource//pecas//verticais1//" + l7 + ".png"));
+							} else {
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+								--aux2;
+							}
+						}
+					}
+					break;
+				case 5:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p7);
+						btnhumano7.setEnabled(false);
+						btn_5.setEnabled(true);
+						btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l7 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p7) == 1) {
+							Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
+							btnhumano7.setEnabled(false);
+							btn_5.setEnabled(true);
+							btn_5.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
+						} else {
+							if (al.verificaLadosPedra(arrayTabuleiro, p7) == 2) {
+								arrayTabuleiro.add(p7);
+								btnhumano7.setEnabled(false);
+								btn_5.setEnabled(true);
+								btn_5.setIcon(new ImageIcon(".//resource//pecas//verticais1//" + l7 + ".png"));
+							} else {
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+								--aux2;
+							}
+						}
+					}
+					break;
+				case 6:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p7);
+						btnhumano7.setEnabled(false);
+						btn_6.setEnabled(true);
+						btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l7 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p7) == 1) {
+							Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
+							btnhumano7.setEnabled(false);
+							btn_6.setEnabled(true);
+							btn_6.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
+						} else {
+							if (al.verificaLadosPedra(arrayTabuleiro, p7) == 2) {
+								arrayTabuleiro.add(p7);
+								btnhumano7.setEnabled(false);
+								btn_6.setEnabled(true);
+								btn_6.setIcon(new ImageIcon(".//resource//pecas//verticais1//" + l7 + ".png"));
+							} else {
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+								--aux2;
+							}
+						}
+					}
+					break;
+				case 7:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p7);
+						btnhumano7.setEnabled(false);
+						btn_7.setEnabled(true);
+						btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l7 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p7) == 1) {
+							Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
+							btnhumano7.setEnabled(false);
+							btn_7.setEnabled(true);
+							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+						} else {
+							if (al.verificaLadosPedra(arrayTabuleiro, p7) == 2) {
+								arrayTabuleiro.add(p7);
+								btnhumano7.setEnabled(false);
+								btn_7.setEnabled(true);
+								btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + l7 + ".png"));
+							} else {
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+								--aux2;
+							}
+						}
+					}
+					break;
+
+				default:
+					JOptionPane.showMessageDialog(null, "Peças esgotadas");
+					break;
+				}
+
+			}
+		});
 		btnhumano8 = new JButton("");
 		btnhumano9 = new JButton("");
 		btnhumano10 = new JButton("");
