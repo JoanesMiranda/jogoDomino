@@ -198,7 +198,6 @@ public class TelaDoJogo extends JFrame {
 
 	// recebe todas as pedras do caminho do jogo do domino
 	ArrayList<Pecas> arrayTabuleiro = new ArrayList<Pecas>();
-	
 
 	private static final long serialVersionUID = 1L;
 
@@ -316,10 +315,10 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				++aux2;
 				Pecas p1 = arrayH.get(0);
-				
+
 				String ladoa = p1.getLadoEsquerdo().toString();
 				String ladob = p1.getLadoDireito().toString();
-				
+
 				System.out.println(l1 = ladoa + ladob);
 
 				switch (aux2) {
@@ -329,13 +328,16 @@ public class TelaDoJogo extends JFrame {
 						btnhumano1.setEnabled(false);
 						btn_1.setEnabled(true);
 						btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
-						
+
 					} else {
 						if (al.verificaLadosPedra(arrayTabuleiro, p1) == 1) {
-							arrayTabuleiro.add(p1);
+							//obs: tem que inverteros valores antes de inserir no array.
+							Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
 							btnhumano1.setEnabled(false);
+							
 							btn_1.setEnabled(true);
-							btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob+ladoa + ".png"));
+							btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedra(arrayTabuleiro, p1) == 2) {
 								arrayTabuleiro.add(p1);
@@ -347,7 +349,7 @@ public class TelaDoJogo extends JFrame {
 								--aux2;
 							}
 						}
-						
+
 					}
 
 					break;
@@ -362,7 +364,7 @@ public class TelaDoJogo extends JFrame {
 							arrayTabuleiro.add(p1);
 							btnhumano1.setEnabled(false);
 							btn_2.setEnabled(true);
-							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" +ladob+ladoa + ".png"));
+							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedra(arrayTabuleiro, p1) == 2) {
 								arrayTabuleiro.add(p1);
@@ -387,7 +389,7 @@ public class TelaDoJogo extends JFrame {
 							arrayTabuleiro.add(p1);
 							btnhumano1.setEnabled(false);
 							btn_3.setEnabled(true);
-							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob+ladoa + ".png"));
+							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedra(arrayTabuleiro, p1) == 2) {
 								arrayTabuleiro.add(p1);
@@ -412,7 +414,7 @@ public class TelaDoJogo extends JFrame {
 							arrayTabuleiro.add(p1);
 							btnhumano1.setEnabled(false);
 							btn_4.setEnabled(true);
-							btn_4.setIcon(new ImageIcon(".//resource//pecas//verticais2//" +l1 + ".png"));
+							btn_4.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l1 + ".png"));
 						} else {
 							if (al.verificaLadosPedra(arrayTabuleiro, p1) == 2) {
 								arrayTabuleiro.add(p1);
@@ -501,7 +503,7 @@ public class TelaDoJogo extends JFrame {
 						}
 					}
 					break;
-				
+
 				default:
 					JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					break;
@@ -531,14 +533,14 @@ public class TelaDoJogo extends JFrame {
 							arrayTabuleiro.add(p2);
 							btnhumano2.setEnabled(false);
 							btn_1.setEnabled(true);
-							btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob+ladoa + ".png"));
+							btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedra(arrayTabuleiro, p2) == 2) {
 								arrayTabuleiro.add(p2);
 								btnhumano2.setEnabled(false);
 								btn_1.setEnabled(true);
 								btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l2 + ".png"));
-								
+
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -558,7 +560,7 @@ public class TelaDoJogo extends JFrame {
 							arrayTabuleiro.add(p2);
 							btnhumano2.setEnabled(false);
 							btn_2.setEnabled(true);
-							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob+ladoa + ".png"));
+							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedra(arrayTabuleiro, p2) == 2) {
 								arrayTabuleiro.add(p2);
@@ -583,7 +585,7 @@ public class TelaDoJogo extends JFrame {
 							arrayTabuleiro.add(p2);
 							btnhumano2.setEnabled(false);
 							btn_3.setEnabled(true);
-							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob+ladoa + ".png"));
+							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedra(arrayTabuleiro, p2) == 2) {
 								arrayTabuleiro.add(p2);
@@ -697,7 +699,7 @@ public class TelaDoJogo extends JFrame {
 						}
 					}
 					break;
-				
+
 				default:
 					JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					break;
@@ -728,7 +730,7 @@ public class TelaDoJogo extends JFrame {
 							arrayTabuleiro.add(p3);
 							btnhumano3.setEnabled(false);
 							btn_1.setEnabled(true);
-							btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob+ladoa + ".png"));
+							btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedra(arrayTabuleiro, p3) == 2) {
 								arrayTabuleiro.add(p3);
@@ -754,7 +756,7 @@ public class TelaDoJogo extends JFrame {
 							arrayTabuleiro.add(p3);
 							btnhumano3.setEnabled(false);
 							btn_2.setEnabled(true);
-							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob+ladoa + ".png"));
+							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedra(arrayTabuleiro, p3) == 2) {
 								arrayTabuleiro.add(p3);
@@ -779,7 +781,7 @@ public class TelaDoJogo extends JFrame {
 							arrayTabuleiro.add(p3);
 							btnhumano3.setEnabled(false);
 							btn_3.setEnabled(true);
-							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob+ladoa + ".png"));
+							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedra(arrayTabuleiro, p3) == 2) {
 								arrayTabuleiro.add(p3);
@@ -893,7 +895,7 @@ public class TelaDoJogo extends JFrame {
 						}
 					}
 					break;
-				
+
 				default:
 					JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					break;
@@ -924,7 +926,7 @@ public class TelaDoJogo extends JFrame {
 							arrayTabuleiro.add(p4);
 							btnhumano4.setEnabled(false);
 							btn_1.setEnabled(true);
-							btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob+ladoa + ".png"));
+							btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedra(arrayTabuleiro, p4) == 2) {
 								arrayTabuleiro.add(p4);
@@ -950,7 +952,7 @@ public class TelaDoJogo extends JFrame {
 							arrayTabuleiro.add(p4);
 							btnhumano4.setEnabled(false);
 							btn_2.setEnabled(true);
-							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob+ladoa + ".png"));
+							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedra(arrayTabuleiro, p4) == 2) {
 								arrayTabuleiro.add(p4);
@@ -975,7 +977,7 @@ public class TelaDoJogo extends JFrame {
 							arrayTabuleiro.add(p4);
 							btnhumano4.setEnabled(false);
 							btn_3.setEnabled(true);
-							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob+ladoa + ".png"));
+							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedra(arrayTabuleiro, p4) == 2) {
 								arrayTabuleiro.add(p4);
@@ -1088,12 +1090,11 @@ public class TelaDoJogo extends JFrame {
 							}
 						}
 					}
-					default:
-						JOptionPane.showMessageDialog(null, "Peças esgotadas");
-						break;
-					}
-					
-				
+				default:
+					JOptionPane.showMessageDialog(null, "Peças esgotadas");
+					break;
+				}
+
 			}
 		});
 		btnhumano5 = new JButton("");
