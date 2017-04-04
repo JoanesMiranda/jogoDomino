@@ -4629,140 +4629,132 @@ public class TelaDoJogo extends JFrame {
 
 		btn_14 = new JButton("");
 		btn_14.setEnabled(false);
-		btn_14.setBounds(385, 176, 70, 35);
+		btn_14.setBounds(37, 146, 35, 70);
 		panel_tabuleiro.add(btn_14);
 
 		btn_13 = new JButton("");
-		btn_13.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
 		btn_13.setEnabled(false);
-		btn_13.setBounds(385, 210, 35, 70);
+		btn_13.setBounds(37, 78, 35, 70);
 		panel_tabuleiro.add(btn_13);
 
 		btn_15 = new JButton("");
 		btn_15.setEnabled(false);
-		btn_15.setBounds(454, 176, 70, 35);
+		btn_15.setBounds(37, 215, 35, 70);
 		panel_tabuleiro.add(btn_15);
 
 		btn_12 = new JButton("");
 		btn_12.setEnabled(false);
-		btn_12.setBounds(315, 245, 70, 35);
+		btn_12.setBounds(37, 43, 70, 35);
 		panel_tabuleiro.add(btn_12);
 
 		btn_16 = new JButton("");
 		btn_16.setEnabled(false);
-		btn_16.setBounds(524, 176, 70, 35);
+		btn_16.setBounds(37, 283, 35, 70);
 		panel_tabuleiro.add(btn_16);
 
 		btn_18 = new JButton("");
 		btn_18.setEnabled(false);
-		btn_18.setBounds(594, 245, 70, 35);
+		btn_18.setBounds(105, 351, 70, 35);
 		panel_tabuleiro.add(btn_18);
 
 		btn_11 = new JButton("");
 		btn_11.setEnabled(false);
-		btn_11.setBounds(315, 279, 35, 70);
+		btn_11.setBounds(105, 43, 70, 35);
 		panel_tabuleiro.add(btn_11);
 
 		btn_23 = new JButton("");
 		btn_23.setEnabled(false);
-		btn_23.setBounds(870, 315, 70, 35);
+		btn_23.setBounds(452, 351, 70, 35);
 		panel_tabuleiro.add(btn_23);
 
 		btn_10 = new JButton("");
 		btn_10.setEnabled(false);
-		btn_10.setBounds(246, 314, 70, 35);
+		btn_10.setBounds(174, 43, 70, 35);
 		panel_tabuleiro.add(btn_10);
 
 		btn_9 = new JButton("");
 		btn_9.setEnabled(false);
-		btn_9.setBounds(177, 314, 70, 35);
+		btn_9.setBounds(243, 43, 70, 35);
 		panel_tabuleiro.add(btn_9);
 
 		btn_8 = new JButton("");
 		btn_8.setEnabled(false);
-		btn_8.setBounds(108, 314, 70, 35);
+		btn_8.setBounds(313, 43, 70, 35);
 		panel_tabuleiro.add(btn_8);
 
 		btn_7 = new JButton("");
 		btn_7.setEnabled(false);
-		btn_7.setBounds(39, 314, 70, 35);
+		btn_7.setBounds(382, 43, 70, 35);
 		panel_tabuleiro.add(btn_7);
 
 		btn_6 = new JButton("");
 		btn_6.setEnabled(false);
-		btn_6.setBounds(39, 245, 35, 70);
+		btn_6.setBounds(452, 43, 70, 35);
 		panel_tabuleiro.add(btn_6);
 
 		btn_5 = new JButton("");
 		btn_5.setEnabled(false);
-		btn_5.setBounds(39, 176, 35, 70);
+		btn_5.setBounds(522, 43, 70, 35);
 		panel_tabuleiro.add(btn_5);
 
 		btn_17 = new JButton("");
 		btn_17.setEnabled(false);
-		btn_17.setBounds(559, 210, 35, 70);
+		btn_17.setBounds(37, 351, 70, 35);
 		panel_tabuleiro.add(btn_17);
 
 		btn_19 = new JButton("");
 		btn_19.setEnabled(false);
-		btn_19.setBounds(629, 280, 35, 70);
+		btn_19.setBounds(174, 351, 70, 35);
 		panel_tabuleiro.add(btn_19);
 
 		btn_20 = new JButton("");
 		btn_20.setEnabled(false);
-		btn_20.setBounds(663, 315, 70, 35);
+		btn_20.setBounds(243, 351, 70, 35);
 		panel_tabuleiro.add(btn_20);
 
 		btn_21 = new JButton("");
 		btn_21.setEnabled(false);
-		btn_21.setBounds(732, 315, 70, 35);
+		btn_21.setBounds(313, 351, 70, 35);
 		panel_tabuleiro.add(btn_21);
 
 		btn_22 = new JButton("");
 		btn_22.setEnabled(false);
-		btn_22.setBounds(801, 315, 70, 35);
+		btn_22.setBounds(382, 351, 70, 35);
 		panel_tabuleiro.add(btn_22);
 
 		btn_27 = new JButton("");
 		btn_27.setEnabled(false);
-		btn_27.setBounds(870, 74, 70, 35);
+		btn_27.setBounds(729, 351, 70, 35);
 		panel_tabuleiro.add(btn_27);
 
 		btn_24 = new JButton("");
 		btn_24.setEnabled(false);
-		btn_24.setBounds(905, 246, 35, 70);
+		btn_24.setBounds(522, 351, 70, 35);
 		panel_tabuleiro.add(btn_24);
 
 		btn_25 = new JButton("");
 		btn_25.setEnabled(false);
-		btn_25.setBounds(905, 177, 35, 70);
+		btn_25.setBounds(591, 351, 70, 35);
 		panel_tabuleiro.add(btn_25);
 
 		btn_26 = new JButton("");
-		btn_26.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-			}
-		});
 		btn_26.setEnabled(false);
-		btn_26.setBounds(905, 108, 35, 70);
+		btn_26.setBounds(660, 351, 70, 35);
 		panel_tabuleiro.add(btn_26);
 
 		btn_4 = new JButton("");
 		btn_4.setEnabled(false);
-		btn_4.setBounds(39, 107, 35, 70);
+		btn_4.setBounds(591, 43, 70, 35);
 		panel_tabuleiro.add(btn_4);
 
 		btn_3 = new JButton("");
 		btn_3.setEnabled(false);
-		btn_3.setBounds(39, 72, 70, 35);
+		btn_3.setBounds(660, 43, 70, 35);
 		panel_tabuleiro.add(btn_3);
 
 		btn_2 = new JButton("");
 		btn_2.setEnabled(false);
-		btn_2.setBounds(108, 72, 70, 35);
+		btn_2.setBounds(729, 43, 70, 35);
 		panel_tabuleiro.add(btn_2);
 
 		btn_1 = new JButton("");
@@ -4771,12 +4763,12 @@ public class TelaDoJogo extends JFrame {
 			}
 		});
 		btn_1.setEnabled(false);
-		btn_1.setBounds(177, 72, 70, 35);
+		btn_1.setBounds(798, 43, 70, 35);
 		panel_tabuleiro.add(btn_1);
 
 		btn_28 = new JButton("");
 		btn_28.setEnabled(false);
-		btn_28.setBounds(801, 74, 70, 35);
+		btn_28.setBounds(798, 351, 70, 35);
 		panel_tabuleiro.add(btn_28);
 
 		JLabel lblEscolhaSuasPecas = new JLabel("Escolha Suas Pecas");
