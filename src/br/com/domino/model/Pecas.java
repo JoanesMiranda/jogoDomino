@@ -2,8 +2,8 @@ package br.com.domino.model;
 
 public class Pecas {
 
-	private Integer ladoDireito;
 	private Integer ladoEsquerdo;
+	private Integer ladoDireito;
 	private Integer pecaAssociada;
 	private int estadoDoJogo;
 
@@ -11,19 +11,12 @@ public class Pecas {
 
 	}
 
-	public Pecas(Integer ladoDireito, Integer ladoEsquerdo) {
-		this.ladoDireito = ladoDireito;
+	public Pecas(Integer ladoEsquerdo, Integer ladoDireito) {
+		
 		this.ladoEsquerdo = ladoEsquerdo;
-	}
-
-	public Integer getLadoDireito() {
-		return ladoDireito;
-	}
-
-	public void setLadoDireito(Integer ladoDireito) {
 		this.ladoDireito = ladoDireito;
 	}
-
+	
 	public Integer getLadoEsquerdo() {
 		return ladoEsquerdo;
 	}
@@ -31,7 +24,15 @@ public class Pecas {
 	public void setLadoEsquerdo(Integer ladoEsquerdo) {
 		this.ladoEsquerdo = ladoEsquerdo;
 	}
+	
+	public Integer getLadoDireito() {
+		return ladoDireito;
+	}
 
+	public void setLadoDireito(Integer ladoDireito) {
+		this.ladoDireito = ladoDireito;
+	}
+	
 	public Integer getPecaAssociada() {
 		return pecaAssociada;
 	}

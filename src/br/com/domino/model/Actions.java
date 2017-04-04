@@ -111,50 +111,17 @@ public class Actions {
 		}
 	}
 	
-	public boolean verificaLadosPedra(ArrayList<Pecas> tabuleiro, int posicao, Pecas peca){
-		
-		if(tabuleiro.get(tabuleiro.size() -1).getLadoDireito() == peca.getLadoEsquerdo()){
+		public int verificaLadosPedra(ArrayList<Pecas> tabuleiro, Pecas peca){
+			int retorno = 0;
 			
-			return true;
-		}else{
-			return false;
+			if(tabuleiro.get(tabuleiro.size() -1).getLadoEsquerdo() == peca.getLadoEsquerdo()){
+				retorno = 1; // usa peças horizontais1
+			}
+			if(tabuleiro.get(tabuleiro.size() -1).getLadoEsquerdo() == peca.getLadoDireito()){
+				retorno = 2; // usa peças horizontais2
+			}
+			return retorno;
 		}
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-}
+

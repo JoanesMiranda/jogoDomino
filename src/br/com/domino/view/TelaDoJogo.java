@@ -25,6 +25,7 @@ public class TelaDoJogo extends JFrame {
 	String l1 = "", l2 = "", l3 = "", l4 = "", l5 = "", l6 = "", l7 = "", l8 = "", l9 = "", l10 = "", l11 = "",
 			l12 = "", l13 = "", l14 = "", l15 = "", l16 = "", l17 = "", l18 = "", l19 = "", l20 = "", l21 = "",
 			l22 = "", l23 = "", l24 = "", l25 = "", l26 = "", l27 = "", l28 = "";
+	
 
 	JButton btnhumano1;
 	JButton btnhumano2;
@@ -186,15 +187,15 @@ public class TelaDoJogo extends JFrame {
 
 	// se true a vez do jogo é do humano se false a vez do jogo é da maquina
 
-	public void habilitaDesabilitaBotoes(boolean vezDoJogo) {
-		if (vezDoJogo == true) {
-			desabilitaBotoesMaquina();
-			habilitaBotoesHumano();
-		} else {
-			desabilitaBotoesHumano();
-			habilitaBotoesMaquina();
-		}
-	}
+//	public void habilitaDesabilitaBotoes(boolean vezDoJogo) {
+//		if (vezDoJogo == true) {
+//			desabilitaBotoesMaquina();
+//			habilitaBotoesHumano();
+//		} else {
+//			desabilitaBotoesHumano();
+//			habilitaBotoesMaquina();
+//		}
+//	}
 
 	// recebe todas as pedras do caminho do jogo do domino
 	ArrayList<Pecas> arrayTabuleiro = new ArrayList<Pecas>();
@@ -314,97 +315,350 @@ public class TelaDoJogo extends JFrame {
 		btnhumano1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				++aux2;
-				Pecas p = array.get(0);
-				String ladoa = p.getLadoDireito().toString();
-				String ladob = p.getLadoEsquerdo().toString();
+				Pecas p = arrayH.get(0);
+				String ladoa = p.getLadoEsquerdo().toString(); 
+				String ladob = p.getLadoDireito().toString();
 
 				l1 = ladoa + ladob;
-
+				
 				switch (aux2) {
 				case 1:
-					if (arrayTabuleiro.size() == 0) {
+					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p);
 						btnhumano1.setEnabled(false);
 						btn_1.setEnabled(true);
-						btn_1.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+						btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
 					} else {
-						if (al.verificaLadosPedra(arrayTabuleiro, 0, p) == true) {
+						if (al.verificaLadosPedra(arrayTabuleiro, p) == 1) {
 							arrayTabuleiro.add(p);
 							btnhumano1.setEnabled(false);
-							btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+							btn_1.setEnabled(true);
+							btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" +ladob+ladoa+ ".png"));
 						} else {
-							JOptionPane.showMessageDialog(null, "Pedra diferente");
+							if(al.verificaLadosPedra(arrayTabuleiro, p) == 2){
+								arrayTabuleiro.add(p);
+								btnhumano1.setEnabled(false);
+								btn_1.setEnabled(true);
+								btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+							}else{
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+							}
 						}
 					}
-					habilitaDesabilitaBotoes(false);
-
+	
 					break;
 				case 2:
-					arrayH.add(p);
-					btnhumano1.setEnabled(false);
-					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p);
+						btnhumano1.setEnabled(false);
+						btn_2.setEnabled(true);
+						btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p) == 1) {
+							arrayTabuleiro.add(p);
+							btnhumano1.setEnabled(false);
+							btn_2.setEnabled(true);
+							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob+ladoa+ ".png"));
+						} else {
+							if(al.verificaLadosPedra(arrayTabuleiro, p) == 2){
+								arrayTabuleiro.add(p);
+								btnhumano1.setEnabled(false);
+								btn_2.setEnabled(true);
+								btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+							}else{
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+							}
+						}
+					}
 					break;
 				case 3:
-					arrayH.add(p);
-					btnhumano1.setEnabled(false);
-					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p);
+						btnhumano1.setEnabled(false);
+						btn_3.setEnabled(true);
+						btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p) == 1) {
+							arrayTabuleiro.add(p);
+							btnhumano1.setEnabled(false);
+							btn_3.setEnabled(true);
+							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob+ladoa + ".png"));
+						} else {
+							if(al.verificaLadosPedra(arrayTabuleiro, p) == 2){
+								arrayTabuleiro.add(p);
+								btnhumano1.setEnabled(false);
+								btn_3.setEnabled(true);
+								btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+							}else{
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+							}
+						}
+					}
 					break;
 				case 4:
-					arrayH.add(p);
-					btnhumano1.setEnabled(false);
-					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p);
+						btnhumano1.setEnabled(false);
+						btn_4.setEnabled(true);
+						btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p) == 1) {
+							arrayTabuleiro.add(p);
+							btnhumano1.setEnabled(false);
+							btn_4.setEnabled(true);
+							btn_4.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob+ladoa + ".png"));
+						} else {
+							if(al.verificaLadosPedra(arrayTabuleiro, p) == 2){
+								arrayTabuleiro.add(p);
+								btnhumano1.setEnabled(false);
+								btn_4.setEnabled(true);
+								btn_4.setIcon(new ImageIcon(".//resource//pecas//verticais1//" + l1 +".png"));
+							}else{
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+							}
+						}
+					}
 					break;
 				case 5:
-					arrayH.add(p);
-					btnhumano1.setEnabled(false);
-					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p);
+						btnhumano1.setEnabled(false);
+						btn_5.setEnabled(true);
+						btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p) == 1) {
+							arrayTabuleiro.add(p);
+							btnhumano1.setEnabled(false);
+							btn_5.setEnabled(true);
+							btn_5.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob+ladoa + ".png"));
+						} else {
+							if(al.verificaLadosPedra(arrayTabuleiro, p) == 2){
+								arrayTabuleiro.add(p);
+								btnhumano1.setEnabled(false);
+								btn_5.setEnabled(true);
+								btn_5.setIcon(new ImageIcon(".//resource//pecas//verticais1//" + l1 + ".png"));
+							}else{
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+							}
+						}
+					}
 					break;
 				case 6:
-					arrayH.add(p);
-					btnhumano1.setEnabled(false);
-					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p);
+						btnhumano1.setEnabled(false);
+						btn_6.setEnabled(true);
+						btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p) == 1) {
+							arrayTabuleiro.add(p);
+							btnhumano1.setEnabled(false);
+							btn_6.setEnabled(true);
+							btn_6.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob+ladoa + ".png"));
+						} else {
+							if(al.verificaLadosPedra(arrayTabuleiro, p) == 2){
+								arrayTabuleiro.add(p);
+								btnhumano1.setEnabled(false);
+								btn_6.setEnabled(true);
+								btn_6.setIcon(new ImageIcon(".//resource//pecas//verticais//" + l1 + ".png"));
+							}else{
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+							}
+						}
+					}
 					break;
 				case 7:
-					arrayH.add(p);
-					btnhumano1.setEnabled(false);
-					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p);
+						btnhumano1.setEnabled(false);
+						btn_7.setEnabled(true);
+						btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p) == 1) {
+							arrayTabuleiro.add(p);
+							btnhumano1.setEnabled(false);
+							btn_7.setEnabled(true);
+							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob+ladoa + ".png"));
+						} else {
+							if(al.verificaLadosPedra(arrayTabuleiro, p) == 2){
+								arrayTabuleiro.add(p);
+								btnhumano1.setEnabled(false);
+								btn_7.setEnabled(true);
+								btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" +l1 + ".png"));
+							}else{
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+							}
+						}
+					}
 					break;
 				case 8:
-					arrayM.add(p);
-					btnhumano1.setEnabled(false);
-					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p);
+						btnhumano1.setEnabled(false);
+						btn_8.setEnabled(true);
+						btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p) == 1) {
+							arrayTabuleiro.add(p);
+							btnhumano1.setEnabled(false);
+							btn_8.setEnabled(true);
+							btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob+ladoa + ".png"));
+						} else {
+							if(al.verificaLadosPedra(arrayTabuleiro, p) == 2){
+								arrayTabuleiro.add(p);
+								btnhumano1.setEnabled(false);
+								btn_8.setEnabled(true);
+								btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+							}else{
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+							}
+						}
+					}
 					break;
 				case 9:
-					arrayM.add(p);
-					btnhumano1.setEnabled(false);
-					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p);
+						btnhumano1.setEnabled(false);
+						btn_9.setEnabled(true);
+						btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p) == 1) {
+							arrayTabuleiro.add(p);
+							btnhumano1.setEnabled(false);
+							btn_9.setEnabled(true);
+							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" +ladob+ladoa + ".png"));
+						} else {
+							if(al.verificaLadosPedra(arrayTabuleiro, p) == 2){
+								arrayTabuleiro.add(p);
+								btnhumano1.setEnabled(false);
+								btn_9.setEnabled(true);
+								btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+							}else{
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+							}
+						}
+					}
 					break;
 				case 10:
-					arrayM.add(p);
-					btnhumano1.setEnabled(false);
-					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p);
+						btnhumano1.setEnabled(false);
+						btn_10.setEnabled(true);
+						btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p) == 1) {
+							arrayTabuleiro.add(p);
+							btnhumano1.setEnabled(false);
+							btn_10.setEnabled(true);
+							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob+ladoa + ".png"));
+						} else {
+							if(al.verificaLadosPedra(arrayTabuleiro, p) == 2){
+								arrayTabuleiro.add(p);
+								btnhumano1.setEnabled(false);
+								btn_10.setEnabled(true);
+								btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" +l1 + ".png"));
+							}else{
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+							}
+						}
+					}
 					break;
 				case 11:
-					arrayM.add(p);
-					btnhumano1.setEnabled(false);
-					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p);
+						btnhumano1.setEnabled(false);
+						btn_11.setEnabled(true);
+						btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p) == 1) {
+							arrayTabuleiro.add(p);
+							btnhumano1.setEnabled(false);
+							btn_11.setEnabled(true);
+							btn_11.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob+ladoa + ".png"));
+						} else {
+							if(al.verificaLadosPedra(arrayTabuleiro, p) == 2){
+								arrayTabuleiro.add(p);
+								btnhumano1.setEnabled(false);
+								btn_11.setEnabled(true);
+								btn_11.setIcon(new ImageIcon(".//resource//pecas//verticais1//" + l1 + ".png"));
+							}else{
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+							}
+						}
+					}
 					break;
 				case 12:
-					arrayM.add(p);
-					btnhumano1.setEnabled(false);
-					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p);
+						btnhumano1.setEnabled(false);
+						btn_12.setEnabled(true);
+						btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p) == 1) {
+							arrayTabuleiro.add(p);
+							btnhumano1.setEnabled(false);
+							btn_12.setEnabled(true);
+							btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob+ladoa + ".png"));
+						} else {
+							if(al.verificaLadosPedra(arrayTabuleiro, p) == 2){
+								arrayTabuleiro.add(p);
+								btnhumano1.setEnabled(false);
+								btn_12.setEnabled(true);
+								btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" +l1 + ".png"));
+							}else{
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+							}
+						}
+					}
 					break;
 				case 13:
-					arrayM.add(p);
-					btnhumano1.setEnabled(false);
-					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p);
+						btnhumano1.setEnabled(false);
+						btn_13.setEnabled(true);
+						btn_13.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p) == 1) {
+							arrayTabuleiro.add(p);
+							btnhumano1.setEnabled(false);
+							btn_13.setEnabled(true);
+							btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob+ladoa + ".png"));
+						} else {
+							if(al.verificaLadosPedra(arrayTabuleiro, p) == 2){
+								arrayTabuleiro.add(p);
+								btnhumano1.setEnabled(false);
+								btn_13.setEnabled(true);
+								btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais1//" + l1 + ".png"));
+							}else{
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+							}
+						}
+					}
 					break;
 				case 14:
-					arrayM.add(p);
-					btnhumano1.setEnabled(false);
-					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p);
+						btnhumano1.setEnabled(false);
+						btn_14.setEnabled(true);
+						btn_14.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p) == 1) {
+							arrayTabuleiro.add(p);
+							btnhumano1.setEnabled(false);
+							btn_14.setEnabled(true);
+							btn_14.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob+ladoa + ".png"));
+						} else {
+							if(al.verificaLadosPedra(arrayTabuleiro, p) == 2){
+								arrayTabuleiro.add(p);
+								btnhumano1.setEnabled(false);
+								btn_14.setEnabled(true);
+								btn_14.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+							}else{
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+							}
+						}
+					}
 					break;
-
 				default:
 					JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					break;
@@ -414,9 +668,720 @@ public class TelaDoJogo extends JFrame {
 		btnhumano2 = new JButton("");
 		btnhumano2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				
+				++aux2;
+				Pecas p = arrayH.get(1);
+				String ladoa = p.getLadoEsquerdo().toString(); 
+				String ladob = p.getLadoDireito().toString();
+
+				l2 = ladoa + ladob;
+				
+				switch (aux2) {
+				case 1:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p);
+						btnhumano2.setEnabled(false);
+						btn_1.setEnabled(true);
+						btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l2 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p) == 1) {
+							arrayTabuleiro.add(p);
+							btnhumano2.setEnabled(false);
+							btn_1.setEnabled(true);
+							btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" +ladob+ladoa + ".png"));
+						} else {
+							if(al.verificaLadosPedra(arrayTabuleiro, p) == 2){
+								arrayTabuleiro.add(p);
+								btnhumano2.setEnabled(false);
+								btn_1.setEnabled(true);
+								btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l2 + ".png"));
+							}else{
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+							}
+						}
+					}
+	
+					break;
+				case 2:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p);
+						btnhumano2.setEnabled(false);
+						btn_2.setEnabled(true);
+						btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l2 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p) == 1) {
+							arrayTabuleiro.add(p);
+							btnhumano2.setEnabled(false);
+							btn_2.setEnabled(true);
+							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob+ladoa + ".png"));
+						} else {
+							if(al.verificaLadosPedra(arrayTabuleiro, p) == 2){
+								arrayTabuleiro.add(p);
+								btnhumano2.setEnabled(false);
+								btn_2.setEnabled(true);
+								btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l2 + ".png"));
+							}else{
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+							}
+						}
+					}
+					break;
+				case 3:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p);
+						btnhumano2.setEnabled(false);
+						btn_3.setEnabled(true);
+						btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l2 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p) == 1) {
+							arrayTabuleiro.add(p);
+							btnhumano2.setEnabled(false);
+							btn_3.setEnabled(true);
+							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob+ladoa + ".png"));
+						} else {
+							if(al.verificaLadosPedra(arrayTabuleiro, p) == 2){
+								arrayTabuleiro.add(p);
+								btnhumano2.setEnabled(false);
+								btn_3.setEnabled(true);
+								btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l2 + ".png"));
+							}else{
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+							}
+						}
+					}
+					break;
+				case 4:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p);
+						btnhumano2.setEnabled(false);
+						btn_4.setEnabled(true);
+						btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l2 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p) == 1) {
+							arrayTabuleiro.add(p);
+							btnhumano2.setEnabled(false);
+							btn_4.setEnabled(true);
+							btn_4.setIcon(new ImageIcon(".//resource//pecas//verticais2//" +ladob+ladoa + ".png"));
+						} else {
+							if(al.verificaLadosPedra(arrayTabuleiro, p) == 2){
+								arrayTabuleiro.add(p);
+								btnhumano2.setEnabled(false);
+								btn_4.setEnabled(true);
+								btn_4.setIcon(new ImageIcon(".//resource//pecas//verticais1//" + l2 + ".png"));
+							}else{
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+							}
+						}
+					}
+					break;
+				case 5:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p);
+						btnhumano2.setEnabled(false);
+						btn_5.setEnabled(true);
+						btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l2 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p) == 1) {
+							arrayTabuleiro.add(p);
+							btnhumano2.setEnabled(false);
+							btn_5.setEnabled(true);
+							btn_5.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob+ladoa + ".png"));
+						} else {
+							if(al.verificaLadosPedra(arrayTabuleiro, p) == 2){
+								arrayTabuleiro.add(p);
+								btnhumano2.setEnabled(false);
+								btn_5.setEnabled(true);
+								btn_5.setIcon(new ImageIcon(".//resource//pecas//verticais1//" + l2 + ".png"));
+							}else{
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+							}
+						}
+					}
+					break;
+				case 6:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p);
+						btnhumano2.setEnabled(false);
+						btn_6.setEnabled(true);
+						btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l2 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p) == 1) {
+							arrayTabuleiro.add(p);
+							btnhumano2.setEnabled(false);
+							btn_6.setEnabled(true);
+							btn_6.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob+ladoa + ".png"));
+						} else {
+							if(al.verificaLadosPedra(arrayTabuleiro, p) == 2){
+								arrayTabuleiro.add(p);
+								btnhumano2.setEnabled(false);
+								btn_6.setEnabled(true);
+								btn_6.setIcon(new ImageIcon(".//resource//pecas//verticais1//" + l2 + ".png"));
+							}else{
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+							}
+						}
+					}
+					break;
+				case 7:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p);
+						btnhumano2.setEnabled(false);
+						btn_7.setEnabled(true);
+						btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l2 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p) == 1) {
+							arrayTabuleiro.add(p);
+							btnhumano2.setEnabled(false);
+							btn_7.setEnabled(true);
+							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" +ladob+ladoa + ".png"));
+						} else {
+							if(al.verificaLadosPedra(arrayTabuleiro, p) == 2){
+								arrayTabuleiro.add(p);
+								btnhumano2.setEnabled(false);
+								btn_7.setEnabled(true);
+								btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" +l2 + ".png"));
+							}else{
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+							}
+						}
+					}
+					break;
+				case 8:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p);
+						btnhumano2.setEnabled(false);
+						btn_8.setEnabled(true);
+						btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l2 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p) == 1) {
+							arrayTabuleiro.add(p);
+							btnhumano2.setEnabled(false);
+							btn_8.setEnabled(true);
+							btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob+ladoa + ".png"));
+						} else {
+							if(al.verificaLadosPedra(arrayTabuleiro, p) == 2){
+								arrayTabuleiro.add(p);
+								btnhumano2.setEnabled(false);
+								btn_8.setEnabled(true);
+								btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l2 + ".png"));
+							}else{
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+							}
+						}
+					}
+					break;
+				case 9:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p);
+						btnhumano2.setEnabled(false);
+						btn_9.setEnabled(true);
+						btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l2 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p) == 1) {
+							arrayTabuleiro.add(p);
+							btnhumano2.setEnabled(false);
+							btn_9.setEnabled(true);
+							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob+ladoa + ".png"));
+						} else {
+							if(al.verificaLadosPedra(arrayTabuleiro, p) == 2){
+								arrayTabuleiro.add(p);
+								btnhumano2.setEnabled(false);
+								btn_9.setEnabled(true);
+								btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l2 + ".png"));
+							}else{
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+							}
+						}
+					}
+					break;
+				case 10:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p);
+						btnhumano2.setEnabled(false);
+						btn_10.setEnabled(true);
+						btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l2 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p) == 1) {
+							arrayTabuleiro.add(p);
+							btnhumano2.setEnabled(false);
+							btn_10.setEnabled(true);
+							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob+ladoa + ".png"));
+						} else {
+							if(al.verificaLadosPedra(arrayTabuleiro, p) == 2){
+								arrayTabuleiro.add(p);
+								btnhumano2.setEnabled(false);
+								btn_10.setEnabled(true);
+								btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l2 + ".png"));
+							}else{
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+							}
+						}
+					}
+					break;
+				case 11:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p);
+						btnhumano2.setEnabled(false);
+						btn_11.setEnabled(true);
+						btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l2 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p) == 1) {
+							arrayTabuleiro.add(p);
+							btnhumano2.setEnabled(false);
+							btn_11.setEnabled(true);
+							btn_11.setIcon(new ImageIcon(".//resource//pecas//verticais1//" + l2 + ".png"));
+						} else {
+							if(al.verificaLadosPedra(arrayTabuleiro, p) == 2){
+								arrayTabuleiro.add(p);
+								btnhumano2.setEnabled(false);
+								btn_11.setEnabled(true);
+								btn_11.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob+ladoa + ".png"));
+							}else{
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+							}
+						}
+					}
+					break;
+				case 12:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p);
+						btnhumano2.setEnabled(false);
+						btn_12.setEnabled(true);
+						btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l2 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p) == 1) {
+							arrayTabuleiro.add(p);
+							btnhumano2.setEnabled(false);
+							btn_12.setEnabled(true);
+							btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob+ladoa + ".png"));
+						} else {
+							if(al.verificaLadosPedra(arrayTabuleiro, p) == 2){
+								arrayTabuleiro.add(p);
+								btnhumano2.setEnabled(false);
+								btn_12.setEnabled(true);
+								btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" +l2 + ".png"));
+							}else{
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+							}
+						}
+					}
+					break;
+				case 13:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p);
+						btnhumano2.setEnabled(false);
+						btn_13.setEnabled(true);
+						btn_13.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l2 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p) == 1) {
+							arrayTabuleiro.add(p);
+							btnhumano2.setEnabled(false);
+							btn_13.setEnabled(true);
+							btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob+ladoa + ".png"));
+						} else {
+							if(al.verificaLadosPedra(arrayTabuleiro, p) == 2){
+								arrayTabuleiro.add(p);
+								btnhumano2.setEnabled(false);
+								btn_13.setEnabled(true);
+								btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais1//" + l2 + ".png"));
+							}else{
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+							}
+						}
+					}
+					break;
+				case 14:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p);
+						btnhumano2.setEnabled(false);
+						btn_14.setEnabled(true);
+						btn_14.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l2 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p) == 1) {
+							arrayTabuleiro.add(p);
+							btnhumano2.setEnabled(false);
+							btn_14.setEnabled(true);
+							btn_14.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob+ladoa + ".png"));
+						} else {
+							if(al.verificaLadosPedra(arrayTabuleiro, p) == 2){
+								arrayTabuleiro.add(p);
+								btnhumano2.setEnabled(false);
+								btn_14.setEnabled(true);
+								btn_14.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l2 + ".png"));
+							}else{
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+							}
+						}
+					}
+					break;
+				default:
+					JOptionPane.showMessageDialog(null, "Peças esgotadas");
+					break;
+				}
+				
+				
 			}
 		});
 		btnhumano3 = new JButton("");
+		btnhumano3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				
+				++aux2;
+				Pecas p = arrayH.get(2);
+				String ladoa = p.getLadoEsquerdo().toString(); 
+				String ladob = p.getLadoDireito().toString();
+
+				l3 = ladoa + ladob;
+				
+				switch (aux2) {
+				case 1:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p);
+						btnhumano3.setEnabled(false);
+						btn_1.setEnabled(true);
+						btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l3 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p) == 1) {
+							arrayTabuleiro.add(p);
+							btnhumano3.setEnabled(false);
+							btn_1.setEnabled(true);
+							btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" +ladob+ladoa + ".png"));
+						} else {
+							if(al.verificaLadosPedra(arrayTabuleiro, p) == 2){
+								arrayTabuleiro.add(p);
+								btnhumano3.setEnabled(false);
+								btn_1.setEnabled(true);
+								btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l3 + ".png"));
+							}else{
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+							}
+						}
+					}
+	
+					break;
+				case 2:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p);
+						btnhumano3.setEnabled(false);
+						btn_2.setEnabled(true);
+						btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l3 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p) == 1) {
+							arrayTabuleiro.add(p);
+							btnhumano3.setEnabled(false);
+							btn_2.setEnabled(true);
+							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob+ladoa + ".png"));
+						} else {
+							if(al.verificaLadosPedra(arrayTabuleiro, p) == 2){
+								arrayTabuleiro.add(p);
+								btnhumano3.setEnabled(false);
+								btn_2.setEnabled(true);
+								btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l3 + ".png"));
+							}else{
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+							}
+						}
+					}
+					break;
+				case 3:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p);
+						btnhumano3.setEnabled(false);
+						btn_3.setEnabled(true);
+						btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l3 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p) == 1) {
+							arrayTabuleiro.add(p);
+							btnhumano3.setEnabled(false);
+							btn_3.setEnabled(true);
+							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob+ladoa + ".png"));
+						} else {
+							if(al.verificaLadosPedra(arrayTabuleiro, p) == 2){
+								arrayTabuleiro.add(p);
+								btnhumano2.setEnabled(false);
+								btn_3.setEnabled(true);
+								btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l3 + ".png"));
+							}else{
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+							}
+						}
+					}
+					break;
+				case 4:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p);
+						btnhumano3.setEnabled(false);
+						btn_4.setEnabled(true);
+						btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l3 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p) == 1) {
+							arrayTabuleiro.add(p);
+							btnhumano2.setEnabled(false);
+							btn_4.setEnabled(true);
+							btn_4.setIcon(new ImageIcon(".//resource//pecas//verticais2//" +ladob+ladoa + ".png"));
+						} else {
+							if(al.verificaLadosPedra(arrayTabuleiro, p) == 2){
+								arrayTabuleiro.add(p);
+								btnhumano3.setEnabled(false);
+								btn_4.setEnabled(true);
+								btn_4.setIcon(new ImageIcon(".//resource//pecas//verticais1//" + l3 + ".png"));
+							}else{
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+							}
+						}
+					}
+					break;
+				case 5:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p);
+						btnhumano3.setEnabled(false);
+						btn_5.setEnabled(true);
+						btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l3 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p) == 1) {
+							arrayTabuleiro.add(p);
+							btnhumano2.setEnabled(false);
+							btn_5.setEnabled(true);
+							btn_5.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob+ladoa + ".png"));
+						} else {
+							if(al.verificaLadosPedra(arrayTabuleiro, p) == 2){
+								arrayTabuleiro.add(p);
+								btnhumano3.setEnabled(false);
+								btn_5.setEnabled(true);
+								btn_5.setIcon(new ImageIcon(".//resource//pecas//verticais1//" + l3 + ".png"));
+							}else{
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+							}
+						}
+					}
+					break;
+				case 6:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p);
+						btnhumano3.setEnabled(false);
+						btn_6.setEnabled(true);
+						btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l3 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p) == 1) {
+							arrayTabuleiro.add(p);
+							btnhumano3.setEnabled(false);
+							btn_6.setEnabled(true);
+							btn_6.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob+ladoa + ".png"));
+						} else {
+							if(al.verificaLadosPedra(arrayTabuleiro, p) == 2){
+								arrayTabuleiro.add(p);
+								btnhumano3.setEnabled(false);
+								btn_6.setEnabled(true);
+								btn_6.setIcon(new ImageIcon(".//resource//pecas//verticais1//" + l3 + ".png"));
+							}else{
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+							}
+						}
+					}
+					break;
+				case 7:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p);
+						btnhumano3.setEnabled(false);
+						btn_7.setEnabled(true);
+						btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l3 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p) == 1) {
+							arrayTabuleiro.add(p);
+							btnhumano3.setEnabled(false);
+							btn_7.setEnabled(true);
+							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" +ladob+ladoa + ".png"));
+						} else {
+							if(al.verificaLadosPedra(arrayTabuleiro, p) == 2){
+								arrayTabuleiro.add(p);
+								btnhumano3.setEnabled(false);
+								btn_7.setEnabled(true);
+								btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" +l3 + ".png"));
+							}else{
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+							}
+						}
+					}
+					break;
+				case 8:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p);
+						btnhumano3.setEnabled(false);
+						btn_8.setEnabled(true);
+						btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l3 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p) == 1) {
+							arrayTabuleiro.add(p);
+							btnhumano3.setEnabled(false);
+							btn_8.setEnabled(true);
+							btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob+ladoa + ".png"));
+						} else {
+							if(al.verificaLadosPedra(arrayTabuleiro, p) == 2){
+								arrayTabuleiro.add(p);
+								btnhumano3.setEnabled(false);
+								btn_8.setEnabled(true);
+								btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l3 + ".png"));
+							}else{
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+							}
+						}
+					}
+					break;
+				case 9:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p);
+						btnhumano3.setEnabled(false);
+						btn_9.setEnabled(true);
+						btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l3 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p) == 1) {
+							arrayTabuleiro.add(p);
+							btnhumano3.setEnabled(false);
+							btn_9.setEnabled(true);
+							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob+ladoa + ".png"));
+						} else {
+							if(al.verificaLadosPedra(arrayTabuleiro, p) == 2){
+								arrayTabuleiro.add(p);
+								btnhumano3.setEnabled(false);
+								btn_9.setEnabled(true);
+								btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l3 + ".png"));
+							}else{
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+							}
+						}
+					}
+					break;
+				case 10:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p);
+						btnhumano3.setEnabled(false);
+						btn_10.setEnabled(true);
+						btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l3 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p) == 1) {
+							arrayTabuleiro.add(p);
+							btnhumano3.setEnabled(false);
+							btn_10.setEnabled(true);
+							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob+ladoa + ".png"));
+						} else {
+							if(al.verificaLadosPedra(arrayTabuleiro, p) == 2){
+								arrayTabuleiro.add(p);
+								btnhumano3.setEnabled(false);
+								btn_10.setEnabled(true);
+								btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l3 + ".png"));
+							}else{
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+							}
+						}
+					}
+					break;
+				case 11:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p);
+						btnhumano3.setEnabled(false);
+						btn_11.setEnabled(true);
+						btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l3 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p) == 1) {
+							arrayTabuleiro.add(p);
+							btnhumano3.setEnabled(false);
+							btn_11.setEnabled(true);
+							btn_11.setIcon(new ImageIcon(".//resource//pecas//verticais1//" + l3 + ".png"));
+						} else {
+							if(al.verificaLadosPedra(arrayTabuleiro, p) == 2){
+								arrayTabuleiro.add(p);
+								btnhumano3.setEnabled(false);
+								btn_11.setEnabled(true);
+								btn_11.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob+ladoa + ".png"));
+							}else{
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+							}
+						}
+					}
+					break;
+				case 12:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p);
+						btnhumano3.setEnabled(false);
+						btn_12.setEnabled(true);
+						btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l3 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p) == 1) {
+							arrayTabuleiro.add(p);
+							btnhumano3.setEnabled(false);
+							btn_12.setEnabled(true);
+							btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob+ladoa + ".png"));
+						} else {
+							if(al.verificaLadosPedra(arrayTabuleiro, p) == 2){
+								arrayTabuleiro.add(p);
+								btnhumano3.setEnabled(false);
+								btn_12.setEnabled(true);
+								btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" +l3 + ".png"));
+							}else{
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+							}
+						}
+					}
+					break;
+				case 13:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p);
+						btnhumano3.setEnabled(false);
+						btn_13.setEnabled(true);
+						btn_13.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l3 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p) == 1) {
+							arrayTabuleiro.add(p);
+							btnhumano3.setEnabled(false);
+							btn_13.setEnabled(true);
+							btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob+ladoa + ".png"));
+						} else {
+							if(al.verificaLadosPedra(arrayTabuleiro, p) == 2){
+								arrayTabuleiro.add(p);
+								btnhumano3.setEnabled(false);
+								btn_13.setEnabled(true);
+								btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais1//" + l3 + ".png"));
+							}else{
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+							}
+						}
+					}
+					break;
+				case 14:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p);
+						btnhumano3.setEnabled(false);
+						btn_14.setEnabled(true);
+						btn_14.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l3 + ".png"));
+					} else {
+						if (al.verificaLadosPedra(arrayTabuleiro, p) == 1) {
+							arrayTabuleiro.add(p);
+							btnhumano3.setEnabled(false);
+							btn_14.setEnabled(true);
+							btn_14.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob+ladoa + ".png"));
+						} else {
+							if(al.verificaLadosPedra(arrayTabuleiro, p) == 2){
+								arrayTabuleiro.add(p);
+								btnhumano3.setEnabled(false);
+								btn_14.setEnabled(true);
+								btn_14.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l3 + ".png"));
+							}else{
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+							}
+						}
+					}
+					break;
+				default:
+					JOptionPane.showMessageDialog(null, "Peças esgotadas");
+					break;
+				}
+				
+				
+				
+				
+				
+			}
+		});
 		btnhumano4 = new JButton("");
 		btnhumano5 = new JButton("");
 		btnhumano6 = new JButton("");
@@ -464,8 +1429,8 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(0);
-				String ladoa = p.getLadoDireito().toString();
-				String ladob = p.getLadoEsquerdo().toString();
+				String ladoa = p.getLadoEsquerdo().toString(); 
+				String ladob = p.getLadoDireito().toString(); 
 
 				l1 = ladoa + ladob;
 
@@ -473,72 +1438,72 @@ public class TelaDoJogo extends JFrame {
 				case 1:
 					arrayH.add(p);
 					btnpeca1.setEnabled(false);
-					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l1 + ".png"));
 					break;
 				case 2:
 					arrayH.add(p);
 					btnpeca1.setEnabled(false);
-					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l1 + ".png"));
 					break;
 				case 3:
 					arrayH.add(p);
 					btnpeca1.setEnabled(false);
-					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l1 + ".png"));
 					break;
 				case 4:
 					arrayH.add(p);
 					btnpeca1.setEnabled(false);
-					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l1 + ".png"));
 					break;
 				case 5:
 					arrayH.add(p);
 					btnpeca1.setEnabled(false);
-					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l1 + ".png"));
 					break;
 				case 6:
 					arrayH.add(p);
 					btnpeca1.setEnabled(false);
-					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l1 + ".png"));
 					break;
 				case 7:
 					arrayH.add(p);
 					btnpeca1.setEnabled(false);
-					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l1 + ".png"));
 					break;
 				case 8:
 					arrayM.add(p);
 					btnpeca1.setEnabled(false);
-					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l1 + ".png"));
 					break;
 				case 9:
 					arrayM.add(p);
 					btnpeca1.setEnabled(false);
-					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l1 + ".png"));
 					break;
 				case 10:
 					arrayM.add(p);
 					btnpeca1.setEnabled(false);
-					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l1 + ".png"));
 					break;
 				case 11:
 					arrayM.add(p);
 					btnpeca1.setEnabled(false);
-					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l1 + ".png"));
 					break;
 				case 12:
 					arrayM.add(p);
 					btnpeca1.setEnabled(false);
-					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l1 + ".png"));
 					break;
 				case 13:
 					arrayM.add(p);
 					btnpeca1.setEnabled(false);
-					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l1 + ".png"));
 					break;
 				case 14:
 					arrayM.add(p);
 					btnpeca1.setEnabled(false);
-					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l1 + ".png"));
+					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l1 + ".png"));
 					break;
 
 				default:
@@ -564,80 +1529,80 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(1);
-				String ladoa = p.getLadoDireito().toString();
-				String ladob = p.getLadoEsquerdo().toString();
+				String ladoa = p.getLadoEsquerdo().toString(); 
+				String ladob = p.getLadoDireito().toString();
 
 				l2 = ladoa + ladob;
 				switch (aux) {
 				case 1:
 					arrayH.add(p);
 					btnpeca2.setEnabled(false);
-					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l2 + ".png"));
+					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l2 + ".png"));
 					break;
 				case 2:
 					arrayH.add(p);
 					btnpeca2.setEnabled(false);
-					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l2 + ".png"));
+					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l2 + ".png"));
 					break;
 				case 3:
 					arrayH.add(p);
 					btnpeca2.setEnabled(false);
-					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l2 + ".png"));
+					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l2 + ".png"));
 					break;
 				case 4:
 					arrayH.add(p);
 					btnpeca2.setEnabled(false);
-					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l2 + ".png"));
+					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l2 + ".png"));
 					break;
 				case 5:
 					arrayH.add(p);
 					btnpeca2.setEnabled(false);
-					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l2 + ".png"));
+					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l2 + ".png"));
 					break;
 				case 6:
 					arrayH.add(p);
 					btnpeca2.setEnabled(false);
-					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l2 + ".png"));
+					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l2 + ".png"));
 					break;
 				case 7:
 					arrayH.add(p);
 					btnpeca2.setEnabled(false);
-					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l2 + ".png"));
+					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l2 + ".png"));
 					break;
 				case 8:
 					arrayM.add(p);
 					btnpeca2.setEnabled(false);
-					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l2 + ".png"));
+					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l2 + ".png"));
 					break;
 				case 9:
 					arrayM.add(p);
 					btnpeca2.setEnabled(false);
-					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l2 + ".png"));
+					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l2 + ".png"));
 					break;
 				case 10:
 					arrayM.add(p);
 					btnpeca2.setEnabled(false);
-					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l2 + ".png"));
+					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l2 + ".png"));
 					break;
 				case 11:
 					arrayM.add(p);
 					btnpeca2.setEnabled(false);
-					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l2 + ".png"));
+					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l2 + ".png"));
 					break;
 				case 12:
 					arrayM.add(p);
 					btnpeca2.setEnabled(false);
-					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l2 + ".png"));
+					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l2 + ".png"));
 					break;
 				case 13:
 					arrayM.add(p);
 					btnpeca2.setEnabled(false);
-					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l2 + ".png"));
+					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l2 + ".png"));
 					break;
 				case 14:
 					arrayM.add(p);
 					btnpeca2.setEnabled(false);
-					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l2 + ".png"));
+					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l2 + ".png"));
 					break;
 
 				default:
@@ -663,81 +1628,80 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(2);
-				String ladoa = p.getLadoDireito().toString();
-				String ladob = p.getLadoEsquerdo().toString();
-
+				String ladoa = p.getLadoEsquerdo().toString(); 
+				String ladob = p.getLadoDireito().toString();
 				l3 = ladoa + ladob;
 
 				switch (aux) {
 				case 1:
 					arrayH.add(p);
 					btnpeca3.setEnabled(false);
-					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l3 + ".png"));
+					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l3 + ".png"));
 					break;
 				case 2:
 					arrayH.add(p);
 					btnpeca3.setEnabled(false);
-					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l3 + ".png"));
+					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l3 + ".png"));
 					break;
 				case 3:
 					arrayH.add(p);
 					btnpeca3.setEnabled(false);
-					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l3 + ".png"));
+					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l3 + ".png"));
 					break;
 				case 4:
 					arrayH.add(p);
 					btnpeca3.setEnabled(false);
-					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l3 + ".png"));
+					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l3 + ".png"));
 					break;
 				case 5:
 					arrayH.add(p);
 					btnpeca3.setEnabled(false);
-					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l3 + ".png"));
+					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l3 + ".png"));
 					break;
 				case 6:
 					arrayH.add(p);
 					btnpeca3.setEnabled(false);
-					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l3 + ".png"));
+					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas/verticais1///" + l3 + ".png"));
 					break;
 				case 7:
 					arrayH.add(p);
 					btnpeca3.setEnabled(false);
-					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l3 + ".png"));
+					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l3 + ".png"));
 					break;
 				case 8:
 					arrayM.add(p);
 					btnpeca3.setEnabled(false);
-					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l3 + ".png"));
+					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l3 + ".png"));
 					break;
 				case 9:
 					arrayM.add(p);
 					btnpeca3.setEnabled(false);
-					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l3 + ".png"));
+					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l3 + ".png"));
 					break;
 				case 10:
 					arrayM.add(p);
 					btnpeca3.setEnabled(false);
-					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l3 + ".png"));
+					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l3 + ".png"));
 					break;
 				case 11:
 					arrayM.add(p);
 					btnpeca3.setEnabled(false);
-					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l3 + ".png"));
+					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l3 + ".png"));
 					break;
 				case 12:
 					arrayM.add(p);
 					btnpeca3.setEnabled(false);
-					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l3 + ".png"));
+					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l3 + ".png"));
 					break;
 				case 13:
 					arrayM.add(p);
 					btnpeca3.setEnabled(false);
-					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l3 + ".png"));
+					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l3 + ".png"));
 					break;
 				case 14:
 					arrayM.add(p);
 					btnpeca3.setEnabled(false);
-					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l3 + ".png"));
+					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l3 + ".png"));
 					break;
 
 				default:
@@ -761,8 +1725,8 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(3);
-				String ladoa = p.getLadoDireito().toString();
-				String ladob = p.getLadoEsquerdo().toString();
+				String ladoa = p.getLadoEsquerdo().toString(); 
+				String ladob = p.getLadoDireito().toString();
 
 				l4 = ladoa + ladob;
 
@@ -770,73 +1734,73 @@ public class TelaDoJogo extends JFrame {
 				case 1:
 					arrayH.add(p);
 					btnpeca4.setEnabled(false);
-					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l4 + ".png"));
+					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l4 + ".png"));
 					break;
 				case 2:
 					arrayH.add(p);
 					btnpeca4.setEnabled(false);
-					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l4 + ".png"));
+					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l4 + ".png"));
 					break;
 				case 3:
 					arrayH.add(p);
 					btnpeca4.setEnabled(false);
-					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l4 + ".png"));
+					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l4 + ".png"));
 					break;
 				case 4:
 					arrayH.add(p);
 					btnpeca4.setEnabled(false);
-					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l4 + ".png"));
+					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l4 + ".png"));
 					break;
 				case 5:
 					arrayH.add(p);
 					btnpeca4.setEnabled(false);
-					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l4 + ".png"));
+					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l4 + ".png"));
 					break;
 				case 6:
 					arrayH.add(p);
 					btnpeca4.setEnabled(false);
-					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l4 + ".png"));
+					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l4 + ".png"));
 					break;
 				case 7:
 					arrayH.add(p);
 					btnpeca4.setEnabled(false);
-					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l4 + ".png"));
+					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l4 + ".png"));
 					break;
 				case 8:
 					arrayM.add(p);
 					btnpeca4.setEnabled(false);
-					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l4 + ".png"));
+					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l4 + ".png"));
 
 					break;
 				case 9:
 					arrayM.add(p);
 					btnpeca4.setEnabled(false);
-					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l4 + ".png"));
+					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l4 + ".png"));
 					break;
 				case 10:
 					arrayM.add(p);
 					btnpeca4.setEnabled(false);
-					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l4 + ".png"));
+					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l4 + ".png"));
 					break;
 				case 11:
 					arrayM.add(p);
 					btnpeca4.setEnabled(false);
-					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l4 + ".png"));
+					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l4 + ".png"));
 					break;
 				case 12:
 					arrayM.add(p);
 					btnpeca4.setEnabled(false);
-					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l4 + ".png"));
+					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l4 + ".png"));
 					break;
 				case 13:
 					arrayM.add(p);
 					btnpeca4.setEnabled(false);
-					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l4 + ".png"));
+					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l4 + ".png"));
 					break;
 				case 14:
 					arrayM.add(p);
 					btnpeca4.setEnabled(false);
-					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l4 + ".png"));
+					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l4 + ".png"));
 					break;
 
 				default:
@@ -861,8 +1825,8 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(4);
-				String ladoa = p.getLadoDireito().toString();
-				String ladob = p.getLadoEsquerdo().toString();
+				String ladoa = p.getLadoEsquerdo().toString(); 
+				String ladob = p.getLadoDireito().toString();
 
 				l5 = ladoa + ladob;
 
@@ -870,72 +1834,72 @@ public class TelaDoJogo extends JFrame {
 				case 1:
 					arrayH.add(p);
 					btnpeca5.setEnabled(false);
-					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l5 + ".png"));
+					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l5 + ".png"));
 					break;
 				case 2:
 					arrayH.add(p);
 					btnpeca5.setEnabled(false);
-					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l5 + ".png"));
+					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l5 + ".png"));
 					break;
 				case 3:
 					arrayH.add(p);
 					btnpeca5.setEnabled(false);
-					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l5 + ".png"));
+					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l5 + ".png"));
 					break;
 				case 4:
 					arrayH.add(p);
 					btnpeca5.setEnabled(false);
-					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l5 + ".png"));
+					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l5 + ".png"));
 					break;
 				case 5:
 					arrayH.add(p);
 					btnpeca5.setEnabled(false);
-					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l5 + ".png"));
+					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l5 + ".png"));
 					break;
 				case 6:
 					arrayH.add(p);
 					btnpeca5.setEnabled(false);
-					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l5 + ".png"));
+					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l5 + ".png"));
 					break;
 				case 7:
 					arrayH.add(p);
 					btnpeca5.setEnabled(false);
-					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l5 + ".png"));
+					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l5 + ".png"));
 					break;
 				case 8:
 					arrayM.add(p);
 					btnpeca5.setEnabled(false);
-					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l5 + ".png"));
+					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l5 + ".png"));
 					break;
 				case 9:
 					arrayM.add(p);
 					btnpeca5.setEnabled(false);
-					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l5 + ".png"));
+					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l5 + ".png"));
 					break;
 				case 10:
 					arrayM.add(p);
 					btnpeca5.setEnabled(false);
-					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l5 + ".png"));
+					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l5 + ".png"));
 					break;
 				case 11:
 					arrayM.add(p);
 					btnpeca5.setEnabled(false);
-					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l5 + ".png"));
+					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l5 + ".png"));
 					break;
 				case 12:
 					arrayM.add(p);
 					btnpeca5.setEnabled(false);
-					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l5 + ".png"));
+					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l5 + ".png"));
 					break;
 				case 13:
 					arrayM.add(p);
 					btnpeca5.setEnabled(false);
-					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l5 + ".png"));
+					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l5 + ".png"));
 					break;
 				case 14:
 					arrayM.add(p);
 					btnpeca5.setEnabled(false);
-					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l5 + ".png"));
+					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l5 + ".png"));
 					break;
 
 				default:
@@ -960,8 +1924,8 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(5);
-				String ladoa = p.getLadoDireito().toString();
-				String ladob = p.getLadoEsquerdo().toString();
+				String ladoa = p.getLadoEsquerdo().toString(); 
+				String ladob = p.getLadoDireito().toString();
 
 				l6 = ladoa + ladob;
 
@@ -969,72 +1933,72 @@ public class TelaDoJogo extends JFrame {
 				case 1:
 					arrayH.add(p);
 					btnpeca6.setEnabled(false);
-					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l6 + ".png"));
+					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l6 + ".png"));
 					break;
 				case 2:
 					arrayH.add(p);
 					btnpeca6.setEnabled(false);
-					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l6 + ".png"));
+					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l6 + ".png"));
 					break;
 				case 3:
 					arrayH.add(p);
 					btnpeca6.setEnabled(false);
-					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l6 + ".png"));
+					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l6 + ".png"));
 					break;
 				case 4:
 					arrayH.add(p);
 					btnpeca6.setEnabled(false);
-					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l6 + ".png"));
+					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l6 + ".png"));
 					break;
 				case 5:
 					arrayH.add(p);
 					btnpeca6.setEnabled(false);
-					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l6 + ".png"));
+					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l6 + ".png"));
 					break;
 				case 6:
 					arrayH.add(p);
 					btnpeca6.setEnabled(false);
-					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l6 + ".png"));
+					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l6 + ".png"));
 					break;
 				case 7:
 					arrayH.add(p);
 					btnpeca6.setEnabled(false);
-					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l6 + ".png"));
+					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l6 + ".png"));
 					break;
 				case 8:
 					arrayM.add(p);
 					btnpeca6.setEnabled(false);
-					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l6 + ".png"));
+					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l6 + ".png"));
 					break;
 				case 9:
 					arrayM.add(p);
 					btnpeca6.setEnabled(false);
-					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l6 + ".png"));
+					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l6 + ".png"));
 					break;
 				case 10:
 					arrayM.add(p);
 					btnpeca6.setEnabled(false);
-					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l6 + ".png"));
+					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l6 + ".png"));
 					break;
 				case 11:
 					arrayM.add(p);
 					btnpeca6.setEnabled(false);
-					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l6 + ".png"));
+					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l6 + ".png"));
 					break;
 				case 12:
 					arrayM.add(p);
 					btnpeca6.setEnabled(false);
-					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l6 + ".png"));
+					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l6 + ".png"));
 					break;
 				case 13:
 					arrayM.add(p);
 					btnpeca6.setEnabled(false);
-					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l6 + ".png"));
+					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l6 + ".png"));
 					break;
 				case 14:
 					arrayM.add(p);
 					btnpeca6.setEnabled(false);
-					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l6 + ".png"));
+					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l6 + ".png"));
 					break;
 
 				default:
@@ -1060,81 +2024,80 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(6);
-				String ladoa = p.getLadoDireito().toString();
-				String ladob = p.getLadoEsquerdo().toString();
-
+				String ladoa = p.getLadoEsquerdo().toString(); 
+				String ladob = p.getLadoDireito().toString();
 				l7 = ladoa + ladob;
 
 				switch (aux) {
 				case 1:
 					arrayH.add(p);
 					btnpeca7.setEnabled(false);
-					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l7 + ".png"));
+					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l7 + ".png"));
 					break;
 				case 2:
 					arrayH.add(p);
 					btnpeca7.setEnabled(false);
-					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l7 + ".png"));
+					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l7 + ".png"));
 					break;
 				case 3:
 					arrayH.add(p);
 					btnpeca7.setEnabled(false);
-					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l7 + ".png"));
+					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l7 + ".png"));
 					break;
 				case 4:
 					arrayH.add(p);
 					btnpeca7.setEnabled(false);
-					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l7 + ".png"));
+					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l7 + ".png"));
 					break;
 				case 5:
 					arrayH.add(p);
 					btnpeca7.setEnabled(false);
-					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l7 + ".png"));
+					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l7 + ".png"));
 					break;
 				case 6:
 					arrayH.add(p);
 					btnpeca7.setEnabled(false);
-					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l7 + ".png"));
+					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l7 + ".png"));
 					break;
 				case 7:
 					arrayH.add(p);
 					btnpeca7.setEnabled(false);
-					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l7 + ".png"));
+					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l7 + ".png"));
 					break;
 				case 8:
 					arrayM.add(p);
 					btnpeca7.setEnabled(false);
-					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l7 + ".png"));
+					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l7 + ".png"));
 					break;
 				case 9:
 					arrayM.add(p);
 					btnpeca7.setEnabled(false);
-					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l7 + ".png"));
+					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l7 + ".png"));
 					break;
 				case 10:
 					arrayM.add(p);
 					btnpeca7.setEnabled(false);
-					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l7 + ".png"));
+					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l7 + ".png"));
 					break;
 				case 11:
 					arrayM.add(p);
 					btnpeca7.setEnabled(false);
-					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l7 + ".png"));
+					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l7 + ".png"));
 					break;
 				case 12:
 					arrayM.add(p);
 					btnpeca7.setEnabled(false);
-					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l7 + ".png"));
+					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l7 + ".png"));
 					break;
 				case 13:
 					arrayM.add(p);
 					btnpeca7.setEnabled(false);
-					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l7 + ".png"));
+					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l7 + ".png"));
 					break;
 				case 14:
 					arrayM.add(p);
 					btnpeca7.setEnabled(false);
-					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l7 + ".png"));
+					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l7 + ".png"));
 					break;
 
 				default:
@@ -1160,8 +2123,8 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(7);
-				String ladoa = p.getLadoDireito().toString();
-				String ladob = p.getLadoEsquerdo().toString();
+				String ladoa = p.getLadoEsquerdo().toString(); 
+				String ladob = p.getLadoDireito().toString();
 
 				l8 = ladoa + ladob;
 
@@ -1169,72 +2132,72 @@ public class TelaDoJogo extends JFrame {
 				case 1:
 					arrayH.add(p);
 					btnpeca8.setEnabled(false);
-					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l8 + ".png"));
+					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l8 + ".png"));
 					break;
 				case 2:
 					arrayH.add(p);
 					btnpeca8.setEnabled(false);
-					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l8 + ".png"));
+					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l8 + ".png"));
 					break;
 				case 3:
 					arrayH.add(p);
 					btnpeca8.setEnabled(false);
-					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l8 + ".png"));
+					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l8 + ".png"));
 					break;
 				case 4:
 					arrayH.add(p);
 					btnpeca8.setEnabled(false);
-					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l8 + ".png"));
+					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l8 + ".png"));
 					break;
 				case 5:
 					arrayH.add(p);
 					btnpeca8.setEnabled(false);
-					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l8 + ".png"));
+					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l8 + ".png"));
 					break;
 				case 6:
 					arrayH.add(p);
 					btnpeca8.setEnabled(false);
-					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l8 + ".png"));
+					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l8 + ".png"));
 					break;
 				case 7:
 					arrayH.add(p);
 					btnpeca8.setEnabled(false);
-					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l8 + ".png"));
+					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l8 + ".png"));
 					break;
 				case 8:
 					arrayM.add(p);
 					btnpeca8.setEnabled(false);
-					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l8 + ".png"));
+					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l8 + ".png"));
 					break;
 				case 9:
 					arrayM.add(p);
 					btnpeca8.setEnabled(false);
-					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l8 + ".png"));
+					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l8 + ".png"));
 					break;
 				case 10:
 					arrayM.add(p);
 					btnpeca8.setEnabled(false);
-					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l8 + ".png"));
+					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l8 + ".png"));
 					break;
 				case 11:
 					arrayM.add(p);
 					btnpeca8.setEnabled(false);
-					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l8 + ".png"));
+					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l8 + ".png"));
 					break;
 				case 12:
 					arrayM.add(p);
 					btnpeca8.setEnabled(false);
-					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l8 + ".png"));
+					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l8 + ".png"));
 					break;
 				case 13:
 					arrayM.add(p);
 					btnpeca8.setEnabled(false);
-					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l8 + ".png"));
+					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l8 + ".png"));
 					break;
 				case 14:
 					arrayM.add(p);
 					btnpeca8.setEnabled(false);
-					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l8 + ".png"));
+					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l8 + ".png"));
 					break;
 
 				default:
@@ -1259,8 +2222,8 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(8);
-				String ladoa = p.getLadoDireito().toString();
-				String ladob = p.getLadoEsquerdo().toString();
+				String ladoa = p.getLadoEsquerdo().toString(); 
+				String ladob = p.getLadoDireito().toString();
 
 				l9 = ladoa + ladob;
 
@@ -1268,72 +2231,72 @@ public class TelaDoJogo extends JFrame {
 				case 1:
 					arrayH.add(p);
 					btnpeca9.setEnabled(false);
-					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l9 + ".png"));
+					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l9 + ".png"));
 					break;
 				case 2:
 					arrayH.add(p);
 					btnpeca9.setEnabled(false);
-					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l9 + ".png"));
+					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l9 + ".png"));
 					break;
 				case 3:
 					arrayH.add(p);
 					btnpeca9.setEnabled(false);
-					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l9 + ".png"));
+					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l9 + ".png"));
 					break;
 				case 4:
 					arrayH.add(p);
 					btnpeca9.setEnabled(false);
-					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l9 + ".png"));
+					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l9 + ".png"));
 					break;
 				case 5:
 					arrayH.add(p);
 					btnpeca9.setEnabled(false);
-					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l9 + ".png"));
+					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l9 + ".png"));
 					break;
 				case 6:
 					arrayH.add(p);
 					btnpeca9.setEnabled(false);
-					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l9 + ".png"));
+					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l9 + ".png"));
 					break;
 				case 7:
 					arrayH.add(p);
 					btnpeca9.setEnabled(false);
-					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l9 + ".png"));
+					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l9 + ".png"));
 					break;
 				case 8:
 					arrayM.add(p);
 					btnpeca9.setEnabled(false);
-					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l9 + ".png"));
+					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l9 + ".png"));
 					break;
 				case 9:
 					arrayM.add(p);
 					btnpeca9.setEnabled(false);
-					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l9 + ".png"));
+					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l9 + ".png"));
 					break;
 				case 10:
 					arrayM.add(p);
 					btnpeca9.setEnabled(false);
-					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l9 + ".png"));
+					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l9 + ".png"));
 					break;
 				case 11:
 					arrayM.add(p);
 					btnpeca9.setEnabled(false);
-					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l9 + ".png"));
+					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l9 + ".png"));
 					break;
 				case 12:
 					arrayM.add(p);
 					btnpeca9.setEnabled(false);
-					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l9 + ".png"));
+					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l9 + ".png"));
 					break;
 				case 13:
 					arrayM.add(p);
 					btnpeca9.setEnabled(false);
-					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l9 + ".png"));
+					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l9 + ".png"));
 					break;
 				case 14:
 					arrayM.add(p);
 					btnpeca9.setEnabled(false);
-					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l9 + ".png"));
+					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l9 + ".png"));
 					break;
 
 				default:
@@ -1358,8 +2321,8 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(9);
-				String ladoa = p.getLadoDireito().toString();
-				String ladob = p.getLadoEsquerdo().toString();
+				String ladoa = p.getLadoEsquerdo().toString(); 
+				String ladob = p.getLadoDireito().toString();
 
 				l10 = ladoa + ladob;
 
@@ -1367,72 +2330,72 @@ public class TelaDoJogo extends JFrame {
 				case 1:
 					arrayH.add(p);
 					btnpeca10.setEnabled(false);
-					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l10 + ".png"));
+					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l10 + ".png"));
 					break;
 				case 2:
 					arrayH.add(p);
 					btnpeca10.setEnabled(false);
-					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l10 + ".png"));
+					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l10 + ".png"));
 					break;
 				case 3:
 					arrayH.add(p);
 					btnpeca10.setEnabled(false);
-					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l10 + ".png"));
+					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l10 + ".png"));
 					break;
 				case 4:
 					arrayH.add(p);
 					btnpeca10.setEnabled(false);
-					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l10 + ".png"));
+					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l10 + ".png"));
 					break;
 				case 5:
 					arrayH.add(p);
 					btnpeca10.setEnabled(false);
-					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l10 + ".png"));
+					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l10 + ".png"));
 					break;
 				case 6:
 					arrayH.add(p);
 					btnpeca10.setEnabled(false);
-					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l10 + ".png"));
+					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l10 + ".png"));
 					break;
 				case 7:
 					arrayH.add(p);
 					btnpeca10.setEnabled(false);
-					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l10 + ".png"));
+					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l10 + ".png"));
 					break;
 				case 8:
 					arrayM.add(p);
 					btnpeca10.setEnabled(false);
-					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l10 + ".png"));
+					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l10 + ".png"));
 					break;
 				case 9:
 					arrayM.add(p);
 					btnpeca10.setEnabled(false);
-					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l10 + ".png"));
+					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l10 + ".png"));
 					break;
 				case 10:
 					arrayM.add(p);
 					btnpeca10.setEnabled(false);
-					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l10 + ".png"));
+					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l10 + ".png"));
 					break;
 				case 11:
 					arrayM.add(p);
 					btnpeca10.setEnabled(false);
-					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l10 + ".png"));
+					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l10 + ".png"));
 					break;
 				case 12:
 					arrayM.add(p);
 					btnpeca10.setEnabled(false);
-					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l10 + ".png"));
+					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l10 + ".png"));
 					break;
 				case 13:
 					arrayM.add(p);
 					btnpeca10.setEnabled(false);
-					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l10 + ".png"));
+					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l10 + ".png"));
 					break;
 				case 14:
 					arrayM.add(p);
 					btnpeca10.setEnabled(false);
-					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l10 + ".png"));
+					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l10 + ".png"));
 					break;
 
 				default:
@@ -1457,8 +2420,8 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(10);
-				String ladoa = p.getLadoDireito().toString();
-				String ladob = p.getLadoEsquerdo().toString();
+				String ladoa = p.getLadoEsquerdo().toString(); 
+				String ladob = p.getLadoDireito().toString();
 
 				l11 = ladoa + ladob;
 
@@ -1466,72 +2429,72 @@ public class TelaDoJogo extends JFrame {
 				case 1:
 					arrayH.add(p);
 					btnpeca11.setEnabled(false);
-					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l11 + ".png"));
+					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l11 + ".png"));
 					break;
 				case 2:
 					arrayH.add(p);
 					btnpeca11.setEnabled(false);
-					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l11 + ".png"));
+					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l11 + ".png"));
 					break;
 				case 3:
 					arrayH.add(p);
 					btnpeca11.setEnabled(false);
-					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l11 + ".png"));
+					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l11 + ".png"));
 					break;
 				case 4:
 					arrayH.add(p);
 					btnpeca11.setEnabled(false);
-					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l11 + ".png"));
+					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l11 + ".png"));
 					break;
 				case 5:
 					arrayH.add(p);
 					btnpeca11.setEnabled(false);
-					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l11 + ".png"));
+					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l11 + ".png"));
 					break;
 				case 6:
 					arrayH.add(p);
 					btnpeca11.setEnabled(false);
-					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l11 + ".png"));
+					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l11 + ".png"));
 					break;
 				case 7:
 					arrayH.add(p);
 					btnpeca11.setEnabled(false);
-					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l11 + ".png"));
+					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l11 + ".png"));
 					break;
 				case 8:
 					arrayM.add(p);
 					btnpeca11.setEnabled(false);
-					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l11 + ".png"));
+					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l11 + ".png"));
 					break;
 				case 9:
 					arrayM.add(p);
 					btnpeca11.setEnabled(false);
-					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l11 + ".png"));
+					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l11 + ".png"));
 					break;
 				case 10:
 					arrayM.add(p);
 					btnpeca11.setEnabled(false);
-					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l11 + ".png"));
+					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l11 + ".png"));
 					break;
 				case 11:
 					arrayM.add(p);
 					btnpeca11.setEnabled(false);
-					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l11 + ".png"));
+					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l11 + ".png"));
 					break;
 				case 12:
 					arrayM.add(p);
 					btnpeca11.setEnabled(false);
-					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l11 + ".png"));
+					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l11 + ".png"));
 					break;
 				case 13:
 					arrayM.add(p);
 					btnpeca11.setEnabled(false);
-					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l11 + ".png"));
+					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l11 + ".png"));
 					break;
 				case 14:
 					arrayM.add(p);
 					btnpeca11.setEnabled(false);
-					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l11 + ".png"));
+					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l11 + ".png"));
 					break;
 
 				default:
@@ -1556,8 +2519,8 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(11);
-				String ladoa = p.getLadoDireito().toString();
-				String ladob = p.getLadoEsquerdo().toString();
+				String ladoa = p.getLadoEsquerdo().toString(); 
+				String ladob = p.getLadoDireito().toString();
 
 				l12 = ladoa + ladob;
 
@@ -1565,72 +2528,72 @@ public class TelaDoJogo extends JFrame {
 				case 1:
 					arrayH.add(p);
 					btnpeca12.setEnabled(false);
-					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l12 + ".png"));
+					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l12 + ".png"));
 					break;
 				case 2:
 					arrayH.add(p);
 					btnpeca12.setEnabled(false);
-					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l12 + ".png"));
+					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l12 + ".png"));
 					break;
 				case 3:
 					arrayH.add(p);
 					btnpeca12.setEnabled(false);
-					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l12 + ".png"));
+					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l12 + ".png"));
 					break;
 				case 4:
 					arrayH.add(p);
 					btnpeca12.setEnabled(false);
-					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l12 + ".png"));
+					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l12 + ".png"));
 					break;
 				case 5:
 					arrayH.add(p);
 					btnpeca12.setEnabled(false);
-					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l12 + ".png"));
+					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l12 + ".png"));
 					break;
 				case 6:
 					arrayH.add(p);
 					btnpeca12.setEnabled(false);
-					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l12 + ".png"));
+					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l12 + ".png"));
 					break;
 				case 7:
 					arrayH.add(p);
 					btnpeca12.setEnabled(false);
-					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l12 + ".png"));
+					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l12 + ".png"));
 					break;
 				case 8:
 					arrayM.add(p);
 					btnpeca12.setEnabled(false);
-					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l12 + ".png"));
+					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l12 + ".png"));
 					break;
 				case 9:
 					arrayM.add(p);
 					btnpeca12.setEnabled(false);
-					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l12 + ".png"));
+					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l12 + ".png"));
 					break;
 				case 10:
 					arrayM.add(p);
 					btnpeca12.setEnabled(false);
-					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l12 + ".png"));
+					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l12 + ".png"));
 					break;
 				case 11:
 					arrayM.add(p);
 					btnpeca12.setEnabled(false);
-					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l12 + ".png"));
+					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l12 + ".png"));
 					break;
 				case 12:
 					arrayM.add(p);
 					btnpeca12.setEnabled(false);
-					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l12 + ".png"));
+					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l12 + ".png"));
 					break;
 				case 13:
 					arrayM.add(p);
 					btnpeca12.setEnabled(false);
-					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l12 + ".png"));
+					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l12 + ".png"));
 					break;
 				case 14:
 					arrayM.add(p);
 					btnpeca12.setEnabled(false);
-					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l12 + ".png"));
+					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l12 + ".png"));
 					break;
 
 				default:
@@ -1655,8 +2618,8 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(12);
-				String ladoa = p.getLadoDireito().toString();
-				String ladob = p.getLadoEsquerdo().toString();
+				String ladoa = p.getLadoEsquerdo().toString(); 
+				String ladob = p.getLadoDireito().toString();
 
 				l13 = ladoa + ladob;
 
@@ -1664,72 +2627,72 @@ public class TelaDoJogo extends JFrame {
 				case 1:
 					arrayH.add(p);
 					btnpeca13.setEnabled(false);
-					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l13 + ".png"));
+					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l13 + ".png"));
 					break;
 				case 2:
 					arrayH.add(p);
 					btnpeca13.setEnabled(false);
-					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l13 + ".png"));
+					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l13 + ".png"));
 					break;
 				case 3:
 					arrayH.add(p);
 					btnpeca13.setEnabled(false);
-					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l13 + ".png"));
+					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l13 + ".png"));
 					break;
 				case 4:
 					arrayH.add(p);
 					btnpeca13.setEnabled(false);
-					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l13 + ".png"));
+					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l13 + ".png"));
 					break;
 				case 5:
 					arrayH.add(p);
 					btnpeca13.setEnabled(false);
-					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l13 + ".png"));
+					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l13 + ".png"));
 					break;
 				case 6:
 					arrayH.add(p);
 					btnpeca13.setEnabled(false);
-					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l13 + ".png"));
+					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l13 + ".png"));
 					break;
 				case 7:
 					arrayH.add(p);
 					btnpeca13.setEnabled(false);
-					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l13 + ".png"));
+					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l13 + ".png"));
 					break;
 				case 8:
 					arrayM.add(p);
 					btnpeca13.setEnabled(false);
-					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l13 + ".png"));
+					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l13 + ".png"));
 					break;
 				case 9:
 					arrayM.add(p);
 					btnpeca13.setEnabled(false);
-					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l13 + ".png"));
+					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l13 + ".png"));
 					break;
 				case 10:
 					arrayM.add(p);
 					btnpeca13.setEnabled(false);
-					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l13 + ".png"));
+					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l13 + ".png"));
 					break;
 				case 11:
 					arrayM.add(p);
 					btnpeca13.setEnabled(false);
-					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l13 + ".png"));
+					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l13 + ".png"));
 					break;
 				case 12:
 					arrayM.add(p);
 					btnpeca13.setEnabled(false);
-					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l13 + ".png"));
+					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l13 + ".png"));
 					break;
 				case 13:
 					arrayM.add(p);
 					btnpeca13.setEnabled(false);
-					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l13 + ".png"));
+					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l13 + ".png"));
 					break;
 				case 14:
 					arrayM.add(p);
 					btnpeca13.setEnabled(false);
-					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l13 + ".png"));
+					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l13 + ".png"));
 					break;
 
 				default:
@@ -1754,8 +2717,8 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(13);
-				String ladoa = p.getLadoDireito().toString();
-				String ladob = p.getLadoEsquerdo().toString();
+				String ladoa = p.getLadoEsquerdo().toString(); 
+				String ladob = p.getLadoDireito().toString();
 
 				l14 = ladoa + ladob;
 
@@ -1763,72 +2726,72 @@ public class TelaDoJogo extends JFrame {
 				case 1:
 					arrayH.add(p);
 					btnpeca14.setEnabled(false);
-					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l14 + ".png"));
+					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l14 + ".png"));
 					break;
 				case 2:
 					arrayH.add(p);
 					btnpeca14.setEnabled(false);
-					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l14 + ".png"));
+					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l14 + ".png"));
 					break;
 				case 3:
 					arrayH.add(p);
 					btnpeca14.setEnabled(false);
-					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l14 + ".png"));
+					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l14 + ".png"));
 					break;
 				case 4:
 					arrayH.add(p);
 					btnpeca14.setEnabled(false);
-					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l14 + ".png"));
+					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l14 + ".png"));
 					break;
 				case 5:
 					arrayH.add(p);
 					btnpeca14.setEnabled(false);
-					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l14 + ".png"));
+					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l14 + ".png"));
 					break;
 				case 6:
 					arrayH.add(p);
 					btnpeca14.setEnabled(false);
-					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l14 + ".png"));
+					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l14 + ".png"));
 					break;
 				case 7:
 					arrayH.add(p);
 					btnpeca14.setEnabled(false);
-					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l14 + ".png"));
+					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l14 + ".png"));
 					break;
 				case 8:
 					arrayM.add(p);
 					btnpeca14.setEnabled(false);
-					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l14 + ".png"));
+					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l14 + ".png"));
 					break;
 				case 9:
 					arrayM.add(p);
 					btnpeca14.setEnabled(false);
-					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l14 + ".png"));
+					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l14 + ".png"));
 					break;
 				case 10:
 					arrayM.add(p);
 					btnpeca14.setEnabled(false);
-					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l14 + ".png"));
+					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l14 + ".png"));
 					break;
 				case 11:
 					arrayM.add(p);
 					btnpeca14.setEnabled(false);
-					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l14 + ".png"));
+					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l14 + ".png"));
 					break;
 				case 12:
 					arrayM.add(p);
 					btnpeca14.setEnabled(false);
-					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l14 + ".png"));
+					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l14 + ".png"));
 					break;
 				case 13:
 					arrayM.add(p);
 					btnpeca14.setEnabled(false);
-					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l14 + ".png"));
+					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l14 + ".png"));
 					break;
 				case 14:
 					arrayM.add(p);
 					btnpeca14.setEnabled(false);
-					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l14 + ".png"));
+					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l14 + ".png"));
 					break;
 
 				default:
@@ -1853,80 +2816,80 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(14);
-				String ladoa = p.getLadoDireito().toString();
-				String ladob = p.getLadoEsquerdo().toString();
+				String ladoa = p.getLadoEsquerdo().toString(); 
+				String ladob = p.getLadoDireito().toString();
 
 				l15 = ladoa + ladob;
 				switch (aux) {
 				case 1:
 					arrayH.add(p);
 					btnpeca15.setEnabled(false);
-					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l15 + ".png"));
+					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l15 + ".png"));
 					break;
 				case 2:
 					arrayH.add(p);
 					btnpeca15.setEnabled(false);
-					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l15 + ".png"));
+					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l15 + ".png"));
 					break;
 				case 3:
 					arrayH.add(p);
 					btnpeca15.setEnabled(false);
-					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l15 + ".png"));
+					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l15 + ".png"));
 					break;
 				case 4:
 					arrayH.add(p);
 					btnpeca15.setEnabled(false);
-					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l15 + ".png"));
+					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l15 + ".png"));
 					break;
 				case 5:
 					arrayH.add(p);
 					btnpeca15.setEnabled(false);
-					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l15 + ".png"));
+					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l15 + ".png"));
 					break;
 				case 6:
 					arrayH.add(p);
 					btnpeca15.setEnabled(false);
-					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l15 + ".png"));
+					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l15 + ".png"));
 					break;
 				case 7:
 					arrayH.add(p);
 					btnpeca15.setEnabled(false);
-					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l15 + ".png"));
+					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l15 + ".png"));
 					break;
 				case 8:
 					arrayM.add(p);
 					btnpeca15.setEnabled(false);
-					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l15 + ".png"));
+					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l15 + ".png"));
 					break;
 				case 9:
 					arrayM.add(p);
 					btnpeca15.setEnabled(false);
-					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l15 + ".png"));
+					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l15 + ".png"));
 					break;
 				case 10:
 					arrayM.add(p);
 					btnpeca15.setEnabled(false);
-					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l15 + ".png"));
+					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l15 + ".png"));
 					break;
 				case 11:
 					arrayM.add(p);
 					btnpeca15.setEnabled(false);
-					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l15 + ".png"));
+					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l15 + ".png"));
 					break;
 				case 12:
 					arrayM.add(p);
 					btnpeca15.setEnabled(false);
-					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l15 + ".png"));
+					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l15 + ".png"));
 					break;
 				case 13:
 					arrayM.add(p);
 					btnpeca15.setEnabled(false);
-					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l15 + ".png"));
+					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l15 + ".png"));
 					break;
 				case 14:
 					arrayM.add(p);
 					btnpeca15.setEnabled(false);
-					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l15 + ".png"));
+					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l15 + ".png"));
 					break;
 
 				default:
@@ -1951,8 +2914,8 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(15);
-				String ladoa = p.getLadoDireito().toString();
-				String ladob = p.getLadoEsquerdo().toString();
+				String ladoa = p.getLadoEsquerdo().toString(); 
+				String ladob = p.getLadoDireito().toString();
 
 				l16 = ladoa + ladob;
 
@@ -1960,72 +2923,72 @@ public class TelaDoJogo extends JFrame {
 				case 1:
 					arrayH.add(p);
 					btnpeca16.setEnabled(false);
-					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l16 + ".png"));
+					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l16 + ".png"));
 					break;
 				case 2:
 					arrayH.add(p);
 					btnpeca16.setEnabled(false);
-					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l16 + ".png"));
+					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l16 + ".png"));
 					break;
 				case 3:
 					arrayH.add(p);
 					btnpeca16.setEnabled(false);
-					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l16 + ".png"));
+					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l16 + ".png"));
 					break;
 				case 4:
 					arrayH.add(p);
 					btnpeca16.setEnabled(false);
-					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l16 + ".png"));
+					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l16 + ".png"));
 					break;
 				case 5:
 					arrayH.add(p);
 					btnpeca16.setEnabled(false);
-					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l16 + ".png"));
+					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l16 + ".png"));
 					break;
 				case 6:
 					arrayH.add(p);
 					btnpeca16.setEnabled(false);
-					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l16 + ".png"));
+					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l16 + ".png"));
 					break;
 				case 7:
 					arrayH.add(p);
 					btnpeca16.setEnabled(false);
-					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l16 + ".png"));
+					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l16 + ".png"));
 					break;
 				case 8:
 					arrayM.add(p);
 					btnpeca16.setEnabled(false);
-					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l16 + ".png"));
+					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l16 + ".png"));
 					break;
 				case 9:
 					arrayM.add(p);
 					btnpeca16.setEnabled(false);
-					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l16 + ".png"));
+					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l16 + ".png"));
 					break;
 				case 10:
 					arrayM.add(p);
 					btnpeca16.setEnabled(false);
-					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l16 + ".png"));
+					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l16 + ".png"));
 					break;
 				case 11:
 					arrayM.add(p);
 					btnpeca16.setEnabled(false);
-					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l16 + ".png"));
+					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l16 + ".png"));
 					break;
 				case 12:
 					arrayM.add(p);
 					btnpeca16.setEnabled(false);
-					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l16 + ".png"));
+					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l16 + ".png"));
 					break;
 				case 13:
 					arrayM.add(p);
 					btnpeca16.setEnabled(false);
-					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l16 + ".png"));
+					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l16 + ".png"));
 					break;
 				case 14:
 					arrayM.add(p);
 					btnpeca16.setEnabled(false);
-					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l16 + ".png"));
+					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l16 + ".png"));
 					break;
 
 				default:
@@ -2050,8 +3013,8 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(16);
-				String ladoa = p.getLadoDireito().toString();
-				String ladob = p.getLadoEsquerdo().toString();
+				String ladoa = p.getLadoEsquerdo().toString(); 
+				String ladob = p.getLadoDireito().toString();
 
 				l17 = ladoa + ladob;
 
@@ -2059,72 +3022,72 @@ public class TelaDoJogo extends JFrame {
 				case 1:
 					arrayH.add(p);
 					btnpeca17.setEnabled(false);
-					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l17 + ".png"));
+					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l17 + ".png"));
 					break;
 				case 2:
 					arrayH.add(p);
 					btnpeca17.setEnabled(false);
-					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l17 + ".png"));
+					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l17 + ".png"));
 					break;
 				case 3:
 					arrayH.add(p);
 					btnpeca17.setEnabled(false);
-					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l17 + ".png"));
+					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l17 + ".png"));
 					break;
 				case 4:
 					arrayH.add(p);
 					btnpeca17.setEnabled(false);
-					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l17 + ".png"));
+					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l17 + ".png"));
 					break;
 				case 5:
 					arrayH.add(p);
 					btnpeca17.setEnabled(false);
-					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l17 + ".png"));
+					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l17 + ".png"));
 					break;
 				case 6:
 					arrayH.add(p);
 					btnpeca17.setEnabled(false);
-					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l17 + ".png"));
+					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l17 + ".png"));
 					break;
 				case 7:
 					arrayH.add(p);
 					btnpeca17.setEnabled(false);
-					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l17 + ".png"));
+					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l17 + ".png"));
 					break;
 				case 8:
 					arrayM.add(p);
 					btnpeca17.setEnabled(false);
-					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l17 + ".png"));
+					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l17 + ".png"));
 					break;
 				case 9:
 					arrayM.add(p);
 					btnpeca17.setEnabled(false);
-					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l17 + ".png"));
+					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l17 + ".png"));
 					break;
 				case 10:
 					arrayM.add(p);
 					btnpeca17.setEnabled(false);
-					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l17 + ".png"));
+					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l17 + ".png"));
 					break;
 				case 11:
 					arrayM.add(p);
 					btnpeca17.setEnabled(false);
-					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l17 + ".png"));
+					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l17 + ".png"));
 					break;
 				case 12:
 					arrayM.add(p);
 					btnpeca17.setEnabled(false);
-					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l17 + ".png"));
+					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l17 + ".png"));
 					break;
 				case 13:
 					arrayM.add(p);
 					btnpeca17.setEnabled(false);
-					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l17 + ".png"));
+					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l17 + ".png"));
 					break;
 				case 14:
 					arrayM.add(p);
 					btnpeca17.setEnabled(false);
-					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l17 + ".png"));
+					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l17 + ".png"));
 					break;
 
 				default:
@@ -2150,8 +3113,8 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(17);
-				String ladoa = p.getLadoDireito().toString();
-				String ladob = p.getLadoEsquerdo().toString();
+				String ladoa = p.getLadoEsquerdo().toString(); 
+				String ladob = p.getLadoDireito().toString();
 
 				l18 = ladoa + ladob;
 
@@ -2159,72 +3122,72 @@ public class TelaDoJogo extends JFrame {
 				case 1:
 					arrayH.add(p);
 					btnpeca18.setEnabled(false);
-					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l18 + ".png"));
+					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l18 + ".png"));
 					break;
 				case 2:
 					arrayH.add(p);
 					btnpeca18.setEnabled(false);
-					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l18 + ".png"));
+					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l18 + ".png"));
 					break;
 				case 3:
 					arrayH.add(p);
 					btnpeca18.setEnabled(false);
-					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l18 + ".png"));
+					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l18 + ".png"));
 					break;
 				case 4:
 					arrayH.add(p);
 					btnpeca18.setEnabled(false);
-					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l18 + ".png"));
+					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l18 + ".png"));
 					break;
 				case 5:
 					arrayH.add(p);
 					btnpeca18.setEnabled(false);
-					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l18 + ".png"));
+					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l18 + ".png"));
 					break;
 				case 6:
 					arrayH.add(p);
 					btnpeca18.setEnabled(false);
-					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l18 + ".png"));
+					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l18 + ".png"));
 					break;
 				case 7:
 					arrayH.add(p);
 					btnpeca18.setEnabled(false);
-					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l18 + ".png"));
+					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l18 + ".png"));
 					break;
 				case 8:
 					arrayM.add(p);
 					btnpeca18.setEnabled(false);
-					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l18 + ".png"));
+					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l18 + ".png"));
 					break;
 				case 9:
 					arrayM.add(p);
 					btnpeca18.setEnabled(false);
-					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l18 + ".png"));
+					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l18 + ".png"));
 					break;
 				case 10:
 					arrayM.add(p);
 					btnpeca18.setEnabled(false);
-					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l18 + ".png"));
+					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l18 + ".png"));
 					break;
 				case 11:
 					arrayM.add(p);
 					btnpeca18.setEnabled(false);
-					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l18 + ".png"));
+					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l18 + ".png"));
 					break;
 				case 12:
 					arrayM.add(p);
 					btnpeca18.setEnabled(false);
-					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l18 + ".png"));
+					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l18 + ".png"));
 					break;
 				case 13:
 					arrayM.add(p);
 					btnpeca18.setEnabled(false);
-					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l18 + ".png"));
+					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l18 + ".png"));
 					break;
 				case 14:
 					arrayM.add(p);
 					btnpeca18.setEnabled(false);
-					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l18 + ".png"));
+					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l18 + ".png"));
 					break;
 
 				default:
@@ -2249,8 +3212,8 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(18);
-				String ladoa = p.getLadoDireito().toString();
-				String ladob = p.getLadoEsquerdo().toString();
+				String ladoa = p.getLadoEsquerdo().toString(); 
+				String ladob = p.getLadoDireito().toString();
 
 				l19 = ladoa + ladob;
 
@@ -2258,72 +3221,72 @@ public class TelaDoJogo extends JFrame {
 				case 1:
 					arrayH.add(p);
 					btnpeca19.setEnabled(false);
-					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l19 + ".png"));
+					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l19 + ".png"));
 					break;
 				case 2:
 					arrayH.add(p);
 					btnpeca19.setEnabled(false);
-					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l19 + ".png"));
+					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l19 + ".png"));
 					break;
 				case 3:
 					arrayH.add(p);
 					btnpeca19.setEnabled(false);
-					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l19 + ".png"));
+					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l19 + ".png"));
 					break;
 				case 4:
 					arrayH.add(p);
 					btnpeca19.setEnabled(false);
-					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l19 + ".png"));
+					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l19 + ".png"));
 					break;
 				case 5:
 					arrayH.add(p);
 					btnpeca19.setEnabled(false);
-					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l19 + ".png"));
+					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l19 + ".png"));
 					break;
 				case 6:
 					arrayH.add(p);
 					btnpeca19.setEnabled(false);
-					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l19 + ".png"));
+					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l19 + ".png"));
 					break;
 				case 7:
 					arrayH.add(p);
 					btnpeca19.setEnabled(false);
-					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l19 + ".png"));
+					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l19 + ".png"));
 					break;
 				case 8:
 					arrayM.add(p);
 					btnpeca19.setEnabled(false);
-					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l19 + ".png"));
+					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l19 + ".png"));
 					break;
 				case 9:
 					arrayM.add(p);
 					btnpeca19.setEnabled(false);
-					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l19 + ".png"));
+					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l19 + ".png"));
 					break;
 				case 10:
 					arrayM.add(p);
 					btnpeca19.setEnabled(false);
-					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l19 + ".png"));
+					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l19 + ".png"));
 					break;
 				case 11:
 					arrayM.add(p);
 					btnpeca19.setEnabled(false);
-					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l19 + ".png"));
+					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l19 + ".png"));
 					break;
 				case 12:
 					arrayM.add(p);
 					btnpeca19.setEnabled(false);
-					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l19 + ".png"));
+					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l19 + ".png"));
 					break;
 				case 13:
 					arrayM.add(p);
 					btnpeca19.setEnabled(false);
-					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l19 + ".png"));
+					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l19 + ".png"));
 					break;
 				case 14:
 					arrayM.add(p);
 					btnpeca19.setEnabled(false);
-					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l19 + ".png"));
+					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l19 + ".png"));
 					break;
 
 				default:
@@ -2348,8 +3311,8 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(19);
-				String ladoa = p.getLadoDireito().toString();
-				String ladob = p.getLadoEsquerdo().toString();
+				String ladoa = p.getLadoEsquerdo().toString(); 
+				String ladob = p.getLadoDireito().toString();
 
 				l20 = ladoa + ladob;
 
@@ -2357,72 +3320,72 @@ public class TelaDoJogo extends JFrame {
 				case 1:
 					arrayH.add(p);
 					btnpeca20.setEnabled(false);
-					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l20 + ".png"));
+					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l20 + ".png"));
 					break;
 				case 2:
 					arrayH.add(p);
 					btnpeca20.setEnabled(false);
-					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l20 + ".png"));
+					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l20 + ".png"));
 					break;
 				case 3:
 					arrayH.add(p);
 					btnpeca20.setEnabled(false);
-					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l20 + ".png"));
+					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l20 + ".png"));
 					break;
 				case 4:
 					arrayH.add(p);
 					btnpeca20.setEnabled(false);
-					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l20 + ".png"));
+					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l20 + ".png"));
 					break;
 				case 5:
 					arrayH.add(p);
 					btnpeca20.setEnabled(false);
-					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l20 + ".png"));
+					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l20 + ".png"));
 					break;
 				case 6:
 					arrayH.add(p);
 					btnpeca20.setEnabled(false);
-					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l20 + ".png"));
+					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l20 + ".png"));
 					break;
 				case 7:
 					arrayH.add(p);
 					btnpeca20.setEnabled(false);
-					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l20 + ".png"));
+					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l20 + ".png"));
 					break;
 				case 8:
 					arrayM.add(p);
 					btnpeca20.setEnabled(false);
-					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l20 + ".png"));
+					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l20 + ".png"));
 					break;
 				case 9:
 					arrayM.add(p);
 					btnpeca20.setEnabled(false);
-					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l20 + ".png"));
+					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l20 + ".png"));
 					break;
 				case 10:
 					arrayM.add(p);
 					btnpeca20.setEnabled(false);
-					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l20 + ".png"));
+					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l20 + ".png"));
 					break;
 				case 11:
 					arrayM.add(p);
 					btnpeca20.setEnabled(false);
-					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l20 + ".png"));
+					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l20 + ".png"));
 					break;
 				case 12:
 					arrayM.add(p);
 					btnpeca20.setEnabled(false);
-					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l20 + ".png"));
+					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l20 + ".png"));
 					break;
 				case 13:
 					arrayM.add(p);
 					btnpeca20.setEnabled(false);
-					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l20 + ".png"));
+					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l20 + ".png"));
 					break;
 				case 14:
 					arrayM.add(p);
 					btnpeca20.setEnabled(false);
-					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l20 + ".png"));
+					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l20 + ".png"));
 					break;
 
 				default:
@@ -2447,8 +3410,8 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(20);
-				String ladoa = p.getLadoDireito().toString();
-				String ladob = p.getLadoEsquerdo().toString();
+				String ladoa = p.getLadoEsquerdo().toString(); 
+				String ladob = p.getLadoDireito().toString();
 
 				l21 = ladoa + ladob;
 
@@ -2456,72 +3419,72 @@ public class TelaDoJogo extends JFrame {
 				case 1:
 					arrayH.add(p);
 					btnpeca21.setEnabled(false);
-					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l21 + ".png"));
+					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l21 + ".png"));
 					break;
 				case 2:
 					arrayH.add(p);
 					btnpeca21.setEnabled(false);
-					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l21 + ".png"));
+					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l21 + ".png"));
 					break;
 				case 3:
 					arrayH.add(p);
 					btnpeca21.setEnabled(false);
-					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l21 + ".png"));
+					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l21 + ".png"));
 					break;
 				case 4:
 					arrayH.add(p);
 					btnpeca21.setEnabled(false);
-					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l21 + ".png"));
+					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l21 + ".png"));
 					break;
 				case 5:
 					arrayH.add(p);
 					btnpeca21.setEnabled(false);
-					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l21 + ".png"));
+					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l21 + ".png"));
 					break;
 				case 6:
 					arrayH.add(p);
 					btnpeca21.setEnabled(false);
-					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l21 + ".png"));
+					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l21 + ".png"));
 					break;
 				case 7:
 					arrayH.add(p);
 					btnpeca21.setEnabled(false);
-					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l21 + ".png"));
+					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l21 + ".png"));
 					break;
 				case 8:
 					arrayM.add(p);
 					btnpeca21.setEnabled(false);
-					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l21 + ".png"));
+					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l21 + ".png"));
 					break;
 				case 9:
 					arrayM.add(p);
 					btnpeca21.setEnabled(false);
-					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l21 + ".png"));
+					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l21 + ".png"));
 					break;
 				case 10:
 					arrayM.add(p);
 					btnpeca21.setEnabled(false);
-					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l21 + ".png"));
+					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l21 + ".png"));
 					break;
 				case 11:
 					arrayM.add(p);
 					btnpeca21.setEnabled(false);
-					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l21 + ".png"));
+					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l21 + ".png"));
 					break;
 				case 12:
 					arrayM.add(p);
 					btnpeca21.setEnabled(false);
-					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l21 + ".png"));
+					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l21 + ".png"));
 					break;
 				case 13:
 					arrayM.add(p);
 					btnpeca21.setEnabled(false);
-					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l21 + ".png"));
+					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l21 + ".png"));
 					break;
 				case 14:
 					arrayM.add(p);
 					btnpeca21.setEnabled(false);
-					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l21 + ".png"));
+					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l21 + ".png"));
 					break;
 
 				default:
@@ -2546,8 +3509,8 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(21);
-				String ladoa = p.getLadoDireito().toString();
-				String ladob = p.getLadoEsquerdo().toString();
+				String ladoa = p.getLadoEsquerdo().toString(); 
+				String ladob = p.getLadoDireito().toString();
 
 				l22 = ladoa + ladob;
 
@@ -2555,72 +3518,72 @@ public class TelaDoJogo extends JFrame {
 				case 1:
 					arrayH.add(p);
 					btnpeca22.setEnabled(false);
-					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l22 + ".png"));
+					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l22 + ".png"));
 					break;
 				case 2:
 					arrayH.add(p);
 					btnpeca22.setEnabled(false);
-					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l22 + ".png"));
+					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l22 + ".png"));
 					break;
 				case 3:
 					arrayH.add(p);
 					btnpeca22.setEnabled(false);
-					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l22 + ".png"));
+					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l22 + ".png"));
 					break;
 				case 4:
 					arrayH.add(p);
 					btnpeca22.setEnabled(false);
-					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l22 + ".png"));
+					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l22 + ".png"));
 					break;
 				case 5:
 					arrayH.add(p);
 					btnpeca22.setEnabled(false);
-					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l22 + ".png"));
+					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l22 + ".png"));
 					break;
 				case 6:
 					arrayH.add(p);
 					btnpeca22.setEnabled(false);
-					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l22 + ".png"));
+					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l22 + ".png"));
 					break;
 				case 7:
 					arrayH.add(p);
 					btnpeca22.setEnabled(false);
-					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l22 + ".png"));
+					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l22 + ".png"));
 					break;
 				case 8:
 					arrayM.add(p);
 					btnpeca22.setEnabled(false);
-					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l22 + ".png"));
+					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l22 + ".png"));
 					break;
 				case 9:
 					arrayM.add(p);
 					btnpeca22.setEnabled(false);
-					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l22 + ".png"));
+					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l22 + ".png"));
 					break;
 				case 10:
 					arrayM.add(p);
 					btnpeca22.setEnabled(false);
-					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l22 + ".png"));
+					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l22 + ".png"));
 					break;
 				case 11:
 					arrayM.add(p);
 					btnpeca22.setEnabled(false);
-					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l22 + ".png"));
+					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l22 + ".png"));
 					break;
 				case 12:
 					arrayM.add(p);
 					btnpeca22.setEnabled(false);
-					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l22 + ".png"));
+					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l22 + ".png"));
 					break;
 				case 13:
 					arrayM.add(p);
 					btnpeca22.setEnabled(false);
-					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l22 + ".png"));
+					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l22 + ".png"));
 					break;
 				case 14:
 					arrayM.add(p);
 					btnpeca22.setEnabled(false);
-					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l22 + ".png"));
+					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l22 + ".png"));
 					break;
 
 				default:
@@ -2645,8 +3608,8 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(22);
-				String ladoa = p.getLadoDireito().toString();
-				String ladob = p.getLadoEsquerdo().toString();
+				String ladoa = p.getLadoEsquerdo().toString(); 
+				String ladob = p.getLadoDireito().toString();
 
 				l23 = ladoa + ladob;
 
@@ -2654,72 +3617,72 @@ public class TelaDoJogo extends JFrame {
 				case 1:
 					arrayH.add(p);
 					btnpeca23.setEnabled(false);
-					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l23 + ".png"));
+					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l23 + ".png"));
 					break;
 				case 2:
 					arrayH.add(p);
 					btnpeca23.setEnabled(false);
-					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l23 + ".png"));
+					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l23 + ".png"));
 					break;
 				case 3:
 					arrayH.add(p);
 					btnpeca23.setEnabled(false);
-					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l23 + ".png"));
+					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l23 + ".png"));
 					break;
 				case 4:
 					arrayH.add(p);
 					btnpeca23.setEnabled(false);
-					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l23 + ".png"));
+					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l23 + ".png"));
 					break;
 				case 5:
 					arrayH.add(p);
 					btnpeca23.setEnabled(false);
-					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l23 + ".png"));
+					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l23 + ".png"));
 					break;
 				case 6:
 					arrayH.add(p);
 					btnpeca23.setEnabled(false);
-					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l23 + ".png"));
+					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l23 + ".png"));
 					break;
 				case 7:
 					arrayH.add(p);
 					btnpeca23.setEnabled(false);
-					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l23 + ".png"));
+					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas/verticais1///" + l23 + ".png"));
 					break;
 				case 8:
 					arrayM.add(p);
 					btnpeca23.setEnabled(false);
-					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l23 + ".png"));
+					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l23 + ".png"));
 					break;
 				case 9:
 					arrayM.add(p);
 					btnpeca23.setEnabled(false);
-					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l23 + ".png"));
+					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l23 + ".png"));
 					break;
 				case 10:
 					arrayM.add(p);
 					btnpeca23.setEnabled(false);
-					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l23 + ".png"));
+					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l23 + ".png"));
 					break;
 				case 11:
 					arrayM.add(p);
 					btnpeca23.setEnabled(false);
-					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l23 + ".png"));
+					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l23 + ".png"));
 					break;
 				case 12:
 					arrayM.add(p);
 					btnpeca23.setEnabled(false);
-					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l23 + ".png"));
+					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l23 + ".png"));
 					break;
 				case 13:
 					arrayM.add(p);
 					btnpeca23.setEnabled(false);
-					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l23 + ".png"));
+					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l23 + ".png"));
 					break;
 				case 14:
 					arrayM.add(p);
 					btnpeca23.setEnabled(false);
-					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l23 + ".png"));
+					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l23 + ".png"));
 					break;
 
 				default:
@@ -2744,8 +3707,8 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(23);
-				String ladoa = p.getLadoDireito().toString();
-				String ladob = p.getLadoEsquerdo().toString();
+				String ladoa = p.getLadoEsquerdo().toString(); 
+				String ladob = p.getLadoDireito().toString();
 
 				l24 = ladoa + ladob;
 
@@ -2753,72 +3716,72 @@ public class TelaDoJogo extends JFrame {
 				case 1:
 					arrayH.add(p);
 					btnpeca24.setEnabled(false);
-					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l24 + ".png"));
+					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l24 + ".png"));
 					break;
 				case 2:
 					arrayH.add(p);
 					btnpeca24.setEnabled(false);
-					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l24 + ".png"));
+					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l24 + ".png"));
 					break;
 				case 3:
 					arrayH.add(p);
 					btnpeca24.setEnabled(false);
-					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l24 + ".png"));
+					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l24 + ".png"));
 					break;
 				case 4:
 					arrayH.add(p);
 					btnpeca24.setEnabled(false);
-					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l24 + ".png"));
+					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l24 + ".png"));
 					break;
 				case 5:
 					arrayH.add(p);
 					btnpeca24.setEnabled(false);
-					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l24 + ".png"));
+					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l24 + ".png"));
 					break;
 				case 6:
 					arrayH.add(p);
 					btnpeca24.setEnabled(false);
-					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l24 + ".png"));
+					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l24 + ".png"));
 					break;
 				case 7:
 					arrayH.add(p);
 					btnpeca24.setEnabled(false);
-					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l24 + ".png"));
+					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l24 + ".png"));
 					break;
 				case 8:
 					arrayM.add(p);
 					btnpeca24.setEnabled(false);
-					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l24 + ".png"));
+					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l24 + ".png"));
 					break;
 				case 9:
 					arrayM.add(p);
 					btnpeca24.setEnabled(false);
-					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l24 + ".png"));
+					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l24 + ".png"));
 					break;
 				case 10:
 					arrayM.add(p);
 					btnpeca24.setEnabled(false);
-					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l24 + ".png"));
+					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l24 + ".png"));
 					break;
 				case 11:
 					arrayM.add(p);
 					btnpeca24.setEnabled(false);
-					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l24 + ".png"));
+					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l24 + ".png"));
 					break;
 				case 12:
 					arrayM.add(p);
 					btnpeca24.setEnabled(false);
-					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l24 + ".png"));
+					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l24 + ".png"));
 					break;
 				case 13:
 					arrayM.add(p);
 					btnpeca24.setEnabled(false);
-					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l24 + ".png"));
+					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l24 + ".png"));
 					break;
 				case 14:
 					arrayM.add(p);
 					btnpeca24.setEnabled(false);
-					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l24 + ".png"));
+					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l24 + ".png"));
 					break;
 
 				default:
@@ -2843,8 +3806,8 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(24);
-				String ladoa = p.getLadoDireito().toString();
-				String ladob = p.getLadoEsquerdo().toString();
+				String ladoa = p.getLadoEsquerdo().toString(); 
+				String ladob = p.getLadoDireito().toString();
 
 				l25 = ladoa + ladob;
 
@@ -2852,72 +3815,72 @@ public class TelaDoJogo extends JFrame {
 				case 1:
 					arrayH.add(p);
 					btnpeca25.setEnabled(false);
-					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l25 + ".png"));
+					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l25 + ".png"));
 					break;
 				case 2:
 					arrayH.add(p);
 					btnpeca25.setEnabled(false);
-					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l25 + ".png"));
+					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l25 + ".png"));
 					break;
 				case 3:
 					arrayH.add(p);
 					btnpeca25.setEnabled(false);
-					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l25 + ".png"));
+					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l25 + ".png"));
 					break;
 				case 4:
 					arrayH.add(p);
 					btnpeca25.setEnabled(false);
-					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l25 + ".png"));
+					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l25 + ".png"));
 					break;
 				case 5:
 					arrayH.add(p);
 					btnpeca25.setEnabled(false);
-					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l25 + ".png"));
+					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l25 + ".png"));
 					break;
 				case 6:
 					arrayH.add(p);
 					btnpeca25.setEnabled(false);
-					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l25 + ".png"));
+					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l25 + ".png"));
 					break;
 				case 7:
 					arrayH.add(p);
 					btnpeca25.setEnabled(false);
-					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l25 + ".png"));
+					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l25 + ".png"));
 					break;
 				case 8:
 					arrayM.add(p);
 					btnpeca25.setEnabled(false);
-					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l25 + ".png"));
+					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l25 + ".png"));
 					break;
 				case 9:
 					arrayM.add(p);
 					btnpeca25.setEnabled(false);
-					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l25 + ".png"));
+					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l25 + ".png"));
 					break;
 				case 10:
 					arrayM.add(p);
 					btnpeca25.setEnabled(false);
-					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l25 + ".png"));
+					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l25 + ".png"));
 					break;
 				case 11:
 					arrayM.add(p);
 					btnpeca25.setEnabled(false);
-					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l25 + ".png"));
+					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l25 + ".png"));
 					break;
 				case 12:
 					arrayM.add(p);
 					btnpeca25.setEnabled(false);
-					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l25 + ".png"));
+					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l25 + ".png"));
 					break;
 				case 13:
 					arrayM.add(p);
 					btnpeca25.setEnabled(false);
-					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l25 + ".png"));
+					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l25 + ".png"));
 					break;
 				case 14:
 					arrayM.add(p);
 					btnpeca25.setEnabled(false);
-					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l25 + ".png"));
+					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l25 + ".png"));
 					break;
 
 				default:
@@ -2942,8 +3905,8 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(25);
-				String ladoa = p.getLadoDireito().toString();
-				String ladob = p.getLadoEsquerdo().toString();
+				String ladoa = p.getLadoEsquerdo().toString(); 
+				String ladob = p.getLadoDireito().toString();
 
 				l26 = ladoa + ladob;
 
@@ -2951,72 +3914,72 @@ public class TelaDoJogo extends JFrame {
 				case 1:
 					arrayH.add(p);
 					btnpeca26.setEnabled(false);
-					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l26 + ".png"));
+					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l26 + ".png"));
 					break;
 				case 2:
 					arrayH.add(p);
 					btnpeca26.setEnabled(false);
-					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l26 + ".png"));
+					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l26 + ".png"));
 					break;
 				case 3:
 					arrayH.add(p);
 					btnpeca26.setEnabled(false);
-					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l26 + ".png"));
+					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l26 + ".png"));
 					break;
 				case 4:
 					arrayH.add(p);
 					btnpeca26.setEnabled(false);
-					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l26 + ".png"));
+					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l26 + ".png"));
 					break;
 				case 5:
 					arrayH.add(p);
 					btnpeca26.setEnabled(false);
-					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l26 + ".png"));
+					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l26 + ".png"));
 					break;
 				case 6:
 					arrayH.add(p);
 					btnpeca26.setEnabled(false);
-					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l26 + ".png"));
+					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l26 + ".png"));
 					break;
 				case 7:
 					arrayH.add(p);
 					btnpeca26.setEnabled(false);
-					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l26 + ".png"));
+					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l26 + ".png"));
 					break;
 				case 8:
 					arrayM.add(p);
 					btnpeca26.setEnabled(false);
-					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l26 + ".png"));
+					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l26 + ".png"));
 					break;
 				case 9:
 					arrayM.add(p);
 					btnpeca26.setEnabled(false);
-					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l26 + ".png"));
+					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l26 + ".png"));
 					break;
 				case 10:
 					arrayM.add(p);
 					btnpeca26.setEnabled(false);
-					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l26 + ".png"));
+					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l26 + ".png"));
 					break;
 				case 11:
 					arrayM.add(p);
 					btnpeca26.setEnabled(false);
-					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l26 + ".png"));
+					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l26 + ".png"));
 					break;
 				case 12:
 					arrayM.add(p);
 					btnpeca26.setEnabled(false);
-					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l26 + ".png"));
+					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l26 + ".png"));
 					break;
 				case 13:
 					arrayM.add(p);
 					btnpeca26.setEnabled(false);
-					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l26 + ".png"));
+					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l26 + ".png"));
 					break;
 				case 14:
 					arrayM.add(p);
 					btnpeca26.setEnabled(false);
-					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l26 + ".png"));
+					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l26 + ".png"));
 					break;
 
 				default:
@@ -3040,10 +4003,9 @@ public class TelaDoJogo extends JFrame {
 		btnpeca27.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
-				l27 = array.get(26).toString();
 				Pecas p = array.get(26);
-				String ladoa = p.getLadoDireito().toString();
-				String ladob = p.getLadoEsquerdo().toString();
+				String ladoa = p.getLadoEsquerdo().toString(); 
+				String ladob = p.getLadoDireito().toString();
 
 				l27 = ladoa + ladob;
 
@@ -3051,72 +4013,72 @@ public class TelaDoJogo extends JFrame {
 				case 1:
 					arrayH.add(p);
 					btnpeca27.setEnabled(false);
-					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l27 + ".png"));
+					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l27 + ".png"));
 					break;
 				case 2:
 					arrayH.add(p);
 					btnpeca27.setEnabled(false);
-					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l27 + ".png"));
+					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l27 + ".png"));
 					break;
 				case 3:
 					arrayH.add(p);
 					btnpeca27.setEnabled(false);
-					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l27 + ".png"));
+					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l27 + ".png"));
 					break;
 				case 4:
 					arrayH.add(p);
 					btnpeca27.setEnabled(false);
-					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l27 + ".png"));
+					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l27 + ".png"));
 					break;
 				case 5:
 					arrayH.add(p);
 					btnpeca27.setEnabled(false);
-					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l27 + ".png"));
+					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l27 + ".png"));
 					break;
 				case 6:
 					arrayH.add(p);
 					btnpeca27.setEnabled(false);
-					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l27 + ".png"));
+					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l27 + ".png"));
 					break;
 				case 7:
 					arrayH.add(p);
 					btnpeca27.setEnabled(false);
-					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l27 + ".png"));
+					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l27 + ".png"));
 					break;
 				case 8:
 					arrayM.add(p);
 					btnpeca27.setEnabled(false);
-					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l27 + ".png"));
+					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l27 + ".png"));
 					break;
 				case 9:
 					arrayM.add(p);
 					btnpeca27.setEnabled(false);
-					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l27 + ".png"));
+					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l27 + ".png"));
 					break;
 				case 10:
 					arrayM.add(p);
 					btnpeca27.setEnabled(false);
-					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l27 + ".png"));
+					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l27 + ".png"));
 					break;
 				case 11:
 					arrayM.add(p);
 					btnpeca27.setEnabled(false);
-					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l27 + ".png"));
+					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l27 + ".png"));
 					break;
 				case 12:
 					arrayM.add(p);
 					btnpeca27.setEnabled(false);
-					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l27 + ".png"));
+					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l27 + ".png"));
 					break;
 				case 13:
 					arrayM.add(p);
 					btnpeca27.setEnabled(false);
-					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l27 + ".png"));
+					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l27 + ".png"));
 					break;
 				case 14:
 					arrayM.add(p);
 					btnpeca27.setEnabled(false);
-					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l27 + ".png"));
+					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l27 + ".png"));
 					break;
 
 				default:
@@ -3141,81 +4103,80 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(27);
-				String ladoa = p.getLadoDireito().toString();
-				String ladob = p.getLadoEsquerdo().toString();
-
+				String ladoa = p.getLadoEsquerdo().toString(); 
+				String ladob = p.getLadoDireito().toString();
 				l28 = ladoa + ladob;
 
 				switch (aux) {
 				case 1:
 					arrayH.add(p);
 					btnpeca28.setEnabled(false);
-					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
+					btnhumano1.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l28 + ".png"));
 					break;
 				case 2:
 					arrayH.add(p);
 					btnpeca28.setEnabled(false);
-					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
+					btnhumano2.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l28 + ".png"));
 					break;
 				case 3:
 					arrayH.add(p);
 					btnpeca28.setEnabled(false);
-					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
+					btnhumano3.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l28 + ".png"));
 					break;
 				case 4:
 					arrayH.add(p);
 					btnpeca28.setEnabled(false);
-					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
+					btnhumano4.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l28 + ".png"));
 					break;
 				case 5:
 					arrayH.add(p);
 					btnpeca28.setEnabled(false);
-					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
+					btnhumano5.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l28 + ".png"));
 					break;
 				case 6:
 					arrayH.add(p);
 					btnpeca28.setEnabled(false);
-					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
+					btnhumano6.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l28 + ".png"));
 					break;
 				case 7:
 					arrayH.add(p);
 					btnpeca28.setEnabled(false);
-					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
+					btnhumano7.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l28 + ".png"));
 					break;
 				case 8:
 					arrayM.add(p);
 					btnpeca28.setEnabled(false);
-					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
+					btnmaquina1.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l28 + ".png"));
 					break;
 				case 9:
 					arrayM.add(p);
 					btnpeca28.setEnabled(false);
-					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
+					btnmaquina2.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l28 + ".png"));
 					break;
 				case 10:
 					arrayM.add(p);
 					btnpeca28.setEnabled(false);
-					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
+					btnmaquina3.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l28 + ".png"));
 					break;
 				case 11:
 					arrayM.add(p);
 					btnpeca28.setEnabled(false);
-					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
+					btnmaquina4.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l28 + ".png"));
 					break;
 				case 12:
 					arrayM.add(p);
 					btnpeca28.setEnabled(false);
-					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
+					btnmaquina5.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l28 + ".png"));
 					break;
 				case 13:
 					arrayM.add(p);
 					btnpeca28.setEnabled(false);
-					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
+					btnmaquina6.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l28 + ".png"));
 					break;
 				case 14:
 					arrayM.add(p);
 					btnpeca28.setEnabled(false);
-					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//" + l28 + ".png"));
+					btnmaquina7.setIcon(new ImageIcon(".//resource//Pecas//verticais1//" + l28 + ".png"));
 					break;
 
 				default:
