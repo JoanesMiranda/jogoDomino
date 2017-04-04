@@ -111,7 +111,7 @@ public class Actions {
 		}
 	}
 	
-		public int verificaLadosPedra(ArrayList<Pecas> tabuleiro, Pecas peca){
+		public int verificaLadosPedraEsquerda(ArrayList<Pecas> tabuleiro, Pecas peca){
 			int retorno = 0;
 			
 			if(tabuleiro.get(tabuleiro.size()-1).getLadoEsquerdo() == peca.getLadoEsquerdo()){
@@ -123,6 +123,32 @@ public class Actions {
 			return retorno;
 			
 		}
+		
+		public int verificaLadosPedraDireita(ArrayList<Pecas> tabuleiro, Pecas peca){
+			int retorno = 0;
+			
+			if(tabuleiro.get(tabuleiro.size()-1).getLadoDireito() == peca.getLadoDireito()){
+				retorno = 1; // usa peças horizontais2 - usa a peça invertida
+			}
+			if(tabuleiro.get(tabuleiro.size()-1).getLadoDireito() == peca.getLadoEsquerdo()){
+				retorno = 2; // usa peças horizontais1 - usa a mesma peça
+			}
+			return retorno;
+			
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	}
 	
 

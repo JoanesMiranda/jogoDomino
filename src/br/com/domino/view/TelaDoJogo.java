@@ -330,7 +330,7 @@ public class TelaDoJogo extends JFrame {
 						btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
 
 					} else {
-						if (al.verificaLadosPedra(arrayTabuleiro, p1) == 1) {
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 1) {
 							// obs: tem que inverteros valores antes de inserir
 							// no array.
 							Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
@@ -340,7 +340,7 @@ public class TelaDoJogo extends JFrame {
 							btn_1.setEnabled(true);
 							btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
 						} else {
-							if (al.verificaLadosPedra(arrayTabuleiro, p1) == 2) {
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 2) {
 								arrayTabuleiro.add(p1);
 								btnhumano1.setEnabled(false);
 								btn_1.setEnabled(true);
@@ -361,14 +361,14 @@ public class TelaDoJogo extends JFrame {
 						btn_2.setEnabled(true);
 						btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
 					} else {
-						if (al.verificaLadosPedra(arrayTabuleiro, p1) == 1) {
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 1) {
 							Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano1.setEnabled(false);
 							btn_2.setEnabled(true);
 							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
 						} else {
-							if (al.verificaLadosPedra(arrayTabuleiro, p1) == 2) {
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 2) {
 								arrayTabuleiro.add(p1);
 								btnhumano1.setEnabled(false);
 								btn_2.setEnabled(true);
@@ -387,14 +387,14 @@ public class TelaDoJogo extends JFrame {
 						btn_3.setEnabled(true);
 						btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
 					} else {
-						if (al.verificaLadosPedra(arrayTabuleiro, p1) == 1) {
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 1) {
 							Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano1.setEnabled(false);
 							btn_3.setEnabled(true);
 							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
 						} else {
-							if (al.verificaLadosPedra(arrayTabuleiro, p1) == 2) {
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 2) {
 								arrayTabuleiro.add(p1);
 								btnhumano1.setEnabled(false);
 								btn_3.setEnabled(true);
@@ -413,18 +413,20 @@ public class TelaDoJogo extends JFrame {
 						btn_4.setEnabled(true);
 						btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
 					} else {
-						if (al.verificaLadosPedra(arrayTabuleiro, p1) == 1) {
-							Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
-							arrayTabuleiro.add(novop);
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 1) {
+							arrayTabuleiro.add(p1);
 							btnhumano1.setEnabled(false);
 							btn_4.setEnabled(true);
-							btn_4.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
+							
+							btn_4.setIcon(new ImageIcon(".//resource//pecas//verticais1//" + l1 + ".png"));
+						
 						} else {
-							if (al.verificaLadosPedra(arrayTabuleiro, p1) == 2) {
-								arrayTabuleiro.add(p1);
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 2) {
+								Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
+								arrayTabuleiro.add(novop);
 								btnhumano1.setEnabled(false);
 								btn_4.setEnabled(true);
-								btn_4.setIcon(new ImageIcon(".//resource//pecas//verticais1//" + l1 + ".png"));
+								btn_4.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -439,18 +441,19 @@ public class TelaDoJogo extends JFrame {
 						btn_5.setEnabled(true);
 						btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
 					} else {
-						if (al.verificaLadosPedra(arrayTabuleiro, p1) == 1) {
-							Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
-							arrayTabuleiro.add(novop);
+						if (al.verificaLadosPedraDireita(arrayTabuleiro, p1) == 1) {
+							arrayTabuleiro.add(p1);
 							btnhumano1.setEnabled(false);
 							btn_5.setEnabled(true);
 							btn_5.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
-							if (al.verificaLadosPedra(arrayTabuleiro, p1) == 2) {
-								arrayTabuleiro.add(p1);
+							if (al.verificaLadosPedraDireita(arrayTabuleiro, p1) == 2) {
+								Pecas novop = new Pecas(p1.getLadoEsquerdo(), p1.getLadoDireito());
+								arrayTabuleiro.add(novop);
 								btnhumano1.setEnabled(false);
 								btn_5.setEnabled(true);
-								btn_5.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l1 + ".png"));
+								btn_5.setIcon(new ImageIcon(".//resource//pecas//verticais1//" + l1 + ".png"));
+							
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -465,18 +468,19 @@ public class TelaDoJogo extends JFrame {
 						btn_6.setEnabled(true);
 						btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
 					} else {
-						if (al.verificaLadosPedra(arrayTabuleiro, p1) == 1) {
-							Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
-							arrayTabuleiro.add(novop);
+						if (al.verificaLadosPedraDireita(arrayTabuleiro, p1) == 1) {
+							arrayTabuleiro.add(p1);
 							btnhumano1.setEnabled(false);
 							btn_6.setEnabled(true);
-							btn_6.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
+							
+							btn_6.setIcon(new ImageIcon(".//resource//pecas//verticai2//" + ladob + ladoa + ".png"));
 						} else {
-							if (al.verificaLadosPedra(arrayTabuleiro, p1) == 2) {
-								arrayTabuleiro.add(p1);
+							if (al.verificaLadosPedraDireita(arrayTabuleiro, p1) == 2) {
+								Pecas novop = new Pecas(p1.getLadoEsquerdo(), p1.getLadoDireito());
+								arrayTabuleiro.add(novop);
 								btnhumano1.setEnabled(false);
 								btn_6.setEnabled(true);
-								btn_6.setIcon(new ImageIcon(".//resource//pecas//verticai2//" + l1 + ".png"));
+								btn_6.setIcon(new ImageIcon(".//resource//pecas//verticais1//" + l1 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -491,14 +495,14 @@ public class TelaDoJogo extends JFrame {
 						btn_7.setEnabled(true);
 						btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
 					} else {
-						if (al.verificaLadosPedra(arrayTabuleiro, p1) == 1) {
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 1) {
 							Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano1.setEnabled(false);
 							btn_7.setEnabled(true);
 							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
 						} else {
-							if (al.verificaLadosPedra(arrayTabuleiro, p1) == 2) {
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 2) {
 								arrayTabuleiro.add(p1);
 								btnhumano1.setEnabled(false);
 								btn_7.setEnabled(true);
@@ -536,14 +540,14 @@ public class TelaDoJogo extends JFrame {
 						btn_1.setEnabled(true);
 						btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l2 + ".png"));
 					} else {
-						if (al.verificaLadosPedra(arrayTabuleiro, p2) == 1) {
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 1) {
 							Pecas novop = new Pecas(p2.getLadoDireito(), p2.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano2.setEnabled(false);
 							btn_1.setEnabled(true);
 							btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
 						} else {
-							if (al.verificaLadosPedra(arrayTabuleiro, p2) == 2) {
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 2) {
 								arrayTabuleiro.add(p2);
 								btnhumano2.setEnabled(false);
 								btn_1.setEnabled(true);
@@ -564,14 +568,14 @@ public class TelaDoJogo extends JFrame {
 						btn_2.setEnabled(true);
 						btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l2 + ".png"));
 					} else {
-						if (al.verificaLadosPedra(arrayTabuleiro, p2) == 1) {
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 1) {
 							Pecas novop = new Pecas(p2.getLadoDireito(), p2.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano2.setEnabled(false);
 							btn_2.setEnabled(true);
 							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
 						} else {
-							if (al.verificaLadosPedra(arrayTabuleiro, p2) == 2) {
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 2) {
 								arrayTabuleiro.add(p2);
 								btnhumano2.setEnabled(false);
 								btn_2.setEnabled(true);
@@ -590,14 +594,14 @@ public class TelaDoJogo extends JFrame {
 						btn_3.setEnabled(true);
 						btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l2 + ".png"));
 					} else {
-						if (al.verificaLadosPedra(arrayTabuleiro, p2) == 1) {
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 1) {
 							Pecas novop = new Pecas(p2.getLadoDireito(), p2.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano2.setEnabled(false);
 							btn_3.setEnabled(true);
 							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
 						} else {
-							if (al.verificaLadosPedra(arrayTabuleiro, p2) == 2) {
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 2) {
 								arrayTabuleiro.add(p2);
 								btnhumano2.setEnabled(false);
 								btn_3.setEnabled(true);
@@ -616,18 +620,21 @@ public class TelaDoJogo extends JFrame {
 						btn_4.setEnabled(true);
 						btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l2 + ".png"));
 					} else {
-						if (al.verificaLadosPedra(arrayTabuleiro, p2) == 1) {
-							Pecas novop = new Pecas(p2.getLadoDireito(), p2.getLadoEsquerdo());
-							arrayTabuleiro.add(novop);
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 1) {
+							arrayTabuleiro.add(p2);
 							btnhumano2.setEnabled(false);
 							btn_4.setEnabled(true);
-							btn_4.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
+					
+							btn_4.setIcon(new ImageIcon(".//resource//pecas//verticais1//" + l2 + ".png"));
 						} else {
-							if (al.verificaLadosPedra(arrayTabuleiro, p2) == 2) {
-								arrayTabuleiro.add(p2);
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 2) {
+								
+								Pecas novop = new Pecas(p2.getLadoDireito(), p2.getLadoEsquerdo());
+								arrayTabuleiro.add(novop);
 								btnhumano2.setEnabled(false);
 								btn_4.setEnabled(true);
-								btn_4.setIcon(new ImageIcon(".//resource//pecas//verticais1//" + l2 + ".png"));
+								
+								btn_4.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -642,15 +649,17 @@ public class TelaDoJogo extends JFrame {
 						btn_5.setEnabled(true);
 						btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l2 + ".png"));
 					} else {
-						if (al.verificaLadosPedra(arrayTabuleiro, p2) == 1) {
-							Pecas novop = new Pecas(p2.getLadoDireito(), p2.getLadoEsquerdo());
-							arrayTabuleiro.add(novop);
+						if (al.verificaLadosPedraDireita(arrayTabuleiro, p2) == 1) {
+							arrayTabuleiro.add(p2);
 							btnhumano2.setEnabled(false);
 							btn_5.setEnabled(true);
-							btn_5.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
+							
+							btn_5.setIcon(new ImageIcon(".//resource//pecas//verticais2//" +ladob + ladoa + ".png"));
 						} else {
-							if (al.verificaLadosPedra(arrayTabuleiro, p2) == 2) {
-								arrayTabuleiro.add(p2);
+							if (al.verificaLadosPedraDireita(arrayTabuleiro, p2) == 2) {
+								
+								Pecas novop = new Pecas(p2.getLadoEsquerdo(), p2.getLadoDireito());
+								arrayTabuleiro.add(novop);
 								btnhumano2.setEnabled(false);
 								btn_5.setEnabled(true);
 								btn_5.setIcon(new ImageIcon(".//resource//pecas//verticais1//" + l2 + ".png"));
@@ -668,15 +677,17 @@ public class TelaDoJogo extends JFrame {
 						btn_6.setEnabled(true);
 						btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l2 + ".png"));
 					} else {
-						if (al.verificaLadosPedra(arrayTabuleiro, p2) == 1) {
-							Pecas novop = new Pecas(p2.getLadoDireito(), p2.getLadoEsquerdo());
-							arrayTabuleiro.add(novop);
+						if (al.verificaLadosPedraDireita(arrayTabuleiro, p2) == 1) {
+							arrayTabuleiro.add(p2);
 							btnhumano2.setEnabled(false);
 							btn_6.setEnabled(true);
+						
 							btn_6.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
-							if (al.verificaLadosPedra(arrayTabuleiro, p2) == 2) {
-								arrayTabuleiro.add(p2);
+							if (al.verificaLadosPedraDireita(arrayTabuleiro, p2) == 2) {
+								Pecas novop = new Pecas(p2.getLadoEsquerdo(), p2.getLadoDireito());
+								arrayTabuleiro.add(novop);
+								
 								btnhumano2.setEnabled(false);
 								btn_6.setEnabled(true);
 								btn_6.setIcon(new ImageIcon(".//resource//pecas//verticais1//" + l2 + ".png"));
@@ -694,18 +705,18 @@ public class TelaDoJogo extends JFrame {
 						btn_7.setEnabled(true);
 						btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l2 + ".png"));
 					} else {
-						if (al.verificaLadosPedra(arrayTabuleiro, p2) == 1) {
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 1) {
 							Pecas novop = new Pecas(p2.getLadoDireito(), p2.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano2.setEnabled(false);
 							btn_7.setEnabled(true);
 							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
 						} else {
-							if (al.verificaLadosPedra(arrayTabuleiro, p2) == 2) {
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 2) {
 								arrayTabuleiro.add(p2);
 								btnhumano2.setEnabled(false);
 								btn_7.setEnabled(true);
-								btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + l2 + ".png"));
+								btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l2 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -740,14 +751,14 @@ public class TelaDoJogo extends JFrame {
 						btn_1.setEnabled(true);
 						btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l3 + ".png"));
 					} else {
-						if (al.verificaLadosPedra(arrayTabuleiro, p3) == 1) {
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 1) {
 							Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano3.setEnabled(false);
 							btn_1.setEnabled(true);
 							btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
 						} else {
-							if (al.verificaLadosPedra(arrayTabuleiro, p3) == 2) {
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 2) {
 								arrayTabuleiro.add(p3);
 								btnhumano3.setEnabled(false);
 								btn_1.setEnabled(true);
@@ -767,14 +778,14 @@ public class TelaDoJogo extends JFrame {
 						btn_2.setEnabled(true);
 						btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l3 + ".png"));
 					} else {
-						if (al.verificaLadosPedra(arrayTabuleiro, p3) == 1) {
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 1) {
 							Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano3.setEnabled(false);
 							btn_2.setEnabled(true);
 							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
 						} else {
-							if (al.verificaLadosPedra(arrayTabuleiro, p3) == 2) {
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 2) {
 								arrayTabuleiro.add(p3);
 								btnhumano3.setEnabled(false);
 								btn_2.setEnabled(true);
@@ -793,14 +804,14 @@ public class TelaDoJogo extends JFrame {
 						btn_3.setEnabled(true);
 						btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l3 + ".png"));
 					} else {
-						if (al.verificaLadosPedra(arrayTabuleiro, p3) == 1) {
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 1) {
 							Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano3.setEnabled(false);
 							btn_3.setEnabled(true);
 							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
 						} else {
-							if (al.verificaLadosPedra(arrayTabuleiro, p3) == 2) {
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 2) {
 								arrayTabuleiro.add(p3);
 								btnhumano2.setEnabled(false);
 								btn_3.setEnabled(true);
@@ -819,18 +830,20 @@ public class TelaDoJogo extends JFrame {
 						btn_4.setEnabled(true);
 						btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l3 + ".png"));
 					} else {
-						if (al.verificaLadosPedra(arrayTabuleiro, p3) == 1) {
-							Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
-							arrayTabuleiro.add(novop);
-							btnhumano2.setEnabled(false);
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 1) {
+							arrayTabuleiro.add(p3);
+							btnhumano3.setEnabled(false);
 							btn_4.setEnabled(true);
-							btn_4.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
+							btn_4.setIcon(new ImageIcon(".//resource//pecas//verticais1//" + l3 + ".png"));
 						} else {
-							if (al.verificaLadosPedra(arrayTabuleiro, p3) == 2) {
-								arrayTabuleiro.add(p3);
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 2) {
+								
+								Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
+								arrayTabuleiro.add(novop);
 								btnhumano3.setEnabled(false);
 								btn_4.setEnabled(true);
-								btn_4.setIcon(new ImageIcon(".//resource//pecas//verticais1//" + l3 + ".png"));
+								
+								btn_4.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -845,15 +858,17 @@ public class TelaDoJogo extends JFrame {
 						btn_5.setEnabled(true);
 						btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l3 + ".png"));
 					} else {
-						if (al.verificaLadosPedra(arrayTabuleiro, p3) == 1) {
-							Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
-							arrayTabuleiro.add(novop);
+						if (al.verificaLadosPedraDireita(arrayTabuleiro, p3) == 1) {
+							arrayTabuleiro.add(p3);
 							btnhumano2.setEnabled(false);
 							btn_5.setEnabled(true);
+							
 							btn_5.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
-							if (al.verificaLadosPedra(arrayTabuleiro, p3) == 2) {
-								arrayTabuleiro.add(p3);
+							if (al.verificaLadosPedraDireita(arrayTabuleiro, p3) == 2) {
+								Pecas novop = new Pecas(p3.getLadoEsquerdo(), p3.getLadoDireito());
+								arrayTabuleiro.add(novop);
+								
 								btnhumano3.setEnabled(false);
 								btn_5.setEnabled(true);
 								btn_5.setIcon(new ImageIcon(".//resource//pecas//verticais1//" + l3 + ".png"));
@@ -871,18 +886,20 @@ public class TelaDoJogo extends JFrame {
 						btn_6.setEnabled(true);
 						btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l3 + ".png"));
 					} else {
-						if (al.verificaLadosPedra(arrayTabuleiro, p3) == 1) {
-							Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
-							arrayTabuleiro.add(novop);
+						if (al.verificaLadosPedraDireita(arrayTabuleiro, p3) == 1) {
+							arrayTabuleiro.add(p3);
 							btnhumano3.setEnabled(false);
 							btn_6.setEnabled(true);
 							btn_6.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
-							if (al.verificaLadosPedra(arrayTabuleiro, p3) == 2) {
-								arrayTabuleiro.add(p3);
+							if (al.verificaLadosPedraDireita(arrayTabuleiro, p3) == 2) {
+								
+								Pecas novop = new Pecas(p3.getLadoEsquerdo(), p3.getLadoDireito());
+								arrayTabuleiro.add(novop);
 								btnhumano3.setEnabled(false);
 								btn_6.setEnabled(true);
-								btn_6.setIcon(new ImageIcon(".//resource//pecas//verticais1//" + l3 + ".png"));
+								
+								btn_6.setIcon(new ImageIcon(".//resource//pecas//verticais1//" +l3 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -897,14 +914,14 @@ public class TelaDoJogo extends JFrame {
 						btn_7.setEnabled(true);
 						btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l3 + ".png"));
 					} else {
-						if (al.verificaLadosPedra(arrayTabuleiro, p3) == 1) {
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 1) {
 							Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano3.setEnabled(false);
 							btn_7.setEnabled(true);
 							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
 						} else {
-							if (al.verificaLadosPedra(arrayTabuleiro, p3) == 2) {
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 2) {
 								arrayTabuleiro.add(p3);
 								btnhumano3.setEnabled(false);
 								btn_7.setEnabled(true);
@@ -943,14 +960,14 @@ public class TelaDoJogo extends JFrame {
 						btn_1.setEnabled(true);
 						btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l4 + ".png"));
 					} else {
-						if (al.verificaLadosPedra(arrayTabuleiro, p4) == 1) {
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 1) {
 							Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano4.setEnabled(false);
 							btn_1.setEnabled(true);
 							btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
 						} else {
-							if (al.verificaLadosPedra(arrayTabuleiro, p4) == 2) {
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 2) {
 								arrayTabuleiro.add(p4);
 								btnhumano4.setEnabled(false);
 								btn_1.setEnabled(true);
@@ -970,14 +987,14 @@ public class TelaDoJogo extends JFrame {
 						btn_2.setEnabled(true);
 						btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l4 + ".png"));
 					} else {
-						if (al.verificaLadosPedra(arrayTabuleiro, p4) == 1) {
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 1) {
 							Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano4.setEnabled(false);
 							btn_2.setEnabled(true);
 							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
 						} else {
-							if (al.verificaLadosPedra(arrayTabuleiro, p4) == 2) {
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 2) {
 								arrayTabuleiro.add(p4);
 								btnhumano4.setEnabled(false);
 								btn_2.setEnabled(true);
@@ -996,14 +1013,14 @@ public class TelaDoJogo extends JFrame {
 						btn_3.setEnabled(true);
 						btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l4 + ".png"));
 					} else {
-						if (al.verificaLadosPedra(arrayTabuleiro, p4) == 1) {
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 1) {
 							Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano4.setEnabled(false);
 							btn_3.setEnabled(true);
 							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
 						} else {
-							if (al.verificaLadosPedra(arrayTabuleiro, p4) == 2) {
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 2) {
 								arrayTabuleiro.add(p4);
 								btnhumano4.setEnabled(false);
 								btn_3.setEnabled(true);
@@ -1022,18 +1039,21 @@ public class TelaDoJogo extends JFrame {
 						btn_4.setEnabled(true);
 						btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l4 + ".png"));
 					} else {
-						if (al.verificaLadosPedra(arrayTabuleiro, p4) == 1) {
-							Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
-							arrayTabuleiro.add(novop);
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 1) {
+							arrayTabuleiro.add(p4);
 							btnhumano4.setEnabled(false);
 							btn_4.setEnabled(true);
-							btn_4.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
+							
+							
+							btn_4.setIcon(new ImageIcon(".//resource//pecas//verticais1//" + l4 + ".png"));
 						} else {
-							if (al.verificaLadosPedra(arrayTabuleiro, p4) == 2) {
-								arrayTabuleiro.add(p4);
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 2) {
+								
+								Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
+								arrayTabuleiro.add(novop);
 								btnhumano4.setEnabled(false);
 								btn_4.setEnabled(true);
-								btn_4.setIcon(new ImageIcon(".//resource//pecas//verticais1//" + l4 + ".png"));
+								btn_4.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -1048,15 +1068,17 @@ public class TelaDoJogo extends JFrame {
 						btn_5.setEnabled(true);
 						btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l4 + ".png"));
 					} else {
-						if (al.verificaLadosPedra(arrayTabuleiro, p4) == 1) {
-							Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
-							arrayTabuleiro.add(novop);
+						if (al.verificaLadosPedraDireita(arrayTabuleiro, p4) == 1) {
+							arrayTabuleiro.add(p4);
 							btnhumano4.setEnabled(false);
 							btn_5.setEnabled(true);
-							btn_5.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
+							
+							btn_5.setIcon(new ImageIcon(".//resource//pecas//verticais2//" +ladob + ladoa + ".png"));
 						} else {
-							if (al.verificaLadosPedra(arrayTabuleiro, p4) == 2) {
-								arrayTabuleiro.add(p4);
+							if (al.verificaLadosPedraDireita(arrayTabuleiro, p4) == 2) {
+							
+								Pecas novop = new Pecas(p4.getLadoEsquerdo(), p4.getLadoDireito());
+								arrayTabuleiro.add(novop);
 								btnhumano4.setEnabled(false);
 								btn_5.setEnabled(true);
 								btn_5.setIcon(new ImageIcon(".//resource//pecas//verticais1//" + l4 + ".png"));
@@ -1074,15 +1096,17 @@ public class TelaDoJogo extends JFrame {
 						btn_6.setEnabled(true);
 						btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l4 + ".png"));
 					} else {
-						if (al.verificaLadosPedra(arrayTabuleiro, p4) == 1) {
-							Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
-							arrayTabuleiro.add(novop);
+						if (al.verificaLadosPedraDireita(arrayTabuleiro, p4) == 1) {
+							arrayTabuleiro.add(p4);
 							btnhumano4.setEnabled(false);
 							btn_6.setEnabled(true);
-							btn_6.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
+						
+							btn_6.setIcon(new ImageIcon(".//resource//pecas//verticais2//" +ladob + ladoa + ".png"));
 						} else {
-							if (al.verificaLadosPedra(arrayTabuleiro, p4) == 2) {
-								arrayTabuleiro.add(p4);
+							if (al.verificaLadosPedraDireita(arrayTabuleiro, p4) == 2) {
+								
+								Pecas novop = new Pecas(p4.getLadoEsquerdo(), p4.getLadoDireito());
+								arrayTabuleiro.add(novop);
 								btnhumano4.setEnabled(false);
 								btn_6.setEnabled(true);
 								btn_6.setIcon(new ImageIcon(".//resource//pecas//verticais1//" + l4 + ".png"));
@@ -1100,14 +1124,14 @@ public class TelaDoJogo extends JFrame {
 						btn_7.setEnabled(true);
 						btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l4 + ".png"));
 					} else {
-						if (al.verificaLadosPedra(arrayTabuleiro, p4) == 1) {
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 1) {
 							Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano4.setEnabled(false);
 							btn_7.setEnabled(true);
 							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
 						} else {
-							if (al.verificaLadosPedra(arrayTabuleiro, p4) == 2) {
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 2) {
 								arrayTabuleiro.add(p4);
 								btnhumano4.setEnabled(false);
 								btn_7.setEnabled(true);
@@ -1144,14 +1168,14 @@ public class TelaDoJogo extends JFrame {
 						btn_1.setEnabled(true);
 						btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l5 + ".png"));
 					} else {
-						if (al.verificaLadosPedra(arrayTabuleiro, p5) == 1) {
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 1) {
 							Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano5.setEnabled(false);
 							btn_1.setEnabled(true);
 							btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
 						} else {
-							if (al.verificaLadosPedra(arrayTabuleiro, p5) == 2) {
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 2) {
 								arrayTabuleiro.add(p5);
 								btnhumano5.setEnabled(false);
 								btn_1.setEnabled(true);
@@ -1172,14 +1196,14 @@ public class TelaDoJogo extends JFrame {
 						btn_2.setEnabled(true);
 						btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l5 + ".png"));
 					} else {
-						if (al.verificaLadosPedra(arrayTabuleiro, p5) == 1) {
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 1) {
 							Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano5.setEnabled(false);
 							btn_2.setEnabled(true);
 							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
 						} else {
-							if (al.verificaLadosPedra(arrayTabuleiro, p5) == 2) {
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 2) {
 								arrayTabuleiro.add(p5);
 								btnhumano5.setEnabled(false);
 								btn_2.setEnabled(true);
@@ -1198,14 +1222,14 @@ public class TelaDoJogo extends JFrame {
 						btn_3.setEnabled(true);
 						btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l5 + ".png"));
 					} else {
-						if (al.verificaLadosPedra(arrayTabuleiro, p5) == 1) {
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 1) {
 							Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano5.setEnabled(false);
 							btn_3.setEnabled(true);
 							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
 						} else {
-							if (al.verificaLadosPedra(arrayTabuleiro, p5) == 2) {
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 2) {
 								arrayTabuleiro.add(p5);
 								btnhumano5.setEnabled(false);
 								btn_3.setEnabled(true);
@@ -1224,18 +1248,21 @@ public class TelaDoJogo extends JFrame {
 						btn_4.setEnabled(true);
 						btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l5 + ".png"));
 					} else {
-						if (al.verificaLadosPedra(arrayTabuleiro, p5) == 1) {
-							Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
-							arrayTabuleiro.add(novop);
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 1) {
+							arrayTabuleiro.add(p5);
 							btnhumano5.setEnabled(false);
 							btn_4.setEnabled(true);
-							btn_4.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
+							
+							btn_4.setIcon(new ImageIcon(".//resource//pecas//verticais1//" + l5 + ".png"));
 						} else {
-							if (al.verificaLadosPedra(arrayTabuleiro, p5) == 2) {
-								arrayTabuleiro.add(p5);
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 2) {
+								
+								Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
+								arrayTabuleiro.add(novop);
 								btnhumano5.setEnabled(false);
 								btn_4.setEnabled(true);
-								btn_4.setIcon(new ImageIcon(".//resource//pecas//verticais1//" + l5 + ".png"));
+								
+								btn_4.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -1250,15 +1277,17 @@ public class TelaDoJogo extends JFrame {
 						btn_5.setEnabled(true);
 						btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l5 + ".png"));
 					} else {
-						if (al.verificaLadosPedra(arrayTabuleiro, p5) == 1) {
-							Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
-							arrayTabuleiro.add(novop);
+						if (al.verificaLadosPedraDireita(arrayTabuleiro, p5) == 1) {
+							arrayTabuleiro.add(p5);
 							btnhumano5.setEnabled(false);
 							btn_5.setEnabled(true);
+							
 							btn_5.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
-							if (al.verificaLadosPedra(arrayTabuleiro, p5) == 2) {
-								arrayTabuleiro.add(p5);
+							if (al.verificaLadosPedraDireita(arrayTabuleiro, p5) == 2) {
+								Pecas novop = new Pecas(p5.getLadoEsquerdo(), p5.getLadoDireito());
+								arrayTabuleiro.add(novop);
+								
 								btnhumano5.setEnabled(false);
 								btn_5.setEnabled(true);
 								btn_5.setIcon(new ImageIcon(".//resource//pecas//verticais1//" + l5 + ".png"));
@@ -1276,15 +1305,17 @@ public class TelaDoJogo extends JFrame {
 						btn_6.setEnabled(true);
 						btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l5 + ".png"));
 					} else {
-						if (al.verificaLadosPedra(arrayTabuleiro, p5) == 1) {
-							Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
-							arrayTabuleiro.add(novop);
+						if (al.verificaLadosPedraDireita(arrayTabuleiro, p5) == 1) {
+							arrayTabuleiro.add(p5);
 							btnhumano5.setEnabled(false);
 							btn_6.setEnabled(true);
+							
 							btn_6.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
-							if (al.verificaLadosPedra(arrayTabuleiro, p5) == 2) {
-								arrayTabuleiro.add(p5);
+							if (al.verificaLadosPedraDireita(arrayTabuleiro, p5) == 2) {
+								Pecas novop = new Pecas(p5.getLadoEsquerdo(), p5.getLadoDireito());
+								arrayTabuleiro.add(novop);
+								
 								btnhumano5.setEnabled(false);
 								btn_6.setEnabled(true);
 								btn_6.setIcon(new ImageIcon(".//resource//pecas//verticais1//" + l5 + ".png"));
@@ -1302,18 +1333,18 @@ public class TelaDoJogo extends JFrame {
 						btn_7.setEnabled(true);
 						btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l5 + ".png"));
 					} else {
-						if (al.verificaLadosPedra(arrayTabuleiro, p5) == 1) {
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 1) {
 							Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano5.setEnabled(false);
 							btn_7.setEnabled(true);
 							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
 						} else {
-							if (al.verificaLadosPedra(arrayTabuleiro, p5) == 2) {
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 2) {
 								arrayTabuleiro.add(p5);
 								btnhumano5.setEnabled(false);
 								btn_7.setEnabled(true);
-								btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + l5 + ".png"));
+								btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l5 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -1348,14 +1379,14 @@ public class TelaDoJogo extends JFrame {
 						btn_1.setEnabled(true);
 						btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l6 + ".png"));
 					} else {
-						if (al.verificaLadosPedra(arrayTabuleiro, p6) == 1) {
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 1) {
 							Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano2.setEnabled(false);
 							btn_1.setEnabled(true);
 							btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
 						} else {
-							if (al.verificaLadosPedra(arrayTabuleiro, p6) == 2) {
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 2) {
 								arrayTabuleiro.add(p6);
 								btnhumano6.setEnabled(false);
 								btn_1.setEnabled(true);
@@ -1376,14 +1407,14 @@ public class TelaDoJogo extends JFrame {
 						btn_2.setEnabled(true);
 						btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l6 + ".png"));
 					} else {
-						if (al.verificaLadosPedra(arrayTabuleiro, p6) == 1) {
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 1) {
 							Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano6.setEnabled(false);
 							btn_2.setEnabled(true);
 							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
 						} else {
-							if (al.verificaLadosPedra(arrayTabuleiro, p6) == 2) {
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 2) {
 								arrayTabuleiro.add(p6);
 								btnhumano6.setEnabled(false);
 								btn_2.setEnabled(true);
@@ -1402,14 +1433,14 @@ public class TelaDoJogo extends JFrame {
 						btn_3.setEnabled(true);
 						btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l6 + ".png"));
 					} else {
-						if (al.verificaLadosPedra(arrayTabuleiro, p6) == 1) {
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 1) {
 							Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano6.setEnabled(false);
 							btn_3.setEnabled(true);
 							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
 						} else {
-							if (al.verificaLadosPedra(arrayTabuleiro, p6) == 2) {
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 2) {
 								arrayTabuleiro.add(p6);
 								btnhumano6.setEnabled(false);
 								btn_3.setEnabled(true);
@@ -1428,18 +1459,21 @@ public class TelaDoJogo extends JFrame {
 						btn_4.setEnabled(true);
 						btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l6 + ".png"));
 					} else {
-						if (al.verificaLadosPedra(arrayTabuleiro, p6) == 1) {
-							Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
-							arrayTabuleiro.add(novop);
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 1) {
+							arrayTabuleiro.add(p6);
 							btnhumano6.setEnabled(false);
 							btn_4.setEnabled(true);
-							btn_4.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
+							
+							btn_4.setIcon(new ImageIcon(".//resource//pecas//verticais1//" + l6 + ".png"));
 						} else {
-							if (al.verificaLadosPedra(arrayTabuleiro, p6) == 2) {
-								arrayTabuleiro.add(p6);
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 2) {
+								
+								Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
+								arrayTabuleiro.add(novop);
 								btnhumano6.setEnabled(false);
 								btn_4.setEnabled(true);
-								btn_4.setIcon(new ImageIcon(".//resource//pecas//verticais1//" + l6 + ".png"));
+								
+								btn_4.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -1454,18 +1488,21 @@ public class TelaDoJogo extends JFrame {
 						btn_5.setEnabled(true);
 						btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l6 + ".png"));
 					} else {
-						if (al.verificaLadosPedra(arrayTabuleiro, p6) == 1) {
-							Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
-							arrayTabuleiro.add(novop);
+						if (al.verificaLadosPedraDireita(arrayTabuleiro, p6) == 1) {
+							arrayTabuleiro.add(p6);
 							btnhumano6.setEnabled(false);
 							btn_5.setEnabled(true);
+							
 							btn_5.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
-							if (al.verificaLadosPedra(arrayTabuleiro, p6) == 2) {
-								arrayTabuleiro.add(p6);
+							if (al.verificaLadosPedraDireita(arrayTabuleiro, p6) == 2) {
+								Pecas novop = new Pecas(p6.getLadoEsquerdo(), p6.getLadoDireito());
+								arrayTabuleiro.add(novop);
 								btnhumano6.setEnabled(false);
 								btn_5.setEnabled(true);
 								btn_5.setIcon(new ImageIcon(".//resource//pecas//verticais1//" + l6 + ".png"));
+
+								
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -1480,15 +1517,17 @@ public class TelaDoJogo extends JFrame {
 						btn_6.setEnabled(true);
 						btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l6 + ".png"));
 					} else {
-						if (al.verificaLadosPedra(arrayTabuleiro, p6) == 1) {
-							Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
-							arrayTabuleiro.add(novop);
+						if (al.verificaLadosPedraDireita(arrayTabuleiro, p6) == 1) {
+							arrayTabuleiro.add(p6);
 							btnhumano6.setEnabled(false);
 							btn_6.setEnabled(true);
+							
 							btn_6.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
-							if (al.verificaLadosPedra(arrayTabuleiro, p6) == 2) {
-								arrayTabuleiro.add(p6);
+							if (al.verificaLadosPedraDireita(arrayTabuleiro, p6) == 2) {
+								Pecas novop = new Pecas(p6.getLadoEsquerdo(), p6.getLadoDireito());
+								arrayTabuleiro.add(novop);
+								
 								btnhumano6.setEnabled(false);
 								btn_6.setEnabled(true);
 								btn_6.setIcon(new ImageIcon(".//resource//pecas//verticais1//" + l6 + ".png"));
@@ -1506,18 +1545,18 @@ public class TelaDoJogo extends JFrame {
 						btn_7.setEnabled(true);
 						btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l6 + ".png"));
 					} else {
-						if (al.verificaLadosPedra(arrayTabuleiro, p6) == 1) {
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 1) {
 							Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano6.setEnabled(false);
 							btn_7.setEnabled(true);
 							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
 						} else {
-							if (al.verificaLadosPedra(arrayTabuleiro, p6) == 2) {
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 2) {
 								arrayTabuleiro.add(p6);
 								btnhumano6.setEnabled(false);
 								btn_7.setEnabled(true);
-								btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + l6 + ".png"));
+								btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l6 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -1552,14 +1591,14 @@ public class TelaDoJogo extends JFrame {
 						btn_1.setEnabled(true);
 						btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l7 + ".png"));
 					} else {
-						if (al.verificaLadosPedra(arrayTabuleiro, p7) == 1) {
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 1) {
 							Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano7.setEnabled(false);
 							btn_1.setEnabled(true);
 							btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
 						} else {
-							if (al.verificaLadosPedra(arrayTabuleiro, p7) == 2) {
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 2) {
 								arrayTabuleiro.add(p7);
 								btnhumano7.setEnabled(false);
 								btn_1.setEnabled(true);
@@ -1580,14 +1619,14 @@ public class TelaDoJogo extends JFrame {
 						btn_2.setEnabled(true);
 						btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l7 + ".png"));
 					} else {
-						if (al.verificaLadosPedra(arrayTabuleiro, p7) == 1) {
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 1) {
 							Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano7.setEnabled(false);
 							btn_2.setEnabled(true);
 							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
 						} else {
-							if (al.verificaLadosPedra(arrayTabuleiro, p7) == 2) {
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 2) {
 								arrayTabuleiro.add(p7);
 								btnhumano7.setEnabled(false);
 								btn_2.setEnabled(true);
@@ -1606,14 +1645,14 @@ public class TelaDoJogo extends JFrame {
 						btn_3.setEnabled(true);
 						btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l7 + ".png"));
 					} else {
-						if (al.verificaLadosPedra(arrayTabuleiro, p7) == 1) {
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 1) {
 							Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano7.setEnabled(false);
 							btn_3.setEnabled(true);
 							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
 						} else {
-							if (al.verificaLadosPedra(arrayTabuleiro, p7) == 2) {
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 2) {
 								arrayTabuleiro.add(p7);
 								btnhumano7.setEnabled(false);
 								btn_3.setEnabled(true);
@@ -1632,18 +1671,21 @@ public class TelaDoJogo extends JFrame {
 						btn_4.setEnabled(true);
 						btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l7 + ".png"));
 					} else {
-						if (al.verificaLadosPedra(arrayTabuleiro, p7) == 1) {
-							Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
-							arrayTabuleiro.add(novop);
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 1) {
+							arrayTabuleiro.add(p7);
 							btnhumano7.setEnabled(false);
 							btn_4.setEnabled(true);
-							btn_4.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
+							
+							btn_4.setIcon(new ImageIcon(".//resource//pecas//verticais1//" + l7 + ".png"));
 						} else {
-							if (al.verificaLadosPedra(arrayTabuleiro, p7) == 2) {
-								arrayTabuleiro.add(p7);
+							if (al.verificaLadosPedraDireita(arrayTabuleiro, p7) == 2) {
+								Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
+								arrayTabuleiro.add(novop);
+							
 								btnhumano7.setEnabled(false);
 								btn_4.setEnabled(true);
-								btn_4.setIcon(new ImageIcon(".//resource//pecas//verticais1//" + l7 + ".png"));
+								
+								btn_4.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -1658,15 +1700,17 @@ public class TelaDoJogo extends JFrame {
 						btn_5.setEnabled(true);
 						btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l7 + ".png"));
 					} else {
-						if (al.verificaLadosPedra(arrayTabuleiro, p7) == 1) {
-							Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
-							arrayTabuleiro.add(novop);
+						if (al.verificaLadosPedraDireita(arrayTabuleiro, p7) == 1) {
+							arrayTabuleiro.add(p7);
 							btnhumano7.setEnabled(false);
 							btn_5.setEnabled(true);
+							
 							btn_5.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
-							if (al.verificaLadosPedra(arrayTabuleiro, p7) == 2) {
-								arrayTabuleiro.add(p7);
+							if (al.verificaLadosPedraDireita(arrayTabuleiro, p7) == 2) {
+								Pecas novop = new Pecas(p7.getLadoEsquerdo(), p7.getLadoDireito());
+								arrayTabuleiro.add(novop);
+							
 								btnhumano7.setEnabled(false);
 								btn_5.setEnabled(true);
 								btn_5.setIcon(new ImageIcon(".//resource//pecas//verticais1//" + l7 + ".png"));
@@ -1684,15 +1728,17 @@ public class TelaDoJogo extends JFrame {
 						btn_6.setEnabled(true);
 						btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l7 + ".png"));
 					} else {
-						if (al.verificaLadosPedra(arrayTabuleiro, p7) == 1) {
-							Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
-							arrayTabuleiro.add(novop);
+						if (al.verificaLadosPedraDireita(arrayTabuleiro, p7) == 1) {
+							arrayTabuleiro.add(p7);
 							btnhumano7.setEnabled(false);
 							btn_6.setEnabled(true);
+							
 							btn_6.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
-							if (al.verificaLadosPedra(arrayTabuleiro, p7) == 2) {
-								arrayTabuleiro.add(p7);
+							if (al.verificaLadosPedraDireita(arrayTabuleiro, p7) == 2) {
+								Pecas novop = new Pecas(p7.getLadoEsquerdo(), p7.getLadoDireito());
+								arrayTabuleiro.add(novop);
+								
 								btnhumano7.setEnabled(false);
 								btn_6.setEnabled(true);
 								btn_6.setIcon(new ImageIcon(".//resource//pecas//verticais1//" + l7 + ".png"));
@@ -1710,18 +1756,18 @@ public class TelaDoJogo extends JFrame {
 						btn_7.setEnabled(true);
 						btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l7 + ".png"));
 					} else {
-						if (al.verificaLadosPedra(arrayTabuleiro, p7) == 1) {
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 1) {
 							Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano7.setEnabled(false);
 							btn_7.setEnabled(true);
 							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
 						} else {
-							if (al.verificaLadosPedra(arrayTabuleiro, p7) == 2) {
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 2) {
 								arrayTabuleiro.add(p7);
 								btnhumano7.setEnabled(false);
 								btn_7.setEnabled(true);
-								btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + l7 + ".png"));
+								btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l7 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
