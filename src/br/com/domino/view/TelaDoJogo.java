@@ -343,14 +343,18 @@ public class TelaDoJogo extends JFrame {
 						}
 					}
 					/** Inteligência simples da maquina **/
-
-					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) != 0) {
-						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
-						btn_2.setEnabled(true);
-						btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"
-								+ al.escolhePedraMaquina(arrayTabuleiro, arrayM) + ".png"));
-						++aux2;
-						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+					
+					if(al.escolhePedraMaquina(arrayTabuleiro, arrayM).equals("")){
+						JOptionPane.showMessageDialog(null, "Jogador MAQUINA passa a vez ou compra ");
+					}else{
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) != 0) {
+							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+							btn_2.setEnabled(true);
+							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"
+									+ al.escolhePedraMaquina(arrayTabuleiro, arrayM) + ".png"));
+							++aux2;//tem que corrigir isso, pois está limitando todas as jogas a 7 para o humano
+							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+						}
 					}
 					break;
 				case 2:
@@ -777,6 +781,7 @@ public class TelaDoJogo extends JFrame {
 							}
 						}
 					}
+					
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) != 0) {
 						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 						btn_7.setEnabled(true);
@@ -1024,7 +1029,6 @@ public class TelaDoJogo extends JFrame {
 						}
 					}
 					break;
-
 				default:
 					JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					break;
