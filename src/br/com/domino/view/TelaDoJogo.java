@@ -12,7 +12,6 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import br.com.domino.model.Actions;
 import br.com.domino.model.Pecas;
-
 import java.awt.Font;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -179,22 +178,13 @@ public class TelaDoJogo extends JFrame {
 
 	int aux = 0;
 	int aux2 = 0;
+	boolean pedraDiferente = false;
 	Actions al = new Actions();
 
 	ArrayList<Pecas> arrayH = new ArrayList<Pecas>();
 	ArrayList<Pecas> arrayM = new ArrayList<Pecas>();
 
-	// se true a vez do jogo é do humano se false a vez do jogo é da maquina
-
-	// public void habilitaDesabilitaBotoes(boolean vezDoJogo) {
-	// if (vezDoJogo == true) {
-	// desabilitaBotoesMaquina();
-	// habilitaBotoesHumano();
-	// } else {
-	// desabilitaBotoesHumano();
-	// habilitaBotoesMaquina();
-	// }
-	// }
+	Boolean vezDoJogo = true;
 
 	// recebe todas as pedras do caminho do jogo do domino
 	ArrayList<Pecas> arrayTabuleiro = new ArrayList<Pecas>();
@@ -312,10 +302,11 @@ public class TelaDoJogo extends JFrame {
 
 		btnhumano1 = new JButton("");
 		btnhumano1.addActionListener(new ActionListener() {
+
 			public void actionPerformed(ActionEvent e) {
+
 				++aux2;
 				Pecas p1 = arrayH.get(0);
-
 				String ladoa = p1.getLadoEsquerdo().toString();
 				String ladob = p1.getLadoDireito().toString();
 
@@ -331,10 +322,11 @@ public class TelaDoJogo extends JFrame {
 
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 1) {
-							// obs: tem que inverteros valores antes de inserir
+							// obs: tem que inverter os valores antes de inserir
 							// no array.
 							Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+
 							btnhumano1.setEnabled(false);
 							btn_1.setEnabled(true);
 							btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
@@ -349,9 +341,17 @@ public class TelaDoJogo extends JFrame {
 								--aux2;
 							}
 						}
-
 					}
+					/** Inteligência simples da maquina **/
 
+					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) != 0) {
+						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+						btn_2.setEnabled(true);
+						btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"
+								+ al.escolhePedraMaquina(arrayTabuleiro, arrayM) + ".png"));
+						++aux2;
+						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+					}
 					break;
 				case 2:
 					if (arrayTabuleiro.isEmpty()) {
@@ -378,6 +378,14 @@ public class TelaDoJogo extends JFrame {
 							}
 						}
 					}
+					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) != 0) {
+						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+						btn_3.setEnabled(true);
+						btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"
+								+ al.escolhePedraMaquina(arrayTabuleiro, arrayM) + ".png"));
+						++aux2;
+						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+					}
 					break;
 				case 3:
 					if (arrayTabuleiro.isEmpty()) {
@@ -403,6 +411,15 @@ public class TelaDoJogo extends JFrame {
 								--aux2;
 							}
 						}
+					}
+
+					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) != 0) {
+						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+						btn_4.setEnabled(true);
+						btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"
+								+ al.escolhePedraMaquina(arrayTabuleiro, arrayM) + ".png"));
+						++aux2;
+						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 					}
 					break;
 				case 4:
@@ -432,6 +449,14 @@ public class TelaDoJogo extends JFrame {
 							}
 						}
 					}
+					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) != 0) {
+						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+						btn_5.setEnabled(true);
+						btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"
+								+ al.escolhePedraMaquina(arrayTabuleiro, arrayM) + ".png"));
+						++aux2;
+						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+					}
 					break;
 				case 5:
 					if (arrayTabuleiro.isEmpty()) {
@@ -458,6 +483,14 @@ public class TelaDoJogo extends JFrame {
 								--aux2;
 							}
 						}
+					}
+					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) != 0) {
+						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+						btn_6.setEnabled(true);
+						btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"
+								+ al.escolhePedraMaquina(arrayTabuleiro, arrayM) + ".png"));
+						++aux2;
+						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 					}
 					break;
 				case 6:
@@ -486,6 +519,14 @@ public class TelaDoJogo extends JFrame {
 							}
 						}
 					}
+					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) != 0) {
+						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+						btn_7.setEnabled(true);
+						btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"
+								+ al.escolhePedraMaquina(arrayTabuleiro, arrayM) + ".png"));
+						++aux2;
+						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+					}
 					break;
 				case 7:
 					if (arrayTabuleiro.isEmpty()) {
@@ -512,8 +553,15 @@ public class TelaDoJogo extends JFrame {
 							}
 						}
 					}
+					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) != 0) {
+						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+						btn_8.setEnabled(true);
+						btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"
+								+ al.escolhePedraMaquina(arrayTabuleiro, arrayM) + ".png"));
+						++aux2;
+						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+					}
 					break;
-
 				default:
 					JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					break;
@@ -558,7 +606,14 @@ public class TelaDoJogo extends JFrame {
 							}
 						}
 					}
-
+					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) != 0) {
+						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+						btn_2.setEnabled(true);
+						btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"
+								+ al.escolhePedraMaquina(arrayTabuleiro, arrayM) + ".png"));
+						++aux2;
+						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+					}
 					break;
 				case 2:
 					if (arrayTabuleiro.isEmpty()) {
@@ -584,6 +639,14 @@ public class TelaDoJogo extends JFrame {
 								--aux2;
 							}
 						}
+					}
+					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) != 0) {
+						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+						btn_3.setEnabled(true);
+						btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"
+								+ al.escolhePedraMaquina(arrayTabuleiro, arrayM) + ".png"));
+						++aux2;
+						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 					}
 					break;
 				case 3:
@@ -611,6 +674,14 @@ public class TelaDoJogo extends JFrame {
 							}
 						}
 					}
+					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) != 0) {
+						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+						btn_4.setEnabled(true);
+						btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"
+								+ al.escolhePedraMaquina(arrayTabuleiro, arrayM) + ".png"));
+						++aux2;
+						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+					}
 					break;
 				case 4:
 					if (arrayTabuleiro.isEmpty()) {
@@ -636,6 +707,14 @@ public class TelaDoJogo extends JFrame {
 								--aux2;
 							}
 						}
+					}
+					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) != 0) {
+						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+						btn_5.setEnabled(true);
+						btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"
+								+ al.escolhePedraMaquina(arrayTabuleiro, arrayM) + ".png"));
+						++aux2;
+						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 					}
 					break;
 				case 5:
@@ -663,7 +742,16 @@ public class TelaDoJogo extends JFrame {
 							}
 						}
 					}
+					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) != 0) {
+						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+						btn_6.setEnabled(true);
+						btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"
+								+ al.escolhePedraMaquina(arrayTabuleiro, arrayM) + ".png"));
+						++aux2;
+						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+					}
 					break;
+
 				case 6:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p2);
@@ -688,6 +776,14 @@ public class TelaDoJogo extends JFrame {
 								--aux2;
 							}
 						}
+					}
+					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) != 0) {
+						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+						btn_7.setEnabled(true);
+						btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"
+								+ al.escolhePedraMaquina(arrayTabuleiro, arrayM) + ".png"));
+						++aux2;
+						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 					}
 					break;
 				case 7:
@@ -714,6 +810,14 @@ public class TelaDoJogo extends JFrame {
 								--aux2;
 							}
 						}
+					}
+					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) != 0) {
+						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+						btn_8.setEnabled(true);
+						btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"
+								+ al.escolhePedraMaquina(arrayTabuleiro, arrayM) + ".png"));
+						++aux2;
+						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 					}
 					break;
 
@@ -1122,6 +1226,7 @@ public class TelaDoJogo extends JFrame {
 							}
 						}
 					}
+					break;
 				default:
 					JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					break;
@@ -1167,7 +1272,6 @@ public class TelaDoJogo extends JFrame {
 							}
 						}
 					}
-
 					break;
 				case 2:
 					if (arrayTabuleiro.isEmpty()) {
@@ -1330,7 +1434,6 @@ public class TelaDoJogo extends JFrame {
 					JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					break;
 				}
-
 			}
 		});
 		btnhumano6 = new JButton("");
@@ -1642,7 +1745,7 @@ public class TelaDoJogo extends JFrame {
 							arrayTabuleiro.add(novop);
 							btnhumano7.setEnabled(false);
 							btn_4.setEnabled(true);
-							btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" +ladob + ladoa + ".png"));
+							btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 2) {
 								arrayTabuleiro.add(p7);
@@ -1754,6 +1857,10 @@ public class TelaDoJogo extends JFrame {
 		btnhumano16 = new JButton("");
 		btnhumano17 = new JButton("");
 		btnhumano18 = new JButton("");
+		btnhumano18.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
 
 		panel_pecasJogador.add(btnhumano1);
 		panel_pecasJogador.add(btnhumano2);
@@ -1783,6 +1890,7 @@ public class TelaDoJogo extends JFrame {
 
 		JButton btnpeca1 = new JButton(pecavirada);
 		btnpeca1.addActionListener(new ActionListener() {
+
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(0);
@@ -1865,19 +1973,9 @@ public class TelaDoJogo extends JFrame {
 
 				default:
 					JOptionPane.showMessageDialog(null, "Peças esgotadas");
+
 					break;
 				}
-				// verifica de quem é a vez do jogo
-
-				if (arrayM.size() == 7) {
-
-					if (al.jogaPrimeiro(arrayH, arrayM) == true) {
-						desabilitaBotoesMaquina();
-					} else {
-						desabilitaBotoesHumano();
-					}
-				}
-
 			}
 		});
 
