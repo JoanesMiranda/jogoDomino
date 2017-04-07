@@ -350,6 +350,7 @@ public class TelaDoJogo extends JFrame {
 
 						if (valor == "") {
 							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+							System.out.println("contador: "+(aux2));
 
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
@@ -2665,6 +2666,10 @@ public class TelaDoJogo extends JFrame {
 			}
 		});
 		btnhumano8 = new JButton("");
+		btnhumano8.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
 		btnhumano9 = new JButton("");
 		btnhumano10 = new JButton("");
 		btnhumano11 = new JButton("");
@@ -2712,6 +2717,11 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(0);
+				
+				array.remove(0);
+				Pecas vazia = new Pecas(null, null);
+				array.add(0, vazia);
+				
 				String ladoa = p.getLadoEsquerdo().toString();
 				String ladob = p.getLadoDireito().toString();
 
@@ -2790,8 +2800,9 @@ public class TelaDoJogo extends JFrame {
 					break;
 
 				default:
-					JOptionPane.showMessageDialog(null, "Peças esgotadas");
-
+					if(arrayM.size() == 7 && arrayTabuleiro.size() == 0){
+						JOptionPane.showMessageDialog(null, "Peças esgotadas");
+					}
 					break;
 				}
 			}
@@ -2802,6 +2813,10 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(1);
+				array.remove(1);
+				Pecas vazia = new Pecas(null, null);
+				array.add(1, vazia);
+				
 				String ladoa = p.getLadoEsquerdo().toString();
 				String ladob = p.getLadoDireito().toString();
 
@@ -2901,6 +2916,10 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(2);
+				array.remove(2);
+				Pecas vazia = new Pecas(null, null);
+				array.add(2, vazia);
+				
 				String ladoa = p.getLadoEsquerdo().toString();
 				String ladob = p.getLadoDireito().toString();
 				l3 = ladoa + ladob;
@@ -2998,6 +3017,10 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(3);
+				array.remove(3);
+				Pecas vazia = new Pecas(null, null);
+				array.add(3, vazia);
+				
 				String ladoa = p.getLadoEsquerdo().toString();
 				String ladob = p.getLadoDireito().toString();
 
@@ -3098,6 +3121,11 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(4);
+				
+				array.remove(4);
+				Pecas vazia = new Pecas(null, null);
+				array.add(4, vazia);
+				
 				String ladoa = p.getLadoEsquerdo().toString();
 				String ladob = p.getLadoDireito().toString();
 
@@ -3197,6 +3225,10 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(5);
+				array.remove(5);
+				Pecas vazia = new Pecas(null, null);
+				array.add(5, vazia);
+				
 				String ladoa = p.getLadoEsquerdo().toString();
 				String ladob = p.getLadoDireito().toString();
 
@@ -3297,6 +3329,10 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(6);
+				array.remove(6);
+				Pecas vazia = new Pecas(null, null);
+				array.add(6, vazia);
+				
 				String ladoa = p.getLadoEsquerdo().toString();
 				String ladob = p.getLadoDireito().toString();
 				l7 = ladoa + ladob;
@@ -3396,6 +3432,11 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(7);
+				
+				array.remove(7);
+				Pecas vazia = new Pecas(null, null);
+				array.add(7, vazia);
+				
 				String ladoa = p.getLadoEsquerdo().toString();
 				String ladob = p.getLadoDireito().toString();
 
@@ -3495,6 +3536,10 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(8);
+				array.remove(8);
+				Pecas vazia = new Pecas(null, null);
+				array.add(8, vazia);
+				
 				String ladoa = p.getLadoEsquerdo().toString();
 				String ladob = p.getLadoDireito().toString();
 
@@ -3594,6 +3639,10 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(9);
+				array.remove(9);
+				Pecas vazia = new Pecas(null, null);
+				array.add(9, vazia);
+				
 				String ladoa = p.getLadoEsquerdo().toString();
 				String ladob = p.getLadoDireito().toString();
 
@@ -3693,6 +3742,10 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(10);
+				array.remove(10);
+				Pecas vazia = new Pecas(null, null);
+				array.add(10, vazia);
+				
 				String ladoa = p.getLadoEsquerdo().toString();
 				String ladob = p.getLadoDireito().toString();
 
@@ -3792,6 +3845,10 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(11);
+				array.remove(11);
+				Pecas vazia = new Pecas(null, null);
+				array.add(11, vazia);
+				
 				String ladoa = p.getLadoEsquerdo().toString();
 				String ladob = p.getLadoDireito().toString();
 
@@ -3891,6 +3948,10 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(12);
+				array.remove(12);
+				Pecas vazia = new Pecas(null, null);
+				array.add(12, vazia);
+				
 				String ladoa = p.getLadoEsquerdo().toString();
 				String ladob = p.getLadoDireito().toString();
 
@@ -3990,6 +4051,10 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(13);
+				array.remove(13);
+				Pecas vazia = new Pecas(null, null);
+				array.add(13, vazia);
+				
 				String ladoa = p.getLadoEsquerdo().toString();
 				String ladob = p.getLadoDireito().toString();
 
@@ -4089,6 +4154,10 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(14);
+				array.remove(14);
+				Pecas vazia = new Pecas(null, null);
+				array.add(14, vazia);
+				
 				String ladoa = p.getLadoEsquerdo().toString();
 				String ladob = p.getLadoDireito().toString();
 
@@ -4187,6 +4256,10 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(15);
+				array.remove(15);
+				Pecas vazia = new Pecas(null, null);
+				array.add(15, vazia);
+				
 				String ladoa = p.getLadoEsquerdo().toString();
 				String ladob = p.getLadoDireito().toString();
 
@@ -4286,6 +4359,10 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(16);
+				array.remove(16);
+				Pecas vazia = new Pecas(null, null);
+				array.add(16, vazia);
+				
 				String ladoa = p.getLadoEsquerdo().toString();
 				String ladob = p.getLadoDireito().toString();
 
@@ -4386,6 +4463,9 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(17);
+				array.remove(17);
+				Pecas vazia = new Pecas(null, null);
+				array.add(17, vazia);
 				String ladoa = p.getLadoEsquerdo().toString();
 				String ladob = p.getLadoDireito().toString();
 
@@ -4485,6 +4565,10 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(18);
+				array.remove(18);
+				Pecas vazia = new Pecas(null, null);
+				array.add(18, vazia);
+				
 				String ladoa = p.getLadoEsquerdo().toString();
 				String ladob = p.getLadoDireito().toString();
 
@@ -4584,6 +4668,10 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(19);
+				array.remove(19);
+				Pecas vazia = new Pecas(null, null);
+				array.add(19, vazia);
+				
 				String ladoa = p.getLadoEsquerdo().toString();
 				String ladob = p.getLadoDireito().toString();
 
@@ -4683,6 +4771,10 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(20);
+				array.remove(20);
+				Pecas vazia = new Pecas(null, null);
+				array.add(20, vazia);
+				
 				String ladoa = p.getLadoEsquerdo().toString();
 				String ladob = p.getLadoDireito().toString();
 
@@ -4782,6 +4874,10 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(21);
+				array.remove(21);
+				Pecas vazia = new Pecas(null, null);
+				array.add(21, vazia);
+				
 				String ladoa = p.getLadoEsquerdo().toString();
 				String ladob = p.getLadoDireito().toString();
 
@@ -4881,6 +4977,10 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(22);
+				array.remove(22);
+				Pecas vazia = new Pecas(null, null);
+				array.add(22, vazia);
+				
 				String ladoa = p.getLadoEsquerdo().toString();
 				String ladob = p.getLadoDireito().toString();
 
@@ -4980,6 +5080,10 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(23);
+				array.remove(23);
+				Pecas vazia = new Pecas(null, null);
+				array.add(23, vazia);
+				
 				String ladoa = p.getLadoEsquerdo().toString();
 				String ladob = p.getLadoDireito().toString();
 
@@ -5079,6 +5183,10 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(24);
+				
+				array.remove(24);
+				Pecas vazia = new Pecas(null, null);
+				array.add(24, vazia);
 				String ladoa = p.getLadoEsquerdo().toString();
 				String ladob = p.getLadoDireito().toString();
 
@@ -5178,6 +5286,10 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(25);
+				array.remove(25);
+				Pecas vazia = new Pecas(null, null);
+				array.add(25, vazia);
+				
 				String ladoa = p.getLadoEsquerdo().toString();
 				String ladob = p.getLadoDireito().toString();
 
@@ -5277,6 +5389,10 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(26);
+				array.remove(26);
+				Pecas vazia = new Pecas(null, null);
+				array.add(26, vazia);
+				
 				String ladoa = p.getLadoEsquerdo().toString();
 				String ladob = p.getLadoDireito().toString();
 
@@ -5376,6 +5492,11 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(27);
+				
+				array.remove(27);
+				Pecas vazia = new Pecas(null, null);
+				array.add(27, vazia);
+				
 				String ladoa = p.getLadoEsquerdo().toString();
 				String ladob = p.getLadoDireito().toString();
 				l28 = ladoa + ladob;

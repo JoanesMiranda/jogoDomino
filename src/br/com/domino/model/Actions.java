@@ -135,7 +135,7 @@ public class Actions {
 		return retorno;
 	}
 
-	// metodo para teste - IDEIA INICIAL
+	//escolhe a peça para o CPU jogar.
 	public String escolhePedraMaquina(ArrayList<Pecas> tabuleiro, ArrayList<Pecas> maquina) {
 		String valorPeca = "";
 		for (Pecas m : maquina) {
