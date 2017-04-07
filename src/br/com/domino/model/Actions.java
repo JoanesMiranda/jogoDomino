@@ -132,7 +132,7 @@ public class Actions {
 		if (tabuleiro.get(tabuleiro.size() - 1).getLadoDireito() == peca.getLadoEsquerdo()) {
 			retorno = 2; // usa peças
 		}
-	return retorno;
+		return retorno;
 	}
 
 	// metodo para teste - IDEIA INICIAL
@@ -143,15 +143,15 @@ public class Actions {
 				Pecas p = new Pecas(m.getLadoDireito(), m.getLadoEsquerdo());
 				tabuleiro.add(p);
 				valorPeca = p.getLadoEsquerdo().toString() + p.getLadoDireito().toString();
-				maquina.remove(maquina.indexOf(m));// apaga a pedra encontra no array da maquina
+				maquina.remove(maquina.indexOf(m));// apaga a pedra encontra no
+													// array da maquina
 				break;
-			} else {
-				if (m.getLadoDireito() == tabuleiro.get(tabuleiro.size() - 1).getLadoEsquerdo()) {
-					tabuleiro.add(m);
-					valorPeca = m.getLadoEsquerdo().toString() + m.getLadoDireito().toString();
-					maquina.remove(maquina.indexOf(m));// apaga a pedra encontra no array da maquina
-					break;
-				}
+			} else if (m.getLadoDireito() == tabuleiro.get(tabuleiro.size() - 1).getLadoEsquerdo()) {
+				tabuleiro.add(m);
+				valorPeca = m.getLadoEsquerdo().toString() + m.getLadoDireito().toString();
+				maquina.remove(maquina.indexOf(m));// apaga a pedra encontra no
+													// array da maquina
+				break;
 			}
 		}
 		return valorPeca;
