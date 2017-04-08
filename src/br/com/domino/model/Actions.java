@@ -3,6 +3,7 @@ package br.com.domino.model;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Random;
 
 public class Actions {
 
@@ -135,7 +136,7 @@ public class Actions {
 		return retorno;
 	}
 
-	//escolhe a peça para o CPU jogar.
+	// escolhe a peça para o CPU jogar.
 	public String escolhePedraMaquina(ArrayList<Pecas> tabuleiro, ArrayList<Pecas> maquina) {
 		String valorPeca = "";
 		for (Pecas m : maquina) {
@@ -154,6 +155,48 @@ public class Actions {
 				break;
 			}
 		}
+		return valorPeca;
+	}
+
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	//metodos usado para a compra de pedra da maquina:
+	
+	public int maquinaCompraPassa() {
+		int num = 0;
+		Random gerador = new Random();
+
+		for (int i = 0; i < 2; i++) {
+			num = gerador.nextInt();
+		}
+		return num;
+	}
+
+	public void escolhePecaAleatorio(List<Pecas> array, List<Pecas> maquina) {
+
+		for (Pecas peca : array) {
+			if (peca.getLadoEsquerdo() != null && peca.getLadoDireito() != null) {
+				maquina.add(peca);
+				break;
+			}
+		}
+	}
+
+	public String testaPedraCompraMaquina(ArrayList<Pecas> tabuleiro, ArrayList<Pecas> maquina) {
+		String valorPeca = "";
+
+		if (maquina.get(maquina.size() - 1).getLadoEsquerdo() == tabuleiro.get(tabuleiro.size() - 1).getLadoEsquerdo()) {
+			
+			Pecas p = new Pecas(maquina.get(maquina.size() - 1).getLadoDireito(),maquina.get(maquina.size() - 1).getLadoEsquerdo());
+			tabuleiro.add(p);
+			valorPeca = p.getLadoEsquerdo().toString() + p.getLadoDireito().toString();
+			maquina.remove(maquina.indexOf(maquina.get(maquina.size() - 1)));
+			
+		} else if (maquina.get(maquina.size() - 1).getLadoDireito() == tabuleiro.get(tabuleiro.size() - 1).getLadoEsquerdo()) {
+			tabuleiro.add(maquina.get(maquina.size() - 1));
+			valorPeca = maquina.get(maquina.size() - 1).getLadoEsquerdo().toString()+ maquina.get(maquina.size() - 1).getLadoDireito().toString();
+			maquina.remove(maquina.indexOf(maquina.get(maquina.size() - 1)));
+		}
+
 		return valorPeca;
 	}
 

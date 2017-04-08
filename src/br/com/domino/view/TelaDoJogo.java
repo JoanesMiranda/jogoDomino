@@ -175,9 +175,23 @@ public class TelaDoJogo extends JFrame {
 		btnmaquina17.setEnabled(true);
 		btnmaquina18.setEnabled(true);
 	}
-
+	int contadorCompraMaquina = 7;
+	public void insereImagenNoBotao(int contadorMaquina){
+		++contadorMaquina;
+		
+		switch (contadorMaquina) {
+		case 8:
+			btnmaquina8.setEnabled(true);
+			btnmaquina8.setIcon(new ImageIcon(".//resource//imagens//pecavirada.png"));
+			break;
+		default:
+			break;
+		}
+	}
+	
 	int aux = 0;
 	int aux2 = 0;
+	
 	boolean pedraDiferente = false;
 	Actions al = new Actions();
 
@@ -265,6 +279,10 @@ public class TelaDoJogo extends JFrame {
 		btnmaquina6 = new JButton("");
 		btnmaquina7 = new JButton("");
 		btnmaquina8 = new JButton("");
+		btnmaquina8.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
 		btnmaquina9 = new JButton("");
 		btnmaquina10 = new JButton("");
 		btnmaquina11 = new JButton("");
@@ -307,6 +325,7 @@ public class TelaDoJogo extends JFrame {
 
 				++aux2;
 				Pecas p1 = arrayH.get(0);
+				
 				String ladoa = p1.getLadoEsquerdo().toString();
 				String ladob = p1.getLadoDireito().toString();
 
@@ -343,15 +362,42 @@ public class TelaDoJogo extends JFrame {
 							}
 						}
 					}
+					
 					/** Inteligência simples da maquina **/
-
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) != 0) {
 						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
 
+						/**logica para a compra de peças do jogador maquina**/
 						if (valor == "") {
-							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
-							System.out.println("contador: "+(aux2));
-
+							int i = al.maquinaCompraPassa();
+							if(i == 0){
+								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+							}else{
+								//escolhe a primeira pedra que encontrar no array e pega
+								al.escolhePecaAleatorio(array, arrayM);
+								
+								//testa se a pedra comprada pode ser jogada no tabuleiro
+								String p = al.testaPedraCompraMaquina(arrayTabuleiro, arrayM);
+								
+								if(p == ""){
+									/**caso a pedra comprada não possa ser jogada no tabuleiro a maquina passa a jogada**/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+									
+								}else{
+									/**caso a pedra comprada  possa ser jogada no tabuleiro a maquina a insere no arrayTabuleiro**/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									/** INSERE A IMAGEM NO BOTÃO CORRESPONDENTE**/
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+									btn_2.setEnabled(true);
+									btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ p + ".png"));
+									++aux2;
+									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+								}
+							}
+							/**Finaliza o codigo de compra de peças do jogador maquina   **/
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_2.setEnabled(true);
@@ -653,6 +699,8 @@ public class TelaDoJogo extends JFrame {
 
 				++aux2;
 				Pecas p2 = arrayH.get(1);
+				
+	
 				String ladoa = p2.getLadoEsquerdo().toString();
 				String ladob = p2.getLadoDireito().toString();
 
@@ -932,6 +980,7 @@ public class TelaDoJogo extends JFrame {
 						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
 					}
 					break;
+					
 				case 7:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p2);
@@ -976,7 +1025,7 @@ public class TelaDoJogo extends JFrame {
 					for(Pecas i: arrayTabuleiro){
 						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
 					}
-
+					break;
 				default:
 					JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					break;
@@ -990,6 +1039,9 @@ public class TelaDoJogo extends JFrame {
 
 				++aux2;
 				Pecas p3 = arrayH.get(2);
+				
+				
+				
 				String ladoa = p3.getLadoEsquerdo().toString();
 				String ladob = p3.getLadoDireito().toString();
 
@@ -1326,6 +1378,8 @@ public class TelaDoJogo extends JFrame {
 
 				++aux2;
 				Pecas p4 = arrayH.get(3);
+				
+				
 				String ladoa = p4.getLadoEsquerdo().toString();
 				String ladob = p4.getLadoDireito().toString();
 
@@ -1660,6 +1714,8 @@ public class TelaDoJogo extends JFrame {
 
 				++aux2;
 				Pecas p5 = arrayH.get(4);
+			
+				
 				String ladoa = p5.getLadoEsquerdo().toString();
 				String ladob = p5.getLadoDireito().toString();
 
@@ -1995,6 +2051,8 @@ public class TelaDoJogo extends JFrame {
 
 				++aux2;
 				Pecas p6 = arrayH.get(5);
+				
+				
 				String ladoa = p6.getLadoEsquerdo().toString();
 				String ladob = p6.getLadoDireito().toString();
 
@@ -2333,6 +2391,8 @@ public class TelaDoJogo extends JFrame {
 
 				++aux2;
 				Pecas p7 = arrayH.get(6);
+			
+				
 				String ladoa = p7.getLadoEsquerdo().toString();
 				String ladob = p7.getLadoDireito().toString();
 
@@ -2671,6 +2731,10 @@ public class TelaDoJogo extends JFrame {
 			}
 		});
 		btnhumano9 = new JButton("");
+		btnhumano9.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
 		btnhumano10 = new JButton("");
 		btnhumano11 = new JButton("");
 		btnhumano12 = new JButton("");
