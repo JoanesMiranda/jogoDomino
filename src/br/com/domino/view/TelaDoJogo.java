@@ -175,10 +175,12 @@ public class TelaDoJogo extends JFrame {
 		btnmaquina17.setEnabled(true);
 		btnmaquina18.setEnabled(true);
 	}
+
 	int contadorCompraMaquina = 7;
-	public void insereImagenNoBotao(int contadorMaquina){
+
+	public void insereImagenNoBotao(int contadorMaquina) {
 		++contadorMaquina;
-		
+
 		switch (contadorMaquina) {
 		case 8:
 			btnmaquina8.setEnabled(true);
@@ -188,10 +190,10 @@ public class TelaDoJogo extends JFrame {
 			break;
 		}
 	}
-	
+
 	int aux = 0;
 	int aux2 = 0;
-	
+
 	boolean pedraDiferente = false;
 	Actions al = new Actions();
 
@@ -325,7 +327,7 @@ public class TelaDoJogo extends JFrame {
 
 				++aux2;
 				Pecas p1 = arrayH.get(0);
-				
+
 				String ladoa = p1.getLadoEsquerdo().toString();
 				String ladob = p1.getLadoDireito().toString();
 
@@ -337,7 +339,7 @@ public class TelaDoJogo extends JFrame {
 						arrayTabuleiro.add(p1);
 						btnhumano1.setEnabled(false);
 						btn_1.setEnabled(true);
-						btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+						btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
 
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 1) {
@@ -348,88 +350,103 @@ public class TelaDoJogo extends JFrame {
 
 							btnhumano1.setEnabled(false);
 							btn_1.setEnabled(true);
-							btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 2) {
 								arrayTabuleiro.add(p1);
 								btnhumano1.setEnabled(false);
 								btn_1.setEnabled(true);
-								btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
-								
+								btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
+
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
 							}
 						}
 					}
-					
+
 					/** Inteligência simples da maquina **/
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) != 0) {
 						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
 
-						/**logica para a compra de peças do jogador maquina**/
+						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
 							int i = al.maquinaCompraPassa();
-							if(i == 0){
+							if (i == 0) {
 								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
-							}else{
-								//escolhe a primeira pedra que encontrar no array e pega
+							} else {
+								// escolhe a primeira pedra que encontrar no
+								// array e pega
 								al.escolhePecaAleatorio(array, arrayM);
-								
-								//testa se a pedra comprada pode ser jogada no tabuleiro
+
+								// testa se a pedra comprada pode ser jogada no
+								// tabuleiro
 								String p = al.testaPedraCompraMaquina(arrayTabuleiro, arrayM);
-								
-								if(p == ""){
-									/**caso a pedra comprada não possa ser jogada no tabuleiro a maquina passa a jogada**/
+
+								if (p == "") {
+									/**
+									 * caso a pedra comprada não possa ser
+									 * jogada no tabuleiro a maquina passa a
+									 * jogada
+									 **/
 									JOptionPane.showMessageDialog(null, "Maquina: Compra");
 									insereImagenNoBotao(contadorCompraMaquina);
 									JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
-									
-								}else{
-									/**caso a pedra comprada  possa ser jogada no tabuleiro a maquina a insere no arrayTabuleiro**/
+
+								} else {
+									/**
+									 * caso a pedra comprada possa ser jogada no
+									 * tabuleiro a maquina a insere no
+									 * arrayTabuleiro
+									 **/
 									JOptionPane.showMessageDialog(null, "Maquina: Compra");
-									/** INSERE A IMAGEM NO BOTÃO CORRESPONDENTE**/
+									/**
+									 * INSERE A IMAGEM NO BOTÃO CORRESPONDENTE
+									 **/
 									insereImagenNoBotao(contadorCompraMaquina);
 									JOptionPane.showMessageDialog(null, "Maquina: Joga");
 									btn_2.setEnabled(true);
-									btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ p + ".png"));
+									btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
 									++aux2;
 									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 								}
 							}
-							/**Finaliza o codigo de compra de peças do jogador maquina   **/
+							/**
+							 * Finaliza o codigo de compra de peças do jogador
+							 * maquina
+							 **/
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_2.setEnabled(true);
-							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
-					
+
 					break;
 				case 2:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p1);
 						btnhumano1.setEnabled(false);
 						btn_2.setEnabled(true);
-						btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+						btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 1) {
 							Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano1.setEnabled(false);
 							btn_2.setEnabled(true);
-							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 2) {
 								arrayTabuleiro.add(p1);
 								btnhumano1.setEnabled(false);
 								btn_2.setEnabled(true);
-								btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+								btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -447,13 +464,13 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_3.setEnabled(true);
-							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
 					break;
 				case 3:
@@ -461,20 +478,20 @@ public class TelaDoJogo extends JFrame {
 						arrayTabuleiro.add(p1);
 						btnhumano1.setEnabled(false);
 						btn_3.setEnabled(true);
-						btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+						btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 1) {
 							Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano1.setEnabled(false);
 							btn_3.setEnabled(true);
-							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 2) {
 								arrayTabuleiro.add(p1);
 								btnhumano1.setEnabled(false);
 								btn_3.setEnabled(true);
-								btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+								btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -492,29 +509,29 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_4.setEnabled(true);
-							btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
-					
+
 					break;
 				case 4:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p1);
 						btnhumano1.setEnabled(false);
 						btn_4.setEnabled(true);
-						btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+						btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 1) {
 							arrayTabuleiro.add(p1);
 							btnhumano1.setEnabled(false);
 							btn_4.setEnabled(true);
 
-							btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 2) {
@@ -522,7 +539,7 @@ public class TelaDoJogo extends JFrame {
 								arrayTabuleiro.add(novop);
 								btnhumano1.setEnabled(false);
 								btn_4.setEnabled(true);
-								btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+								btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -540,13 +557,13 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_5.setEnabled(true);
-							btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
 					break;
 				case 5:
@@ -554,20 +571,20 @@ public class TelaDoJogo extends JFrame {
 						arrayTabuleiro.add(p1);
 						btnhumano1.setEnabled(false);
 						btn_5.setEnabled(true);
-						btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+						btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 1) {
 							Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano1.setEnabled(false);
 							btn_5.setEnabled(true);
-							btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 2) {
 								arrayTabuleiro.add(p1);
 								btnhumano1.setEnabled(false);
 								btn_5.setEnabled(true);
-								btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+								btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
 
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
@@ -586,13 +603,13 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_6.setEnabled(true);
-							btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
 					break;
 				case 6:
@@ -600,7 +617,7 @@ public class TelaDoJogo extends JFrame {
 						arrayTabuleiro.add(p1);
 						btnhumano1.setEnabled(false);
 						btn_6.setEnabled(true);
-						btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+						btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 1) {
 							Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
@@ -608,13 +625,13 @@ public class TelaDoJogo extends JFrame {
 							btnhumano1.setEnabled(false);
 							btn_6.setEnabled(true);
 
-							btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 2) {
 								arrayTabuleiro.add(p1);
 								btnhumano1.setEnabled(false);
 								btn_6.setEnabled(true);
-								btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+								btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -632,13 +649,13 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_7.setEnabled(true);
-							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
 					break;
 				case 7:
@@ -646,20 +663,20 @@ public class TelaDoJogo extends JFrame {
 						arrayTabuleiro.add(p1);
 						btnhumano1.setEnabled(false);
 						btn_7.setEnabled(true);
-						btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+						btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 1) {
 							Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano1.setEnabled(false);
 							btn_7.setEnabled(true);
-							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 2) {
 								arrayTabuleiro.add(p1);
 								btnhumano1.setEnabled(false);
 								btn_7.setEnabled(true);
-								btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+								btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -677,36 +694,36 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_8.setEnabled(true);
-							btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
-					
+
 					break;
-					
+
 				case 8:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p1);
 						btnhumano1.setEnabled(false);
 						btn_8.setEnabled(true);
-						btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+						btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 1) {
 							Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano1.setEnabled(false);
 							btn_8.setEnabled(true);
-							btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 2) {
 								arrayTabuleiro.add(p1);
 								btnhumano1.setEnabled(false);
 								btn_8.setEnabled(true);
-								btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+								btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -724,36 +741,36 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_9.setEnabled(true);
-							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
-					
+
 					break;
-					
+
 				case 9:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p1);
 						btnhumano1.setEnabled(false);
 						btn_9.setEnabled(true);
-						btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+						btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 1) {
 							Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano1.setEnabled(false);
 							btn_9.setEnabled(true);
-							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 2) {
 								arrayTabuleiro.add(p1);
 								btnhumano1.setEnabled(false);
 								btn_9.setEnabled(true);
-								btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+								btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -771,36 +788,36 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_10.setEnabled(true);
-							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
-					
+
 					break;
-					
+
 				case 10:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p1);
 						btnhumano1.setEnabled(false);
 						btn_10.setEnabled(true);
-						btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+						btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 1) {
 							Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano1.setEnabled(false);
 							btn_10.setEnabled(true);
-							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 2) {
 								arrayTabuleiro.add(p1);
 								btnhumano1.setEnabled(false);
 								btn_10.setEnabled(true);
-								btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+								btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -818,36 +835,36 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_11.setEnabled(true);
-							btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
-					
+
 					break;
-					
+
 				case 11:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p1);
 						btnhumano1.setEnabled(false);
 						btn_11.setEnabled(true);
-						btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+						btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 1) {
 							Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano1.setEnabled(false);
 							btn_11.setEnabled(true);
-							btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 2) {
 								arrayTabuleiro.add(p1);
 								btnhumano1.setEnabled(false);
 								btn_11.setEnabled(true);
-								btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+								btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -865,63 +882,76 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_12.setEnabled(true);
-							btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
-					
+
 					break;
 				case 12:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p1);
 						btnhumano1.setEnabled(false);
 						btn_12.setEnabled(true);
-						btn_12.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l1 + ".png"));
+						btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 1) {
 							Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano1.setEnabled(false);
 							btn_12.setEnabled(true);
-							btn_12.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
+							btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 2) {
 								arrayTabuleiro.add(p1);
 								btnhumano1.setEnabled(false);
 								btn_12.setEnabled(true);
-								btn_12.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l1 + ".png"));
+								btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
 							}
 						}
 					}
-					/** Inteligência simples da maquina **/
 
-					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) != 0) {
-						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
+					break;
 
-						if (valor == "") {
-							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+				case 13:
 
-						} else {
-							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p1);
+						btnhumano1.setEnabled(false);
+						btn_13.setEnabled(true);
+						btn_13.setIcon(new ImageIcon(".//resource//pecas//verticias2//" + l1 + ".png"));
+
+					} else {
+						if (al.verificaLadosPedraDireita(arrayTabuleiro, p1) == 1) {
+							// obs: tem que inverter os valores antes de inserir
+							// no array.
+							Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
+							btnhumano1.setEnabled(false);
 							btn_13.setEnabled(true);
-							btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//"+ valor + ".png"));
-							++aux2;
-							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+							btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
+						} else {
+							if (al.verificaLadosPedraDireita(arrayTabuleiro, p1) == 2) {
+								arrayTabuleiro.add(p1);
+								btnhumano1.setEnabled(false);
+								btn_13.setEnabled(true);
+								btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l1 + ".png"));
+
+							} else {
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+								--aux2;
+							}
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
-					}
-					
+
 					break;
-					
 				default:
 					JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					break;
@@ -934,8 +964,7 @@ public class TelaDoJogo extends JFrame {
 
 				++aux2;
 				Pecas p2 = arrayH.get(1);
-				
-	
+
 				String ladoa = p2.getLadoEsquerdo().toString();
 				String ladob = p2.getLadoDireito().toString();
 
@@ -947,20 +976,20 @@ public class TelaDoJogo extends JFrame {
 						arrayTabuleiro.add(p2);
 						btnhumano2.setEnabled(false);
 						btn_1.setEnabled(true);
-						btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l2 + ".png"));
+						btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 1) {
 							Pecas novop = new Pecas(p2.getLadoDireito(), p2.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano2.setEnabled(false);
 							btn_1.setEnabled(true);
-							btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 2) {
 								arrayTabuleiro.add(p2);
 								btnhumano2.setEnabled(false);
 								btn_1.setEnabled(true);
-								btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l2 + ".png"));
+								btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
 
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
@@ -979,13 +1008,13 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_2.setEnabled(true);
-							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
 					break;
 				case 2:
@@ -993,20 +1022,20 @@ public class TelaDoJogo extends JFrame {
 						arrayTabuleiro.add(p2);
 						btnhumano2.setEnabled(false);
 						btn_2.setEnabled(true);
-						btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l2 + ".png"));
+						btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 1) {
 							Pecas novop = new Pecas(p2.getLadoDireito(), p2.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano2.setEnabled(false);
 							btn_2.setEnabled(true);
-							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 2) {
 								arrayTabuleiro.add(p2);
 								btnhumano2.setEnabled(false);
 								btn_2.setEnabled(true);
-								btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l2 + ".png"));
+								btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -1024,13 +1053,13 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_3.setEnabled(true);
-							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
 					break;
 				case 3:
@@ -1038,20 +1067,20 @@ public class TelaDoJogo extends JFrame {
 						arrayTabuleiro.add(p2);
 						btnhumano2.setEnabled(false);
 						btn_3.setEnabled(true);
-						btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l2 + ".png"));
+						btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 1) {
 							Pecas novop = new Pecas(p2.getLadoDireito(), p2.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano2.setEnabled(false);
 							btn_3.setEnabled(true);
-							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 2) {
 								arrayTabuleiro.add(p2);
 								btnhumano2.setEnabled(false);
 								btn_3.setEnabled(true);
-								btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l2 + ".png"));
+								btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -1069,13 +1098,13 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_4.setEnabled(true);
-							btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
 					break;
 				case 4:
@@ -1083,20 +1112,20 @@ public class TelaDoJogo extends JFrame {
 						arrayTabuleiro.add(p2);
 						btnhumano2.setEnabled(false);
 						btn_4.setEnabled(true);
-						btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l2 + ".png"));
+						btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 1) {
 							Pecas novop = new Pecas(p2.getLadoDireito(), p2.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano2.setEnabled(false);
 							btn_4.setEnabled(true);
-							btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 2) {
 								arrayTabuleiro.add(p2);
 								btnhumano2.setEnabled(false);
 								btn_4.setEnabled(true);
-								btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l2 + ".png"));
+								btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -1114,13 +1143,13 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_5.setEnabled(true);
-							btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
 					break;
 				case 5:
@@ -1128,20 +1157,20 @@ public class TelaDoJogo extends JFrame {
 						arrayTabuleiro.add(p2);
 						btnhumano2.setEnabled(false);
 						btn_5.setEnabled(true);
-						btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l2 + ".png"));
+						btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 1) {
 							Pecas novop = new Pecas(p2.getLadoDireito(), p2.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano2.setEnabled(false);
 							btn_5.setEnabled(true);
-							btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 2) {
 								arrayTabuleiro.add(p2);
 								btnhumano2.setEnabled(false);
 								btn_5.setEnabled(true);
-								btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l2 + ".png"));
+								btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -1159,13 +1188,13 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_6.setEnabled(true);
-							btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
 					break;
 
@@ -1174,20 +1203,20 @@ public class TelaDoJogo extends JFrame {
 						arrayTabuleiro.add(p2);
 						btnhumano2.setEnabled(false);
 						btn_6.setEnabled(true);
-						btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l2 + ".png"));
+						btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 1) {
 							Pecas novop = new Pecas(p2.getLadoDireito(), p2.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano2.setEnabled(false);
 							btn_6.setEnabled(true);
-							btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 2) {
 								arrayTabuleiro.add(p2);
 								btnhumano2.setEnabled(false);
 								btn_6.setEnabled(true);
-								btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l2 + ".png"));
+								btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -1206,35 +1235,35 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_7.setEnabled(true);
-							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
 					break;
-					
+
 				case 7:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p2);
 						btnhumano2.setEnabled(false);
 						btn_7.setEnabled(true);
-						btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l2 + ".png"));
+						btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 1) {
 							Pecas novop = new Pecas(p2.getLadoDireito(), p2.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano2.setEnabled(false);
 							btn_7.setEnabled(true);
-							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 2) {
 								arrayTabuleiro.add(p2);
 								btnhumano2.setEnabled(false);
 								btn_7.setEnabled(true);
-								btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l2 + ".png"));
+								btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -1252,35 +1281,35 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_8.setEnabled(true);
-							btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
 					break;
-					
+
 				case 8:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p2);
 						btnhumano2.setEnabled(false);
 						btn_8.setEnabled(true);
-						btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+						btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 1) {
 							Pecas novop = new Pecas(p2.getLadoDireito(), p2.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano2.setEnabled(false);
 							btn_8.setEnabled(true);
-							btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 2) {
 								arrayTabuleiro.add(p2);
 								btnhumano2.setEnabled(false);
 								btn_8.setEnabled(true);
-								btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+								btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -1298,36 +1327,36 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_9.setEnabled(true);
-							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
-					
+
 					break;
-					
+
 				case 9:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p2);
 						btnhumano2.setEnabled(false);
 						btn_9.setEnabled(true);
-						btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+						btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 1) {
 							Pecas novop = new Pecas(p2.getLadoDireito(), p2.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano2.setEnabled(false);
 							btn_9.setEnabled(true);
-							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 2) {
 								arrayTabuleiro.add(p2);
 								btnhumano2.setEnabled(false);
 								btn_9.setEnabled(true);
-								btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+								btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -1345,36 +1374,36 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_10.setEnabled(true);
-							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
-					
+
 					break;
-					
+
 				case 10:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p2);
 						btnhumano2.setEnabled(false);
 						btn_10.setEnabled(true);
-						btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+						btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 1) {
 							Pecas novop = new Pecas(p2.getLadoDireito(), p2.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano2.setEnabled(false);
 							btn_10.setEnabled(true);
-							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 2) {
 								arrayTabuleiro.add(p2);
 								btnhumano2.setEnabled(false);
 								btn_10.setEnabled(true);
-								btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+								btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -1392,36 +1421,36 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_11.setEnabled(true);
-							btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
-					
+
 					break;
-					
+
 				case 11:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p2);
 						btnhumano2.setEnabled(false);
 						btn_11.setEnabled(true);
-						btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+						btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 1) {
 							Pecas novop = new Pecas(p2.getLadoDireito(), p2.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano2.setEnabled(false);
 							btn_11.setEnabled(true);
-							btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 2) {
 								arrayTabuleiro.add(p2);
 								btnhumano2.setEnabled(false);
 								btn_11.setEnabled(true);
-								btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+								btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -1439,36 +1468,36 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_12.setEnabled(true);
-							btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
-					
+
 					break;
-					
+
 				case 12:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p2);
 						btnhumano2.setEnabled(false);
 						btn_12.setEnabled(true);
-						btn_12.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l1 + ".png"));
+						btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 1) {
 							Pecas novop = new Pecas(p2.getLadoDireito(), p2.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano2.setEnabled(false);
 							btn_12.setEnabled(true);
-							btn_12.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
+							btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 2) {
 								arrayTabuleiro.add(p2);
 								btnhumano2.setEnabled(false);
 								btn_12.setEnabled(true);
-								btn_12.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l1 + ".png"));
+								btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -1486,16 +1515,49 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_13.setEnabled(true);
-							btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//"+ valor + ".png"));
+							btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
-					
+
 					break;
+				case 13:
+
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p2);
+						btnhumano2.setEnabled(false);
+						btn_13.setEnabled(true);
+						btn_13.setIcon(new ImageIcon(".//resource//pecas//verticias2//" + l2 + ".png"));
+
+					} else {
+						if (al.verificaLadosPedraDireita(arrayTabuleiro, p2) == 1) {
+							// obs: tem que inverter os valores antes de inserir
+							// no array.
+							Pecas novop = new Pecas(p2.getLadoDireito(), p2.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
+							btnhumano2.setEnabled(false);
+							btn_13.setEnabled(true);
+							btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
+						} else {
+							if (al.verificaLadosPedraDireita(arrayTabuleiro, p2) == 2) {
+								arrayTabuleiro.add(p2);
+								btnhumano2.setEnabled(false);
+								btn_13.setEnabled(true);
+								btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l2 + ".png"));
+
+							} else {
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+								--aux2;
+							}
+						}
+					}
+
+					break;
+
 				default:
 					JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					break;
@@ -1509,9 +1571,7 @@ public class TelaDoJogo extends JFrame {
 
 				++aux2;
 				Pecas p3 = arrayH.get(2);
-				
-				
-				
+
 				String ladoa = p3.getLadoEsquerdo().toString();
 				String ladob = p3.getLadoDireito().toString();
 
@@ -1523,20 +1583,20 @@ public class TelaDoJogo extends JFrame {
 						arrayTabuleiro.add(p3);
 						btnhumano3.setEnabled(false);
 						btn_1.setEnabled(true);
-						btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l3 + ".png"));
+						btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 1) {
 							Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano3.setEnabled(false);
 							btn_1.setEnabled(true);
-							btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 2) {
 								arrayTabuleiro.add(p3);
 								btnhumano3.setEnabled(false);
 								btn_1.setEnabled(true);
-								btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l3 + ".png"));
+								btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -1554,13 +1614,13 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_2.setEnabled(true);
-							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
 
 					break;
@@ -1569,20 +1629,20 @@ public class TelaDoJogo extends JFrame {
 						arrayTabuleiro.add(p3);
 						btnhumano3.setEnabled(false);
 						btn_2.setEnabled(true);
-						btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l3 + ".png"));
+						btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 1) {
 							Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano3.setEnabled(false);
 							btn_2.setEnabled(true);
-							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 2) {
 								arrayTabuleiro.add(p3);
 								btnhumano3.setEnabled(false);
 								btn_2.setEnabled(true);
-								btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l3 + ".png"));
+								btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -1600,13 +1660,13 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_3.setEnabled(true);
-							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
 					break;
 				case 3:
@@ -1614,20 +1674,20 @@ public class TelaDoJogo extends JFrame {
 						arrayTabuleiro.add(p3);
 						btnhumano3.setEnabled(false);
 						btn_3.setEnabled(true);
-						btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l3 + ".png"));
+						btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 1) {
 							Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano3.setEnabled(false);
 							btn_3.setEnabled(true);
-							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 2) {
 								arrayTabuleiro.add(p3);
 								btnhumano2.setEnabled(false);
 								btn_3.setEnabled(true);
-								btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l3 + ".png"));
+								btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -1645,13 +1705,13 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_4.setEnabled(true);
-							btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
 					break;
 				case 4:
@@ -1659,20 +1719,20 @@ public class TelaDoJogo extends JFrame {
 						arrayTabuleiro.add(p3);
 						btnhumano3.setEnabled(false);
 						btn_4.setEnabled(true);
-						btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l3 + ".png"));
+						btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 1) {
 							Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano3.setEnabled(false);
 							btn_4.setEnabled(true);
-							btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 2) {
 								arrayTabuleiro.add(p3);
 								btnhumano3.setEnabled(false);
 								btn_4.setEnabled(true);
-								btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l3 + ".png"));
+								btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -1690,13 +1750,13 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_5.setEnabled(true);
-							btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
 					break;
 				case 5:
@@ -1704,7 +1764,7 @@ public class TelaDoJogo extends JFrame {
 						arrayTabuleiro.add(p3);
 						btnhumano3.setEnabled(false);
 						btn_5.setEnabled(true);
-						btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l3 + ".png"));
+						btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 1) {
 							Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
@@ -1712,13 +1772,13 @@ public class TelaDoJogo extends JFrame {
 							btnhumano2.setEnabled(false);
 							btn_5.setEnabled(true);
 
-							btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 2) {
 								arrayTabuleiro.add(p3);
 								btnhumano3.setEnabled(false);
 								btn_5.setEnabled(true);
-								btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l3 + ".png"));
+								btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -1736,13 +1796,13 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_6.setEnabled(true);
-							btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
 					break;
 				case 6:
@@ -1750,20 +1810,20 @@ public class TelaDoJogo extends JFrame {
 						arrayTabuleiro.add(p3);
 						btnhumano3.setEnabled(false);
 						btn_6.setEnabled(true);
-						btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l3 + ".png"));
+						btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 1) {
 							Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano3.setEnabled(false);
 							btn_6.setEnabled(true);
-							btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 2) {
 								arrayTabuleiro.add(p3);
 								btnhumano3.setEnabled(false);
 								btn_6.setEnabled(true);
-								btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l3 + ".png"));
+								btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -1781,13 +1841,13 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_7.setEnabled(true);
-							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
 					break;
 				case 7:
@@ -1795,20 +1855,20 @@ public class TelaDoJogo extends JFrame {
 						arrayTabuleiro.add(p3);
 						btnhumano3.setEnabled(false);
 						btn_7.setEnabled(true);
-						btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l3 + ".png"));
+						btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 1) {
 							Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano3.setEnabled(false);
 							btn_7.setEnabled(true);
-							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 2) {
 								arrayTabuleiro.add(p3);
 								btnhumano3.setEnabled(false);
 								btn_7.setEnabled(true);
-								btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l3 + ".png"));
+								btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -1826,35 +1886,35 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_8.setEnabled(true);
-							btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
 					break;
-					
+
 				case 8:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p3);
 						btnhumano3.setEnabled(false);
 						btn_8.setEnabled(true);
-						btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+						btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 1) {
 							Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano3.setEnabled(false);
 							btn_8.setEnabled(true);
-							btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 2) {
 								arrayTabuleiro.add(p3);
 								btnhumano3.setEnabled(false);
 								btn_8.setEnabled(true);
-								btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+								btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -1872,36 +1932,36 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_9.setEnabled(true);
-							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
-					
+
 					break;
-					
+
 				case 9:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p3);
 						btnhumano3.setEnabled(false);
 						btn_9.setEnabled(true);
-						btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+						btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 1) {
 							Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano3.setEnabled(false);
 							btn_9.setEnabled(true);
-							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 2) {
 								arrayTabuleiro.add(p3);
 								btnhumano3.setEnabled(false);
 								btn_9.setEnabled(true);
-								btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+								btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -1919,36 +1979,36 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_10.setEnabled(true);
-							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
-					
+
 					break;
-					
+
 				case 10:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p3);
 						btnhumano3.setEnabled(false);
 						btn_10.setEnabled(true);
-						btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+						btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 1) {
 							Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano3.setEnabled(false);
 							btn_10.setEnabled(true);
-							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 2) {
 								arrayTabuleiro.add(p3);
 								btnhumano3.setEnabled(false);
 								btn_10.setEnabled(true);
-								btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+								btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -1966,36 +2026,36 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_11.setEnabled(true);
-							btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
-					
+
 					break;
-					
+
 				case 11:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p3);
 						btnhumano3.setEnabled(false);
 						btn_11.setEnabled(true);
-						btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+						btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 1) {
 							Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano3.setEnabled(false);
 							btn_11.setEnabled(true);
-							btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 2) {
 								arrayTabuleiro.add(p3);
 								btnhumano3.setEnabled(false);
 								btn_11.setEnabled(true);
-								btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+								btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -2013,65 +2073,77 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_12.setEnabled(true);
-							btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
-					
+
 					break;
-					
+
 				case 12:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p3);
 						btnhumano3.setEnabled(false);
 						btn_12.setEnabled(true);
-						btn_12.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l1 + ".png"));
+						btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 1) {
 							Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano3.setEnabled(false);
 							btn_12.setEnabled(true);
-							btn_12.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
+							btn_12.setIcon(new ImageIcon(".//resource//pecas//horintais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 2) {
 								arrayTabuleiro.add(p3);
 								btnhumano3.setEnabled(false);
 								btn_12.setEnabled(true);
-								btn_12.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l1 + ".png"));
+								btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
 							}
 						}
 					}
-					/** Inteligência simples da maquina **/
 
-					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) != 0) {
-						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
+					break;
+				case 13:
 
-						if (valor == "") {
-							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p3);
+						btnhumano3.setEnabled(false);
+						btn_13.setEnabled(true);
+						btn_13.setIcon(new ImageIcon(".//resource//pecas//verticias2//" + l3 + ".png"));
 
-						} else {
-							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+					} else {
+						if (al.verificaLadosPedraDireita(arrayTabuleiro, p3) == 1) {
+							// obs: tem que inverter os valores antes de inserir
+							// no array.
+							Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
+							btnhumano3.setEnabled(false);
 							btn_13.setEnabled(true);
-							btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//"+ valor + ".png"));
-							++aux2;
-							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+							btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
+						} else {
+							if (al.verificaLadosPedraDireita(arrayTabuleiro, p3) == 2) {
+								arrayTabuleiro.add(p3);
+								btnhumano3.setEnabled(false);
+								btn_13.setEnabled(true);
+								btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l3 + ".png"));
+
+							} else {
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+								--aux2;
+							}
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
-					}
-					
+
 					break;
-					
-					
+
 				default:
 					JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					break;
@@ -2085,8 +2157,7 @@ public class TelaDoJogo extends JFrame {
 
 				++aux2;
 				Pecas p4 = arrayH.get(3);
-				
-				
+
 				String ladoa = p4.getLadoEsquerdo().toString();
 				String ladob = p4.getLadoDireito().toString();
 
@@ -2098,20 +2169,20 @@ public class TelaDoJogo extends JFrame {
 						arrayTabuleiro.add(p4);
 						btnhumano4.setEnabled(false);
 						btn_1.setEnabled(true);
-						btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l4 + ".png"));
+						btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 1) {
 							Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano4.setEnabled(false);
 							btn_1.setEnabled(true);
-							btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 2) {
 								arrayTabuleiro.add(p4);
 								btnhumano4.setEnabled(false);
 								btn_1.setEnabled(true);
-								btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l4 + ".png"));
+								btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -2129,13 +2200,13 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_2.setEnabled(true);
-							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
 					break;
 				case 2:
@@ -2143,20 +2214,20 @@ public class TelaDoJogo extends JFrame {
 						arrayTabuleiro.add(p4);
 						btnhumano4.setEnabled(false);
 						btn_2.setEnabled(true);
-						btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l4 + ".png"));
+						btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 1) {
 							Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano4.setEnabled(false);
 							btn_2.setEnabled(true);
-							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 2) {
 								arrayTabuleiro.add(p4);
 								btnhumano4.setEnabled(false);
 								btn_2.setEnabled(true);
-								btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l4 + ".png"));
+								btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -2174,13 +2245,13 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_3.setEnabled(true);
-							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
 					break;
 				case 3:
@@ -2188,20 +2259,20 @@ public class TelaDoJogo extends JFrame {
 						arrayTabuleiro.add(p4);
 						btnhumano4.setEnabled(false);
 						btn_3.setEnabled(true);
-						btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l4 + ".png"));
+						btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 1) {
 							Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano4.setEnabled(false);
 							btn_3.setEnabled(true);
-							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 2) {
 								arrayTabuleiro.add(p4);
 								btnhumano4.setEnabled(false);
 								btn_3.setEnabled(true);
-								btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l4 + ".png"));
+								btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -2219,13 +2290,13 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_4.setEnabled(true);
-							btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
 					break;
 				case 4:
@@ -2233,20 +2304,20 @@ public class TelaDoJogo extends JFrame {
 						arrayTabuleiro.add(p4);
 						btnhumano4.setEnabled(false);
 						btn_4.setEnabled(true);
-						btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l4 + ".png"));
+						btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 1) {
 							Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano4.setEnabled(false);
 							btn_4.setEnabled(true);
-							btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 2) {
 								arrayTabuleiro.add(p4);
 								btnhumano4.setEnabled(false);
 								btn_4.setEnabled(true);
-								btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l4 + ".png"));
+								btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -2264,13 +2335,13 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_5.setEnabled(true);
-							btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
 					break;
 				case 5:
@@ -2278,20 +2349,20 @@ public class TelaDoJogo extends JFrame {
 						arrayTabuleiro.add(p4);
 						btnhumano4.setEnabled(false);
 						btn_5.setEnabled(true);
-						btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l4 + ".png"));
+						btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 1) {
 							Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano4.setEnabled(false);
 							btn_5.setEnabled(true);
-							btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 2) {
 								arrayTabuleiro.add(p4);
 								btnhumano4.setEnabled(false);
 								btn_5.setEnabled(true);
-								btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l4 + ".png"));
+								btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -2309,13 +2380,13 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_6.setEnabled(true);
-							btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
 					break;
 				case 6:
@@ -2323,20 +2394,20 @@ public class TelaDoJogo extends JFrame {
 						arrayTabuleiro.add(p4);
 						btnhumano4.setEnabled(false);
 						btn_6.setEnabled(true);
-						btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l4 + ".png"));
+						btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 1) {
 							Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano4.setEnabled(false);
 							btn_6.setEnabled(true);
-							btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 2) {
 								arrayTabuleiro.add(p4);
 								btnhumano4.setEnabled(false);
 								btn_6.setEnabled(true);
-								btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l4 + ".png"));
+								btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -2354,13 +2425,13 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_7.setEnabled(true);
-							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
 					break;
 				case 7:
@@ -2368,20 +2439,20 @@ public class TelaDoJogo extends JFrame {
 						arrayTabuleiro.add(p4);
 						btnhumano4.setEnabled(false);
 						btn_7.setEnabled(true);
-						btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l4 + ".png"));
+						btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 1) {
 							Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano4.setEnabled(false);
 							btn_7.setEnabled(true);
-							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 2) {
 								arrayTabuleiro.add(p4);
 								btnhumano4.setEnabled(false);
 								btn_7.setEnabled(true);
-								btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l4 + ".png"));
+								btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -2399,35 +2470,35 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_8.setEnabled(true);
-							btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
 					break;
-					
+
 				case 8:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p4);
 						btnhumano4.setEnabled(false);
 						btn_8.setEnabled(true);
-						btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+						btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 1) {
 							Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano4.setEnabled(false);
 							btn_8.setEnabled(true);
-							btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 2) {
 								arrayTabuleiro.add(p4);
 								btnhumano4.setEnabled(false);
 								btn_8.setEnabled(true);
-								btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+								btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -2445,36 +2516,36 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_9.setEnabled(true);
-							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
-					
+
 					break;
-					
+
 				case 9:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p4);
 						btnhumano4.setEnabled(false);
 						btn_9.setEnabled(true);
-						btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+						btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 1) {
 							Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano4.setEnabled(false);
 							btn_9.setEnabled(true);
-							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 2) {
 								arrayTabuleiro.add(p4);
 								btnhumano4.setEnabled(false);
 								btn_9.setEnabled(true);
-								btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+								btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -2492,36 +2563,36 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_10.setEnabled(true);
-							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
-					
+
 					break;
-					
+
 				case 10:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p4);
 						btnhumano4.setEnabled(false);
 						btn_10.setEnabled(true);
-						btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+						btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 1) {
 							Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano4.setEnabled(false);
 							btn_10.setEnabled(true);
-							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 2) {
 								arrayTabuleiro.add(p4);
 								btnhumano4.setEnabled(false);
 								btn_10.setEnabled(true);
-								btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+								btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -2539,36 +2610,36 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_11.setEnabled(true);
-							btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
-					
+
 					break;
-					
+
 				case 11:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p4);
 						btnhumano4.setEnabled(false);
 						btn_11.setEnabled(true);
-						btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+						btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 1) {
 							Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano4.setEnabled(false);
 							btn_11.setEnabled(true);
-							btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 2) {
 								arrayTabuleiro.add(p4);
 								btnhumano4.setEnabled(false);
 								btn_11.setEnabled(true);
-								btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+								btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -2586,63 +2657,77 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_12.setEnabled(true);
-							btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
-					
+
 					break;
-					
+
 				case 12:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p4);
 						btnhumano4.setEnabled(false);
 						btn_12.setEnabled(true);
-						btn_12.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l1 + ".png"));
+						btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 1) {
 							Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano4.setEnabled(false);
 							btn_12.setEnabled(true);
-							btn_12.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
+							btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 2) {
 								arrayTabuleiro.add(p4);
 								btnhumano4.setEnabled(false);
 								btn_12.setEnabled(true);
-								btn_12.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l1 + ".png"));
+								btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
 							}
 						}
 					}
-					/** Inteligência simples da maquina **/
 
-					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) != 0) {
-						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
+					break;
+				case 13:
 
-						if (valor == "") {
-							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p4);
+						btnhumano2.setEnabled(false);
+						btn_13.setEnabled(true);
+						btn_13.setIcon(new ImageIcon(".//resource//pecas//verticias2//" + l4 + ".png"));
 
-						} else {
-							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+					} else {
+						if (al.verificaLadosPedraDireita(arrayTabuleiro, p4) == 1) {
+							// obs: tem que inverter os valores antes de inserir
+							// no array.
+							Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
+							btnhumano2.setEnabled(false);
 							btn_13.setEnabled(true);
-							btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//"+ valor + ".png"));
-							++aux2;
-							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+							btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
+						} else {
+							if (al.verificaLadosPedraDireita(arrayTabuleiro, p4) == 2) {
+								arrayTabuleiro.add(p4);
+								btnhumano2.setEnabled(false);
+								btn_13.setEnabled(true);
+								btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l4 + ".png"));
+
+							} else {
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+								--aux2;
+							}
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
-					}
-					
+
 					break;
+
 				default:
 					JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					break;
@@ -2656,8 +2741,7 @@ public class TelaDoJogo extends JFrame {
 
 				++aux2;
 				Pecas p5 = arrayH.get(4);
-			
-				
+
 				String ladoa = p5.getLadoEsquerdo().toString();
 				String ladob = p5.getLadoDireito().toString();
 
@@ -2669,20 +2753,20 @@ public class TelaDoJogo extends JFrame {
 						arrayTabuleiro.add(p5);
 						btnhumano5.setEnabled(false);
 						btn_1.setEnabled(true);
-						btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l5 + ".png"));
+						btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 1) {
 							Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano5.setEnabled(false);
 							btn_1.setEnabled(true);
-							btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 2) {
 								arrayTabuleiro.add(p5);
 								btnhumano5.setEnabled(false);
 								btn_1.setEnabled(true);
-								btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l5 + ".png"));
+								btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
 
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
@@ -2701,13 +2785,13 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_2.setEnabled(true);
-							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
 					break;
 				case 2:
@@ -2715,20 +2799,20 @@ public class TelaDoJogo extends JFrame {
 						arrayTabuleiro.add(p5);
 						btnhumano5.setEnabled(false);
 						btn_2.setEnabled(true);
-						btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l5 + ".png"));
+						btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 1) {
 							Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano5.setEnabled(false);
 							btn_2.setEnabled(true);
-							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 2) {
 								arrayTabuleiro.add(p5);
 								btnhumano5.setEnabled(false);
 								btn_2.setEnabled(true);
-								btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l5 + ".png"));
+								btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -2746,13 +2830,13 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_3.setEnabled(true);
-							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
 					break;
 				case 3:
@@ -2760,20 +2844,20 @@ public class TelaDoJogo extends JFrame {
 						arrayTabuleiro.add(p5);
 						btnhumano5.setEnabled(false);
 						btn_3.setEnabled(true);
-						btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l5 + ".png"));
+						btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 1) {
 							Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano5.setEnabled(false);
 							btn_3.setEnabled(true);
-							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 2) {
 								arrayTabuleiro.add(p5);
 								btnhumano5.setEnabled(false);
 								btn_3.setEnabled(true);
-								btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l5 + ".png"));
+								btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -2791,13 +2875,13 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_4.setEnabled(true);
-							btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
 					break;
 				case 4:
@@ -2805,20 +2889,20 @@ public class TelaDoJogo extends JFrame {
 						arrayTabuleiro.add(p5);
 						btnhumano5.setEnabled(false);
 						btn_4.setEnabled(true);
-						btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l5 + ".png"));
+						btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 1) {
 							Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano5.setEnabled(false);
 							btn_4.setEnabled(true);
-							btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 2) {
 								arrayTabuleiro.add(p5);
 								btnhumano5.setEnabled(false);
 								btn_4.setEnabled(true);
-								btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l5 + ".png"));
+								btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -2836,13 +2920,13 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_5.setEnabled(true);
-							btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
 					break;
 				case 5:
@@ -2850,20 +2934,20 @@ public class TelaDoJogo extends JFrame {
 						arrayTabuleiro.add(p5);
 						btnhumano5.setEnabled(false);
 						btn_5.setEnabled(true);
-						btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l5 + ".png"));
+						btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 1) {
 							Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano5.setEnabled(false);
 							btn_5.setEnabled(true);
-							btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 2) {
 								arrayTabuleiro.add(p5);
 								btnhumano5.setEnabled(false);
 								btn_5.setEnabled(true);
-								btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l5 + ".png"));
+								btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -2881,13 +2965,13 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_6.setEnabled(true);
-							btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
 					break;
 				case 6:
@@ -2895,20 +2979,20 @@ public class TelaDoJogo extends JFrame {
 						arrayTabuleiro.add(p5);
 						btnhumano5.setEnabled(false);
 						btn_6.setEnabled(true);
-						btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l5 + ".png"));
+						btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 1) {
 							Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano5.setEnabled(false);
 							btn_6.setEnabled(true);
-							btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 2) {
 								arrayTabuleiro.add(p5);
 								btnhumano5.setEnabled(false);
 								btn_6.setEnabled(true);
-								btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l5 + ".png"));
+								btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -2926,13 +3010,13 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_7.setEnabled(true);
-							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
 					break;
 				case 7:
@@ -2940,20 +3024,20 @@ public class TelaDoJogo extends JFrame {
 						arrayTabuleiro.add(p5);
 						btnhumano5.setEnabled(false);
 						btn_7.setEnabled(true);
-						btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l5 + ".png"));
+						btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 1) {
 							Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano5.setEnabled(false);
 							btn_7.setEnabled(true);
-							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 2) {
 								arrayTabuleiro.add(p5);
 								btnhumano5.setEnabled(false);
 								btn_7.setEnabled(true);
-								btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l5 + ".png"));
+								btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -2971,35 +3055,35 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_8.setEnabled(true);
-							btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
 					break;
-					
+
 				case 8:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p5);
 						btnhumano5.setEnabled(false);
 						btn_8.setEnabled(true);
-						btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+						btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 1) {
 							Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano5.setEnabled(false);
 							btn_8.setEnabled(true);
-							btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 2) {
 								arrayTabuleiro.add(p5);
 								btnhumano5.setEnabled(false);
 								btn_8.setEnabled(true);
-								btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+								btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -3017,36 +3101,36 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_9.setEnabled(true);
-							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
-					
+
 					break;
-					
+
 				case 9:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p5);
 						btnhumano5.setEnabled(false);
 						btn_9.setEnabled(true);
-						btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+						btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 1) {
 							Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano5.setEnabled(false);
 							btn_9.setEnabled(true);
-							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 2) {
 								arrayTabuleiro.add(p5);
 								btnhumano5.setEnabled(false);
 								btn_9.setEnabled(true);
-								btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+								btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -3064,156 +3148,131 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_10.setEnabled(true);
-							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
-					
+
 					break;
-					
+
 				case 10:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p5);
 						btnhumano5.setEnabled(false);
 						btn_10.setEnabled(true);
-						btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+						btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 1) {
 							Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano5.setEnabled(false);
 							btn_10.setEnabled(true);
-							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 2) {
 								arrayTabuleiro.add(p5);
 								btnhumano5.setEnabled(false);
 								btn_10.setEnabled(true);
-								btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+								btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
 							}
 						}
 					}
-					/** Inteligência simples da maquina **/
 
-					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p5) != 0) {
-						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
-
-						if (valor == "") {
-							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
-
-						} else {
-							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
-							btn_11.setEnabled(true);
-							btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
-							++aux2;
-							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
-						}
-					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
-					}
-					
 					break;
-					
+
 				case 11:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p5);
 						btnhumano5.setEnabled(false);
 						btn_11.setEnabled(true);
-						btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+						btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 1) {
 							Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano5.setEnabled(false);
 							btn_11.setEnabled(true);
-							btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 2) {
 								arrayTabuleiro.add(p5);
 								btnhumano5.setEnabled(false);
 								btn_11.setEnabled(true);
-								btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+								btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
 							}
 						}
 					}
-					/** Inteligência simples da maquina **/
 
-					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p5) != 0) {
-						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
-
-						if (valor == "") {
-							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
-
-						} else {
-							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
-							btn_12.setEnabled(true);
-							btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
-							++aux2;
-							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
-						}
-					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
-					}
-					
 					break;
-					
+
 				case 12:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p5);
 						btnhumano5.setEnabled(false);
 						btn_12.setEnabled(true);
-						btn_12.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l1 + ".png"));
+						btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 1) {
 							Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano5.setEnabled(false);
 							btn_12.setEnabled(true);
-							btn_12.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
+							btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 2) {
 								arrayTabuleiro.add(p5);
 								btnhumano5.setEnabled(false);
 								btn_12.setEnabled(true);
-								btn_12.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l1 + ".png"));
+								btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
 							}
 						}
 					}
-					/** Inteligência simples da maquina **/
 
-					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p5) != 0) {
-						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
+					break;
+				case 13:
 
-						if (valor == "") {
-							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p5);
+						btnhumano2.setEnabled(false);
+						btn_13.setEnabled(true);
+						btn_13.setIcon(new ImageIcon(".//resource//pecas//verticias2//" + l5 + ".png"));
 
-						} else {
-							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+					} else {
+						if (al.verificaLadosPedraDireita(arrayTabuleiro, p5) == 1) {
+							// obs: tem que inverter os valores antes de inserir
+							// no array.
+							Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
+							btnhumano2.setEnabled(false);
 							btn_13.setEnabled(true);
-							btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//"+ valor + ".png"));
-							++aux2;
-							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+							btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
+						} else {
+							if (al.verificaLadosPedraDireita(arrayTabuleiro, p5) == 2) {
+								arrayTabuleiro.add(p5);
+								btnhumano2.setEnabled(false);
+								btn_13.setEnabled(true);
+								btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l5 + ".png"));
+
+							} else {
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+								--aux2;
+							}
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
-					}
-					
+
 					break;
 
 				default:
@@ -3228,8 +3287,7 @@ public class TelaDoJogo extends JFrame {
 
 				++aux2;
 				Pecas p6 = arrayH.get(5);
-				
-				
+
 				String ladoa = p6.getLadoEsquerdo().toString();
 				String ladob = p6.getLadoDireito().toString();
 
@@ -3241,20 +3299,20 @@ public class TelaDoJogo extends JFrame {
 						arrayTabuleiro.add(p6);
 						btnhumano6.setEnabled(false);
 						btn_1.setEnabled(true);
-						btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l6 + ".png"));
+						btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 1) {
 							Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano2.setEnabled(false);
 							btn_1.setEnabled(true);
-							btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 2) {
 								arrayTabuleiro.add(p6);
 								btnhumano6.setEnabled(false);
 								btn_1.setEnabled(true);
-								btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l6 + ".png"));
+								btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
 
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
@@ -3273,13 +3331,13 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_2.setEnabled(true);
-							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
 
 					break;
@@ -3288,20 +3346,20 @@ public class TelaDoJogo extends JFrame {
 						arrayTabuleiro.add(p6);
 						btnhumano6.setEnabled(false);
 						btn_2.setEnabled(true);
-						btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l6 + ".png"));
+						btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 1) {
 							Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano6.setEnabled(false);
 							btn_2.setEnabled(true);
-							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 2) {
 								arrayTabuleiro.add(p6);
 								btnhumano6.setEnabled(false);
 								btn_2.setEnabled(true);
-								btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l6 + ".png"));
+								btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -3319,13 +3377,13 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_3.setEnabled(true);
-							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
 					break;
 				case 3:
@@ -3333,20 +3391,20 @@ public class TelaDoJogo extends JFrame {
 						arrayTabuleiro.add(p6);
 						btnhumano6.setEnabled(false);
 						btn_3.setEnabled(true);
-						btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l6 + ".png"));
+						btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 1) {
 							Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano6.setEnabled(false);
 							btn_3.setEnabled(true);
-							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 2) {
 								arrayTabuleiro.add(p6);
 								btnhumano6.setEnabled(false);
 								btn_3.setEnabled(true);
-								btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l6 + ".png"));
+								btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -3364,13 +3422,13 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_4.setEnabled(true);
-							btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
 					break;
 				case 4:
@@ -3378,21 +3436,21 @@ public class TelaDoJogo extends JFrame {
 						arrayTabuleiro.add(p6);
 						btnhumano6.setEnabled(false);
 						btn_4.setEnabled(true);
-						btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l6 + ".png"));
+						btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 1) {
 							Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano6.setEnabled(false);
 							btn_4.setEnabled(true);
-							btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 2) {
 								arrayTabuleiro.add(p6);
 								btnhumano6.setEnabled(false);
 								btn_4.setEnabled(true);
 
-								btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l6 + ".png"));
+								btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -3410,13 +3468,13 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_5.setEnabled(true);
-							btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
 					break;
 				case 5:
@@ -3424,20 +3482,20 @@ public class TelaDoJogo extends JFrame {
 						arrayTabuleiro.add(p6);
 						btnhumano6.setEnabled(false);
 						btn_5.setEnabled(true);
-						btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l6 + ".png"));
+						btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 1) {
 							Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano6.setEnabled(false);
 							btn_5.setEnabled(true);
-							btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 2) {
 								arrayTabuleiro.add(p6);
 								btnhumano6.setEnabled(false);
 								btn_5.setEnabled(true);
-								btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l6 + ".png"));
+								btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -3455,13 +3513,13 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_6.setEnabled(true);
-							btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
 					break;
 				case 6:
@@ -3469,20 +3527,20 @@ public class TelaDoJogo extends JFrame {
 						arrayTabuleiro.add(p6);
 						btnhumano6.setEnabled(false);
 						btn_6.setEnabled(true);
-						btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l6 + ".png"));
+						btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 1) {
 							Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano6.setEnabled(false);
 							btn_6.setEnabled(true);
-							btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 2) {
 								arrayTabuleiro.add(p6);
 								btnhumano6.setEnabled(false);
 								btn_6.setEnabled(true);
-								btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l6 + ".png"));
+								btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -3500,13 +3558,13 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_7.setEnabled(true);
-							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
 					break;
 				case 7:
@@ -3514,20 +3572,20 @@ public class TelaDoJogo extends JFrame {
 						arrayTabuleiro.add(p6);
 						btnhumano6.setEnabled(false);
 						btn_7.setEnabled(true);
-						btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l6 + ".png"));
+						btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 1) {
 							Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano6.setEnabled(false);
 							btn_7.setEnabled(true);
-							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 2) {
 								arrayTabuleiro.add(p6);
 								btnhumano6.setEnabled(false);
 								btn_7.setEnabled(true);
-								btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l6 + ".png"));
+								btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -3545,35 +3603,35 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_8.setEnabled(true);
-							btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
 					break;
-					
+
 				case 8:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p6);
 						btnhumano6.setEnabled(false);
 						btn_8.setEnabled(true);
-						btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+						btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 1) {
 							Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano6.setEnabled(false);
 							btn_8.setEnabled(true);
-							btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 2) {
 								arrayTabuleiro.add(p6);
 								btnhumano6.setEnabled(false);
 								btn_8.setEnabled(true);
-								btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+								btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -3591,36 +3649,36 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_9.setEnabled(true);
-							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
-					
+
 					break;
-					
+
 				case 9:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p6);
 						btnhumano6.setEnabled(false);
 						btn_9.setEnabled(true);
-						btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+						btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 1) {
 							Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano6.setEnabled(false);
 							btn_9.setEnabled(true);
-							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 2) {
 								arrayTabuleiro.add(p6);
 								btnhumano6.setEnabled(false);
 								btn_9.setEnabled(true);
-								btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+								btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -3638,36 +3696,36 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_10.setEnabled(true);
-							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
-					
+
 					break;
-					
+
 				case 10:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p6);
 						btnhumano6.setEnabled(false);
 						btn_10.setEnabled(true);
-						btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+						btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 1) {
 							Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano6.setEnabled(false);
 							btn_10.setEnabled(true);
-							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 2) {
 								arrayTabuleiro.add(p6);
 								btnhumano6.setEnabled(false);
 								btn_10.setEnabled(true);
-								btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+								btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -3685,109 +3743,103 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_11.setEnabled(true);
-							btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
-					
+
 					break;
-					
+
 				case 11:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p6);
 						btnhumano6.setEnabled(false);
 						btn_11.setEnabled(true);
-						btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+						btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 1) {
 							Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano6.setEnabled(false);
 							btn_11.setEnabled(true);
-							btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 2) {
 								arrayTabuleiro.add(p6);
 								btnhumano6.setEnabled(false);
 								btn_11.setEnabled(true);
-								btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+								btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
 							}
 						}
 					}
-					/** Inteligência simples da maquina **/
 
-					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p6) != 0) {
-						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
-
-						if (valor == "") {
-							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
-
-						} else {
-							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
-							btn_12.setEnabled(true);
-							btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
-							++aux2;
-							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
-						}
-					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
-					}
-					
 					break;
-					
+
 				case 12:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p6);
 						btnhumano6.setEnabled(false);
 						btn_12.setEnabled(true);
-						btn_12.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l1 + ".png"));
+						btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 1) {
 							Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano6.setEnabled(false);
 							btn_12.setEnabled(true);
-							btn_12.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
+							btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 2) {
 								arrayTabuleiro.add(p6);
 								btnhumano6.setEnabled(false);
 								btn_12.setEnabled(true);
-								btn_12.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l1 + ".png"));
+								btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
 							}
 						}
 					}
-					/** Inteligência simples da maquina **/
 
-					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p6) != 0) {
-						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
+					break;
+				case 13:
 
-						if (valor == "") {
-							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p6);
+						btnhumano6.setEnabled(false);
+						btn_13.setEnabled(true);
+						btn_13.setIcon(new ImageIcon(".//resource//pecas//verticias2//" + l6 + ".png"));
 
-						} else {
-							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+					} else {
+						if (al.verificaLadosPedraDireita(arrayTabuleiro, p6) == 1) {
+							// obs: tem que inverter os valores antes de inserir
+							// no array.
+							Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
+							btnhumano6.setEnabled(false);
 							btn_13.setEnabled(true);
-							btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//"+ valor + ".png"));
-							++aux2;
-							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+							btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
+						} else {
+							if (al.verificaLadosPedraDireita(arrayTabuleiro, p6) == 2) {
+								arrayTabuleiro.add(p6);
+								btnhumano6.setEnabled(false);
+								btn_13.setEnabled(true);
+								btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l6 + ".png"));
+
+							} else {
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+								--aux2;
+							}
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
-					}
-					
+
 					break;
 
 				default:
@@ -3803,8 +3855,7 @@ public class TelaDoJogo extends JFrame {
 
 				++aux2;
 				Pecas p7 = arrayH.get(6);
-			
-				
+
 				String ladoa = p7.getLadoEsquerdo().toString();
 				String ladob = p7.getLadoDireito().toString();
 
@@ -3816,45 +3867,26 @@ public class TelaDoJogo extends JFrame {
 						arrayTabuleiro.add(p7);
 						btnhumano7.setEnabled(false);
 						btn_1.setEnabled(true);
-						btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l7 + ".png"));
+						btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 1) {
 							Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano7.setEnabled(false);
 							btn_1.setEnabled(true);
-							btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 2) {
 								arrayTabuleiro.add(p7);
 								btnhumano7.setEnabled(false);
 								btn_1.setEnabled(true);
-								btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l7 + ".png"));
+								btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
 
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
 							}
 						}
-					}
-					/** Inteligência simples da maquina **/
-
-					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p7) != 0) {
-						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
-
-						if (valor == "") {
-							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
-
-						} else {
-							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
-							btn_2.setEnabled(true);
-							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
-							++aux2;
-							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
-						}
-					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
 					}
 
 					break;
@@ -3863,187 +3895,115 @@ public class TelaDoJogo extends JFrame {
 						arrayTabuleiro.add(p7);
 						btnhumano7.setEnabled(false);
 						btn_2.setEnabled(true);
-						btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l7 + ".png"));
+						btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 1) {
 							Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano7.setEnabled(false);
 							btn_2.setEnabled(true);
-							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 2) {
 								arrayTabuleiro.add(p7);
 								btnhumano7.setEnabled(false);
 								btn_2.setEnabled(true);
-								btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l7 + ".png"));
+								btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
 							}
 						}
 					}
-					/** Inteligência simples da maquina **/
 
-					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p7) != 0) {
-						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
-
-						if (valor == "") {
-							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
-
-						} else {
-							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
-							btn_3.setEnabled(true);
-							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
-							++aux2;
-							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
-						}
-					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
-					}
 					break;
 				case 3:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p7);
 						btnhumano7.setEnabled(false);
 						btn_3.setEnabled(true);
-						btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l7 + ".png"));
+						btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 1) {
 							Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano7.setEnabled(false);
 							btn_3.setEnabled(true);
-							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 2) {
 								arrayTabuleiro.add(p7);
 								btnhumano7.setEnabled(false);
 								btn_3.setEnabled(true);
-								btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l7 + ".png"));
+								btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
 							}
 						}
 					}
-					/** Inteligência simples da maquina **/
 
-					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p7) != 0) {
-						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
-
-						if (valor == "") {
-							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
-
-						} else {
-							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
-							btn_4.setEnabled(true);
-							btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
-							++aux2;
-							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
-						}
-					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
-					}
 					break;
 				case 4:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p7);
 						btnhumano7.setEnabled(false);
 						btn_4.setEnabled(true);
-						btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l7 + ".png"));
+						btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 1) {
 							Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano7.setEnabled(false);
 							btn_4.setEnabled(true);
-							btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 2) {
 								arrayTabuleiro.add(p7);
 								btnhumano7.setEnabled(false);
 								btn_4.setEnabled(true);
-								btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l7 + ".png"));
+								btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
 							}
 						}
 					}
-					/** Inteligência simples da maquina **/
 
-					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p7) != 0) {
-						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
-
-						if (valor == "") {
-							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
-
-						} else {
-							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
-							btn_5.setEnabled(true);
-							btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
-							++aux2;
-							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
-						}
-					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
-					}
 					break;
 				case 5:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p7);
 						btnhumano7.setEnabled(false);
 						btn_5.setEnabled(true);
-						btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l7 + ".png"));
+						btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 1) {
 							Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano7.setEnabled(false);
 							btn_5.setEnabled(true);
-							btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 2) {
 								arrayTabuleiro.add(p7);
 								btnhumano7.setEnabled(false);
 								btn_5.setEnabled(true);
-								btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l7 + ".png"));
+								btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
 							}
 						}
 					}
-					/** Inteligência simples da maquina **/
 
-					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p7) != 0) {
-						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
-
-						if (valor == "") {
-							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
-
-						} else {
-							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
-							btn_6.setEnabled(true);
-							btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
-							++aux2;
-							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
-						}
-					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
-					}
 					break;
 				case 6:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p7);
 						btnhumano7.setEnabled(false);
 						btn_6.setEnabled(true);
-						btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l7 + ".png"));
+						btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 1) {
 							Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
@@ -4051,58 +4011,40 @@ public class TelaDoJogo extends JFrame {
 							btnhumano7.setEnabled(false);
 							btn_6.setEnabled(true);
 
-							btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 2) {
 								arrayTabuleiro.add(p7);
 								btnhumano7.setEnabled(false);
 								btn_6.setEnabled(true);
-								btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l7 + ".png"));
+								btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
 							}
 						}
 					}
-					/** Inteligência simples da maquina **/
 
-					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p7) != 0) {
-						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
-
-						if (valor == "") {
-							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
-
-						} else {
-							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
-							btn_7.setEnabled(true);
-							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
-							++aux2;
-							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
-						}
-					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
-					}
 					break;
 				case 7:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p7);
 						btnhumano7.setEnabled(false);
 						btn_7.setEnabled(true);
-						btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l7 + ".png"));
+						btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 1) {
 							Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano7.setEnabled(false);
 							btn_7.setEnabled(true);
-							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 2) {
 								arrayTabuleiro.add(p7);
 								btnhumano7.setEnabled(false);
 								btn_7.setEnabled(true);
-								btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l7 + ".png"));
+								btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -4120,35 +4062,35 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_8.setEnabled(true);
-							btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
 					break;
-					
+
 				case 8:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p7);
 						btnhumano7.setEnabled(false);
 						btn_8.setEnabled(true);
-						btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+						btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 1) {
 							Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano7.setEnabled(false);
 							btn_8.setEnabled(true);
-							btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 2) {
 								arrayTabuleiro.add(p7);
 								btnhumano7.setEnabled(false);
 								btn_8.setEnabled(true);
-								btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+								btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -4166,36 +4108,36 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_9.setEnabled(true);
-							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
-					
+
 					break;
-					
+
 				case 9:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p7);
 						btnhumano7.setEnabled(false);
 						btn_9.setEnabled(true);
-						btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+						btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 1) {
 							Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano7.setEnabled(false);
 							btn_9.setEnabled(true);
-							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 2) {
 								arrayTabuleiro.add(p7);
 								btnhumano7.setEnabled(false);
 								btn_9.setEnabled(true);
-								btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+								btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -4213,36 +4155,36 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_10.setEnabled(true);
-							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
-					
+
 					break;
-					
+
 				case 10:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p7);
 						btnhumano7.setEnabled(false);
 						btn_10.setEnabled(true);
-						btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+						btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 1) {
 							Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano7.setEnabled(false);
 							btn_10.setEnabled(true);
-							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 2) {
 								arrayTabuleiro.add(p7);
 								btnhumano7.setEnabled(false);
 								btn_10.setEnabled(true);
-								btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+								btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -4260,36 +4202,36 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_11.setEnabled(true);
-							btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
-					
+
 					break;
-					
+
 				case 11:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p7);
 						btnhumano7.setEnabled(false);
 						btn_11.setEnabled(true);
-						btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+						btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 1) {
 							Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano7.setEnabled(false);
 							btn_11.setEnabled(true);
-							btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+							btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 2) {
 								arrayTabuleiro.add(p7);
 								btnhumano7.setEnabled(false);
 								btn_11.setEnabled(true);
-								btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+								btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -4307,36 +4249,36 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_12.setEnabled(true);
-							btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
-					
+
 					break;
-					
+
 				case 12:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p7);
 						btnhumano7.setEnabled(false);
 						btn_12.setEnabled(true);
-						btn_12.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l1 + ".png"));
+						btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 1) {
 							Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
 							btnhumano7.setEnabled(false);
 							btn_12.setEnabled(true);
-							btn_12.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
+							btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 2) {
 								arrayTabuleiro.add(p7);
 								btnhumano7.setEnabled(false);
 								btn_12.setEnabled(true);
-								btn_12.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l1 + ".png"));
+								btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
 							} else {
 								JOptionPane.showMessageDialog(null, "Pedra diferente");
 								--aux2;
@@ -4354,17 +4296,48 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_13.setEnabled(true);
-							btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//"+ valor + ".png"));
+							btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					for(Pecas i: arrayTabuleiro){
-						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
-					
-					break;
 
+					break;
+				case 13:
+
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p7);
+						btnhumano2.setEnabled(false);
+						btn_13.setEnabled(true);
+						btn_13.setIcon(new ImageIcon(".//resource//pecas//verticias2//" + l7 + ".png"));
+
+					} else {
+						if (al.verificaLadosPedraDireita(arrayTabuleiro, p7) == 1) {
+							// obs: tem que inverter os valores antes de inserir
+							// no array.
+							Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
+							btnhumano2.setEnabled(false);
+							btn_13.setEnabled(true);
+							btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
+						} else {
+							if (al.verificaLadosPedraDireita(arrayTabuleiro, p7) == 2) {
+								arrayTabuleiro.add(p7);
+								btnhumano2.setEnabled(false);
+								btn_13.setEnabled(true);
+								btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l7 + ".png"));
+
+							} else {
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+								--aux2;
+							}
+						}
+					}
+
+					break;
 				default:
 					JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					break;
@@ -4428,11 +4401,11 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(0);
-				
+
 				array.remove(0);
 				Pecas vazia = new Pecas(null, null);
 				array.add(0, vazia);
-				
+
 				String ladoa = p.getLadoEsquerdo().toString();
 				String ladob = p.getLadoDireito().toString();
 
@@ -4511,7 +4484,7 @@ public class TelaDoJogo extends JFrame {
 					break;
 
 				default:
-					if(arrayM.size() == 7 && arrayTabuleiro.size() == 0){
+					if (arrayM.size() == 7 && arrayTabuleiro.size() == 0) {
 						JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					}
 					break;
@@ -4527,7 +4500,7 @@ public class TelaDoJogo extends JFrame {
 				array.remove(1);
 				Pecas vazia = new Pecas(null, null);
 				array.add(1, vazia);
-				
+
 				String ladoa = p.getLadoEsquerdo().toString();
 				String ladob = p.getLadoDireito().toString();
 
@@ -4605,17 +4578,10 @@ public class TelaDoJogo extends JFrame {
 					break;
 
 				default:
-					JOptionPane.showMessageDialog(null, "Peças esgotadas");
-					break;
-				}
-				// verifica de quem é a vez do jogo
-				if (arrayM.size() == 7) {
-
-					if (al.jogaPrimeiro(arrayH, arrayM) == true) {
-						desabilitaBotoesMaquina();
-					} else {
-						desabilitaBotoesHumano();
+					if (arrayM.size() == 7 && arrayTabuleiro.size() == 0) {
+						JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					}
+					break;
 				}
 
 			}
@@ -4630,7 +4596,7 @@ public class TelaDoJogo extends JFrame {
 				array.remove(2);
 				Pecas vazia = new Pecas(null, null);
 				array.add(2, vazia);
-				
+
 				String ladoa = p.getLadoEsquerdo().toString();
 				String ladob = p.getLadoDireito().toString();
 				l3 = ladoa + ladob;
@@ -4708,17 +4674,12 @@ public class TelaDoJogo extends JFrame {
 					break;
 
 				default:
-					JOptionPane.showMessageDialog(null, "Peças esgotadas");
+					if (arrayM.size() == 7 && arrayTabuleiro.size() == 0) {
+						JOptionPane.showMessageDialog(null, "Peças esgotadas");
+					}
 					break;
 				}
-				// verifica de quem é a vez do jogo
-				if (arrayM.size() == 7) {
-					if (al.jogaPrimeiro(arrayH, arrayM) == true) {
-						desabilitaBotoesMaquina();
-					} else {
-						desabilitaBotoesHumano();
-					}
-				}
+
 			}
 
 		});
@@ -4731,7 +4692,7 @@ public class TelaDoJogo extends JFrame {
 				array.remove(3);
 				Pecas vazia = new Pecas(null, null);
 				array.add(3, vazia);
-				
+
 				String ladoa = p.getLadoEsquerdo().toString();
 				String ladob = p.getLadoDireito().toString();
 
@@ -4811,16 +4772,10 @@ public class TelaDoJogo extends JFrame {
 					break;
 
 				default:
-					JOptionPane.showMessageDialog(null, "Peças esgotadas");
-					break;
-				}
-				// verifica de quem é a vez do jogo
-				if (arrayM.size() == 7) {
-					if (al.jogaPrimeiro(arrayH, arrayM) == true) {
-						desabilitaBotoesMaquina();
-					} else {
-						desabilitaBotoesHumano();
+					if (arrayM.size() == 7 && arrayTabuleiro.size() == 0) {
+						JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					}
+					break;
 				}
 
 			}
@@ -4832,11 +4787,11 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(4);
-				
+
 				array.remove(4);
 				Pecas vazia = new Pecas(null, null);
 				array.add(4, vazia);
-				
+
 				String ladoa = p.getLadoEsquerdo().toString();
 				String ladob = p.getLadoDireito().toString();
 
@@ -4915,16 +4870,10 @@ public class TelaDoJogo extends JFrame {
 					break;
 
 				default:
-					JOptionPane.showMessageDialog(null, "Peças esgotadas");
-					break;
-				}
-				if (arrayM.size() == 7) {
-
-					if (al.jogaPrimeiro(arrayH, arrayM) == true) {
-						desabilitaBotoesMaquina();
-					} else {
-						desabilitaBotoesHumano();
+					if (arrayM.size() == 7 && arrayTabuleiro.size() == 0) {
+						JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					}
+					break;
 				}
 
 			}
@@ -4939,7 +4888,7 @@ public class TelaDoJogo extends JFrame {
 				array.remove(5);
 				Pecas vazia = new Pecas(null, null);
 				array.add(5, vazia);
-				
+
 				String ladoa = p.getLadoEsquerdo().toString();
 				String ladob = p.getLadoDireito().toString();
 
@@ -5018,17 +4967,10 @@ public class TelaDoJogo extends JFrame {
 					break;
 
 				default:
-					JOptionPane.showMessageDialog(null, "Peças esgotadas");
-					break;
-				}
-				// verifica de quem é a vez do jogo
-				if (arrayM.size() == 7) {
-
-					if (al.jogaPrimeiro(arrayH, arrayM) == true) {
-						desabilitaBotoesMaquina();
-					} else {
-						desabilitaBotoesHumano();
+					if (arrayM.size() == 7 && arrayTabuleiro.size() == 0) {
+						JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					}
+					break;
 				}
 
 			}
@@ -5043,7 +4985,7 @@ public class TelaDoJogo extends JFrame {
 				array.remove(6);
 				Pecas vazia = new Pecas(null, null);
 				array.add(6, vazia);
-				
+
 				String ladoa = p.getLadoEsquerdo().toString();
 				String ladob = p.getLadoDireito().toString();
 				l7 = ladoa + ladob;
@@ -5121,17 +5063,10 @@ public class TelaDoJogo extends JFrame {
 					break;
 
 				default:
-					JOptionPane.showMessageDialog(null, "Peças esgotadas");
-					break;
-				}
-				// verifica de quem é a vez do jogo
-				if (arrayM.size() == 7) {
-
-					if (al.jogaPrimeiro(arrayH, arrayM) == true) {
-						desabilitaBotoesMaquina();
-					} else {
-						desabilitaBotoesHumano();
+					if (arrayM.size() == 7 && arrayTabuleiro.size() == 0) {
+						JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					}
+					break;
 				}
 
 			}
@@ -5143,11 +5078,11 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(7);
-				
+
 				array.remove(7);
 				Pecas vazia = new Pecas(null, null);
 				array.add(7, vazia);
-				
+
 				String ladoa = p.getLadoEsquerdo().toString();
 				String ladob = p.getLadoDireito().toString();
 
@@ -5226,17 +5161,10 @@ public class TelaDoJogo extends JFrame {
 					break;
 
 				default:
-					JOptionPane.showMessageDialog(null, "Peças esgotadas");
-					break;
-				}
-				// verifica de quem é a vez do jogo
-				if (arrayM.size() == 7) {
-
-					if (al.jogaPrimeiro(arrayH, arrayM) == true) {
-						desabilitaBotoesMaquina();
-					} else {
-						desabilitaBotoesHumano();
+					if (arrayM.size() == 7 && arrayTabuleiro.size() == 0) {
+						JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					}
+					break;
 				}
 
 			}
@@ -5250,7 +5178,7 @@ public class TelaDoJogo extends JFrame {
 				array.remove(8);
 				Pecas vazia = new Pecas(null, null);
 				array.add(8, vazia);
-				
+
 				String ladoa = p.getLadoEsquerdo().toString();
 				String ladob = p.getLadoDireito().toString();
 
@@ -5329,17 +5257,10 @@ public class TelaDoJogo extends JFrame {
 					break;
 
 				default:
-					JOptionPane.showMessageDialog(null, "Peças esgotadas");
-					break;
-				}
-				// verifica de quem é a vez do jogo
-				if (arrayM.size() == 7) {
-
-					if (al.jogaPrimeiro(arrayH, arrayM) == true) {
-						desabilitaBotoesMaquina();
-					} else {
-						desabilitaBotoesHumano();
+					if (arrayM.size() == 7 && arrayTabuleiro.size() == 0) {
+						JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					}
+					break;
 				}
 
 			}
@@ -5353,7 +5274,7 @@ public class TelaDoJogo extends JFrame {
 				array.remove(9);
 				Pecas vazia = new Pecas(null, null);
 				array.add(9, vazia);
-				
+
 				String ladoa = p.getLadoEsquerdo().toString();
 				String ladob = p.getLadoDireito().toString();
 
@@ -5432,17 +5353,10 @@ public class TelaDoJogo extends JFrame {
 					break;
 
 				default:
-					JOptionPane.showMessageDialog(null, "Peças esgotadas");
-					break;
-				}
-				// verifica de quem é a vez do jogo
-				if (arrayM.size() == 7) {
-
-					if (al.jogaPrimeiro(arrayH, arrayM) == true) {
-						desabilitaBotoesMaquina();
-					} else {
-						desabilitaBotoesHumano();
+					if (arrayM.size() == 7 && arrayTabuleiro.size() == 0) {
+						JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					}
+					break;
 				}
 
 			}
@@ -5456,7 +5370,7 @@ public class TelaDoJogo extends JFrame {
 				array.remove(10);
 				Pecas vazia = new Pecas(null, null);
 				array.add(10, vazia);
-				
+
 				String ladoa = p.getLadoEsquerdo().toString();
 				String ladob = p.getLadoDireito().toString();
 
@@ -5535,17 +5449,10 @@ public class TelaDoJogo extends JFrame {
 					break;
 
 				default:
-					JOptionPane.showMessageDialog(null, "Peças esgotadas");
-					break;
-				}
-				// verifica de quem é a vez do jogo
-				if (arrayM.size() == 7) {
-
-					if (al.jogaPrimeiro(arrayH, arrayM) == true) {
-						desabilitaBotoesMaquina();
-					} else {
-						desabilitaBotoesHumano();
+					if (arrayM.size() == 7 && arrayTabuleiro.size() == 0) {
+						JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					}
+					break;
 				}
 
 			}
@@ -5559,7 +5466,7 @@ public class TelaDoJogo extends JFrame {
 				array.remove(11);
 				Pecas vazia = new Pecas(null, null);
 				array.add(11, vazia);
-				
+
 				String ladoa = p.getLadoEsquerdo().toString();
 				String ladob = p.getLadoDireito().toString();
 
@@ -5638,17 +5545,10 @@ public class TelaDoJogo extends JFrame {
 					break;
 
 				default:
-					JOptionPane.showMessageDialog(null, "Peças esgotadas");
-					break;
-				}
-				// verifica de quem é a vez do jogo
-				if (arrayM.size() == 7) {
-
-					if (al.jogaPrimeiro(arrayH, arrayM) == true) {
-						desabilitaBotoesMaquina();
-					} else {
-						desabilitaBotoesHumano();
+					if (arrayM.size() == 7 && arrayTabuleiro.size() == 0) {
+						JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					}
+					break;
 				}
 
 			}
@@ -5662,7 +5562,7 @@ public class TelaDoJogo extends JFrame {
 				array.remove(12);
 				Pecas vazia = new Pecas(null, null);
 				array.add(12, vazia);
-				
+
 				String ladoa = p.getLadoEsquerdo().toString();
 				String ladob = p.getLadoDireito().toString();
 
@@ -5741,17 +5641,10 @@ public class TelaDoJogo extends JFrame {
 					break;
 
 				default:
-					JOptionPane.showMessageDialog(null, "Peças esgotadas");
-					break;
-				}
-				// verifica de quem é a vez do jogo
-				if (arrayM.size() == 7) {
-
-					if (al.jogaPrimeiro(arrayH, arrayM) == true) {
-						desabilitaBotoesMaquina();
-					} else {
-						desabilitaBotoesHumano();
+					if (arrayM.size() == 7 && arrayTabuleiro.size() == 0) {
+						JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					}
+					break;
 				}
 
 			}
@@ -5765,7 +5658,7 @@ public class TelaDoJogo extends JFrame {
 				array.remove(13);
 				Pecas vazia = new Pecas(null, null);
 				array.add(13, vazia);
-				
+
 				String ladoa = p.getLadoEsquerdo().toString();
 				String ladob = p.getLadoDireito().toString();
 
@@ -5844,17 +5737,10 @@ public class TelaDoJogo extends JFrame {
 					break;
 
 				default:
-					JOptionPane.showMessageDialog(null, "Peças esgotadas");
-					break;
-				}
-				// verifica de quem é a vez do jogo
-				if (arrayM.size() == 7) {
-
-					if (al.jogaPrimeiro(arrayH, arrayM) == true) {
-						desabilitaBotoesMaquina();
-					} else {
-						desabilitaBotoesHumano();
+					if (arrayM.size() == 7 && arrayTabuleiro.size() == 0) {
+						JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					}
+					break;
 				}
 
 			}
@@ -5868,7 +5754,7 @@ public class TelaDoJogo extends JFrame {
 				array.remove(14);
 				Pecas vazia = new Pecas(null, null);
 				array.add(14, vazia);
-				
+
 				String ladoa = p.getLadoEsquerdo().toString();
 				String ladob = p.getLadoDireito().toString();
 
@@ -5946,17 +5832,10 @@ public class TelaDoJogo extends JFrame {
 					break;
 
 				default:
-					JOptionPane.showMessageDialog(null, "Peças esgotadas");
-					break;
-				}
-				// verifica de quem é a vez do jogo
-				if (arrayM.size() == 7) {
-
-					if (al.jogaPrimeiro(arrayH, arrayM) == true) {
-						desabilitaBotoesMaquina();
-					} else {
-						desabilitaBotoesHumano();
+					if (arrayM.size() == 7 && arrayTabuleiro.size() == 0) {
+						JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					}
+					break;
 				}
 
 			}
@@ -5970,7 +5849,7 @@ public class TelaDoJogo extends JFrame {
 				array.remove(15);
 				Pecas vazia = new Pecas(null, null);
 				array.add(15, vazia);
-				
+
 				String ladoa = p.getLadoEsquerdo().toString();
 				String ladob = p.getLadoDireito().toString();
 
@@ -6049,17 +5928,10 @@ public class TelaDoJogo extends JFrame {
 					break;
 
 				default:
-					JOptionPane.showMessageDialog(null, "Peças esgotadas");
-					break;
-				}
-				// verifica de quem é a vez do jogo
-				if (arrayM.size() == 7) {
-
-					if (al.jogaPrimeiro(arrayH, arrayM) == true) {
-						desabilitaBotoesMaquina();
-					} else {
-						desabilitaBotoesHumano();
+					if (arrayM.size() == 7 && arrayTabuleiro.size() == 0) {
+						JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					}
+					break;
 				}
 
 			}
@@ -6073,7 +5945,7 @@ public class TelaDoJogo extends JFrame {
 				array.remove(16);
 				Pecas vazia = new Pecas(null, null);
 				array.add(16, vazia);
-				
+
 				String ladoa = p.getLadoEsquerdo().toString();
 				String ladob = p.getLadoDireito().toString();
 
@@ -6152,17 +6024,10 @@ public class TelaDoJogo extends JFrame {
 					break;
 
 				default:
-					JOptionPane.showMessageDialog(null, "Peças esgotadas");
-					break;
-				}
-				// verifica de quem é a vez do jogo
-				if (arrayM.size() == 7) {
-
-					if (al.jogaPrimeiro(arrayH, arrayM) == true) {
-						desabilitaBotoesMaquina();
-					} else {
-						desabilitaBotoesHumano();
+					if (arrayM.size() == 7 && arrayTabuleiro.size() == 0) {
+						JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					}
+					break;
 				}
 
 			}
@@ -6255,17 +6120,10 @@ public class TelaDoJogo extends JFrame {
 					break;
 
 				default:
-					JOptionPane.showMessageDialog(null, "Peças esgotadas");
-					break;
-				}
-				// verifica de quem é a vez do jogo
-				if (arrayM.size() == 7) {
-
-					if (al.jogaPrimeiro(arrayH, arrayM) == true) {
-						desabilitaBotoesMaquina();
-					} else {
-						desabilitaBotoesHumano();
+					if (arrayM.size() == 7 && arrayTabuleiro.size() == 0) {
+						JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					}
+					break;
 				}
 
 			}
@@ -6279,7 +6137,7 @@ public class TelaDoJogo extends JFrame {
 				array.remove(18);
 				Pecas vazia = new Pecas(null, null);
 				array.add(18, vazia);
-				
+
 				String ladoa = p.getLadoEsquerdo().toString();
 				String ladob = p.getLadoDireito().toString();
 
@@ -6358,17 +6216,10 @@ public class TelaDoJogo extends JFrame {
 					break;
 
 				default:
-					JOptionPane.showMessageDialog(null, "Peças esgotadas");
-					break;
-				}
-				// verifica de quem é a vez do jogo
-				if (arrayM.size() == 7) {
-
-					if (al.jogaPrimeiro(arrayH, arrayM) == true) {
-						desabilitaBotoesMaquina();
-					} else {
-						desabilitaBotoesHumano();
+					if (arrayM.size() == 7 && arrayTabuleiro.size() == 0) {
+						JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					}
+					break;
 				}
 
 			}
@@ -6382,7 +6233,7 @@ public class TelaDoJogo extends JFrame {
 				array.remove(19);
 				Pecas vazia = new Pecas(null, null);
 				array.add(19, vazia);
-				
+
 				String ladoa = p.getLadoEsquerdo().toString();
 				String ladob = p.getLadoDireito().toString();
 
@@ -6461,17 +6312,10 @@ public class TelaDoJogo extends JFrame {
 					break;
 
 				default:
-					JOptionPane.showMessageDialog(null, "Peças esgotadas");
-					break;
-				}
-				// verifica de quem é a vez do jogo
-				if (arrayM.size() == 7) {
-
-					if (al.jogaPrimeiro(arrayH, arrayM) == true) {
-						desabilitaBotoesMaquina();
-					} else {
-						desabilitaBotoesHumano();
+					if (arrayM.size() == 7 && arrayTabuleiro.size() == 0) {
+						JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					}
+					break;
 				}
 
 			}
@@ -6485,7 +6329,7 @@ public class TelaDoJogo extends JFrame {
 				array.remove(20);
 				Pecas vazia = new Pecas(null, null);
 				array.add(20, vazia);
-				
+
 				String ladoa = p.getLadoEsquerdo().toString();
 				String ladob = p.getLadoDireito().toString();
 
@@ -6564,17 +6408,10 @@ public class TelaDoJogo extends JFrame {
 					break;
 
 				default:
-					JOptionPane.showMessageDialog(null, "Peças esgotadas");
-					break;
-				}
-				// verifica de quem é a vez do jogo
-				if (arrayM.size() == 7) {
-
-					if (al.jogaPrimeiro(arrayH, arrayM) == true) {
-						desabilitaBotoesMaquina();
-					} else {
-						desabilitaBotoesHumano();
+					if (arrayM.size() == 7 && arrayTabuleiro.size() == 0) {
+						JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					}
+					break;
 				}
 
 			}
@@ -6588,7 +6425,7 @@ public class TelaDoJogo extends JFrame {
 				array.remove(21);
 				Pecas vazia = new Pecas(null, null);
 				array.add(21, vazia);
-				
+
 				String ladoa = p.getLadoEsquerdo().toString();
 				String ladob = p.getLadoDireito().toString();
 
@@ -6667,17 +6504,10 @@ public class TelaDoJogo extends JFrame {
 					break;
 
 				default:
-					JOptionPane.showMessageDialog(null, "Peças esgotadas");
-					break;
-				}
-				// verifica de quem é a vez do jogo
-				if (arrayM.size() == 7) {
-
-					if (al.jogaPrimeiro(arrayH, arrayM) == true) {
-						desabilitaBotoesMaquina();
-					} else {
-						desabilitaBotoesHumano();
+					if (arrayM.size() == 7 && arrayTabuleiro.size() == 0) {
+						JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					}
+					break;
 				}
 
 			}
@@ -6691,7 +6521,7 @@ public class TelaDoJogo extends JFrame {
 				array.remove(22);
 				Pecas vazia = new Pecas(null, null);
 				array.add(22, vazia);
-				
+
 				String ladoa = p.getLadoEsquerdo().toString();
 				String ladob = p.getLadoDireito().toString();
 
@@ -6770,18 +6600,11 @@ public class TelaDoJogo extends JFrame {
 					break;
 
 				default:
-					JOptionPane.showMessageDialog(null, "Peças esgotadas");
-					break;
+					if (arrayM.size() == 7 && arrayTabuleiro.size() == 0) {
+						JOptionPane.showMessageDialog(null, "Peças esgotadas");
+					}					break;
 				}
-				// verifica de quem é a vez do jogo
-				if (arrayM.size() == 7) {
-
-					if (al.jogaPrimeiro(arrayH, arrayM) == true) {
-						desabilitaBotoesMaquina();
-					} else {
-						desabilitaBotoesHumano();
-					}
-				}
+				
 
 			}
 		});
@@ -6794,7 +6617,7 @@ public class TelaDoJogo extends JFrame {
 				array.remove(23);
 				Pecas vazia = new Pecas(null, null);
 				array.add(23, vazia);
-				
+
 				String ladoa = p.getLadoEsquerdo().toString();
 				String ladob = p.getLadoDireito().toString();
 
@@ -6873,18 +6696,11 @@ public class TelaDoJogo extends JFrame {
 					break;
 
 				default:
-					JOptionPane.showMessageDialog(null, "Peças esgotadas");
-					break;
+					if (arrayM.size() == 7 && arrayTabuleiro.size() == 0) {
+						JOptionPane.showMessageDialog(null, "Peças esgotadas");
+					}					break;
 				}
-				// verifica de quem é a vez do jogo
-				if (arrayM.size() == 7) {
-
-					if (al.jogaPrimeiro(arrayH, arrayM) == true) {
-						desabilitaBotoesMaquina();
-					} else {
-						desabilitaBotoesHumano();
-					}
-				}
+				
 
 			}
 		});
@@ -6894,7 +6710,7 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(24);
-				
+
 				array.remove(24);
 				Pecas vazia = new Pecas(null, null);
 				array.add(24, vazia);
@@ -6976,18 +6792,11 @@ public class TelaDoJogo extends JFrame {
 					break;
 
 				default:
-					JOptionPane.showMessageDialog(null, "Peças esgotadas");
-					break;
+					if (arrayM.size() == 7 && arrayTabuleiro.size() == 0) {
+						JOptionPane.showMessageDialog(null, "Peças esgotadas");
+					}					break;
 				}
-				// verifica de quem é a vez do jogo
-				if (arrayM.size() == 7) {
-
-					if (al.jogaPrimeiro(arrayH, arrayM) == true) {
-						desabilitaBotoesMaquina();
-					} else {
-						desabilitaBotoesHumano();
-					}
-				}
+				
 
 			}
 		});
@@ -7000,7 +6809,7 @@ public class TelaDoJogo extends JFrame {
 				array.remove(25);
 				Pecas vazia = new Pecas(null, null);
 				array.add(25, vazia);
-				
+
 				String ladoa = p.getLadoEsquerdo().toString();
 				String ladob = p.getLadoDireito().toString();
 
@@ -7079,18 +6888,11 @@ public class TelaDoJogo extends JFrame {
 					break;
 
 				default:
-					JOptionPane.showMessageDialog(null, "Peças esgotadas");
-					break;
+					if (arrayM.size() == 7 && arrayTabuleiro.size() == 0) {
+						JOptionPane.showMessageDialog(null, "Peças esgotadas");
+					}					break;
 				}
-				// verifica de quem é a vez do jogo
-				if (arrayM.size() == 7) {
-
-					if (al.jogaPrimeiro(arrayH, arrayM) == true) {
-						desabilitaBotoesMaquina();
-					} else {
-						desabilitaBotoesHumano();
-					}
-				}
+				
 
 			}
 		});
@@ -7103,7 +6905,7 @@ public class TelaDoJogo extends JFrame {
 				array.remove(26);
 				Pecas vazia = new Pecas(null, null);
 				array.add(26, vazia);
-				
+
 				String ladoa = p.getLadoEsquerdo().toString();
 				String ladob = p.getLadoDireito().toString();
 
@@ -7182,18 +6984,11 @@ public class TelaDoJogo extends JFrame {
 					break;
 
 				default:
-					JOptionPane.showMessageDialog(null, "Peças esgotadas");
-					break;
+					if (arrayM.size() == 7 && arrayTabuleiro.size() == 0) {
+						JOptionPane.showMessageDialog(null, "Peças esgotadas");
+					}					break;
 				}
-				// verifica de quem é a vez do jogo
-				if (arrayM.size() == 7) {
-
-					if (al.jogaPrimeiro(arrayH, arrayM) == true) {
-						desabilitaBotoesMaquina();
-					} else {
-						desabilitaBotoesHumano();
-					}
-				}
+				
 
 			}
 		});
@@ -7203,11 +6998,11 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				++aux;
 				Pecas p = array.get(27);
-				
+
 				array.remove(27);
 				Pecas vazia = new Pecas(null, null);
 				array.add(27, vazia);
-				
+
 				String ladoa = p.getLadoEsquerdo().toString();
 				String ladob = p.getLadoDireito().toString();
 				l28 = ladoa + ladob;
@@ -7285,18 +7080,11 @@ public class TelaDoJogo extends JFrame {
 					break;
 
 				default:
-					JOptionPane.showMessageDialog(null, "Peças esgotadas");
-					break;
+					if (arrayM.size() == 7 && arrayTabuleiro.size() == 0) {
+						JOptionPane.showMessageDialog(null, "Peças esgotadas");
+					}					break;
 				}
-				// verifica de quem é a vez do jogo
-				if (arrayM.size() == 7) {
-
-					if (al.jogaPrimeiro(arrayH, arrayM) == true) {
-						desabilitaBotoesMaquina();
-					} else {
-						desabilitaBotoesHumano();
-					}
-				}
+				
 			}
 		});
 

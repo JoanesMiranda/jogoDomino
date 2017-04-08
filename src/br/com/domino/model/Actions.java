@@ -128,10 +128,10 @@ public class Actions {
 		int retorno = 0;
 
 		if (tabuleiro.get(tabuleiro.size() - 1).getLadoDireito() == peca.getLadoDireito()) {
-			retorno = 1; // usa peças
+			retorno = 1; // usa peças verticais 2 -invertida
 		}
 		if (tabuleiro.get(tabuleiro.size() - 1).getLadoDireito() == peca.getLadoEsquerdo()) {
-			retorno = 2; // usa peças
+			retorno = 2; // usa peças verticais 2 - usa a mesma pedra
 		}
 		return retorno;
 	}
