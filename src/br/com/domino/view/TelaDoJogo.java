@@ -687,6 +687,195 @@ public class TelaDoJogo extends JFrame {
 					}
 					
 					break;
+					
+				case 8:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p1);
+						btnhumano1.setEnabled(false);
+						btn_8.setEnabled(true);
+						btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+					} else {
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 1) {
+							Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
+							btnhumano1.setEnabled(false);
+							btn_8.setEnabled(true);
+							btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+						} else {
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 2) {
+								arrayTabuleiro.add(p1);
+								btnhumano1.setEnabled(false);
+								btn_8.setEnabled(true);
+								btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+							} else {
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+								--aux2;
+							}
+						}
+					}
+					/** Inteligência simples da maquina **/
+
+					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) != 0) {
+						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
+
+						if (valor == "") {
+							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+
+						} else {
+							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+							btn_9.setEnabled(true);
+							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							++aux2;
+							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+						}
+					}
+					for(Pecas i: arrayTabuleiro){
+						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					}
+					
+					break;
+					
+				case 9:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p1);
+						btnhumano1.setEnabled(false);
+						btn_9.setEnabled(true);
+						btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+					} else {
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 1) {
+							Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
+							btnhumano1.setEnabled(false);
+							btn_9.setEnabled(true);
+							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+						} else {
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 2) {
+								arrayTabuleiro.add(p1);
+								btnhumano1.setEnabled(false);
+								btn_9.setEnabled(true);
+								btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+							} else {
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+								--aux2;
+							}
+						}
+					}
+					/** Inteligência simples da maquina **/
+
+					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) != 0) {
+						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
+
+						if (valor == "") {
+							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+
+						} else {
+							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+							btn_10.setEnabled(true);
+							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							++aux2;
+							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+						}
+					}
+					for(Pecas i: arrayTabuleiro){
+						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					}
+					
+					break;
+					
+				case 10:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p1);
+						btnhumano1.setEnabled(false);
+						btn_10.setEnabled(true);
+						btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+					} else {
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 1) {
+							Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
+							btnhumano1.setEnabled(false);
+							btn_10.setEnabled(true);
+							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+						} else {
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 2) {
+								arrayTabuleiro.add(p1);
+								btnhumano1.setEnabled(false);
+								btn_10.setEnabled(true);
+								btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+							} else {
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+								--aux2;
+							}
+						}
+					}
+					/** Inteligência simples da maquina **/
+
+					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) != 0) {
+						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
+
+						if (valor == "") {
+							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+
+						} else {
+							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+							btn_11.setEnabled(true);
+							btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							++aux2;
+							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+						}
+					}
+					for(Pecas i: arrayTabuleiro){
+						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					}
+					
+					break;
+					
+				case 11:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p1);
+						btnhumano1.setEnabled(false);
+						btn_11.setEnabled(true);
+						btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+					} else {
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 1) {
+							Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
+							btnhumano1.setEnabled(false);
+							btn_11.setEnabled(true);
+							btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+						} else {
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 2) {
+								arrayTabuleiro.add(p1);
+								btnhumano1.setEnabled(false);
+								btn_11.setEnabled(true);
+								btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+							} else {
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+								--aux2;
+							}
+						}
+					}
+					/** Inteligência simples da maquina **/
+
+					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) != 0) {
+						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
+
+						if (valor == "") {
+							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+
+						} else {
+							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+							btn_12.setEnabled(true);
+							btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							++aux2;
+							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+						}
+					}
+					for(Pecas i: arrayTabuleiro){
+						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					}
+					
+					break;
+					
 				default:
 					JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					break;
@@ -1025,6 +1214,194 @@ public class TelaDoJogo extends JFrame {
 					for(Pecas i: arrayTabuleiro){
 						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
 					}
+					break;
+					
+				case 8:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p2);
+						btnhumano2.setEnabled(false);
+						btn_8.setEnabled(true);
+						btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+					} else {
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 1) {
+							Pecas novop = new Pecas(p2.getLadoDireito(), p2.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
+							btnhumano2.setEnabled(false);
+							btn_8.setEnabled(true);
+							btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+						} else {
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 2) {
+								arrayTabuleiro.add(p2);
+								btnhumano2.setEnabled(false);
+								btn_8.setEnabled(true);
+								btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+							} else {
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+								--aux2;
+							}
+						}
+					}
+					/** Inteligência simples da maquina **/
+
+					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) != 0) {
+						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
+
+						if (valor == "") {
+							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+
+						} else {
+							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+							btn_9.setEnabled(true);
+							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							++aux2;
+							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+						}
+					}
+					for(Pecas i: arrayTabuleiro){
+						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					}
+					
+					break;
+					
+				case 9:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p2);
+						btnhumano2.setEnabled(false);
+						btn_9.setEnabled(true);
+						btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+					} else {
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 1) {
+							Pecas novop = new Pecas(p2.getLadoDireito(), p2.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
+							btnhumano2.setEnabled(false);
+							btn_9.setEnabled(true);
+							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+						} else {
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 2) {
+								arrayTabuleiro.add(p2);
+								btnhumano2.setEnabled(false);
+								btn_9.setEnabled(true);
+								btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+							} else {
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+								--aux2;
+							}
+						}
+					}
+					/** Inteligência simples da maquina **/
+
+					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) != 0) {
+						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
+
+						if (valor == "") {
+							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+
+						} else {
+							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+							btn_10.setEnabled(true);
+							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							++aux2;
+							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+						}
+					}
+					for(Pecas i: arrayTabuleiro){
+						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					}
+					
+					break;
+					
+				case 10:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p2);
+						btnhumano2.setEnabled(false);
+						btn_10.setEnabled(true);
+						btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+					} else {
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 1) {
+							Pecas novop = new Pecas(p2.getLadoDireito(), p2.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
+							btnhumano2.setEnabled(false);
+							btn_10.setEnabled(true);
+							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+						} else {
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 2) {
+								arrayTabuleiro.add(p2);
+								btnhumano2.setEnabled(false);
+								btn_10.setEnabled(true);
+								btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+							} else {
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+								--aux2;
+							}
+						}
+					}
+					/** Inteligência simples da maquina **/
+
+					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) != 0) {
+						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
+
+						if (valor == "") {
+							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+
+						} else {
+							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+							btn_11.setEnabled(true);
+							btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							++aux2;
+							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+						}
+					}
+					for(Pecas i: arrayTabuleiro){
+						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					}
+					
+					break;
+					
+				case 11:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p2);
+						btnhumano2.setEnabled(false);
+						btn_11.setEnabled(true);
+						btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+					} else {
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 1) {
+							Pecas novop = new Pecas(p2.getLadoDireito(), p2.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
+							btnhumano2.setEnabled(false);
+							btn_11.setEnabled(true);
+							btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+						} else {
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 2) {
+								arrayTabuleiro.add(p2);
+								btnhumano2.setEnabled(false);
+								btn_11.setEnabled(true);
+								btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+							} else {
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+								--aux2;
+							}
+						}
+					}
+					/** Inteligência simples da maquina **/
+
+					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) != 0) {
+						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
+
+						if (valor == "") {
+							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+
+						} else {
+							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+							btn_12.setEnabled(true);
+							btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							++aux2;
+							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+						}
+					}
+					for(Pecas i: arrayTabuleiro){
+						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					}
+					
 					break;
 				default:
 					JOptionPane.showMessageDialog(null, "Peças esgotadas");
@@ -1365,6 +1742,194 @@ public class TelaDoJogo extends JFrame {
 						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
 					}
 					break;
+					
+				case 8:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p3);
+						btnhumano3.setEnabled(false);
+						btn_8.setEnabled(true);
+						btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+					} else {
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 1) {
+							Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
+							btnhumano3.setEnabled(false);
+							btn_8.setEnabled(true);
+							btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+						} else {
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 2) {
+								arrayTabuleiro.add(p3);
+								btnhumano3.setEnabled(false);
+								btn_8.setEnabled(true);
+								btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+							} else {
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+								--aux2;
+							}
+						}
+					}
+					/** Inteligência simples da maquina **/
+
+					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) != 0) {
+						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
+
+						if (valor == "") {
+							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+
+						} else {
+							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+							btn_9.setEnabled(true);
+							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							++aux2;
+							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+						}
+					}
+					for(Pecas i: arrayTabuleiro){
+						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					}
+					
+					break;
+					
+				case 9:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p3);
+						btnhumano3.setEnabled(false);
+						btn_9.setEnabled(true);
+						btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+					} else {
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 1) {
+							Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
+							btnhumano3.setEnabled(false);
+							btn_9.setEnabled(true);
+							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+						} else {
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 2) {
+								arrayTabuleiro.add(p3);
+								btnhumano3.setEnabled(false);
+								btn_9.setEnabled(true);
+								btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+							} else {
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+								--aux2;
+							}
+						}
+					}
+					/** Inteligência simples da maquina **/
+
+					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) != 0) {
+						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
+
+						if (valor == "") {
+							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+
+						} else {
+							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+							btn_10.setEnabled(true);
+							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							++aux2;
+							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+						}
+					}
+					for(Pecas i: arrayTabuleiro){
+						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					}
+					
+					break;
+					
+				case 10:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p3);
+						btnhumano3.setEnabled(false);
+						btn_10.setEnabled(true);
+						btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+					} else {
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 1) {
+							Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
+							btnhumano3.setEnabled(false);
+							btn_10.setEnabled(true);
+							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+						} else {
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 2) {
+								arrayTabuleiro.add(p3);
+								btnhumano3.setEnabled(false);
+								btn_10.setEnabled(true);
+								btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+							} else {
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+								--aux2;
+							}
+						}
+					}
+					/** Inteligência simples da maquina **/
+
+					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) != 0) {
+						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
+
+						if (valor == "") {
+							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+
+						} else {
+							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+							btn_11.setEnabled(true);
+							btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							++aux2;
+							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+						}
+					}
+					for(Pecas i: arrayTabuleiro){
+						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					}
+					
+					break;
+					
+				case 11:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p3);
+						btnhumano3.setEnabled(false);
+						btn_11.setEnabled(true);
+						btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+					} else {
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 1) {
+							Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
+							btnhumano3.setEnabled(false);
+							btn_11.setEnabled(true);
+							btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+						} else {
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 2) {
+								arrayTabuleiro.add(p3);
+								btnhumano3.setEnabled(false);
+								btn_11.setEnabled(true);
+								btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+							} else {
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+								--aux2;
+							}
+						}
+					}
+					/** Inteligência simples da maquina **/
+
+					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) != 0) {
+						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
+
+						if (valor == "") {
+							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+
+						} else {
+							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+							btn_12.setEnabled(true);
+							btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							++aux2;
+							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+						}
+					}
+					for(Pecas i: arrayTabuleiro){
+						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					}
+					
+					break;
 				default:
 					JOptionPane.showMessageDialog(null, "Peças esgotadas");
 					break;
@@ -1700,6 +2265,194 @@ public class TelaDoJogo extends JFrame {
 					for(Pecas i: arrayTabuleiro){
 						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
 					}
+					break;
+					
+				case 8:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p4);
+						btnhumano4.setEnabled(false);
+						btn_8.setEnabled(true);
+						btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+					} else {
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 1) {
+							Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
+							btnhumano4.setEnabled(false);
+							btn_8.setEnabled(true);
+							btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+						} else {
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 2) {
+								arrayTabuleiro.add(p4);
+								btnhumano4.setEnabled(false);
+								btn_8.setEnabled(true);
+								btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+							} else {
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+								--aux2;
+							}
+						}
+					}
+					/** Inteligência simples da maquina **/
+
+					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) != 0) {
+						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
+
+						if (valor == "") {
+							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+
+						} else {
+							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+							btn_9.setEnabled(true);
+							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							++aux2;
+							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+						}
+					}
+					for(Pecas i: arrayTabuleiro){
+						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					}
+					
+					break;
+					
+				case 9:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p4);
+						btnhumano4.setEnabled(false);
+						btn_9.setEnabled(true);
+						btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+					} else {
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 1) {
+							Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
+							btnhumano4.setEnabled(false);
+							btn_9.setEnabled(true);
+							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+						} else {
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 2) {
+								arrayTabuleiro.add(p4);
+								btnhumano4.setEnabled(false);
+								btn_9.setEnabled(true);
+								btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+							} else {
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+								--aux2;
+							}
+						}
+					}
+					/** Inteligência simples da maquina **/
+
+					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) != 0) {
+						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
+
+						if (valor == "") {
+							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+
+						} else {
+							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+							btn_10.setEnabled(true);
+							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							++aux2;
+							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+						}
+					}
+					for(Pecas i: arrayTabuleiro){
+						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					}
+					
+					break;
+					
+				case 10:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p4);
+						btnhumano4.setEnabled(false);
+						btn_10.setEnabled(true);
+						btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+					} else {
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 1) {
+							Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
+							btnhumano4.setEnabled(false);
+							btn_10.setEnabled(true);
+							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+						} else {
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 2) {
+								arrayTabuleiro.add(p4);
+								btnhumano4.setEnabled(false);
+								btn_10.setEnabled(true);
+								btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+							} else {
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+								--aux2;
+							}
+						}
+					}
+					/** Inteligência simples da maquina **/
+
+					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) != 0) {
+						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
+
+						if (valor == "") {
+							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+
+						} else {
+							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+							btn_11.setEnabled(true);
+							btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							++aux2;
+							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+						}
+					}
+					for(Pecas i: arrayTabuleiro){
+						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					}
+					
+					break;
+					
+				case 11:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p4);
+						btnhumano4.setEnabled(false);
+						btn_11.setEnabled(true);
+						btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+					} else {
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 1) {
+							Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
+							btnhumano4.setEnabled(false);
+							btn_11.setEnabled(true);
+							btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+						} else {
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 2) {
+								arrayTabuleiro.add(p4);
+								btnhumano4.setEnabled(false);
+								btn_11.setEnabled(true);
+								btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+							} else {
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+								--aux2;
+							}
+						}
+					}
+					/** Inteligência simples da maquina **/
+
+					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) != 0) {
+						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
+
+						if (valor == "") {
+							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+
+						} else {
+							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+							btn_12.setEnabled(true);
+							btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							++aux2;
+							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+						}
+					}
+					for(Pecas i: arrayTabuleiro){
+						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					}
+					
 					break;
 				default:
 					JOptionPane.showMessageDialog(null, "Peças esgotadas");
@@ -2037,6 +2790,194 @@ public class TelaDoJogo extends JFrame {
 					for(Pecas i: arrayTabuleiro){
 						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
 					}
+					break;
+					
+				case 8:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p5);
+						btnhumano5.setEnabled(false);
+						btn_8.setEnabled(true);
+						btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+					} else {
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 1) {
+							Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
+							btnhumano5.setEnabled(false);
+							btn_8.setEnabled(true);
+							btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+						} else {
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 2) {
+								arrayTabuleiro.add(p5);
+								btnhumano5.setEnabled(false);
+								btn_8.setEnabled(true);
+								btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+							} else {
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+								--aux2;
+							}
+						}
+					}
+					/** Inteligência simples da maquina **/
+
+					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p5) != 0) {
+						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
+
+						if (valor == "") {
+							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+
+						} else {
+							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+							btn_9.setEnabled(true);
+							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							++aux2;
+							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+						}
+					}
+					for(Pecas i: arrayTabuleiro){
+						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					}
+					
+					break;
+					
+				case 9:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p5);
+						btnhumano5.setEnabled(false);
+						btn_9.setEnabled(true);
+						btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+					} else {
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 1) {
+							Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
+							btnhumano5.setEnabled(false);
+							btn_9.setEnabled(true);
+							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+						} else {
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 2) {
+								arrayTabuleiro.add(p5);
+								btnhumano5.setEnabled(false);
+								btn_9.setEnabled(true);
+								btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+							} else {
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+								--aux2;
+							}
+						}
+					}
+					/** Inteligência simples da maquina **/
+
+					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p5) != 0) {
+						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
+
+						if (valor == "") {
+							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+
+						} else {
+							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+							btn_10.setEnabled(true);
+							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							++aux2;
+							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+						}
+					}
+					for(Pecas i: arrayTabuleiro){
+						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					}
+					
+					break;
+					
+				case 10:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p5);
+						btnhumano5.setEnabled(false);
+						btn_10.setEnabled(true);
+						btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+					} else {
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 1) {
+							Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
+							btnhumano5.setEnabled(false);
+							btn_10.setEnabled(true);
+							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+						} else {
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 2) {
+								arrayTabuleiro.add(p5);
+								btnhumano5.setEnabled(false);
+								btn_10.setEnabled(true);
+								btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+							} else {
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+								--aux2;
+							}
+						}
+					}
+					/** Inteligência simples da maquina **/
+
+					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p5) != 0) {
+						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
+
+						if (valor == "") {
+							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+
+						} else {
+							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+							btn_11.setEnabled(true);
+							btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							++aux2;
+							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+						}
+					}
+					for(Pecas i: arrayTabuleiro){
+						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					}
+					
+					break;
+					
+				case 11:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p5);
+						btnhumano5.setEnabled(false);
+						btn_11.setEnabled(true);
+						btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+					} else {
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 1) {
+							Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
+							btnhumano5.setEnabled(false);
+							btn_11.setEnabled(true);
+							btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+						} else {
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 2) {
+								arrayTabuleiro.add(p5);
+								btnhumano5.setEnabled(false);
+								btn_11.setEnabled(true);
+								btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+							} else {
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+								--aux2;
+							}
+						}
+					}
+					/** Inteligência simples da maquina **/
+
+					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p5) != 0) {
+						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
+
+						if (valor == "") {
+							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+
+						} else {
+							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+							btn_12.setEnabled(true);
+							btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							++aux2;
+							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+						}
+					}
+					for(Pecas i: arrayTabuleiro){
+						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					}
+					
 					break;
 
 				default:
@@ -2377,6 +3318,194 @@ public class TelaDoJogo extends JFrame {
 						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
 					}
 					break;
+					
+				case 8:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p6);
+						btnhumano6.setEnabled(false);
+						btn_8.setEnabled(true);
+						btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+					} else {
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 1) {
+							Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
+							btnhumano6.setEnabled(false);
+							btn_8.setEnabled(true);
+							btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+						} else {
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 2) {
+								arrayTabuleiro.add(p6);
+								btnhumano6.setEnabled(false);
+								btn_8.setEnabled(true);
+								btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+							} else {
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+								--aux2;
+							}
+						}
+					}
+					/** Inteligência simples da maquina **/
+
+					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p6) != 0) {
+						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
+
+						if (valor == "") {
+							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+
+						} else {
+							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+							btn_9.setEnabled(true);
+							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							++aux2;
+							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+						}
+					}
+					for(Pecas i: arrayTabuleiro){
+						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					}
+					
+					break;
+					
+				case 9:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p6);
+						btnhumano6.setEnabled(false);
+						btn_9.setEnabled(true);
+						btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+					} else {
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 1) {
+							Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
+							btnhumano6.setEnabled(false);
+							btn_9.setEnabled(true);
+							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+						} else {
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 2) {
+								arrayTabuleiro.add(p6);
+								btnhumano6.setEnabled(false);
+								btn_9.setEnabled(true);
+								btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+							} else {
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+								--aux2;
+							}
+						}
+					}
+					/** Inteligência simples da maquina **/
+
+					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p6) != 0) {
+						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
+
+						if (valor == "") {
+							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+
+						} else {
+							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+							btn_10.setEnabled(true);
+							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							++aux2;
+							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+						}
+					}
+					for(Pecas i: arrayTabuleiro){
+						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					}
+					
+					break;
+					
+				case 10:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p6);
+						btnhumano6.setEnabled(false);
+						btn_10.setEnabled(true);
+						btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+					} else {
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 1) {
+							Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
+							btnhumano6.setEnabled(false);
+							btn_10.setEnabled(true);
+							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+						} else {
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 2) {
+								arrayTabuleiro.add(p6);
+								btnhumano6.setEnabled(false);
+								btn_10.setEnabled(true);
+								btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+							} else {
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+								--aux2;
+							}
+						}
+					}
+					/** Inteligência simples da maquina **/
+
+					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p6) != 0) {
+						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
+
+						if (valor == "") {
+							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+
+						} else {
+							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+							btn_11.setEnabled(true);
+							btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							++aux2;
+							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+						}
+					}
+					for(Pecas i: arrayTabuleiro){
+						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					}
+					
+					break;
+					
+				case 11:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p6);
+						btnhumano6.setEnabled(false);
+						btn_11.setEnabled(true);
+						btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+					} else {
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 1) {
+							Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
+							btnhumano6.setEnabled(false);
+							btn_11.setEnabled(true);
+							btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+						} else {
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 2) {
+								arrayTabuleiro.add(p6);
+								btnhumano6.setEnabled(false);
+								btn_11.setEnabled(true);
+								btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+							} else {
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+								--aux2;
+							}
+						}
+					}
+					/** Inteligência simples da maquina **/
+
+					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p6) != 0) {
+						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
+
+						if (valor == "") {
+							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+
+						} else {
+							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+							btn_12.setEnabled(true);
+							btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							++aux2;
+							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+						}
+					}
+					for(Pecas i: arrayTabuleiro){
+						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					}
+					
+					break;
 
 				default:
 					JOptionPane.showMessageDialog(null, "Peças esgotadas");
@@ -2716,6 +3845,194 @@ public class TelaDoJogo extends JFrame {
 					for(Pecas i: arrayTabuleiro){
 						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
 					}
+					break;
+					
+				case 8:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p7);
+						btnhumano7.setEnabled(false);
+						btn_8.setEnabled(true);
+						btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+					} else {
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 1) {
+							Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
+							btnhumano7.setEnabled(false);
+							btn_8.setEnabled(true);
+							btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+						} else {
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 2) {
+								arrayTabuleiro.add(p7);
+								btnhumano7.setEnabled(false);
+								btn_8.setEnabled(true);
+								btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+							} else {
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+								--aux2;
+							}
+						}
+					}
+					/** Inteligência simples da maquina **/
+
+					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p7) != 0) {
+						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
+
+						if (valor == "") {
+							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+
+						} else {
+							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+							btn_9.setEnabled(true);
+							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							++aux2;
+							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+						}
+					}
+					for(Pecas i: arrayTabuleiro){
+						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					}
+					
+					break;
+					
+				case 9:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p7);
+						btnhumano7.setEnabled(false);
+						btn_9.setEnabled(true);
+						btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+					} else {
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 1) {
+							Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
+							btnhumano7.setEnabled(false);
+							btn_9.setEnabled(true);
+							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+						} else {
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 2) {
+								arrayTabuleiro.add(p7);
+								btnhumano7.setEnabled(false);
+								btn_9.setEnabled(true);
+								btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+							} else {
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+								--aux2;
+							}
+						}
+					}
+					/** Inteligência simples da maquina **/
+
+					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p7) != 0) {
+						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
+
+						if (valor == "") {
+							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+
+						} else {
+							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+							btn_10.setEnabled(true);
+							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							++aux2;
+							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+						}
+					}
+					for(Pecas i: arrayTabuleiro){
+						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					}
+					
+					break;
+					
+				case 10:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p7);
+						btnhumano7.setEnabled(false);
+						btn_10.setEnabled(true);
+						btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+					} else {
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 1) {
+							Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
+							btnhumano7.setEnabled(false);
+							btn_10.setEnabled(true);
+							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+						} else {
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 2) {
+								arrayTabuleiro.add(p7);
+								btnhumano7.setEnabled(false);
+								btn_10.setEnabled(true);
+								btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+							} else {
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+								--aux2;
+							}
+						}
+					}
+					/** Inteligência simples da maquina **/
+
+					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p7) != 0) {
+						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
+
+						if (valor == "") {
+							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+
+						} else {
+							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+							btn_11.setEnabled(true);
+							btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							++aux2;
+							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+						}
+					}
+					for(Pecas i: arrayTabuleiro){
+						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					}
+					
+					break;
+					
+				case 11:
+					if (arrayTabuleiro.isEmpty()) {
+						arrayTabuleiro.add(p7);
+						btnhumano7.setEnabled(false);
+						btn_11.setEnabled(true);
+						btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+					} else {
+						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 1) {
+							Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
+							btnhumano7.setEnabled(false);
+							btn_11.setEnabled(true);
+							btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
+						} else {
+							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 2) {
+								arrayTabuleiro.add(p7);
+								btnhumano7.setEnabled(false);
+								btn_11.setEnabled(true);
+								btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
+							} else {
+								JOptionPane.showMessageDialog(null, "Pedra diferente");
+								--aux2;
+							}
+						}
+					}
+					/** Inteligência simples da maquina **/
+
+					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p7) != 0) {
+						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
+
+						if (valor == "") {
+							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+
+						} else {
+							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+							btn_12.setEnabled(true);
+							btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais1//"+ valor + ".png"));
+							++aux2;
+							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+						}
+					}
+					for(Pecas i: arrayTabuleiro){
+						System.out.println("Array tabuliero: "+i.getLadoEsquerdo()+" "+i.getLadoDireito());
+					}
+					
 					break;
 
 				default:
