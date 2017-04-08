@@ -603,15 +603,15 @@ public class TelaDoJogo extends JFrame {
 						btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
 					} else {
 						if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 1) {
-							arrayTabuleiro.add(p1);
+							Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
+							arrayTabuleiro.add(novop);
 							btnhumano1.setEnabled(false);
 							btn_6.setEnabled(true);
 
 							btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 2) {
-								Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
-								arrayTabuleiro.add(novop);
+								arrayTabuleiro.add(p1);
 								btnhumano1.setEnabled(false);
 								btn_6.setEnabled(true);
 								btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais1//" + l1 + ".png"));
