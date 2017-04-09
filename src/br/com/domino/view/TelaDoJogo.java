@@ -371,16 +371,16 @@ public class TelaDoJogo extends JFrame {
 
 						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+							//possui um rando com 0 e 1, caso 0 a maquina passa, caso 1 ela faz uma compra no array
 							int i = al.maquinaCompraPassa();
 							if (i == 0) {
 								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
 							} else {
-								// escolhe a primeira pedra que encontrar no
-								// array e pega
+								// escolhe a primeira pedra que encontrar no array e pega
 								al.escolhePecaAleatorio(array, arrayM);
 
-								// testa se a pedra comprada pode ser jogada no
-								// tabuleiro
+								// testa se a pedra comprada pode ser jogada no tabuleiro
 								String p = al.testaPedraCompraMaquina(arrayTabuleiro, arrayM);
 
 								if (p == "") {
@@ -411,10 +411,12 @@ public class TelaDoJogo extends JFrame {
 									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 								}
 							}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////							
 							/**
 							 * Finaliza o codigo de compra de peças do jogador
 							 * maquina
 							 **/
+							
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_2.setEnabled(true);
@@ -454,13 +456,57 @@ public class TelaDoJogo extends JFrame {
 						}
 					}
 					/** Inteligência simples da maquina **/
-
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) != 0) {
 						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
 
+						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
-							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+							//possui um rando com 0 e 1, caso 0 a maquina passa, caso 1 ela faz uma compra no array
+							int i = al.maquinaCompraPassa();
+							if (i == 0) {
+								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+							} else {
+								// escolhe a primeira pedra que encontrar no array e pega
+								al.escolhePecaAleatorio(array, arrayM);
 
+								// testa se a pedra comprada pode ser jogada no tabuleiro
+								String p = al.testaPedraCompraMaquina(arrayTabuleiro, arrayM);
+
+								if (p == "") {
+									/**
+									 * caso a pedra comprada não possa ser
+									 * jogada no tabuleiro a maquina passa a
+									 * jogada
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+
+								} else {
+									/**
+									 * caso a pedra comprada possa ser jogada no
+									 * tabuleiro a maquina a insere no
+									 * arrayTabuleiro
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									/**
+									 * INSERE A IMAGEM NO BOTÃO CORRESPONDENTE
+									 **/
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+									btn_3.setEnabled(true);
+									btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+									++aux2;
+									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+								}
+							}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////							
+							/**
+							 * Finaliza o codigo de compra de peças do jogador
+							 * maquina
+							 **/
+							
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_3.setEnabled(true);
@@ -499,13 +545,57 @@ public class TelaDoJogo extends JFrame {
 						}
 					}
 					/** Inteligência simples da maquina **/
-
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) != 0) {
 						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
 
+						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
-							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+							//possui um rando com 0 e 1, caso 0 a maquina passa, caso 1 ela faz uma compra no array
+							int i = al.maquinaCompraPassa();
+							if (i == 0) {
+								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+							} else {
+								// escolhe a primeira pedra que encontrar no array e pega
+								al.escolhePecaAleatorio(array, arrayM);
 
+								// testa se a pedra comprada pode ser jogada no tabuleiro
+								String p = al.testaPedraCompraMaquina(arrayTabuleiro, arrayM);
+
+								if (p == "") {
+									/**
+									 * caso a pedra comprada não possa ser
+									 * jogada no tabuleiro a maquina passa a
+									 * jogada
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+
+								} else {
+									/**
+									 * caso a pedra comprada possa ser jogada no
+									 * tabuleiro a maquina a insere no
+									 * arrayTabuleiro
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									/**
+									 * INSERE A IMAGEM NO BOTÃO CORRESPONDENTE
+									 **/
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+									btn_4.setEnabled(true);
+									btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+									++aux2;
+									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+								}
+							}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////							
+							/**
+							 * Finaliza o codigo de compra de peças do jogador
+							 * maquina
+							 **/
+							
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_4.setEnabled(true);
@@ -547,13 +637,57 @@ public class TelaDoJogo extends JFrame {
 						}
 					}
 					/** Inteligência simples da maquina **/
-
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) != 0) {
 						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
 
+						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
-							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+							//possui um rando com 0 e 1, caso 0 a maquina passa, caso 1 ela faz uma compra no array
+							int i = al.maquinaCompraPassa();
+							if (i == 0) {
+								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+							} else {
+								// escolhe a primeira pedra que encontrar no array e pega
+								al.escolhePecaAleatorio(array, arrayM);
 
+								// testa se a pedra comprada pode ser jogada no tabuleiro
+								String p = al.testaPedraCompraMaquina(arrayTabuleiro, arrayM);
+
+								if (p == "") {
+									/**
+									 * caso a pedra comprada não possa ser
+									 * jogada no tabuleiro a maquina passa a
+									 * jogada
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+
+								} else {
+									/**
+									 * caso a pedra comprada possa ser jogada no
+									 * tabuleiro a maquina a insere no
+									 * arrayTabuleiro
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									/**
+									 * INSERE A IMAGEM NO BOTÃO CORRESPONDENTE
+									 **/
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+									btn_5.setEnabled(true);
+									btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+									++aux2;
+									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+								}
+							}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////							
+							/**
+							 * Finaliza o codigo de compra de peças do jogador
+							 * maquina
+							 **/
+							
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_5.setEnabled(true);
@@ -593,13 +727,57 @@ public class TelaDoJogo extends JFrame {
 						}
 					}
 					/** Inteligência simples da maquina **/
-
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) != 0) {
 						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
 
+						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
-							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+							//possui um rando com 0 e 1, caso 0 a maquina passa, caso 1 ela faz uma compra no array
+							int i = al.maquinaCompraPassa();
+							if (i == 0) {
+								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+							} else {
+								// escolhe a primeira pedra que encontrar no array e pega
+								al.escolhePecaAleatorio(array, arrayM);
 
+								// testa se a pedra comprada pode ser jogada no tabuleiro
+								String p = al.testaPedraCompraMaquina(arrayTabuleiro, arrayM);
+
+								if (p == "") {
+									/**
+									 * caso a pedra comprada não possa ser
+									 * jogada no tabuleiro a maquina passa a
+									 * jogada
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+
+								} else {
+									/**
+									 * caso a pedra comprada possa ser jogada no
+									 * tabuleiro a maquina a insere no
+									 * arrayTabuleiro
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									/**
+									 * INSERE A IMAGEM NO BOTÃO CORRESPONDENTE
+									 **/
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+									btn_6.setEnabled(true);
+									btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+									++aux2;
+									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+								}
+							}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////							
+							/**
+							 * Finaliza o codigo de compra de peças do jogador
+							 * maquina
+							 **/
+							
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_6.setEnabled(true);
@@ -639,13 +817,57 @@ public class TelaDoJogo extends JFrame {
 						}
 					}
 					/** Inteligência simples da maquina **/
-
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) != 0) {
 						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
 
+						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
-							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+							//possui um rando com 0 e 1, caso 0 a maquina passa, caso 1 ela faz uma compra no array
+							int i = al.maquinaCompraPassa();
+							if (i == 0) {
+								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+							} else {
+								// escolhe a primeira pedra que encontrar no array e pega
+								al.escolhePecaAleatorio(array, arrayM);
 
+								// testa se a pedra comprada pode ser jogada no tabuleiro
+								String p = al.testaPedraCompraMaquina(arrayTabuleiro, arrayM);
+
+								if (p == "") {
+									/**
+									 * caso a pedra comprada não possa ser
+									 * jogada no tabuleiro a maquina passa a
+									 * jogada
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+
+								} else {
+									/**
+									 * caso a pedra comprada possa ser jogada no
+									 * tabuleiro a maquina a insere no
+									 * arrayTabuleiro
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									/**
+									 * INSERE A IMAGEM NO BOTÃO CORRESPONDENTE
+									 **/
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+									btn_7.setEnabled(true);
+									btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+									++aux2;
+									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+								}
+							}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////							
+							/**
+							 * Finaliza o codigo de compra de peças do jogador
+							 * maquina
+							 **/
+							
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_7.setEnabled(true);
@@ -684,13 +906,57 @@ public class TelaDoJogo extends JFrame {
 						}
 					}
 					/** Inteligência simples da maquina **/
-
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) != 0) {
 						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
 
+						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
-							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+							//possui um rando com 0 e 1, caso 0 a maquina passa, caso 1 ela faz uma compra no array
+							int i = al.maquinaCompraPassa();
+							if (i == 0) {
+								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+							} else {
+								// escolhe a primeira pedra que encontrar no array e pega
+								al.escolhePecaAleatorio(array, arrayM);
 
+								// testa se a pedra comprada pode ser jogada no tabuleiro
+								String p = al.testaPedraCompraMaquina(arrayTabuleiro, arrayM);
+
+								if (p == "") {
+									/**
+									 * caso a pedra comprada não possa ser
+									 * jogada no tabuleiro a maquina passa a
+									 * jogada
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+
+								} else {
+									/**
+									 * caso a pedra comprada possa ser jogada no
+									 * tabuleiro a maquina a insere no
+									 * arrayTabuleiro
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									/**
+									 * INSERE A IMAGEM NO BOTÃO CORRESPONDENTE
+									 **/
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+									btn_8.setEnabled(true);
+									btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+									++aux2;
+									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+								}
+							}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////							
+							/**
+							 * Finaliza o codigo de compra de peças do jogador
+							 * maquina
+							 **/
+							
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_8.setEnabled(true);
@@ -702,7 +968,6 @@ public class TelaDoJogo extends JFrame {
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
-
 					break;
 
 				case 8:
@@ -731,13 +996,57 @@ public class TelaDoJogo extends JFrame {
 						}
 					}
 					/** Inteligência simples da maquina **/
-
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) != 0) {
 						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
 
+						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
-							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+							//possui um rando com 0 e 1, caso 0 a maquina passa, caso 1 ela faz uma compra no array
+							int i = al.maquinaCompraPassa();
+							if (i == 0) {
+								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+							} else {
+								// escolhe a primeira pedra que encontrar no array e pega
+								al.escolhePecaAleatorio(array, arrayM);
 
+								// testa se a pedra comprada pode ser jogada no tabuleiro
+								String p = al.testaPedraCompraMaquina(arrayTabuleiro, arrayM);
+
+								if (p == "") {
+									/**
+									 * caso a pedra comprada não possa ser
+									 * jogada no tabuleiro a maquina passa a
+									 * jogada
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+
+								} else {
+									/**
+									 * caso a pedra comprada possa ser jogada no
+									 * tabuleiro a maquina a insere no
+									 * arrayTabuleiro
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									/**
+									 * INSERE A IMAGEM NO BOTÃO CORRESPONDENTE
+									 **/
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+									btn_9.setEnabled(true);
+									btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+									++aux2;
+									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+								}
+							}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////							
+							/**
+							 * Finaliza o codigo de compra de peças do jogador
+							 * maquina
+							 **/
+							
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_9.setEnabled(true);
@@ -778,13 +1087,57 @@ public class TelaDoJogo extends JFrame {
 						}
 					}
 					/** Inteligência simples da maquina **/
-
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) != 0) {
 						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
 
+						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
-							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+							//possui um rando com 0 e 1, caso 0 a maquina passa, caso 1 ela faz uma compra no array
+							int i = al.maquinaCompraPassa();
+							if (i == 0) {
+								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+							} else {
+								// escolhe a primeira pedra que encontrar no array e pega
+								al.escolhePecaAleatorio(array, arrayM);
 
+								// testa se a pedra comprada pode ser jogada no tabuleiro
+								String p = al.testaPedraCompraMaquina(arrayTabuleiro, arrayM);
+
+								if (p == "") {
+									/**
+									 * caso a pedra comprada não possa ser
+									 * jogada no tabuleiro a maquina passa a
+									 * jogada
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+
+								} else {
+									/**
+									 * caso a pedra comprada possa ser jogada no
+									 * tabuleiro a maquina a insere no
+									 * arrayTabuleiro
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									/**
+									 * INSERE A IMAGEM NO BOTÃO CORRESPONDENTE
+									 **/
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+									btn_10.setEnabled(true);
+									btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+									++aux2;
+									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+								}
+							}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////							
+							/**
+							 * Finaliza o codigo de compra de peças do jogador
+							 * maquina
+							 **/
+							
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_10.setEnabled(true);
@@ -825,13 +1178,57 @@ public class TelaDoJogo extends JFrame {
 						}
 					}
 					/** Inteligência simples da maquina **/
-
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) != 0) {
 						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
 
+						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
-							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+							//possui um rando com 0 e 1, caso 0 a maquina passa, caso 1 ela faz uma compra no array
+							int i = al.maquinaCompraPassa();
+							if (i == 0) {
+								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+							} else {
+								// escolhe a primeira pedra que encontrar no array e pega
+								al.escolhePecaAleatorio(array, arrayM);
 
+								// testa se a pedra comprada pode ser jogada no tabuleiro
+								String p = al.testaPedraCompraMaquina(arrayTabuleiro, arrayM);
+
+								if (p == "") {
+									/**
+									 * caso a pedra comprada não possa ser
+									 * jogada no tabuleiro a maquina passa a
+									 * jogada
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+
+								} else {
+									/**
+									 * caso a pedra comprada possa ser jogada no
+									 * tabuleiro a maquina a insere no
+									 * arrayTabuleiro
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									/**
+									 * INSERE A IMAGEM NO BOTÃO CORRESPONDENTE
+									 **/
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+									btn_11.setEnabled(true);
+									btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+									++aux2;
+									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+								}
+							}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////							
+							/**
+							 * Finaliza o codigo de compra de peças do jogador
+							 * maquina
+							 **/
+							
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_11.setEnabled(true);
@@ -872,13 +1269,57 @@ public class TelaDoJogo extends JFrame {
 						}
 					}
 					/** Inteligência simples da maquina **/
-
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) != 0) {
 						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
 
+						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
-							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+							//possui um rando com 0 e 1, caso 0 a maquina passa, caso 1 ela faz uma compra no array
+							int i = al.maquinaCompraPassa();
+							if (i == 0) {
+								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+							} else {
+								// escolhe a primeira pedra que encontrar no array e pega
+								al.escolhePecaAleatorio(array, arrayM);
 
+								// testa se a pedra comprada pode ser jogada no tabuleiro
+								String p = al.testaPedraCompraMaquina(arrayTabuleiro, arrayM);
+
+								if (p == "") {
+									/**
+									 * caso a pedra comprada não possa ser
+									 * jogada no tabuleiro a maquina passa a
+									 * jogada
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+
+								} else {
+									/**
+									 * caso a pedra comprada possa ser jogada no
+									 * tabuleiro a maquina a insere no
+									 * arrayTabuleiro
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									/**
+									 * INSERE A IMAGEM NO BOTÃO CORRESPONDENTE
+									 **/
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+									btn_12.setEnabled(true);
+									btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+									++aux2;
+									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+								}
+							}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////							
+							/**
+							 * Finaliza o codigo de compra de peças do jogador
+							 * maquina
+							 **/
+							
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_12.setEnabled(true);
@@ -890,7 +1331,6 @@ public class TelaDoJogo extends JFrame {
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
-
 					break;
 				case 12:
 					if (arrayTabuleiro.isEmpty()) {
@@ -917,7 +1357,69 @@ public class TelaDoJogo extends JFrame {
 							}
 						}
 					}
+					/** Inteligência simples da maquina **/
+					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) != 0) {
+						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
 
+						/** logica para a compra de peças do jogador maquina **/
+						if (valor == "") {
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+							//possui um rando com 0 e 1, caso 0 a maquina passa, caso 1 ela faz uma compra no array
+							int i = al.maquinaCompraPassa();
+							if (i == 0) {
+								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+							} else {
+								// escolhe a primeira pedra que encontrar no array e pega
+								al.escolhePecaAleatorio(array, arrayM);
+
+								// testa se a pedra comprada pode ser jogada no tabuleiro
+								String p = al.testaPedraCompraMaquina(arrayTabuleiro, arrayM);
+
+								if (p == "") {
+									/**
+									 * caso a pedra comprada não possa ser
+									 * jogada no tabuleiro a maquina passa a
+									 * jogada
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+
+								} else {
+									/**
+									 * caso a pedra comprada possa ser jogada no
+									 * tabuleiro a maquina a insere no
+									 * arrayTabuleiro
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									/**
+									 * INSERE A IMAGEM NO BOTÃO CORRESPONDENTE
+									 **/
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+									btn_13.setEnabled(true);
+									btn_13.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+									++aux2;
+									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+								}
+							}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////							
+							/**
+							 * Finaliza o codigo de compra de peças do jogador
+							 * maquina
+							 **/
+							
+						} else {
+							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+							btn_13.setEnabled(true);
+							btn_13.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
+							++aux2;
+							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+						}
+					}
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
+					}
 					break;
 
 				case 13:
@@ -950,7 +1452,69 @@ public class TelaDoJogo extends JFrame {
 							}
 						}
 					}
+					/** Inteligência simples da maquina **/
+					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) != 0) {
+						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
 
+						/** logica para a compra de peças do jogador maquina **/
+						if (valor == "") {
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+							//possui um rando com 0 e 1, caso 0 a maquina passa, caso 1 ela faz uma compra no array
+							int i = al.maquinaCompraPassa();
+							if (i == 0) {
+								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+							} else {
+								// escolhe a primeira pedra que encontrar no array e pega
+								al.escolhePecaAleatorio(array, arrayM);
+
+								// testa se a pedra comprada pode ser jogada no tabuleiro
+								String p = al.testaPedraCompraMaquina(arrayTabuleiro, arrayM);
+
+								if (p == "") {
+									/**
+									 * caso a pedra comprada não possa ser
+									 * jogada no tabuleiro a maquina passa a
+									 * jogada
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+
+								} else {
+									/**
+									 * caso a pedra comprada possa ser jogada no
+									 * tabuleiro a maquina a insere no
+									 * arrayTabuleiro
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									/**
+									 * INSERE A IMAGEM NO BOTÃO CORRESPONDENTE
+									 **/
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+									btn_14.setEnabled(true);
+									btn_14.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+									++aux2;
+									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+								}
+							}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////							
+							/**
+							 * Finaliza o codigo de compra de peças do jogador
+							 * maquina
+							 **/
+							
+						} else {
+							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+							btn_14.setEnabled(true);
+							btn_14.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
+							++aux2;
+							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+						}
+					}
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
+					}
 					break;
 				default:
 					JOptionPane.showMessageDialog(null, "Peças esgotadas");
@@ -998,13 +1562,57 @@ public class TelaDoJogo extends JFrame {
 						}
 					}
 					/** Inteligência simples da maquina **/
-
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) != 0) {
 						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
 
+						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
-							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+							//possui um rando com 0 e 1, caso 0 a maquina passa, caso 1 ela faz uma compra no array
+							int i = al.maquinaCompraPassa();
+							if (i == 0) {
+								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+							} else {
+								// escolhe a primeira pedra que encontrar no array e pega
+								al.escolhePecaAleatorio(array, arrayM);
 
+								// testa se a pedra comprada pode ser jogada no tabuleiro
+								String p = al.testaPedraCompraMaquina(arrayTabuleiro, arrayM);
+
+								if (p == "") {
+									/**
+									 * caso a pedra comprada não possa ser
+									 * jogada no tabuleiro a maquina passa a
+									 * jogada
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+
+								} else {
+									/**
+									 * caso a pedra comprada possa ser jogada no
+									 * tabuleiro a maquina a insere no
+									 * arrayTabuleiro
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									/**
+									 * INSERE A IMAGEM NO BOTÃO CORRESPONDENTE
+									 **/
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+									btn_2.setEnabled(true);
+									btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+									++aux2;
+									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+								}
+							}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////							
+							/**
+							 * Finaliza o codigo de compra de peças do jogador
+							 * maquina
+							 **/
+							
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_2.setEnabled(true);
@@ -1043,13 +1651,57 @@ public class TelaDoJogo extends JFrame {
 						}
 					}
 					/** Inteligência simples da maquina **/
-
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) != 0) {
 						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
 
+						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
-							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+							//possui um rando com 0 e 1, caso 0 a maquina passa, caso 1 ela faz uma compra no array
+							int i = al.maquinaCompraPassa();
+							if (i == 0) {
+								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+							} else {
+								// escolhe a primeira pedra que encontrar no array e pega
+								al.escolhePecaAleatorio(array, arrayM);
 
+								// testa se a pedra comprada pode ser jogada no tabuleiro
+								String p = al.testaPedraCompraMaquina(arrayTabuleiro, arrayM);
+
+								if (p == "") {
+									/**
+									 * caso a pedra comprada não possa ser
+									 * jogada no tabuleiro a maquina passa a
+									 * jogada
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+
+								} else {
+									/**
+									 * caso a pedra comprada possa ser jogada no
+									 * tabuleiro a maquina a insere no
+									 * arrayTabuleiro
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									/**
+									 * INSERE A IMAGEM NO BOTÃO CORRESPONDENTE
+									 **/
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+									btn_3.setEnabled(true);
+									btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+									++aux2;
+									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+								}
+							}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////							
+							/**
+							 * Finaliza o codigo de compra de peças do jogador
+							 * maquina
+							 **/
+							
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_3.setEnabled(true);
@@ -1088,13 +1740,57 @@ public class TelaDoJogo extends JFrame {
 						}
 					}
 					/** Inteligência simples da maquina **/
-
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) != 0) {
 						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
 
+						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
-							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+							//possui um rando com 0 e 1, caso 0 a maquina passa, caso 1 ela faz uma compra no array
+							int i = al.maquinaCompraPassa();
+							if (i == 0) {
+								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+							} else {
+								// escolhe a primeira pedra que encontrar no array e pega
+								al.escolhePecaAleatorio(array, arrayM);
 
+								// testa se a pedra comprada pode ser jogada no tabuleiro
+								String p = al.testaPedraCompraMaquina(arrayTabuleiro, arrayM);
+
+								if (p == "") {
+									/**
+									 * caso a pedra comprada não possa ser
+									 * jogada no tabuleiro a maquina passa a
+									 * jogada
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+
+								} else {
+									/**
+									 * caso a pedra comprada possa ser jogada no
+									 * tabuleiro a maquina a insere no
+									 * arrayTabuleiro
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									/**
+									 * INSERE A IMAGEM NO BOTÃO CORRESPONDENTE
+									 **/
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+									btn_4.setEnabled(true);
+									btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+									++aux2;
+									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+								}
+							}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////							
+							/**
+							 * Finaliza o codigo de compra de peças do jogador
+							 * maquina
+							 **/
+							
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_4.setEnabled(true);
@@ -1133,13 +1829,57 @@ public class TelaDoJogo extends JFrame {
 						}
 					}
 					/** Inteligência simples da maquina **/
-
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) != 0) {
 						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
 
+						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
-							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+							//possui um rando com 0 e 1, caso 0 a maquina passa, caso 1 ela faz uma compra no array
+							int i = al.maquinaCompraPassa();
+							if (i == 0) {
+								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+							} else {
+								// escolhe a primeira pedra que encontrar no array e pega
+								al.escolhePecaAleatorio(array, arrayM);
 
+								// testa se a pedra comprada pode ser jogada no tabuleiro
+								String p = al.testaPedraCompraMaquina(arrayTabuleiro, arrayM);
+
+								if (p == "") {
+									/**
+									 * caso a pedra comprada não possa ser
+									 * jogada no tabuleiro a maquina passa a
+									 * jogada
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+
+								} else {
+									/**
+									 * caso a pedra comprada possa ser jogada no
+									 * tabuleiro a maquina a insere no
+									 * arrayTabuleiro
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									/**
+									 * INSERE A IMAGEM NO BOTÃO CORRESPONDENTE
+									 **/
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+									btn_5.setEnabled(true);
+									btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+									++aux2;
+									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+								}
+							}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////							
+							/**
+							 * Finaliza o codigo de compra de peças do jogador
+							 * maquina
+							 **/
+							
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_5.setEnabled(true);
@@ -1178,13 +1918,57 @@ public class TelaDoJogo extends JFrame {
 						}
 					}
 					/** Inteligência simples da maquina **/
-
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) != 0) {
 						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
 
+						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
-							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+							//possui um rando com 0 e 1, caso 0 a maquina passa, caso 1 ela faz uma compra no array
+							int i = al.maquinaCompraPassa();
+							if (i == 0) {
+								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+							} else {
+								// escolhe a primeira pedra que encontrar no array e pega
+								al.escolhePecaAleatorio(array, arrayM);
 
+								// testa se a pedra comprada pode ser jogada no tabuleiro
+								String p = al.testaPedraCompraMaquina(arrayTabuleiro, arrayM);
+
+								if (p == "") {
+									/**
+									 * caso a pedra comprada não possa ser
+									 * jogada no tabuleiro a maquina passa a
+									 * jogada
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+
+								} else {
+									/**
+									 * caso a pedra comprada possa ser jogada no
+									 * tabuleiro a maquina a insere no
+									 * arrayTabuleiro
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									/**
+									 * INSERE A IMAGEM NO BOTÃO CORRESPONDENTE
+									 **/
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+									btn_6.setEnabled(true);
+									btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+									++aux2;
+									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+								}
+							}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////							
+							/**
+							 * Finaliza o codigo de compra de peças do jogador
+							 * maquina
+							 **/
+							
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_6.setEnabled(true);
@@ -1225,13 +2009,57 @@ public class TelaDoJogo extends JFrame {
 					}
 
 					/** Inteligência simples da maquina **/
-
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) != 0) {
 						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
 
+						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
-							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+							//possui um rando com 0 e 1, caso 0 a maquina passa, caso 1 ela faz uma compra no array
+							int i = al.maquinaCompraPassa();
+							if (i == 0) {
+								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+							} else {
+								// escolhe a primeira pedra que encontrar no array e pega
+								al.escolhePecaAleatorio(array, arrayM);
 
+								// testa se a pedra comprada pode ser jogada no tabuleiro
+								String p = al.testaPedraCompraMaquina(arrayTabuleiro, arrayM);
+
+								if (p == "") {
+									/**
+									 * caso a pedra comprada não possa ser
+									 * jogada no tabuleiro a maquina passa a
+									 * jogada
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+
+								} else {
+									/**
+									 * caso a pedra comprada possa ser jogada no
+									 * tabuleiro a maquina a insere no
+									 * arrayTabuleiro
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									/**
+									 * INSERE A IMAGEM NO BOTÃO CORRESPONDENTE
+									 **/
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+									btn_7.setEnabled(true);
+									btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+									++aux2;
+									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+								}
+							}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////							
+							/**
+							 * Finaliza o codigo de compra de peças do jogador
+							 * maquina
+							 **/
+							
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_7.setEnabled(true);
@@ -1271,13 +2099,57 @@ public class TelaDoJogo extends JFrame {
 						}
 					}
 					/** Inteligência simples da maquina **/
-
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) != 0) {
 						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
 
+						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
-							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+							//possui um rando com 0 e 1, caso 0 a maquina passa, caso 1 ela faz uma compra no array
+							int i = al.maquinaCompraPassa();
+							if (i == 0) {
+								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+							} else {
+								// escolhe a primeira pedra que encontrar no array e pega
+								al.escolhePecaAleatorio(array, arrayM);
 
+								// testa se a pedra comprada pode ser jogada no tabuleiro
+								String p = al.testaPedraCompraMaquina(arrayTabuleiro, arrayM);
+
+								if (p == "") {
+									/**
+									 * caso a pedra comprada não possa ser
+									 * jogada no tabuleiro a maquina passa a
+									 * jogada
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+
+								} else {
+									/**
+									 * caso a pedra comprada possa ser jogada no
+									 * tabuleiro a maquina a insere no
+									 * arrayTabuleiro
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									/**
+									 * INSERE A IMAGEM NO BOTÃO CORRESPONDENTE
+									 **/
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+									btn_8.setEnabled(true);
+									btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+									++aux2;
+									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+								}
+							}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////							
+							/**
+							 * Finaliza o codigo de compra de peças do jogador
+							 * maquina
+							 **/
+							
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_8.setEnabled(true);
@@ -1317,13 +2189,57 @@ public class TelaDoJogo extends JFrame {
 						}
 					}
 					/** Inteligência simples da maquina **/
-
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) != 0) {
 						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
 
+						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
-							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+							//possui um rando com 0 e 1, caso 0 a maquina passa, caso 1 ela faz uma compra no array
+							int i = al.maquinaCompraPassa();
+							if (i == 0) {
+								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+							} else {
+								// escolhe a primeira pedra que encontrar no array e pega
+								al.escolhePecaAleatorio(array, arrayM);
 
+								// testa se a pedra comprada pode ser jogada no tabuleiro
+								String p = al.testaPedraCompraMaquina(arrayTabuleiro, arrayM);
+
+								if (p == "") {
+									/**
+									 * caso a pedra comprada não possa ser
+									 * jogada no tabuleiro a maquina passa a
+									 * jogada
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+
+								} else {
+									/**
+									 * caso a pedra comprada possa ser jogada no
+									 * tabuleiro a maquina a insere no
+									 * arrayTabuleiro
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									/**
+									 * INSERE A IMAGEM NO BOTÃO CORRESPONDENTE
+									 **/
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+									btn_9.setEnabled(true);
+									btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+									++aux2;
+									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+								}
+							}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////							
+							/**
+							 * Finaliza o codigo de compra de peças do jogador
+							 * maquina
+							 **/
+							
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_9.setEnabled(true);
@@ -1364,13 +2280,57 @@ public class TelaDoJogo extends JFrame {
 						}
 					}
 					/** Inteligência simples da maquina **/
-
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) != 0) {
 						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
 
+						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
-							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+							//possui um rando com 0 e 1, caso 0 a maquina passa, caso 1 ela faz uma compra no array
+							int i = al.maquinaCompraPassa();
+							if (i == 0) {
+								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+							} else {
+								// escolhe a primeira pedra que encontrar no array e pega
+								al.escolhePecaAleatorio(array, arrayM);
 
+								// testa se a pedra comprada pode ser jogada no tabuleiro
+								String p = al.testaPedraCompraMaquina(arrayTabuleiro, arrayM);
+
+								if (p == "") {
+									/**
+									 * caso a pedra comprada não possa ser
+									 * jogada no tabuleiro a maquina passa a
+									 * jogada
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+
+								} else {
+									/**
+									 * caso a pedra comprada possa ser jogada no
+									 * tabuleiro a maquina a insere no
+									 * arrayTabuleiro
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									/**
+									 * INSERE A IMAGEM NO BOTÃO CORRESPONDENTE
+									 **/
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+									btn_10.setEnabled(true);
+									btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+									++aux2;
+									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+								}
+							}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////							
+							/**
+							 * Finaliza o codigo de compra de peças do jogador
+							 * maquina
+							 **/
+							
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_10.setEnabled(true);
@@ -1411,13 +2371,57 @@ public class TelaDoJogo extends JFrame {
 						}
 					}
 					/** Inteligência simples da maquina **/
-
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) != 0) {
 						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
 
+						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
-							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+							//possui um rando com 0 e 1, caso 0 a maquina passa, caso 1 ela faz uma compra no array
+							int i = al.maquinaCompraPassa();
+							if (i == 0) {
+								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+							} else {
+								// escolhe a primeira pedra que encontrar no array e pega
+								al.escolhePecaAleatorio(array, arrayM);
 
+								// testa se a pedra comprada pode ser jogada no tabuleiro
+								String p = al.testaPedraCompraMaquina(arrayTabuleiro, arrayM);
+
+								if (p == "") {
+									/**
+									 * caso a pedra comprada não possa ser
+									 * jogada no tabuleiro a maquina passa a
+									 * jogada
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+
+								} else {
+									/**
+									 * caso a pedra comprada possa ser jogada no
+									 * tabuleiro a maquina a insere no
+									 * arrayTabuleiro
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									/**
+									 * INSERE A IMAGEM NO BOTÃO CORRESPONDENTE
+									 **/
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+									btn_11.setEnabled(true);
+									btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+									++aux2;
+									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+								}
+							}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////							
+							/**
+							 * Finaliza o codigo de compra de peças do jogador
+							 * maquina
+							 **/
+							
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_11.setEnabled(true);
@@ -1458,13 +2462,57 @@ public class TelaDoJogo extends JFrame {
 						}
 					}
 					/** Inteligência simples da maquina **/
-
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) != 0) {
 						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
 
+						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
-							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+							//possui um rando com 0 e 1, caso 0 a maquina passa, caso 1 ela faz uma compra no array
+							int i = al.maquinaCompraPassa();
+							if (i == 0) {
+								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+							} else {
+								// escolhe a primeira pedra que encontrar no array e pega
+								al.escolhePecaAleatorio(array, arrayM);
 
+								// testa se a pedra comprada pode ser jogada no tabuleiro
+								String p = al.testaPedraCompraMaquina(arrayTabuleiro, arrayM);
+
+								if (p == "") {
+									/**
+									 * caso a pedra comprada não possa ser
+									 * jogada no tabuleiro a maquina passa a
+									 * jogada
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+
+								} else {
+									/**
+									 * caso a pedra comprada possa ser jogada no
+									 * tabuleiro a maquina a insere no
+									 * arrayTabuleiro
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									/**
+									 * INSERE A IMAGEM NO BOTÃO CORRESPONDENTE
+									 **/
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+									btn_12.setEnabled(true);
+									btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+									++aux2;
+									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+								}
+							}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////							
+							/**
+							 * Finaliza o codigo de compra de peças do jogador
+							 * maquina
+							 **/
+							
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_12.setEnabled(true);
@@ -1505,17 +2553,61 @@ public class TelaDoJogo extends JFrame {
 						}
 					}
 					/** Inteligência simples da maquina **/
-
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) != 0) {
 						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
 
+						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
-							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+							//possui um rando com 0 e 1, caso 0 a maquina passa, caso 1 ela faz uma compra no array
+							int i = al.maquinaCompraPassa();
+							if (i == 0) {
+								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+							} else {
+								// escolhe a primeira pedra que encontrar no array e pega
+								al.escolhePecaAleatorio(array, arrayM);
 
+								// testa se a pedra comprada pode ser jogada no tabuleiro
+								String p = al.testaPedraCompraMaquina(arrayTabuleiro, arrayM);
+
+								if (p == "") {
+									/**
+									 * caso a pedra comprada não possa ser
+									 * jogada no tabuleiro a maquina passa a
+									 * jogada
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+
+								} else {
+									/**
+									 * caso a pedra comprada possa ser jogada no
+									 * tabuleiro a maquina a insere no
+									 * arrayTabuleiro
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									/**
+									 * INSERE A IMAGEM NO BOTÃO CORRESPONDENTE
+									 **/
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+									btn_13.setEnabled(true);
+									btn_13.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+									++aux2;
+									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+								}
+							}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////							
+							/**
+							 * Finaliza o codigo de compra de peças do jogador
+							 * maquina
+							 **/
+							
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_13.setEnabled(true);
-							btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + valor + ".png"));
+							btn_13.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
@@ -1555,7 +2647,69 @@ public class TelaDoJogo extends JFrame {
 							}
 						}
 					}
+					/** Inteligência simples da maquina **/
+					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) != 0) {
+						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
 
+						/** logica para a compra de peças do jogador maquina **/
+						if (valor == "") {
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+							//possui um rando com 0 e 1, caso 0 a maquina passa, caso 1 ela faz uma compra no array
+							int i = al.maquinaCompraPassa();
+							if (i == 0) {
+								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+							} else {
+								// escolhe a primeira pedra que encontrar no array e pega
+								al.escolhePecaAleatorio(array, arrayM);
+
+								// testa se a pedra comprada pode ser jogada no tabuleiro
+								String p = al.testaPedraCompraMaquina(arrayTabuleiro, arrayM);
+
+								if (p == "") {
+									/**
+									 * caso a pedra comprada não possa ser
+									 * jogada no tabuleiro a maquina passa a
+									 * jogada
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+
+								} else {
+									/**
+									 * caso a pedra comprada possa ser jogada no
+									 * tabuleiro a maquina a insere no
+									 * arrayTabuleiro
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									/**
+									 * INSERE A IMAGEM NO BOTÃO CORRESPONDENTE
+									 **/
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+									btn_14.setEnabled(true);
+									btn_14.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+									++aux2;
+									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+								}
+							}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////							
+							/**
+							 * Finaliza o codigo de compra de peças do jogador
+							 * maquina
+							 **/
+							
+						} else {
+							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+							btn_14.setEnabled(true);
+							btn_14.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
+							++aux2;
+							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+						}
+					}
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
+					}
 					break;
 
 				default:
@@ -1604,13 +2758,57 @@ public class TelaDoJogo extends JFrame {
 						}
 					}
 					/** Inteligência simples da maquina **/
-
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) != 0) {
 						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
 
+						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
-							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+							//possui um rando com 0 e 1, caso 0 a maquina passa, caso 1 ela faz uma compra no array
+							int i = al.maquinaCompraPassa();
+							if (i == 0) {
+								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+							} else {
+								// escolhe a primeira pedra que encontrar no array e pega
+								al.escolhePecaAleatorio(array, arrayM);
 
+								// testa se a pedra comprada pode ser jogada no tabuleiro
+								String p = al.testaPedraCompraMaquina(arrayTabuleiro, arrayM);
+
+								if (p == "") {
+									/**
+									 * caso a pedra comprada não possa ser
+									 * jogada no tabuleiro a maquina passa a
+									 * jogada
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+
+								} else {
+									/**
+									 * caso a pedra comprada possa ser jogada no
+									 * tabuleiro a maquina a insere no
+									 * arrayTabuleiro
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									/**
+									 * INSERE A IMAGEM NO BOTÃO CORRESPONDENTE
+									 **/
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+									btn_2.setEnabled(true);
+									btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+									++aux2;
+									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+								}
+							}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////							
+							/**
+							 * Finaliza o codigo de compra de peças do jogador
+							 * maquina
+							 **/
+							
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_2.setEnabled(true);
@@ -1650,13 +2848,57 @@ public class TelaDoJogo extends JFrame {
 						}
 					}
 					/** Inteligência simples da maquina **/
-
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) != 0) {
 						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
 
+						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
-							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+							//possui um rando com 0 e 1, caso 0 a maquina passa, caso 1 ela faz uma compra no array
+							int i = al.maquinaCompraPassa();
+							if (i == 0) {
+								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+							} else {
+								// escolhe a primeira pedra que encontrar no array e pega
+								al.escolhePecaAleatorio(array, arrayM);
 
+								// testa se a pedra comprada pode ser jogada no tabuleiro
+								String p = al.testaPedraCompraMaquina(arrayTabuleiro, arrayM);
+
+								if (p == "") {
+									/**
+									 * caso a pedra comprada não possa ser
+									 * jogada no tabuleiro a maquina passa a
+									 * jogada
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+
+								} else {
+									/**
+									 * caso a pedra comprada possa ser jogada no
+									 * tabuleiro a maquina a insere no
+									 * arrayTabuleiro
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									/**
+									 * INSERE A IMAGEM NO BOTÃO CORRESPONDENTE
+									 **/
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+									btn_3.setEnabled(true);
+									btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+									++aux2;
+									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+								}
+							}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////							
+							/**
+							 * Finaliza o codigo de compra de peças do jogador
+							 * maquina
+							 **/
+							
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_3.setEnabled(true);
@@ -1695,13 +2937,57 @@ public class TelaDoJogo extends JFrame {
 						}
 					}
 					/** Inteligência simples da maquina **/
-
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) != 0) {
 						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
 
+						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
-							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+							//possui um rando com 0 e 1, caso 0 a maquina passa, caso 1 ela faz uma compra no array
+							int i = al.maquinaCompraPassa();
+							if (i == 0) {
+								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+							} else {
+								// escolhe a primeira pedra que encontrar no array e pega
+								al.escolhePecaAleatorio(array, arrayM);
 
+								// testa se a pedra comprada pode ser jogada no tabuleiro
+								String p = al.testaPedraCompraMaquina(arrayTabuleiro, arrayM);
+
+								if (p == "") {
+									/**
+									 * caso a pedra comprada não possa ser
+									 * jogada no tabuleiro a maquina passa a
+									 * jogada
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+
+								} else {
+									/**
+									 * caso a pedra comprada possa ser jogada no
+									 * tabuleiro a maquina a insere no
+									 * arrayTabuleiro
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									/**
+									 * INSERE A IMAGEM NO BOTÃO CORRESPONDENTE
+									 **/
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+									btn_4.setEnabled(true);
+									btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+									++aux2;
+									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+								}
+							}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////							
+							/**
+							 * Finaliza o codigo de compra de peças do jogador
+							 * maquina
+							 **/
+							
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_4.setEnabled(true);
@@ -1740,13 +3026,57 @@ public class TelaDoJogo extends JFrame {
 						}
 					}
 					/** Inteligência simples da maquina **/
-
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) != 0) {
 						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
 
+						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
-							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+							//possui um rando com 0 e 1, caso 0 a maquina passa, caso 1 ela faz uma compra no array
+							int i = al.maquinaCompraPassa();
+							if (i == 0) {
+								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+							} else {
+								// escolhe a primeira pedra que encontrar no array e pega
+								al.escolhePecaAleatorio(array, arrayM);
 
+								// testa se a pedra comprada pode ser jogada no tabuleiro
+								String p = al.testaPedraCompraMaquina(arrayTabuleiro, arrayM);
+
+								if (p == "") {
+									/**
+									 * caso a pedra comprada não possa ser
+									 * jogada no tabuleiro a maquina passa a
+									 * jogada
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+
+								} else {
+									/**
+									 * caso a pedra comprada possa ser jogada no
+									 * tabuleiro a maquina a insere no
+									 * arrayTabuleiro
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									/**
+									 * INSERE A IMAGEM NO BOTÃO CORRESPONDENTE
+									 **/
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+									btn_5.setEnabled(true);
+									btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+									++aux2;
+									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+								}
+							}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////							
+							/**
+							 * Finaliza o codigo de compra de peças do jogador
+							 * maquina
+							 **/
+							
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_5.setEnabled(true);
@@ -1786,13 +3116,57 @@ public class TelaDoJogo extends JFrame {
 						}
 					}
 					/** Inteligência simples da maquina **/
-
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) != 0) {
 						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
 
+						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
-							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+							//possui um rando com 0 e 1, caso 0 a maquina passa, caso 1 ela faz uma compra no array
+							int i = al.maquinaCompraPassa();
+							if (i == 0) {
+								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+							} else {
+								// escolhe a primeira pedra que encontrar no array e pega
+								al.escolhePecaAleatorio(array, arrayM);
 
+								// testa se a pedra comprada pode ser jogada no tabuleiro
+								String p = al.testaPedraCompraMaquina(arrayTabuleiro, arrayM);
+
+								if (p == "") {
+									/**
+									 * caso a pedra comprada não possa ser
+									 * jogada no tabuleiro a maquina passa a
+									 * jogada
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+
+								} else {
+									/**
+									 * caso a pedra comprada possa ser jogada no
+									 * tabuleiro a maquina a insere no
+									 * arrayTabuleiro
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									/**
+									 * INSERE A IMAGEM NO BOTÃO CORRESPONDENTE
+									 **/
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+									btn_6.setEnabled(true);
+									btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+									++aux2;
+									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+								}
+							}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////							
+							/**
+							 * Finaliza o codigo de compra de peças do jogador
+							 * maquina
+							 **/
+							
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_6.setEnabled(true);
@@ -1831,13 +3205,57 @@ public class TelaDoJogo extends JFrame {
 						}
 					}
 					/** Inteligência simples da maquina **/
-
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) != 0) {
 						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
 
+						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
-							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+							//possui um rando com 0 e 1, caso 0 a maquina passa, caso 1 ela faz uma compra no array
+							int i = al.maquinaCompraPassa();
+							if (i == 0) {
+								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+							} else {
+								// escolhe a primeira pedra que encontrar no array e pega
+								al.escolhePecaAleatorio(array, arrayM);
 
+								// testa se a pedra comprada pode ser jogada no tabuleiro
+								String p = al.testaPedraCompraMaquina(arrayTabuleiro, arrayM);
+
+								if (p == "") {
+									/**
+									 * caso a pedra comprada não possa ser
+									 * jogada no tabuleiro a maquina passa a
+									 * jogada
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+
+								} else {
+									/**
+									 * caso a pedra comprada possa ser jogada no
+									 * tabuleiro a maquina a insere no
+									 * arrayTabuleiro
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									/**
+									 * INSERE A IMAGEM NO BOTÃO CORRESPONDENTE
+									 **/
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+									btn_7.setEnabled(true);
+									btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+									++aux2;
+									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+								}
+							}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////							
+							/**
+							 * Finaliza o codigo de compra de peças do jogador
+							 * maquina
+							 **/
+							
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_7.setEnabled(true);
@@ -1876,13 +3294,57 @@ public class TelaDoJogo extends JFrame {
 						}
 					}
 					/** Inteligência simples da maquina **/
-
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) != 0) {
 						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
 
+						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
-							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+							//possui um rando com 0 e 1, caso 0 a maquina passa, caso 1 ela faz uma compra no array
+							int i = al.maquinaCompraPassa();
+							if (i == 0) {
+								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+							} else {
+								// escolhe a primeira pedra que encontrar no array e pega
+								al.escolhePecaAleatorio(array, arrayM);
 
+								// testa se a pedra comprada pode ser jogada no tabuleiro
+								String p = al.testaPedraCompraMaquina(arrayTabuleiro, arrayM);
+
+								if (p == "") {
+									/**
+									 * caso a pedra comprada não possa ser
+									 * jogada no tabuleiro a maquina passa a
+									 * jogada
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+
+								} else {
+									/**
+									 * caso a pedra comprada possa ser jogada no
+									 * tabuleiro a maquina a insere no
+									 * arrayTabuleiro
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									/**
+									 * INSERE A IMAGEM NO BOTÃO CORRESPONDENTE
+									 **/
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+									btn_8.setEnabled(true);
+									btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+									++aux2;
+									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+								}
+							}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////							
+							/**
+							 * Finaliza o codigo de compra de peças do jogador
+							 * maquina
+							 **/
+							
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_8.setEnabled(true);
@@ -1922,13 +3384,57 @@ public class TelaDoJogo extends JFrame {
 						}
 					}
 					/** Inteligência simples da maquina **/
-
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) != 0) {
 						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
 
+						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
-							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+							//possui um rando com 0 e 1, caso 0 a maquina passa, caso 1 ela faz uma compra no array
+							int i = al.maquinaCompraPassa();
+							if (i == 0) {
+								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+							} else {
+								// escolhe a primeira pedra que encontrar no array e pega
+								al.escolhePecaAleatorio(array, arrayM);
 
+								// testa se a pedra comprada pode ser jogada no tabuleiro
+								String p = al.testaPedraCompraMaquina(arrayTabuleiro, arrayM);
+
+								if (p == "") {
+									/**
+									 * caso a pedra comprada não possa ser
+									 * jogada no tabuleiro a maquina passa a
+									 * jogada
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+
+								} else {
+									/**
+									 * caso a pedra comprada possa ser jogada no
+									 * tabuleiro a maquina a insere no
+									 * arrayTabuleiro
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									/**
+									 * INSERE A IMAGEM NO BOTÃO CORRESPONDENTE
+									 **/
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+									btn_9.setEnabled(true);
+									btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+									++aux2;
+									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+								}
+							}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////							
+							/**
+							 * Finaliza o codigo de compra de peças do jogador
+							 * maquina
+							 **/
+							
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_9.setEnabled(true);
@@ -1969,13 +3475,57 @@ public class TelaDoJogo extends JFrame {
 						}
 					}
 					/** Inteligência simples da maquina **/
-
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) != 0) {
 						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
 
+						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
-							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+							//possui um rando com 0 e 1, caso 0 a maquina passa, caso 1 ela faz uma compra no array
+							int i = al.maquinaCompraPassa();
+							if (i == 0) {
+								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+							} else {
+								// escolhe a primeira pedra que encontrar no array e pega
+								al.escolhePecaAleatorio(array, arrayM);
 
+								// testa se a pedra comprada pode ser jogada no tabuleiro
+								String p = al.testaPedraCompraMaquina(arrayTabuleiro, arrayM);
+
+								if (p == "") {
+									/**
+									 * caso a pedra comprada não possa ser
+									 * jogada no tabuleiro a maquina passa a
+									 * jogada
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+
+								} else {
+									/**
+									 * caso a pedra comprada possa ser jogada no
+									 * tabuleiro a maquina a insere no
+									 * arrayTabuleiro
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									/**
+									 * INSERE A IMAGEM NO BOTÃO CORRESPONDENTE
+									 **/
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+									btn_10.setEnabled(true);
+									btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+									++aux2;
+									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+								}
+							}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////							
+							/**
+							 * Finaliza o codigo de compra de peças do jogador
+							 * maquina
+							 **/
+							
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_10.setEnabled(true);
@@ -2016,13 +3566,57 @@ public class TelaDoJogo extends JFrame {
 						}
 					}
 					/** Inteligência simples da maquina **/
-
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) != 0) {
 						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
 
+						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
-							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+							//possui um rando com 0 e 1, caso 0 a maquina passa, caso 1 ela faz uma compra no array
+							int i = al.maquinaCompraPassa();
+							if (i == 0) {
+								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+							} else {
+								// escolhe a primeira pedra que encontrar no array e pega
+								al.escolhePecaAleatorio(array, arrayM);
 
+								// testa se a pedra comprada pode ser jogada no tabuleiro
+								String p = al.testaPedraCompraMaquina(arrayTabuleiro, arrayM);
+
+								if (p == "") {
+									/**
+									 * caso a pedra comprada não possa ser
+									 * jogada no tabuleiro a maquina passa a
+									 * jogada
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+
+								} else {
+									/**
+									 * caso a pedra comprada possa ser jogada no
+									 * tabuleiro a maquina a insere no
+									 * arrayTabuleiro
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									/**
+									 * INSERE A IMAGEM NO BOTÃO CORRESPONDENTE
+									 **/
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+									btn_11.setEnabled(true);
+									btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+									++aux2;
+									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+								}
+							}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////							
+							/**
+							 * Finaliza o codigo de compra de peças do jogador
+							 * maquina
+							 **/
+							
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_11.setEnabled(true);
@@ -2034,7 +3628,6 @@ public class TelaDoJogo extends JFrame {
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
-
 					break;
 
 				case 11:
@@ -2063,13 +3656,57 @@ public class TelaDoJogo extends JFrame {
 						}
 					}
 					/** Inteligência simples da maquina **/
-
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) != 0) {
 						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
 
+						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
-							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+							//possui um rando com 0 e 1, caso 0 a maquina passa, caso 1 ela faz uma compra no array
+							int i = al.maquinaCompraPassa();
+							if (i == 0) {
+								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+							} else {
+								// escolhe a primeira pedra que encontrar no array e pega
+								al.escolhePecaAleatorio(array, arrayM);
 
+								// testa se a pedra comprada pode ser jogada no tabuleiro
+								String p = al.testaPedraCompraMaquina(arrayTabuleiro, arrayM);
+
+								if (p == "") {
+									/**
+									 * caso a pedra comprada não possa ser
+									 * jogada no tabuleiro a maquina passa a
+									 * jogada
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+
+								} else {
+									/**
+									 * caso a pedra comprada possa ser jogada no
+									 * tabuleiro a maquina a insere no
+									 * arrayTabuleiro
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									/**
+									 * INSERE A IMAGEM NO BOTÃO CORRESPONDENTE
+									 **/
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+									btn_12.setEnabled(true);
+									btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+									++aux2;
+									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+								}
+							}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////							
+							/**
+							 * Finaliza o codigo de compra de peças do jogador
+							 * maquina
+							 **/
+							
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_12.setEnabled(true);
@@ -2109,7 +3746,69 @@ public class TelaDoJogo extends JFrame {
 							}
 						}
 					}
+					/** Inteligência simples da maquina **/
+					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) != 0) {
+						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
 
+						/** logica para a compra de peças do jogador maquina **/
+						if (valor == "") {
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+							//possui um rando com 0 e 1, caso 0 a maquina passa, caso 1 ela faz uma compra no array
+							int i = al.maquinaCompraPassa();
+							if (i == 0) {
+								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+							} else {
+								// escolhe a primeira pedra que encontrar no array e pega
+								al.escolhePecaAleatorio(array, arrayM);
+
+								// testa se a pedra comprada pode ser jogada no tabuleiro
+								String p = al.testaPedraCompraMaquina(arrayTabuleiro, arrayM);
+
+								if (p == "") {
+									/**
+									 * caso a pedra comprada não possa ser
+									 * jogada no tabuleiro a maquina passa a
+									 * jogada
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+
+								} else {
+									/**
+									 * caso a pedra comprada possa ser jogada no
+									 * tabuleiro a maquina a insere no
+									 * arrayTabuleiro
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									/**
+									 * INSERE A IMAGEM NO BOTÃO CORRESPONDENTE
+									 **/
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+									btn_13.setEnabled(true);
+									btn_13.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+									++aux2;
+									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+								}
+							}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////							
+							/**
+							 * Finaliza o codigo de compra de peças do jogador
+							 * maquina
+							 **/
+							
+						} else {
+							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+							btn_13.setEnabled(true);
+							btn_13.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
+							++aux2;
+							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+						}
+					}
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
+					}
 					break;
 				case 13:
 
@@ -2141,7 +3840,69 @@ public class TelaDoJogo extends JFrame {
 							}
 						}
 					}
+					/** Inteligência simples da maquina **/
+					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) != 0) {
+						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
 
+						/** logica para a compra de peças do jogador maquina **/
+						if (valor == "") {
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+							//possui um rando com 0 e 1, caso 0 a maquina passa, caso 1 ela faz uma compra no array
+							int i = al.maquinaCompraPassa();
+							if (i == 0) {
+								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+							} else {
+								// escolhe a primeira pedra que encontrar no array e pega
+								al.escolhePecaAleatorio(array, arrayM);
+
+								// testa se a pedra comprada pode ser jogada no tabuleiro
+								String p = al.testaPedraCompraMaquina(arrayTabuleiro, arrayM);
+
+								if (p == "") {
+									/**
+									 * caso a pedra comprada não possa ser
+									 * jogada no tabuleiro a maquina passa a
+									 * jogada
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+
+								} else {
+									/**
+									 * caso a pedra comprada possa ser jogada no
+									 * tabuleiro a maquina a insere no
+									 * arrayTabuleiro
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									/**
+									 * INSERE A IMAGEM NO BOTÃO CORRESPONDENTE
+									 **/
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+									btn_14.setEnabled(true);
+									btn_14.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+									++aux2;
+									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+								}
+							}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////							
+							/**
+							 * Finaliza o codigo de compra de peças do jogador
+							 * maquina
+							 **/
+							
+						} else {
+							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+							btn_14.setEnabled(true);
+							btn_14.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
+							++aux2;
+							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+						}
+					}
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
+					}
 					break;
 
 				default:
@@ -2190,13 +3951,57 @@ public class TelaDoJogo extends JFrame {
 						}
 					}
 					/** Inteligência simples da maquina **/
-
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) != 0) {
 						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
 
+						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
-							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+							//possui um rando com 0 e 1, caso 0 a maquina passa, caso 1 ela faz uma compra no array
+							int i = al.maquinaCompraPassa();
+							if (i == 0) {
+								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+							} else {
+								// escolhe a primeira pedra que encontrar no array e pega
+								al.escolhePecaAleatorio(array, arrayM);
 
+								// testa se a pedra comprada pode ser jogada no tabuleiro
+								String p = al.testaPedraCompraMaquina(arrayTabuleiro, arrayM);
+
+								if (p == "") {
+									/**
+									 * caso a pedra comprada não possa ser
+									 * jogada no tabuleiro a maquina passa a
+									 * jogada
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+
+								} else {
+									/**
+									 * caso a pedra comprada possa ser jogada no
+									 * tabuleiro a maquina a insere no
+									 * arrayTabuleiro
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									/**
+									 * INSERE A IMAGEM NO BOTÃO CORRESPONDENTE
+									 **/
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+									btn_2.setEnabled(true);
+									btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+									++aux2;
+									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+								}
+							}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////							
+							/**
+							 * Finaliza o codigo de compra de peças do jogador
+							 * maquina
+							 **/
+							
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_2.setEnabled(true);
@@ -2235,13 +4040,57 @@ public class TelaDoJogo extends JFrame {
 						}
 					}
 					/** Inteligência simples da maquina **/
-
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) != 0) {
 						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
 
+						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
-							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+							//possui um rando com 0 e 1, caso 0 a maquina passa, caso 1 ela faz uma compra no array
+							int i = al.maquinaCompraPassa();
+							if (i == 0) {
+								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+							} else {
+								// escolhe a primeira pedra que encontrar no array e pega
+								al.escolhePecaAleatorio(array, arrayM);
 
+								// testa se a pedra comprada pode ser jogada no tabuleiro
+								String p = al.testaPedraCompraMaquina(arrayTabuleiro, arrayM);
+
+								if (p == "") {
+									/**
+									 * caso a pedra comprada não possa ser
+									 * jogada no tabuleiro a maquina passa a
+									 * jogada
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+
+								} else {
+									/**
+									 * caso a pedra comprada possa ser jogada no
+									 * tabuleiro a maquina a insere no
+									 * arrayTabuleiro
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									/**
+									 * INSERE A IMAGEM NO BOTÃO CORRESPONDENTE
+									 **/
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+									btn_3.setEnabled(true);
+									btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+									++aux2;
+									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+								}
+							}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////							
+							/**
+							 * Finaliza o codigo de compra de peças do jogador
+							 * maquina
+							 **/
+							
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_3.setEnabled(true);
@@ -2280,13 +4129,57 @@ public class TelaDoJogo extends JFrame {
 						}
 					}
 					/** Inteligência simples da maquina **/
-
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) != 0) {
 						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
 
+						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
-							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+							//possui um rando com 0 e 1, caso 0 a maquina passa, caso 1 ela faz uma compra no array
+							int i = al.maquinaCompraPassa();
+							if (i == 0) {
+								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+							} else {
+								// escolhe a primeira pedra que encontrar no array e pega
+								al.escolhePecaAleatorio(array, arrayM);
 
+								// testa se a pedra comprada pode ser jogada no tabuleiro
+								String p = al.testaPedraCompraMaquina(arrayTabuleiro, arrayM);
+
+								if (p == "") {
+									/**
+									 * caso a pedra comprada não possa ser
+									 * jogada no tabuleiro a maquina passa a
+									 * jogada
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+
+								} else {
+									/**
+									 * caso a pedra comprada possa ser jogada no
+									 * tabuleiro a maquina a insere no
+									 * arrayTabuleiro
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									/**
+									 * INSERE A IMAGEM NO BOTÃO CORRESPONDENTE
+									 **/
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+									btn_4.setEnabled(true);
+									btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+									++aux2;
+									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+								}
+							}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////							
+							/**
+							 * Finaliza o codigo de compra de peças do jogador
+							 * maquina
+							 **/
+							
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_4.setEnabled(true);
@@ -2298,6 +4191,8 @@ public class TelaDoJogo extends JFrame {
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
+					
+					
 					break;
 				case 4:
 					if (arrayTabuleiro.isEmpty()) {
@@ -2325,13 +4220,57 @@ public class TelaDoJogo extends JFrame {
 						}
 					}
 					/** Inteligência simples da maquina **/
-
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) != 0) {
 						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
 
+						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
-							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+							//possui um rando com 0 e 1, caso 0 a maquina passa, caso 1 ela faz uma compra no array
+							int i = al.maquinaCompraPassa();
+							if (i == 0) {
+								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+							} else {
+								// escolhe a primeira pedra que encontrar no array e pega
+								al.escolhePecaAleatorio(array, arrayM);
 
+								// testa se a pedra comprada pode ser jogada no tabuleiro
+								String p = al.testaPedraCompraMaquina(arrayTabuleiro, arrayM);
+
+								if (p == "") {
+									/**
+									 * caso a pedra comprada não possa ser
+									 * jogada no tabuleiro a maquina passa a
+									 * jogada
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+
+								} else {
+									/**
+									 * caso a pedra comprada possa ser jogada no
+									 * tabuleiro a maquina a insere no
+									 * arrayTabuleiro
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									/**
+									 * INSERE A IMAGEM NO BOTÃO CORRESPONDENTE
+									 **/
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+									btn_5.setEnabled(true);
+									btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+									++aux2;
+									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+								}
+							}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////							
+							/**
+							 * Finaliza o codigo de compra de peças do jogador
+							 * maquina
+							 **/
+							
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_5.setEnabled(true);
@@ -2370,13 +4309,57 @@ public class TelaDoJogo extends JFrame {
 						}
 					}
 					/** Inteligência simples da maquina **/
-
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) != 0) {
 						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
 
+						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
-							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+							//possui um rando com 0 e 1, caso 0 a maquina passa, caso 1 ela faz uma compra no array
+							int i = al.maquinaCompraPassa();
+							if (i == 0) {
+								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+							} else {
+								// escolhe a primeira pedra que encontrar no array e pega
+								al.escolhePecaAleatorio(array, arrayM);
 
+								// testa se a pedra comprada pode ser jogada no tabuleiro
+								String p = al.testaPedraCompraMaquina(arrayTabuleiro, arrayM);
+
+								if (p == "") {
+									/**
+									 * caso a pedra comprada não possa ser
+									 * jogada no tabuleiro a maquina passa a
+									 * jogada
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+
+								} else {
+									/**
+									 * caso a pedra comprada possa ser jogada no
+									 * tabuleiro a maquina a insere no
+									 * arrayTabuleiro
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									/**
+									 * INSERE A IMAGEM NO BOTÃO CORRESPONDENTE
+									 **/
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+									btn_6.setEnabled(true);
+									btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+									++aux2;
+									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+								}
+							}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////							
+							/**
+							 * Finaliza o codigo de compra de peças do jogador
+							 * maquina
+							 **/
+							
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_6.setEnabled(true);
@@ -2415,13 +4398,57 @@ public class TelaDoJogo extends JFrame {
 						}
 					}
 					/** Inteligência simples da maquina **/
-
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) != 0) {
 						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
 
+						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
-							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+							//possui um rando com 0 e 1, caso 0 a maquina passa, caso 1 ela faz uma compra no array
+							int i = al.maquinaCompraPassa();
+							if (i == 0) {
+								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+							} else {
+								// escolhe a primeira pedra que encontrar no array e pega
+								al.escolhePecaAleatorio(array, arrayM);
 
+								// testa se a pedra comprada pode ser jogada no tabuleiro
+								String p = al.testaPedraCompraMaquina(arrayTabuleiro, arrayM);
+
+								if (p == "") {
+									/**
+									 * caso a pedra comprada não possa ser
+									 * jogada no tabuleiro a maquina passa a
+									 * jogada
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+
+								} else {
+									/**
+									 * caso a pedra comprada possa ser jogada no
+									 * tabuleiro a maquina a insere no
+									 * arrayTabuleiro
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									/**
+									 * INSERE A IMAGEM NO BOTÃO CORRESPONDENTE
+									 **/
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+									btn_7.setEnabled(true);
+									btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+									++aux2;
+									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+								}
+							}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////							
+							/**
+							 * Finaliza o codigo de compra de peças do jogador
+							 * maquina
+							 **/
+							
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_7.setEnabled(true);
@@ -2460,13 +4487,57 @@ public class TelaDoJogo extends JFrame {
 						}
 					}
 					/** Inteligência simples da maquina **/
-
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) != 0) {
 						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
 
+						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
-							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+							//possui um rando com 0 e 1, caso 0 a maquina passa, caso 1 ela faz uma compra no array
+							int i = al.maquinaCompraPassa();
+							if (i == 0) {
+								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+							} else {
+								// escolhe a primeira pedra que encontrar no array e pega
+								al.escolhePecaAleatorio(array, arrayM);
 
+								// testa se a pedra comprada pode ser jogada no tabuleiro
+								String p = al.testaPedraCompraMaquina(arrayTabuleiro, arrayM);
+
+								if (p == "") {
+									/**
+									 * caso a pedra comprada não possa ser
+									 * jogada no tabuleiro a maquina passa a
+									 * jogada
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+
+								} else {
+									/**
+									 * caso a pedra comprada possa ser jogada no
+									 * tabuleiro a maquina a insere no
+									 * arrayTabuleiro
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									/**
+									 * INSERE A IMAGEM NO BOTÃO CORRESPONDENTE
+									 **/
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+									btn_8.setEnabled(true);
+									btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+									++aux2;
+									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+								}
+							}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////							
+							/**
+							 * Finaliza o codigo de compra de peças do jogador
+							 * maquina
+							 **/
+							
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_8.setEnabled(true);
@@ -2506,17 +4577,61 @@ public class TelaDoJogo extends JFrame {
 						}
 					}
 					/** Inteligência simples da maquina **/
-
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) != 0) {
 						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
 
+						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
-							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+							//possui um rando com 0 e 1, caso 0 a maquina passa, caso 1 ela faz uma compra no array
+							int i = al.maquinaCompraPassa();
+							if (i == 0) {
+								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+							} else {
+								// escolhe a primeira pedra que encontrar no array e pega
+								al.escolhePecaAleatorio(array, arrayM);
 
+								// testa se a pedra comprada pode ser jogada no tabuleiro
+								String p = al.testaPedraCompraMaquina(arrayTabuleiro, arrayM);
+
+								if (p == "") {
+									/**
+									 * caso a pedra comprada não possa ser
+									 * jogada no tabuleiro a maquina passa a
+									 * jogada
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+
+								} else {
+									/**
+									 * caso a pedra comprada possa ser jogada no
+									 * tabuleiro a maquina a insere no
+									 * arrayTabuleiro
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									/**
+									 * INSERE A IMAGEM NO BOTÃO CORRESPONDENTE
+									 **/
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+									btn_8.setEnabled(true);
+									btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+									++aux2;
+									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+								}
+							}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////							
+							/**
+							 * Finaliza o codigo de compra de peças do jogador
+							 * maquina
+							 **/
+							
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
-							btn_9.setEnabled(true);
-							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
+							btn_8.setEnabled(true);
+							btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
@@ -2553,13 +4668,57 @@ public class TelaDoJogo extends JFrame {
 						}
 					}
 					/** Inteligência simples da maquina **/
-
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) != 0) {
 						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
 
+						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
-							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+							//possui um rando com 0 e 1, caso 0 a maquina passa, caso 1 ela faz uma compra no array
+							int i = al.maquinaCompraPassa();
+							if (i == 0) {
+								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+							} else {
+								// escolhe a primeira pedra que encontrar no array e pega
+								al.escolhePecaAleatorio(array, arrayM);
 
+								// testa se a pedra comprada pode ser jogada no tabuleiro
+								String p = al.testaPedraCompraMaquina(arrayTabuleiro, arrayM);
+
+								if (p == "") {
+									/**
+									 * caso a pedra comprada não possa ser
+									 * jogada no tabuleiro a maquina passa a
+									 * jogada
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+
+								} else {
+									/**
+									 * caso a pedra comprada possa ser jogada no
+									 * tabuleiro a maquina a insere no
+									 * arrayTabuleiro
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									/**
+									 * INSERE A IMAGEM NO BOTÃO CORRESPONDENTE
+									 **/
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+									btn_10.setEnabled(true);
+									btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+									++aux2;
+									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+								}
+							}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////							
+							/**
+							 * Finaliza o codigo de compra de peças do jogador
+							 * maquina
+							 **/
+							
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_10.setEnabled(true);
@@ -2600,13 +4759,57 @@ public class TelaDoJogo extends JFrame {
 						}
 					}
 					/** Inteligência simples da maquina **/
-
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) != 0) {
 						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
 
+						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
-							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+							//possui um rando com 0 e 1, caso 0 a maquina passa, caso 1 ela faz uma compra no array
+							int i = al.maquinaCompraPassa();
+							if (i == 0) {
+								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+							} else {
+								// escolhe a primeira pedra que encontrar no array e pega
+								al.escolhePecaAleatorio(array, arrayM);
 
+								// testa se a pedra comprada pode ser jogada no tabuleiro
+								String p = al.testaPedraCompraMaquina(arrayTabuleiro, arrayM);
+
+								if (p == "") {
+									/**
+									 * caso a pedra comprada não possa ser
+									 * jogada no tabuleiro a maquina passa a
+									 * jogada
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+
+								} else {
+									/**
+									 * caso a pedra comprada possa ser jogada no
+									 * tabuleiro a maquina a insere no
+									 * arrayTabuleiro
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									/**
+									 * INSERE A IMAGEM NO BOTÃO CORRESPONDENTE
+									 **/
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+									btn_11.setEnabled(true);
+									btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+									++aux2;
+									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+								}
+							}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////							
+							/**
+							 * Finaliza o codigo de compra de peças do jogador
+							 * maquina
+							 **/
+							
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_11.setEnabled(true);
@@ -2647,13 +4850,57 @@ public class TelaDoJogo extends JFrame {
 						}
 					}
 					/** Inteligência simples da maquina **/
-
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) != 0) {
 						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
 
+						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
-							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+							//possui um rando com 0 e 1, caso 0 a maquina passa, caso 1 ela faz uma compra no array
+							int i = al.maquinaCompraPassa();
+							if (i == 0) {
+								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+							} else {
+								// escolhe a primeira pedra que encontrar no array e pega
+								al.escolhePecaAleatorio(array, arrayM);
 
+								// testa se a pedra comprada pode ser jogada no tabuleiro
+								String p = al.testaPedraCompraMaquina(arrayTabuleiro, arrayM);
+
+								if (p == "") {
+									/**
+									 * caso a pedra comprada não possa ser
+									 * jogada no tabuleiro a maquina passa a
+									 * jogada
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+
+								} else {
+									/**
+									 * caso a pedra comprada possa ser jogada no
+									 * tabuleiro a maquina a insere no
+									 * arrayTabuleiro
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									/**
+									 * INSERE A IMAGEM NO BOTÃO CORRESPONDENTE
+									 **/
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+									btn_12.setEnabled(true);
+									btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+									++aux2;
+									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+								}
+							}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////							
+							/**
+							 * Finaliza o codigo de compra de peças do jogador
+							 * maquina
+							 **/
+							
 						} else {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_12.setEnabled(true);
@@ -2693,7 +4940,69 @@ public class TelaDoJogo extends JFrame {
 							}
 						}
 					}
+					/** Inteligência simples da maquina **/
+					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) != 0) {
+						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
 
+						/** logica para a compra de peças do jogador maquina **/
+						if (valor == "") {
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+							//possui um rando com 0 e 1, caso 0 a maquina passa, caso 1 ela faz uma compra no array
+							int i = al.maquinaCompraPassa();
+							if (i == 0) {
+								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+							} else {
+								// escolhe a primeira pedra que encontrar no array e pega
+								al.escolhePecaAleatorio(array, arrayM);
+
+								// testa se a pedra comprada pode ser jogada no tabuleiro
+								String p = al.testaPedraCompraMaquina(arrayTabuleiro, arrayM);
+
+								if (p == "") {
+									/**
+									 * caso a pedra comprada não possa ser
+									 * jogada no tabuleiro a maquina passa a
+									 * jogada
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+
+								} else {
+									/**
+									 * caso a pedra comprada possa ser jogada no
+									 * tabuleiro a maquina a insere no
+									 * arrayTabuleiro
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									/**
+									 * INSERE A IMAGEM NO BOTÃO CORRESPONDENTE
+									 **/
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+									btn_13.setEnabled(true);
+									btn_13.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+									++aux2;
+									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+								}
+							}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////							
+							/**
+							 * Finaliza o codigo de compra de peças do jogador
+							 * maquina
+							 **/
+							
+						} else {
+							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+							btn_13.setEnabled(true);
+							btn_13.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
+							++aux2;
+							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+						}
+					}
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
+					}
 					break;
 				case 13:
 
@@ -2725,7 +5034,69 @@ public class TelaDoJogo extends JFrame {
 							}
 						}
 					}
+					/** Inteligência simples da maquina **/
+					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) != 0) {
+						String valor = al.escolhePedraMaquina(arrayTabuleiro, arrayM);
 
+						/** logica para a compra de peças do jogador maquina **/
+						if (valor == "") {
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+							//possui um rando com 0 e 1, caso 0 a maquina passa, caso 1 ela faz uma compra no array
+							int i = al.maquinaCompraPassa();
+							if (i == 0) {
+								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+							} else {
+								// escolhe a primeira pedra que encontrar no array e pega
+								al.escolhePecaAleatorio(array, arrayM);
+
+								// testa se a pedra comprada pode ser jogada no tabuleiro
+								String p = al.testaPedraCompraMaquina(arrayTabuleiro, arrayM);
+
+								if (p == "") {
+									/**
+									 * caso a pedra comprada não possa ser
+									 * jogada no tabuleiro a maquina passa a
+									 * jogada
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+
+								} else {
+									/**
+									 * caso a pedra comprada possa ser jogada no
+									 * tabuleiro a maquina a insere no
+									 * arrayTabuleiro
+									 **/
+									JOptionPane.showMessageDialog(null, "Maquina: Compra");
+									/**
+									 * INSERE A IMAGEM NO BOTÃO CORRESPONDENTE
+									 **/
+									insereImagenNoBotao(contadorCompraMaquina);
+									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+									btn_14.setEnabled(true);
+									btn_14.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+									++aux2;
+									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+								}
+							}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////							
+							/**
+							 * Finaliza o codigo de compra de peças do jogador
+							 * maquina
+							 **/
+							
+						} else {
+							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+							btn_14.setEnabled(true);
+							btn_14.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
+							++aux2;
+							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+						}
+					}
+					for (Pecas i : arrayTabuleiro) {
+						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
+					}
 					break;
 
 				default:
