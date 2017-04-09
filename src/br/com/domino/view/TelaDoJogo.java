@@ -186,6 +186,47 @@ public class TelaDoJogo extends JFrame {
 			btnmaquina8.setEnabled(true);
 			btnmaquina8.setIcon(new ImageIcon(".//resource//imagens//preta.png"));
 			break;
+		case 9:
+			btnmaquina9.setEnabled(true);
+			btnmaquina9.setIcon(new ImageIcon(".//resource//imagens//preta.png"));
+			break;
+		case 10:
+			btnmaquina10.setEnabled(true);
+			btnmaquina10.setIcon(new ImageIcon(".//resource//imagens//preta.png"));
+			break;
+		case 11:
+			btnmaquina11.setEnabled(true);
+			btnmaquina11.setIcon(new ImageIcon(".//resource//imagens//preta.png"));
+			break;
+		case 12:
+			btnmaquina12.setEnabled(true);
+			btnmaquina12.setIcon(new ImageIcon(".//resource//imagens//preta.png"));
+			break;
+		case 13:
+			btnmaquina13.setEnabled(true);
+			btnmaquina13.setIcon(new ImageIcon(".//resource//imagens//preta.png"));
+			break;
+		case 14:
+			btnmaquina14.setEnabled(true);
+			btnmaquina14.setIcon(new ImageIcon(".//resource//imagens//preta.png"));
+			break;
+		case 15:
+			btnmaquina15.setEnabled(true);
+			btnmaquina15.setIcon(new ImageIcon(".//resource//imagens//preta.png"));
+			break;
+		case 16:
+			btnmaquina16.setEnabled(true);
+			btnmaquina16.setIcon(new ImageIcon(".//resource//imagens//preta.png"));
+			break;
+		case 17:
+			btnmaquina17.setEnabled(true);
+			btnmaquina17.setIcon(new ImageIcon(".//resource//imagens//preta.png"));
+			break;
+		case 18:
+			btnmaquina18.setEnabled(true);
+			btnmaquina18.setIcon(new ImageIcon(".//resource//imagens//preta.png"));
+			break;
+			
 		default:
 			break;
 		}
