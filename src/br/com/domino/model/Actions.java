@@ -136,8 +136,8 @@ public class Actions {
 		return retorno;
 	}
 
-	// escolhe a peça para o CPU jogar.
-	public String escolhePedraMaquina(ArrayList<Pecas> tabuleiro, ArrayList<Pecas> maquina) {
+	// escolhe a peça para o CPU jogar na Horizontal.
+	public String escolhePedraMaquinaHorizontal(ArrayList<Pecas> tabuleiro, ArrayList<Pecas> maquina) {
 		String valorPeca = "";
 		for (Pecas m : maquina) {
 			if (m.getLadoEsquerdo() == tabuleiro.get(tabuleiro.size() - 1).getLadoEsquerdo()) {
@@ -157,10 +157,35 @@ public class Actions {
 		}
 		return valorPeca;
 	}
+	
+	// escolhe a peça para o CPU jogar na Vertical.
+		public String escolhePedraMaquinaVertical(ArrayList<Pecas> tabuleiro, ArrayList<Pecas> maquina) {
+			String valorPeca = "";
+			for (Pecas m : maquina) {
+				if (m.getLadoDireito() == tabuleiro.get(tabuleiro.size() - 1).getLadoDireito()) {
+					Pecas p = new Pecas(m.getLadoDireito(), m.getLadoEsquerdo());
+					tabuleiro.add(p);
+					valorPeca = p.getLadoEsquerdo().toString() + p.getLadoDireito().toString();
+					maquina.remove(maquina.indexOf(m));// apaga a pedra encontra no
+														// array da maquina
+					break;
+				} else if (m.getLadoEsquerdo() == tabuleiro.get(tabuleiro.size() - 1).getLadoDireito()) {
+					tabuleiro.add(m);
+					valorPeca = m.getLadoEsquerdo().toString() + m.getLadoDireito().toString();
+					maquina.remove(maquina.indexOf(m));// apaga a pedra encontra no
+														// array da maquina
+					break;
+				}
+			}
+			return valorPeca;
+		}
+	
+	
+	
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	//metodos usado para a compra de pedra da maquina:
-	
+	// metodos usado para a compra de pedra da maquina:
+
 	public int maquinaCompraPassa() {
 		int num = 0;
 		Random gerador = new Random();
@@ -181,20 +206,47 @@ public class Actions {
 		}
 	}
 
-	public String testaPedraCompraMaquina(ArrayList<Pecas> tabuleiro, ArrayList<Pecas> maquina) {
+	public String testaPedraCompraMaquinaHorizontal(ArrayList<Pecas> tabuleiro, ArrayList<Pecas> maquina) {
 		String valorPeca = "";
 
-		if (maquina.get(maquina.size() - 1).getLadoEsquerdo() == tabuleiro.get(tabuleiro.size() - 1).getLadoEsquerdo()) {
-			
-			Pecas p = new Pecas(maquina.get(maquina.size() - 1).getLadoDireito(),maquina.get(maquina.size() - 1).getLadoEsquerdo());
+		if (maquina.get(maquina.size() - 1).getLadoEsquerdo() == tabuleiro.get(tabuleiro.size() - 1)
+				.getLadoEsquerdo()) {
+
+			Pecas p = new Pecas(maquina.get(maquina.size() - 1).getLadoDireito(),
+					maquina.get(maquina.size() - 1).getLadoEsquerdo());
 			tabuleiro.add(p);
 			valorPeca = p.getLadoEsquerdo().toString() + p.getLadoDireito().toString();
 			maquina.remove(maquina.indexOf(maquina.get(maquina.size() - 1)));
-			
-		} else if (maquina.get(maquina.size() - 1).getLadoDireito() == tabuleiro.get(tabuleiro.size() - 1).getLadoEsquerdo()) {
+
+		} else if (maquina.get(maquina.size() - 1).getLadoDireito() == tabuleiro.get(tabuleiro.size() - 1)
+				.getLadoEsquerdo()) {
 			tabuleiro.add(maquina.get(maquina.size() - 1));
-			valorPeca = maquina.get(maquina.size() - 1).getLadoEsquerdo().toString()+ maquina.get(maquina.size() - 1).getLadoDireito().toString();
+			valorPeca = maquina.get(maquina.size() - 1).getLadoEsquerdo().toString()
+					+ maquina.get(maquina.size() - 1).getLadoDireito().toString();
 			maquina.remove(maquina.indexOf(maquina.get(maquina.size() - 1)));
+		}
+
+		return valorPeca;
+	}
+
+	public String testaPedraCompraMaquinaVertical(ArrayList<Pecas> tabuleiro, ArrayList<Pecas> maquina) {
+		String valorPeca = "";
+
+		if (maquina.get(maquina.size() - 1).getLadoDireito() == tabuleiro.get(tabuleiro.size() - 1).getLadoDireito()) {
+
+			Pecas p = new Pecas(maquina.get(maquina.size() - 1).getLadoDireito(),
+					maquina.get(maquina.size() - 1).getLadoEsquerdo());
+			tabuleiro.add(p);
+			valorPeca = p.getLadoEsquerdo().toString() + p.getLadoDireito().toString();
+			maquina.remove(maquina.indexOf(maquina.get(maquina.size() - 1)));
+
+		} else if (maquina.get(maquina.size() - 1).getLadoDireito() == tabuleiro.get(tabuleiro.size() - 1)
+				.getLadoEsquerdo()) {
+			tabuleiro.add(maquina.get(maquina.size() - 1));
+			valorPeca = maquina.get(maquina.size() - 1).getLadoEsquerdo().toString()
+					+ maquina.get(maquina.size() - 1).getLadoDireito().toString();
+			maquina.remove(maquina.indexOf(maquina.get(maquina.size() - 1)));
+
 		}
 
 		return valorPeca;
