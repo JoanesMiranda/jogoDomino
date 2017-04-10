@@ -18,6 +18,7 @@ import java.util.ArrayList;
 import java.awt.event.ActionEvent;
 import javax.swing.border.LineBorder;
 import java.awt.Color;
+import javax.swing.JTextField;
 
 public class TelaDoJogo extends JFrame {
 
@@ -247,6 +248,10 @@ public class TelaDoJogo extends JFrame {
 	ArrayList<Pecas> arrayTabuleiro = new ArrayList<Pecas>();
 
 	private static final long serialVersionUID = 1L;
+	private JTextField textField_pontuacaoHumano;
+	private JLabel lblPontuacaoMaquina;
+	private JTextField textField_pontuacaoMaquina;
+	private JLabel lblFundoMesa;
 
 	public TelaDoJogo() {
 
@@ -290,9 +295,9 @@ public class TelaDoJogo extends JFrame {
 		lblIconemaquina.setBounds(0, 0, 73, 100);
 		getContentPane().add(lblIconemaquina);
 
-		JLabel lblNomemaquina = new JLabel("Joanes Machine dos Santos");
+		JLabel lblNomemaquina = new JLabel("Joanes Miranda");
 		lblNomemaquina.setFont(new Font("Times New Roman", Font.BOLD, 14));
-		lblNomemaquina.setBounds(77, 32, 195, 25);
+		lblNomemaquina.setBounds(83, 0, 195, 25);
 		getContentPane().add(lblNomemaquina);
 
 		ImageIcon iconJogador = new ImageIcon(".//resource//imagens//naruto.png");
@@ -302,7 +307,7 @@ public class TelaDoJogo extends JFrame {
 
 		JLabel lblNomejogador = new JLabel("Emerson Sousa Pereira");
 		lblNomejogador.setFont(new Font("Times New Roman", Font.BOLD, 14));
-		lblNomejogador.setBounds(77, 596, 217, 36);
+		lblNomejogador.setBounds(77, 561, 217, 36);
 		getContentPane().add(lblNomejogador);
 
 		JPanel panel_pecasMaquina = new JPanel();
@@ -56166,11 +56171,402 @@ public class TelaDoJogo extends JFrame {
 		btn_28.setEnabled(false);
 		btn_28.setBounds(797, 352, 70, 35);
 		panel_tabuleiro.add(btn_28);
+		
+		lblFundoMesa = new JLabel(new ImageIcon(".//resource//imagens//fundoTabuleiro.jpg"));
+		lblFundoMesa.setBounds(0, 0, 979, 426);
+		panel_tabuleiro.add(lblFundoMesa);
 
 		JLabel lblEscolhaSuasPecas = new JLabel("Escolha Suas Pecas");
 		lblEscolhaSuasPecas.setFont(new Font("Times New Roman", Font.BOLD, 18));
 		lblEscolhaSuasPecas.setBounds(79, 98, 160, 36);
 		getContentPane().add(lblEscolhaSuasPecas);
+		
+		JLabel lblPontuacaoHumano = new JLabel("Pontua\u00E7\u00E3o: ");
+		lblPontuacaoHumano.setFont(new Font("Times New Roman", Font.BOLD, 14));
+		lblPontuacaoHumano.setBounds(77, 624, 73, 14);
+		getContentPane().add(lblPontuacaoHumano);
+		
+		textField_pontuacaoHumano = new JTextField();
+		textField_pontuacaoHumano.setFont(new Font("Times New Roman", Font.BOLD, 14));
+		textField_pontuacaoHumano.setBounds(153, 622, 86, 20);
+		getContentPane().add(textField_pontuacaoHumano);
+		textField_pontuacaoHumano.setColumns(10);
+		
+		JButton btnPassarAVez = new JButton("Passar");
+		btnPassarAVez.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				/** Inteligência simples da maquina **/
+					
+					String valor = al.escolhePedraMaquinaHorizontal(arrayTabuleiro, arrayM);
+					String valor2 = al.escolhePedraMaquinaVertical(arrayTabuleiro, arrayM);
+
+					/** logica para a compra de peças do jogador maquina **/
+//					if (valor == "") {
+//						//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//						// possui um rando com 0 e 1, caso 0 a maquina
+//						////////////////////////////////////////////////////////////////////////////////////////////////////////////// passa,
+//						////////////////////////////////////////////////////////////////////////////////////////////////////////////// caso
+//						////////////////////////////////////////////////////////////////////////////////////////////////////////////// 1
+//						////////////////////////////////////////////////////////////////////////////////////////////////////////////// ela
+//						////////////////////////////////////////////////////////////////////////////////////////////////////////////// faz
+//						////////////////////////////////////////////////////////////////////////////////////////////////////////////// uma
+//						////////////////////////////////////////////////////////////////////////////////////////////////////////////// compra
+//						////////////////////////////////////////////////////////////////////////////////////////////////////////////// no
+//						////////////////////////////////////////////////////////////////////////////////////////////////////////////// array
+//						int i = al.maquinaCompraPassa();
+//						if (i == 0) {
+//							JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+//						} else {
+//							// escolhe a primeira pedra que encontrar no
+//							// array e pega
+//							al.escolhePecaAleatorio(array, arrayM);
+//
+//							// testa se a pedra comprada pode ser jogada no
+//							// tabuleiro
+//							String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+//
+//							if (p == "") {
+//								/**
+//								 * caso a pedra comprada não possa ser
+//								 * jogada no tabuleiro a maquina passa a
+//								 * jogada
+//								 **/
+//								JOptionPane.showMessageDialog(null, "Maquina: Compra");
+//								insereImagenNoBotao(contadorCompraMaquina);
+//								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
+//
+//							} else {
+//								/**
+//								 * caso a pedra comprada possa ser jogada no
+//								 * tabuleiro a maquina a insere no
+//								 * arrayTabuleiro
+//								 **/
+//								JOptionPane.showMessageDialog(null, "Maquina: Compra");
+//								/**
+//								 * INSERE A IMAGEM NO BOTÃO CORRESPONDENTE
+//								 **/
+//								if(aux2 == 1){
+//								insereImagenNoBotao(contadorCompraMaquina);
+//								JOptionPane.showMessageDialog(null, "Maquina: Joga");
+//								btn_1.setEnabled(true);
+//								btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+//								++aux2;
+//								JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+//								}
+//								else if(aux == 2){
+//									insereImagenNoBotao(contadorCompraMaquina);
+//									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+//									btn_2.setEnabled(true);
+//									btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+//									++aux2;
+//									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+//									}
+//								else if(aux == 3){
+//									insereImagenNoBotao(contadorCompraMaquina);
+//									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+//									btn_3.setEnabled(true);
+//									btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+//									++aux2;
+//									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+//									}
+//								else if(aux == 4){
+//									insereImagenNoBotao(contadorCompraMaquina);
+//									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+//									btn_4.setEnabled(true);
+//									btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+//									++aux2;
+//									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+//									}
+//								else if(aux == 5){
+//									insereImagenNoBotao(contadorCompraMaquina);
+//									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+//									btn_5.setEnabled(true);
+//									btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+//									++aux2;
+//									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+//									}
+//								else if(aux == 6){
+//									insereImagenNoBotao(contadorCompraMaquina);
+//									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+//									btn_6.setEnabled(true);
+//									btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+//									++aux2;
+//									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+//									}
+//								else if(aux == 7){
+//									insereImagenNoBotao(contadorCompraMaquina);
+//									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+//									btn_7.setEnabled(true);
+//									btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+//									++aux2;
+//									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+//									}
+//								else if(aux == 8){
+//									insereImagenNoBotao(contadorCompraMaquina);
+//									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+//									btn_8.setEnabled(true);
+//									btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+//									++aux2;
+//									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+//									}
+//								else if(aux == 9){
+//									insereImagenNoBotao(contadorCompraMaquina);
+//									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+//									btn_9.setEnabled(true);
+//									btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+//									++aux2;
+//									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+//									}
+//								else if(aux == 10){
+//									insereImagenNoBotao(contadorCompraMaquina);
+//									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+//									btn_10.setEnabled(true);
+//									btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+//									++aux2;
+//									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+//									}
+//								else if(aux == 11){
+//									insereImagenNoBotao(contadorCompraMaquina);
+//									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+//									btn_11.setEnabled(true);
+//									btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+//									++aux2;
+//									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+//									}
+//								else if(aux == 12){
+//									insereImagenNoBotao(contadorCompraMaquina);
+//									JOptionPane.showMessageDialog(null, "Maquina: Joga");
+//									btn_12.setEnabled(true);
+//									btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + p + ".png"));
+//									++aux2;
+//									JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+//									}
+//								}
+//						}
+//						///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//						/**
+//						 * Finaliza o codigo de compra de peças do jogador
+//						 * maquina
+//						 **/
+				if(!(valor.isEmpty() && aux2 <=11)){
+					 if (aux2 ==0){
+						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+						btn_1.setEnabled(true);
+						btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
+						++aux2;
+						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+					}
+					else if (aux2 ==1){
+						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+						btn_2.setEnabled(true);
+						btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
+						++aux2;
+						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+					}else if (aux2 ==2){
+						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+						btn_3.setEnabled(true);
+						btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
+						++aux2;
+						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+					}else if (aux2 ==3){
+						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+						btn_4.setEnabled(true);
+						btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
+						++aux2;
+						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+					}else if (aux2 ==4){
+						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+						btn_5.setEnabled(true);
+						btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
+						++aux2;
+						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+					}else if (aux2 ==5){
+						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+						btn_6.setEnabled(true);
+						btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
+						++aux2;
+						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+					}else if (aux2 ==6){
+						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+						btn_7.setEnabled(true);
+						btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
+						++aux2;
+						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+					}else if (aux2 ==7){
+						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+						btn_8.setEnabled(true);
+						btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
+						++aux2;
+						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+					}else if (aux2 ==8){
+						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+						btn_9.setEnabled(true);
+						btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
+						++aux2;
+						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+					}else if (aux2 ==9){
+						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+						btn_10.setEnabled(true);
+						btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
+						++aux2;
+						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+					}else if (aux2 ==10){
+						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+						btn_11.setEnabled(true);
+						btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
+						++aux2;
+						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+					}else if (aux2 ==11){
+						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+						btn_12.setEnabled(true);
+						btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
+						++aux2;
+						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+					}else if(aux2 == 12){
+						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+						btn_14.setEnabled(true);
+						btn_14.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + valor + ".png"));
+						++aux2;
+						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+					}
+					else{
+						JOptionPane.showMessageDialog(null,"Jogo trancado");
+					}
+				}
+				else if(!(valor2.isEmpty() && aux2 >=12 && aux2<=28)){
+					if(aux2 == 13){
+						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+						btn_13.setEnabled(true);
+						btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + valor + ".png"));
+						++aux2;
+						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+					}
+					else if(aux2 == 14){
+						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+						btn_14.setEnabled(true);
+						btn_14.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + valor + ".png"));
+						++aux2;
+						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+					}
+					else if(aux2 == 15){
+						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+						btn_15.setEnabled(true);
+						btn_15.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + valor + ".png"));
+						++aux2;
+						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+					}
+					else if(aux2 == 16){
+						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+						btn_16.setEnabled(true);
+						btn_16.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + valor + ".png"));
+						++aux2;
+						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+					}
+					else if(aux2 == 17){
+						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+						btn_17.setEnabled(true);
+						btn_17.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
+						++aux2;
+						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+					}
+					else if(aux2 == 18){
+						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+						btn_18.setEnabled(true);
+						btn_18.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
+						++aux2;
+						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+					}else if(aux2 == 19){
+						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+						btn_19.setEnabled(true);
+						btn_19.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
+						++aux2;
+						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+					}else if(aux2 == 20){
+						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+						btn_20.setEnabled(true);
+						btn_20.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
+						++aux2;
+						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+					}else if(aux2 == 21){
+						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+						btn_21.setEnabled(true);
+						btn_21.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
+						++aux2;
+						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+					}else if(aux2 == 22){
+						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+						btn_22.setEnabled(true);
+						btn_22.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
+						++aux2;
+						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+					}else if(aux2 == 23){
+						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+						btn_23.setEnabled(true);
+						btn_23.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
+						++aux2;
+						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+					}else if(aux2 == 24){
+						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+						btn_24.setEnabled(true);
+						btn_24.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
+						++aux2;
+						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+					}else if(aux2 == 25){
+						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+						btn_25.setEnabled(true);
+						btn_25.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
+						++aux2;
+						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+					}else if(aux2 == 26){
+						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+						btn_26.setEnabled(true);
+						btn_26.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
+						++aux2;
+						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+					}else if(aux2 == 27){
+						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+						btn_27.setEnabled(true);
+						btn_27.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
+						++aux2;
+						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+					}else if(aux2 == 28){
+						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+						btn_28.setEnabled(true);
+						btn_28.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
+						++aux2;
+						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+					}
+					else{
+						JOptionPane.showMessageDialog(null,"Jogo trancado");
+					}
+					
+					
+					
+					
+					
+				}
+				else{
+					JOptionPane.showMessageDialog(null,"Jogo trancado");
+				}
+				
+				for (Pecas i : arrayTabuleiro) {
+					System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
+				}
+			}
+		});
+		btnPassarAVez.setFont(new Font("Times New Roman", Font.BOLD, 12));
+		btnPassarAVez.setBounds(1265, 600, 80, 43);
+		getContentPane().add(btnPassarAVez);
+		
+		lblPontuacaoMaquina = new JLabel("Pontua\u00E7\u00E3o: ");
+		lblPontuacaoMaquina.setFont(new Font("Times New Roman", Font.BOLD, 14));
+		lblPontuacaoMaquina.setBounds(83, 52, 73, 14);
+		getContentPane().add(lblPontuacaoMaquina);
+		
+		textField_pontuacaoMaquina = new JTextField();
+		textField_pontuacaoMaquina.setBounds(153, 50, 86, 20);
+		getContentPane().add(textField_pontuacaoMaquina);
+		textField_pontuacaoMaquina.setColumns(10);
 
 		setSize(1366, 720);
 		setVisible(true);
