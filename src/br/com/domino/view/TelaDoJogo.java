@@ -56196,9 +56196,15 @@ public class TelaDoJogo extends JFrame {
 		btnPassarAVez.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				/** Inteligência simples da maquina **/
-					
-					String valor = al.escolhePedraMaquinaHorizontal(arrayTabuleiro, arrayM);
-					String valor2 = al.escolhePedraMaquinaVertical(arrayTabuleiro, arrayM);
+				String valor = "";
+				String valor2 = "";
+					if(aux2<=12){
+					 valor = al.escolhePedraMaquinaHorizontal(arrayTabuleiro, arrayM);
+					}
+					else{
+						valor2 = al.escolhePedraMaquinaVertical(arrayTabuleiro, arrayM);
+						
+					}
 
 					/** logica para a compra de peças do jogador maquina **/
 //					if (valor == "") {
@@ -56422,114 +56428,118 @@ public class TelaDoJogo extends JFrame {
 						btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 						++aux2;
 						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
-					}else if(aux2 == 12){
-						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
-						btn_14.setEnabled(true);
-						btn_14.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + valor + ".png"));
-						++aux2;
-						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 					}
+//					else if(aux2 == 12){
+//						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
+//						btn_14.setEnabled(true);
+//						btn_14.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + valor + ".png"));
+//						++aux2;
+//						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
+//					}
 					else{
+						
+						
 						JOptionPane.showMessageDialog(null,"Jogo trancado");
 					}
 				}
-				else if(!(valor2.isEmpty() && aux2 >=12 && aux2<=28)){
-					if(aux2 == 13){
+				
+				else if(!(valor2.isEmpty() && aux2 >11 )){
+					if(aux2 == 12){
 						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 						btn_13.setEnabled(true);
 						btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + valor + ".png"));
 						++aux2;
 						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 					}
-					else if(aux2 == 14){
+					else if(aux2 == 13){
 						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 						btn_14.setEnabled(true);
 						btn_14.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + valor + ".png"));
 						++aux2;
 						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 					}
-					else if(aux2 == 15){
+					else if(aux2 == 14){
 						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 						btn_15.setEnabled(true);
 						btn_15.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + valor + ".png"));
 						++aux2;
 						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 					}
-					else if(aux2 == 16){
+					else if(aux2 == 15){
 						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 						btn_16.setEnabled(true);
 						btn_16.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + valor + ".png"));
 						++aux2;
 						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 					}
-					else if(aux2 == 17){
+					else if(aux2 == 16){
 						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 						btn_17.setEnabled(true);
 						btn_17.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 						++aux2;
 						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 					}
-					else if(aux2 == 18){
+					else if(aux2 == 17){
 						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 						btn_18.setEnabled(true);
 						btn_18.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 						++aux2;
 						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
-					}else if(aux2 == 19){
+					}else if(aux2 == 18){
 						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 						btn_19.setEnabled(true);
 						btn_19.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 						++aux2;
 						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
-					}else if(aux2 == 20){
+					}else if(aux2 == 19){
 						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 						btn_20.setEnabled(true);
 						btn_20.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 						++aux2;
 						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
-					}else if(aux2 == 21){
+					}else if(aux2 == 20){
 						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 						btn_21.setEnabled(true);
 						btn_21.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 						++aux2;
 						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
-					}else if(aux2 == 22){
+					}else if(aux2 == 21){
 						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 						btn_22.setEnabled(true);
 						btn_22.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 						++aux2;
 						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
-					}else if(aux2 == 23){
+					}else if(aux2 == 22){
 						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 						btn_23.setEnabled(true);
 						btn_23.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 						++aux2;
 						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
-					}else if(aux2 == 24){
+					}else if(aux2 == 23){
 						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 						btn_24.setEnabled(true);
 						btn_24.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 						++aux2;
 						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
-					}else if(aux2 == 25){
+					}else if(aux2 == 24){
 						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 						btn_25.setEnabled(true);
 						btn_25.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 						++aux2;
 						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
-					}else if(aux2 == 26){
+					}else if(aux2 == 25){
 						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 						btn_26.setEnabled(true);
 						btn_26.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 						++aux2;
 						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
-					}else if(aux2 == 27){
+					}else if(aux2 == 26){
 						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 						btn_27.setEnabled(true);
 						btn_27.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
 						++aux2;
 						JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
-					}else if(aux2 == 28){
+					}else if(aux2 == 27){
 						JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 						btn_28.setEnabled(true);
 						btn_28.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + valor + ".png"));
@@ -56549,9 +56559,9 @@ public class TelaDoJogo extends JFrame {
 					JOptionPane.showMessageDialog(null,"Jogo trancado");
 				}
 				
-				for (Pecas i : arrayTabuleiro) {
-					System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
-				}
+//				for (Pecas i : arrayTabuleiro) {
+//					System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
+//				}
 			}
 		});
 		btnPassarAVez.setFont(new Font("Times New Roman", Font.BOLD, 12));
