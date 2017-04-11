@@ -241,6 +241,10 @@ public class TelaDoJogo extends JFrame {
 
 	ArrayList<Pecas> arrayH = new ArrayList<Pecas>();
 	ArrayList<Pecas> arrayM = new ArrayList<Pecas>();
+	
+	
+		
+	
 
 	Boolean vezDoJogo = true;
 
@@ -482,6 +486,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -583,6 +593,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -682,6 +698,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -786,6 +808,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -886,6 +914,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -988,6 +1022,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -1087,6 +1127,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -1188,6 +1234,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -1291,6 +1343,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -1392,6 +1450,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -1495,6 +1559,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -1585,6 +1655,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -1686,6 +1762,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -1782,6 +1864,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -1880,6 +1968,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -1976,6 +2070,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -2074,6 +2174,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -2171,6 +2277,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -2267,6 +2379,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -2374,6 +2492,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -2470,6 +2594,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -2568,6 +2698,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -2664,6 +2800,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -2762,6 +2904,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -2858,6 +3006,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -2956,6 +3110,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -3053,6 +3213,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -3149,6 +3315,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -3262,6 +3434,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -3352,6 +3530,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -3453,6 +3637,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -3553,6 +3743,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -3652,6 +3848,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -3755,6 +3957,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -3856,6 +4064,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -3956,6 +4170,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -4059,6 +4279,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -4161,6 +4387,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -4254,6 +4486,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -4346,6 +4584,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -4449,6 +4693,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -4545,6 +4795,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -4644,6 +4900,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -4740,6 +5002,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -4838,6 +5106,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -4934,6 +5208,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -5032,6 +5312,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -5128,6 +5414,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -5226,6 +5518,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -5322,6 +5620,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -5420,6 +5724,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -5516,6 +5826,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -5614,6 +5930,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -5710,6 +6032,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -5808,6 +6136,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -5904,6 +6238,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -6017,6 +6357,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -6118,6 +6464,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -6218,6 +6570,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -6317,6 +6675,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -6419,6 +6783,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -6518,6 +6888,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -6619,6 +6995,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -6719,6 +7101,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -6822,6 +7210,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -6924,6 +7318,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -7025,6 +7425,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -7117,6 +7523,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -7217,6 +7629,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -7313,6 +7731,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -7411,6 +7835,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -7507,6 +7937,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -7605,6 +8041,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -7701,6 +8143,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -7799,6 +8247,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -7895,6 +8349,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -7993,6 +8453,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -8089,6 +8555,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -8187,6 +8659,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -8283,6 +8761,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -8381,6 +8865,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -8477,6 +8967,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -8575,6 +9071,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -8671,6 +9173,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -8793,6 +9301,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -8893,6 +9407,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -8992,6 +9512,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -9094,6 +9620,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -9193,6 +9725,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -9294,6 +9832,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -9393,6 +9937,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -9494,6 +10044,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -9597,6 +10153,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -9698,6 +10260,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -9801,6 +10369,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -9893,6 +10467,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -9993,6 +10573,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -10090,6 +10676,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -10186,6 +10778,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -10285,6 +10883,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -10381,6 +10985,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -10479,6 +11089,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -10575,6 +11191,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -10673,6 +11295,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -10769,6 +11397,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -10867,6 +11501,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -10963,6 +11603,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -11061,6 +11707,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -11157,6 +11809,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -11255,6 +11913,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -11352,6 +12016,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -11448,6 +12118,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -11562,6 +12238,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -11652,6 +12334,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -11753,6 +12441,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -11852,6 +12546,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -11953,6 +12653,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -12052,6 +12758,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -12153,6 +12865,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -12253,6 +12971,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -12356,6 +13080,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -12458,6 +13188,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -12559,6 +13295,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -12650,6 +13392,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -12751,6 +13499,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -12847,6 +13601,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -12945,6 +13705,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -13041,6 +13807,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -13148,6 +13920,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -13253,6 +14031,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -13360,6 +14144,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -13465,6 +14255,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -13572,6 +14368,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -13677,6 +14479,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -13784,6 +14592,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -13889,6 +14703,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -13996,6 +14816,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -14101,6 +14927,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -14208,6 +15040,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -14304,6 +15142,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -14426,6 +15270,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -14527,6 +15377,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -14626,6 +15482,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -14728,6 +15590,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -14827,6 +15695,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -14928,6 +15802,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -15027,6 +15907,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -15128,6 +16014,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -15231,6 +16123,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -15332,6 +16230,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -15435,6 +16339,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -15527,6 +16437,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -15629,6 +16545,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -15725,6 +16647,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -15823,6 +16751,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -15919,6 +16853,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -16026,6 +16966,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -16131,6 +17077,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -16238,6 +17190,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -16343,6 +17301,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -16450,6 +17414,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -16555,6 +17525,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -16662,6 +17638,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -16767,6 +17749,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -16874,6 +17862,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -16979,6 +17973,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -17086,6 +18086,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -17191,6 +18197,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -17314,6 +18326,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -17413,6 +18431,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -17514,6 +18538,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -17614,6 +18644,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -17713,6 +18749,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -17815,6 +18857,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -17914,6 +18962,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -18015,6 +19069,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -18118,6 +19178,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -18220,6 +19286,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -18321,6 +19393,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -18434,6 +19512,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -18534,6 +19618,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -18630,6 +19720,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -18728,6 +19824,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -18824,6 +19926,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -18931,6 +20039,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -19036,6 +20150,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -19143,6 +20263,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -19248,6 +20374,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -19355,6 +20487,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -19460,6 +20598,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -19567,6 +20711,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -19672,6 +20822,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -19779,6 +20935,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -19884,6 +21046,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -19991,6 +21159,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -20096,6 +21270,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -20210,6 +21390,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -20309,6 +21495,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -20410,6 +21602,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -20510,6 +21708,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -20609,6 +21813,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -20712,6 +21922,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -20813,6 +22029,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -20913,6 +22135,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -21016,6 +22244,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -21117,6 +22351,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -21220,6 +22460,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -21312,6 +22558,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -21414,6 +22666,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -21510,6 +22768,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -21609,6 +22873,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -21705,6 +22975,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -21812,6 +23088,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -21917,6 +23199,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -22024,6 +23312,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -22129,6 +23423,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -22236,6 +23536,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -22341,6 +23647,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -22448,6 +23760,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -22553,6 +23871,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -22660,6 +23984,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -22765,6 +24095,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -22872,6 +24208,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -22968,6 +24310,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -23083,6 +24431,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -23182,6 +24536,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -23283,6 +24643,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -23383,6 +24749,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -23482,6 +24854,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -23585,6 +24963,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -23686,6 +25070,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -23786,6 +25176,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -23889,6 +25285,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -23990,6 +25392,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -24093,6 +25501,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -24185,6 +25599,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -24286,6 +25706,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -24382,6 +25808,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -24481,6 +25913,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -24577,6 +26015,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -24684,6 +26128,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -24789,6 +26239,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -24896,6 +26352,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -25001,6 +26463,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -25108,6 +26576,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -25213,6 +26687,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -25320,6 +26800,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -25425,6 +26911,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -25532,6 +27024,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -25637,6 +27135,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -25744,6 +27248,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -25849,6 +27359,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -25964,6 +27480,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -26063,6 +27585,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -26164,6 +27692,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -26264,6 +27798,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -26363,6 +27903,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -26466,6 +28012,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -26567,6 +28119,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -26667,6 +28225,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -26770,6 +28334,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -26871,6 +28441,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -26974,6 +28550,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -27066,6 +28648,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -27168,6 +28756,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -27264,6 +28858,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -27363,6 +28963,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -27459,6 +29065,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -27566,6 +29178,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -27671,6 +29289,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -27778,6 +29402,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -27883,6 +29513,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -27990,6 +29626,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -28095,6 +29737,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -28202,6 +29850,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -28307,6 +29961,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -28414,6 +30074,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -28519,6 +30185,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -28626,6 +30298,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -28731,6 +30409,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -28846,6 +30530,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -28945,6 +30635,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -29046,6 +30742,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -29146,6 +30848,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -29245,6 +30953,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -29348,6 +31062,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -29449,6 +31169,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -29549,6 +31275,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -29652,6 +31384,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -29753,6 +31491,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -29856,6 +31600,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -29948,6 +31698,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -30049,6 +31805,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -30145,6 +31907,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -30244,6 +32012,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -30340,6 +32114,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -30447,6 +32227,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -30552,6 +32338,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -30659,6 +32451,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -30764,6 +32562,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -30871,6 +32675,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -30976,6 +32786,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -31083,6 +32899,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -31188,6 +33010,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -31295,6 +33123,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -31400,6 +33234,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -31507,6 +33347,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -31612,6 +33458,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -31727,6 +33579,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -31826,6 +33684,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -31927,6 +33791,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -32027,6 +33897,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -32126,6 +34002,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -32229,6 +34111,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -32330,6 +34218,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -32430,6 +34324,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -32533,6 +34433,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -32634,6 +34540,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -32737,6 +34649,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -32829,6 +34747,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -32931,6 +34855,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -33027,6 +34957,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -33126,6 +35062,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -33222,6 +35164,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -33329,6 +35277,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -33434,6 +35388,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -33541,6 +35501,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -33646,6 +35612,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -33753,6 +35725,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -33858,6 +35836,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -33965,6 +35949,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -34070,6 +36060,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -34177,6 +36173,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -34282,6 +36284,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -34389,6 +36397,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -34494,6 +36508,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -34609,6 +36629,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -34708,6 +36734,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -34809,6 +36841,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -34909,6 +36947,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -35008,6 +37052,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -35111,6 +37161,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -35212,6 +37268,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -35312,6 +37374,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -35415,6 +37483,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -35516,6 +37590,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -35619,6 +37699,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -35711,6 +37797,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -35813,6 +37905,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -35909,6 +38007,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -36008,6 +38112,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -36104,6 +38214,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -36211,6 +38327,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -36316,6 +38438,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -36423,6 +38551,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -36528,6 +38662,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -36635,6 +38775,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -36740,6 +38886,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -36847,6 +38999,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -36952,6 +39110,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -37059,6 +39223,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -37164,6 +39334,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -37271,6 +39447,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -37367,6 +39549,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -37481,6 +39669,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -37580,6 +39774,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -37681,6 +39881,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -37781,6 +39987,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -37880,6 +40092,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -37983,6 +40201,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -38084,6 +40308,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -38184,6 +40414,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -38287,6 +40523,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -38388,6 +40630,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -38491,6 +40739,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -38583,6 +40837,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -38685,6 +40945,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -38781,6 +41047,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -38880,6 +41152,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -38976,6 +41254,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -39083,6 +41367,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -39188,6 +41478,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -39295,6 +41591,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -39400,6 +41702,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -39507,6 +41815,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -39612,6 +41926,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -39719,6 +42039,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -39824,6 +42150,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -39931,6 +42263,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -40036,6 +42374,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -40143,6 +42487,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -40248,6 +42598,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -40363,6 +42719,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -40462,6 +42824,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -40563,6 +42931,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -40663,6 +43037,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -40762,6 +43142,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -40865,6 +43251,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -40966,6 +43358,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -41066,6 +43464,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -41169,6 +43573,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -41270,6 +43680,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -41373,6 +43789,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -41465,6 +43887,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -41567,6 +43995,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -41663,6 +44097,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -41762,6 +44202,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -41858,6 +44304,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -41965,6 +44417,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -42070,6 +44528,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -42177,6 +44641,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -42282,6 +44752,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -42389,6 +44865,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -42494,6 +44976,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -42601,6 +45089,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -42706,6 +45200,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -42813,6 +45313,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -42918,6 +45424,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -43025,6 +45537,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -43121,6 +45639,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -43235,6 +45759,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -43334,6 +45864,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -43435,6 +45971,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -43535,6 +46077,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -43634,6 +46182,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -43737,6 +46291,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -43838,6 +46398,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -43938,6 +46504,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -44041,6 +46613,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -44142,6 +46720,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -44245,6 +46829,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -44337,6 +46927,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -44438,6 +47034,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -44534,6 +47136,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -44633,6 +47241,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -44729,6 +47343,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -44836,6 +47456,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -44941,6 +47567,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -45048,6 +47680,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -45153,6 +47791,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -45260,6 +47904,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -45365,6 +48015,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -45472,6 +48128,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -45577,6 +48239,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -45684,6 +48352,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -45789,6 +48463,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -45896,6 +48576,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -46001,6 +48687,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -46116,6 +48808,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -46215,6 +48913,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -46316,6 +49020,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -46416,6 +49126,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -46515,6 +49231,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -46618,6 +49340,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -46719,6 +49447,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -46819,6 +49553,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -46922,6 +49662,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -47023,6 +49769,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -47126,6 +49878,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -47218,6 +49976,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -47319,6 +50083,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -47415,6 +50185,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -47514,6 +50290,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -47610,6 +50392,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -47717,6 +50505,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -47822,6 +50616,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -47929,6 +50729,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -48034,6 +50840,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -48141,6 +50953,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -48246,6 +51064,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -48353,6 +51177,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -48458,6 +51288,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -48565,6 +51401,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -48670,6 +51512,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -48777,6 +51625,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -48873,6 +51727,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -48988,6 +51848,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -49087,6 +51953,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -49188,6 +52060,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -49288,6 +52166,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -49387,6 +52271,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -49490,6 +52380,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -49591,6 +52487,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -49691,6 +52593,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -49794,6 +52702,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -49895,6 +52809,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -49998,6 +52918,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -50090,6 +53016,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -50190,6 +53122,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -50286,6 +53224,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -50385,6 +53329,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -50481,6 +53431,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -50588,6 +53544,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -50693,6 +53655,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -50800,6 +53768,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -50906,6 +53880,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -51002,6 +53982,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -51109,6 +54095,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -51214,6 +54206,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -51321,6 +54319,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -51426,6 +54430,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
@@ -51533,6 +54543,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -51630,6 +54646,12 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
+					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
@@ -51726,6 +54748,12 @@ public class TelaDoJogo extends JFrame {
 							++aux2;
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
+					}
+					if(al.VerificaVencedor(arrayH, arrayM) == 1){
+						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
+					}
+					else if(al.VerificaVencedor(arrayH, arrayM) == 0){
+						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
 						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
