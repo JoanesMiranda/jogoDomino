@@ -275,5 +275,19 @@ public class Actions {
 
 		return valorPeca;
 	}
+	//verifica se alguem venceu o jogo
+	public int VerificaVencedor(ArrayList<Pecas> humano, ArrayList<Pecas> maquina){
+		this.humano = humano;
+		this.maquina = maquina;
+		if(humano.isEmpty()){
+			return 1;
+		}
+		else if(maquina.isEmpty()){
+			return 0;
+		}
+		else{
+			return 10;
+		}
+	}
 
 }
