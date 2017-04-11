@@ -2030,7 +2030,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -2127,7 +2127,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -2224,7 +2224,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -2330,7 +2330,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -2427,7 +2427,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -2524,7 +2524,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -2621,7 +2621,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -2718,7 +2718,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -2815,7 +2815,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -2912,7 +2912,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -3009,7 +3009,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -3106,7 +3106,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -4794,7 +4794,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -4891,7 +4891,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -4988,7 +4988,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -5085,7 +5085,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -5182,7 +5182,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -5279,7 +5279,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -5376,7 +5376,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -5473,7 +5473,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -5570,7 +5570,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -5667,7 +5667,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -5764,7 +5764,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -5861,7 +5861,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -7561,7 +7561,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -7658,7 +7658,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -7755,7 +7755,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -7852,7 +7852,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -7949,7 +7949,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -8046,7 +8046,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -8143,7 +8143,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -8240,7 +8240,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -8337,7 +8337,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -8434,7 +8434,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -8531,7 +8531,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -8628,7 +8628,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -10338,7 +10338,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -10435,7 +10435,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -10532,7 +10532,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -10629,7 +10629,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -10726,7 +10726,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -10823,7 +10823,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -10920,7 +10920,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -11017,7 +11017,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -11114,7 +11114,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -11211,7 +11211,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -11308,7 +11308,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -11405,7 +11405,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -13104,7 +13104,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -13210,7 +13210,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -13316,7 +13316,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -13422,7 +13422,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -13528,7 +13528,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -13634,7 +13634,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -13740,7 +13740,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -13846,7 +13846,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -13952,7 +13952,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -14058,7 +14058,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -14164,7 +14164,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -14261,7 +14261,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -15982,7 +15982,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -16088,7 +16088,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -16194,7 +16194,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -16300,7 +16300,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -16406,7 +16406,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -16512,7 +16512,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -16618,7 +16618,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -16724,7 +16724,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -16830,7 +16830,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -16936,7 +16936,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -17042,7 +17042,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -17148,7 +17148,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -18887,7 +18887,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -18993,7 +18993,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -19099,7 +19099,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -19205,7 +19205,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -19311,7 +19311,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -19417,7 +19417,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -19523,7 +19523,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -19629,7 +19629,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -19735,7 +19735,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -19841,7 +19841,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -19947,7 +19947,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -20053,7 +20053,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -21768,7 +21768,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -21874,7 +21874,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -21980,7 +21980,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -22086,7 +22086,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -22192,7 +22192,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -22298,7 +22298,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -22404,7 +22404,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -22510,7 +22510,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -22616,7 +22616,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -22722,7 +22722,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -22828,7 +22828,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -22925,7 +22925,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -24640,7 +24640,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -24746,7 +24746,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -24852,7 +24852,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -24958,7 +24958,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -25064,7 +25064,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -25170,7 +25170,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -25276,7 +25276,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -25382,7 +25382,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -25488,7 +25488,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -25594,7 +25594,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -25700,7 +25700,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -25806,7 +25806,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -27522,7 +27522,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -27628,7 +27628,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -27734,7 +27734,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -27840,7 +27840,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -27946,7 +27946,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -28052,7 +28052,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -28158,7 +28158,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -28264,7 +28264,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -28370,7 +28370,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -28476,7 +28476,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -28582,7 +28582,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -28688,7 +28688,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -30403,7 +30403,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -30509,7 +30509,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -30615,7 +30615,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -30721,7 +30721,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -30827,7 +30827,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -30933,7 +30933,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -31039,7 +31039,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -31145,7 +31145,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -31251,7 +31251,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -31357,7 +31357,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -31463,7 +31463,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -31569,7 +31569,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -33285,7 +33285,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -33391,7 +33391,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -33497,7 +33497,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -33603,7 +33603,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -33709,7 +33709,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -33815,7 +33815,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -33921,7 +33921,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -34027,7 +34027,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -34133,7 +34133,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -34239,7 +34239,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -34345,7 +34345,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -34451,7 +34451,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -36167,7 +36167,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -36273,7 +36273,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -36379,7 +36379,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -36485,7 +36485,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -36591,7 +36591,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -36697,7 +36697,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -36803,7 +36803,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -36909,7 +36909,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -37015,7 +37015,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -37121,7 +37121,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -37227,7 +37227,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -37324,7 +37324,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -39039,7 +39039,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -39145,7 +39145,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -39251,7 +39251,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -39357,7 +39357,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -39463,7 +39463,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -39569,7 +39569,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -39675,7 +39675,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -39781,7 +39781,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -39887,7 +39887,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -39993,7 +39993,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -40099,7 +40099,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -40205,7 +40205,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -41921,7 +41921,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -42027,7 +42027,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -42133,7 +42133,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -42239,7 +42239,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -42345,7 +42345,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -42451,7 +42451,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -42557,7 +42557,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -42663,7 +42663,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -42769,7 +42769,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -42875,7 +42875,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -42981,7 +42981,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -43078,7 +43078,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -44792,7 +44792,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -44898,7 +44898,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -45004,7 +45004,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -45110,7 +45110,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -45216,7 +45216,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -45322,7 +45322,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -45428,7 +45428,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -45534,7 +45534,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -45640,7 +45640,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -45746,7 +45746,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -45852,7 +45852,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -45958,7 +45958,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -47673,7 +47673,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -47779,7 +47779,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -47885,7 +47885,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -47991,7 +47991,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -48097,7 +48097,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -48203,7 +48203,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -48309,7 +48309,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -48415,7 +48415,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -48521,7 +48521,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -48627,7 +48627,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -48733,7 +48733,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -48830,7 +48830,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -50544,7 +50544,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -50650,7 +50650,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -50756,7 +50756,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -50862,7 +50862,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -50959,7 +50959,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -51065,7 +51065,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -51171,7 +51171,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -51277,7 +51277,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -51383,7 +51383,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -51489,7 +51489,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -51586,7 +51586,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
@@ -51683,7 +51683,7 @@ public class TelaDoJogo extends JFrame {
 
 								// testa se a pedra comprada pode ser jogada no
 								// tabuleiro
-								String p = al.testaPedraCompraMaquinaHorizontal(arrayTabuleiro, arrayM);
+								String p = al.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
 								if (p == "") {
 									/**
