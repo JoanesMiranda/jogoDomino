@@ -1526,7 +1526,7 @@ public class TelaDoJogo extends JFrame {
 					}
 					/** Inteligência simples da maquina **/
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) != 0) {
-						String valor = al.escolhePedraMaquinaHorizontal(arrayTabuleiro, arrayM);
+						String valor = al.escolhePedraMaquinaHorizontalCasoDoze(arrayTabuleiro, arrayM);
 
 						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
@@ -1627,7 +1627,7 @@ public class TelaDoJogo extends JFrame {
 					}
 					/** Inteligência simples da maquina **/
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p1) != 0) {
-						String valor = al.escolhePedraMaquinaHorizontal(arrayTabuleiro, arrayM);
+						String valor = al.escolhePedraMaquinaVertical(arrayTabuleiro, arrayM);
 
 						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
@@ -4287,7 +4287,7 @@ public class TelaDoJogo extends JFrame {
 					}
 					/** Inteligência simples da maquina **/
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) != 0) {
-						String valor = al.escolhePedraMaquinaHorizontal(arrayTabuleiro, arrayM);
+						String valor = al.escolhePedraMaquinaHorizontalCasoDoze(arrayTabuleiro, arrayM);
 
 						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
@@ -4389,7 +4389,7 @@ public class TelaDoJogo extends JFrame {
 					}
 					/** Inteligência simples da maquina **/
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p2) != 0) {
-						String valor = al.escolhePedraMaquinaHorizontal(arrayTabuleiro, arrayM);
+						String valor = al.escolhePedraMaquinaVertical(arrayTabuleiro, arrayM);
 
 						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
@@ -7058,7 +7058,7 @@ public class TelaDoJogo extends JFrame {
 					}
 					/** Inteligência simples da maquina **/
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) != 0) {
-						String valor = al.escolhePedraMaquinaHorizontal(arrayTabuleiro, arrayM);
+						String valor = al.escolhePedraMaquinaHorizontalCasoDoze(arrayTabuleiro, arrayM);
 
 						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
@@ -7157,7 +7157,7 @@ public class TelaDoJogo extends JFrame {
 					}
 					/** Inteligência simples da maquina **/
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p3) != 0) {
-						String valor = al.escolhePedraMaquinaHorizontal(arrayTabuleiro, arrayM);
+						String valor = al.escolhePedraMaquinaVertical(arrayTabuleiro, arrayM);
 
 						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
@@ -9834,7 +9834,7 @@ public class TelaDoJogo extends JFrame {
 					}
 					/** Inteligência simples da maquina **/
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) != 0) {
-						String valor = al.escolhePedraMaquinaHorizontal(arrayTabuleiro, arrayM);
+						String valor = al.escolhePedraMaquinaHorizontalCasoDoze(arrayTabuleiro, arrayM);
 
 						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
@@ -9933,7 +9933,7 @@ public class TelaDoJogo extends JFrame {
 					}
 					/** Inteligência simples da maquina **/
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p4) != 0) {
-						String valor = al.escolhePedraMaquinaHorizontal(arrayTabuleiro, arrayM);
+						String valor = al.escolhePedraMaquinaVertical(arrayTabuleiro, arrayM);
 
 						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
@@ -12591,7 +12591,7 @@ public class TelaDoJogo extends JFrame {
 					}
 					/** Inteligência simples da maquina **/
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p5) != 0) {
-						String valor = al.escolhePedraMaquinaHorizontal(arrayTabuleiro, arrayM);
+						String valor = al.escolhePedraMaquinaHorizontalCasoDoze(arrayTabuleiro, arrayM);
 
 						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
@@ -12691,7 +12691,7 @@ public class TelaDoJogo extends JFrame {
 					}
 					/** Inteligência simples da maquina **/
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p5) != 0) {
-						String valor = al.escolhePedraMaquinaHorizontal(arrayTabuleiro, arrayM);
+						String valor = al.escolhePedraMaquinaVertical(arrayTabuleiro, arrayM);
 
 						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
@@ -15468,7 +15468,7 @@ public class TelaDoJogo extends JFrame {
 					}
 					/** Inteligência simples da maquina **/
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p6) != 0) {
-						String valor = al.escolhePedraMaquinaHorizontal(arrayTabuleiro, arrayM);
+						String valor = al.escolhePedraMaquinaHorizontalCasoDoze(arrayTabuleiro, arrayM);
 
 						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
@@ -15569,7 +15569,7 @@ public class TelaDoJogo extends JFrame {
 					}
 					/** Inteligência simples da maquina **/
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p6) != 0) {
-						String valor = al.escolhePedraMaquinaHorizontal(arrayTabuleiro, arrayM);
+						String valor = al.escolhePedraMaquinaVertical(arrayTabuleiro, arrayM);
 
 						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
@@ -18356,7 +18356,7 @@ public class TelaDoJogo extends JFrame {
 					/** Inteligência simples da maquina **/
 
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p7) != 0) {
-						String valor = al.escolhePedraMaquinaHorizontal(arrayTabuleiro, arrayM);
+						String valor = al.escolhePedraMaquinaHorizontalCasoDoze(arrayTabuleiro, arrayM);
 
 						if (valor == "") {
 							JOptionPane.showMessageDialog(null, "Maquina passa ou compra");
@@ -18474,7 +18474,7 @@ public class TelaDoJogo extends JFrame {
 					}
 					/** Inteligência simples da maquina **/
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p7) != 0) {
-						String valor = al.escolhePedraMaquinaHorizontal(arrayTabuleiro, arrayM);
+						String valor = al.escolhePedraMaquinaVertical(arrayTabuleiro, arrayM);
 
 						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
@@ -21253,7 +21253,7 @@ public class TelaDoJogo extends JFrame {
 					}
 					/** Inteligência simples da maquina **/
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p8) != 0) {
-						String valor = al.escolhePedraMaquinaHorizontal(arrayTabuleiro, arrayM);
+						String valor = al.escolhePedraMaquinaHorizontalCasoDoze(arrayTabuleiro, arrayM);
 
 						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
@@ -21354,7 +21354,7 @@ public class TelaDoJogo extends JFrame {
 					}
 					/** Inteligência simples da maquina **/
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p8) != 0) {
-						String valor = al.escolhePedraMaquinaHorizontal(arrayTabuleiro, arrayM);
+						String valor = al.escolhePedraMaquinaVertical(arrayTabuleiro, arrayM);
 
 						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
@@ -24126,7 +24126,7 @@ public class TelaDoJogo extends JFrame {
 					}
 					/** Inteligência simples da maquina **/
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p9) != 0) {
-						String valor = al.escolhePedraMaquinaHorizontal(arrayTabuleiro, arrayM);
+						String valor = al.escolhePedraMaquinaHorizontalCasoDoze(arrayTabuleiro, arrayM);
 
 						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
@@ -24226,7 +24226,7 @@ public class TelaDoJogo extends JFrame {
 					}
 					/** Inteligência simples da maquina **/
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p9) != 0) {
-						String valor = al.escolhePedraMaquinaHorizontal(arrayTabuleiro, arrayM);
+						String valor = al.escolhePedraMaquinaVertical(arrayTabuleiro, arrayM);
 
 						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
@@ -27007,7 +27007,7 @@ public class TelaDoJogo extends JFrame {
 					}
 					/** Inteligência simples da maquina **/
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p10) != 0) {
-						String valor = al.escolhePedraMaquinaHorizontal(arrayTabuleiro, arrayM);
+						String valor = al.escolhePedraMaquinaHorizontalCasoDoze(arrayTabuleiro, arrayM);
 
 						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
@@ -27108,7 +27108,7 @@ public class TelaDoJogo extends JFrame {
 					}
 					/** Inteligência simples da maquina **/
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p10) != 0) {
-						String valor = al.escolhePedraMaquinaHorizontal(arrayTabuleiro, arrayM);
+						String valor = al.escolhePedraMaquinaVertical(arrayTabuleiro, arrayM);
 
 						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
@@ -29889,7 +29889,7 @@ public class TelaDoJogo extends JFrame {
 					}
 					/** Inteligência simples da maquina **/
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p11) != 0) {
-						String valor = al.escolhePedraMaquinaHorizontal(arrayTabuleiro, arrayM);
+						String valor = al.escolhePedraMaquinaHorizontalCasoDoze(arrayTabuleiro, arrayM);
 
 						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
@@ -29989,7 +29989,7 @@ public class TelaDoJogo extends JFrame {
 					}
 					/** Inteligência simples da maquina **/
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p11) != 0) {
-						String valor = al.escolhePedraMaquinaHorizontal(arrayTabuleiro, arrayM);
+						String valor = al.escolhePedraMaquinaVertical(arrayTabuleiro, arrayM);
 
 						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
@@ -32770,7 +32770,7 @@ public class TelaDoJogo extends JFrame {
 					}
 					/** Inteligência simples da maquina **/
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p12) != 0) {
-						String valor = al.escolhePedraMaquinaHorizontal(arrayTabuleiro, arrayM);
+						String valor = al.escolhePedraMaquinaHorizontalCasoDoze(arrayTabuleiro, arrayM);
 
 						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
@@ -32871,7 +32871,7 @@ public class TelaDoJogo extends JFrame {
 					}
 					/** Inteligência simples da maquina **/
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p12) != 0) {
-						String valor = al.escolhePedraMaquinaHorizontal(arrayTabuleiro, arrayM);
+						String valor = al.escolhePedraMaquinaVertical(arrayTabuleiro, arrayM);
 
 						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
@@ -35652,7 +35652,7 @@ public class TelaDoJogo extends JFrame {
 					}
 					/** Inteligência simples da maquina **/
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p13) != 0) {
-						String valor = al.escolhePedraMaquinaHorizontal(arrayTabuleiro, arrayM);
+						String valor = al.escolhePedraMaquinaHorizontalCasoDoze(arrayTabuleiro, arrayM);
 
 						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
@@ -35753,7 +35753,7 @@ public class TelaDoJogo extends JFrame {
 					}
 					/** Inteligência simples da maquina **/
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p13) != 0) {
-						String valor = al.escolhePedraMaquinaHorizontal(arrayTabuleiro, arrayM);
+						String valor = al.escolhePedraMaquinaVertical(arrayTabuleiro, arrayM);
 
 						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
@@ -38524,7 +38524,7 @@ public class TelaDoJogo extends JFrame {
 					}
 					/** Inteligência simples da maquina **/
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p14) != 0) {
-						String valor = al.escolhePedraMaquinaHorizontal(arrayTabuleiro, arrayM);
+						String valor = al.escolhePedraMaquinaHorizontalCasoDoze(arrayTabuleiro, arrayM);
 
 						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
@@ -38625,7 +38625,7 @@ public class TelaDoJogo extends JFrame {
 					}
 					/** Inteligência simples da maquina **/
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p14) != 0) {
-						String valor = al.escolhePedraMaquinaHorizontal(arrayTabuleiro, arrayM);
+						String valor = al.escolhePedraMaquinaVertical(arrayTabuleiro, arrayM);
 
 						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
@@ -41406,7 +41406,7 @@ public class TelaDoJogo extends JFrame {
 					}
 					/** Inteligência simples da maquina **/
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p15) != 0) {
-						String valor = al.escolhePedraMaquinaHorizontal(arrayTabuleiro, arrayM);
+						String valor = al.escolhePedraMaquinaHorizontalCasoDoze(arrayTabuleiro, arrayM);
 
 						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
@@ -41507,7 +41507,7 @@ public class TelaDoJogo extends JFrame {
 					}
 					/** Inteligência simples da maquina **/
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p15) != 0) {
-						String valor = al.escolhePedraMaquinaHorizontal(arrayTabuleiro, arrayM);
+						String valor = al.escolhePedraMaquinaVertical(arrayTabuleiro, arrayM);
 
 						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
@@ -44278,7 +44278,7 @@ public class TelaDoJogo extends JFrame {
 					}
 					/** Inteligência simples da maquina **/
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p16) != 0) {
-						String valor = al.escolhePedraMaquinaHorizontal(arrayTabuleiro, arrayM);
+						String valor = al.escolhePedraMaquinaHorizontalCasoDoze(arrayTabuleiro, arrayM);
 
 						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
@@ -44378,7 +44378,7 @@ public class TelaDoJogo extends JFrame {
 					}
 					/** Inteligência simples da maquina **/
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p16) != 0) {
-						String valor = al.escolhePedraMaquinaHorizontal(arrayTabuleiro, arrayM);
+						String valor = al.escolhePedraMaquinaVertical(arrayTabuleiro, arrayM);
 
 						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
@@ -47159,7 +47159,7 @@ public class TelaDoJogo extends JFrame {
 					}
 					/** Inteligência simples da maquina **/
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p17) != 0) {
-						String valor = al.escolhePedraMaquinaHorizontal(arrayTabuleiro, arrayM);
+						String valor = al.escolhePedraMaquinaHorizontalCasoDoze(arrayTabuleiro, arrayM);
 
 						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
@@ -47259,7 +47259,7 @@ public class TelaDoJogo extends JFrame {
 					}
 					/** Inteligência simples da maquina **/
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p17) != 0) {
-						String valor = al.escolhePedraMaquinaHorizontal(arrayTabuleiro, arrayM);
+						String valor = al.escolhePedraMaquinaVertical(arrayTabuleiro, arrayM);
 
 						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
@@ -48819,16 +48819,7 @@ public class TelaDoJogo extends JFrame {
 						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
 							//////////////////////////////////////////////////////////////////////////////////////////////////////////////
-							// possui um rando com 0 e 1, caso 0 a maquina
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// passa,
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// caso
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// 1
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// ela
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// faz
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// uma
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// compra
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// no
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// array
+						
 							int i = al.maquinaCompraPassa();
 							if (i == 0) {
 								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
@@ -48901,7 +48892,7 @@ public class TelaDoJogo extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 
 				++aux2;
-				Pecas p18 = arrayH.get(19);
+				Pecas p18 = arrayH.get(17);
 
 				String ladoa = p18.getLadoEsquerdo().toString();
 				String ladob = p18.getLadoDireito().toString();
@@ -50040,7 +50031,7 @@ public class TelaDoJogo extends JFrame {
 					}
 					/** Inteligência simples da maquina **/
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p18) != 0) {
-						String valor = al.escolhePedraMaquinaHorizontal(arrayTabuleiro, arrayM);
+						String valor = al.escolhePedraMaquinaHorizontalCasoDoze(arrayTabuleiro, arrayM);
 
 						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
@@ -50139,7 +50130,7 @@ public class TelaDoJogo extends JFrame {
 					}
 					/** Inteligência simples da maquina **/
 					if (al.verificaLadosPedraEsquerda(arrayTabuleiro, p18) != 0) {
-						String valor = al.escolhePedraMaquinaHorizontal(arrayTabuleiro, arrayM);
+						String valor = al.escolhePedraMaquinaVertical(arrayTabuleiro, arrayM);
 
 						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
@@ -50957,16 +50948,7 @@ public class TelaDoJogo extends JFrame {
 						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
 							//////////////////////////////////////////////////////////////////////////////////////////////////////////////
-							// possui um rando com 0 e 1, caso 0 a maquina
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// passa,
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// caso
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// 1
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// ela
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// faz
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// uma
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// compra
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// no
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// array
+							
 							int i = al.maquinaCompraPassa();
 							if (i == 0) {
 								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");

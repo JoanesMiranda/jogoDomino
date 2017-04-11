@@ -158,6 +158,28 @@ public class Actions {
 		return valorPeca;
 	}
 	
+	public String escolhePedraMaquinaHorizontalCasoDoze(ArrayList<Pecas> tabuleiro, ArrayList<Pecas> maquina) {
+		String valorPeca = "";
+		for (Pecas m : maquina) {
+			if (m.getLadoEsquerdo() == tabuleiro.get(tabuleiro.size() - 1).getLadoEsquerdo()) {
+				tabuleiro.add(m);
+				valorPeca = m.getLadoEsquerdo().toString() + m.getLadoDireito().toString();
+				maquina.remove(maquina.indexOf(m));// apaga a pedra encontra no array da maquina
+				break;
+			} else if (m.getLadoDireito() == tabuleiro.get(tabuleiro.size() - 1).getLadoEsquerdo()) {
+
+					Pecas p = new Pecas(m.getLadoDireito(), m.getLadoEsquerdo());
+					tabuleiro.add(m);
+					valorPeca = p.getLadoEsquerdo().toString() + p.getLadoDireito().toString();
+					maquina.remove(maquina.indexOf(m));// apaga a pedra encontra no array da maquina
+					break;
+			}
+		}
+		return valorPeca;
+	}
+	
+	
+	
 	// escolhe a peça para o CPU jogar na Vertical.
 		public String escolhePedraMaquinaVertical(ArrayList<Pecas> tabuleiro, ArrayList<Pecas> maquina) {
 			String valorPeca = "";
@@ -179,7 +201,9 @@ public class Actions {
 			}
 			return valorPeca;
 		}
-	
+		
+		
+
 	
 	
 
