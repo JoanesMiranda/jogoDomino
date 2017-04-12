@@ -387,6 +387,10 @@ public class TelaDoJogo extends JFrame {
 				case 1:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p1);
+						
+						arrayH.remove(0);
+						arrayH.add(0, new Pecas(null, null));
+						
 						btnhumano1.setEnabled(false);
 						btn_1.setEnabled(true);
 						btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
@@ -422,16 +426,7 @@ public class TelaDoJogo extends JFrame {
 						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
 							//////////////////////////////////////////////////////////////////////////////////////////////////////////////
-							// possui um rando com 0 e 1, caso 0 a maquina
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// passa,
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// caso
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// 1
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// ela
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// faz
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// uma
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// compra
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// no
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// array
+							
 							int i = al.maquinaCompraPassa();
 							if (i == 0) {
 								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
@@ -500,6 +495,10 @@ public class TelaDoJogo extends JFrame {
 				case 2:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p1);
+						arrayH.remove(0);
+						arrayH.add(0, new Pecas(null, null));
+						
+						
 						btnhumano1.setEnabled(false);
 						btn_2.setEnabled(true);
 						btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
@@ -529,16 +528,7 @@ public class TelaDoJogo extends JFrame {
 						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
 							//////////////////////////////////////////////////////////////////////////////////////////////////////////////
-							// possui um rando com 0 e 1, caso 0 a maquina
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// passa,
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// caso
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// 1
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// ela
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// faz
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// uma
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// compra
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// no
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// array
+							
 							int i = al.maquinaCompraPassa();
 							if (i == 0) {
 								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
@@ -606,6 +596,8 @@ public class TelaDoJogo extends JFrame {
 				case 3:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p1);
+						arrayH.remove(0);
+						arrayH.add(0, new Pecas(null, null));
 						btnhumano1.setEnabled(false);
 						btn_3.setEnabled(true);
 						btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
@@ -713,6 +705,8 @@ public class TelaDoJogo extends JFrame {
 				case 4:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p1);
+						arrayH.remove(0);
+						arrayH.add(0, new Pecas(null, null));
 						btnhumano1.setEnabled(false);
 						btn_4.setEnabled(true);
 						btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
@@ -821,6 +815,8 @@ public class TelaDoJogo extends JFrame {
 				case 5:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p1);
+						arrayH.remove(0);
+						arrayH.add(0, new Pecas(null, null));
 						btnhumano1.setEnabled(false);
 						btn_5.setEnabled(true);
 						btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
@@ -928,6 +924,8 @@ public class TelaDoJogo extends JFrame {
 				case 6:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p1);
+						arrayH.remove(0);
+						arrayH.add(0, new Pecas(null, null));
 						btnhumano1.setEnabled(false);
 						btn_6.setEnabled(true);
 						btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
@@ -1035,6 +1033,8 @@ public class TelaDoJogo extends JFrame {
 				case 7:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p1);
+						arrayH.remove(0);
+						arrayH.add(0, new Pecas(null, null));
 						btnhumano1.setEnabled(false);
 						btn_7.setEnabled(true);
 						btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
@@ -1142,6 +1142,8 @@ public class TelaDoJogo extends JFrame {
 				case 8:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p1);
+						arrayH.remove(0);
+						arrayH.add(0, new Pecas(null, null));
 						btnhumano1.setEnabled(false);
 						btn_8.setEnabled(true);
 						btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
@@ -1250,6 +1252,8 @@ public class TelaDoJogo extends JFrame {
 				case 9:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p1);
+						arrayH.remove(0);
+						arrayH.add(0, new Pecas(null, null));
 						btnhumano1.setEnabled(false);
 						btn_9.setEnabled(true);
 						btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
@@ -1358,6 +1362,8 @@ public class TelaDoJogo extends JFrame {
 				case 10:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p1);
+						arrayH.remove(0);
+						arrayH.add(0, new Pecas(null, null));
 						btnhumano1.setEnabled(false);
 						btn_10.setEnabled(true);
 						btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
@@ -1466,6 +1472,8 @@ public class TelaDoJogo extends JFrame {
 				case 11:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p1);
+						arrayH.remove(0);
+						arrayH.add(0, new Pecas(null, null));
 						btnhumano1.setEnabled(false);
 						btn_11.setEnabled(true);
 						btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
@@ -1572,6 +1580,8 @@ public class TelaDoJogo extends JFrame {
 				case 12:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p1);
+						arrayH.remove(0);
+						arrayH.add(0, new Pecas(null, null));
 						btnhumano1.setEnabled(false);
 						btn_12.setEnabled(true);
 						btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
@@ -1671,6 +1681,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p1);
+						arrayH.remove(0);
+						arrayH.add(0, new Pecas(null, null));
 						btnhumano1.setEnabled(false);
 						btn_13.setEnabled(true);
 						btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l1 + ".png"));
@@ -1777,6 +1789,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p1);
+						arrayH.remove(0);
+						arrayH.add(0, new Pecas(null, null));
 						btnhumano1.setEnabled(false);
 						btn_14.setEnabled(true);
 						btn_14.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l1 + ".png"));
@@ -1880,6 +1894,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p1);
+						arrayH.remove(0);
+						arrayH.add(0, new Pecas(null, null));
 						btnhumano1.setEnabled(false);
 						btn_15.setEnabled(true);
 						btn_15.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l1 + ".png"));
@@ -1983,6 +1999,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p1);
+						arrayH.remove(0);
+						arrayH.add(0, new Pecas(null, null));
 						btnhumano1.setEnabled(false);
 						btn_16.setEnabled(true);
 						btn_16.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l1 + ".png"));
@@ -2086,6 +2104,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p1);
+						arrayH.remove(0);
+						arrayH.add(0, new Pecas(null, null));
 						btnhumano1.setEnabled(false);
 						btn_17.setEnabled(true);
 						btn_17.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
@@ -2189,6 +2209,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p1);
+						arrayH.remove(0);
+						arrayH.add(0, new Pecas(null, null));
 						btnhumano1.setEnabled(false);
 						btn_18.setEnabled(true);
 						btn_18.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
@@ -2292,6 +2314,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p1);
+						arrayH.remove(0);
+						arrayH.add(0, new Pecas(null, null));
 						btnhumano1.setEnabled(false);
 						btn_19.setEnabled(true);
 						btn_19.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
@@ -2395,6 +2419,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p1);
+						arrayH.remove(0);
+						arrayH.add(0, new Pecas(null, null));
 						btnhumano1.setEnabled(false);
 						btn_20.setEnabled(true);
 						btn_20.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
@@ -2507,6 +2533,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p1);
+						arrayH.remove(0);
+						arrayH.add(0, new Pecas(null, null));
 						btnhumano1.setEnabled(false);
 						btn_21.setEnabled(true);
 						btn_21.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
@@ -2610,6 +2638,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p1);
+						arrayH.remove(0);
+						arrayH.add(0, new Pecas(null, null));
 						btnhumano1.setEnabled(false);
 						btn_22.setEnabled(true);
 						btn_22.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
@@ -2713,6 +2743,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p1);
+						arrayH.remove(0);
+						arrayH.add(0, new Pecas(null, null));
 						btnhumano1.setEnabled(false);
 						btn_23.setEnabled(true);
 						btn_23.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
@@ -2816,6 +2848,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p1);
+						arrayH.remove(0);
+						arrayH.add(0, new Pecas(null, null));
 						btnhumano1.setEnabled(false);
 						btn_24.setEnabled(true);
 						btn_24.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
@@ -2919,6 +2953,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p1);
+						arrayH.remove(0);
+						arrayH.add(0, new Pecas(null, null));
 						btnhumano1.setEnabled(false);
 						btn_25.setEnabled(true);
 						btn_25.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
@@ -3022,6 +3058,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p1);
+						arrayH.remove(0);
+						arrayH.add(0, new Pecas(null, null));
 						btnhumano1.setEnabled(false);
 						btn_26.setEnabled(true);
 						btn_26.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
@@ -3125,6 +3163,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p1);
+						arrayH.remove(0);
+						arrayH.add(0, new Pecas(null, null));
 						btnhumano1.setEnabled(false);
 						btn_27.setEnabled(true);
 						btn_27.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
@@ -3228,6 +3268,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p1);
+						arrayH.remove(0);
+						arrayH.add(0, new Pecas(null, null));
 						btnhumano1.setEnabled(false);
 						btn_28.setEnabled(true);
 						btn_28.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
@@ -3349,6 +3391,8 @@ public class TelaDoJogo extends JFrame {
 				case 1:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p2);
+						arrayH.remove(1);
+						arrayH.add(1, new Pecas(null, null));
 						btnhumano2.setEnabled(false);
 						btn_1.setEnabled(true);
 						btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
@@ -3447,6 +3491,8 @@ public class TelaDoJogo extends JFrame {
 				case 2:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p2);
+						arrayH.remove(1);
+						arrayH.add(1, new Pecas(null, null));
 						btnhumano2.setEnabled(false);
 						btn_2.setEnabled(true);
 						btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
@@ -3544,6 +3590,8 @@ public class TelaDoJogo extends JFrame {
 				case 3:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p2);
+						arrayH.remove(1);
+						arrayH.add(1, new Pecas(null, null));
 						btnhumano2.setEnabled(false);
 						btn_3.setEnabled(true);
 						btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
@@ -3650,6 +3698,8 @@ public class TelaDoJogo extends JFrame {
 				case 4:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p2);
+						arrayH.remove(1);
+						arrayH.add(1, new Pecas(null, null));
 						btnhumano2.setEnabled(false);
 						btn_4.setEnabled(true);
 						btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
@@ -3756,6 +3806,8 @@ public class TelaDoJogo extends JFrame {
 				case 5:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p2);
+						arrayH.remove(1);
+						arrayH.add(1, new Pecas(null, null));
 						btnhumano2.setEnabled(false);
 						btn_5.setEnabled(true);
 						btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
@@ -3863,6 +3915,8 @@ public class TelaDoJogo extends JFrame {
 				case 6:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p2);
+						arrayH.remove(1);
+						arrayH.add(1, new Pecas(null, null));
 						btnhumano2.setEnabled(false);
 						btn_6.setEnabled(true);
 						btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
@@ -3971,6 +4025,8 @@ public class TelaDoJogo extends JFrame {
 				case 7:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p2);
+						arrayH.remove(1);
+						arrayH.add(1, new Pecas(null, null));
 						btnhumano2.setEnabled(false);
 						btn_7.setEnabled(true);
 						btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
@@ -4078,6 +4134,8 @@ public class TelaDoJogo extends JFrame {
 				case 8:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p2);
+						arrayH.remove(1);
+						arrayH.add(1, new Pecas(null, null));
 						btnhumano2.setEnabled(false);
 						btn_8.setEnabled(true);
 						btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
@@ -4186,6 +4244,8 @@ public class TelaDoJogo extends JFrame {
 				case 9:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p2);
+						arrayH.remove(1);
+						arrayH.add(1, new Pecas(null, null));
 						btnhumano2.setEnabled(false);
 						btn_9.setEnabled(true);
 						btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
@@ -4294,6 +4354,8 @@ public class TelaDoJogo extends JFrame {
 				case 10:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p2);
+						arrayH.remove(1);
+						arrayH.add(1, new Pecas(null, null));
 						btnhumano2.setEnabled(false);
 						btn_10.setEnabled(true);
 						btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
@@ -4402,6 +4464,8 @@ public class TelaDoJogo extends JFrame {
 				case 11:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p2);
+						arrayH.remove(1);
+						arrayH.add(1, new Pecas(null, null));
 						btnhumano2.setEnabled(false);
 						btn_11.setEnabled(true);
 						btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
@@ -4501,6 +4565,8 @@ public class TelaDoJogo extends JFrame {
 				case 12:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p2);
+						arrayH.remove(1);
+						arrayH.add(1, new Pecas(null, null));
 						btnhumano2.setEnabled(false);
 						btn_12.setEnabled(true);
 						btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
@@ -4600,6 +4666,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p2);
+						arrayH.remove(1);
+						arrayH.add(1, new Pecas(null, null));
 						btnhumano2.setEnabled(false);
 						btn_13.setEnabled(true);
 						btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l2 + ".png"));
@@ -4708,6 +4776,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p2);
+						arrayH.remove(1);
+						arrayH.add(1, new Pecas(null, null));
 						btnhumano2.setEnabled(false);
 						btn_14.setEnabled(true);
 						btn_14.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l2 + ".png"));
@@ -4812,6 +4882,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p2);
+						arrayH.remove(1);
+						arrayH.add(1, new Pecas(null, null));
 						btnhumano2.setEnabled(false);
 						btn_15.setEnabled(true);
 						btn_15.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l2 + ".png"));
@@ -4915,6 +4987,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p2);
+						arrayH.remove(1);
+						arrayH.add(1, new Pecas(null, null));
 						btnhumano2.setEnabled(false);
 						btn_16.setEnabled(true);
 						btn_16.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l2 + ".png"));
@@ -5018,6 +5092,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p2);
+						arrayH.remove(1);
+						arrayH.add(1, new Pecas(null, null));
 						btnhumano2.setEnabled(false);
 						btn_17.setEnabled(true);
 						btn_17.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
@@ -5121,6 +5197,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p2);
+						arrayH.remove(1);
+						arrayH.add(1, new Pecas(null, null));
 						btnhumano2.setEnabled(false);
 						btn_18.setEnabled(true);
 						btn_18.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
@@ -5224,6 +5302,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p2);
+						arrayH.remove(1);
+						arrayH.add(1, new Pecas(null, null));
 						btnhumano2.setEnabled(false);
 						btn_19.setEnabled(true);
 						btn_19.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
@@ -5327,6 +5407,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p2);
+						arrayH.remove(1);
+						arrayH.add(1, new Pecas(null, null));
 						btnhumano2.setEnabled(false);
 						btn_20.setEnabled(true);
 						btn_20.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
@@ -5430,6 +5512,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p2);
+						arrayH.remove(1);
+						arrayH.add(1, new Pecas(null, null));
 						btnhumano2.setEnabled(false);
 						btn_21.setEnabled(true);
 						btn_21.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
@@ -5533,6 +5617,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p2);
+						arrayH.remove(1);
+						arrayH.add(1, new Pecas(null, null));
 						btnhumano2.setEnabled(false);
 						btn_22.setEnabled(true);
 						btn_22.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
@@ -5636,6 +5722,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p2);
+						arrayH.remove(1);
+						arrayH.add(1, new Pecas(null, null));
 						btnhumano2.setEnabled(false);
 						btn_23.setEnabled(true);
 						btn_23.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
@@ -5739,6 +5827,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p2);
+						arrayH.remove(1);
+						arrayH.add(1, new Pecas(null, null));
 						btnhumano2.setEnabled(false);
 						btn_24.setEnabled(true);
 						btn_24.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
@@ -5842,6 +5932,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p2);
+						arrayH.remove(1);
+						arrayH.add(1, new Pecas(null, null));
 						btnhumano2.setEnabled(false);
 						btn_25.setEnabled(true);
 						btn_25.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
@@ -5945,6 +6037,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p2);
+						arrayH.remove(1);
+						arrayH.add(1, new Pecas(null, null));
 						btnhumano2.setEnabled(false);
 						btn_26.setEnabled(true);
 						btn_26.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
@@ -6048,6 +6142,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p2);
+						arrayH.remove(1);
+						arrayH.add(1, new Pecas(null, null));
 						btnhumano2.setEnabled(false);
 						btn_27.setEnabled(true);
 						btn_27.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
@@ -6151,6 +6247,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p2);
+						arrayH.remove(1);
+						arrayH.add(1, new Pecas(null, null));
 						btnhumano2.setEnabled(false);
 						btn_28.setEnabled(true);
 						btn_28.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
@@ -6273,6 +6371,8 @@ public class TelaDoJogo extends JFrame {
 				case 1:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p3);
+						arrayH.remove(2);
+						arrayH.add(2, new Pecas(null, null));
 						btnhumano3.setEnabled(false);
 						btn_1.setEnabled(true);
 						btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
@@ -6371,6 +6471,8 @@ public class TelaDoJogo extends JFrame {
 				case 2:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p3);
+						arrayH.remove(2);
+						arrayH.add(2, new Pecas(null, null));
 						btnhumano3.setEnabled(false);
 						btn_2.setEnabled(true);
 						btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
@@ -6477,6 +6579,8 @@ public class TelaDoJogo extends JFrame {
 				case 3:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p3);
+						arrayH.remove(2);
+						arrayH.add(2, new Pecas(null, null));
 						btnhumano3.setEnabled(false);
 						btn_3.setEnabled(true);
 						btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
@@ -6583,6 +6687,8 @@ public class TelaDoJogo extends JFrame {
 				case 4:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p3);
+						arrayH.remove(2);
+						arrayH.add(2, new Pecas(null, null));
 						btnhumano3.setEnabled(false);
 						btn_4.setEnabled(true);
 						btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
@@ -6689,6 +6795,8 @@ public class TelaDoJogo extends JFrame {
 				case 5:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p3);
+						arrayH.remove(2);
+						arrayH.add(2, new Pecas(null, null));
 						btnhumano3.setEnabled(false);
 						btn_5.setEnabled(true);
 						btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
@@ -6796,6 +6904,8 @@ public class TelaDoJogo extends JFrame {
 				case 6:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p3);
+						arrayH.remove(2);
+						arrayH.add(2, new Pecas(null, null));
 						btnhumano3.setEnabled(false);
 						btn_6.setEnabled(true);
 						btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
@@ -6902,6 +7012,8 @@ public class TelaDoJogo extends JFrame {
 				case 7:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p3);
+						arrayH.remove(2);
+						arrayH.add(2, new Pecas(null, null));
 						btnhumano3.setEnabled(false);
 						btn_7.setEnabled(true);
 						btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
@@ -7009,6 +7121,8 @@ public class TelaDoJogo extends JFrame {
 				case 8:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p3);
+						arrayH.remove(2);
+						arrayH.add(2, new Pecas(null, null));
 						btnhumano3.setEnabled(false);
 						btn_8.setEnabled(true);
 						btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
@@ -7117,6 +7231,8 @@ public class TelaDoJogo extends JFrame {
 				case 9:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p3);
+						arrayH.remove(2);
+						arrayH.add(2, new Pecas(null, null));
 						btnhumano3.setEnabled(false);
 						btn_9.setEnabled(true);
 						btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
@@ -7225,6 +7341,8 @@ public class TelaDoJogo extends JFrame {
 				case 10:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p3);
+						arrayH.remove(2);
+						arrayH.add(2, new Pecas(null, null));
 						btnhumano3.setEnabled(false);
 						btn_10.setEnabled(true);
 						btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
@@ -7332,6 +7450,8 @@ public class TelaDoJogo extends JFrame {
 				case 11:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p3);
+						arrayH.remove(2);
+						arrayH.add(2, new Pecas(null, null));
 						btnhumano3.setEnabled(false);
 						btn_11.setEnabled(true);
 						btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
@@ -7440,6 +7560,8 @@ public class TelaDoJogo extends JFrame {
 				case 12:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p3);
+						arrayH.remove(2);
+						arrayH.add(2, new Pecas(null, null));
 						btnhumano3.setEnabled(false);
 						btn_12.setEnabled(true);
 						btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
@@ -7538,6 +7660,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p3);
+						arrayH.remove(2);
+						arrayH.add(2, new Pecas(null, null));
 						btnhumano3.setEnabled(false);
 						btn_13.setEnabled(true);
 						btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l3 + ".png"));
@@ -7644,6 +7768,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p3);
+						arrayH.remove(2);
+						arrayH.add(2, new Pecas(null, null));
 						btnhumano3.setEnabled(false);
 						btn_14.setEnabled(true);
 						btn_14.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l3 + ".png"));
@@ -7747,6 +7873,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p3);
+						arrayH.remove(2);
+						arrayH.add(2, new Pecas(null, null));
 						btnhumano3.setEnabled(false);
 						btn_15.setEnabled(true);
 						btn_15.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l3 + ".png"));
@@ -7850,6 +7978,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p3);
+						arrayH.remove(2);
+						arrayH.add(2, new Pecas(null, null));
 						btnhumano3.setEnabled(false);
 						btn_16.setEnabled(true);
 						btn_16.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l3 + ".png"));
@@ -7953,6 +8083,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p3);
+						arrayH.remove(2);
+						arrayH.add(2, new Pecas(null, null));
 						btnhumano3.setEnabled(false);
 						btn_17.setEnabled(true);
 						btn_17.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
@@ -8056,6 +8188,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p3);
+						arrayH.remove(2);
+						arrayH.add(2, new Pecas(null, null));
 						btnhumano3.setEnabled(false);
 						btn_18.setEnabled(true);
 						btn_18.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
@@ -8159,6 +8293,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p3);
+						arrayH.remove(2);
+						arrayH.add(2, new Pecas(null, null));
 						btnhumano3.setEnabled(false);
 						btn_19.setEnabled(true);
 						btn_19.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
@@ -8262,6 +8398,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p3);
+						arrayH.remove(2);
+						arrayH.add(2, new Pecas(null, null));
 						btnhumano3.setEnabled(false);
 						btn_20.setEnabled(true);
 						btn_20.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
@@ -8365,6 +8503,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p3);
+						arrayH.remove(2);
+						arrayH.add(2, new Pecas(null, null));
 						btnhumano3.setEnabled(false);
 						btn_21.setEnabled(true);
 						btn_21.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
@@ -8468,6 +8608,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p3);
+						arrayH.remove(2);
+						arrayH.add(2, new Pecas(null, null));
 						btnhumano3.setEnabled(false);
 						btn_22.setEnabled(true);
 						btn_22.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
@@ -8571,6 +8713,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p3);
+						arrayH.remove(2);
+						arrayH.add(2, new Pecas(null, null));
 						btnhumano3.setEnabled(false);
 						btn_23.setEnabled(true);
 						btn_23.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
@@ -8674,6 +8818,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p3);
+						arrayH.remove(2);
+						arrayH.add(2, new Pecas(null, null));
 						btnhumano3.setEnabled(false);
 						btn_24.setEnabled(true);
 						btn_24.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
@@ -8777,6 +8923,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p3);
+						arrayH.remove(2);
+						arrayH.add(2, new Pecas(null, null));
 						btnhumano3.setEnabled(false);
 						btn_25.setEnabled(true);
 						btn_25.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
@@ -8880,6 +9028,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p3);
+						arrayH.remove(2);
+						arrayH.add(2, new Pecas(null, null));
 						btnhumano3.setEnabled(false);
 						btn_26.setEnabled(true);
 						btn_26.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
@@ -8983,6 +9133,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p3);
+						arrayH.remove(2);
+						arrayH.add(2, new Pecas(null, null));
 						btnhumano3.setEnabled(false);
 						btn_27.setEnabled(true);
 						btn_27.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
@@ -9086,6 +9238,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p3);
+						arrayH.remove(2);
+						arrayH.add(2, new Pecas(null, null));
 						btnhumano3.setEnabled(false);
 						btn_28.setEnabled(true);
 						btn_28.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
@@ -9208,6 +9362,8 @@ public class TelaDoJogo extends JFrame {
 				case 1:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p4);
+						arrayH.remove(3);
+						arrayH.add(3, new Pecas(null, null));
 						btnhumano4.setEnabled(false);
 						btn_1.setEnabled(true);
 						btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
@@ -9314,6 +9470,8 @@ public class TelaDoJogo extends JFrame {
 				case 2:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p4);
+						arrayH.remove(3);
+						arrayH.add(3, new Pecas(null, null));
 						btnhumano4.setEnabled(false);
 						btn_2.setEnabled(true);
 						btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
@@ -9420,6 +9578,8 @@ public class TelaDoJogo extends JFrame {
 				case 3:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p4);
+						arrayH.remove(3);
+						arrayH.add(3, new Pecas(null, null));
 						btnhumano4.setEnabled(false);
 						btn_3.setEnabled(true);
 						btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
@@ -9527,6 +9687,8 @@ public class TelaDoJogo extends JFrame {
 				case 4:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p4);
+						arrayH.remove(3);
+						arrayH.add(3, new Pecas(null, null));
 						btnhumano4.setEnabled(false);
 						btn_4.setEnabled(true);
 						btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
@@ -9633,6 +9795,8 @@ public class TelaDoJogo extends JFrame {
 				case 5:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p4);
+						arrayH.remove(3);
+						arrayH.add(3, new Pecas(null, null));
 						btnhumano4.setEnabled(false);
 						btn_5.setEnabled(true);
 						btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
@@ -9739,6 +9903,8 @@ public class TelaDoJogo extends JFrame {
 				case 6:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p4);
+						arrayH.remove(3);
+						arrayH.add(3, new Pecas(null, null));
 						btnhumano4.setEnabled(false);
 						btn_6.setEnabled(true);
 						btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
@@ -9845,6 +10011,8 @@ public class TelaDoJogo extends JFrame {
 				case 7:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p4);
+						arrayH.remove(3);
+						arrayH.add(3, new Pecas(null, null));
 						btnhumano4.setEnabled(false);
 						btn_7.setEnabled(true);
 						btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
@@ -9952,6 +10120,8 @@ public class TelaDoJogo extends JFrame {
 				case 8:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p4);
+						arrayH.remove(3);
+						arrayH.add(3, new Pecas(null, null));
 						btnhumano4.setEnabled(false);
 						btn_8.setEnabled(true);
 						btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
@@ -10060,6 +10230,8 @@ public class TelaDoJogo extends JFrame {
 				case 9:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p4);
+						arrayH.remove(3);
+						arrayH.add(3, new Pecas(null, null));
 						btnhumano4.setEnabled(false);
 						btn_9.setEnabled(true);
 						btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
@@ -10168,6 +10340,8 @@ public class TelaDoJogo extends JFrame {
 				case 10:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p4);
+						arrayH.remove(3);
+						arrayH.add(3, new Pecas(null, null));
 						btnhumano4.setEnabled(false);
 						btn_10.setEnabled(true);
 						btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
@@ -10276,6 +10450,8 @@ public class TelaDoJogo extends JFrame {
 				case 11:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p4);
+						arrayH.remove(3);
+						arrayH.add(3, new Pecas(null, null));
 						btnhumano4.setEnabled(false);
 						btn_11.setEnabled(true);
 						btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
@@ -10384,6 +10560,8 @@ public class TelaDoJogo extends JFrame {
 				case 12:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p4);
+						arrayH.remove(3);
+						arrayH.add(3, new Pecas(null, null));
 						btnhumano4.setEnabled(false);
 						btn_12.setEnabled(true);
 						btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
@@ -10482,6 +10660,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p4);
+						arrayH.remove(3);
+						arrayH.add(3, new Pecas(null, null));
 						btnhumano4.setEnabled(false);
 						btn_13.setEnabled(true);
 						btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l4 + ".png"));
@@ -10588,6 +10768,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p4);
+						arrayH.remove(3);
+						arrayH.add(3, new Pecas(null, null));
 						btnhumano4.setEnabled(false);
 						btn_14.setEnabled(true);
 						btn_14.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l4 + ".png"));
@@ -10691,6 +10873,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p4);
+						arrayH.remove(3);
+						arrayH.add(3, new Pecas(null, null));
 						btnhumano4.setEnabled(false);
 						btn_15.setEnabled(true);
 						btn_15.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l4 + ".png"));
@@ -10794,6 +10978,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p4);
+						arrayH.remove(3);
+						arrayH.add(3, new Pecas(null, null));
 						btnhumano4.setEnabled(false);
 						btn_16.setEnabled(true);
 						btn_16.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l4 + ".png"));
@@ -10898,6 +11084,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p4);
+						arrayH.remove(3);
+						arrayH.add(3, new Pecas(null, null));
 						btnhumano4.setEnabled(false);
 						btn_17.setEnabled(true);
 						btn_17.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
@@ -11001,6 +11189,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p4);
+						arrayH.remove(3);
+						arrayH.add(3, new Pecas(null, null));
 						btnhumano4.setEnabled(false);
 						btn_18.setEnabled(true);
 						btn_18.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
@@ -11104,6 +11294,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p4);
+						arrayH.remove(3);
+						arrayH.add(3, new Pecas(null, null));
 						btnhumano4.setEnabled(false);
 						btn_19.setEnabled(true);
 						btn_19.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
@@ -11207,6 +11399,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p4);
+						arrayH.remove(3);
+						arrayH.add(3, new Pecas(null, null));
 						btnhumano4.setEnabled(false);
 						btn_20.setEnabled(true);
 						btn_20.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
@@ -11310,6 +11504,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p4);
+						arrayH.remove(3);
+						arrayH.add(3, new Pecas(null, null));
 						btnhumano4.setEnabled(false);
 						btn_21.setEnabled(true);
 						btn_21.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
@@ -11413,6 +11609,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p4);
+						arrayH.remove(3);
+						arrayH.add(3, new Pecas(null, null));
 						btnhumano4.setEnabled(false);
 						btn_22.setEnabled(true);
 						btn_22.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
@@ -11516,6 +11714,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p4);
+						arrayH.remove(3);
+						arrayH.add(3, new Pecas(null, null));
 						btnhumano4.setEnabled(false);
 						btn_23.setEnabled(true);
 						btn_23.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
@@ -11619,6 +11819,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p4);
+						arrayH.remove(3);
+						arrayH.add(3, new Pecas(null, null));
 						btnhumano4.setEnabled(false);
 						btn_24.setEnabled(true);
 						btn_24.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
@@ -11722,6 +11924,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p4);
+						arrayH.remove(3);
+						arrayH.add(3, new Pecas(null, null));
 						btnhumano4.setEnabled(false);
 						btn_25.setEnabled(true);
 						btn_25.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
@@ -11825,6 +12029,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p4);
+						arrayH.remove(3);
+						arrayH.add(3, new Pecas(null, null));
 						btnhumano4.setEnabled(false);
 						btn_26.setEnabled(true);
 						btn_26.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
@@ -11928,6 +12134,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p4);
+						arrayH.remove(3);
+						arrayH.add(3, new Pecas(null, null));
 						btnhumano4.setEnabled(false);
 						btn_27.setEnabled(true);
 						btn_27.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
@@ -12031,6 +12239,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p4);
+						arrayH.remove(3);
+						arrayH.add(3, new Pecas(null, null));
 						btnhumano4.setEnabled(false);
 						btn_28.setEnabled(true);
 						btn_28.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
@@ -12153,6 +12363,8 @@ public class TelaDoJogo extends JFrame {
 				case 1:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p5);
+						arrayH.remove(4);
+						arrayH.add(4, new Pecas(null, null));
 						btnhumano5.setEnabled(false);
 						btn_1.setEnabled(true);
 						btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
@@ -12251,6 +12463,8 @@ public class TelaDoJogo extends JFrame {
 				case 2:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p5);
+						arrayH.remove(4);
+						arrayH.add(4, new Pecas(null, null));
 						btnhumano5.setEnabled(false);
 						btn_2.setEnabled(true);
 						btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
@@ -12348,6 +12562,8 @@ public class TelaDoJogo extends JFrame {
 				case 3:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p5);
+						arrayH.remove(4);
+						arrayH.add(4, new Pecas(null, null));
 						btnhumano5.setEnabled(false);
 						btn_3.setEnabled(true);
 						btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
@@ -12454,6 +12670,8 @@ public class TelaDoJogo extends JFrame {
 				case 4:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p5);
+						arrayH.remove(4);
+						arrayH.add(4, new Pecas(null, null));
 						btnhumano5.setEnabled(false);
 						btn_4.setEnabled(true);
 						btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
@@ -12560,6 +12778,8 @@ public class TelaDoJogo extends JFrame {
 				case 5:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p5);
+						arrayH.remove(4);
+						arrayH.add(4, new Pecas(null, null));
 						btnhumano5.setEnabled(false);
 						btn_5.setEnabled(true);
 						btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
@@ -12666,6 +12886,8 @@ public class TelaDoJogo extends JFrame {
 				case 6:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p5);
+						arrayH.remove(4);
+						arrayH.add(4, new Pecas(null, null));
 						btnhumano5.setEnabled(false);
 						btn_6.setEnabled(true);
 						btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
@@ -12772,6 +12994,8 @@ public class TelaDoJogo extends JFrame {
 				case 7:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p5);
+						arrayH.remove(4);
+						arrayH.add(4, new Pecas(null, null));
 						btnhumano5.setEnabled(false);
 						btn_7.setEnabled(true);
 						btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
@@ -12879,6 +13103,8 @@ public class TelaDoJogo extends JFrame {
 				case 8:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p5);
+						arrayH.remove(4);
+						arrayH.add(4, new Pecas(null, null));
 						btnhumano5.setEnabled(false);
 						btn_8.setEnabled(true);
 						btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
@@ -12987,6 +13213,8 @@ public class TelaDoJogo extends JFrame {
 				case 9:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p5);
+						arrayH.remove(4);
+						arrayH.add(4, new Pecas(null, null));
 						btnhumano5.setEnabled(false);
 						btn_9.setEnabled(true);
 						btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
@@ -13095,6 +13323,8 @@ public class TelaDoJogo extends JFrame {
 				case 10:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p5);
+						arrayH.remove(4);
+						arrayH.add(4, new Pecas(null, null));
 						btnhumano5.setEnabled(false);
 						btn_10.setEnabled(true);
 						btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
@@ -13202,6 +13432,8 @@ public class TelaDoJogo extends JFrame {
 				case 11:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p5);
+						arrayH.remove(4);
+						arrayH.add(4, new Pecas(null, null));
 						btnhumano5.setEnabled(false);
 						btn_11.setEnabled(true);
 						btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
@@ -13309,6 +13541,8 @@ public class TelaDoJogo extends JFrame {
 				case 12:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p5);
+						arrayH.remove(4);
+						arrayH.add(4, new Pecas(null, null));
 						btnhumano5.setEnabled(false);
 						btn_12.setEnabled(true);
 						btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
@@ -13407,6 +13641,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p5);
+						arrayH.remove(4);
+						arrayH.add(4, new Pecas(null, null));
 						btnhumano5.setEnabled(false);
 						btn_13.setEnabled(true);
 						btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l5 + ".png"));
@@ -13514,6 +13750,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p5);
+						arrayH.remove(4);
+						arrayH.add(4, new Pecas(null, null));
 						btnhumano5.setEnabled(false);
 						btn_14.setEnabled(true);
 						btn_14.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l5 + ".png"));
@@ -13617,6 +13855,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p5);
+						arrayH.remove(4);
+						arrayH.add(4, new Pecas(null, null));
 						btnhumano5.setEnabled(false);
 						btn_15.setEnabled(true);
 						btn_15.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l5 + ".png"));
@@ -13720,6 +13960,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p5);
+						arrayH.remove(4);
+						arrayH.add(4, new Pecas(null, null));
 						btnhumano5.setEnabled(false);
 						btn_16.setEnabled(true);
 						btn_16.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l5 + ".png"));
@@ -13823,6 +14065,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p5);
+						arrayH.remove(4);
+						arrayH.add(4, new Pecas(null, null));
 						btnhumano5.setEnabled(false);
 						btn_17.setEnabled(true);
 						btn_17.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
@@ -13935,6 +14179,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p5);
+						arrayH.remove(4);
+						arrayH.add(4, new Pecas(null, null));
 						btnhumano5.setEnabled(false);
 						btn_18.setEnabled(true);
 						btn_18.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
@@ -14047,6 +14293,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p5);
+						arrayH.remove(4);
+						arrayH.add(4, new Pecas(null, null));
 						btnhumano5.setEnabled(false);
 						btn_19.setEnabled(true);
 						btn_19.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
@@ -14159,6 +14407,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p5);
+						arrayH.remove(4);
+						arrayH.add(4, new Pecas(null, null));
 						btnhumano5.setEnabled(false);
 						btn_20.setEnabled(true);
 						btn_20.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
@@ -14271,6 +14521,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p5);
+						arrayH.remove(4);
+						arrayH.add(4, new Pecas(null, null));
 						btnhumano5.setEnabled(false);
 						btn_21.setEnabled(true);
 						btn_21.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
@@ -14383,6 +14635,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p5);
+						arrayH.remove(4);
+						arrayH.add(4, new Pecas(null, null));
 						btnhumano5.setEnabled(false);
 						btn_22.setEnabled(true);
 						btn_22.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
@@ -14495,6 +14749,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p5);
+						arrayH.remove(4);
+						arrayH.add(4, new Pecas(null, null));
 						btnhumano5.setEnabled(false);
 						btn_23.setEnabled(true);
 						btn_23.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
@@ -14607,6 +14863,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p5);
+						arrayH.remove(4);
+						arrayH.add(4, new Pecas(null, null));
 						btnhumano5.setEnabled(false);
 						btn_24.setEnabled(true);
 						btn_24.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
@@ -14719,6 +14977,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p5);
+						arrayH.remove(4);
+						arrayH.add(4, new Pecas(null, null));
 						btnhumano5.setEnabled(false);
 						btn_25.setEnabled(true);
 						btn_25.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
@@ -14831,6 +15091,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p5);
+						arrayH.remove(4);
+						arrayH.add(4, new Pecas(null, null));
 						btnhumano5.setEnabled(false);
 						btn_26.setEnabled(true);
 						btn_26.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
@@ -14943,6 +15205,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p5);
+						arrayH.remove(4);
+						arrayH.add(4, new Pecas(null, null));
 						btnhumano5.setEnabled(false);
 						btn_27.setEnabled(true);
 						btn_27.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
@@ -15055,6 +15319,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p5);
+						arrayH.remove(4);
+						arrayH.add(4, new Pecas(null, null));
 						btnhumano5.setEnabled(false);
 						btn_28.setEnabled(true);
 						btn_28.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
@@ -15176,6 +15442,8 @@ public class TelaDoJogo extends JFrame {
 				case 1:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p6);
+						arrayH.remove(5);
+						arrayH.add(5, new Pecas(null, null));
 						btnhumano6.setEnabled(false);
 						btn_1.setEnabled(true);
 						btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
@@ -15284,6 +15552,8 @@ public class TelaDoJogo extends JFrame {
 				case 2:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p6);
+						arrayH.remove(5);
+						arrayH.add(5, new Pecas(null, null));
 						btnhumano6.setEnabled(false);
 						btn_2.setEnabled(true);
 						btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
@@ -15390,6 +15660,8 @@ public class TelaDoJogo extends JFrame {
 				case 3:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p6);
+						arrayH.remove(5);
+						arrayH.add(5, new Pecas(null, null));
 						btnhumano6.setEnabled(false);
 						btn_3.setEnabled(true);
 						btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
@@ -15496,6 +15768,8 @@ public class TelaDoJogo extends JFrame {
 				case 4:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p6);
+						arrayH.remove(5);
+						arrayH.add(5, new Pecas(null, null));
 						btnhumano6.setEnabled(false);
 						btn_4.setEnabled(true);
 						btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
@@ -15603,6 +15877,8 @@ public class TelaDoJogo extends JFrame {
 				case 5:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p6);
+						arrayH.remove(5);
+						arrayH.add(5, new Pecas(null, null));
 						btnhumano6.setEnabled(false);
 						btn_5.setEnabled(true);
 						btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
@@ -15709,6 +15985,8 @@ public class TelaDoJogo extends JFrame {
 				case 6:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p6);
+						arrayH.remove(5);
+						arrayH.add(5, new Pecas(null, null));
 						btnhumano6.setEnabled(false);
 						btn_6.setEnabled(true);
 						btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
@@ -15815,6 +16093,8 @@ public class TelaDoJogo extends JFrame {
 				case 7:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p6);
+						arrayH.remove(5);
+						arrayH.add(5, new Pecas(null, null));
 						btnhumano6.setEnabled(false);
 						btn_7.setEnabled(true);
 						btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
@@ -15922,6 +16202,8 @@ public class TelaDoJogo extends JFrame {
 				case 8:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p6);
+						arrayH.remove(5);
+						arrayH.add(5, new Pecas(null, null));
 						btnhumano6.setEnabled(false);
 						btn_8.setEnabled(true);
 						btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
@@ -16030,6 +16312,8 @@ public class TelaDoJogo extends JFrame {
 				case 9:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p6);
+						arrayH.remove(5);
+						arrayH.add(5, new Pecas(null, null));
 						btnhumano6.setEnabled(false);
 						btn_9.setEnabled(true);
 						btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
@@ -16138,6 +16422,8 @@ public class TelaDoJogo extends JFrame {
 				case 10:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p6);
+						arrayH.remove(5);
+						arrayH.add(5, new Pecas(null, null));
 						btnhumano6.setEnabled(false);
 						btn_10.setEnabled(true);
 						btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
@@ -16246,6 +16532,8 @@ public class TelaDoJogo extends JFrame {
 				case 11:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p6);
+						arrayH.remove(5);
+						arrayH.add(5, new Pecas(null, null));
 						btnhumano6.setEnabled(false);
 						btn_11.setEnabled(true);
 						btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
@@ -16354,6 +16642,8 @@ public class TelaDoJogo extends JFrame {
 				case 12:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p6);
+						arrayH.remove(5);
+						arrayH.add(5, new Pecas(null, null));
 						btnhumano6.setEnabled(false);
 						btn_12.setEnabled(true);
 						btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
@@ -16453,6 +16743,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p6);
+						arrayH.remove(5);
+						arrayH.add(5, new Pecas(null, null));
 						btnhumano6.setEnabled(false);
 						btn_13.setEnabled(true);
 						btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l6 + ".png"));
@@ -16560,6 +16852,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p6);
+						arrayH.remove(5);
+						arrayH.add(5, new Pecas(null, null));
 						btnhumano6.setEnabled(false);
 						btn_14.setEnabled(true);
 						btn_14.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l6 + ".png"));
@@ -16663,6 +16957,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p6);
+						arrayH.remove(5);
+						arrayH.add(5, new Pecas(null, null));
 						btnhumano6.setEnabled(false);
 						btn_15.setEnabled(true);
 						btn_15.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l6 + ".png"));
@@ -16766,6 +17062,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p6);
+						arrayH.remove(5);
+						arrayH.add(5, new Pecas(null, null));
 						btnhumano6.setEnabled(false);
 						btn_16.setEnabled(true);
 						btn_16.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l6 + ".png"));
@@ -16869,6 +17167,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p6);
+						arrayH.remove(5);
+						arrayH.add(5, new Pecas(null, null));
 						btnhumano6.setEnabled(false);
 						btn_17.setEnabled(true);
 						btn_17.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
@@ -16981,6 +17281,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p6);
+						arrayH.remove(5);
+						arrayH.add(5, new Pecas(null, null));
 						btnhumano6.setEnabled(false);
 						btn_18.setEnabled(true);
 						btn_18.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
@@ -17093,6 +17395,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p6);
+						arrayH.remove(5);
+						arrayH.add(5, new Pecas(null, null));
 						btnhumano6.setEnabled(false);
 						btn_19.setEnabled(true);
 						btn_19.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
@@ -17205,6 +17509,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p6);
+						arrayH.remove(5);
+						arrayH.add(5, new Pecas(null, null));
 						btnhumano6.setEnabled(false);
 						btn_20.setEnabled(true);
 						btn_20.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
@@ -17317,6 +17623,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p6);
+						arrayH.remove(5);
+						arrayH.add(5, new Pecas(null, null));
 						btnhumano6.setEnabled(false);
 						btn_21.setEnabled(true);
 						btn_21.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
@@ -17429,6 +17737,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p6);
+						arrayH.remove(5);
+						arrayH.add(5, new Pecas(null, null));
 						btnhumano6.setEnabled(false);
 						btn_22.setEnabled(true);
 						btn_22.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
@@ -17541,6 +17851,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p6);
+						arrayH.remove(5);
+						arrayH.add(5, new Pecas(null, null));
 						btnhumano6.setEnabled(false);
 						btn_23.setEnabled(true);
 						btn_23.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
@@ -17653,6 +17965,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p6);
+						arrayH.remove(5);
+						arrayH.add(5, new Pecas(null, null));
 						btnhumano6.setEnabled(false);
 						btn_24.setEnabled(true);
 						btn_24.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
@@ -17765,6 +18079,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p6);
+						arrayH.remove(5);
+						arrayH.add(5, new Pecas(null, null));
 						btnhumano6.setEnabled(false);
 						btn_25.setEnabled(true);
 						btn_25.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
@@ -17877,6 +18193,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p6);
+						arrayH.remove(5);
+						arrayH.add(5, new Pecas(null, null));
 						btnhumano6.setEnabled(false);
 						btn_26.setEnabled(true);
 						btn_26.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
@@ -17989,6 +18307,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p6);
+						arrayH.remove(5);
+						arrayH.add(5, new Pecas(null, null));
 						btnhumano6.setEnabled(false);
 						btn_27.setEnabled(true);
 						btn_27.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
@@ -18101,6 +18421,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p6);
+						arrayH.remove(5);
+						arrayH.add(5, new Pecas(null, null));
 						btnhumano6.setEnabled(false);
 						btn_28.setEnabled(true);
 						btn_28.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
@@ -18232,6 +18554,8 @@ public class TelaDoJogo extends JFrame {
 				case 1:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p7);
+						arrayH.remove(6);
+						arrayH.add(6, new Pecas(null, null));
 						btnhumano7.setEnabled(false);
 						btn_1.setEnabled(true);
 						btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
@@ -18339,6 +18663,8 @@ public class TelaDoJogo extends JFrame {
 				case 2:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p7);
+						arrayH.remove(6);
+						arrayH.add(6, new Pecas(null, null));
 						btnhumano7.setEnabled(false);
 						btn_2.setEnabled(true);
 						btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
@@ -18445,6 +18771,8 @@ public class TelaDoJogo extends JFrame {
 				case 3:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p7);
+						arrayH.remove(6);
+						arrayH.add(6, new Pecas(null, null));
 						btnhumano7.setEnabled(false);
 						btn_3.setEnabled(true);
 						btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
@@ -18551,6 +18879,8 @@ public class TelaDoJogo extends JFrame {
 				case 4:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p7);
+						arrayH.remove(6);
+						arrayH.add(6, new Pecas(null, null));
 						btnhumano7.setEnabled(false);
 						btn_4.setEnabled(true);
 						btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
@@ -18657,6 +18987,8 @@ public class TelaDoJogo extends JFrame {
 				case 5:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p7);
+						arrayH.remove(6);
+						arrayH.add(6, new Pecas(null, null));
 						btnhumano7.setEnabled(false);
 						btn_5.setEnabled(true);
 						btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
@@ -18763,6 +19095,8 @@ public class TelaDoJogo extends JFrame {
 				case 6:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p7);
+						arrayH.remove(6);
+						arrayH.add(6, new Pecas(null, null));
 						btnhumano7.setEnabled(false);
 						btn_6.setEnabled(true);
 						btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
@@ -18870,6 +19204,8 @@ public class TelaDoJogo extends JFrame {
 				case 7:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p7);
+						arrayH.remove(6);
+						arrayH.add(6, new Pecas(null, null));
 						btnhumano7.setEnabled(false);
 						btn_7.setEnabled(true);
 						btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
@@ -18977,6 +19313,8 @@ public class TelaDoJogo extends JFrame {
 				case 8:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p7);
+						arrayH.remove(6);
+						arrayH.add(6, new Pecas(null, null));
 						btnhumano7.setEnabled(false);
 						btn_8.setEnabled(true);
 						btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
@@ -19085,6 +19423,8 @@ public class TelaDoJogo extends JFrame {
 				case 9:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p7);
+						arrayH.remove(6);
+						arrayH.add(6, new Pecas(null, null));
 						btnhumano7.setEnabled(false);
 						btn_9.setEnabled(true);
 						btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
@@ -19193,6 +19533,8 @@ public class TelaDoJogo extends JFrame {
 				case 10:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p7);
+						arrayH.remove(6);
+						arrayH.add(6, new Pecas(null, null));
 						btnhumano7.setEnabled(false);
 						btn_10.setEnabled(true);
 						btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
@@ -19301,6 +19643,8 @@ public class TelaDoJogo extends JFrame {
 				case 11:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p7);
+						arrayH.remove(6);
+						arrayH.add(6, new Pecas(null, null));
 						btnhumano7.setEnabled(false);
 						btn_11.setEnabled(true);
 						btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
@@ -19409,6 +19753,8 @@ public class TelaDoJogo extends JFrame {
 				case 12:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p7);
+						arrayH.remove(6);
+						arrayH.add(6, new Pecas(null, null));
 						btnhumano7.setEnabled(false);
 						btn_12.setEnabled(true);
 						btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
@@ -19526,6 +19872,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p7);
+						arrayH.remove(6);
+						arrayH.add(6, new Pecas(null, null));
 						btnhumano2.setEnabled(false);
 						btn_13.setEnabled(true);
 						btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l7 + ".png"));
@@ -19633,6 +19981,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p7);
+						arrayH.remove(6);
+						arrayH.add(6, new Pecas(null, null));
 						btnhumano7.setEnabled(false);
 						btn_14.setEnabled(true);
 						btn_14.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l7 + ".png"));
@@ -19736,6 +20086,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p7);
+						arrayH.remove(6);
+						arrayH.add(6, new Pecas(null, null));
 						btnhumano7.setEnabled(false);
 						btn_15.setEnabled(true);
 						btn_15.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l7 + ".png"));
@@ -19839,6 +20191,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p7);
+						arrayH.remove(6);
+						arrayH.add(6, new Pecas(null, null));
 						btnhumano7.setEnabled(false);
 						btn_16.setEnabled(true);
 						btn_16.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l7 + ".png"));
@@ -19942,6 +20296,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p7);
+						arrayH.remove(6);
+						arrayH.add(6, new Pecas(null, null));
 						btnhumano7.setEnabled(false);
 						btn_17.setEnabled(true);
 						btn_17.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
@@ -20054,6 +20410,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p7);
+						arrayH.remove(6);
+						arrayH.add(6, new Pecas(null, null));
 						btnhumano7.setEnabled(false);
 						btn_18.setEnabled(true);
 						btn_18.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
@@ -20166,6 +20524,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p7);
+						arrayH.remove(6);
+						arrayH.add(6, new Pecas(null, null));
 						btnhumano7.setEnabled(false);
 						btn_19.setEnabled(true);
 						btn_19.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
@@ -20278,6 +20638,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p7);
+						arrayH.remove(6);
+						arrayH.add(6, new Pecas(null, null));
 						btnhumano7.setEnabled(false);
 						btn_20.setEnabled(true);
 						btn_20.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
@@ -20390,6 +20752,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p7);
+						arrayH.remove(6);
+						arrayH.add(6, new Pecas(null, null));
 						btnhumano7.setEnabled(false);
 						btn_21.setEnabled(true);
 						btn_21.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
@@ -20502,6 +20866,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p7);
+						arrayH.remove(6);
+						arrayH.add(6, new Pecas(null, null));
 						btnhumano7.setEnabled(false);
 						btn_22.setEnabled(true);
 						btn_22.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
@@ -20614,6 +20980,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p7);
+						arrayH.remove(6);
+						arrayH.add(6, new Pecas(null, null));
 						btnhumano7.setEnabled(false);
 						btn_23.setEnabled(true);
 						btn_23.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
@@ -20726,6 +21094,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p7);
+						arrayH.remove(6);
+						arrayH.add(6, new Pecas(null, null));
 						btnhumano7.setEnabled(false);
 						btn_24.setEnabled(true);
 						btn_24.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
@@ -20838,6 +21208,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p7);
+						arrayH.remove(6);
+						arrayH.add(6, new Pecas(null, null));
 						btnhumano7.setEnabled(false);
 						btn_25.setEnabled(true);
 						btn_25.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
@@ -20950,6 +21322,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p7);
+						arrayH.remove(6);
+						arrayH.add(6, new Pecas(null, null));
 						btnhumano7.setEnabled(false);
 						btn_26.setEnabled(true);
 						btn_26.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
@@ -21062,6 +21436,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p7);
+						arrayH.remove(6);
+						arrayH.add(6, new Pecas(null, null));
 						btnhumano7.setEnabled(false);
 						btn_27.setEnabled(true);
 						btn_27.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
@@ -21174,6 +21550,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p7);
+						arrayH.remove(6);
+						arrayH.add(6, new Pecas(null, null));
 						btnhumano7.setEnabled(false);
 						btn_28.setEnabled(true);
 						btn_28.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
@@ -21305,6 +21683,8 @@ public class TelaDoJogo extends JFrame {
 				case 1:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p8);
+						arrayH.remove(7);
+						arrayH.add(7, new Pecas(null, null));
 						btnhumano8.setEnabled(false);
 						btn_1.setEnabled(true);
 						btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l8 + ".png"));
@@ -21403,6 +21783,8 @@ public class TelaDoJogo extends JFrame {
 				case 2:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p8);
+						arrayH.remove(7);
+						arrayH.add(7, new Pecas(null, null));
 						btnhumano8.setEnabled(false);
 						btn_2.setEnabled(true);
 						btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l8 + ".png"));
@@ -21509,6 +21891,8 @@ public class TelaDoJogo extends JFrame {
 				case 3:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p8);
+						arrayH.remove(7);
+						arrayH.add(7, new Pecas(null, null));
 						btnhumano8.setEnabled(false);
 						btn_3.setEnabled(true);
 						btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l8 + ".png"));
@@ -21615,6 +21999,8 @@ public class TelaDoJogo extends JFrame {
 				case 4:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p8);
+						arrayH.remove(7);
+						arrayH.add(7, new Pecas(null, null));
 						btnhumano8.setEnabled(false);
 						btn_4.setEnabled(true);
 						btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l8 + ".png"));
@@ -21721,6 +22107,8 @@ public class TelaDoJogo extends JFrame {
 				case 5:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p8);
+						arrayH.remove(7);
+						arrayH.add(7, new Pecas(null, null));
 						btnhumano8.setEnabled(false);
 						btn_5.setEnabled(true);
 						btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l8 + ".png"));
@@ -21828,6 +22216,8 @@ public class TelaDoJogo extends JFrame {
 				case 6:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p8);
+						arrayH.remove(7);
+						arrayH.add(7, new Pecas(null, null));
 						btnhumano8.setEnabled(false);
 						btn_6.setEnabled(true);
 						btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l8 + ".png"));
@@ -21936,6 +22326,8 @@ public class TelaDoJogo extends JFrame {
 				case 7:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p8);
+						arrayH.remove(7);
+						arrayH.add(7, new Pecas(null, null));
 						btnhumano8.setEnabled(false);
 						btn_7.setEnabled(true);
 						btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l8 + ".png"));
@@ -22043,6 +22435,8 @@ public class TelaDoJogo extends JFrame {
 				case 8:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p8);
+						arrayH.remove(7);
+						arrayH.add(7, new Pecas(null, null));
 						btnhumano8.setEnabled(false);
 						btn_8.setEnabled(true);
 						btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l8 + ".png"));
@@ -22151,6 +22545,8 @@ public class TelaDoJogo extends JFrame {
 				case 9:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p8);
+						arrayH.remove(7);
+						arrayH.add(7, new Pecas(null, null));
 						btnhumano8.setEnabled(false);
 						btn_9.setEnabled(true);
 						btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l8 + ".png"));
@@ -22259,6 +22655,8 @@ public class TelaDoJogo extends JFrame {
 				case 10:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p8);
+						arrayH.remove(7);
+						arrayH.add(7, new Pecas(null, null));
 						btnhumano8.setEnabled(false);
 						btn_10.setEnabled(true);
 						btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l8 + ".png"));
@@ -22367,6 +22765,8 @@ public class TelaDoJogo extends JFrame {
 				case 11:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p8);
+						arrayH.remove(7);
+						arrayH.add(7, new Pecas(null, null));
 						btnhumano8.setEnabled(false);
 						btn_11.setEnabled(true);
 						btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l8 + ".png"));
@@ -22475,6 +22875,8 @@ public class TelaDoJogo extends JFrame {
 				case 12:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p8);
+						arrayH.remove(7);
+						arrayH.add(7, new Pecas(null, null));
 						btnhumano8.setEnabled(false);
 						btn_12.setEnabled(true);
 						btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l8 + ".png"));
@@ -22574,6 +22976,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p8);
+						arrayH.remove(7);
+						arrayH.add(7, new Pecas(null, null));
 						btnhumano8.setEnabled(false);
 						btn_13.setEnabled(true);
 						btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l8 + ".png"));
@@ -22681,6 +23085,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p8);
+						arrayH.remove(7);
+						arrayH.add(7, new Pecas(null, null));
 						btnhumano8.setEnabled(false);
 						btn_14.setEnabled(true);
 						btn_14.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l8 + ".png"));
@@ -22785,6 +23191,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p8);
+						arrayH.remove(7);
+						arrayH.add(7, new Pecas(null, null));
 						btnhumano8.setEnabled(false);
 						btn_15.setEnabled(true);
 						btn_15.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l8 + ".png"));
@@ -22888,6 +23296,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p8);
+						arrayH.remove(7);
+						arrayH.add(7, new Pecas(null, null));
 						btnhumano8.setEnabled(false);
 						btn_16.setEnabled(true);
 						btn_16.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l8 + ".png"));
@@ -22991,6 +23401,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p8);
+						arrayH.remove(7);
+						arrayH.add(7, new Pecas(null, null));
 						btnhumano8.setEnabled(false);
 						btn_17.setEnabled(true);
 						btn_17.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l8 + ".png"));
@@ -23103,6 +23515,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p8);
+						arrayH.remove(7);
+						arrayH.add(7, new Pecas(null, null));
 						btnhumano8.setEnabled(false);
 						btn_18.setEnabled(true);
 						btn_18.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l8 + ".png"));
@@ -23215,6 +23629,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p8);
+						arrayH.remove(7);
+						arrayH.add(7, new Pecas(null, null));
 						btnhumano8.setEnabled(false);
 						btn_19.setEnabled(true);
 						btn_19.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l8 + ".png"));
@@ -23327,6 +23743,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p8);
+						arrayH.remove(7);
+						arrayH.add(7, new Pecas(null, null));
 						btnhumano8.setEnabled(false);
 						btn_20.setEnabled(true);
 						btn_20.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l8 + ".png"));
@@ -23439,6 +23857,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p8);
+						arrayH.remove(7);
+						arrayH.add(7, new Pecas(null, null));
 						btnhumano8.setEnabled(false);
 						btn_21.setEnabled(true);
 						btn_21.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l8 + ".png"));
@@ -23551,6 +23971,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p8);
+						arrayH.remove(7);
+						arrayH.add(7, new Pecas(null, null));
 						btnhumano8.setEnabled(false);
 						btn_22.setEnabled(true);
 						btn_22.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l8 + ".png"));
@@ -23663,6 +24085,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p8);
+						arrayH.remove(7);
+						arrayH.add(7, new Pecas(null, null));
 						btnhumano8.setEnabled(false);
 						btn_23.setEnabled(true);
 						btn_23.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l8 + ".png"));
@@ -23775,6 +24199,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p8);
+						arrayH.remove(7);
+						arrayH.add(7, new Pecas(null, null));
 						btnhumano8.setEnabled(false);
 						btn_24.setEnabled(true);
 						btn_24.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l8 + ".png"));
@@ -23887,6 +24313,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p8);
+						arrayH.remove(7);
+						arrayH.add(7, new Pecas(null, null));
 						btnhumano8.setEnabled(false);
 						btn_25.setEnabled(true);
 						btn_25.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l8 + ".png"));
@@ -23999,6 +24427,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p8);
+						arrayH.remove(7);
+						arrayH.add(7, new Pecas(null, null));
 						btnhumano8.setEnabled(false);
 						btn_26.setEnabled(true);
 						btn_26.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l8 + ".png"));
@@ -24111,6 +24541,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p8);
+						arrayH.remove(7);
+						arrayH.add(7, new Pecas(null, null));
 						btnhumano8.setEnabled(false);
 						btn_27.setEnabled(true);
 						btn_27.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l8 + ".png"));
@@ -24223,6 +24655,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p8);
+						arrayH.remove(7);
+						arrayH.add(7, new Pecas(null, null));
 						btnhumano8.setEnabled(false);
 						btn_28.setEnabled(true);
 						btn_28.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l8 + ".png"));
@@ -24346,6 +24780,8 @@ public class TelaDoJogo extends JFrame {
 				case 1:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p9);
+						arrayH.remove(8);
+						arrayH.add(8, new Pecas(null, null));
 						btnhumano9.setEnabled(false);
 						btn_1.setEnabled(true);
 						btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l9 + ".png"));
@@ -24444,6 +24880,8 @@ public class TelaDoJogo extends JFrame {
 				case 2:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p9);
+						arrayH.remove(8);
+						arrayH.add(8, new Pecas(null, null));
 						btnhumano9.setEnabled(false);
 						btn_2.setEnabled(true);
 						btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l9 + ".png"));
@@ -24550,6 +24988,8 @@ public class TelaDoJogo extends JFrame {
 				case 3:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p9);
+						arrayH.remove(8);
+						arrayH.add(8, new Pecas(null, null));
 						btnhumano9.setEnabled(false);
 						btn_3.setEnabled(true);
 						btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l9 + ".png"));
@@ -24656,6 +25096,8 @@ public class TelaDoJogo extends JFrame {
 				case 4:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p9);
+						arrayH.remove(8);
+						arrayH.add(8, new Pecas(null, null));
 						btnhumano9.setEnabled(false);
 						btn_4.setEnabled(true);
 						btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l9 + ".png"));
@@ -24762,6 +25204,8 @@ public class TelaDoJogo extends JFrame {
 				case 5:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p9);
+						arrayH.remove(8);
+						arrayH.add(8, new Pecas(null, null));
 						btnhumano9.setEnabled(false);
 						btn_5.setEnabled(true);
 						btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l9 + ".png"));
@@ -24869,6 +25313,8 @@ public class TelaDoJogo extends JFrame {
 				case 6:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p9);
+						arrayH.remove(8);
+						arrayH.add(8, new Pecas(null, null));
 						btnhumano9.setEnabled(false);
 						btn_6.setEnabled(true);
 						btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l9 + ".png"));
@@ -24977,6 +25423,8 @@ public class TelaDoJogo extends JFrame {
 				case 7:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p9);
+						arrayH.remove(8);
+						arrayH.add(8, new Pecas(null, null));
 						btnhumano9.setEnabled(false);
 						btn_7.setEnabled(true);
 						btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l9 + ".png"));
@@ -25084,6 +25532,8 @@ public class TelaDoJogo extends JFrame {
 				case 8:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p9);
+						arrayH.remove(8);
+						arrayH.add(8, new Pecas(null, null));
 						btnhumano9.setEnabled(false);
 						btn_8.setEnabled(true);
 						btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l9 + ".png"));
@@ -25192,6 +25642,8 @@ public class TelaDoJogo extends JFrame {
 				case 9:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p9);
+						arrayH.remove(8);
+						arrayH.add(8, new Pecas(null, null));
 						btnhumano9.setEnabled(false);
 						btn_9.setEnabled(true);
 						btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l9 + ".png"));
@@ -25300,6 +25752,8 @@ public class TelaDoJogo extends JFrame {
 				case 10:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p9);
+						arrayH.remove(8);
+						arrayH.add(8, new Pecas(null, null));
 						btnhumano9.setEnabled(false);
 						btn_10.setEnabled(true);
 						btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l9 + ".png"));
@@ -25408,6 +25862,8 @@ public class TelaDoJogo extends JFrame {
 				case 11:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p9);
+						arrayH.remove(8);
+						arrayH.add(8, new Pecas(null, null));
 						btnhumano9.setEnabled(false);
 						btn_11.setEnabled(true);
 						btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l9 + ".png"));
@@ -25516,6 +25972,8 @@ public class TelaDoJogo extends JFrame {
 				case 12:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p9);
+						arrayH.remove(8);
+						arrayH.add(8, new Pecas(null, null));
 						btnhumano9.setEnabled(false);
 						btn_12.setEnabled(true);
 						btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l9 + ".png"));
@@ -25615,6 +26073,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p9);
+						arrayH.remove(8);
+						arrayH.add(8, new Pecas(null, null));
 						btnhumano9.setEnabled(false);
 						btn_13.setEnabled(true);
 						btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l9 + ".png"));
@@ -25721,6 +26181,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p9);
+						arrayH.remove(8);
+						arrayH.add(8, new Pecas(null, null));
 						btnhumano9.setEnabled(false);
 						btn_14.setEnabled(true);
 						btn_14.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l9 + ".png"));
@@ -25825,6 +26287,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p9);
+						arrayH.remove(8);
+						arrayH.add(8, new Pecas(null, null));
 						btnhumano9.setEnabled(false);
 						btn_15.setEnabled(true);
 						btn_15.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l9 + ".png"));
@@ -25928,6 +26392,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p9);
+						arrayH.remove(8);
+						arrayH.add(8, new Pecas(null, null));
 						btnhumano9.setEnabled(false);
 						btn_16.setEnabled(true);
 						btn_16.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l9 + ".png"));
@@ -26031,6 +26497,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p9);
+						arrayH.remove(8);
+						arrayH.add(8, new Pecas(null, null));
 						btnhumano9.setEnabled(false);
 						btn_17.setEnabled(true);
 						btn_17.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l9 + ".png"));
@@ -26143,6 +26611,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p9);
+						arrayH.remove(8);
+						arrayH.add(8, new Pecas(null, null));
 						btnhumano9.setEnabled(false);
 						btn_18.setEnabled(true);
 						btn_18.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l9 + ".png"));
@@ -26255,6 +26725,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p9);
+						arrayH.remove(8);
+						arrayH.add(8, new Pecas(null, null));
 						btnhumano9.setEnabled(false);
 						btn_19.setEnabled(true);
 						btn_19.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l9 + ".png"));
@@ -26367,6 +26839,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p9);
+						arrayH.remove(8);
+						arrayH.add(8, new Pecas(null, null));
 						btnhumano9.setEnabled(false);
 						btn_20.setEnabled(true);
 						btn_20.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l9 + ".png"));
@@ -26479,6 +26953,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p9);
+						arrayH.remove(8);
+						arrayH.add(8, new Pecas(null, null));
 						btnhumano9.setEnabled(false);
 						btn_21.setEnabled(true);
 						btn_21.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l9 + ".png"));
@@ -26591,6 +27067,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p9);
+						arrayH.remove(8);
+						arrayH.add(8, new Pecas(null, null));
 						btnhumano9.setEnabled(false);
 						btn_22.setEnabled(true);
 						btn_22.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l9 + ".png"));
@@ -26703,6 +27181,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p9);
+						arrayH.remove(8);
+						arrayH.add(8, new Pecas(null, null));
 						btnhumano9.setEnabled(false);
 						btn_23.setEnabled(true);
 						btn_23.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l9 + ".png"));
@@ -26815,6 +27295,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p9);
+						arrayH.remove(8);
+						arrayH.add(8, new Pecas(null, null));
 						btnhumano9.setEnabled(false);
 						btn_24.setEnabled(true);
 						btn_24.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l9 + ".png"));
@@ -26927,6 +27409,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p9);
+						arrayH.remove(8);
+						arrayH.add(8, new Pecas(null, null));
 						btnhumano9.setEnabled(false);
 						btn_25.setEnabled(true);
 						btn_25.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l9 + ".png"));
@@ -27039,6 +27523,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p9);
+						arrayH.remove(8);
+						arrayH.add(8, new Pecas(null, null));
 						btnhumano9.setEnabled(false);
 						btn_26.setEnabled(true);
 						btn_26.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l9 + ".png"));
@@ -27151,6 +27637,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p9);
+						arrayH.remove(8);
+						arrayH.add(8, new Pecas(null, null));
 						btnhumano9.setEnabled(false);
 						btn_27.setEnabled(true);
 						btn_27.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l9 + ".png"));
@@ -27263,6 +27751,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p9);
+						arrayH.remove(8);
+						arrayH.add(8, new Pecas(null, null));
 						btnhumano9.setEnabled(false);
 						btn_28.setEnabled(true);
 						btn_28.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l9 + ".png"));
@@ -27296,16 +27786,7 @@ public class TelaDoJogo extends JFrame {
 						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
 							//////////////////////////////////////////////////////////////////////////////////////////////////////////////
-							// possui um rando com 0 e 1, caso 0 a maquina
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// passa,
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// caso
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// 1
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// ela
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// faz
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// uma
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// compra
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// no
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// array
+							
 							int i = al.maquinaCompraPassa();
 							if (i == 0) {
 								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
@@ -27395,6 +27876,8 @@ public class TelaDoJogo extends JFrame {
 				case 1:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p10);
+						arrayH.remove(9);
+						arrayH.add(9, new Pecas(null, null));
 						btnhumano10.setEnabled(false);
 						btn_1.setEnabled(true);
 						btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l10 + ".png"));
@@ -27493,6 +27976,8 @@ public class TelaDoJogo extends JFrame {
 				case 2:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p10);
+						arrayH.remove(9);
+						arrayH.add(9, new Pecas(null, null));
 						btnhumano10.setEnabled(false);
 						btn_2.setEnabled(true);
 						btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l10 + ".png"));
@@ -27599,6 +28084,8 @@ public class TelaDoJogo extends JFrame {
 				case 3:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p10);
+						arrayH.remove(9);
+						arrayH.add(9, new Pecas(null, null));
 						btnhumano10.setEnabled(false);
 						btn_3.setEnabled(true);
 						btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l10 + ".png"));
@@ -27705,6 +28192,8 @@ public class TelaDoJogo extends JFrame {
 				case 4:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p10);
+						arrayH.remove(9);
+						arrayH.add(9, new Pecas(null, null));
 						btnhumano10.setEnabled(false);
 						btn_4.setEnabled(true);
 						btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l10 + ".png"));
@@ -27811,6 +28300,8 @@ public class TelaDoJogo extends JFrame {
 				case 5:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p10);
+						arrayH.remove(9);
+						arrayH.add(9, new Pecas(null, null));
 						btnhumano10.setEnabled(false);
 						btn_5.setEnabled(true);
 						btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l10 + ".png"));
@@ -27918,6 +28409,8 @@ public class TelaDoJogo extends JFrame {
 				case 6:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p10);
+						arrayH.remove(9);
+						arrayH.add(9, new Pecas(null, null));
 						btnhumano10.setEnabled(false);
 						btn_6.setEnabled(true);
 						btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l10 + ".png"));
@@ -28026,6 +28519,8 @@ public class TelaDoJogo extends JFrame {
 				case 7:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p10);
+						arrayH.remove(9);
+						arrayH.add(9, new Pecas(null, null));
 						btnhumano10.setEnabled(false);
 						btn_7.setEnabled(true);
 						btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l10 + ".png"));
@@ -28133,6 +28628,8 @@ public class TelaDoJogo extends JFrame {
 				case 8:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p10);
+						arrayH.remove(9);
+						arrayH.add(9, new Pecas(null, null));
 						btnhumano10.setEnabled(false);
 						btn_8.setEnabled(true);
 						btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l10 + ".png"));
@@ -28241,6 +28738,8 @@ public class TelaDoJogo extends JFrame {
 				case 9:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p10);
+						arrayH.remove(9);
+						arrayH.add(9, new Pecas(null, null));
 						btnhumano10.setEnabled(false);
 						btn_9.setEnabled(true);
 						btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l10 + ".png"));
@@ -28349,6 +28848,8 @@ public class TelaDoJogo extends JFrame {
 				case 10:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p10);
+						arrayH.remove(9);
+						arrayH.add(9, new Pecas(null, null));
 						btnhumano10.setEnabled(false);
 						btn_10.setEnabled(true);
 						btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l10 + ".png"));
@@ -28457,6 +28958,8 @@ public class TelaDoJogo extends JFrame {
 				case 11:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p10);
+						arrayH.remove(9);
+						arrayH.add(9, new Pecas(null, null));
 						btnhumano10.setEnabled(false);
 						btn_11.setEnabled(true);
 						btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l10 + ".png"));
@@ -28565,6 +29068,8 @@ public class TelaDoJogo extends JFrame {
 				case 12:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p10);
+						arrayH.remove(9);
+						arrayH.add(9, new Pecas(null, null));
 						btnhumano10.setEnabled(false);
 						btn_12.setEnabled(true);
 						btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l10 + ".png"));
@@ -28664,6 +29169,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p10);
+						arrayH.remove(9);
+						arrayH.add(9, new Pecas(null, null));
 						btnhumano10.setEnabled(false);
 						btn_13.setEnabled(true);
 						btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l10 + ".png"));
@@ -28771,6 +29278,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p10);
+						arrayH.remove(9);
+						arrayH.add(9, new Pecas(null, null));
 						btnhumano10.setEnabled(false);
 						btn_14.setEnabled(true);
 						btn_14.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l10 + ".png"));
@@ -28875,6 +29384,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p10);
+						arrayH.remove(9);
+						arrayH.add(9, new Pecas(null, null));
 						btnhumano10.setEnabled(false);
 						btn_15.setEnabled(true);
 						btn_15.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l10 + ".png"));
@@ -28978,6 +29489,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p10);
+						arrayH.remove(9);
+						arrayH.add(9, new Pecas(null, null));
 						btnhumano10.setEnabled(false);
 						btn_16.setEnabled(true);
 						btn_16.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l10 + ".png"));
@@ -29081,6 +29594,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p10);
+						arrayH.remove(9);
+						arrayH.add(9, new Pecas(null, null));
 						btnhumano10.setEnabled(false);
 						btn_17.setEnabled(true);
 						btn_17.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l10 + ".png"));
@@ -29193,6 +29708,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p10);
+						arrayH.remove(9);
+						arrayH.add(9, new Pecas(null, null));
 						btnhumano10.setEnabled(false);
 						btn_18.setEnabled(true);
 						btn_18.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l10 + ".png"));
@@ -29305,6 +29822,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p10);
+						arrayH.remove(9);
+						arrayH.add(9, new Pecas(null, null));
 						btnhumano10.setEnabled(false);
 						btn_19.setEnabled(true);
 						btn_19.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l10 + ".png"));
@@ -29417,6 +29936,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p10);
+						arrayH.remove(9);
+						arrayH.add(9, new Pecas(null, null));
 						btnhumano10.setEnabled(false);
 						btn_20.setEnabled(true);
 						btn_20.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l10 + ".png"));
@@ -29529,6 +30050,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p10);
+						arrayH.remove(9);
+						arrayH.add(9, new Pecas(null, null));
 						btnhumano10.setEnabled(false);
 						btn_21.setEnabled(true);
 						btn_21.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l10 + ".png"));
@@ -29641,6 +30164,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p10);
+						arrayH.remove(9);
+						arrayH.add(9, new Pecas(null, null));
 						btnhumano10.setEnabled(false);
 						btn_22.setEnabled(true);
 						btn_22.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l10 + ".png"));
@@ -29753,6 +30278,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p10);
+						arrayH.remove(9);
+						arrayH.add(9, new Pecas(null, null));
 						btnhumano10.setEnabled(false);
 						btn_23.setEnabled(true);
 						btn_23.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l10 + ".png"));
@@ -29865,6 +30392,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p10);
+						arrayH.remove(9);
+						arrayH.add(9, new Pecas(null, null));
 						btnhumano10.setEnabled(false);
 						btn_24.setEnabled(true);
 						btn_24.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l10 + ".png"));
@@ -29977,6 +30506,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p10);
+						arrayH.remove(9);
+						arrayH.add(9, new Pecas(null, null));
 						btnhumano10.setEnabled(false);
 						btn_25.setEnabled(true);
 						btn_25.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l10 + ".png"));
@@ -30089,6 +30620,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p10);
+						arrayH.remove(9);
+						arrayH.add(9, new Pecas(null, null));
 						btnhumano10.setEnabled(false);
 						btn_26.setEnabled(true);
 						btn_26.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l10 + ".png"));
@@ -30201,6 +30734,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p10);
+						arrayH.remove(9);
+						arrayH.add(9, new Pecas(null, null));
 						btnhumano10.setEnabled(false);
 						btn_27.setEnabled(true);
 						btn_27.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l10 + ".png"));
@@ -30313,6 +30848,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p10);
+						arrayH.remove(9);
+						arrayH.add(9, new Pecas(null, null));
 						btnhumano10.setEnabled(false);
 						btn_28.setEnabled(true);
 						btn_28.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l10 + ".png"));
@@ -30445,6 +30982,8 @@ public class TelaDoJogo extends JFrame {
 				case 1:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p11);
+						arrayH.remove(10);
+						arrayH.add(10, new Pecas(null, null));
 						btnhumano11.setEnabled(false);
 						btn_1.setEnabled(true);
 						btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l11 + ".png"));
@@ -30543,6 +31082,8 @@ public class TelaDoJogo extends JFrame {
 				case 2:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p11);
+						arrayH.remove(10);
+						arrayH.add(10, new Pecas(null, null));
 						btnhumano11.setEnabled(false);
 						btn_2.setEnabled(true);
 						btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l11 + ".png"));
@@ -30649,6 +31190,8 @@ public class TelaDoJogo extends JFrame {
 				case 3:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p11);
+						arrayH.remove(10);
+						arrayH.add(10, new Pecas(null, null));
 						btnhumano11.setEnabled(false);
 						btn_3.setEnabled(true);
 						btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l11 + ".png"));
@@ -30755,6 +31298,8 @@ public class TelaDoJogo extends JFrame {
 				case 4:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p11);
+						arrayH.remove(10);
+						arrayH.add(10, new Pecas(null, null));
 						btnhumano11.setEnabled(false);
 						btn_4.setEnabled(true);
 						btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l11 + ".png"));
@@ -30861,6 +31406,8 @@ public class TelaDoJogo extends JFrame {
 				case 5:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p11);
+						arrayH.remove(10);
+						arrayH.add(10, new Pecas(null, null));
 						btnhumano11.setEnabled(false);
 						btn_5.setEnabled(true);
 						btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l11 + ".png"));
@@ -30968,6 +31515,8 @@ public class TelaDoJogo extends JFrame {
 				case 6:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p11);
+						arrayH.remove(10);
+						arrayH.add(10, new Pecas(null, null));
 						btnhumano11.setEnabled(false);
 						btn_6.setEnabled(true);
 						btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l11 + ".png"));
@@ -31076,6 +31625,8 @@ public class TelaDoJogo extends JFrame {
 				case 7:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p11);
+						arrayH.remove(10);
+						arrayH.add(10, new Pecas(null, null));
 						btnhumano11.setEnabled(false);
 						btn_7.setEnabled(true);
 						btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l11 + ".png"));
@@ -31183,6 +31734,8 @@ public class TelaDoJogo extends JFrame {
 				case 8:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p11);
+						arrayH.remove(10);
+						arrayH.add(10, new Pecas(null, null));
 						btnhumano11.setEnabled(false);
 						btn_8.setEnabled(true);
 						btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l11 + ".png"));
@@ -31291,6 +31844,8 @@ public class TelaDoJogo extends JFrame {
 				case 9:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p11);
+						arrayH.remove(10);
+						arrayH.add(10, new Pecas(null, null));
 						btnhumano11.setEnabled(false);
 						btn_9.setEnabled(true);
 						btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l11 + ".png"));
@@ -31399,6 +31954,8 @@ public class TelaDoJogo extends JFrame {
 				case 10:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p11);
+						arrayH.remove(10);
+						arrayH.add(10, new Pecas(null, null));
 						btnhumano11.setEnabled(false);
 						btn_10.setEnabled(true);
 						btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l11 + ".png"));
@@ -31507,6 +32064,8 @@ public class TelaDoJogo extends JFrame {
 				case 11:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p11);
+						arrayH.remove(10);
+						arrayH.add(10, new Pecas(null, null));
 						btnhumano11.setEnabled(false);
 						btn_11.setEnabled(true);
 						btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l11 + ".png"));
@@ -31615,6 +32174,8 @@ public class TelaDoJogo extends JFrame {
 				case 12:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p11);
+						arrayH.remove(10);
+						arrayH.add(10, new Pecas(null, null));
 						btnhumano11.setEnabled(false);
 						btn_12.setEnabled(true);
 						btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l11 + ".png"));
@@ -31714,6 +32275,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p11);
+						arrayH.remove(10);
+						arrayH.add(10, new Pecas(null, null));
 						btnhumano11.setEnabled(false);
 						btn_13.setEnabled(true);
 						btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l11 + ".png"));
@@ -31820,6 +32383,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p11);
+						arrayH.remove(10);
+						arrayH.add(10, new Pecas(null, null));
 						btnhumano11.setEnabled(false);
 						btn_14.setEnabled(true);
 						btn_14.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l11 + ".png"));
@@ -31924,6 +32489,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p11);
+						arrayH.remove(10);
+						arrayH.add(10, new Pecas(null, null));
 						btnhumano11.setEnabled(false);
 						btn_15.setEnabled(true);
 						btn_15.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l11 + ".png"));
@@ -32027,6 +32594,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p11);
+						arrayH.remove(10);
+						arrayH.add(10, new Pecas(null, null));
 						btnhumano11.setEnabled(false);
 						btn_16.setEnabled(true);
 						btn_16.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l11 + ".png"));
@@ -32130,6 +32699,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p11);
+						arrayH.remove(10);
+						arrayH.add(10, new Pecas(null, null));
 						btnhumano11.setEnabled(false);
 						btn_17.setEnabled(true);
 						btn_17.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l11 + ".png"));
@@ -32242,6 +32813,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p11);
+						arrayH.remove(10);
+						arrayH.add(10, new Pecas(null, null));
 						btnhumano11.setEnabled(false);
 						btn_18.setEnabled(true);
 						btn_18.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l11 + ".png"));
@@ -32354,6 +32927,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p11);
+						arrayH.remove(10);
+						arrayH.add(10, new Pecas(null, null));
 						btnhumano11.setEnabled(false);
 						btn_19.setEnabled(true);
 						btn_19.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l11 + ".png"));
@@ -32466,6 +33041,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p11);
+						arrayH.remove(10);
+						arrayH.add(10, new Pecas(null, null));
 						btnhumano11.setEnabled(false);
 						btn_20.setEnabled(true);
 						btn_20.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l11 + ".png"));
@@ -32578,6 +33155,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p11);
+						arrayH.remove(10);
+						arrayH.add(10, new Pecas(null, null));
 						btnhumano11.setEnabled(false);
 						btn_21.setEnabled(true);
 						btn_21.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l11 + ".png"));
@@ -32690,6 +33269,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p11);
+						arrayH.remove(10);
+						arrayH.add(10, new Pecas(null, null));
 						btnhumano11.setEnabled(false);
 						btn_22.setEnabled(true);
 						btn_22.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l11 + ".png"));
@@ -32802,6 +33383,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p11);
+						arrayH.remove(10);
+						arrayH.add(10, new Pecas(null, null));
 						btnhumano11.setEnabled(false);
 						btn_23.setEnabled(true);
 						btn_23.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l11 + ".png"));
@@ -32914,6 +33497,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p11);
+						arrayH.remove(10);
+						arrayH.add(10, new Pecas(null, null));
 						btnhumano11.setEnabled(false);
 						btn_24.setEnabled(true);
 						btn_24.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l11 + ".png"));
@@ -33026,6 +33611,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p11);
+						arrayH.remove(10);
+						arrayH.add(10, new Pecas(null, null));
 						btnhumano11.setEnabled(false);
 						btn_25.setEnabled(true);
 						btn_25.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l11 + ".png"));
@@ -33138,6 +33725,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p11);
+						arrayH.remove(10);
+						arrayH.add(10, new Pecas(null, null));
 						btnhumano11.setEnabled(false);
 						btn_26.setEnabled(true);
 						btn_26.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l11 + ".png"));
@@ -33250,6 +33839,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p11);
+						arrayH.remove(10);
+						arrayH.add(10, new Pecas(null, null));
 						btnhumano11.setEnabled(false);
 						btn_27.setEnabled(true);
 						btn_27.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l11 + ".png"));
@@ -33362,6 +33953,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p11);
+						arrayH.remove(10);
+						arrayH.add(10, new Pecas(null, null));
 						btnhumano11.setEnabled(false);
 						btn_28.setEnabled(true);
 						btn_28.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l11 + ".png"));
@@ -33395,16 +33988,7 @@ public class TelaDoJogo extends JFrame {
 						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
 							//////////////////////////////////////////////////////////////////////////////////////////////////////////////
-							// possui um rando com 0 e 1, caso 0 a maquina
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// passa,
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// caso
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// 1
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// ela
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// faz
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// uma
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// compra
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// no
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// array
+							
 							int i = al.maquinaCompraPassa();
 							if (i == 0) {
 								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
@@ -33494,6 +34078,8 @@ public class TelaDoJogo extends JFrame {
 				case 1:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p12);
+						arrayH.remove(11);
+						arrayH.add(11, new Pecas(null, null));
 						btnhumano12.setEnabled(false);
 						btn_1.setEnabled(true);
 						btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l12 + ".png"));
@@ -33592,6 +34178,8 @@ public class TelaDoJogo extends JFrame {
 				case 2:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p12);
+						arrayH.remove(11);
+						arrayH.add(11, new Pecas(null, null));
 						btnhumano12.setEnabled(false);
 						btn_2.setEnabled(true);
 						btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l12 + ".png"));
@@ -33698,6 +34286,8 @@ public class TelaDoJogo extends JFrame {
 				case 3:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p12);
+						arrayH.remove(11);
+						arrayH.add(11, new Pecas(null, null));
 						btnhumano12.setEnabled(false);
 						btn_3.setEnabled(true);
 						btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l12 + ".png"));
@@ -33804,6 +34394,8 @@ public class TelaDoJogo extends JFrame {
 				case 4:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p12);
+						arrayH.remove(11);
+						arrayH.add(11, new Pecas(null, null));
 						btnhumano12.setEnabled(false);
 						btn_4.setEnabled(true);
 						btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l12 + ".png"));
@@ -33910,6 +34502,8 @@ public class TelaDoJogo extends JFrame {
 				case 5:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p12);
+						arrayH.remove(11);
+						arrayH.add(11, new Pecas(null, null));
 						btnhumano12.setEnabled(false);
 						btn_5.setEnabled(true);
 						btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l12 + ".png"));
@@ -34017,6 +34611,8 @@ public class TelaDoJogo extends JFrame {
 				case 6:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p12);
+						arrayH.remove(11);
+						arrayH.add(11, new Pecas(null, null));
 						btnhumano12.setEnabled(false);
 						btn_6.setEnabled(true);
 						btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l12 + ".png"));
@@ -34125,6 +34721,8 @@ public class TelaDoJogo extends JFrame {
 				case 7:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p12);
+						arrayH.remove(11);
+						arrayH.add(11, new Pecas(null, null));
 						btnhumano12.setEnabled(false);
 						btn_7.setEnabled(true);
 						btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l12 + ".png"));
@@ -34232,6 +34830,8 @@ public class TelaDoJogo extends JFrame {
 				case 8:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p12);
+						arrayH.remove(11);
+						arrayH.add(11, new Pecas(null, null));
 						btnhumano12.setEnabled(false);
 						btn_8.setEnabled(true);
 						btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l12 + ".png"));
@@ -34340,6 +34940,8 @@ public class TelaDoJogo extends JFrame {
 				case 9:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p12);
+						arrayH.remove(11);
+						arrayH.add(11, new Pecas(null, null));
 						btnhumano12.setEnabled(false);
 						btn_9.setEnabled(true);
 						btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l12 + ".png"));
@@ -34448,6 +35050,8 @@ public class TelaDoJogo extends JFrame {
 				case 10:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p12);
+						arrayH.remove(11);
+						arrayH.add(11, new Pecas(null, null));
 						btnhumano12.setEnabled(false);
 						btn_10.setEnabled(true);
 						btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l12 + ".png"));
@@ -34556,6 +35160,8 @@ public class TelaDoJogo extends JFrame {
 				case 11:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p12);
+						arrayH.remove(11);
+						arrayH.add(11, new Pecas(null, null));
 						btnhumano12.setEnabled(false);
 						btn_11.setEnabled(true);
 						btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l12 + ".png"));
@@ -34664,6 +35270,8 @@ public class TelaDoJogo extends JFrame {
 				case 12:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p12);
+						arrayH.remove(11);
+						arrayH.add(11, new Pecas(null, null));
 						btnhumano12.setEnabled(false);
 						btn_12.setEnabled(true);
 						btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l12 + ".png"));
@@ -34763,6 +35371,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p12);
+						arrayH.remove(11);
+						arrayH.add(11, new Pecas(null, null));
 						btnhumano12.setEnabled(false);
 						btn_13.setEnabled(true);
 						btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l12 + ".png"));
@@ -34870,6 +35480,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p12);
+						arrayH.remove(11);
+						arrayH.add(11, new Pecas(null, null));
 						btnhumano12.setEnabled(false);
 						btn_14.setEnabled(true);
 						btn_14.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l12 + ".png"));
@@ -34974,6 +35586,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p12);
+						arrayH.remove(11);
+						arrayH.add(11, new Pecas(null, null));
 						btnhumano12.setEnabled(false);
 						btn_15.setEnabled(true);
 						btn_15.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l12 + ".png"));
@@ -35077,6 +35691,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p12);
+						arrayH.remove(11);
+						arrayH.add(11, new Pecas(null, null));
 						btnhumano12.setEnabled(false);
 						btn_16.setEnabled(true);
 						btn_16.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l12 + ".png"));
@@ -35180,6 +35796,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p12);
+						arrayH.remove(11);
+						arrayH.add(11, new Pecas(null, null));
 						btnhumano12.setEnabled(false);
 						btn_17.setEnabled(true);
 						btn_17.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l12 + ".png"));
@@ -35292,6 +35910,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p12);
+						arrayH.remove(11);
+						arrayH.add(11, new Pecas(null, null));
 						btnhumano12.setEnabled(false);
 						btn_18.setEnabled(true);
 						btn_18.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l12 + ".png"));
@@ -35404,6 +36024,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p12);
+						arrayH.remove(11);
+						arrayH.add(11, new Pecas(null, null));
 						btnhumano12.setEnabled(false);
 						btn_19.setEnabled(true);
 						btn_19.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l12 + ".png"));
@@ -35516,6 +36138,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p12);
+						arrayH.remove(11);
+						arrayH.add(11, new Pecas(null, null));
 						btnhumano12.setEnabled(false);
 						btn_20.setEnabled(true);
 						btn_20.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l12 + ".png"));
@@ -35628,6 +36252,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p12);
+						arrayH.remove(11);
+						arrayH.add(11, new Pecas(null, null));
 						btnhumano12.setEnabled(false);
 						btn_21.setEnabled(true);
 						btn_21.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l12 + ".png"));
@@ -35740,6 +36366,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p12);
+						arrayH.remove(11);
+						arrayH.add(11, new Pecas(null, null));
 						btnhumano12.setEnabled(false);
 						btn_22.setEnabled(true);
 						btn_22.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l12 + ".png"));
@@ -35852,6 +36480,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p12);
+						arrayH.remove(11);
+						arrayH.add(11, new Pecas(null, null));
 						btnhumano12.setEnabled(false);
 						btn_23.setEnabled(true);
 						btn_23.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l12 + ".png"));
@@ -35964,6 +36594,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p12);
+						arrayH.remove(11);
+						arrayH.add(11, new Pecas(null, null));
 						btnhumano12.setEnabled(false);
 						btn_24.setEnabled(true);
 						btn_24.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l12 + ".png"));
@@ -36076,6 +36708,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p12);
+						arrayH.remove(11);
+						arrayH.add(11, new Pecas(null, null));
 						btnhumano12.setEnabled(false);
 						btn_25.setEnabled(true);
 						btn_25.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l12 + ".png"));
@@ -36188,6 +36822,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p12);
+						arrayH.remove(11);
+						arrayH.add(11, new Pecas(null, null));
 						btnhumano12.setEnabled(false);
 						btn_26.setEnabled(true);
 						btn_26.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l12 + ".png"));
@@ -36300,6 +36936,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p12);
+						arrayH.remove(11);
+						arrayH.add(11, new Pecas(null, null));
 						btnhumano12.setEnabled(false);
 						btn_27.setEnabled(true);
 						btn_27.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l12 + ".png"));
@@ -36412,6 +37050,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p12);
+						arrayH.remove(11);
+						arrayH.add(11, new Pecas(null, null));
 						btnhumano12.setEnabled(false);
 						btn_28.setEnabled(true);
 						btn_28.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l12 + ".png"));
@@ -36445,16 +37085,7 @@ public class TelaDoJogo extends JFrame {
 						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
 							//////////////////////////////////////////////////////////////////////////////////////////////////////////////
-							// possui um rando com 0 e 1, caso 0 a maquina
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// passa,
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// caso
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// 1
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// ela
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// faz
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// uma
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// compra
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// no
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// array
+							
 							int i = al.maquinaCompraPassa();
 							if (i == 0) {
 								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
@@ -36544,6 +37175,8 @@ public class TelaDoJogo extends JFrame {
 				case 1:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p13);
+						arrayH.remove(12);
+						arrayH.add(12, new Pecas(null, null));
 						btnhumano13.setEnabled(false);
 						btn_1.setEnabled(true);
 						btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l13 + ".png"));
@@ -36642,6 +37275,8 @@ public class TelaDoJogo extends JFrame {
 				case 2:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p13);
+						arrayH.remove(12);
+						arrayH.add(12, new Pecas(null, null));
 						btnhumano13.setEnabled(false);
 						btn_2.setEnabled(true);
 						btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l13 + ".png"));
@@ -36748,6 +37383,8 @@ public class TelaDoJogo extends JFrame {
 				case 3:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p13);
+						arrayH.remove(12);
+						arrayH.add(12, new Pecas(null, null));
 						btnhumano13.setEnabled(false);
 						btn_3.setEnabled(true);
 						btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l13 + ".png"));
@@ -36854,6 +37491,8 @@ public class TelaDoJogo extends JFrame {
 				case 4:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p13);
+						arrayH.remove(12);
+						arrayH.add(12, new Pecas(null, null));
 						btnhumano13.setEnabled(false);
 						btn_4.setEnabled(true);
 						btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l13 + ".png"));
@@ -36960,6 +37599,8 @@ public class TelaDoJogo extends JFrame {
 				case 5:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p13);
+						arrayH.remove(12);
+						arrayH.add(12, new Pecas(null, null));
 						btnhumano13.setEnabled(false);
 						btn_5.setEnabled(true);
 						btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l13 + ".png"));
@@ -37067,6 +37708,8 @@ public class TelaDoJogo extends JFrame {
 				case 6:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p13);
+						arrayH.remove(12);
+						arrayH.add(12, new Pecas(null, null));
 						btnhumano13.setEnabled(false);
 						btn_6.setEnabled(true);
 						btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l13 + ".png"));
@@ -37175,6 +37818,8 @@ public class TelaDoJogo extends JFrame {
 				case 7:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p13);
+						arrayH.remove(12);
+						arrayH.add(12, new Pecas(null, null));
 						btnhumano13.setEnabled(false);
 						btn_7.setEnabled(true);
 						btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l13 + ".png"));
@@ -37282,6 +37927,8 @@ public class TelaDoJogo extends JFrame {
 				case 8:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p13);
+						arrayH.remove(12);
+						arrayH.add(12, new Pecas(null, null));
 						btnhumano13.setEnabled(false);
 						btn_8.setEnabled(true);
 						btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l13 + ".png"));
@@ -37390,6 +38037,8 @@ public class TelaDoJogo extends JFrame {
 				case 9:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p13);
+						arrayH.remove(12);
+						arrayH.add(12, new Pecas(null, null));
 						btnhumano13.setEnabled(false);
 						btn_9.setEnabled(true);
 						btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l13 + ".png"));
@@ -37498,6 +38147,8 @@ public class TelaDoJogo extends JFrame {
 				case 10:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p13);
+						arrayH.remove(12);
+						arrayH.add(12, new Pecas(null, null));
 						btnhumano13.setEnabled(false);
 						btn_10.setEnabled(true);
 						btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l13 + ".png"));
@@ -37606,6 +38257,8 @@ public class TelaDoJogo extends JFrame {
 				case 11:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p13);
+						arrayH.remove(12);
+						arrayH.add(12, new Pecas(null, null));
 						btnhumano13.setEnabled(false);
 						btn_11.setEnabled(true);
 						btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l13 + ".png"));
@@ -37714,6 +38367,8 @@ public class TelaDoJogo extends JFrame {
 				case 12:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p13);
+						arrayH.remove(12);
+						arrayH.add(12, new Pecas(null, null));
 						btnhumano13.setEnabled(false);
 						btn_12.setEnabled(true);
 						btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l13 + ".png"));
@@ -37813,6 +38468,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p13);
+						arrayH.remove(12);
+						arrayH.add(12, new Pecas(null, null));
 						btnhumano13.setEnabled(false);
 						btn_13.setEnabled(true);
 						btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l13 + ".png"));
@@ -37920,6 +38577,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p13);
+						arrayH.remove(12);
+						arrayH.add(12, new Pecas(null, null));
 						btnhumano13.setEnabled(false);
 						btn_14.setEnabled(true);
 						btn_14.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l13 + ".png"));
@@ -38024,6 +38683,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p13);
+						arrayH.remove(12);
+						arrayH.add(12, new Pecas(null, null));
 						btnhumano13.setEnabled(false);
 						btn_15.setEnabled(true);
 						btn_15.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l13 + ".png"));
@@ -38127,6 +38788,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p13);
+						arrayH.remove(12);
+						arrayH.add(12, new Pecas(null, null));
 						btnhumano13.setEnabled(false);
 						btn_16.setEnabled(true);
 						btn_16.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l13 + ".png"));
@@ -38230,6 +38893,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p13);
+						arrayH.remove(12);
+						arrayH.add(12, new Pecas(null, null));
 						btnhumano13.setEnabled(false);
 						btn_17.setEnabled(true);
 						btn_17.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l13 + ".png"));
@@ -38342,6 +39007,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p13);
+						arrayH.remove(12);
+						arrayH.add(12, new Pecas(null, null));
 						btnhumano13.setEnabled(false);
 						btn_18.setEnabled(true);
 						btn_18.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l13 + ".png"));
@@ -38454,6 +39121,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p13);
+						arrayH.remove(12);
+						arrayH.add(12, new Pecas(null, null));
 						btnhumano13.setEnabled(false);
 						btn_19.setEnabled(true);
 						btn_19.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l13 + ".png"));
@@ -38566,6 +39235,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p13);
+						arrayH.remove(12);
+						arrayH.add(12, new Pecas(null, null));
 						btnhumano13.setEnabled(false);
 						btn_20.setEnabled(true);
 						btn_20.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l13 + ".png"));
@@ -38678,6 +39349,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p13);
+						arrayH.remove(12);
+						arrayH.add(12, new Pecas(null, null));
 						btnhumano13.setEnabled(false);
 						btn_21.setEnabled(true);
 						btn_21.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l13 + ".png"));
@@ -38790,6 +39463,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p13);
+						arrayH.remove(12);
+						arrayH.add(12, new Pecas(null, null));
 						btnhumano13.setEnabled(false);
 						btn_22.setEnabled(true);
 						btn_22.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l13 + ".png"));
@@ -38902,6 +39577,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p13);
+						arrayH.remove(12);
+						arrayH.add(12, new Pecas(null, null));
 						btnhumano13.setEnabled(false);
 						btn_23.setEnabled(true);
 						btn_23.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l13 + ".png"));
@@ -39014,6 +39691,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p13);
+						arrayH.remove(12);
+						arrayH.add(12, new Pecas(null, null));
 						btnhumano13.setEnabled(false);
 						btn_24.setEnabled(true);
 						btn_24.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l13 + ".png"));
@@ -39126,6 +39805,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p13);
+						arrayH.remove(12);
+						arrayH.add(12, new Pecas(null, null));
 						btnhumano13.setEnabled(false);
 						btn_25.setEnabled(true);
 						btn_25.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l13 + ".png"));
@@ -39238,6 +39919,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p13);
+						arrayH.remove(12);
+						arrayH.add(12, new Pecas(null, null));
 						btnhumano13.setEnabled(false);
 						btn_26.setEnabled(true);
 						btn_26.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l13 + ".png"));
@@ -39350,6 +40033,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p13);
+						arrayH.remove(12);
+						arrayH.add(12, new Pecas(null, null));
 						btnhumano13.setEnabled(false);
 						btn_27.setEnabled(true);
 						btn_27.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l13 + ".png"));
@@ -39462,6 +40147,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p13);
+						arrayH.remove(12);
+						arrayH.add(12, new Pecas(null, null));
 						btnhumano13.setEnabled(false);
 						btn_28.setEnabled(true);
 						btn_28.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l13 + ".png"));
@@ -39584,6 +40271,8 @@ public class TelaDoJogo extends JFrame {
 				case 1:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p14);
+						arrayH.remove(13);
+						arrayH.add(13, new Pecas(null, null));
 						btnhumano14.setEnabled(false);
 						btn_1.setEnabled(true);
 						btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l14 + ".png"));
@@ -39682,6 +40371,8 @@ public class TelaDoJogo extends JFrame {
 				case 2:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p14);
+						arrayH.remove(13);
+						arrayH.add(13, new Pecas(null, null));
 						btnhumano14.setEnabled(false);
 						btn_2.setEnabled(true);
 						btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l14 + ".png"));
@@ -39788,6 +40479,8 @@ public class TelaDoJogo extends JFrame {
 				case 3:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p14);
+						arrayH.remove(13);
+						arrayH.add(13, new Pecas(null, null));
 						btnhumano14.setEnabled(false);
 						btn_3.setEnabled(true);
 						btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l14 + ".png"));
@@ -39894,6 +40587,8 @@ public class TelaDoJogo extends JFrame {
 				case 4:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p14);
+						arrayH.remove(13);
+						arrayH.add(13, new Pecas(null, null));
 						btnhumano14.setEnabled(false);
 						btn_4.setEnabled(true);
 						btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l14 + ".png"));
@@ -40000,6 +40695,8 @@ public class TelaDoJogo extends JFrame {
 				case 5:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p14);
+						arrayH.remove(13);
+						arrayH.add(13, new Pecas(null, null));
 						btnhumano14.setEnabled(false);
 						btn_5.setEnabled(true);
 						btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l14 + ".png"));
@@ -40107,6 +40804,8 @@ public class TelaDoJogo extends JFrame {
 				case 6:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p14);
+						arrayH.remove(13);
+						arrayH.add(13, new Pecas(null, null));
 						btnhumano14.setEnabled(false);
 						btn_6.setEnabled(true);
 						btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l14 + ".png"));
@@ -40215,6 +40914,8 @@ public class TelaDoJogo extends JFrame {
 				case 7:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p14);
+						arrayH.remove(13);
+						arrayH.add(13, new Pecas(null, null));
 						btnhumano14.setEnabled(false);
 						btn_7.setEnabled(true);
 						btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l14 + ".png"));
@@ -40322,6 +41023,8 @@ public class TelaDoJogo extends JFrame {
 				case 8:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p14);
+						arrayH.remove(13);
+						arrayH.add(13, new Pecas(null, null));
 						btnhumano14.setEnabled(false);
 						btn_8.setEnabled(true);
 						btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l14 + ".png"));
@@ -40430,6 +41133,8 @@ public class TelaDoJogo extends JFrame {
 				case 9:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p14);
+						arrayH.remove(13);
+						arrayH.add(13, new Pecas(null, null));
 						btnhumano14.setEnabled(false);
 						btn_9.setEnabled(true);
 						btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l14 + ".png"));
@@ -40538,6 +41243,8 @@ public class TelaDoJogo extends JFrame {
 				case 10:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p14);
+						arrayH.remove(13);
+						arrayH.add(13, new Pecas(null, null));
 						btnhumano14.setEnabled(false);
 						btn_10.setEnabled(true);
 						btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l14 + ".png"));
@@ -40646,6 +41353,8 @@ public class TelaDoJogo extends JFrame {
 				case 11:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p14);
+						arrayH.remove(13);
+						arrayH.add(13, new Pecas(null, null));
 						btnhumano14.setEnabled(false);
 						btn_11.setEnabled(true);
 						btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l14 + ".png"));
@@ -40754,6 +41463,8 @@ public class TelaDoJogo extends JFrame {
 				case 12:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p14);
+						arrayH.remove(13);
+						arrayH.add(13, new Pecas(null, null));
 						btnhumano14.setEnabled(false);
 						btn_12.setEnabled(true);
 						btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l14 + ".png"));
@@ -40853,6 +41564,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p14);
+						arrayH.remove(13);
+						arrayH.add(13, new Pecas(null, null));
 						btnhumano14.setEnabled(false);
 						btn_13.setEnabled(true);
 						btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l14 + ".png"));
@@ -40960,6 +41673,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p14);
+						arrayH.remove(13);
+						arrayH.add(13, new Pecas(null, null));
 						btnhumano14.setEnabled(false);
 						btn_14.setEnabled(true);
 						btn_14.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l14 + ".png"));
@@ -41064,6 +41779,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p14);
+						arrayH.remove(13);
+						arrayH.add(13, new Pecas(null, null));
 						btnhumano14.setEnabled(false);
 						btn_15.setEnabled(true);
 						btn_15.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l14 + ".png"));
@@ -41167,6 +41884,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p14);
+						arrayH.remove(13);
+						arrayH.add(13, new Pecas(null, null));
 						btnhumano14.setEnabled(false);
 						btn_16.setEnabled(true);
 						btn_16.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l14 + ".png"));
@@ -41270,6 +41989,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p14);
+						arrayH.remove(13);
+						arrayH.add(13, new Pecas(null, null));
 						btnhumano14.setEnabled(false);
 						btn_17.setEnabled(true);
 						btn_17.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l14 + ".png"));
@@ -41382,6 +42103,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p14);
+						arrayH.remove(13);
+						arrayH.add(13, new Pecas(null, null));
 						btnhumano14.setEnabled(false);
 						btn_18.setEnabled(true);
 						btn_18.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l14 + ".png"));
@@ -41494,6 +42217,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p14);
+						arrayH.remove(13);
+						arrayH.add(13, new Pecas(null, null));
 						btnhumano14.setEnabled(false);
 						btn_19.setEnabled(true);
 						btn_19.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l14 + ".png"));
@@ -41606,6 +42331,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p14);
+						arrayH.remove(13);
+						arrayH.add(13, new Pecas(null, null));
 						btnhumano14.setEnabled(false);
 						btn_20.setEnabled(true);
 						btn_20.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l14 + ".png"));
@@ -41718,6 +42445,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p14);
+						arrayH.remove(13);
+						arrayH.add(13, new Pecas(null, null));
 						btnhumano14.setEnabled(false);
 						btn_21.setEnabled(true);
 						btn_21.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l14 + ".png"));
@@ -41830,6 +42559,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p14);
+						arrayH.remove(13);
+						arrayH.add(13, new Pecas(null, null));
 						btnhumano14.setEnabled(false);
 						btn_22.setEnabled(true);
 						btn_22.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l14 + ".png"));
@@ -41942,6 +42673,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p14);
+						arrayH.remove(13);
+						arrayH.add(13, new Pecas(null, null));
 						btnhumano14.setEnabled(false);
 						btn_23.setEnabled(true);
 						btn_23.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l14 + ".png"));
@@ -42054,6 +42787,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p14);
+						arrayH.remove(13);
+						arrayH.add(13, new Pecas(null, null));
 						btnhumano14.setEnabled(false);
 						btn_24.setEnabled(true);
 						btn_24.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l14 + ".png"));
@@ -42166,6 +42901,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p14);
+						arrayH.remove(13);
+						arrayH.add(13, new Pecas(null, null));
 						btnhumano14.setEnabled(false);
 						btn_25.setEnabled(true);
 						btn_25.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l14 + ".png"));
@@ -42278,6 +43015,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p14);
+						arrayH.remove(13);
+						arrayH.add(13, new Pecas(null, null));
 						btnhumano14.setEnabled(false);
 						btn_26.setEnabled(true);
 						btn_26.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l14 + ".png"));
@@ -42390,6 +43129,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p14);
+						arrayH.remove(13);
+						arrayH.add(13, new Pecas(null, null));
 						btnhumano14.setEnabled(false);
 						btn_27.setEnabled(true);
 						btn_27.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l14 + ".png"));
@@ -42502,6 +43243,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p14);
+						arrayH.remove(13);
+						arrayH.add(13, new Pecas(null, null));
 						btnhumano14.setEnabled(false);
 						btn_28.setEnabled(true);
 						btn_28.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l14 + ".png"));
@@ -42634,6 +43377,8 @@ public class TelaDoJogo extends JFrame {
 				case 1:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p15);
+						arrayH.remove(14);
+						arrayH.add(14, new Pecas(null, null));
 						btnhumano15.setEnabled(false);
 						btn_1.setEnabled(true);
 						btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l15 + ".png"));
@@ -42732,6 +43477,8 @@ public class TelaDoJogo extends JFrame {
 				case 2:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p15);
+						arrayH.remove(14);
+						arrayH.add(14, new Pecas(null, null));
 						btnhumano15.setEnabled(false);
 						btn_2.setEnabled(true);
 						btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l15 + ".png"));
@@ -42838,6 +43585,8 @@ public class TelaDoJogo extends JFrame {
 				case 3:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p15);
+						arrayH.remove(14);
+						arrayH.add(14, new Pecas(null, null));
 						btnhumano15.setEnabled(false);
 						btn_3.setEnabled(true);
 						btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l15 + ".png"));
@@ -42944,6 +43693,8 @@ public class TelaDoJogo extends JFrame {
 				case 4:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p15);
+						arrayH.remove(14);
+						arrayH.add(14, new Pecas(null, null));
 						btnhumano15.setEnabled(false);
 						btn_4.setEnabled(true);
 						btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l15 + ".png"));
@@ -43050,6 +43801,8 @@ public class TelaDoJogo extends JFrame {
 				case 5:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p15);
+						arrayH.remove(14);
+						arrayH.add(14, new Pecas(null, null));
 						btnhumano15.setEnabled(false);
 						btn_5.setEnabled(true);
 						btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l15 + ".png"));
@@ -43157,6 +43910,8 @@ public class TelaDoJogo extends JFrame {
 				case 6:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p15);
+						arrayH.remove(14);
+						arrayH.add(14, new Pecas(null, null));
 						btnhumano15.setEnabled(false);
 						btn_6.setEnabled(true);
 						btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l15 + ".png"));
@@ -43265,6 +44020,8 @@ public class TelaDoJogo extends JFrame {
 				case 7:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p15);
+						arrayH.remove(14);
+						arrayH.add(14, new Pecas(null, null));
 						btnhumano15.setEnabled(false);
 						btn_7.setEnabled(true);
 						btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l15 + ".png"));
@@ -43372,6 +44129,8 @@ public class TelaDoJogo extends JFrame {
 				case 8:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p15);
+						arrayH.remove(14);
+						arrayH.add(14, new Pecas(null, null));
 						btnhumano15.setEnabled(false);
 						btn_8.setEnabled(true);
 						btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l15 + ".png"));
@@ -43480,6 +44239,8 @@ public class TelaDoJogo extends JFrame {
 				case 9:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p15);
+						arrayH.remove(14);
+						arrayH.add(14, new Pecas(null, null));
 						btnhumano15.setEnabled(false);
 						btn_9.setEnabled(true);
 						btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l15 + ".png"));
@@ -43588,6 +44349,8 @@ public class TelaDoJogo extends JFrame {
 				case 10:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p15);
+						arrayH.remove(14);
+						arrayH.add(14, new Pecas(null, null));
 						btnhumano15.setEnabled(false);
 						btn_10.setEnabled(true);
 						btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l15 + ".png"));
@@ -43696,6 +44459,8 @@ public class TelaDoJogo extends JFrame {
 				case 11:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p15);
+						arrayH.remove(14);
+						arrayH.add(14, new Pecas(null, null));
 						btnhumano15.setEnabled(false);
 						btn_11.setEnabled(true);
 						btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l15 + ".png"));
@@ -43804,6 +44569,8 @@ public class TelaDoJogo extends JFrame {
 				case 12:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p15);
+						arrayH.remove(14);
+						arrayH.add(14, new Pecas(null, null));
 						btnhumano15.setEnabled(false);
 						btn_12.setEnabled(true);
 						btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l15 + ".png"));
@@ -43903,6 +44670,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p15);
+						arrayH.remove(14);
+						arrayH.add(14, new Pecas(null, null));
 						btnhumano15.setEnabled(false);
 						btn_13.setEnabled(true);
 						btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l15 + ".png"));
@@ -44010,6 +44779,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p15);
+						arrayH.remove(14);
+						arrayH.add(14, new Pecas(null, null));
 						btnhumano15.setEnabled(false);
 						btn_14.setEnabled(true);
 						btn_14.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l15 + ".png"));
@@ -44114,6 +44885,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p15);
+						arrayH.remove(14);
+						arrayH.add(14, new Pecas(null, null));
 						btnhumano15.setEnabled(false);
 						btn_15.setEnabled(true);
 						btn_15.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l15 + ".png"));
@@ -44217,6 +44990,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p15);
+						arrayH.remove(14);
+						arrayH.add(14, new Pecas(null, null));
 						btnhumano15.setEnabled(false);
 						btn_16.setEnabled(true);
 						btn_16.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l15 + ".png"));
@@ -44320,6 +45095,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p15);
+						arrayH.remove(14);
+						arrayH.add(14, new Pecas(null, null));
 						btnhumano15.setEnabled(false);
 						btn_17.setEnabled(true);
 						btn_17.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l15 + ".png"));
@@ -44432,6 +45209,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p15);
+						arrayH.remove(14);
+						arrayH.add(14, new Pecas(null, null));
 						btnhumano15.setEnabled(false);
 						btn_18.setEnabled(true);
 						btn_18.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l15 + ".png"));
@@ -44544,6 +45323,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p15);
+						arrayH.remove(14);
+						arrayH.add(14, new Pecas(null, null));
 						btnhumano15.setEnabled(false);
 						btn_19.setEnabled(true);
 						btn_19.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l15 + ".png"));
@@ -44656,6 +45437,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p15);
+						arrayH.remove(14);
+						arrayH.add(14, new Pecas(null, null));
 						btnhumano15.setEnabled(false);
 						btn_20.setEnabled(true);
 						btn_20.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l15 + ".png"));
@@ -44768,6 +45551,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p15);
+						arrayH.remove(14);
+						arrayH.add(14, new Pecas(null, null));
 						btnhumano15.setEnabled(false);
 						btn_21.setEnabled(true);
 						btn_21.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l15 + ".png"));
@@ -44880,6 +45665,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p15);
+						arrayH.remove(14);
+						arrayH.add(14, new Pecas(null, null));
 						btnhumano15.setEnabled(false);
 						btn_22.setEnabled(true);
 						btn_22.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l15 + ".png"));
@@ -44992,6 +45779,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p15);
+						arrayH.remove(14);
+						arrayH.add(14, new Pecas(null, null));
 						btnhumano15.setEnabled(false);
 						btn_23.setEnabled(true);
 						btn_23.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l15 + ".png"));
@@ -45104,6 +45893,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p15);
+						arrayH.remove(14);
+						arrayH.add(14, new Pecas(null, null));
 						btnhumano15.setEnabled(false);
 						btn_24.setEnabled(true);
 						btn_24.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l15 + ".png"));
@@ -45216,6 +46007,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p15);
+						arrayH.remove(14);
+						arrayH.add(14, new Pecas(null, null));
 						btnhumano15.setEnabled(false);
 						btn_25.setEnabled(true);
 						btn_25.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l15 + ".png"));
@@ -45328,6 +46121,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p15);
+						arrayH.remove(14);
+						arrayH.add(14, new Pecas(null, null));
 						btnhumano15.setEnabled(false);
 						btn_26.setEnabled(true);
 						btn_26.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l15 + ".png"));
@@ -45440,6 +46235,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p15);
+						arrayH.remove(14);
+						arrayH.add(14, new Pecas(null, null));
 						btnhumano15.setEnabled(false);
 						btn_27.setEnabled(true);
 						btn_27.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l15 + ".png"));
@@ -45552,6 +46349,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p15);
+						arrayH.remove(14);
+						arrayH.add(14, new Pecas(null, null));
 						btnhumano15.setEnabled(false);
 						btn_28.setEnabled(true);
 						btn_28.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l15 + ".png"));
@@ -45674,6 +46473,8 @@ public class TelaDoJogo extends JFrame {
 				case 1:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p16);
+						arrayH.remove(15);
+						arrayH.add(15, new Pecas(null, null));
 						btnhumano16.setEnabled(false);
 						btn_1.setEnabled(true);
 						btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l16 + ".png"));
@@ -45772,6 +46573,8 @@ public class TelaDoJogo extends JFrame {
 				case 2:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p16);
+						arrayH.remove(15);
+						arrayH.add(15, new Pecas(null, null));
 						btnhumano16.setEnabled(false);
 						btn_2.setEnabled(true);
 						btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l16 + ".png"));
@@ -45878,6 +46681,8 @@ public class TelaDoJogo extends JFrame {
 				case 3:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p16);
+						arrayH.remove(15);
+						arrayH.add(15, new Pecas(null, null));
 						btnhumano16.setEnabled(false);
 						btn_3.setEnabled(true);
 						btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l16 + ".png"));
@@ -45984,6 +46789,8 @@ public class TelaDoJogo extends JFrame {
 				case 4:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p16);
+						arrayH.remove(15);
+						arrayH.add(15, new Pecas(null, null));
 						btnhumano16.setEnabled(false);
 						btn_4.setEnabled(true);
 						btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l16 + ".png"));
@@ -46090,6 +46897,8 @@ public class TelaDoJogo extends JFrame {
 				case 5:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p16);
+						arrayH.remove(15);
+						arrayH.add(15, new Pecas(null, null));
 						btnhumano16.setEnabled(false);
 						btn_5.setEnabled(true);
 						btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l16 + ".png"));
@@ -46197,6 +47006,8 @@ public class TelaDoJogo extends JFrame {
 				case 6:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p16);
+						arrayH.remove(15);
+						arrayH.add(15, new Pecas(null, null));
 						btnhumano16.setEnabled(false);
 						btn_6.setEnabled(true);
 						btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l16 + ".png"));
@@ -46305,6 +47116,8 @@ public class TelaDoJogo extends JFrame {
 				case 7:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p16);
+						arrayH.remove(15);
+						arrayH.add(15, new Pecas(null, null));
 						btnhumano16.setEnabled(false);
 						btn_7.setEnabled(true);
 						btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l16 + ".png"));
@@ -46412,6 +47225,8 @@ public class TelaDoJogo extends JFrame {
 				case 8:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p16);
+						arrayH.remove(15);
+						arrayH.add(15, new Pecas(null, null));
 						btnhumano16.setEnabled(false);
 						btn_8.setEnabled(true);
 						btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l16 + ".png"));
@@ -46520,6 +47335,8 @@ public class TelaDoJogo extends JFrame {
 				case 9:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p16);
+						arrayH.remove(15);
+						arrayH.add(15, new Pecas(null, null));
 						btnhumano16.setEnabled(false);
 						btn_9.setEnabled(true);
 						btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l16 + ".png"));
@@ -46628,6 +47445,8 @@ public class TelaDoJogo extends JFrame {
 				case 10:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p16);
+						arrayH.remove(15);
+						arrayH.add(15, new Pecas(null, null));
 						btnhumano16.setEnabled(false);
 						btn_10.setEnabled(true);
 						btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l16 + ".png"));
@@ -46736,6 +47555,8 @@ public class TelaDoJogo extends JFrame {
 				case 11:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p16);
+						arrayH.remove(15);
+						arrayH.add(15, new Pecas(null, null));
 						btnhumano16.setEnabled(false);
 						btn_11.setEnabled(true);
 						btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l16 + ".png"));
@@ -46844,6 +47665,8 @@ public class TelaDoJogo extends JFrame {
 				case 12:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p16);
+						arrayH.remove(15);
+						arrayH.add(15, new Pecas(null, null));
 						btnhumano16.setEnabled(false);
 						btn_12.setEnabled(true);
 						btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l16 + ".png"));
@@ -46943,6 +47766,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p16);
+						arrayH.remove(15);
+						arrayH.add(15, new Pecas(null, null));
 						btnhumano16.setEnabled(false);
 						btn_13.setEnabled(true);
 						btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l16 + ".png"));
@@ -47049,6 +47874,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p16);
+						arrayH.remove(15);
+						arrayH.add(15, new Pecas(null, null));
 						btnhumano16.setEnabled(false);
 						btn_14.setEnabled(true);
 						btn_14.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l16 + ".png"));
@@ -47153,6 +47980,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p16);
+						arrayH.remove(15);
+						arrayH.add(15, new Pecas(null, null));
 						btnhumano16.setEnabled(false);
 						btn_15.setEnabled(true);
 						btn_15.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l16 + ".png"));
@@ -47256,6 +48085,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p16);
+						arrayH.remove(15);
+						arrayH.add(15, new Pecas(null, null));
 						btnhumano16.setEnabled(false);
 						btn_16.setEnabled(true);
 						btn_16.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l16 + ".png"));
@@ -47359,6 +48190,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p16);
+						arrayH.remove(15);
+						arrayH.add(15, new Pecas(null, null));
 						btnhumano16.setEnabled(false);
 						btn_17.setEnabled(true);
 						btn_17.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l16 + ".png"));
@@ -47471,6 +48304,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p16);
+						arrayH.remove(15);
+						arrayH.add(15, new Pecas(null, null));
 						btnhumano16.setEnabled(false);
 						btn_18.setEnabled(true);
 						btn_18.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l16 + ".png"));
@@ -47583,6 +48418,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p16);
+						arrayH.remove(15);
+						arrayH.add(15, new Pecas(null, null));
 						btnhumano16.setEnabled(false);
 						btn_19.setEnabled(true);
 						btn_19.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l16 + ".png"));
@@ -47695,6 +48532,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p16);
+						arrayH.remove(15);
+						arrayH.add(15, new Pecas(null, null));
 						btnhumano16.setEnabled(false);
 						btn_20.setEnabled(true);
 						btn_20.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l16 + ".png"));
@@ -47807,6 +48646,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p16);
+						arrayH.remove(15);
+						arrayH.add(15, new Pecas(null, null));
 						btnhumano16.setEnabled(false);
 						btn_21.setEnabled(true);
 						btn_21.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l16 + ".png"));
@@ -47919,6 +48760,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p16);
+						arrayH.remove(15);
+						arrayH.add(15, new Pecas(null, null));
 						btnhumano16.setEnabled(false);
 						btn_22.setEnabled(true);
 						btn_22.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l16 + ".png"));
@@ -48031,6 +48874,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p16);
+						arrayH.remove(15);
+						arrayH.add(15, new Pecas(null, null));
 						btnhumano16.setEnabled(false);
 						btn_23.setEnabled(true);
 						btn_23.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l16 + ".png"));
@@ -48143,6 +48988,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p16);
+						arrayH.remove(15);
+						arrayH.add(15, new Pecas(null, null));
 						btnhumano16.setEnabled(false);
 						btn_24.setEnabled(true);
 						btn_24.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l16 + ".png"));
@@ -48255,6 +49102,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p16);
+						arrayH.remove(15);
+						arrayH.add(15, new Pecas(null, null));
 						btnhumano16.setEnabled(false);
 						btn_25.setEnabled(true);
 						btn_25.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l16 + ".png"));
@@ -48367,6 +49216,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p16);
+						arrayH.remove(15);
+						arrayH.add(15, new Pecas(null, null));
 						btnhumano16.setEnabled(false);
 						btn_26.setEnabled(true);
 						btn_26.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l16 + ".png"));
@@ -48479,6 +49330,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p16);
+						arrayH.remove(15);
+						arrayH.add(15, new Pecas(null, null));
 						btnhumano16.setEnabled(false);
 						btn_27.setEnabled(true);
 						btn_27.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l16 + ".png"));
@@ -48591,6 +49444,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p16);
+						arrayH.remove(15);
+						arrayH.add(15, new Pecas(null, null));
 						btnhumano16.setEnabled(false);
 						btn_28.setEnabled(true);
 						btn_28.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l16 + ".png"));
@@ -48624,16 +49479,7 @@ public class TelaDoJogo extends JFrame {
 						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
 							//////////////////////////////////////////////////////////////////////////////////////////////////////////////
-							// possui um rando com 0 e 1, caso 0 a maquina
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// passa,
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// caso
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// 1
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// ela
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// faz
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// uma
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// compra
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// no
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// array
+							
 							int i = al.maquinaCompraPassa();
 							if (i == 0) {
 								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
@@ -48723,6 +49569,8 @@ public class TelaDoJogo extends JFrame {
 				case 1:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p17);
+						arrayH.remove(16);
+						arrayH.add(16, new Pecas(null, null));
 						btnhumano17.setEnabled(false);
 						btn_1.setEnabled(true);
 						btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l17 + ".png"));
@@ -48821,6 +49669,8 @@ public class TelaDoJogo extends JFrame {
 				case 2:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p17);
+						arrayH.remove(16);
+						arrayH.add(16, new Pecas(null, null));
 						btnhumano17.setEnabled(false);
 						btn_2.setEnabled(true);
 						btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l17 + ".png"));
@@ -48927,6 +49777,8 @@ public class TelaDoJogo extends JFrame {
 				case 3:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p17);
+						arrayH.remove(16);
+						arrayH.add(16, new Pecas(null, null));
 						btnhumano17.setEnabled(false);
 						btn_3.setEnabled(true);
 						btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l17 + ".png"));
@@ -49033,6 +49885,8 @@ public class TelaDoJogo extends JFrame {
 				case 4:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p17);
+						arrayH.remove(16);
+						arrayH.add(16, new Pecas(null, null));
 						btnhumano17.setEnabled(false);
 						btn_4.setEnabled(true);
 						btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l17 + ".png"));
@@ -49062,16 +49916,7 @@ public class TelaDoJogo extends JFrame {
 						/** logica para a compra de peças do jogador maquina **/
 						if (valor == "") {
 							//////////////////////////////////////////////////////////////////////////////////////////////////////////////
-							// possui um rando com 0 e 1, caso 0 a maquina
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// passa,
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// caso
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// 1
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// ela
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// faz
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// uma
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// compra
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// no
-							////////////////////////////////////////////////////////////////////////////////////////////////////////////// array
+							
 							int i = al.maquinaCompraPassa();
 							if (i == 0) {
 								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
@@ -49139,6 +49984,8 @@ public class TelaDoJogo extends JFrame {
 				case 5:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p17);
+						arrayH.remove(16);
+						arrayH.add(16, new Pecas(null, null));
 						btnhumano17.setEnabled(false);
 						btn_5.setEnabled(true);
 						btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l17 + ".png"));
@@ -49246,6 +50093,8 @@ public class TelaDoJogo extends JFrame {
 				case 6:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p17);
+						arrayH.remove(16);
+						arrayH.add(16, new Pecas(null, null));
 						btnhumano17.setEnabled(false);
 						btn_6.setEnabled(true);
 						btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l17 + ".png"));
@@ -49354,6 +50203,8 @@ public class TelaDoJogo extends JFrame {
 				case 7:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p17);
+						arrayH.remove(16);
+						arrayH.add(16, new Pecas(null, null));
 						btnhumano17.setEnabled(false);
 						btn_7.setEnabled(true);
 						btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l17 + ".png"));
@@ -49461,6 +50312,8 @@ public class TelaDoJogo extends JFrame {
 				case 8:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p17);
+						arrayH.remove(16);
+						arrayH.add(16, new Pecas(null, null));
 						btnhumano17.setEnabled(false);
 						btn_8.setEnabled(true);
 						btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l17 + ".png"));
@@ -49569,6 +50422,8 @@ public class TelaDoJogo extends JFrame {
 				case 9:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p17);
+						arrayH.remove(16);
+						arrayH.add(16, new Pecas(null, null));
 						btnhumano17.setEnabled(false);
 						btn_9.setEnabled(true);
 						btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l17 + ".png"));
@@ -49677,6 +50532,8 @@ public class TelaDoJogo extends JFrame {
 				case 10:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p17);
+						arrayH.remove(16);
+						arrayH.add(16, new Pecas(null, null));
 						btnhumano17.setEnabled(false);
 						btn_10.setEnabled(true);
 						btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l17 + ".png"));
@@ -49785,6 +50642,8 @@ public class TelaDoJogo extends JFrame {
 				case 11:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p17);
+						arrayH.remove(16);
+						arrayH.add(16, new Pecas(null, null));
 						btnhumano17.setEnabled(false);
 						btn_11.setEnabled(true);
 						btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l17 + ".png"));
@@ -49893,6 +50752,8 @@ public class TelaDoJogo extends JFrame {
 				case 12:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p17);
+						arrayH.remove(16);
+						arrayH.add(16, new Pecas(null, null));
 						btnhumano17.setEnabled(false);
 						btn_12.setEnabled(true);
 						btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l17 + ".png"));
@@ -49992,6 +50853,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p17);
+						arrayH.remove(16);
+						arrayH.add(16, new Pecas(null, null));
 						btnhumano17.setEnabled(false);
 						btn_13.setEnabled(true);
 						btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l17 + ".png"));
@@ -50098,6 +50961,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p17);
+						arrayH.remove(16);
+						arrayH.add(16, new Pecas(null, null));
 						btnhumano17.setEnabled(false);
 						btn_14.setEnabled(true);
 						btn_14.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l17 + ".png"));
@@ -50202,6 +51067,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p17);
+						arrayH.remove(16);
+						arrayH.add(16, new Pecas(null, null));
 						btnhumano17.setEnabled(false);
 						btn_15.setEnabled(true);
 						btn_15.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l17 + ".png"));
@@ -50305,6 +51172,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p17);
+						arrayH.remove(16);
+						arrayH.add(16, new Pecas(null, null));
 						btnhumano17.setEnabled(false);
 						btn_16.setEnabled(true);
 						btn_16.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l17 + ".png"));
@@ -50408,6 +51277,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p17);
+						arrayH.remove(16);
+						arrayH.add(16, new Pecas(null, null));
 						btnhumano17.setEnabled(false);
 						btn_17.setEnabled(true);
 						btn_17.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l17 + ".png"));
@@ -50520,6 +51391,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p17);
+						arrayH.remove(16);
+						arrayH.add(16, new Pecas(null, null));
 						btnhumano17.setEnabled(false);
 						btn_18.setEnabled(true);
 						btn_18.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l17 + ".png"));
@@ -50632,6 +51505,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p17);
+						arrayH.remove(16);
+						arrayH.add(16, new Pecas(null, null));
 						btnhumano17.setEnabled(false);
 						btn_19.setEnabled(true);
 						btn_19.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l17 + ".png"));
@@ -50744,6 +51619,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p17);
+						arrayH.remove(16);
+						arrayH.add(16, new Pecas(null, null));
 						btnhumano17.setEnabled(false);
 						btn_20.setEnabled(true);
 						btn_20.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l17 + ".png"));
@@ -50856,6 +51733,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p17);
+						arrayH.remove(16);
+						arrayH.add(16, new Pecas(null, null));
 						btnhumano17.setEnabled(false);
 						btn_21.setEnabled(true);
 						btn_21.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l17 + ".png"));
@@ -50968,6 +51847,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p17);
+						arrayH.remove(16);
+						arrayH.add(16, new Pecas(null, null));
 						btnhumano17.setEnabled(false);
 						btn_22.setEnabled(true);
 						btn_22.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l17 + ".png"));
@@ -51080,6 +51961,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p17);
+						arrayH.remove(16);
+						arrayH.add(16, new Pecas(null, null));
 						btnhumano17.setEnabled(false);
 						btn_23.setEnabled(true);
 						btn_23.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l17 + ".png"));
@@ -51192,6 +52075,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p17);
+						arrayH.remove(16);
+						arrayH.add(16, new Pecas(null, null));
 						btnhumano17.setEnabled(false);
 						btn_24.setEnabled(true);
 						btn_24.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l17 + ".png"));
@@ -51304,6 +52189,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p17);
+						arrayH.remove(16);
+						arrayH.add(16, new Pecas(null, null));
 						btnhumano17.setEnabled(false);
 						btn_25.setEnabled(true);
 						btn_25.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l17 + ".png"));
@@ -51416,6 +52303,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p17);
+						arrayH.remove(16);
+						arrayH.add(16, new Pecas(null, null));
 						btnhumano17.setEnabled(false);
 						btn_26.setEnabled(true);
 						btn_26.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l17 + ".png"));
@@ -51528,6 +52417,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p17);
+						arrayH.remove(16);
+						arrayH.add(16, new Pecas(null, null));
 						btnhumano17.setEnabled(false);
 						btn_27.setEnabled(true);
 						btn_27.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l17 + ".png"));
@@ -51640,6 +52531,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p17);
+						arrayH.remove(16);
+						arrayH.add(16, new Pecas(null, null));
 						btnhumano17.setEnabled(false);
 						btn_28.setEnabled(true);
 						btn_28.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l17 + ".png"));
@@ -51763,6 +52656,8 @@ public class TelaDoJogo extends JFrame {
 				case 1:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p18);
+						arrayH.remove(17);
+						arrayH.add(17, new Pecas(null, null));
 						btnhumano18.setEnabled(false);
 						btn_1.setEnabled(true);
 						btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l18 + ".png"));
@@ -51861,6 +52756,8 @@ public class TelaDoJogo extends JFrame {
 				case 2:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p18);
+						arrayH.remove(17);
+						arrayH.add(17, new Pecas(null, null));
 						btnhumano18.setEnabled(false);
 						btn_2.setEnabled(true);
 						btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l18 + ".png"));
@@ -51967,6 +52864,8 @@ public class TelaDoJogo extends JFrame {
 				case 3:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p18);
+						arrayH.remove(17);
+						arrayH.add(17, new Pecas(null, null));
 						btnhumano18.setEnabled(false);
 						btn_3.setEnabled(true);
 						btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l18 + ".png"));
@@ -52073,6 +52972,8 @@ public class TelaDoJogo extends JFrame {
 				case 4:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p18);
+						arrayH.remove(17);
+						arrayH.add(17, new Pecas(null, null));
 						btnhumano18.setEnabled(false);
 						btn_4.setEnabled(true);
 						btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l18 + ".png"));
@@ -52179,6 +53080,8 @@ public class TelaDoJogo extends JFrame {
 				case 5:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p18);
+						arrayH.remove(17);
+						arrayH.add(17, new Pecas(null, null));
 						btnhumano18.setEnabled(false);
 						btn_5.setEnabled(true);
 						btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l18 + ".png"));
@@ -52286,6 +53189,8 @@ public class TelaDoJogo extends JFrame {
 				case 6:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p18);
+						arrayH.remove(17);
+						arrayH.add(17, new Pecas(null, null));
 						btnhumano18.setEnabled(false);
 						btn_6.setEnabled(true);
 						btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l18 + ".png"));
@@ -52394,6 +53299,8 @@ public class TelaDoJogo extends JFrame {
 				case 7:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p18);
+						arrayH.remove(17);
+						arrayH.add(17, new Pecas(null, null));
 						btnhumano18.setEnabled(false);
 						btn_7.setEnabled(true);
 						btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l18 + ".png"));
@@ -52501,6 +53408,8 @@ public class TelaDoJogo extends JFrame {
 				case 8:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p18);
+						arrayH.remove(17);
+						arrayH.add(17, new Pecas(null, null));
 						btnhumano18.setEnabled(false);
 						btn_8.setEnabled(true);
 						btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l18 + ".png"));
@@ -52609,6 +53518,8 @@ public class TelaDoJogo extends JFrame {
 				case 9:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p18);
+						arrayH.remove(17);
+						arrayH.add(17, new Pecas(null, null));
 						btnhumano18.setEnabled(false);
 						btn_9.setEnabled(true);
 						btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l18 + ".png"));
@@ -52717,6 +53628,8 @@ public class TelaDoJogo extends JFrame {
 				case 10:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p18);
+						arrayH.remove(17);
+						arrayH.add(17, new Pecas(null, null));
 						btnhumano18.setEnabled(false);
 						btn_10.setEnabled(true);
 						btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l18 + ".png"));
@@ -52825,6 +53738,8 @@ public class TelaDoJogo extends JFrame {
 				case 11:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p18);
+						arrayH.remove(17);
+						arrayH.add(17, new Pecas(null, null));
 						btnhumano18.setEnabled(false);
 						btn_11.setEnabled(true);
 						btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l18 + ".png"));
@@ -52933,6 +53848,8 @@ public class TelaDoJogo extends JFrame {
 				case 12:
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p18);
+						arrayH.remove(17);
+						arrayH.add(17, new Pecas(null, null));
 						btnhumano18.setEnabled(false);
 						btn_12.setEnabled(true);
 						btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l18 + ".png"));
@@ -53032,6 +53949,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p18);
+						arrayH.remove(17);
+						arrayH.add(17, new Pecas(null, null));
 						btnhumano18.setEnabled(false);
 						btn_13.setEnabled(true);
 						btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l18 + ".png"));
@@ -53137,6 +54056,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p18);
+						arrayH.remove(17);
+						arrayH.add(17, new Pecas(null, null));
 						btnhumano18.setEnabled(false);
 						btn_14.setEnabled(true);
 						btn_14.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l18 + ".png"));
@@ -53241,6 +54162,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p18);
+						arrayH.remove(17);
+						arrayH.add(17, new Pecas(null, null));
 						btnhumano18.setEnabled(false);
 						btn_15.setEnabled(true);
 						btn_15.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l18 + ".png"));
@@ -53344,6 +54267,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p18);
+						arrayH.remove(17);
+						arrayH.add(17, new Pecas(null, null));
 						btnhumano18.setEnabled(false);
 						btn_16.setEnabled(true);
 						btn_16.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l18 + ".png"));
@@ -53447,6 +54372,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p18);
+						arrayH.remove(17);
+						arrayH.add(17, new Pecas(null, null));
 						btnhumano18.setEnabled(false);
 						btn_17.setEnabled(true);
 						btn_17.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l18 + ".png"));
@@ -53559,6 +54486,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p18);
+						arrayH.remove(17);
+						arrayH.add(17, new Pecas(null, null));
 						btnhumano18.setEnabled(false);
 						btn_18.setEnabled(true);
 						btn_18.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l18 + ".png"));
@@ -53671,6 +54600,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p18);
+						arrayH.remove(17);
+						arrayH.add(17, new Pecas(null, null));
 						btnhumano18.setEnabled(false);
 						btn_19.setEnabled(true);
 						btn_19.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l18 + ".png"));
@@ -53783,6 +54714,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p18);
+						arrayH.remove(17);
+						arrayH.add(17, new Pecas(null, null));
 						btnhumano18.setEnabled(false);
 						btn_20.setEnabled(true);
 						btn_20.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l18 + ".png"));
@@ -53895,6 +54828,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p18);
+						arrayH.remove(17);
+						arrayH.add(17, new Pecas(null, null));
 						btnhumano18.setEnabled(false);
 						btn_21.setEnabled(true);
 						btn_21.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l18 + ".png"));
@@ -53998,6 +54933,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p18);
+						arrayH.remove(17);
+						arrayH.add(17, new Pecas(null, null));
 						btnhumano18.setEnabled(false);
 						btn_22.setEnabled(true);
 						btn_22.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l18 + ".png"));
@@ -54110,6 +55047,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p18);
+						arrayH.remove(17);
+						arrayH.add(17, new Pecas(null, null));
 						btnhumano18.setEnabled(false);
 						btn_23.setEnabled(true);
 						btn_23.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l18 + ".png"));
@@ -54222,6 +55161,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p18);
+						arrayH.remove(17);
+						arrayH.add(17, new Pecas(null, null));
 						btnhumano18.setEnabled(false);
 						btn_24.setEnabled(true);
 						btn_24.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l18 + ".png"));
@@ -54334,6 +55275,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p18);
+						arrayH.remove(17);
+						arrayH.add(17, new Pecas(null, null));
 						btnhumano18.setEnabled(false);
 						btn_25.setEnabled(true);
 						btn_25.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l18 + ".png"));
@@ -54446,6 +55389,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p18);
+						arrayH.remove(17);
+						arrayH.add(17, new Pecas(null, null));
 						btnhumano18.setEnabled(false);
 						btn_26.setEnabled(true);
 						btn_26.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l18 + ".png"));
@@ -54558,6 +55503,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p18);
+						arrayH.remove(17);
+						arrayH.add(17, new Pecas(null, null));
 						btnhumano18.setEnabled(false);
 						btn_27.setEnabled(true);
 						btn_27.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l18 + ".png"));
@@ -54661,6 +55608,8 @@ public class TelaDoJogo extends JFrame {
 
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p18);
+						arrayH.remove(17);
+						arrayH.add(17, new Pecas(null, null));
 						btnhumano18.setEnabled(false);
 						btn_28.setEnabled(true);
 						btn_28.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l18 + ".png"));
