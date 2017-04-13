@@ -144,14 +144,15 @@ public class Actions {
 				Pecas p = new Pecas(m.getLadoDireito(), m.getLadoEsquerdo());
 				tabuleiro.add(p);
 				valorPeca = p.getLadoEsquerdo().toString() + p.getLadoDireito().toString();
-				maquina.remove(maquina.indexOf(m));// apaga a pedra encontra no
-													// array da maquina
+				// apaga a pedra encontra no array da maquina
+				maquina.remove(maquina.indexOf(m));
+
 				break;
 			} else if (m.getLadoDireito() == tabuleiro.get(tabuleiro.size() - 1).getLadoEsquerdo()) {
 				tabuleiro.add(m);
 				valorPeca = m.getLadoEsquerdo().toString() + m.getLadoDireito().toString();
-				maquina.remove(maquina.indexOf(m));// apaga a pedra encontra no
-													// array da maquina
+				// apaga a pedra encontra no array da maquina
+				maquina.remove(maquina.indexOf(m));
 				break;
 			}
 		}
@@ -164,16 +165,16 @@ public class Actions {
 			if (m.getLadoEsquerdo() == tabuleiro.get(tabuleiro.size() - 1).getLadoEsquerdo()) {
 				tabuleiro.add(m);
 				valorPeca = m.getLadoEsquerdo().toString() + m.getLadoDireito().toString();
-				maquina.remove(maquina.indexOf(m));// apaga a pedra encontra no
-													// array da maquina
+				// apaga a pedra encontra no array da maquina
+				maquina.remove(maquina.indexOf(m));
 				break;
 			} else if (m.getLadoDireito() == tabuleiro.get(tabuleiro.size() - 1).getLadoEsquerdo()) {
 
 				Pecas p = new Pecas(m.getLadoDireito(), m.getLadoEsquerdo());
 				tabuleiro.add(m);
 				valorPeca = p.getLadoEsquerdo().toString() + p.getLadoDireito().toString();
-				maquina.remove(maquina.indexOf(m));// apaga a pedra encontra no
-													// array da maquina
+				// apaga a pedra encontra no array da maquina
+				maquina.remove(maquina.indexOf(m));
 				break;
 			}
 		}
@@ -188,14 +189,14 @@ public class Actions {
 				Pecas p = new Pecas(m.getLadoDireito(), m.getLadoEsquerdo());
 				tabuleiro.add(p);
 				valorPeca = p.getLadoEsquerdo().toString() + p.getLadoDireito().toString();
-				maquina.remove(maquina.indexOf(m));// apaga a pedra encontra no
-													// array da maquina
+				// apaga a pedra encontra no array da maquina
+				maquina.remove(maquina.indexOf(m));
 				break;
 			} else if (m.getLadoEsquerdo() == tabuleiro.get(tabuleiro.size() - 1).getLadoDireito()) {
 				tabuleiro.add(m);
 				valorPeca = m.getLadoEsquerdo().toString() + m.getLadoDireito().toString();
-				maquina.remove(maquina.indexOf(m));// apaga a pedra encontra no
-													// array da maquina
+				// apaga a pedra encontra no array da maquina
+				maquina.remove(maquina.indexOf(m));
 				break;
 			}
 		}
@@ -228,16 +229,20 @@ public class Actions {
 	public String testaPedraCompraMaquinaHorizontal(ArrayList<Pecas> tabuleiro, ArrayList<Pecas> maquina) {
 		String valorPeca = "";
 
-		if (maquina.get(maquina.size() - 1).getLadoEsquerdo() == tabuleiro.get(tabuleiro.size() - 1).getLadoEsquerdo()) {
+		if (maquina.get(maquina.size() - 1).getLadoEsquerdo() == tabuleiro.get(tabuleiro.size() - 1)
+				.getLadoEsquerdo()) {
 
-			Pecas p = new Pecas(maquina.get(maquina.size() - 1).getLadoDireito(),maquina.get(maquina.size() - 1).getLadoEsquerdo());
+			Pecas p = new Pecas(maquina.get(maquina.size() - 1).getLadoDireito(),
+					maquina.get(maquina.size() - 1).getLadoEsquerdo());
 			tabuleiro.add(p);
 			valorPeca = p.getLadoEsquerdo().toString() + p.getLadoDireito().toString();
 			maquina.remove(maquina.indexOf(maquina.get(maquina.size() - 1)));
 
-		} else if (maquina.get(maquina.size() - 1).getLadoDireito() == tabuleiro.get(tabuleiro.size() - 1).getLadoEsquerdo()) {
+		} else if (maquina.get(maquina.size() - 1).getLadoDireito() == tabuleiro.get(tabuleiro.size() - 1)
+				.getLadoEsquerdo()) {
 			tabuleiro.add(maquina.get(maquina.size() - 1));
-			valorPeca = maquina.get(maquina.size() - 1).getLadoEsquerdo().toString()+ maquina.get(maquina.size() - 1).getLadoDireito().toString();
+			valorPeca = maquina.get(maquina.size() - 1).getLadoEsquerdo().toString()
+					+ maquina.get(maquina.size() - 1).getLadoDireito().toString();
 			maquina.remove(maquina.indexOf(maquina.get(maquina.size() - 1)));
 		}
 
@@ -249,12 +254,15 @@ public class Actions {
 
 		if (maquina.get(maquina.size() - 1).getLadoEsquerdo() == tabuleiro.get(tabuleiro.size() - 1).getLadoDireito()) {
 			tabuleiro.add(maquina.get(maquina.size() - 1));
-			valorPeca = maquina.get(maquina.size() - 1).getLadoEsquerdo().toString() + maquina.get(maquina.size() - 1).getLadoDireito().toString();
+			valorPeca = maquina.get(maquina.size() - 1).getLadoEsquerdo().toString()
+					+ maquina.get(maquina.size() - 1).getLadoDireito().toString();
 			maquina.remove(maquina.indexOf(maquina.get(maquina.size() - 1)));
-			
-		} else if (maquina.get(maquina.size() - 1).getLadoDireito() == tabuleiro.get(tabuleiro.size() - 1).getLadoDireito()) {
-			
-			Pecas p = new Pecas(maquina.get(maquina.size() - 1).getLadoDireito(),maquina.get(maquina.size() - 1).getLadoEsquerdo());
+
+		} else if (maquina.get(maquina.size() - 1).getLadoDireito() == tabuleiro.get(tabuleiro.size() - 1)
+				.getLadoDireito()) {
+
+			Pecas p = new Pecas(maquina.get(maquina.size() - 1).getLadoDireito(),
+					maquina.get(maquina.size() - 1).getLadoEsquerdo());
 			tabuleiro.add(p);
 			valorPeca = p.getLadoEsquerdo().toString() + p.getLadoDireito().toString();
 			maquina.remove(maquina.indexOf(maquina.get(maquina.size() - 1)));
@@ -262,19 +270,39 @@ public class Actions {
 		}
 		return valorPeca;
 	}
-	//verifica se alguem venceu o jogo
-	public int VerificaVencedor(ArrayList<Pecas> humano, ArrayList<Pecas> maquina){
-		this.humano = humano;
-		this.maquina = maquina;
-		if(humano.isEmpty()){
-			return 1;
+
+	// verifica se alguem venceu o jogo - obs: ainda não está pronto
+	public int VerificaVencedor(ArrayList<Pecas> humano, ArrayList<Pecas> maquina) {
+		int auxH = 0;
+		int tam = humano.size();
+		int retorno = 10;
+
+		if (maquina.isEmpty()) {
+			retorno =  0;
+		}else {
+			for (Pecas h : humano) {
+				if (h.getLadoEsquerdo() == null && h.getLadoDireito() == null) {
+					auxH++;
+				}
+			}
+			if (tam == auxH) {
+				retorno =   1;
+			}
 		}
-		else if(maquina.isEmpty()){
-			return 0;
+		return retorno;
+	}
+	
+	// Verifica qual a posição de uma pedra da maquina no array das pedra da compra
+	public int getPosicao(ArrayList<Pecas> array, Pecas p){
+		int posicao = 0;
+		
+		for(int i = 0; i < array.size(); i++){
+			if(p.getLadoEsquerdo() == array.get(i).getLadoEsquerdo() && p.getLadoDireito() == array.get(i).getLadoDireito()){
+				posicao = i;
+				break;
+			}
 		}
-		else{
-			return 10;
-		}
+		return posicao;
 	}
 
 }
