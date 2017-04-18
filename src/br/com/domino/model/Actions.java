@@ -223,7 +223,7 @@ public class Actions {
 		Random gerador = new Random();
 
 		for (int i = 0; i < 2; i++) {
-			num = gerador.nextInt();
+			num = gerador.nextInt(2);
 		}
 		return num;
 	}

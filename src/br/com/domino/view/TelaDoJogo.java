@@ -601,7 +601,7 @@ public class TelaDoJogo extends JFrame {
 						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
-						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
+						System.out.println("Array tabuleiro: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
 
 					break;
