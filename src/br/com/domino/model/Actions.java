@@ -7,6 +7,18 @@ import java.util.Random;
 
 public class Actions {
 
+	private static Actions instance;
+
+	private Actions() {
+	}
+
+	public static Actions getInstance() {
+		if (instance == null) {
+			instance = new Actions();
+		}
+		return instance;
+	}
+
 	public List<Pecas> embaralhaPedrasDomino() {
 
 		List<Pecas> pecas = new ArrayList<Pecas>();
@@ -219,7 +231,7 @@ public class Actions {
 	public void escolhePecaAleatorio(List<Pecas> array, List<Pecas> maquina) {
 
 		for (Pecas peca : array) {
-			if (peca.getLadoEsquerdo() != null && peca.getLadoDireito() != null) {
+			if (peca != null) {
 				maquina.add(peca);
 				break;
 			}
@@ -273,31 +285,40 @@ public class Actions {
 
 	// verifica se alguem venceu o jogo - obs: ainda não está pronto
 	public int VerificaVencedor(ArrayList<Pecas> humano, ArrayList<Pecas> maquina) {
-		int auxH = 0;
-		int tam = humano.size();
+		int hu = 0;
+		int ma = 0;
 		int retorno = 10;
 
-		if (maquina.isEmpty()) {
-			retorno =  0;
-		}else {
-			for (Pecas h : humano) {
-				if (h.getLadoEsquerdo() == null && h.getLadoDireito() == null) {
-					auxH++;
-				}
-			}
-			if (tam == auxH) {
-				retorno =   1;
+		for (Pecas h : humano) {
+			if (h == null) {
+				hu++;
 			}
 		}
+		if (humano.size() == hu) {
+			retorno = 1;
+		}
+
+		for (Pecas m : maquina) {
+			if (m == null) {
+				ma++;
+			}
+		}
+		if (maquina.size() == ma) {
+			retorno = 0;
+		}
+
 		return retorno;
+
 	}
-	
-	// Verifica qual a posição de uma pedra da maquina no array das pedra da compra
-	public int getPosicao(ArrayList<Pecas> array, Pecas p){
+
+	// Verifica qual a posição de uma pedra da maquina no array das pedra da
+	// compra
+	public int getPosicao(ArrayList<Pecas> array, Pecas p) {
 		int posicao = 0;
-		
-		for(int i = 0; i < array.size(); i++){
-			if(p.getLadoEsquerdo() == array.get(i).getLadoEsquerdo() && p.getLadoDireito() == array.get(i).getLadoDireito()){
+
+		for (int i = 0; i < array.size(); i++) {
+			if (p.getLadoEsquerdo() == array.get(i).getLadoEsquerdo()
+					&& p.getLadoDireito() == array.get(i).getLadoDireito()) {
 				posicao = i;
 				break;
 			}
