@@ -228,33 +228,34 @@ public class Actions {
 		return num;
 	}
 
-	public void escolhePecaAleatorio(List<Pecas> array, List<Pecas> maquina) {
-
-		for (Pecas peca : array) {
-			if (peca != null) {
-				maquina.add(peca);
+	public int compraPecaAleatorio(List<Pecas> array, List<Pecas> maquina) {
+		int posicao = 0;
+		
+		for (int i = 0; i < array.size(); i++) {
+			
+			if (array.get(i) != null) {
+				posicao = i;
+				maquina.add(array.get(i));
+				array.set(i, null);
 				break;
 			}
 		}
+		return posicao;
 	}
 
 	public String testaPedraCompraMaquinaHorizontal(ArrayList<Pecas> tabuleiro, ArrayList<Pecas> maquina) {
 		String valorPeca = "";
 
-		if (maquina.get(maquina.size() - 1).getLadoEsquerdo() == tabuleiro.get(tabuleiro.size() - 1)
-				.getLadoEsquerdo()) {
+		if (maquina.get(maquina.size() - 1).getLadoEsquerdo() == tabuleiro.get(tabuleiro.size() - 1).getLadoEsquerdo()) {
 
-			Pecas p = new Pecas(maquina.get(maquina.size() - 1).getLadoDireito(),
-					maquina.get(maquina.size() - 1).getLadoEsquerdo());
+			Pecas p = new Pecas(maquina.get(maquina.size() - 1).getLadoDireito(),maquina.get(maquina.size() - 1).getLadoEsquerdo());
 			tabuleiro.add(p);
 			valorPeca = p.getLadoEsquerdo().toString() + p.getLadoDireito().toString();
 			maquina.remove(maquina.indexOf(maquina.get(maquina.size() - 1)));
 
-		} else if (maquina.get(maquina.size() - 1).getLadoDireito() == tabuleiro.get(tabuleiro.size() - 1)
-				.getLadoEsquerdo()) {
+		} else if (maquina.get(maquina.size() - 1).getLadoDireito() == tabuleiro.get(tabuleiro.size() - 1).getLadoEsquerdo()) {
 			tabuleiro.add(maquina.get(maquina.size() - 1));
-			valorPeca = maquina.get(maquina.size() - 1).getLadoEsquerdo().toString()
-					+ maquina.get(maquina.size() - 1).getLadoDireito().toString();
+			valorPeca = maquina.get(maquina.size() - 1).getLadoEsquerdo().toString() + maquina.get(maquina.size() - 1).getLadoDireito().toString();
 			maquina.remove(maquina.indexOf(maquina.get(maquina.size() - 1)));
 		}
 
@@ -286,7 +287,6 @@ public class Actions {
 	// verifica se alguem venceu o jogo - obs: ainda não está pronto
 	public int VerificaVencedor(ArrayList<Pecas> humano, ArrayList<Pecas> maquina) {
 		int hu = 0;
-		int ma = 0;
 		int retorno = 10;
 
 		for (Pecas h : humano) {
@@ -298,32 +298,12 @@ public class Actions {
 			retorno = 1;
 		}
 
-		for (Pecas m : maquina) {
-			if (m == null) {
-				ma++;
-			}
-		}
-		if (maquina.size() == ma) {
+		if(maquina.isEmpty()){
 			retorno = 0;
 		}
 
 		return retorno;
-
 	}
 
-	// Verifica qual a posição de uma pedra da maquina no array das pedra da
-	// compra
-	public int getPosicao(ArrayList<Pecas> array, Pecas p) {
-		int posicao = 0;
-
-		for (int i = 0; i < array.size(); i++) {
-			if (p.getLadoEsquerdo() == array.get(i).getLadoEsquerdo()
-					&& p.getLadoDireito() == array.get(i).getLadoDireito()) {
-				posicao = i;
-				break;
-			}
-		}
-		return posicao;
-	}
 
 }
