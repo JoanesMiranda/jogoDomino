@@ -286,22 +286,21 @@ public class Actions {
 
 	// verifica se alguem venceu o jogo - obs: terminado
 	public int VerificaVencedor(ArrayList<Pecas> humano, ArrayList<Pecas> maquina) {
-		int hu = 0;
+		int cont = 0;
 		int retorno = 10;
 
 		for (Pecas h : humano) {
 			if (h == null) {
-				hu++;
+				cont++;
 			}
 		}
-		if (humano.size() == hu) {
+		if (humano.size() == cont) {
 			retorno = 1;
 		}
 
 		if(maquina.isEmpty()){
 			retorno = 0;
 		}
-
 		return retorno;
 	}
 

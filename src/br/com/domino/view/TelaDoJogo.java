@@ -6571,7 +6571,7 @@ public class TelaDoJogo extends JFrame {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 2) {
 								arrayTabuleiro.add(p3);
 								arrayH.set(2, null);
-								btnhumano2.setEnabled(false);
+								btnhumano3.setEnabled(false);
 								btn_3.setEnabled(true);
 								btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
 							} else {
