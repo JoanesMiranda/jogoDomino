@@ -122,7 +122,6 @@ public class TelaDoJogo extends JFrame {
 	JButton btnpeca27;
 	JButton btnpeca28;
 
-	
 	int contadorCompraMaquina = 7;
 
 	public void insereImagenNoBotao(int contadorMaquina) {
@@ -461,13 +460,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
-
+							arrayH.set(0, null);
 							btnhumano1.setEnabled(false);
 							btn_1.setEnabled(true);
 							btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 2) {
 								arrayTabuleiro.add(p1);
+								arrayH.set(0, null);
 								btnhumano1.setEnabled(false);
 								btn_1.setEnabled(true);
 								btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
@@ -495,8 +495,6 @@ public class TelaDoJogo extends JFrame {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
 
-								
-								
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -567,12 +565,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 1) {
 							Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(0, null);
 							btnhumano1.setEnabled(false);
 							btn_2.setEnabled(true);
 							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 2) {
 								arrayTabuleiro.add(p1);
+								arrayH.set(0, null);
 								btnhumano1.setEnabled(false);
 								btn_2.setEnabled(true);
 								btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
@@ -596,8 +596,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -666,12 +665,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 1) {
 							Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(0, null);
 							btnhumano1.setEnabled(false);
 							btn_3.setEnabled(true);
 							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 2) {
 								arrayTabuleiro.add(p1);
+								arrayH.set(0, null);
 								btnhumano1.setEnabled(false);
 								btn_3.setEnabled(true);
 								btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
@@ -695,8 +696,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -765,6 +765,7 @@ public class TelaDoJogo extends JFrame {
 					} else {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 1) {
 							arrayTabuleiro.add(p1);
+							arrayH.set(0, null);
 							btnhumano1.setEnabled(false);
 							btn_4.setEnabled(true);
 
@@ -774,6 +775,7 @@ public class TelaDoJogo extends JFrame {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 2) {
 								Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
 								arrayTabuleiro.add(novop);
+								arrayH.set(0, null);
 								btnhumano1.setEnabled(false);
 								btn_4.setEnabled(true);
 								btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
@@ -797,8 +799,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -867,12 +868,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 1) {
 							Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(0, null);
 							btnhumano1.setEnabled(false);
 							btn_5.setEnabled(true);
 							btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 2) {
 								arrayTabuleiro.add(p1);
+								arrayH.set(0, null);
 								btnhumano1.setEnabled(false);
 								btn_5.setEnabled(true);
 								btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
@@ -897,8 +900,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -967,6 +969,7 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 1) {
 							Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(0, null);
 							btnhumano1.setEnabled(false);
 							btn_6.setEnabled(true);
 
@@ -974,6 +977,7 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 2) {
 								arrayTabuleiro.add(p1);
+								arrayH.set(0, null);
 								btnhumano1.setEnabled(false);
 								btn_6.setEnabled(true);
 								btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
@@ -997,8 +1001,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -1067,12 +1070,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 1) {
 							Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(0, null);
 							btnhumano1.setEnabled(false);
 							btn_7.setEnabled(true);
 							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 2) {
 								arrayTabuleiro.add(p1);
+								arrayH.set(0, null);
 								btnhumano1.setEnabled(false);
 								btn_7.setEnabled(true);
 								btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
@@ -1096,8 +1101,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -1167,12 +1171,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 1) {
 							Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(0, null);
 							btnhumano1.setEnabled(false);
 							btn_8.setEnabled(true);
 							btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 2) {
 								arrayTabuleiro.add(p1);
+								arrayH.set(0, null);
 								btnhumano1.setEnabled(false);
 								btn_8.setEnabled(true);
 								btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
@@ -1196,8 +1202,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -1268,12 +1273,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 1) {
 							Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(0, null);
 							btnhumano1.setEnabled(false);
 							btn_9.setEnabled(true);
 							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 2) {
 								arrayTabuleiro.add(p1);
+								arrayH.set(0, null);
 								btnhumano1.setEnabled(false);
 								btn_9.setEnabled(true);
 								btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
@@ -1297,8 +1304,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -1369,12 +1375,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 1) {
 							Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(0, null);
 							btnhumano1.setEnabled(false);
 							btn_10.setEnabled(true);
 							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 2) {
 								arrayTabuleiro.add(p1);
+								arrayH.set(0, null);
 								btnhumano1.setEnabled(false);
 								btn_10.setEnabled(true);
 								btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
@@ -1398,8 +1406,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -1470,12 +1477,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 1) {
 							Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(0, null);
 							btnhumano1.setEnabled(false);
 							btn_11.setEnabled(true);
 							btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 2) {
 								arrayTabuleiro.add(p1);
+								arrayH.set(0, null);
 								btnhumano1.setEnabled(false);
 								btn_11.setEnabled(true);
 								btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
@@ -1499,8 +1508,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -1569,12 +1577,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 1) {
 							Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(0, null);
 							btnhumano1.setEnabled(false);
 							btn_12.setEnabled(true);
 							btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 2) {
 								arrayTabuleiro.add(p1);
+								arrayH.set(0, null);
 								btnhumano1.setEnabled(false);
 								btn_12.setEnabled(true);
 								btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
@@ -1598,8 +1608,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -1670,6 +1679,7 @@ public class TelaDoJogo extends JFrame {
 					} else {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p1) == 1) {
 							arrayTabuleiro.add(p1);
+							arrayH.set(0, null);
 							btnhumano1.setEnabled(false);
 							btn_13.setEnabled(true);
 							btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l1 + ".png"));
@@ -1682,6 +1692,7 @@ public class TelaDoJogo extends JFrame {
 								// no array.
 								Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
 								arrayTabuleiro.add(novop);
+								arrayH.set(0, null);
 								btnhumano1.setEnabled(false);
 								btn_13.setEnabled(true);
 								btn_13.setIcon(
@@ -1706,8 +1717,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -1781,12 +1791,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(0, null);
 							btnhumano1.setEnabled(false);
 							btn_14.setEnabled(true);
 							btn_14.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p1) == 2) {
 								arrayTabuleiro.add(p1);
+								arrayH.set(0, null);
 								btnhumano1.setEnabled(false);
 								btn_14.setEnabled(true);
 								btn_14.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l1 + ".png"));
@@ -1811,8 +1823,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -1886,12 +1897,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(0, null);
 							btnhumano1.setEnabled(false);
 							btn_15.setEnabled(true);
 							btn_15.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p1) == 2) {
 								arrayTabuleiro.add(p1);
+								arrayH.set(0, null);
 								btnhumano1.setEnabled(false);
 								btn_15.setEnabled(true);
 								btn_15.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l1 + ".png"));
@@ -1916,8 +1929,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -1991,12 +2003,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(0, null);
 							btnhumano1.setEnabled(false);
 							btn_16.setEnabled(true);
 							btn_16.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p1) == 2) {
 								arrayTabuleiro.add(p1);
+								arrayH.set(0, null);
 								btnhumano1.setEnabled(false);
 								btn_16.setEnabled(true);
 								btn_16.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l1 + ".png"));
@@ -2021,8 +2035,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -2096,12 +2109,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(0, null);
 							btnhumano1.setEnabled(false);
 							btn_17.setEnabled(true);
 							btn_17.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p1) == 2) {
 								arrayTabuleiro.add(p1);
+								arrayH.set(0, null);
 								btnhumano1.setEnabled(false);
 								btn_17.setEnabled(true);
 								btn_17.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
@@ -2126,8 +2141,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -2201,12 +2215,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(0, null);
 							btnhumano1.setEnabled(false);
 							btn_18.setEnabled(true);
 							btn_18.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p1) == 2) {
 								arrayTabuleiro.add(p1);
+								arrayH.set(0, null);
 								btnhumano1.setEnabled(false);
 								btn_18.setEnabled(true);
 								btn_18.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
@@ -2231,8 +2247,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -2306,12 +2321,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(0, null);
 							btnhumano1.setEnabled(false);
 							btn_19.setEnabled(true);
 							btn_19.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p1) == 2) {
 								arrayTabuleiro.add(p1);
+								arrayH.set(0, null);
 								btnhumano1.setEnabled(false);
 								btn_19.setEnabled(true);
 								btn_19.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
@@ -2336,8 +2353,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -2411,12 +2427,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(0, null);
 							btnhumano1.setEnabled(false);
 							btn_20.setEnabled(true);
 							btn_20.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p1) == 2) {
 								arrayTabuleiro.add(p1);
+								arrayH.set(0, null);
 								btnhumano1.setEnabled(false);
 								btn_20.setEnabled(true);
 								btn_20.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
@@ -2441,8 +2459,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -2516,12 +2533,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(0, null);
 							btnhumano1.setEnabled(false);
 							btn_21.setEnabled(true);
 							btn_21.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p1) == 2) {
 								arrayTabuleiro.add(p1);
+								arrayH.set(0, null);
 								btnhumano1.setEnabled(false);
 								btn_21.setEnabled(true);
 								btn_21.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
@@ -2546,8 +2565,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -2621,12 +2639,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(0, null);
 							btnhumano1.setEnabled(false);
 							btn_22.setEnabled(true);
 							btn_22.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p1) == 2) {
 								arrayTabuleiro.add(p1);
+								arrayH.set(0, null);
 								btnhumano1.setEnabled(false);
 								btn_22.setEnabled(true);
 								btn_22.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
@@ -2651,8 +2671,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -2726,12 +2745,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(0, null);
 							btnhumano1.setEnabled(false);
 							btn_23.setEnabled(true);
 							btn_23.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p1) == 2) {
 								arrayTabuleiro.add(p1);
+								arrayH.set(0, null);
 								btnhumano1.setEnabled(false);
 								btn_23.setEnabled(true);
 								btn_23.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
@@ -2756,8 +2777,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -2831,12 +2851,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(0, null);
 							btnhumano1.setEnabled(false);
 							btn_24.setEnabled(true);
 							btn_24.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p1) == 2) {
 								arrayTabuleiro.add(p1);
+								arrayH.set(0, null);
 								btnhumano1.setEnabled(false);
 								btn_24.setEnabled(true);
 								btn_24.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
@@ -2861,8 +2883,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -2936,12 +2957,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(0, null);
 							btnhumano1.setEnabled(false);
 							btn_25.setEnabled(true);
 							btn_25.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p1) == 2) {
 								arrayTabuleiro.add(p1);
+								arrayH.set(0, null);
 								btnhumano1.setEnabled(false);
 								btn_25.setEnabled(true);
 								btn_25.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
@@ -2966,8 +2989,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -3041,12 +3063,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(0, null);
 							btnhumano1.setEnabled(false);
 							btn_26.setEnabled(true);
 							btn_26.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p1) == 2) {
 								arrayTabuleiro.add(p1);
+								arrayH.set(0, null);
 								btnhumano1.setEnabled(false);
 								btn_26.setEnabled(true);
 								btn_26.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
@@ -3071,8 +3095,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -3146,12 +3169,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(0, null);
 							btnhumano1.setEnabled(false);
 							btn_27.setEnabled(true);
 							btn_27.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p1) == 2) {
 								arrayTabuleiro.add(p1);
+								arrayH.set(0, null);
 								btnhumano1.setEnabled(false);
 								btn_27.setEnabled(true);
 								btn_27.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
@@ -3176,8 +3201,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -3251,12 +3275,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p1.getLadoDireito(), p1.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(0, null);
 							btnhumano1.setEnabled(false);
 							btn_28.setEnabled(true);
 							btn_28.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p1) == 2) {
 								arrayTabuleiro.add(p1);
+								arrayH.set(0, null);
 								btnhumano1.setEnabled(false);
 								btn_28.setEnabled(true);
 								btn_28.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l1 + ".png"));
@@ -3281,8 +3307,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -3364,7 +3389,6 @@ public class TelaDoJogo extends JFrame {
 					if (arrayTabuleiro.isEmpty()) {
 						arrayTabuleiro.add(p2);
 						arrayH.set(1, null);
-						;
 
 						btnhumano2.setEnabled(false);
 						btn_1.setEnabled(true);
@@ -3373,12 +3397,15 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 1) {
 							Pecas novop = new Pecas(p2.getLadoDireito(), p2.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(1, null);
 							btnhumano2.setEnabled(false);
 							btn_1.setEnabled(true);
 							btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 2) {
 								arrayTabuleiro.add(p2);
+								arrayH.set(1, null);
+
 								btnhumano2.setEnabled(false);
 								btn_1.setEnabled(true);
 								btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
@@ -3403,8 +3430,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -3474,12 +3500,15 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 1) {
 							Pecas novop = new Pecas(p2.getLadoDireito(), p2.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(1, null);
 							btnhumano2.setEnabled(false);
 							btn_2.setEnabled(true);
 							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 2) {
 								arrayTabuleiro.add(p2);
+								arrayH.set(1, null);
+
 								btnhumano2.setEnabled(false);
 								btn_2.setEnabled(true);
 								btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
@@ -3503,8 +3532,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -3574,12 +3602,15 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 1) {
 							Pecas novop = new Pecas(p2.getLadoDireito(), p2.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(1, null);
 							btnhumano2.setEnabled(false);
 							btn_3.setEnabled(true);
 							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 2) {
 								arrayTabuleiro.add(p2);
+								arrayH.set(1, null);
+
 								btnhumano2.setEnabled(false);
 								btn_3.setEnabled(true);
 								btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
@@ -3604,8 +3635,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -3675,12 +3705,15 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 1) {
 							Pecas novop = new Pecas(p2.getLadoDireito(), p2.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(1, null);
 							btnhumano2.setEnabled(false);
 							btn_4.setEnabled(true);
 							btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 2) {
 								arrayTabuleiro.add(p2);
+								arrayH.set(1, null);
+
 								btnhumano2.setEnabled(false);
 								btn_4.setEnabled(true);
 								btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
@@ -3705,8 +3738,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -3776,12 +3808,15 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 1) {
 							Pecas novop = new Pecas(p2.getLadoDireito(), p2.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(1, null);
 							btnhumano2.setEnabled(false);
 							btn_5.setEnabled(true);
 							btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 2) {
 								arrayTabuleiro.add(p2);
+								arrayH.set(1, null);
+
 								btnhumano2.setEnabled(false);
 								btn_5.setEnabled(true);
 								btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
@@ -3806,8 +3841,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -3878,12 +3912,15 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 1) {
 							Pecas novop = new Pecas(p2.getLadoDireito(), p2.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(1, null);
 							btnhumano2.setEnabled(false);
 							btn_6.setEnabled(true);
 							btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 2) {
 								arrayTabuleiro.add(p2);
+								arrayH.set(1, null);
+
 								btnhumano2.setEnabled(false);
 								btn_6.setEnabled(true);
 								btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
@@ -3909,8 +3946,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -3981,12 +4017,15 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 1) {
 							Pecas novop = new Pecas(p2.getLadoDireito(), p2.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(1, null);
 							btnhumano2.setEnabled(false);
 							btn_7.setEnabled(true);
 							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 2) {
 								arrayTabuleiro.add(p2);
+								arrayH.set(1, null);
+
 								btnhumano2.setEnabled(false);
 								btn_7.setEnabled(true);
 								btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
@@ -4011,8 +4050,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -4083,12 +4121,15 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 1) {
 							Pecas novop = new Pecas(p2.getLadoDireito(), p2.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(1, null);
 							btnhumano2.setEnabled(false);
 							btn_8.setEnabled(true);
 							btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 2) {
 								arrayTabuleiro.add(p2);
+								arrayH.set(1, null);
+
 								btnhumano2.setEnabled(false);
 								btn_8.setEnabled(true);
 								btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
@@ -4113,8 +4154,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -4186,12 +4226,15 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 1) {
 							Pecas novop = new Pecas(p2.getLadoDireito(), p2.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(1, null);
 							btnhumano2.setEnabled(false);
 							btn_9.setEnabled(true);
 							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 2) {
 								arrayTabuleiro.add(p2);
+								arrayH.set(1, null);
+
 								btnhumano2.setEnabled(false);
 								btn_9.setEnabled(true);
 								btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
@@ -4216,8 +4259,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -4295,6 +4337,7 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 2) {
 								arrayTabuleiro.add(p2);
+								arrayH.set(1, null);
 								btnhumano2.setEnabled(false);
 								btn_10.setEnabled(true);
 								btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
@@ -4319,8 +4362,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -4398,6 +4440,7 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 2) {
 								arrayTabuleiro.add(p2);
+								arrayH.set(1, null);
 								btnhumano2.setEnabled(false);
 								btn_11.setEnabled(true);
 								btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
@@ -4421,8 +4464,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -4500,6 +4542,7 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 2) {
 								arrayTabuleiro.add(p2);
+								arrayH.set(1, null);
 								btnhumano2.setEnabled(false);
 								btn_12.setEnabled(true);
 								btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
@@ -4523,8 +4566,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -4597,6 +4639,7 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p2) == 1) {
 
 							arrayTabuleiro.add(p2);
+							arrayH.set(1, null);
 							btnhumano2.setEnabled(false);
 							btn_13.setEnabled(true);
 							btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l2 + ".png"));
@@ -4634,8 +4677,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -4716,6 +4758,7 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p2) == 2) {
 								arrayTabuleiro.add(p2);
+								arrayH.set(1, null);
 								btnhumano2.setEnabled(false);
 								btn_14.setEnabled(true);
 								btn_14.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l2 + ".png"));
@@ -4740,8 +4783,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -4823,6 +4865,7 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p2) == 2) {
 								arrayTabuleiro.add(p2);
+								arrayH.set(1, null);
 								btnhumano2.setEnabled(false);
 								btn_15.setEnabled(true);
 								btn_15.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l2 + ".png"));
@@ -4847,8 +4890,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -4929,6 +4971,7 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p2) == 2) {
 								arrayTabuleiro.add(p2);
+								arrayH.set(1, null);
 								btnhumano2.setEnabled(false);
 								btn_16.setEnabled(true);
 								btn_16.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l2 + ".png"));
@@ -4953,8 +4996,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -5035,6 +5077,7 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p2) == 2) {
 								arrayTabuleiro.add(p2);
+								arrayH.set(1, null);
 								btnhumano2.setEnabled(false);
 								btn_17.setEnabled(true);
 								btn_17.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
@@ -5059,8 +5102,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -5141,6 +5183,7 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p2) == 2) {
 								arrayTabuleiro.add(p2);
+								arrayH.set(1, null);
 								btnhumano2.setEnabled(false);
 								btn_18.setEnabled(true);
 								btn_18.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
@@ -5165,8 +5208,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -5247,6 +5289,7 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p2) == 2) {
 								arrayTabuleiro.add(p2);
+								arrayH.set(1, null);
 								btnhumano2.setEnabled(false);
 								btn_19.setEnabled(true);
 								btn_19.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
@@ -5271,8 +5314,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -5353,6 +5395,7 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p2) == 2) {
 								arrayTabuleiro.add(p2);
+								arrayH.set(1, null);
 								btnhumano2.setEnabled(false);
 								btn_20.setEnabled(true);
 								btn_20.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
@@ -5377,8 +5420,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -5459,6 +5501,7 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p2) == 2) {
 								arrayTabuleiro.add(p2);
+								arrayH.set(1, null);
 								btnhumano2.setEnabled(false);
 								btn_21.setEnabled(true);
 								btn_21.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
@@ -5483,8 +5526,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -5565,6 +5607,7 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p2) == 2) {
 								arrayTabuleiro.add(p2);
+								arrayH.set(1, null);
 								btnhumano2.setEnabled(false);
 								btn_22.setEnabled(true);
 								btn_22.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
@@ -5589,8 +5632,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -5671,6 +5713,7 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p2) == 2) {
 								arrayTabuleiro.add(p2);
+								arrayH.set(1, null);
 								btnhumano2.setEnabled(false);
 								btn_23.setEnabled(true);
 								btn_23.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
@@ -5695,8 +5738,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -5777,6 +5819,7 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p2) == 2) {
 								arrayTabuleiro.add(p2);
+								arrayH.set(1, null);
 								btnhumano2.setEnabled(false);
 								btn_24.setEnabled(true);
 								btn_24.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
@@ -5801,8 +5844,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -5883,6 +5925,7 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p2) == 2) {
 								arrayTabuleiro.add(p2);
+								arrayH.set(1, null);
 								btnhumano2.setEnabled(false);
 								btn_25.setEnabled(true);
 								btn_25.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
@@ -5907,8 +5950,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -5989,6 +6031,7 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p2) == 2) {
 								arrayTabuleiro.add(p2);
+								arrayH.set(1, null);
 								btnhumano2.setEnabled(false);
 								btn_26.setEnabled(true);
 								btn_26.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
@@ -6013,8 +6056,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -6095,6 +6137,7 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p2) == 2) {
 								arrayTabuleiro.add(p2);
+								arrayH.set(1, null);
 								btnhumano2.setEnabled(false);
 								btn_27.setEnabled(true);
 								btn_27.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
@@ -6119,8 +6162,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -6201,6 +6243,7 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p2) == 2) {
 								arrayTabuleiro.add(p2);
+								arrayH.set(1, null);
 								btnhumano2.setEnabled(false);
 								btn_28.setEnabled(true);
 								btn_28.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l2 + ".png"));
@@ -6225,8 +6268,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -6317,12 +6359,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 1) {
 							Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(2, null);
 							btnhumano3.setEnabled(false);
 							btn_1.setEnabled(true);
 							btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 2) {
 								arrayTabuleiro.add(p3);
+								arrayH.set(2, null);
 								btnhumano3.setEnabled(false);
 								btn_1.setEnabled(true);
 								btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
@@ -6346,8 +6390,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -6418,12 +6461,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 1) {
 							Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(2, null);
 							btnhumano3.setEnabled(false);
 							btn_2.setEnabled(true);
 							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 2) {
 								arrayTabuleiro.add(p3);
+								arrayH.set(2, null);
 								btnhumano3.setEnabled(false);
 								btn_2.setEnabled(true);
 								btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
@@ -6448,8 +6493,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -6519,12 +6563,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 1) {
 							Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(2, null);
 							btnhumano3.setEnabled(false);
 							btn_3.setEnabled(true);
 							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 2) {
 								arrayTabuleiro.add(p3);
+								arrayH.set(2, null);
 								btnhumano2.setEnabled(false);
 								btn_3.setEnabled(true);
 								btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
@@ -6549,8 +6595,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -6620,12 +6665,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 1) {
 							Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(2, null);
 							btnhumano3.setEnabled(false);
 							btn_4.setEnabled(true);
 							btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 2) {
 								arrayTabuleiro.add(p3);
+								arrayH.set(2, null);
 								btnhumano3.setEnabled(false);
 								btn_4.setEnabled(true);
 								btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
@@ -6650,8 +6697,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -6721,6 +6767,7 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 1) {
 							Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(2, null);
 							btnhumano3.setEnabled(false);
 							btn_5.setEnabled(true);
 
@@ -6728,6 +6775,7 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 2) {
 								arrayTabuleiro.add(p3);
+								arrayH.set(2, null);
 								btnhumano3.setEnabled(false);
 								btn_5.setEnabled(true);
 								btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
@@ -6752,8 +6800,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -6823,12 +6870,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 1) {
 							Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(2, null);
 							btnhumano3.setEnabled(false);
 							btn_6.setEnabled(true);
 							btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 2) {
 								arrayTabuleiro.add(p3);
+								arrayH.set(2, null);
 								btnhumano3.setEnabled(false);
 								btn_6.setEnabled(true);
 								btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
@@ -6853,8 +6902,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -6924,12 +6972,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 1) {
 							Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(2, null);
 							btnhumano3.setEnabled(false);
 							btn_7.setEnabled(true);
 							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 2) {
 								arrayTabuleiro.add(p3);
+								arrayH.set(2, null);
 								btnhumano3.setEnabled(false);
 								btn_7.setEnabled(true);
 								btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
@@ -6954,8 +7004,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -7026,12 +7075,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 1) {
 							Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(2, null);
 							btnhumano3.setEnabled(false);
 							btn_8.setEnabled(true);
 							btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 2) {
 								arrayTabuleiro.add(p3);
+								arrayH.set(2, null);
 								btnhumano3.setEnabled(false);
 								btn_8.setEnabled(true);
 								btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
@@ -7056,8 +7107,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -7129,12 +7179,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 1) {
 							Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(2, null);
 							btnhumano3.setEnabled(false);
 							btn_9.setEnabled(true);
 							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 2) {
 								arrayTabuleiro.add(p3);
+								arrayH.set(2, null);
 								btnhumano3.setEnabled(false);
 								btn_9.setEnabled(true);
 								btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
@@ -7159,8 +7211,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -7232,12 +7283,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 1) {
 							Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(2, null);
 							btnhumano3.setEnabled(false);
 							btn_10.setEnabled(true);
 							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 2) {
 								arrayTabuleiro.add(p3);
+								arrayH.set(2, null);
 								btnhumano3.setEnabled(false);
 								btn_10.setEnabled(true);
 								btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
@@ -7262,8 +7315,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -7334,12 +7386,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 1) {
 							Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(2, null);
 							btnhumano3.setEnabled(false);
 							btn_11.setEnabled(true);
 							btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 2) {
 								arrayTabuleiro.add(p3);
+								arrayH.set(2, null);
 								btnhumano3.setEnabled(false);
 								btn_11.setEnabled(true);
 								btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
@@ -7364,8 +7418,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -7437,12 +7490,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 1) {
 							Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(2, null);
 							btnhumano3.setEnabled(false);
 							btn_12.setEnabled(true);
 							btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 2) {
 								arrayTabuleiro.add(p3);
+								arrayH.set(2, null);
 								btnhumano3.setEnabled(false);
 								btn_12.setEnabled(true);
 								btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
@@ -7466,8 +7521,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -7538,6 +7592,7 @@ public class TelaDoJogo extends JFrame {
 					} else {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p3) == 1) {
 							arrayTabuleiro.add(p3);
+							arrayH.set(2, null);
 							btnhumano3.setEnabled(false);
 							btn_13.setEnabled(true);
 							btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l3 + ".png"));
@@ -7549,6 +7604,7 @@ public class TelaDoJogo extends JFrame {
 								// no array.
 								Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
 								arrayTabuleiro.add(novop);
+								arrayH.set(2, null);
 								btnhumano3.setEnabled(false);
 								btn_13.setEnabled(true);
 								btn_13.setIcon(
@@ -7574,8 +7630,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -7650,12 +7705,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(2, null);
 							btnhumano3.setEnabled(false);
 							btn_14.setEnabled(true);
 							btn_14.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p3) == 2) {
 								arrayTabuleiro.add(p3);
+								arrayH.set(2, null);
 								btnhumano3.setEnabled(false);
 								btn_14.setEnabled(true);
 								btn_14.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l3 + ".png"));
@@ -7680,8 +7737,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -7756,12 +7812,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(2, null);
 							btnhumano3.setEnabled(false);
 							btn_15.setEnabled(true);
 							btn_15.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p3) == 2) {
 								arrayTabuleiro.add(p3);
+								arrayH.set(2, null);
 								btnhumano3.setEnabled(false);
 								btn_15.setEnabled(true);
 								btn_15.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l3 + ".png"));
@@ -7786,8 +7844,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -7862,12 +7919,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(2, null);
 							btnhumano3.setEnabled(false);
 							btn_16.setEnabled(true);
 							btn_16.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p3) == 2) {
 								arrayTabuleiro.add(p3);
+								arrayH.set(2, null);
 								btnhumano3.setEnabled(false);
 								btn_16.setEnabled(true);
 								btn_16.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l3 + ".png"));
@@ -7892,8 +7951,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -7968,12 +8026,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(2, null);
 							btnhumano3.setEnabled(false);
 							btn_17.setEnabled(true);
 							btn_17.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p3) == 2) {
 								arrayTabuleiro.add(p3);
+								arrayH.set(2, null);
 								btnhumano3.setEnabled(false);
 								btn_17.setEnabled(true);
 								btn_17.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
@@ -7998,8 +8058,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -8074,12 +8133,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(2, null);
 							btnhumano3.setEnabled(false);
 							btn_18.setEnabled(true);
 							btn_18.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p3) == 2) {
 								arrayTabuleiro.add(p3);
+								arrayH.set(2, null);
 								btnhumano3.setEnabled(false);
 								btn_18.setEnabled(true);
 								btn_18.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
@@ -8104,8 +8165,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -8180,12 +8240,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(2, null);
 							btnhumano3.setEnabled(false);
 							btn_19.setEnabled(true);
 							btn_19.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p3) == 2) {
 								arrayTabuleiro.add(p3);
+								arrayH.set(2, null);
 								btnhumano3.setEnabled(false);
 								btn_19.setEnabled(true);
 								btn_19.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
@@ -8210,8 +8272,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -8286,12 +8347,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(2, null);
 							btnhumano3.setEnabled(false);
 							btn_20.setEnabled(true);
 							btn_20.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p3) == 2) {
 								arrayTabuleiro.add(p3);
+								arrayH.set(2, null);
 								btnhumano3.setEnabled(false);
 								btn_20.setEnabled(true);
 								btn_20.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
@@ -8316,8 +8379,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -8392,12 +8454,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(2, null);
 							btnhumano3.setEnabled(false);
 							btn_21.setEnabled(true);
 							btn_21.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p3) == 2) {
 								arrayTabuleiro.add(p3);
+								arrayH.set(2, null);
 								btnhumano3.setEnabled(false);
 								btn_21.setEnabled(true);
 								btn_21.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
@@ -8422,8 +8486,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -8498,12 +8561,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(2, null);
 							btnhumano3.setEnabled(false);
 							btn_22.setEnabled(true);
 							btn_22.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p3) == 2) {
 								arrayTabuleiro.add(p3);
+								arrayH.set(2, null);
 								btnhumano3.setEnabled(false);
 								btn_22.setEnabled(true);
 								btn_22.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
@@ -8528,8 +8593,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -8604,12 +8668,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(2, null);
 							btnhumano3.setEnabled(false);
 							btn_23.setEnabled(true);
 							btn_23.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p3) == 2) {
 								arrayTabuleiro.add(p3);
+								arrayH.set(2, null);
 								btnhumano3.setEnabled(false);
 								btn_23.setEnabled(true);
 								btn_23.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
@@ -8634,8 +8700,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -8710,12 +8775,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(2, null);
 							btnhumano3.setEnabled(false);
 							btn_24.setEnabled(true);
 							btn_24.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p3) == 2) {
 								arrayTabuleiro.add(p3);
+								arrayH.set(2, null);
 								btnhumano3.setEnabled(false);
 								btn_24.setEnabled(true);
 								btn_24.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
@@ -8740,8 +8807,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -8816,12 +8882,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(2, null);
 							btnhumano3.setEnabled(false);
 							btn_25.setEnabled(true);
 							btn_25.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p3) == 2) {
 								arrayTabuleiro.add(p3);
+								arrayH.set(2, null);
 								btnhumano3.setEnabled(false);
 								btn_25.setEnabled(true);
 								btn_25.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
@@ -8846,8 +8914,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -8922,12 +8989,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(2, null);
 							btnhumano3.setEnabled(false);
 							btn_26.setEnabled(true);
 							btn_26.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p3) == 2) {
 								arrayTabuleiro.add(p3);
+								arrayH.set(2, null);
 								btnhumano3.setEnabled(false);
 								btn_26.setEnabled(true);
 								btn_26.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
@@ -8952,8 +9021,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -9028,12 +9096,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(2, null);
 							btnhumano3.setEnabled(false);
 							btn_27.setEnabled(true);
 							btn_27.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p3) == 2) {
 								arrayTabuleiro.add(p3);
+								arrayH.set(2, null);
 								btnhumano3.setEnabled(false);
 								btn_27.setEnabled(true);
 								btn_27.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
@@ -9058,8 +9128,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -9134,12 +9203,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p3.getLadoDireito(), p3.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(2, null);
 							btnhumano3.setEnabled(false);
 							btn_28.setEnabled(true);
 							btn_28.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p3) == 2) {
 								arrayTabuleiro.add(p3);
+								arrayH.set(2, null);
 								btnhumano3.setEnabled(false);
 								btn_28.setEnabled(true);
 								btn_28.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l3 + ".png"));
@@ -9164,8 +9235,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -9256,12 +9326,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 1) {
 							Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(3, null);
 							btnhumano4.setEnabled(false);
 							btn_1.setEnabled(true);
 							btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 2) {
 								arrayTabuleiro.add(p4);
+								arrayH.set(3, null);
 								btnhumano4.setEnabled(false);
 								btn_1.setEnabled(true);
 								btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
@@ -9285,8 +9357,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -9356,12 +9427,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 1) {
 							Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(3, null);
 							btnhumano4.setEnabled(false);
 							btn_2.setEnabled(true);
 							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 2) {
 								arrayTabuleiro.add(p4);
+								arrayH.set(3, null);
 								btnhumano4.setEnabled(false);
 								btn_2.setEnabled(true);
 								btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
@@ -9385,8 +9458,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -9456,12 +9528,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 1) {
 							Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(3, null);
 							btnhumano4.setEnabled(false);
 							btn_3.setEnabled(true);
 							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 2) {
 								arrayTabuleiro.add(p4);
+								arrayH.set(3, null);
 								btnhumano4.setEnabled(false);
 								btn_3.setEnabled(true);
 								btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
@@ -9485,8 +9559,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -9557,12 +9630,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 1) {
 							Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(3, null);
 							btnhumano4.setEnabled(false);
 							btn_4.setEnabled(true);
 							btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 2) {
 								arrayTabuleiro.add(p4);
+								arrayH.set(3, null);
 								btnhumano4.setEnabled(false);
 								btn_4.setEnabled(true);
 								btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
@@ -9587,8 +9662,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -9658,12 +9732,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 1) {
 							Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(3, null);
 							btnhumano4.setEnabled(false);
 							btn_5.setEnabled(true);
 							btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 2) {
 								arrayTabuleiro.add(p4);
+								arrayH.set(3, null);
 								btnhumano4.setEnabled(false);
 								btn_5.setEnabled(true);
 								btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
@@ -9687,8 +9763,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -9758,12 +9833,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 1) {
 							Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(3, null);
 							btnhumano4.setEnabled(false);
 							btn_6.setEnabled(true);
 							btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 2) {
 								arrayTabuleiro.add(p4);
+								arrayH.set(3, null);
 								btnhumano4.setEnabled(false);
 								btn_6.setEnabled(true);
 								btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
@@ -9787,8 +9864,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -9858,12 +9934,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 1) {
 							Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(3, null);
 							btnhumano4.setEnabled(false);
 							btn_7.setEnabled(true);
 							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 2) {
 								arrayTabuleiro.add(p4);
+								arrayH.set(3, null);
 								btnhumano4.setEnabled(false);
 								btn_7.setEnabled(true);
 								btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
@@ -9887,8 +9965,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -9959,12 +10036,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 1) {
 							Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(3, null);
 							btnhumano4.setEnabled(false);
 							btn_8.setEnabled(true);
 							btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 2) {
 								arrayTabuleiro.add(p4);
+								arrayH.set(3, null);
 								btnhumano4.setEnabled(false);
 								btn_8.setEnabled(true);
 								btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
@@ -9988,8 +10067,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -10061,12 +10139,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 1) {
 							Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(3, null);
 							btnhumano4.setEnabled(false);
 							btn_9.setEnabled(true);
 							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 2) {
 								arrayTabuleiro.add(p4);
+								arrayH.set(3, null);
 								btnhumano4.setEnabled(false);
 								btn_9.setEnabled(true);
 								btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
@@ -10090,8 +10170,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -10163,12 +10242,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 1) {
 							Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(3, null);
 							btnhumano4.setEnabled(false);
 							btn_10.setEnabled(true);
 							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 2) {
 								arrayTabuleiro.add(p4);
+								arrayH.set(3, null);
 								btnhumano4.setEnabled(false);
 								btn_10.setEnabled(true);
 								btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
@@ -10192,8 +10273,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -10265,12 +10345,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 1) {
 							Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(3, null);
 							btnhumano4.setEnabled(false);
 							btn_11.setEnabled(true);
 							btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 2) {
 								arrayTabuleiro.add(p4);
+								arrayH.set(3, null);
 								btnhumano4.setEnabled(false);
 								btn_11.setEnabled(true);
 								btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
@@ -10294,8 +10376,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -10367,12 +10448,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 1) {
 							Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(3, null);
 							btnhumano4.setEnabled(false);
 							btn_12.setEnabled(true);
 							btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 2) {
 								arrayTabuleiro.add(p4);
+								arrayH.set(3, null);
 								btnhumano4.setEnabled(false);
 								btn_12.setEnabled(true);
 								btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
@@ -10396,8 +10479,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -10468,6 +10550,7 @@ public class TelaDoJogo extends JFrame {
 					} else {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p4) == 1) {
 							arrayTabuleiro.add(p4);
+							arrayH.set(3, null);
 							btnhumano4.setEnabled(false);
 							btn_13.setEnabled(true);
 							btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l4 + ".png"));
@@ -10479,6 +10562,7 @@ public class TelaDoJogo extends JFrame {
 								// no array.
 								Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
 								arrayTabuleiro.add(novop);
+								arrayH.set(3, null);
 								btnhumano4.setEnabled(false);
 								btn_13.setEnabled(true);
 								btn_13.setIcon(
@@ -10504,8 +10588,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -10580,12 +10663,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(3, null);
 							btnhumano4.setEnabled(false);
 							btn_14.setEnabled(true);
 							btn_14.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p4) == 2) {
 								arrayTabuleiro.add(p4);
+								arrayH.set(3, null);
 								btnhumano4.setEnabled(false);
 								btn_14.setEnabled(true);
 								btn_14.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l4 + ".png"));
@@ -10610,8 +10695,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -10686,12 +10770,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(3, null);
 							btnhumano4.setEnabled(false);
 							btn_15.setEnabled(true);
 							btn_15.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p4) == 2) {
 								arrayTabuleiro.add(p4);
+								arrayH.set(3, null);
 								btnhumano4.setEnabled(false);
 								btn_15.setEnabled(true);
 								btn_15.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l4 + ".png"));
@@ -10716,8 +10802,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -10792,12 +10877,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(3, null);
 							btnhumano4.setEnabled(false);
 							btn_16.setEnabled(true);
 							btn_16.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p4) == 2) {
 								arrayTabuleiro.add(p4);
+								arrayH.set(3, null);
 								btnhumano4.setEnabled(false);
 								btn_16.setEnabled(true);
 								btn_16.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l4 + ".png"));
@@ -10823,8 +10910,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -10899,12 +10985,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(3, null);
 							btnhumano4.setEnabled(false);
 							btn_17.setEnabled(true);
 							btn_17.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p4) == 2) {
 								arrayTabuleiro.add(p4);
+								arrayH.set(3, null);
 								btnhumano4.setEnabled(false);
 								btn_17.setEnabled(true);
 								btn_17.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
@@ -10929,8 +11017,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -11005,12 +11092,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(3, null);
 							btnhumano4.setEnabled(false);
 							btn_18.setEnabled(true);
 							btn_18.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p4) == 2) {
 								arrayTabuleiro.add(p4);
+								arrayH.set(3, null);
 								btnhumano4.setEnabled(false);
 								btn_18.setEnabled(true);
 								btn_18.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
@@ -11035,8 +11124,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -11111,12 +11199,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(3, null);
 							btnhumano4.setEnabled(false);
 							btn_19.setEnabled(true);
 							btn_19.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p4) == 2) {
 								arrayTabuleiro.add(p4);
+								arrayH.set(3, null);
 								btnhumano4.setEnabled(false);
 								btn_19.setEnabled(true);
 								btn_19.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
@@ -11141,8 +11231,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -11217,12 +11306,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(3, null);
 							btnhumano4.setEnabled(false);
 							btn_20.setEnabled(true);
 							btn_20.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p4) == 2) {
 								arrayTabuleiro.add(p4);
+								arrayH.set(3, null);
 								btnhumano4.setEnabled(false);
 								btn_20.setEnabled(true);
 								btn_20.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
@@ -11247,8 +11338,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -11323,12 +11413,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(3, null);
 							btnhumano4.setEnabled(false);
 							btn_21.setEnabled(true);
 							btn_21.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p4) == 2) {
 								arrayTabuleiro.add(p4);
+								arrayH.set(3, null);
 								btnhumano4.setEnabled(false);
 								btn_21.setEnabled(true);
 								btn_21.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
@@ -11353,8 +11445,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -11429,12 +11520,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(3, null);
 							btnhumano4.setEnabled(false);
 							btn_22.setEnabled(true);
 							btn_22.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p4) == 2) {
 								arrayTabuleiro.add(p4);
+								arrayH.set(3, null);
 								btnhumano4.setEnabled(false);
 								btn_22.setEnabled(true);
 								btn_22.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
@@ -11459,8 +11552,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -11535,12 +11627,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(3, null);
 							btnhumano4.setEnabled(false);
 							btn_23.setEnabled(true);
 							btn_23.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p4) == 2) {
 								arrayTabuleiro.add(p4);
+								arrayH.set(3, null);
 								btnhumano4.setEnabled(false);
 								btn_23.setEnabled(true);
 								btn_23.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
@@ -11565,8 +11659,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -11641,12 +11734,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(3, null);
 							btnhumano4.setEnabled(false);
 							btn_24.setEnabled(true);
 							btn_24.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p4) == 2) {
 								arrayTabuleiro.add(p4);
+								arrayH.set(3, null);
 								btnhumano4.setEnabled(false);
 								btn_24.setEnabled(true);
 								btn_24.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
@@ -11671,8 +11766,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -11747,12 +11841,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(3, null);
 							btnhumano4.setEnabled(false);
 							btn_25.setEnabled(true);
 							btn_25.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p4) == 2) {
 								arrayTabuleiro.add(p4);
+								arrayH.set(3, null);
 								btnhumano4.setEnabled(false);
 								btn_25.setEnabled(true);
 								btn_25.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
@@ -11777,8 +11873,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -11853,12 +11948,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(3, null);
 							btnhumano4.setEnabled(false);
 							btn_26.setEnabled(true);
 							btn_26.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p4) == 2) {
 								arrayTabuleiro.add(p4);
+								arrayH.set(3, null);
 								btnhumano4.setEnabled(false);
 								btn_26.setEnabled(true);
 								btn_26.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
@@ -11883,8 +11980,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -11959,12 +12055,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(3, null);
 							btnhumano4.setEnabled(false);
 							btn_27.setEnabled(true);
 							btn_27.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p4) == 2) {
 								arrayTabuleiro.add(p4);
+								arrayH.set(3, null);
 								btnhumano4.setEnabled(false);
 								btn_27.setEnabled(true);
 								btn_27.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
@@ -11989,8 +12087,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -12065,12 +12162,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p4.getLadoDireito(), p4.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(3, null);
 							btnhumano4.setEnabled(false);
 							btn_28.setEnabled(true);
 							btn_28.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p4) == 2) {
 								arrayTabuleiro.add(p4);
+								arrayH.set(3, null);
 								btnhumano4.setEnabled(false);
 								btn_28.setEnabled(true);
 								btn_28.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l4 + ".png"));
@@ -12095,8 +12194,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -12187,12 +12285,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 1) {
 							Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(4, null);
 							btnhumano5.setEnabled(false);
 							btn_1.setEnabled(true);
 							btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 2) {
 								arrayTabuleiro.add(p5);
+								arrayH.set(4, null);
 								btnhumano5.setEnabled(false);
 								btn_1.setEnabled(true);
 								btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
@@ -12217,8 +12317,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -12288,12 +12387,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 1) {
 							Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(4, null);
 							btnhumano5.setEnabled(false);
 							btn_2.setEnabled(true);
 							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 2) {
 								arrayTabuleiro.add(p5);
+								arrayH.set(4, null);
 								btnhumano5.setEnabled(false);
 								btn_2.setEnabled(true);
 								btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
@@ -12317,8 +12418,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -12388,12 +12488,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 1) {
 							Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(4, null);
 							btnhumano5.setEnabled(false);
 							btn_3.setEnabled(true);
 							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 2) {
 								arrayTabuleiro.add(p5);
+								arrayH.set(4, null);
 								btnhumano5.setEnabled(false);
 								btn_3.setEnabled(true);
 								btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
@@ -12418,8 +12520,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -12489,12 +12590,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 1) {
 							Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(4, null);
 							btnhumano5.setEnabled(false);
 							btn_4.setEnabled(true);
 							btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 2) {
 								arrayTabuleiro.add(p5);
+								arrayH.set(4, null);
 								btnhumano5.setEnabled(false);
 								btn_4.setEnabled(true);
 								btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
@@ -12519,8 +12622,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -12590,12 +12692,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 1) {
 							Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(4, null);
 							btnhumano5.setEnabled(false);
 							btn_5.setEnabled(true);
 							btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 2) {
 								arrayTabuleiro.add(p5);
+								arrayH.set(4, null);
 								btnhumano5.setEnabled(false);
 								btn_5.setEnabled(true);
 								btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
@@ -12620,8 +12724,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -12691,12 +12794,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 1) {
 							Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(4, null);
 							btnhumano5.setEnabled(false);
 							btn_6.setEnabled(true);
 							btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 2) {
 								arrayTabuleiro.add(p5);
+								arrayH.set(4, null);
 								btnhumano5.setEnabled(false);
 								btn_6.setEnabled(true);
 								btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
@@ -12721,8 +12826,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -12792,12 +12896,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 1) {
 							Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(4, null);
 							btnhumano5.setEnabled(false);
 							btn_7.setEnabled(true);
 							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 2) {
 								arrayTabuleiro.add(p5);
+								arrayH.set(4, null);
 								btnhumano5.setEnabled(false);
 								btn_7.setEnabled(true);
 								btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
@@ -12822,8 +12928,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -12894,12 +12999,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 1) {
 							Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(4, null);
 							btnhumano5.setEnabled(false);
 							btn_8.setEnabled(true);
 							btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 2) {
 								arrayTabuleiro.add(p5);
+								arrayH.set(4, null);
 								btnhumano5.setEnabled(false);
 								btn_8.setEnabled(true);
 								btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
@@ -12924,8 +13031,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -12997,12 +13103,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 1) {
 							Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(4, null);
 							btnhumano5.setEnabled(false);
 							btn_9.setEnabled(true);
 							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 2) {
 								arrayTabuleiro.add(p5);
+								arrayH.set(4, null);
 								btnhumano5.setEnabled(false);
 								btn_9.setEnabled(true);
 								btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
@@ -13027,8 +13135,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -13100,12 +13207,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 1) {
 							Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(4, null);
 							btnhumano5.setEnabled(false);
 							btn_10.setEnabled(true);
 							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 2) {
 								arrayTabuleiro.add(p5);
+								arrayH.set(4, null);
 								btnhumano5.setEnabled(false);
 								btn_10.setEnabled(true);
 								btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
@@ -13130,8 +13239,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -13202,12 +13310,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 1) {
 							Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(4, null);
 							btnhumano5.setEnabled(false);
 							btn_11.setEnabled(true);
 							btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 2) {
 								arrayTabuleiro.add(p5);
+								arrayH.set(4, null);
 								btnhumano5.setEnabled(false);
 								btn_11.setEnabled(true);
 								btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
@@ -13232,8 +13342,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -13304,12 +13413,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 1) {
 							Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(4, null);
 							btnhumano5.setEnabled(false);
 							btn_12.setEnabled(true);
 							btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 2) {
 								arrayTabuleiro.add(p5);
+								arrayH.set(4, null);
 								btnhumano5.setEnabled(false);
 								btn_12.setEnabled(true);
 								btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
@@ -13333,8 +13444,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -13405,6 +13515,7 @@ public class TelaDoJogo extends JFrame {
 					} else {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p5) == 1) {
 							arrayTabuleiro.add(p5);
+							arrayH.set(4, null);
 							btnhumano5.setEnabled(false);
 							btn_13.setEnabled(true);
 							btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l5 + ".png"));
@@ -13417,6 +13528,7 @@ public class TelaDoJogo extends JFrame {
 								// no array.
 								Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
 								arrayTabuleiro.add(novop);
+								arrayH.set(4, null);
 								btnhumano5.setEnabled(false);
 								btn_13.setEnabled(true);
 								btn_13.setIcon(
@@ -13442,8 +13554,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -13518,12 +13629,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(4, null);
 							btnhumano5.setEnabled(false);
 							btn_14.setEnabled(true);
 							btn_14.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p5) == 2) {
 								arrayTabuleiro.add(p5);
+								arrayH.set(4, null);
 								btnhumano5.setEnabled(false);
 								btn_14.setEnabled(true);
 								btn_14.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l5 + ".png"));
@@ -13548,8 +13661,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -13624,12 +13736,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(4, null);
 							btnhumano5.setEnabled(false);
 							btn_15.setEnabled(true);
 							btn_15.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p5) == 2) {
 								arrayTabuleiro.add(p5);
+								arrayH.set(4, null);
 								btnhumano5.setEnabled(false);
 								btn_15.setEnabled(true);
 								btn_15.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l5 + ".png"));
@@ -13654,8 +13768,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -13730,12 +13843,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(4, null);
 							btnhumano5.setEnabled(false);
 							btn_16.setEnabled(true);
 							btn_16.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p5) == 2) {
 								arrayTabuleiro.add(p5);
+								arrayH.set(4, null);
 								btnhumano5.setEnabled(false);
 								btn_16.setEnabled(true);
 								btn_16.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l5 + ".png"));
@@ -13760,8 +13875,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -13836,12 +13950,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(4, null);
 							btnhumano5.setEnabled(false);
 							btn_17.setEnabled(true);
 							btn_17.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p5) == 2) {
 								arrayTabuleiro.add(p5);
+								arrayH.set(4, null);
 								btnhumano5.setEnabled(false);
 								btn_17.setEnabled(true);
 								btn_17.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
@@ -13867,8 +13983,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -13943,12 +14058,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(4, null);
 							btnhumano5.setEnabled(false);
 							btn_18.setEnabled(true);
 							btn_18.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p5) == 2) {
 								arrayTabuleiro.add(p5);
+								arrayH.set(4, null);
 								btnhumano5.setEnabled(false);
 								btn_18.setEnabled(true);
 								btn_18.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
@@ -13974,8 +14091,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -14050,12 +14166,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(4, null);
 							btnhumano5.setEnabled(false);
 							btn_19.setEnabled(true);
 							btn_19.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p5) == 2) {
 								arrayTabuleiro.add(p5);
+								arrayH.set(4, null);
 								btnhumano5.setEnabled(false);
 								btn_19.setEnabled(true);
 								btn_19.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
@@ -14081,8 +14199,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -14157,12 +14274,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(4, null);
 							btnhumano5.setEnabled(false);
 							btn_20.setEnabled(true);
 							btn_20.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p5) == 2) {
 								arrayTabuleiro.add(p5);
+								arrayH.set(4, null);
 								btnhumano5.setEnabled(false);
 								btn_20.setEnabled(true);
 								btn_20.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
@@ -14188,8 +14307,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -14264,12 +14382,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(4, null);
 							btnhumano5.setEnabled(false);
 							btn_21.setEnabled(true);
 							btn_21.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p5) == 2) {
 								arrayTabuleiro.add(p5);
+								arrayH.set(4, null);
 								btnhumano5.setEnabled(false);
 								btn_21.setEnabled(true);
 								btn_21.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
@@ -14295,8 +14415,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -14371,12 +14490,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(4, null);
 							btnhumano5.setEnabled(false);
 							btn_22.setEnabled(true);
 							btn_22.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p5) == 2) {
 								arrayTabuleiro.add(p5);
+								arrayH.set(4, null);
 								btnhumano5.setEnabled(false);
 								btn_22.setEnabled(true);
 								btn_22.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
@@ -14402,8 +14523,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -14478,12 +14598,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(4, null);
 							btnhumano5.setEnabled(false);
 							btn_23.setEnabled(true);
 							btn_23.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p5) == 2) {
 								arrayTabuleiro.add(p5);
+								arrayH.set(4, null);
 								btnhumano5.setEnabled(false);
 								btn_23.setEnabled(true);
 								btn_23.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
@@ -14509,8 +14631,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -14585,12 +14706,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(4, null);
 							btnhumano5.setEnabled(false);
 							btn_24.setEnabled(true);
 							btn_24.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p5) == 2) {
 								arrayTabuleiro.add(p5);
+								arrayH.set(4, null);
 								btnhumano5.setEnabled(false);
 								btn_24.setEnabled(true);
 								btn_24.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
@@ -14616,8 +14739,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -14692,12 +14814,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(4, null);
 							btnhumano5.setEnabled(false);
 							btn_25.setEnabled(true);
 							btn_25.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p5) == 2) {
 								arrayTabuleiro.add(p5);
+								arrayH.set(4, null);
 								btnhumano5.setEnabled(false);
 								btn_25.setEnabled(true);
 								btn_25.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
@@ -14723,8 +14847,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -14799,12 +14922,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(4, null);
 							btnhumano5.setEnabled(false);
 							btn_26.setEnabled(true);
 							btn_26.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p5) == 2) {
 								arrayTabuleiro.add(p5);
+								arrayH.set(4, null);
 								btnhumano5.setEnabled(false);
 								btn_26.setEnabled(true);
 								btn_26.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
@@ -14830,8 +14955,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -14906,12 +15030,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(4, null);
 							btnhumano5.setEnabled(false);
 							btn_27.setEnabled(true);
 							btn_27.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p5) == 2) {
 								arrayTabuleiro.add(p5);
+								arrayH.set(4, null);
 								btnhumano5.setEnabled(false);
 								btn_27.setEnabled(true);
 								btn_27.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
@@ -14937,8 +15063,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -15013,12 +15138,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p5.getLadoDireito(), p5.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(4, null);
 							btnhumano5.setEnabled(false);
 							btn_28.setEnabled(true);
 							btn_28.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p5) == 2) {
 								arrayTabuleiro.add(p5);
+								arrayH.set(4, null);
 								btnhumano5.setEnabled(false);
 								btn_28.setEnabled(true);
 								btn_28.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l5 + ".png"));
@@ -15043,8 +15170,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -15134,12 +15260,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 1) {
 							Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(5, null);
 							btnhumano2.setEnabled(false);
 							btn_1.setEnabled(true);
 							btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 2) {
 								arrayTabuleiro.add(p6);
+								arrayH.set(5, null);
 								btnhumano6.setEnabled(false);
 								btn_1.setEnabled(true);
 								btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
@@ -15165,8 +15293,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -15237,12 +15364,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 1) {
 							Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(5, null);
 							btnhumano6.setEnabled(false);
 							btn_2.setEnabled(true);
 							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 2) {
 								arrayTabuleiro.add(p6);
+								arrayH.set(5, null);
 								btnhumano6.setEnabled(false);
 								btn_2.setEnabled(true);
 								btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
@@ -15267,8 +15396,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -15338,12 +15466,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 1) {
 							Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(5, null);
 							btnhumano6.setEnabled(false);
 							btn_3.setEnabled(true);
 							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 2) {
 								arrayTabuleiro.add(p6);
+								arrayH.set(5, null);
 								btnhumano6.setEnabled(false);
 								btn_3.setEnabled(true);
 								btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
@@ -15368,8 +15498,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -15439,12 +15568,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 1) {
 							Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(5, null);
 							btnhumano6.setEnabled(false);
 							btn_4.setEnabled(true);
 							btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 2) {
 								arrayTabuleiro.add(p6);
+								arrayH.set(5, null);
 								btnhumano6.setEnabled(false);
 								btn_4.setEnabled(true);
 
@@ -15470,8 +15601,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -15541,12 +15671,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 1) {
 							Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(5, null);
 							btnhumano6.setEnabled(false);
 							btn_5.setEnabled(true);
 							btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 2) {
 								arrayTabuleiro.add(p6);
+								arrayH.set(5, null);
 								btnhumano6.setEnabled(false);
 								btn_5.setEnabled(true);
 								btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
@@ -15571,8 +15703,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -15642,12 +15773,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 1) {
 							Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(5, null);
 							btnhumano6.setEnabled(false);
 							btn_6.setEnabled(true);
 							btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 2) {
 								arrayTabuleiro.add(p6);
+								arrayH.set(5, null);
 								btnhumano6.setEnabled(false);
 								btn_6.setEnabled(true);
 								btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
@@ -15672,8 +15805,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -15743,12 +15875,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 1) {
 							Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(5, null);
 							btnhumano6.setEnabled(false);
 							btn_7.setEnabled(true);
 							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 2) {
 								arrayTabuleiro.add(p6);
+								arrayH.set(5, null);
 								btnhumano6.setEnabled(false);
 								btn_7.setEnabled(true);
 								btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
@@ -15773,8 +15907,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -15845,12 +15978,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 1) {
 							Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(5, null);
 							btnhumano6.setEnabled(false);
 							btn_8.setEnabled(true);
 							btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 2) {
 								arrayTabuleiro.add(p6);
+								arrayH.set(5, null);
 								btnhumano6.setEnabled(false);
 								btn_8.setEnabled(true);
 								btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
@@ -15875,8 +16010,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -15948,12 +16082,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 1) {
 							Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(5, null);
 							btnhumano6.setEnabled(false);
 							btn_9.setEnabled(true);
 							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 2) {
 								arrayTabuleiro.add(p6);
+								arrayH.set(5, null);
 								btnhumano6.setEnabled(false);
 								btn_9.setEnabled(true);
 								btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
@@ -15978,8 +16114,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -16051,12 +16186,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 1) {
 							Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(5, null);
 							btnhumano6.setEnabled(false);
 							btn_10.setEnabled(true);
 							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 2) {
 								arrayTabuleiro.add(p6);
+								arrayH.set(5, null);
 								btnhumano6.setEnabled(false);
 								btn_10.setEnabled(true);
 								btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
@@ -16081,8 +16218,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -16154,12 +16290,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 1) {
 							Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(5, null);
 							btnhumano6.setEnabled(false);
 							btn_11.setEnabled(true);
 							btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 2) {
 								arrayTabuleiro.add(p6);
+								arrayH.set(5, null);
 								btnhumano6.setEnabled(false);
 								btn_11.setEnabled(true);
 								btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
@@ -16184,8 +16322,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -16257,12 +16394,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 1) {
 							Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(5, null);
 							btnhumano6.setEnabled(false);
 							btn_12.setEnabled(true);
 							btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 2) {
 								arrayTabuleiro.add(p6);
+								arrayH.set(5, null);
 								btnhumano6.setEnabled(false);
 								btn_12.setEnabled(true);
 								btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
@@ -16286,8 +16425,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -16359,6 +16497,7 @@ public class TelaDoJogo extends JFrame {
 					} else {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p6) == 1) {
 							arrayTabuleiro.add(p6);
+							arrayH.set(5, null);
 							btnhumano6.setEnabled(false);
 							btn_13.setEnabled(true);
 							btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l6 + ".png"));
@@ -16371,6 +16510,7 @@ public class TelaDoJogo extends JFrame {
 								// no array.
 								Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
 								arrayTabuleiro.add(novop);
+								arrayH.set(5, null);
 								btnhumano6.setEnabled(false);
 								btn_13.setEnabled(true);
 								btn_13.setIcon(
@@ -16396,8 +16536,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -16472,12 +16611,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(5, null);
 							btnhumano6.setEnabled(false);
 							btn_14.setEnabled(true);
 							btn_14.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p6) == 2) {
 								arrayTabuleiro.add(p6);
+								arrayH.set(5, null);
 								btnhumano6.setEnabled(false);
 								btn_14.setEnabled(true);
 								btn_14.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l6 + ".png"));
@@ -16502,8 +16643,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -16578,12 +16718,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(5, null);
 							btnhumano6.setEnabled(false);
 							btn_15.setEnabled(true);
 							btn_15.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p6) == 2) {
 								arrayTabuleiro.add(p6);
+								arrayH.set(5, null);
 								btnhumano6.setEnabled(false);
 								btn_15.setEnabled(true);
 								btn_15.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l6 + ".png"));
@@ -16608,8 +16750,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -16684,12 +16825,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(5, null);
 							btnhumano6.setEnabled(false);
 							btn_16.setEnabled(true);
 							btn_16.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p6) == 2) {
 								arrayTabuleiro.add(p6);
+								arrayH.set(5, null);
 								btnhumano6.setEnabled(false);
 								btn_16.setEnabled(true);
 								btn_16.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l6 + ".png"));
@@ -16714,8 +16857,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -16790,12 +16932,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(5, null);
 							btnhumano6.setEnabled(false);
 							btn_17.setEnabled(true);
 							btn_17.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p6) == 2) {
 								arrayTabuleiro.add(p6);
+								arrayH.set(5, null);
 								btnhumano6.setEnabled(false);
 								btn_17.setEnabled(true);
 								btn_17.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
@@ -16821,8 +16965,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -16897,12 +17040,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(5, null);
 							btnhumano6.setEnabled(false);
 							btn_18.setEnabled(true);
 							btn_18.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p6) == 2) {
 								arrayTabuleiro.add(p6);
+								arrayH.set(5, null);
 								btnhumano6.setEnabled(false);
 								btn_18.setEnabled(true);
 								btn_18.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
@@ -16928,8 +17073,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -17004,12 +17148,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(5, null);
 							btnhumano6.setEnabled(false);
 							btn_19.setEnabled(true);
 							btn_19.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p6) == 2) {
 								arrayTabuleiro.add(p6);
+								arrayH.set(5, null);
 								btnhumano6.setEnabled(false);
 								btn_19.setEnabled(true);
 								btn_19.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
@@ -17035,8 +17181,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -17111,12 +17256,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(5, null);
 							btnhumano6.setEnabled(false);
 							btn_20.setEnabled(true);
 							btn_20.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p6) == 2) {
 								arrayTabuleiro.add(p6);
+								arrayH.set(5, null);
 								btnhumano6.setEnabled(false);
 								btn_20.setEnabled(true);
 								btn_20.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
@@ -17142,8 +17289,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -17218,12 +17364,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(5, null);
 							btnhumano6.setEnabled(false);
 							btn_21.setEnabled(true);
 							btn_21.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p6) == 2) {
 								arrayTabuleiro.add(p6);
+								arrayH.set(5, null);
 								btnhumano6.setEnabled(false);
 								btn_21.setEnabled(true);
 								btn_21.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
@@ -17249,8 +17397,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -17325,12 +17472,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(5, null);
 							btnhumano6.setEnabled(false);
 							btn_22.setEnabled(true);
 							btn_22.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p6) == 2) {
 								arrayTabuleiro.add(p6);
+								arrayH.set(5, null);
 								btnhumano6.setEnabled(false);
 								btn_22.setEnabled(true);
 								btn_22.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
@@ -17356,8 +17505,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -17432,12 +17580,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(5, null);
 							btnhumano6.setEnabled(false);
 							btn_23.setEnabled(true);
 							btn_23.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p6) == 2) {
 								arrayTabuleiro.add(p6);
+								arrayH.set(5, null);
 								btnhumano6.setEnabled(false);
 								btn_23.setEnabled(true);
 								btn_23.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
@@ -17463,8 +17613,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -17539,12 +17688,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(5, null);
 							btnhumano6.setEnabled(false);
 							btn_24.setEnabled(true);
 							btn_24.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p6) == 2) {
 								arrayTabuleiro.add(p6);
+								arrayH.set(5, null);
 								btnhumano6.setEnabled(false);
 								btn_24.setEnabled(true);
 								btn_24.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
@@ -17570,8 +17721,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -17646,12 +17796,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(5, null);
 							btnhumano6.setEnabled(false);
 							btn_25.setEnabled(true);
 							btn_25.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p6) == 2) {
 								arrayTabuleiro.add(p6);
+								arrayH.set(5, null);
 								btnhumano6.setEnabled(false);
 								btn_25.setEnabled(true);
 								btn_25.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
@@ -17677,8 +17829,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -17753,12 +17904,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(5, null);
 							btnhumano6.setEnabled(false);
 							btn_26.setEnabled(true);
 							btn_26.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p6) == 2) {
 								arrayTabuleiro.add(p6);
+								arrayH.set(5, null);
 								btnhumano6.setEnabled(false);
 								btn_26.setEnabled(true);
 								btn_26.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
@@ -17784,8 +17937,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -17860,12 +18012,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(5, null);
 							btnhumano6.setEnabled(false);
 							btn_27.setEnabled(true);
 							btn_27.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p6) == 2) {
 								arrayTabuleiro.add(p6);
+								arrayH.set(5, null);
 								btnhumano6.setEnabled(false);
 								btn_27.setEnabled(true);
 								btn_27.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
@@ -17891,8 +18045,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -17967,12 +18120,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p6.getLadoDireito(), p6.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(5, null);
 							btnhumano6.setEnabled(false);
 							btn_28.setEnabled(true);
 							btn_28.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p6) == 2) {
 								arrayTabuleiro.add(p6);
+								arrayH.set(5, null);
 								btnhumano6.setEnabled(false);
 								btn_28.setEnabled(true);
 								btn_28.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l6 + ".png"));
@@ -17998,8 +18153,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -18090,12 +18244,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 1) {
 							Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(6, null);
 							btnhumano7.setEnabled(false);
 							btn_1.setEnabled(true);
 							btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 2) {
 								arrayTabuleiro.add(p7);
+								arrayH.set(6, null);
 								btnhumano7.setEnabled(false);
 								btn_1.setEnabled(true);
 								btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
@@ -18121,8 +18277,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -18192,12 +18347,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 1) {
 							Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(6, null);
 							btnhumano7.setEnabled(false);
 							btn_2.setEnabled(true);
 							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 2) {
 								arrayTabuleiro.add(p7);
+								arrayH.set(6, null);
 								btnhumano7.setEnabled(false);
 								btn_2.setEnabled(true);
 								btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
@@ -18222,8 +18379,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -18293,12 +18449,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 1) {
 							Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(6, null);
 							btnhumano7.setEnabled(false);
 							btn_3.setEnabled(true);
 							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 2) {
 								arrayTabuleiro.add(p7);
+								arrayH.set(6, null);
 								btnhumano7.setEnabled(false);
 								btn_3.setEnabled(true);
 								btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
@@ -18323,8 +18481,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -18394,12 +18551,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 1) {
 							Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(6, null);
 							btnhumano7.setEnabled(false);
 							btn_4.setEnabled(true);
 							btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 2) {
 								arrayTabuleiro.add(p7);
+								arrayH.set(6, null);
 								btnhumano7.setEnabled(false);
 								btn_4.setEnabled(true);
 								btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
@@ -18424,8 +18583,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -18495,12 +18653,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 1) {
 							Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(6, null);
 							btnhumano7.setEnabled(false);
 							btn_5.setEnabled(true);
 							btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 2) {
 								arrayTabuleiro.add(p7);
+								arrayH.set(6, null);
 								btnhumano7.setEnabled(false);
 								btn_5.setEnabled(true);
 								btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
@@ -18525,8 +18685,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -18596,6 +18755,7 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 1) {
 							Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(6, null);
 							btnhumano7.setEnabled(false);
 							btn_6.setEnabled(true);
 
@@ -18603,6 +18763,7 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 2) {
 								arrayTabuleiro.add(p7);
+								arrayH.set(6, null);
 								btnhumano7.setEnabled(false);
 								btn_6.setEnabled(true);
 								btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
@@ -18627,8 +18788,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -18698,12 +18858,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 1) {
 							Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(6, null);
 							btnhumano7.setEnabled(false);
 							btn_7.setEnabled(true);
 							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 2) {
 								arrayTabuleiro.add(p7);
+								arrayH.set(6, null);
 								btnhumano7.setEnabled(false);
 								btn_7.setEnabled(true);
 								btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
@@ -18728,8 +18890,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -18800,12 +18961,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 1) {
 							Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(6, null);
 							btnhumano7.setEnabled(false);
 							btn_8.setEnabled(true);
 							btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 2) {
 								arrayTabuleiro.add(p7);
+								arrayH.set(6, null);
 								btnhumano7.setEnabled(false);
 								btn_8.setEnabled(true);
 								btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
@@ -18830,8 +18993,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -18903,12 +19065,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 1) {
 							Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(6, null);
 							btnhumano7.setEnabled(false);
 							btn_9.setEnabled(true);
 							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 2) {
 								arrayTabuleiro.add(p7);
+								arrayH.set(6, null);
 								btnhumano7.setEnabled(false);
 								btn_9.setEnabled(true);
 								btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
@@ -18933,8 +19097,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -19006,12 +19169,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 1) {
 							Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(6, null);
 							btnhumano7.setEnabled(false);
 							btn_10.setEnabled(true);
 							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 2) {
 								arrayTabuleiro.add(p7);
+								arrayH.set(6, null);
 								btnhumano7.setEnabled(false);
 								btn_10.setEnabled(true);
 								btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
@@ -19036,8 +19201,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -19109,12 +19273,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 1) {
 							Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(6, null);
 							btnhumano7.setEnabled(false);
 							btn_11.setEnabled(true);
 							btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 2) {
 								arrayTabuleiro.add(p7);
+								arrayH.set(6, null);
 								btnhumano7.setEnabled(false);
 								btn_11.setEnabled(true);
 								btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
@@ -19139,8 +19305,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -19212,12 +19377,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 1) {
 							Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(6, null);
 							btnhumano7.setEnabled(false);
 							btn_12.setEnabled(true);
 							btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 2) {
 								arrayTabuleiro.add(p7);
+								arrayH.set(6, null);
 								btnhumano7.setEnabled(false);
 								btn_12.setEnabled(true);
 								btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
@@ -19260,8 +19427,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -19332,6 +19498,7 @@ public class TelaDoJogo extends JFrame {
 					} else {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p7) == 1) {
 							arrayTabuleiro.add(p7);
+							arrayH.set(6, null);
 							btnhumano7.setEnabled(false);
 							btn_13.setEnabled(true);
 							btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l7 + ".png"));
@@ -19344,6 +19511,7 @@ public class TelaDoJogo extends JFrame {
 								// no array.
 								Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
 								arrayTabuleiro.add(novop);
+								arrayH.set(6, null);
 								btnhumano7.setEnabled(false);
 								btn_13.setEnabled(true);
 								btn_13.setIcon(
@@ -19369,8 +19537,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -19445,12 +19612,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(6, null);
 							btnhumano7.setEnabled(false);
 							btn_14.setEnabled(true);
 							btn_14.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p7) == 2) {
 								arrayTabuleiro.add(p7);
+								arrayH.set(6, null);
 								btnhumano7.setEnabled(false);
 								btn_14.setEnabled(true);
 								btn_14.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l7 + ".png"));
@@ -19475,8 +19644,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -19551,12 +19719,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(6, null);
 							btnhumano7.setEnabled(false);
 							btn_15.setEnabled(true);
 							btn_15.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p7) == 2) {
 								arrayTabuleiro.add(p7);
+								arrayH.set(6, null);
 								btnhumano7.setEnabled(false);
 								btn_15.setEnabled(true);
 								btn_15.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l7 + ".png"));
@@ -19581,8 +19751,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -19657,12 +19826,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(6, null);
 							btnhumano7.setEnabled(false);
 							btn_16.setEnabled(true);
 							btn_16.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p7) == 2) {
 								arrayTabuleiro.add(p7);
+								arrayH.set(6, null);
 								btnhumano7.setEnabled(false);
 								btn_16.setEnabled(true);
 								btn_16.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l7 + ".png"));
@@ -19687,8 +19858,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -19763,12 +19933,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(6, null);
 							btnhumano7.setEnabled(false);
 							btn_17.setEnabled(true);
 							btn_17.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p7) == 2) {
 								arrayTabuleiro.add(p7);
+								arrayH.set(6, null);
 								btnhumano7.setEnabled(false);
 								btn_17.setEnabled(true);
 								btn_17.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
@@ -19794,8 +19966,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -19870,12 +20041,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(6, null);
 							btnhumano7.setEnabled(false);
 							btn_18.setEnabled(true);
 							btn_18.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p7) == 2) {
 								arrayTabuleiro.add(p7);
+								arrayH.set(6, null);
 								btnhumano7.setEnabled(false);
 								btn_18.setEnabled(true);
 								btn_18.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
@@ -19901,8 +20074,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -19977,12 +20149,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(6, null);
 							btnhumano7.setEnabled(false);
 							btn_19.setEnabled(true);
 							btn_19.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p7) == 2) {
 								arrayTabuleiro.add(p7);
+								arrayH.set(6, null);
 								btnhumano7.setEnabled(false);
 								btn_19.setEnabled(true);
 								btn_19.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
@@ -20008,8 +20182,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -20084,12 +20257,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(6, null);
 							btnhumano7.setEnabled(false);
 							btn_20.setEnabled(true);
 							btn_20.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p7) == 2) {
 								arrayTabuleiro.add(p7);
+								arrayH.set(6, null);
 								btnhumano7.setEnabled(false);
 								btn_20.setEnabled(true);
 								btn_20.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
@@ -20115,8 +20290,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -20191,12 +20365,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(6, null);
 							btnhumano7.setEnabled(false);
 							btn_21.setEnabled(true);
 							btn_21.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p7) == 2) {
 								arrayTabuleiro.add(p7);
+								arrayH.set(6, null);
 								btnhumano7.setEnabled(false);
 								btn_21.setEnabled(true);
 								btn_21.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
@@ -20222,8 +20398,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -20298,12 +20473,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(6, null);
 							btnhumano7.setEnabled(false);
 							btn_22.setEnabled(true);
 							btn_22.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p7) == 2) {
 								arrayTabuleiro.add(p7);
+								arrayH.set(6, null);
 								btnhumano7.setEnabled(false);
 								btn_22.setEnabled(true);
 								btn_22.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
@@ -20329,8 +20506,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -20405,12 +20581,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(6, null);
 							btnhumano7.setEnabled(false);
 							btn_23.setEnabled(true);
 							btn_23.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p7) == 2) {
 								arrayTabuleiro.add(p7);
+								arrayH.set(6, null);
 								btnhumano7.setEnabled(false);
 								btn_23.setEnabled(true);
 								btn_23.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
@@ -20436,8 +20614,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -20512,12 +20689,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(6, null);
 							btnhumano7.setEnabled(false);
 							btn_24.setEnabled(true);
 							btn_24.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p7) == 2) {
 								arrayTabuleiro.add(p7);
+								arrayH.set(6, null);
 								btnhumano7.setEnabled(false);
 								btn_24.setEnabled(true);
 								btn_24.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
@@ -20543,8 +20722,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -20619,12 +20797,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(6, null);
 							btnhumano7.setEnabled(false);
 							btn_25.setEnabled(true);
 							btn_25.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p7) == 2) {
 								arrayTabuleiro.add(p7);
+								arrayH.set(6, null);
 								btnhumano7.setEnabled(false);
 								btn_25.setEnabled(true);
 								btn_25.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
@@ -20650,8 +20830,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -20726,12 +20905,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(6, null);
 							btnhumano7.setEnabled(false);
 							btn_26.setEnabled(true);
 							btn_26.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p7) == 2) {
 								arrayTabuleiro.add(p7);
+								arrayH.set(6, null);
 								btnhumano7.setEnabled(false);
 								btn_26.setEnabled(true);
 								btn_26.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
@@ -20757,8 +20938,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -20833,12 +21013,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(6, null);
 							btnhumano7.setEnabled(false);
 							btn_27.setEnabled(true);
 							btn_27.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p7) == 2) {
 								arrayTabuleiro.add(p7);
+								arrayH.set(6, null);
 								btnhumano7.setEnabled(false);
 								btn_27.setEnabled(true);
 								btn_27.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
@@ -20864,8 +21046,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -20940,12 +21121,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p7.getLadoDireito(), p7.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(6, null);
 							btnhumano7.setEnabled(false);
 							btn_28.setEnabled(true);
 							btn_28.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p7) == 2) {
 								arrayTabuleiro.add(p7);
+								arrayH.set(6, null);
 								btnhumano7.setEnabled(false);
 								btn_28.setEnabled(true);
 								btn_28.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l7 + ".png"));
@@ -20971,8 +21154,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -21063,12 +21245,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p8) == 1) {
 							Pecas novop = new Pecas(p8.getLadoDireito(), p8.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(7, null);
 							btnhumano8.setEnabled(false);
 							btn_1.setEnabled(true);
 							btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p8) == 2) {
 								arrayTabuleiro.add(p8);
+								arrayH.set(7, null);
 								btnhumano8.setEnabled(false);
 								btn_1.setEnabled(true);
 								btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l8 + ".png"));
@@ -21093,8 +21277,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -21164,12 +21347,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p8) == 1) {
 							Pecas novop = new Pecas(p8.getLadoDireito(), p8.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(7, null);
 							btnhumano8.setEnabled(false);
 							btn_2.setEnabled(true);
 							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p8) == 2) {
 								arrayTabuleiro.add(p8);
+								arrayH.set(7, null);
 								btnhumano8.setEnabled(false);
 								btn_2.setEnabled(true);
 								btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l8 + ".png"));
@@ -21194,8 +21379,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -21271,6 +21455,7 @@ public class TelaDoJogo extends JFrame {
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p8) == 2) {
 								arrayTabuleiro.add(p8);
+								arrayH.set(7, null);
 								btnhumano8.setEnabled(false);
 								btn_3.setEnabled(true);
 								btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l8 + ".png"));
@@ -21294,8 +21479,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -21365,12 +21549,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p8) == 1) {
 							Pecas novop = new Pecas(p8.getLadoDireito(), p8.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(7, null);
 							btnhumano8.setEnabled(false);
 							btn_4.setEnabled(true);
 							btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p8) == 2) {
 								arrayTabuleiro.add(p8);
+								arrayH.set(7, null);
 								btnhumano8.setEnabled(false);
 								btn_4.setEnabled(true);
 								btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l8 + ".png"));
@@ -21394,8 +21580,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -21465,12 +21650,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p8) == 1) {
 							Pecas novop = new Pecas(p8.getLadoDireito(), p8.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(7, null);
 							btnhumano8.setEnabled(false);
 							btn_5.setEnabled(true);
 							btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p8) == 2) {
 								arrayTabuleiro.add(p8);
+								arrayH.set(7, null);
 								btnhumano8.setEnabled(false);
 								btn_5.setEnabled(true);
 								btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l8 + ".png"));
@@ -21495,8 +21682,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -21567,12 +21753,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p8) == 1) {
 							Pecas novop = new Pecas(p8.getLadoDireito(), p8.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(7, null);
 							btnhumano8.setEnabled(false);
 							btn_6.setEnabled(true);
 							btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p8) == 2) {
 								arrayTabuleiro.add(p8);
+								arrayH.set(7, null);
 								btnhumano8.setEnabled(false);
 								btn_6.setEnabled(true);
 								btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l8 + ".png"));
@@ -21598,8 +21786,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -21670,12 +21857,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p8) == 1) {
 							Pecas novop = new Pecas(p8.getLadoDireito(), p8.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(7, null);
 							btnhumano8.setEnabled(false);
 							btn_7.setEnabled(true);
 							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p8) == 2) {
 								arrayTabuleiro.add(p8);
+								arrayH.set(7, null);
 								btnhumano8.setEnabled(false);
 								btn_7.setEnabled(true);
 								btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l8 + ".png"));
@@ -21700,8 +21889,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -21772,12 +21960,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p8) == 1) {
 							Pecas novop = new Pecas(p8.getLadoDireito(), p8.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(7, null);
 							btnhumano8.setEnabled(false);
 							btn_8.setEnabled(true);
 							btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p8) == 2) {
 								arrayTabuleiro.add(p8);
+								arrayH.set(7, null);
 								btnhumano8.setEnabled(false);
 								btn_8.setEnabled(true);
 								btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l8 + ".png"));
@@ -21802,8 +21992,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -21875,12 +22064,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p8) == 1) {
 							Pecas novop = new Pecas(p8.getLadoDireito(), p8.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(7, null);
 							btnhumano8.setEnabled(false);
 							btn_9.setEnabled(true);
 							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p8) == 2) {
 								arrayTabuleiro.add(p8);
+								arrayH.set(7, null);
 								btnhumano8.setEnabled(false);
 								btn_9.setEnabled(true);
 								btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l8 + ".png"));
@@ -21905,8 +22096,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -21978,12 +22168,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p8) == 1) {
 							Pecas novop = new Pecas(p8.getLadoDireito(), p8.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(7, null);
 							btnhumano8.setEnabled(false);
 							btn_10.setEnabled(true);
 							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p8) == 2) {
 								arrayTabuleiro.add(p8);
+								arrayH.set(7, null);
 								btnhumano8.setEnabled(false);
 								btn_10.setEnabled(true);
 								btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l8 + ".png"));
@@ -22008,8 +22200,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -22081,12 +22272,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p8) == 1) {
 							Pecas novop = new Pecas(p8.getLadoDireito(), p8.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(7, null);
 							btnhumano8.setEnabled(false);
 							btn_11.setEnabled(true);
 							btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p8) == 2) {
 								arrayTabuleiro.add(p8);
+								arrayH.set(7, null);
 								btnhumano8.setEnabled(false);
 								btn_11.setEnabled(true);
 								btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l8 + ".png"));
@@ -22111,8 +22304,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -22184,12 +22376,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p8) == 1) {
 							Pecas novop = new Pecas(p8.getLadoDireito(), p8.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(7, null);
 							btnhumano8.setEnabled(false);
 							btn_12.setEnabled(true);
 							btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p8) == 2) {
 								arrayTabuleiro.add(p8);
+								arrayH.set(7, null);
 								btnhumano8.setEnabled(false);
 								btn_12.setEnabled(true);
 								btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l8 + ".png"));
@@ -22213,8 +22407,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -22286,6 +22479,7 @@ public class TelaDoJogo extends JFrame {
 					} else {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p8) == 1) {
 							arrayTabuleiro.add(p8);
+							arrayH.set(7, null);
 							btnhumano8.setEnabled(false);
 							btn_13.setEnabled(true);
 							btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l8 + ".png"));
@@ -22298,6 +22492,7 @@ public class TelaDoJogo extends JFrame {
 								// no array.
 								Pecas novop = new Pecas(p8.getLadoDireito(), p8.getLadoEsquerdo());
 								arrayTabuleiro.add(novop);
+								arrayH.set(7, null);
 								btnhumano8.setEnabled(false);
 								btn_13.setEnabled(true);
 								btn_13.setIcon(
@@ -22323,8 +22518,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -22399,12 +22593,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p8.getLadoDireito(), p8.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(7, null);
 							btnhumano8.setEnabled(false);
 							btn_14.setEnabled(true);
 							btn_14.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p8) == 2) {
 								arrayTabuleiro.add(p8);
+								arrayH.set(7, null);
 								btnhumano8.setEnabled(false);
 								btn_14.setEnabled(true);
 								btn_14.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l8 + ".png"));
@@ -22429,8 +22625,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -22506,12 +22701,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p8.getLadoDireito(), p8.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(7, null);
 							btnhumano8.setEnabled(false);
 							btn_15.setEnabled(true);
 							btn_15.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p8) == 2) {
 								arrayTabuleiro.add(p8);
+								arrayH.set(7, null);
 								btnhumano8.setEnabled(false);
 								btn_15.setEnabled(true);
 								btn_15.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l8 + ".png"));
@@ -22536,8 +22733,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -22612,12 +22808,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p8.getLadoDireito(), p8.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(7, null);
 							btnhumano8.setEnabled(false);
 							btn_16.setEnabled(true);
 							btn_16.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p8) == 2) {
 								arrayTabuleiro.add(p8);
+								arrayH.set(7, null);
 								btnhumano8.setEnabled(false);
 								btn_16.setEnabled(true);
 								btn_16.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l8 + ".png"));
@@ -22642,8 +22840,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -22718,12 +22915,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p8.getLadoDireito(), p8.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(7, null);
 							btnhumano8.setEnabled(false);
 							btn_17.setEnabled(true);
 							btn_17.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p8) == 2) {
 								arrayTabuleiro.add(p8);
+								arrayH.set(7, null);
 								btnhumano8.setEnabled(false);
 								btn_17.setEnabled(true);
 								btn_17.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l8 + ".png"));
@@ -22749,8 +22948,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -22825,12 +23023,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p8.getLadoDireito(), p8.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(7, null);
 							btnhumano8.setEnabled(false);
 							btn_18.setEnabled(true);
 							btn_18.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p8) == 2) {
 								arrayTabuleiro.add(p8);
+								arrayH.set(7, null);
 								btnhumano8.setEnabled(false);
 								btn_18.setEnabled(true);
 								btn_18.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l8 + ".png"));
@@ -22856,8 +23056,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -22932,12 +23131,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p8.getLadoDireito(), p8.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(7, null);
 							btnhumano8.setEnabled(false);
 							btn_19.setEnabled(true);
 							btn_19.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p8) == 2) {
 								arrayTabuleiro.add(p8);
+								arrayH.set(7, null);
 								btnhumano8.setEnabled(false);
 								btn_19.setEnabled(true);
 								btn_19.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l8 + ".png"));
@@ -22963,8 +23164,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -23039,12 +23239,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p8.getLadoDireito(), p8.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(7, null);
 							btnhumano8.setEnabled(false);
 							btn_20.setEnabled(true);
 							btn_20.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p8) == 2) {
 								arrayTabuleiro.add(p8);
+								arrayH.set(7, null);
 								btnhumano8.setEnabled(false);
 								btn_20.setEnabled(true);
 								btn_20.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l8 + ".png"));
@@ -23070,8 +23272,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -23146,12 +23347,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p8.getLadoDireito(), p8.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(7, null);
 							btnhumano8.setEnabled(false);
 							btn_21.setEnabled(true);
 							btn_21.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p8) == 2) {
 								arrayTabuleiro.add(p8);
+								arrayH.set(7, null);
 								btnhumano8.setEnabled(false);
 								btn_21.setEnabled(true);
 								btn_21.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l8 + ".png"));
@@ -23177,8 +23380,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -23253,12 +23455,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p8.getLadoDireito(), p8.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(7, null);
 							btnhumano8.setEnabled(false);
 							btn_22.setEnabled(true);
 							btn_22.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p8) == 2) {
 								arrayTabuleiro.add(p8);
+								arrayH.set(7, null);
 								btnhumano8.setEnabled(false);
 								btn_22.setEnabled(true);
 								btn_22.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l8 + ".png"));
@@ -23284,8 +23488,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -23360,12 +23563,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p8.getLadoDireito(), p8.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(7, null);
 							btnhumano8.setEnabled(false);
 							btn_23.setEnabled(true);
 							btn_23.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p8) == 2) {
 								arrayTabuleiro.add(p8);
+								arrayH.set(7, null);
 								btnhumano8.setEnabled(false);
 								btn_23.setEnabled(true);
 								btn_23.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l8 + ".png"));
@@ -23391,8 +23596,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -23467,12 +23671,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p8.getLadoDireito(), p8.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(7, null);
 							btnhumano8.setEnabled(false);
 							btn_24.setEnabled(true);
 							btn_24.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p8) == 2) {
 								arrayTabuleiro.add(p8);
+								arrayH.set(7, null);
 								btnhumano8.setEnabled(false);
 								btn_24.setEnabled(true);
 								btn_24.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l8 + ".png"));
@@ -23498,8 +23704,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -23574,12 +23779,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p8.getLadoDireito(), p8.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(7, null);
 							btnhumano8.setEnabled(false);
 							btn_25.setEnabled(true);
 							btn_25.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p8) == 2) {
 								arrayTabuleiro.add(p8);
+								arrayH.set(7, null);
 								btnhumano8.setEnabled(false);
 								btn_25.setEnabled(true);
 								btn_25.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l8 + ".png"));
@@ -23605,8 +23812,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -23681,12 +23887,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p8.getLadoDireito(), p8.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(7, null);
 							btnhumano8.setEnabled(false);
 							btn_26.setEnabled(true);
 							btn_26.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p8) == 2) {
 								arrayTabuleiro.add(p8);
+								arrayH.set(7, null);
 								btnhumano8.setEnabled(false);
 								btn_26.setEnabled(true);
 								btn_26.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l8 + ".png"));
@@ -23712,8 +23920,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -23788,12 +23995,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p8.getLadoDireito(), p8.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(7, null);
 							btnhumano8.setEnabled(false);
 							btn_27.setEnabled(true);
 							btn_27.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p8) == 2) {
 								arrayTabuleiro.add(p8);
+								arrayH.set(7, null);
 								btnhumano8.setEnabled(false);
 								btn_27.setEnabled(true);
 								btn_27.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l8 + ".png"));
@@ -23819,8 +24028,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -23895,12 +24103,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p8.getLadoDireito(), p8.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(7, null);
 							btnhumano8.setEnabled(false);
 							btn_28.setEnabled(true);
 							btn_28.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p8) == 2) {
 								arrayTabuleiro.add(p8);
+								arrayH.set(7, null);
 								btnhumano8.setEnabled(false);
 								btn_28.setEnabled(true);
 								btn_28.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l8 + ".png"));
@@ -23925,8 +24135,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -24018,12 +24227,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p9) == 1) {
 							Pecas novop = new Pecas(p9.getLadoDireito(), p9.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(8, null);
 							btnhumano9.setEnabled(false);
 							btn_1.setEnabled(true);
 							btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p9) == 2) {
 								arrayTabuleiro.add(p9);
+								arrayH.set(8, null);
 								btnhumano9.setEnabled(false);
 								btn_1.setEnabled(true);
 								btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l9 + ".png"));
@@ -24048,8 +24259,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -24119,12 +24329,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p9) == 1) {
 							Pecas novop = new Pecas(p9.getLadoDireito(), p9.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(8, null);
 							btnhumano9.setEnabled(false);
 							btn_2.setEnabled(true);
 							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p9) == 2) {
 								arrayTabuleiro.add(p9);
+								arrayH.set(8, null);
 								btnhumano9.setEnabled(false);
 								btn_2.setEnabled(true);
 								btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l9 + ".png"));
@@ -24149,8 +24361,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -24220,12 +24431,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p9) == 1) {
 							Pecas novop = new Pecas(p9.getLadoDireito(), p9.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(8, null);
 							btnhumano9.setEnabled(false);
 							btn_3.setEnabled(true);
 							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p9) == 2) {
 								arrayTabuleiro.add(p9);
+								arrayH.set(8, null);
 								btnhumano9.setEnabled(false);
 								btn_3.setEnabled(true);
 								btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l9 + ".png"));
@@ -24250,8 +24463,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -24321,12 +24533,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p9) == 1) {
 							Pecas novop = new Pecas(p9.getLadoDireito(), p9.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(8, null);
 							btnhumano9.setEnabled(false);
 							btn_4.setEnabled(true);
 							btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p9) == 2) {
 								arrayTabuleiro.add(p9);
+								arrayH.set(8, null);
 								btnhumano9.setEnabled(false);
 								btn_4.setEnabled(true);
 								btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l9 + ".png"));
@@ -24351,8 +24565,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -24422,12 +24635,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p9) == 1) {
 							Pecas novop = new Pecas(p9.getLadoDireito(), p9.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(8, null);
 							btnhumano9.setEnabled(false);
 							btn_5.setEnabled(true);
 							btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p9) == 2) {
 								arrayTabuleiro.add(p9);
+								arrayH.set(8, null);
 								btnhumano9.setEnabled(false);
 								btn_5.setEnabled(true);
 								btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l9 + ".png"));
@@ -24452,8 +24667,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -24524,12 +24738,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p9) == 1) {
 							Pecas novop = new Pecas(p9.getLadoDireito(), p9.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(8, null);
 							btnhumano9.setEnabled(false);
 							btn_6.setEnabled(true);
 							btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p9) == 2) {
 								arrayTabuleiro.add(p9);
+								arrayH.set(8, null);
 								btnhumano9.setEnabled(false);
 								btn_6.setEnabled(true);
 								btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l9 + ".png"));
@@ -24555,8 +24771,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -24627,12 +24842,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p9) == 1) {
 							Pecas novop = new Pecas(p9.getLadoDireito(), p9.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(8, null);
 							btnhumano9.setEnabled(false);
 							btn_7.setEnabled(true);
 							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p9) == 2) {
 								arrayTabuleiro.add(p9);
+								arrayH.set(8, null);
 								btnhumano9.setEnabled(false);
 								btn_7.setEnabled(true);
 								btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l9 + ".png"));
@@ -24657,8 +24874,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -24729,12 +24945,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p9) == 1) {
 							Pecas novop = new Pecas(p9.getLadoDireito(), p9.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(8, null);
 							btnhumano9.setEnabled(false);
 							btn_8.setEnabled(true);
 							btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p9) == 2) {
 								arrayTabuleiro.add(p9);
+								arrayH.set(8, null);
 								btnhumano9.setEnabled(false);
 								btn_8.setEnabled(true);
 								btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l9 + ".png"));
@@ -24759,8 +24977,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -24832,12 +25049,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p9) == 1) {
 							Pecas novop = new Pecas(p9.getLadoDireito(), p9.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(8, null);
 							btnhumano9.setEnabled(false);
 							btn_9.setEnabled(true);
 							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p9) == 2) {
 								arrayTabuleiro.add(p9);
+								arrayH.set(8, null);
 								btnhumano9.setEnabled(false);
 								btn_9.setEnabled(true);
 								btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l9 + ".png"));
@@ -24862,8 +25081,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -24935,12 +25153,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p9) == 1) {
 							Pecas novop = new Pecas(p9.getLadoDireito(), p9.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(8, null);
 							btnhumano9.setEnabled(false);
 							btn_10.setEnabled(true);
 							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p9) == 2) {
 								arrayTabuleiro.add(p9);
+								arrayH.set(8, null);
 								btnhumano9.setEnabled(false);
 								btn_10.setEnabled(true);
 								btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l9 + ".png"));
@@ -24965,8 +25185,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -25038,12 +25257,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p9) == 1) {
 							Pecas novop = new Pecas(p9.getLadoDireito(), p9.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(8, null);
 							btnhumano9.setEnabled(false);
 							btn_11.setEnabled(true);
 							btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p9) == 2) {
 								arrayTabuleiro.add(p9);
+								arrayH.set(8, null);
 								btnhumano9.setEnabled(false);
 								btn_11.setEnabled(true);
 								btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l9 + ".png"));
@@ -25068,8 +25289,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -25141,12 +25361,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p9) == 1) {
 							Pecas novop = new Pecas(p9.getLadoDireito(), p9.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(8, null);
 							btnhumano9.setEnabled(false);
 							btn_12.setEnabled(true);
 							btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p9) == 2) {
 								arrayTabuleiro.add(p9);
+								arrayH.set(8, null);
 								btnhumano9.setEnabled(false);
 								btn_12.setEnabled(true);
 								btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l9 + ".png"));
@@ -25170,8 +25392,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -25243,6 +25464,7 @@ public class TelaDoJogo extends JFrame {
 					} else {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p9) == 1) {
 							arrayTabuleiro.add(p9);
+							arrayH.set(8, null);
 							btnhumano9.setEnabled(false);
 							btn_13.setEnabled(true);
 							btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l9 + ".png"));
@@ -25254,6 +25476,7 @@ public class TelaDoJogo extends JFrame {
 								// no array.
 								Pecas novop = new Pecas(p9.getLadoDireito(), p9.getLadoEsquerdo());
 								arrayTabuleiro.add(novop);
+								arrayH.set(8, null);
 								btnhumano9.setEnabled(false);
 								btn_13.setEnabled(true);
 								btn_13.setIcon(
@@ -25279,8 +25502,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -25355,12 +25577,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p9.getLadoDireito(), p9.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(8, null);
 							btnhumano9.setEnabled(false);
 							btn_14.setEnabled(true);
 							btn_14.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p9) == 2) {
 								arrayTabuleiro.add(p9);
+								arrayH.set(8, null);
 								btnhumano9.setEnabled(false);
 								btn_14.setEnabled(true);
 								btn_14.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l9 + ".png"));
@@ -25385,8 +25609,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -25462,12 +25685,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p9.getLadoDireito(), p9.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(8, null);
 							btnhumano9.setEnabled(false);
 							btn_15.setEnabled(true);
 							btn_15.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p9) == 2) {
 								arrayTabuleiro.add(p9);
+								arrayH.set(8, null);
 								btnhumano9.setEnabled(false);
 								btn_15.setEnabled(true);
 								btn_15.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l9 + ".png"));
@@ -25492,8 +25717,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -25568,12 +25792,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p9.getLadoDireito(), p9.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(8, null);
 							btnhumano9.setEnabled(false);
 							btn_16.setEnabled(true);
 							btn_16.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p9) == 2) {
 								arrayTabuleiro.add(p9);
+								arrayH.set(8, null);
 								btnhumano9.setEnabled(false);
 								btn_16.setEnabled(true);
 								btn_16.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l9 + ".png"));
@@ -25598,8 +25824,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -25674,12 +25899,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p9.getLadoDireito(), p9.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(8, null);
 							btnhumano9.setEnabled(false);
 							btn_17.setEnabled(true);
 							btn_17.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p9) == 2) {
 								arrayTabuleiro.add(p9);
+								arrayH.set(8, null);
 								btnhumano9.setEnabled(false);
 								btn_17.setEnabled(true);
 								btn_17.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l9 + ".png"));
@@ -25705,8 +25932,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -25781,12 +26007,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p9.getLadoDireito(), p9.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(8, null);
 							btnhumano9.setEnabled(false);
 							btn_18.setEnabled(true);
 							btn_18.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p9) == 2) {
 								arrayTabuleiro.add(p9);
+								arrayH.set(8, null);
 								btnhumano9.setEnabled(false);
 								btn_18.setEnabled(true);
 								btn_18.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l9 + ".png"));
@@ -25812,8 +26040,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -25888,12 +26115,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p9.getLadoDireito(), p9.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(8, null);
 							btnhumano9.setEnabled(false);
 							btn_19.setEnabled(true);
 							btn_19.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p9) == 2) {
 								arrayTabuleiro.add(p9);
+								arrayH.set(8, null);
 								btnhumano9.setEnabled(false);
 								btn_19.setEnabled(true);
 								btn_19.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l9 + ".png"));
@@ -25919,8 +26148,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -25995,12 +26223,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p9.getLadoDireito(), p9.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(8, null);
 							btnhumano9.setEnabled(false);
 							btn_20.setEnabled(true);
 							btn_20.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p9) == 2) {
 								arrayTabuleiro.add(p9);
+								arrayH.set(8, null);
 								btnhumano9.setEnabled(false);
 								btn_20.setEnabled(true);
 								btn_20.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l9 + ".png"));
@@ -26026,8 +26256,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -26102,12 +26331,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p9.getLadoDireito(), p9.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(8, null);
 							btnhumano9.setEnabled(false);
 							btn_21.setEnabled(true);
 							btn_21.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p9) == 2) {
 								arrayTabuleiro.add(p9);
+								arrayH.set(8, null);
 								btnhumano9.setEnabled(false);
 								btn_21.setEnabled(true);
 								btn_21.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l9 + ".png"));
@@ -26133,8 +26364,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -26209,12 +26439,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p9.getLadoDireito(), p9.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(8, null);
 							btnhumano9.setEnabled(false);
 							btn_22.setEnabled(true);
 							btn_22.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p9) == 2) {
 								arrayTabuleiro.add(p9);
+								arrayH.set(8, null);
 								btnhumano9.setEnabled(false);
 								btn_22.setEnabled(true);
 								btn_22.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l9 + ".png"));
@@ -26240,8 +26472,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -26316,12 +26547,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p9.getLadoDireito(), p9.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(8, null);
 							btnhumano9.setEnabled(false);
 							btn_23.setEnabled(true);
 							btn_23.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p9) == 2) {
 								arrayTabuleiro.add(p9);
+								arrayH.set(8, null);
 								btnhumano9.setEnabled(false);
 								btn_23.setEnabled(true);
 								btn_23.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l9 + ".png"));
@@ -26347,8 +26580,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -26423,12 +26655,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p9.getLadoDireito(), p9.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(8, null);
 							btnhumano9.setEnabled(false);
 							btn_24.setEnabled(true);
 							btn_24.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p9) == 2) {
 								arrayTabuleiro.add(p9);
+								arrayH.set(8, null);
 								btnhumano9.setEnabled(false);
 								btn_24.setEnabled(true);
 								btn_24.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l9 + ".png"));
@@ -26454,8 +26688,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -26530,12 +26763,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p9.getLadoDireito(), p9.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(8, null);
 							btnhumano9.setEnabled(false);
 							btn_25.setEnabled(true);
 							btn_25.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p9) == 2) {
 								arrayTabuleiro.add(p9);
+								arrayH.set(8, null);
 								btnhumano9.setEnabled(false);
 								btn_25.setEnabled(true);
 								btn_25.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l9 + ".png"));
@@ -26561,8 +26796,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -26637,12 +26871,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p9.getLadoDireito(), p9.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(8, null);
 							btnhumano9.setEnabled(false);
 							btn_26.setEnabled(true);
 							btn_26.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p9) == 2) {
 								arrayTabuleiro.add(p9);
+								arrayH.set(8, null);
 								btnhumano9.setEnabled(false);
 								btn_26.setEnabled(true);
 								btn_26.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l9 + ".png"));
@@ -26668,8 +26904,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -26744,12 +26979,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p9.getLadoDireito(), p9.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(8, null);
 							btnhumano9.setEnabled(false);
 							btn_27.setEnabled(true);
 							btn_27.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p9) == 2) {
 								arrayTabuleiro.add(p9);
+								arrayH.set(8, null);
 								btnhumano9.setEnabled(false);
 								btn_27.setEnabled(true);
 								btn_27.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l9 + ".png"));
@@ -26775,8 +27012,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -26851,12 +27087,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p9.getLadoDireito(), p9.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(8, null);
 							btnhumano9.setEnabled(false);
 							btn_28.setEnabled(true);
 							btn_28.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p9) == 2) {
 								arrayTabuleiro.add(p9);
+								arrayH.set(8, null);
 								btnhumano9.setEnabled(false);
 								btn_28.setEnabled(true);
 								btn_28.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l9 + ".png"));
@@ -26881,8 +27119,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -26974,12 +27211,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p10) == 1) {
 							Pecas novop = new Pecas(p10.getLadoDireito(), p10.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(9, null);
 							btnhumano10.setEnabled(false);
 							btn_1.setEnabled(true);
 							btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p10) == 2) {
 								arrayTabuleiro.add(p10);
+								arrayH.set(9, null);
 								btnhumano10.setEnabled(false);
 								btn_1.setEnabled(true);
 								btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l10 + ".png"));
@@ -27004,8 +27243,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -27075,12 +27313,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p10) == 1) {
 							Pecas novop = new Pecas(p10.getLadoDireito(), p10.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(9, null);
 							btnhumano10.setEnabled(false);
 							btn_2.setEnabled(true);
 							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p10) == 2) {
 								arrayTabuleiro.add(p10);
+								arrayH.set(9, null);
 								btnhumano10.setEnabled(false);
 								btn_2.setEnabled(true);
 								btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l10 + ".png"));
@@ -27105,8 +27345,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -27176,12 +27415,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p10) == 1) {
 							Pecas novop = new Pecas(p10.getLadoDireito(), p10.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(9, null);
 							btnhumano10.setEnabled(false);
 							btn_3.setEnabled(true);
 							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p10) == 2) {
 								arrayTabuleiro.add(p10);
+								arrayH.set(9, null);
 								btnhumano10.setEnabled(false);
 								btn_3.setEnabled(true);
 								btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l10 + ".png"));
@@ -27206,8 +27447,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -27277,12 +27517,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p10) == 1) {
 							Pecas novop = new Pecas(p10.getLadoDireito(), p10.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(9, null);
 							btnhumano10.setEnabled(false);
 							btn_4.setEnabled(true);
 							btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p10) == 2) {
 								arrayTabuleiro.add(p10);
+								arrayH.set(9, null);
 								btnhumano10.setEnabled(false);
 								btn_4.setEnabled(true);
 								btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l10 + ".png"));
@@ -27307,8 +27549,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -27378,12 +27619,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p10) == 1) {
 							Pecas novop = new Pecas(p10.getLadoDireito(), p10.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(9, null);
 							btnhumano10.setEnabled(false);
 							btn_5.setEnabled(true);
 							btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p10) == 2) {
 								arrayTabuleiro.add(p10);
+								arrayH.set(9, null);
 								btnhumano10.setEnabled(false);
 								btn_5.setEnabled(true);
 								btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l10 + ".png"));
@@ -27408,8 +27651,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -27480,12 +27722,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p10) == 1) {
 							Pecas novop = new Pecas(p10.getLadoDireito(), p10.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(9, null);
 							btnhumano10.setEnabled(false);
 							btn_6.setEnabled(true);
 							btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p10) == 2) {
 								arrayTabuleiro.add(p10);
+								arrayH.set(9, null);
 								btnhumano10.setEnabled(false);
 								btn_6.setEnabled(true);
 								btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l10 + ".png"));
@@ -27511,8 +27755,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -27583,12 +27826,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p10) == 1) {
 							Pecas novop = new Pecas(p10.getLadoDireito(), p10.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(9, null);
 							btnhumano10.setEnabled(false);
 							btn_7.setEnabled(true);
 							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p10) == 2) {
 								arrayTabuleiro.add(p10);
+								arrayH.set(9, null);
 								btnhumano10.setEnabled(false);
 								btn_7.setEnabled(true);
 								btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l10 + ".png"));
@@ -27613,8 +27858,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -27685,12 +27929,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p10) == 1) {
 							Pecas novop = new Pecas(p10.getLadoDireito(), p10.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(9, null);
 							btnhumano10.setEnabled(false);
 							btn_8.setEnabled(true);
 							btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p10) == 2) {
 								arrayTabuleiro.add(p10);
+								arrayH.set(9, null);
 								btnhumano10.setEnabled(false);
 								btn_8.setEnabled(true);
 								btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l10 + ".png"));
@@ -27715,8 +27961,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -27788,12 +28033,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p10) == 1) {
 							Pecas novop = new Pecas(p10.getLadoDireito(), p10.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(9, null);
 							btnhumano10.setEnabled(false);
 							btn_9.setEnabled(true);
 							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p10) == 2) {
 								arrayTabuleiro.add(p10);
+								arrayH.set(9, null);
 								btnhumano10.setEnabled(false);
 								btn_9.setEnabled(true);
 								btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l10 + ".png"));
@@ -27818,8 +28065,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -27891,12 +28137,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p10) == 1) {
 							Pecas novop = new Pecas(p10.getLadoDireito(), p10.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(9, null);
 							btnhumano10.setEnabled(false);
 							btn_10.setEnabled(true);
 							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p10) == 2) {
 								arrayTabuleiro.add(p10);
+								arrayH.set(9, null);
 								btnhumano10.setEnabled(false);
 								btn_10.setEnabled(true);
 								btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l10 + ".png"));
@@ -27921,8 +28169,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -27994,12 +28241,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p10) == 1) {
 							Pecas novop = new Pecas(p10.getLadoDireito(), p10.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(9, null);
 							btnhumano10.setEnabled(false);
 							btn_11.setEnabled(true);
 							btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p10) == 2) {
 								arrayTabuleiro.add(p10);
+								arrayH.set(9, null);
 								btnhumano10.setEnabled(false);
 								btn_11.setEnabled(true);
 								btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l10 + ".png"));
@@ -28024,8 +28273,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -28097,12 +28345,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p10) == 1) {
 							Pecas novop = new Pecas(p10.getLadoDireito(), p10.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(9, null);
 							btnhumano10.setEnabled(false);
 							btn_12.setEnabled(true);
 							btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p10) == 2) {
 								arrayTabuleiro.add(p10);
+								arrayH.set(9, null);
 								btnhumano10.setEnabled(false);
 								btn_12.setEnabled(true);
 								btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l10 + ".png"));
@@ -28126,8 +28376,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -28199,6 +28448,7 @@ public class TelaDoJogo extends JFrame {
 					} else {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p10) == 1) {
 							arrayTabuleiro.add(p10);
+							arrayH.set(9, null);
 							btnhumano10.setEnabled(false);
 							btn_13.setEnabled(true);
 							btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l10 + ".png"));
@@ -28211,6 +28461,7 @@ public class TelaDoJogo extends JFrame {
 								// no array.
 								Pecas novop = new Pecas(p10.getLadoDireito(), p10.getLadoEsquerdo());
 								arrayTabuleiro.add(novop);
+								arrayH.set(9, null);
 								btnhumano10.setEnabled(false);
 								btn_13.setEnabled(true);
 								btn_13.setIcon(
@@ -28236,8 +28487,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -28312,12 +28562,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p10.getLadoDireito(), p10.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(9, null);
 							btnhumano10.setEnabled(false);
 							btn_14.setEnabled(true);
 							btn_14.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p10) == 2) {
 								arrayTabuleiro.add(p10);
+								arrayH.set(9, null);
 								btnhumano10.setEnabled(false);
 								btn_14.setEnabled(true);
 								btn_14.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l10 + ".png"));
@@ -28342,8 +28594,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -28419,12 +28670,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p10.getLadoDireito(), p10.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(9, null);
 							btnhumano10.setEnabled(false);
 							btn_15.setEnabled(true);
 							btn_15.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p10) == 2) {
 								arrayTabuleiro.add(p10);
+								arrayH.set(9, null);
 								btnhumano10.setEnabled(false);
 								btn_15.setEnabled(true);
 								btn_15.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l10 + ".png"));
@@ -28449,8 +28702,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -28525,12 +28777,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p10.getLadoDireito(), p10.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(9, null);
 							btnhumano10.setEnabled(false);
 							btn_16.setEnabled(true);
 							btn_16.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p10) == 2) {
 								arrayTabuleiro.add(p10);
+								arrayH.set(9, null);
 								btnhumano10.setEnabled(false);
 								btn_16.setEnabled(true);
 								btn_16.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l10 + ".png"));
@@ -28555,8 +28809,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -28631,12 +28884,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p10.getLadoDireito(), p10.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(9, null);
 							btnhumano10.setEnabled(false);
 							btn_17.setEnabled(true);
 							btn_17.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p10) == 2) {
 								arrayTabuleiro.add(p10);
+								arrayH.set(9, null);
 								btnhumano10.setEnabled(false);
 								btn_17.setEnabled(true);
 								btn_17.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l10 + ".png"));
@@ -28662,8 +28917,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -28738,12 +28992,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p10.getLadoDireito(), p10.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(9, null);
 							btnhumano10.setEnabled(false);
 							btn_18.setEnabled(true);
 							btn_18.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p10) == 2) {
 								arrayTabuleiro.add(p10);
+								arrayH.set(9, null);
 								btnhumano10.setEnabled(false);
 								btn_18.setEnabled(true);
 								btn_18.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l10 + ".png"));
@@ -28769,8 +29025,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -28845,12 +29100,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p10.getLadoDireito(), p10.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(9, null);
 							btnhumano10.setEnabled(false);
 							btn_19.setEnabled(true);
 							btn_19.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p10) == 2) {
 								arrayTabuleiro.add(p10);
+								arrayH.set(9, null);
 								btnhumano10.setEnabled(false);
 								btn_19.setEnabled(true);
 								btn_19.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l10 + ".png"));
@@ -28876,8 +29133,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -28952,12 +29208,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p10.getLadoDireito(), p10.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(9, null);
 							btnhumano10.setEnabled(false);
 							btn_20.setEnabled(true);
 							btn_20.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p10) == 2) {
 								arrayTabuleiro.add(p10);
+								arrayH.set(9, null);
 								btnhumano10.setEnabled(false);
 								btn_20.setEnabled(true);
 								btn_20.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l10 + ".png"));
@@ -28983,8 +29241,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -29059,12 +29316,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p10.getLadoDireito(), p10.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(9, null);
 							btnhumano10.setEnabled(false);
 							btn_21.setEnabled(true);
 							btn_21.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p10) == 2) {
 								arrayTabuleiro.add(p10);
+								arrayH.set(9, null);
 								btnhumano10.setEnabled(false);
 								btn_21.setEnabled(true);
 								btn_21.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l10 + ".png"));
@@ -29090,8 +29349,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -29166,12 +29424,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p10.getLadoDireito(), p10.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(9, null);
 							btnhumano10.setEnabled(false);
 							btn_22.setEnabled(true);
 							btn_22.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p10) == 2) {
 								arrayTabuleiro.add(p10);
+								arrayH.set(9, null);
 								btnhumano10.setEnabled(false);
 								btn_22.setEnabled(true);
 								btn_22.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l10 + ".png"));
@@ -29197,8 +29457,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -29273,12 +29532,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p10.getLadoDireito(), p10.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(9, null);
 							btnhumano10.setEnabled(false);
 							btn_23.setEnabled(true);
 							btn_23.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p10) == 2) {
 								arrayTabuleiro.add(p10);
+								arrayH.set(9, null);
 								btnhumano10.setEnabled(false);
 								btn_23.setEnabled(true);
 								btn_23.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l10 + ".png"));
@@ -29304,8 +29565,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -29380,12 +29640,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p10.getLadoDireito(), p10.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(9, null);
 							btnhumano10.setEnabled(false);
 							btn_24.setEnabled(true);
 							btn_24.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p10) == 2) {
 								arrayTabuleiro.add(p10);
+								arrayH.set(9, null);
 								btnhumano10.setEnabled(false);
 								btn_24.setEnabled(true);
 								btn_24.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l10 + ".png"));
@@ -29411,8 +29673,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -29487,12 +29748,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p10.getLadoDireito(), p10.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(9, null);
 							btnhumano10.setEnabled(false);
 							btn_25.setEnabled(true);
 							btn_25.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p10) == 2) {
 								arrayTabuleiro.add(p10);
+								arrayH.set(9, null);
 								btnhumano10.setEnabled(false);
 								btn_25.setEnabled(true);
 								btn_25.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l10 + ".png"));
@@ -29518,8 +29781,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -29594,12 +29856,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p10.getLadoDireito(), p10.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(9, null);
 							btnhumano10.setEnabled(false);
 							btn_26.setEnabled(true);
 							btn_26.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p10) == 2) {
 								arrayTabuleiro.add(p10);
+								arrayH.set(9, null);
 								btnhumano10.setEnabled(false);
 								btn_26.setEnabled(true);
 								btn_26.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l10 + ".png"));
@@ -29625,8 +29889,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -29701,12 +29964,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p10.getLadoDireito(), p10.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(9, null);
 							btnhumano10.setEnabled(false);
 							btn_27.setEnabled(true);
 							btn_27.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p10) == 2) {
 								arrayTabuleiro.add(p10);
+								arrayH.set(9, null);
 								btnhumano10.setEnabled(false);
 								btn_27.setEnabled(true);
 								btn_27.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l10 + ".png"));
@@ -29732,8 +29997,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -29808,12 +30072,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p10.getLadoDireito(), p10.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(9, null);
 							btnhumano10.setEnabled(false);
 							btn_28.setEnabled(true);
 							btn_28.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p10) == 2) {
 								arrayTabuleiro.add(p10);
+								arrayH.set(9, null);
 								btnhumano10.setEnabled(false);
 								btn_28.setEnabled(true);
 								btn_28.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l10 + ".png"));
@@ -29839,8 +30105,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -29932,12 +30197,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p11) == 1) {
 							Pecas novop = new Pecas(p11.getLadoDireito(), p11.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(10, null);
 							btnhumano11.setEnabled(false);
 							btn_1.setEnabled(true);
 							btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p11) == 2) {
 								arrayTabuleiro.add(p11);
+								arrayH.set(10, null);
 								btnhumano11.setEnabled(false);
 								btn_1.setEnabled(true);
 								btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l11 + ".png"));
@@ -29962,8 +30229,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -30033,12 +30299,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p11) == 1) {
 							Pecas novop = new Pecas(p11.getLadoDireito(), p11.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(10, null);
 							btnhumano11.setEnabled(false);
 							btn_2.setEnabled(true);
 							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p11) == 2) {
 								arrayTabuleiro.add(p11);
+								arrayH.set(10, null);
 								btnhumano11.setEnabled(false);
 								btn_2.setEnabled(true);
 								btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l11 + ".png"));
@@ -30063,8 +30331,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -30134,12 +30401,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p11) == 1) {
 							Pecas novop = new Pecas(p11.getLadoDireito(), p11.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(10, null);
 							btnhumano11.setEnabled(false);
 							btn_3.setEnabled(true);
 							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p11) == 2) {
 								arrayTabuleiro.add(p11);
+								arrayH.set(10, null);
 								btnhumano11.setEnabled(false);
 								btn_3.setEnabled(true);
 								btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l11 + ".png"));
@@ -30164,8 +30433,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -30235,12 +30503,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p11) == 1) {
 							Pecas novop = new Pecas(p11.getLadoDireito(), p11.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(10, null);
 							btnhumano11.setEnabled(false);
 							btn_4.setEnabled(true);
 							btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p11) == 2) {
 								arrayTabuleiro.add(p11);
+								arrayH.set(10, null);
 								btnhumano11.setEnabled(false);
 								btn_4.setEnabled(true);
 								btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l11 + ".png"));
@@ -30265,8 +30535,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -30336,12 +30605,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p11) == 1) {
 							Pecas novop = new Pecas(p11.getLadoDireito(), p11.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(10, null);
 							btnhumano11.setEnabled(false);
 							btn_5.setEnabled(true);
 							btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p11) == 2) {
 								arrayTabuleiro.add(p11);
+								arrayH.set(10, null);
 								btnhumano11.setEnabled(false);
 								btn_5.setEnabled(true);
 								btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l11 + ".png"));
@@ -30366,8 +30637,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -30438,12 +30708,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p11) == 1) {
 							Pecas novop = new Pecas(p11.getLadoDireito(), p11.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(10, null);
 							btnhumano11.setEnabled(false);
 							btn_6.setEnabled(true);
 							btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p11) == 2) {
 								arrayTabuleiro.add(p11);
+								arrayH.set(10, null);
 								btnhumano11.setEnabled(false);
 								btn_6.setEnabled(true);
 								btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l11 + ".png"));
@@ -30469,8 +30741,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -30541,12 +30812,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p11) == 1) {
 							Pecas novop = new Pecas(p11.getLadoDireito(), p11.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(10, null);
 							btnhumano11.setEnabled(false);
 							btn_7.setEnabled(true);
 							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p11) == 2) {
 								arrayTabuleiro.add(p11);
+								arrayH.set(10, null);
 								btnhumano11.setEnabled(false);
 								btn_7.setEnabled(true);
 								btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l11 + ".png"));
@@ -30571,8 +30844,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -30643,12 +30915,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p11) == 1) {
 							Pecas novop = new Pecas(p11.getLadoDireito(), p11.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(10, null);
 							btnhumano11.setEnabled(false);
 							btn_8.setEnabled(true);
 							btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p11) == 2) {
 								arrayTabuleiro.add(p11);
+								arrayH.set(10, null);
 								btnhumano11.setEnabled(false);
 								btn_8.setEnabled(true);
 								btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l11 + ".png"));
@@ -30673,8 +30947,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -30746,12 +31019,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p11) == 1) {
 							Pecas novop = new Pecas(p11.getLadoDireito(), p11.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(10, null);
 							btnhumano11.setEnabled(false);
 							btn_9.setEnabled(true);
 							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p11) == 2) {
 								arrayTabuleiro.add(p11);
+								arrayH.set(10, null);
 								btnhumano11.setEnabled(false);
 								btn_9.setEnabled(true);
 								btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l11 + ".png"));
@@ -30776,8 +31051,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -30849,12 +31123,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p11) == 1) {
 							Pecas novop = new Pecas(p11.getLadoDireito(), p11.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(10, null);
 							btnhumano11.setEnabled(false);
 							btn_10.setEnabled(true);
 							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p11) == 2) {
 								arrayTabuleiro.add(p11);
+								arrayH.set(10, null);
 								btnhumano11.setEnabled(false);
 								btn_10.setEnabled(true);
 								btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l11 + ".png"));
@@ -30879,8 +31155,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -30952,12 +31227,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p11) == 1) {
 							Pecas novop = new Pecas(p11.getLadoDireito(), p11.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(10, null);
 							btnhumano11.setEnabled(false);
 							btn_11.setEnabled(true);
 							btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p11) == 2) {
 								arrayTabuleiro.add(p11);
+								arrayH.set(10, null);
 								btnhumano11.setEnabled(false);
 								btn_11.setEnabled(true);
 								btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l11 + ".png"));
@@ -30982,8 +31259,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -31055,12 +31331,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p11) == 1) {
 							Pecas novop = new Pecas(p11.getLadoDireito(), p11.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(10, null);
 							btnhumano11.setEnabled(false);
 							btn_12.setEnabled(true);
 							btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p11) == 2) {
 								arrayTabuleiro.add(p11);
+								arrayH.set(10, null);
 								btnhumano11.setEnabled(false);
 								btn_12.setEnabled(true);
 								btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l11 + ".png"));
@@ -31084,8 +31362,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -31157,6 +31434,7 @@ public class TelaDoJogo extends JFrame {
 					} else {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p11) == 1) {
 							arrayTabuleiro.add(p11);
+							arrayH.set(10, null);
 							btnhumano11.setEnabled(false);
 							btn_13.setEnabled(true);
 							btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l11 + ".png"));
@@ -31168,6 +31446,7 @@ public class TelaDoJogo extends JFrame {
 								// no array.
 								Pecas novop = new Pecas(p11.getLadoDireito(), p11.getLadoEsquerdo());
 								arrayTabuleiro.add(novop);
+								arrayH.set(10, null);
 								btnhumano11.setEnabled(false);
 								btn_13.setEnabled(true);
 								btn_13.setIcon(
@@ -31193,8 +31472,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -31269,12 +31547,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p11.getLadoDireito(), p11.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(10, null);
 							btnhumano11.setEnabled(false);
 							btn_14.setEnabled(true);
 							btn_14.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p11) == 2) {
 								arrayTabuleiro.add(p11);
+								arrayH.set(10, null);
 								btnhumano11.setEnabled(false);
 								btn_14.setEnabled(true);
 								btn_14.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l11 + ".png"));
@@ -31299,8 +31579,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -31376,12 +31655,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p11.getLadoDireito(), p11.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(10, null);
 							btnhumano11.setEnabled(false);
 							btn_15.setEnabled(true);
 							btn_15.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p11) == 2) {
 								arrayTabuleiro.add(p11);
+								arrayH.set(10, null);
 								btnhumano11.setEnabled(false);
 								btn_15.setEnabled(true);
 								btn_15.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l11 + ".png"));
@@ -31406,8 +31687,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -31482,12 +31762,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p11.getLadoDireito(), p11.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(10, null);
 							btnhumano11.setEnabled(false);
 							btn_16.setEnabled(true);
 							btn_16.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p11) == 2) {
 								arrayTabuleiro.add(p11);
+								arrayH.set(10, null);
 								btnhumano11.setEnabled(false);
 								btn_16.setEnabled(true);
 								btn_16.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l11 + ".png"));
@@ -31512,8 +31794,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -31588,12 +31869,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p11.getLadoDireito(), p11.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(10, null);
 							btnhumano11.setEnabled(false);
 							btn_17.setEnabled(true);
 							btn_17.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p11) == 2) {
 								arrayTabuleiro.add(p11);
+								arrayH.set(10, null);
 								btnhumano11.setEnabled(false);
 								btn_17.setEnabled(true);
 								btn_17.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l11 + ".png"));
@@ -31619,8 +31902,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -31695,12 +31977,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p11.getLadoDireito(), p11.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(10, null);
 							btnhumano11.setEnabled(false);
 							btn_18.setEnabled(true);
 							btn_18.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p11) == 2) {
 								arrayTabuleiro.add(p11);
+								arrayH.set(10, null);
 								btnhumano11.setEnabled(false);
 								btn_18.setEnabled(true);
 								btn_18.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l11 + ".png"));
@@ -31726,8 +32010,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -31802,12 +32085,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p11.getLadoDireito(), p11.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(10, null);
 							btnhumano11.setEnabled(false);
 							btn_19.setEnabled(true);
 							btn_19.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p11) == 2) {
 								arrayTabuleiro.add(p11);
+								arrayH.set(10, null);
 								btnhumano11.setEnabled(false);
 								btn_19.setEnabled(true);
 								btn_19.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l11 + ".png"));
@@ -31833,8 +32118,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -31909,12 +32193,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p11.getLadoDireito(), p11.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(10, null);
 							btnhumano11.setEnabled(false);
 							btn_20.setEnabled(true);
 							btn_20.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p11) == 2) {
 								arrayTabuleiro.add(p11);
+								arrayH.set(10, null);
 								btnhumano11.setEnabled(false);
 								btn_20.setEnabled(true);
 								btn_20.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l11 + ".png"));
@@ -31940,8 +32226,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -32016,12 +32301,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p11.getLadoDireito(), p11.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(10, null);
 							btnhumano11.setEnabled(false);
 							btn_21.setEnabled(true);
 							btn_21.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p11) == 2) {
 								arrayTabuleiro.add(p11);
+								arrayH.set(10, null);
 								btnhumano11.setEnabled(false);
 								btn_21.setEnabled(true);
 								btn_21.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l11 + ".png"));
@@ -32047,8 +32334,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -32123,12 +32409,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p11.getLadoDireito(), p11.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(10, null);
 							btnhumano11.setEnabled(false);
 							btn_22.setEnabled(true);
 							btn_22.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p11) == 2) {
 								arrayTabuleiro.add(p11);
+								arrayH.set(10, null);
 								btnhumano11.setEnabled(false);
 								btn_22.setEnabled(true);
 								btn_22.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l11 + ".png"));
@@ -32154,8 +32442,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -32230,12 +32517,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p11.getLadoDireito(), p11.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(10, null);
 							btnhumano11.setEnabled(false);
 							btn_23.setEnabled(true);
 							btn_23.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p11) == 2) {
 								arrayTabuleiro.add(p11);
+								arrayH.set(10, null);
 								btnhumano11.setEnabled(false);
 								btn_23.setEnabled(true);
 								btn_23.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l11 + ".png"));
@@ -32261,8 +32550,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -32337,12 +32625,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p11.getLadoDireito(), p11.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(10, null);
 							btnhumano11.setEnabled(false);
 							btn_24.setEnabled(true);
 							btn_24.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p11) == 2) {
 								arrayTabuleiro.add(p11);
+								arrayH.set(10, null);
 								btnhumano11.setEnabled(false);
 								btn_24.setEnabled(true);
 								btn_24.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l11 + ".png"));
@@ -32368,8 +32658,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -32444,12 +32733,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p11.getLadoDireito(), p11.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(10, null);
 							btnhumano11.setEnabled(false);
 							btn_25.setEnabled(true);
 							btn_25.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p11) == 2) {
 								arrayTabuleiro.add(p11);
+								arrayH.set(10, null);
 								btnhumano11.setEnabled(false);
 								btn_25.setEnabled(true);
 								btn_25.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l11 + ".png"));
@@ -32475,8 +32766,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -32551,12 +32841,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p11.getLadoDireito(), p11.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(10, null);
 							btnhumano11.setEnabled(false);
 							btn_26.setEnabled(true);
 							btn_26.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p11) == 2) {
 								arrayTabuleiro.add(p11);
+								arrayH.set(10, null);
 								btnhumano11.setEnabled(false);
 								btn_26.setEnabled(true);
 								btn_26.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l11 + ".png"));
@@ -32582,8 +32874,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -32658,12 +32949,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p11.getLadoDireito(), p11.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(10, null);
 							btnhumano11.setEnabled(false);
 							btn_27.setEnabled(true);
 							btn_27.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p11) == 2) {
 								arrayTabuleiro.add(p11);
+								arrayH.set(10, null);
 								btnhumano11.setEnabled(false);
 								btn_27.setEnabled(true);
 								btn_27.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l11 + ".png"));
@@ -32689,8 +32982,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -32765,12 +33057,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p11.getLadoDireito(), p11.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(10, null);
 							btnhumano11.setEnabled(false);
 							btn_28.setEnabled(true);
 							btn_28.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p11) == 2) {
 								arrayTabuleiro.add(p11);
+								arrayH.set(10, null);
 								btnhumano11.setEnabled(false);
 								btn_28.setEnabled(true);
 								btn_28.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l11 + ".png"));
@@ -32795,8 +33089,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -32888,12 +33181,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p12) == 1) {
 							Pecas novop = new Pecas(p12.getLadoDireito(), p12.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(11, null);
 							btnhumano12.setEnabled(false);
 							btn_1.setEnabled(true);
 							btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p12) == 2) {
 								arrayTabuleiro.add(p12);
+								arrayH.set(11, null);
 								btnhumano12.setEnabled(false);
 								btn_1.setEnabled(true);
 								btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l12 + ".png"));
@@ -32918,8 +33213,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -32989,12 +33283,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p12) == 1) {
 							Pecas novop = new Pecas(p12.getLadoDireito(), p12.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(11, null);
 							btnhumano12.setEnabled(false);
 							btn_2.setEnabled(true);
 							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p12) == 2) {
 								arrayTabuleiro.add(p12);
+								arrayH.set(11, null);
 								btnhumano12.setEnabled(false);
 								btn_2.setEnabled(true);
 								btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l12 + ".png"));
@@ -33019,8 +33315,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -33090,12 +33385,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p12) == 1) {
 							Pecas novop = new Pecas(p12.getLadoDireito(), p12.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(11, null);
 							btnhumano12.setEnabled(false);
 							btn_3.setEnabled(true);
 							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p12) == 2) {
 								arrayTabuleiro.add(p12);
+								arrayH.set(11, null);
 								btnhumano12.setEnabled(false);
 								btn_3.setEnabled(true);
 								btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l12 + ".png"));
@@ -33120,8 +33417,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -33191,12 +33487,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p12) == 1) {
 							Pecas novop = new Pecas(p12.getLadoDireito(), p12.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(11, null);
 							btnhumano12.setEnabled(false);
 							btn_4.setEnabled(true);
 							btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p12) == 2) {
 								arrayTabuleiro.add(p12);
+								arrayH.set(11, null);
 								btnhumano12.setEnabled(false);
 								btn_4.setEnabled(true);
 								btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l12 + ".png"));
@@ -33221,8 +33519,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -33292,12 +33589,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p12) == 1) {
 							Pecas novop = new Pecas(p12.getLadoDireito(), p12.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(11, null);
 							btnhumano12.setEnabled(false);
 							btn_5.setEnabled(true);
 							btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p12) == 2) {
 								arrayTabuleiro.add(p12);
+								arrayH.set(11, null);
 								btnhumano12.setEnabled(false);
 								btn_5.setEnabled(true);
 								btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l12 + ".png"));
@@ -33322,8 +33621,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -33394,12 +33692,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p12) == 1) {
 							Pecas novop = new Pecas(p12.getLadoDireito(), p12.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(11, null);
 							btnhumano12.setEnabled(false);
 							btn_6.setEnabled(true);
 							btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p12) == 2) {
 								arrayTabuleiro.add(p12);
+								arrayH.set(11, null);
 								btnhumano12.setEnabled(false);
 								btn_6.setEnabled(true);
 								btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l12 + ".png"));
@@ -33425,8 +33725,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -33497,12 +33796,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p12) == 1) {
 							Pecas novop = new Pecas(p12.getLadoDireito(), p12.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(11, null);
 							btnhumano12.setEnabled(false);
 							btn_7.setEnabled(true);
 							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p12) == 2) {
 								arrayTabuleiro.add(p12);
+								arrayH.set(11, null);
 								btnhumano12.setEnabled(false);
 								btn_7.setEnabled(true);
 								btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l12 + ".png"));
@@ -33527,8 +33828,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -33599,12 +33899,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p12) == 1) {
 							Pecas novop = new Pecas(p12.getLadoDireito(), p12.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(11, null);
 							btnhumano12.setEnabled(false);
 							btn_8.setEnabled(true);
 							btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p12) == 2) {
 								arrayTabuleiro.add(p12);
+								arrayH.set(11, null);
 								btnhumano12.setEnabled(false);
 								btn_8.setEnabled(true);
 								btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l12 + ".png"));
@@ -33629,8 +33931,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -33702,12 +34003,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p12) == 1) {
 							Pecas novop = new Pecas(p12.getLadoDireito(), p12.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(11, null);
 							btnhumano12.setEnabled(false);
 							btn_9.setEnabled(true);
 							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p12) == 2) {
 								arrayTabuleiro.add(p12);
+								arrayH.set(11, null);
 								btnhumano12.setEnabled(false);
 								btn_9.setEnabled(true);
 								btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l12 + ".png"));
@@ -33732,8 +34035,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -33805,12 +34107,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p12) == 1) {
 							Pecas novop = new Pecas(p12.getLadoDireito(), p12.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(11, null);
 							btnhumano12.setEnabled(false);
 							btn_10.setEnabled(true);
 							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p12) == 2) {
 								arrayTabuleiro.add(p12);
+								arrayH.set(11, null);
 								btnhumano12.setEnabled(false);
 								btn_10.setEnabled(true);
 								btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l12 + ".png"));
@@ -33835,8 +34139,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -33908,12 +34211,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p12) == 1) {
 							Pecas novop = new Pecas(p12.getLadoDireito(), p12.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(11, null);
 							btnhumano12.setEnabled(false);
 							btn_11.setEnabled(true);
 							btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p12) == 2) {
 								arrayTabuleiro.add(p12);
+								arrayH.set(11, null);
 								btnhumano12.setEnabled(false);
 								btn_11.setEnabled(true);
 								btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l12 + ".png"));
@@ -33938,8 +34243,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -34011,12 +34315,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p12) == 1) {
 							Pecas novop = new Pecas(p12.getLadoDireito(), p12.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(11, null);
 							btnhumano12.setEnabled(false);
 							btn_12.setEnabled(true);
 							btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p12) == 2) {
 								arrayTabuleiro.add(p12);
+								arrayH.set(11, null);
 								btnhumano12.setEnabled(false);
 								btn_12.setEnabled(true);
 								btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l12 + ".png"));
@@ -34040,8 +34346,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -34113,6 +34418,7 @@ public class TelaDoJogo extends JFrame {
 					} else {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p12) == 1) {
 							arrayTabuleiro.add(p12);
+							arrayH.set(11, null);
 							btnhumano12.setEnabled(false);
 							btn_13.setEnabled(true);
 							btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l12 + ".png"));
@@ -34125,6 +34431,7 @@ public class TelaDoJogo extends JFrame {
 								// no array.
 								Pecas novop = new Pecas(p12.getLadoDireito(), p12.getLadoEsquerdo());
 								arrayTabuleiro.add(novop);
+								arrayH.set(11, null);
 								btnhumano12.setEnabled(false);
 								btn_13.setEnabled(true);
 								btn_13.setIcon(
@@ -34150,8 +34457,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -34226,12 +34532,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p12.getLadoDireito(), p12.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(11, null);
 							btnhumano12.setEnabled(false);
 							btn_14.setEnabled(true);
 							btn_14.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p12) == 2) {
 								arrayTabuleiro.add(p12);
+								arrayH.set(11, null);
 								btnhumano12.setEnabled(false);
 								btn_14.setEnabled(true);
 								btn_14.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l12 + ".png"));
@@ -34256,8 +34564,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -34333,12 +34640,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p12.getLadoDireito(), p12.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(11, null);
 							btnhumano12.setEnabled(false);
 							btn_15.setEnabled(true);
 							btn_15.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p12) == 2) {
 								arrayTabuleiro.add(p12);
+								arrayH.set(11, null);
 								btnhumano12.setEnabled(false);
 								btn_15.setEnabled(true);
 								btn_15.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l12 + ".png"));
@@ -34363,8 +34672,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -34439,12 +34747,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p12.getLadoDireito(), p12.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(11, null);
 							btnhumano12.setEnabled(false);
 							btn_16.setEnabled(true);
 							btn_16.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p12) == 2) {
 								arrayTabuleiro.add(p12);
+								arrayH.set(11, null);
 								btnhumano12.setEnabled(false);
 								btn_16.setEnabled(true);
 								btn_16.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l12 + ".png"));
@@ -34469,8 +34779,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -34545,12 +34854,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p12.getLadoDireito(), p12.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(11, null);
 							btnhumano12.setEnabled(false);
 							btn_17.setEnabled(true);
 							btn_17.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p12) == 2) {
 								arrayTabuleiro.add(p12);
+								arrayH.set(11, null);
 								btnhumano12.setEnabled(false);
 								btn_17.setEnabled(true);
 								btn_17.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l12 + ".png"));
@@ -34576,8 +34887,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -34652,12 +34962,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p12.getLadoDireito(), p12.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(11, null);
 							btnhumano12.setEnabled(false);
 							btn_18.setEnabled(true);
 							btn_18.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p12) == 2) {
 								arrayTabuleiro.add(p12);
+								arrayH.set(11, null);
 								btnhumano12.setEnabled(false);
 								btn_18.setEnabled(true);
 								btn_18.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l12 + ".png"));
@@ -34683,8 +34995,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -34759,12 +35070,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p12.getLadoDireito(), p12.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(11, null);
 							btnhumano12.setEnabled(false);
 							btn_19.setEnabled(true);
 							btn_19.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p12) == 2) {
 								arrayTabuleiro.add(p12);
+								arrayH.set(11, null);
 								btnhumano12.setEnabled(false);
 								btn_19.setEnabled(true);
 								btn_19.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l12 + ".png"));
@@ -34790,8 +35103,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -34866,12 +35178,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p12.getLadoDireito(), p12.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(11, null);
 							btnhumano12.setEnabled(false);
 							btn_20.setEnabled(true);
 							btn_20.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p12) == 2) {
 								arrayTabuleiro.add(p12);
+								arrayH.set(11, null);
 								btnhumano12.setEnabled(false);
 								btn_20.setEnabled(true);
 								btn_20.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l12 + ".png"));
@@ -34897,8 +35211,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -34973,12 +35286,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p12.getLadoDireito(), p12.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(11, null);
 							btnhumano12.setEnabled(false);
 							btn_21.setEnabled(true);
 							btn_21.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p12) == 2) {
 								arrayTabuleiro.add(p12);
+								arrayH.set(11, null);
 								btnhumano12.setEnabled(false);
 								btn_21.setEnabled(true);
 								btn_21.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l12 + ".png"));
@@ -35004,8 +35319,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -35080,12 +35394,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p12.getLadoDireito(), p12.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(11, null);
 							btnhumano12.setEnabled(false);
 							btn_22.setEnabled(true);
 							btn_22.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p12) == 2) {
 								arrayTabuleiro.add(p12);
+								arrayH.set(11, null);
 								btnhumano12.setEnabled(false);
 								btn_22.setEnabled(true);
 								btn_22.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l12 + ".png"));
@@ -35111,8 +35427,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -35187,12 +35502,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p12.getLadoDireito(), p12.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(11, null);
 							btnhumano12.setEnabled(false);
 							btn_23.setEnabled(true);
 							btn_23.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p12) == 2) {
 								arrayTabuleiro.add(p12);
+								arrayH.set(11, null);
 								btnhumano12.setEnabled(false);
 								btn_23.setEnabled(true);
 								btn_23.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l12 + ".png"));
@@ -35218,8 +35535,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -35294,12 +35610,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p12.getLadoDireito(), p12.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(11, null);
 							btnhumano12.setEnabled(false);
 							btn_24.setEnabled(true);
 							btn_24.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p12) == 2) {
 								arrayTabuleiro.add(p12);
+								arrayH.set(11, null);
 								btnhumano12.setEnabled(false);
 								btn_24.setEnabled(true);
 								btn_24.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l12 + ".png"));
@@ -35325,8 +35643,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -35401,12 +35718,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p12.getLadoDireito(), p12.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(11, null);
 							btnhumano12.setEnabled(false);
 							btn_25.setEnabled(true);
 							btn_25.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p12) == 2) {
 								arrayTabuleiro.add(p12);
+								arrayH.set(11, null);
 								btnhumano12.setEnabled(false);
 								btn_25.setEnabled(true);
 								btn_25.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l12 + ".png"));
@@ -35432,8 +35751,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -35508,12 +35826,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p12.getLadoDireito(), p12.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(11, null);
 							btnhumano12.setEnabled(false);
 							btn_26.setEnabled(true);
 							btn_26.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p12) == 2) {
 								arrayTabuleiro.add(p12);
+								arrayH.set(11, null);
 								btnhumano12.setEnabled(false);
 								btn_26.setEnabled(true);
 								btn_26.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l12 + ".png"));
@@ -35539,8 +35859,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -35615,12 +35934,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p12.getLadoDireito(), p12.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(11, null);
 							btnhumano12.setEnabled(false);
 							btn_27.setEnabled(true);
 							btn_27.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p12) == 2) {
 								arrayTabuleiro.add(p12);
+								arrayH.set(11, null);
 								btnhumano12.setEnabled(false);
 								btn_27.setEnabled(true);
 								btn_27.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l12 + ".png"));
@@ -35646,8 +35967,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -35722,12 +36042,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p12.getLadoDireito(), p12.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(11, null);
 							btnhumano12.setEnabled(false);
 							btn_28.setEnabled(true);
 							btn_28.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p12) == 2) {
 								arrayTabuleiro.add(p12);
+								arrayH.set(11, null);
 								btnhumano12.setEnabled(false);
 								btn_28.setEnabled(true);
 								btn_28.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l12 + ".png"));
@@ -35752,8 +36074,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -35845,12 +36166,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p13) == 1) {
 							Pecas novop = new Pecas(p13.getLadoDireito(), p13.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(12, null);
 							btnhumano13.setEnabled(false);
 							btn_1.setEnabled(true);
 							btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p13) == 2) {
 								arrayTabuleiro.add(p13);
+								arrayH.set(12, null);
 								btnhumano13.setEnabled(false);
 								btn_1.setEnabled(true);
 								btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l13 + ".png"));
@@ -35875,8 +36198,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -35946,12 +36268,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p13) == 1) {
 							Pecas novop = new Pecas(p13.getLadoDireito(), p13.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(12, null);
 							btnhumano13.setEnabled(false);
 							btn_2.setEnabled(true);
 							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p13) == 2) {
 								arrayTabuleiro.add(p13);
+								arrayH.set(12, null);
 								btnhumano13.setEnabled(false);
 								btn_2.setEnabled(true);
 								btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l13 + ".png"));
@@ -35976,8 +36300,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -36047,12 +36370,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p13) == 1) {
 							Pecas novop = new Pecas(p13.getLadoDireito(), p13.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(12, null);
 							btnhumano13.setEnabled(false);
 							btn_3.setEnabled(true);
 							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p13) == 2) {
 								arrayTabuleiro.add(p13);
+								arrayH.set(12, null);
 								btnhumano13.setEnabled(false);
 								btn_3.setEnabled(true);
 								btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l13 + ".png"));
@@ -36077,8 +36402,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -36148,12 +36472,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p13) == 1) {
 							Pecas novop = new Pecas(p13.getLadoDireito(), p13.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(12, null);
 							btnhumano13.setEnabled(false);
 							btn_4.setEnabled(true);
 							btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p13) == 2) {
 								arrayTabuleiro.add(p13);
+								arrayH.set(12, null);
 								btnhumano13.setEnabled(false);
 								btn_4.setEnabled(true);
 								btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l13 + ".png"));
@@ -36178,8 +36504,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -36249,12 +36574,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p13) == 1) {
 							Pecas novop = new Pecas(p13.getLadoDireito(), p13.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(12, null);
 							btnhumano13.setEnabled(false);
 							btn_5.setEnabled(true);
 							btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p13) == 2) {
 								arrayTabuleiro.add(p13);
+								arrayH.set(12, null);
 								btnhumano13.setEnabled(false);
 								btn_5.setEnabled(true);
 								btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l13 + ".png"));
@@ -36279,8 +36606,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -36351,12 +36677,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p13) == 1) {
 							Pecas novop = new Pecas(p13.getLadoDireito(), p13.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(12, null);
 							btnhumano13.setEnabled(false);
 							btn_6.setEnabled(true);
 							btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p13) == 2) {
 								arrayTabuleiro.add(p13);
+								arrayH.set(12, null);
 								btnhumano13.setEnabled(false);
 								btn_6.setEnabled(true);
 								btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l13 + ".png"));
@@ -36382,8 +36710,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -36454,12 +36781,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p13) == 1) {
 							Pecas novop = new Pecas(p13.getLadoDireito(), p13.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(12, null);
 							btnhumano13.setEnabled(false);
 							btn_7.setEnabled(true);
 							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p13) == 2) {
 								arrayTabuleiro.add(p13);
+								arrayH.set(12, null);
 								btnhumano13.setEnabled(false);
 								btn_7.setEnabled(true);
 								btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l13 + ".png"));
@@ -36484,8 +36813,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -36556,12 +36884,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p13) == 1) {
 							Pecas novop = new Pecas(p13.getLadoDireito(), p13.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(12, null);
 							btnhumano13.setEnabled(false);
 							btn_8.setEnabled(true);
 							btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p13) == 2) {
 								arrayTabuleiro.add(p13);
+								arrayH.set(12, null);
 								btnhumano13.setEnabled(false);
 								btn_8.setEnabled(true);
 								btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l13 + ".png"));
@@ -36586,8 +36916,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -36659,12 +36988,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p13) == 1) {
 							Pecas novop = new Pecas(p13.getLadoDireito(), p13.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(12, null);
 							btnhumano13.setEnabled(false);
 							btn_9.setEnabled(true);
 							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p13) == 2) {
 								arrayTabuleiro.add(p13);
+								arrayH.set(12, null);
 								btnhumano13.setEnabled(false);
 								btn_9.setEnabled(true);
 								btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l13 + ".png"));
@@ -36689,8 +37020,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -36762,12 +37092,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p13) == 1) {
 							Pecas novop = new Pecas(p13.getLadoDireito(), p13.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(12, null);
 							btnhumano13.setEnabled(false);
 							btn_10.setEnabled(true);
 							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p13) == 2) {
 								arrayTabuleiro.add(p13);
+								arrayH.set(12, null);
 								btnhumano13.setEnabled(false);
 								btn_10.setEnabled(true);
 								btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l13 + ".png"));
@@ -36792,8 +37124,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -36865,12 +37196,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p13) == 1) {
 							Pecas novop = new Pecas(p13.getLadoDireito(), p13.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(12, null);
 							btnhumano13.setEnabled(false);
 							btn_11.setEnabled(true);
 							btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p13) == 2) {
 								arrayTabuleiro.add(p13);
+								arrayH.set(12, null);
 								btnhumano13.setEnabled(false);
 								btn_11.setEnabled(true);
 								btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l13 + ".png"));
@@ -36895,8 +37228,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -36968,12 +37300,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p13) == 1) {
 							Pecas novop = new Pecas(p13.getLadoDireito(), p13.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(12, null);
 							btnhumano13.setEnabled(false);
 							btn_12.setEnabled(true);
 							btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p13) == 2) {
 								arrayTabuleiro.add(p13);
+								arrayH.set(12, null);
 								btnhumano13.setEnabled(false);
 								btn_12.setEnabled(true);
 								btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l13 + ".png"));
@@ -36997,8 +37331,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -37070,6 +37403,7 @@ public class TelaDoJogo extends JFrame {
 					} else {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p13) == 1) {
 							arrayTabuleiro.add(p13);
+							arrayH.set(12, null);
 							btnhumano13.setEnabled(false);
 							btn_13.setEnabled(true);
 							btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l13 + ".png"));
@@ -37082,6 +37416,7 @@ public class TelaDoJogo extends JFrame {
 								// no array.
 								Pecas novop = new Pecas(p13.getLadoDireito(), p13.getLadoEsquerdo());
 								arrayTabuleiro.add(novop);
+								arrayH.set(12, null);
 								btnhumano13.setEnabled(false);
 								btn_13.setEnabled(true);
 								btn_13.setIcon(
@@ -37107,8 +37442,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -37183,12 +37517,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p13.getLadoDireito(), p13.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(12, null);
 							btnhumano13.setEnabled(false);
 							btn_14.setEnabled(true);
 							btn_14.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p13) == 2) {
 								arrayTabuleiro.add(p13);
+								arrayH.set(12, null);
 								btnhumano13.setEnabled(false);
 								btn_14.setEnabled(true);
 								btn_14.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l13 + ".png"));
@@ -37213,8 +37549,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -37290,12 +37625,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p13.getLadoDireito(), p13.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(12, null);
 							btnhumano13.setEnabled(false);
 							btn_15.setEnabled(true);
 							btn_15.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p13) == 2) {
 								arrayTabuleiro.add(p13);
+								arrayH.set(12, null);
 								btnhumano13.setEnabled(false);
 								btn_15.setEnabled(true);
 								btn_15.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l13 + ".png"));
@@ -37320,8 +37657,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -37396,12 +37732,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p13.getLadoDireito(), p13.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(12, null);
 							btnhumano13.setEnabled(false);
 							btn_16.setEnabled(true);
 							btn_16.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p13) == 2) {
 								arrayTabuleiro.add(p13);
+								arrayH.set(12, null);
 								btnhumano13.setEnabled(false);
 								btn_16.setEnabled(true);
 								btn_16.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l13 + ".png"));
@@ -37426,8 +37764,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -37502,12 +37839,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p13.getLadoDireito(), p13.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(12, null);
 							btnhumano13.setEnabled(false);
 							btn_17.setEnabled(true);
 							btn_17.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p13) == 2) {
 								arrayTabuleiro.add(p13);
+								arrayH.set(12, null);
 								btnhumano13.setEnabled(false);
 								btn_17.setEnabled(true);
 								btn_17.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l13 + ".png"));
@@ -37533,8 +37872,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -37609,12 +37947,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p13.getLadoDireito(), p13.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(12, null);
 							btnhumano13.setEnabled(false);
 							btn_18.setEnabled(true);
 							btn_18.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p13) == 2) {
 								arrayTabuleiro.add(p13);
+								arrayH.set(12, null);
 								btnhumano13.setEnabled(false);
 								btn_18.setEnabled(true);
 								btn_18.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l13 + ".png"));
@@ -37640,8 +37980,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -37716,12 +38055,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p13.getLadoDireito(), p13.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(12, null);
 							btnhumano13.setEnabled(false);
 							btn_19.setEnabled(true);
 							btn_19.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p13) == 2) {
 								arrayTabuleiro.add(p13);
+								arrayH.set(12, null);
 								btnhumano13.setEnabled(false);
 								btn_19.setEnabled(true);
 								btn_19.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l13 + ".png"));
@@ -37747,8 +38088,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -37823,12 +38163,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p13.getLadoDireito(), p13.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(12, null);
 							btnhumano13.setEnabled(false);
 							btn_20.setEnabled(true);
 							btn_20.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p13) == 2) {
 								arrayTabuleiro.add(p13);
+								arrayH.set(12, null);
 								btnhumano13.setEnabled(false);
 								btn_20.setEnabled(true);
 								btn_20.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l13 + ".png"));
@@ -37854,8 +38196,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -37930,12 +38271,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p13.getLadoDireito(), p13.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(12, null);
 							btnhumano13.setEnabled(false);
 							btn_21.setEnabled(true);
 							btn_21.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p13) == 2) {
 								arrayTabuleiro.add(p13);
+								arrayH.set(12, null);
 								btnhumano13.setEnabled(false);
 								btn_21.setEnabled(true);
 								btn_21.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l13 + ".png"));
@@ -37961,8 +38304,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -38037,12 +38379,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p13.getLadoDireito(), p13.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(12, null);
 							btnhumano13.setEnabled(false);
 							btn_22.setEnabled(true);
 							btn_22.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p13) == 2) {
 								arrayTabuleiro.add(p13);
+								arrayH.set(12, null);
 								btnhumano13.setEnabled(false);
 								btn_22.setEnabled(true);
 								btn_22.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l13 + ".png"));
@@ -38068,8 +38412,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -38144,12 +38487,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p13.getLadoDireito(), p13.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(12, null);
 							btnhumano13.setEnabled(false);
 							btn_23.setEnabled(true);
 							btn_23.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p13) == 2) {
 								arrayTabuleiro.add(p13);
+								arrayH.set(12, null);
 								btnhumano13.setEnabled(false);
 								btn_23.setEnabled(true);
 								btn_23.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l13 + ".png"));
@@ -38175,8 +38520,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -38251,12 +38595,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p13.getLadoDireito(), p13.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(12, null);
 							btnhumano13.setEnabled(false);
 							btn_24.setEnabled(true);
 							btn_24.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p13) == 2) {
 								arrayTabuleiro.add(p13);
+								arrayH.set(12, null);
 								btnhumano13.setEnabled(false);
 								btn_24.setEnabled(true);
 								btn_24.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l13 + ".png"));
@@ -38282,8 +38628,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -38358,12 +38703,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p13.getLadoDireito(), p13.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(12, null);
 							btnhumano13.setEnabled(false);
 							btn_25.setEnabled(true);
 							btn_25.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p13) == 2) {
 								arrayTabuleiro.add(p13);
+								arrayH.set(12, null);
 								btnhumano13.setEnabled(false);
 								btn_25.setEnabled(true);
 								btn_25.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l13 + ".png"));
@@ -38389,8 +38736,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -38465,12 +38811,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p13.getLadoDireito(), p13.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(12, null);
 							btnhumano13.setEnabled(false);
 							btn_26.setEnabled(true);
 							btn_26.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p13) == 2) {
 								arrayTabuleiro.add(p13);
+								arrayH.set(12, null);
 								btnhumano13.setEnabled(false);
 								btn_26.setEnabled(true);
 								btn_26.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l13 + ".png"));
@@ -38496,8 +38844,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -38572,12 +38919,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p13.getLadoDireito(), p13.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(12, null);
 							btnhumano13.setEnabled(false);
 							btn_27.setEnabled(true);
 							btn_27.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p13) == 2) {
 								arrayTabuleiro.add(p13);
+								arrayH.set(12, null);
 								btnhumano13.setEnabled(false);
 								btn_27.setEnabled(true);
 								btn_27.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l13 + ".png"));
@@ -38603,8 +38952,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -38679,12 +39027,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p13.getLadoDireito(), p13.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(12, null);
 							btnhumano13.setEnabled(false);
 							btn_28.setEnabled(true);
 							btn_28.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p13) == 2) {
 								arrayTabuleiro.add(p13);
+								arrayH.set(12, null);
 								btnhumano13.setEnabled(false);
 								btn_28.setEnabled(true);
 								btn_28.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l13 + ".png"));
@@ -38709,8 +39059,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -38801,12 +39150,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p14) == 1) {
 							Pecas novop = new Pecas(p14.getLadoDireito(), p14.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(13, null);
 							btnhumano14.setEnabled(false);
 							btn_1.setEnabled(true);
 							btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p14) == 2) {
 								arrayTabuleiro.add(p14);
+								arrayH.set(13, null);
 								btnhumano14.setEnabled(false);
 								btn_1.setEnabled(true);
 								btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l14 + ".png"));
@@ -38831,8 +39182,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -38902,12 +39252,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p14) == 1) {
 							Pecas novop = new Pecas(p14.getLadoDireito(), p14.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(13, null);
 							btnhumano14.setEnabled(false);
 							btn_2.setEnabled(true);
 							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p14) == 2) {
 								arrayTabuleiro.add(p14);
+								arrayH.set(13, null);
 								btnhumano14.setEnabled(false);
 								btn_2.setEnabled(true);
 								btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l14 + ".png"));
@@ -38932,8 +39284,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -39003,12 +39354,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p14) == 1) {
 							Pecas novop = new Pecas(p14.getLadoDireito(), p14.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(13, null);
 							btnhumano14.setEnabled(false);
 							btn_3.setEnabled(true);
 							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p14) == 2) {
 								arrayTabuleiro.add(p14);
+								arrayH.set(13, null);
 								btnhumano14.setEnabled(false);
 								btn_3.setEnabled(true);
 								btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l14 + ".png"));
@@ -39033,8 +39386,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -39104,12 +39456,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p14) == 1) {
 							Pecas novop = new Pecas(p14.getLadoDireito(), p14.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(13, null);
 							btnhumano14.setEnabled(false);
 							btn_4.setEnabled(true);
 							btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p14) == 2) {
 								arrayTabuleiro.add(p14);
+								arrayH.set(13, null);
 								btnhumano14.setEnabled(false);
 								btn_4.setEnabled(true);
 								btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l14 + ".png"));
@@ -39134,8 +39488,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -39205,12 +39558,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p14) == 1) {
 							Pecas novop = new Pecas(p14.getLadoDireito(), p14.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(13, null);
 							btnhumano14.setEnabled(false);
 							btn_5.setEnabled(true);
 							btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p14) == 2) {
 								arrayTabuleiro.add(p14);
+								arrayH.set(13, null);
 								btnhumano14.setEnabled(false);
 								btn_5.setEnabled(true);
 								btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l14 + ".png"));
@@ -39235,8 +39590,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -39307,12 +39661,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p14) == 1) {
 							Pecas novop = new Pecas(p14.getLadoDireito(), p14.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(13, null);
 							btnhumano14.setEnabled(false);
 							btn_6.setEnabled(true);
 							btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p14) == 2) {
 								arrayTabuleiro.add(p14);
+								arrayH.set(13, null);
 								btnhumano14.setEnabled(false);
 								btn_6.setEnabled(true);
 								btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l14 + ".png"));
@@ -39338,8 +39694,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -39410,12 +39765,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p14) == 1) {
 							Pecas novop = new Pecas(p14.getLadoDireito(), p14.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(13, null);
 							btnhumano14.setEnabled(false);
 							btn_7.setEnabled(true);
 							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p14) == 2) {
 								arrayTabuleiro.add(p14);
+								arrayH.set(13, null);
 								btnhumano14.setEnabled(false);
 								btn_7.setEnabled(true);
 								btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l14 + ".png"));
@@ -39440,8 +39797,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -39512,12 +39868,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p14) == 1) {
 							Pecas novop = new Pecas(p14.getLadoDireito(), p14.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(13, null);
 							btnhumano14.setEnabled(false);
 							btn_8.setEnabled(true);
 							btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p14) == 2) {
 								arrayTabuleiro.add(p14);
+								arrayH.set(13, null);
 								btnhumano14.setEnabled(false);
 								btn_8.setEnabled(true);
 								btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l14 + ".png"));
@@ -39542,8 +39900,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -39615,12 +39972,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p14) == 1) {
 							Pecas novop = new Pecas(p14.getLadoDireito(), p14.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(13, null);
 							btnhumano14.setEnabled(false);
 							btn_9.setEnabled(true);
 							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p14) == 2) {
 								arrayTabuleiro.add(p14);
+								arrayH.set(13, null);
 								btnhumano14.setEnabled(false);
 								btn_9.setEnabled(true);
 								btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l14 + ".png"));
@@ -39645,8 +40004,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -39718,12 +40076,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p14) == 1) {
 							Pecas novop = new Pecas(p14.getLadoDireito(), p14.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(13, null);
 							btnhumano14.setEnabled(false);
 							btn_10.setEnabled(true);
 							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p14) == 2) {
 								arrayTabuleiro.add(p14);
+								arrayH.set(13, null);
 								btnhumano14.setEnabled(false);
 								btn_10.setEnabled(true);
 								btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l14 + ".png"));
@@ -39748,8 +40108,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -39821,12 +40180,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p14) == 1) {
 							Pecas novop = new Pecas(p14.getLadoDireito(), p14.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(13, null);
 							btnhumano14.setEnabled(false);
 							btn_11.setEnabled(true);
 							btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p14) == 2) {
 								arrayTabuleiro.add(p14);
+								arrayH.set(13, null);
 								btnhumano14.setEnabled(false);
 								btn_11.setEnabled(true);
 								btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l14 + ".png"));
@@ -39851,8 +40212,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -39924,12 +40284,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p14) == 1) {
 							Pecas novop = new Pecas(p14.getLadoDireito(), p14.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(13, null);
 							btnhumano14.setEnabled(false);
 							btn_12.setEnabled(true);
 							btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p14) == 2) {
 								arrayTabuleiro.add(p14);
+								arrayH.set(13, null);
 								btnhumano14.setEnabled(false);
 								btn_12.setEnabled(true);
 								btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l14 + ".png"));
@@ -39953,8 +40315,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -40026,6 +40387,7 @@ public class TelaDoJogo extends JFrame {
 					} else {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p14) == 1) {
 							arrayTabuleiro.add(p14);
+							arrayH.set(13, null);
 							btnhumano14.setEnabled(false);
 							btn_13.setEnabled(true);
 							btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l14 + ".png"));
@@ -40038,6 +40400,7 @@ public class TelaDoJogo extends JFrame {
 								// no array.
 								Pecas novop = new Pecas(p14.getLadoDireito(), p14.getLadoEsquerdo());
 								arrayTabuleiro.add(novop);
+								arrayH.set(13, null);
 								btnhumano14.setEnabled(false);
 								btn_13.setEnabled(true);
 								btn_13.setIcon(
@@ -40063,8 +40426,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -40139,12 +40501,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p14.getLadoDireito(), p14.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(13, null);
 							btnhumano14.setEnabled(false);
 							btn_14.setEnabled(true);
 							btn_14.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p14) == 2) {
 								arrayTabuleiro.add(p14);
+								arrayH.set(13, null);
 								btnhumano14.setEnabled(false);
 								btn_14.setEnabled(true);
 								btn_14.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l14 + ".png"));
@@ -40169,8 +40533,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -40246,12 +40609,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p14.getLadoDireito(), p14.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(13, null);
 							btnhumano14.setEnabled(false);
 							btn_15.setEnabled(true);
 							btn_15.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p14) == 2) {
 								arrayTabuleiro.add(p14);
+								arrayH.set(13, null);
 								btnhumano14.setEnabled(false);
 								btn_15.setEnabled(true);
 								btn_15.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l14 + ".png"));
@@ -40276,8 +40641,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -40352,12 +40716,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p14.getLadoDireito(), p14.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(13, null);
 							btnhumano14.setEnabled(false);
 							btn_16.setEnabled(true);
 							btn_16.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p14) == 2) {
 								arrayTabuleiro.add(p14);
+								arrayH.set(13, null);
 								btnhumano14.setEnabled(false);
 								btn_16.setEnabled(true);
 								btn_16.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l14 + ".png"));
@@ -40382,8 +40748,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -40458,6 +40823,7 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p14.getLadoDireito(), p14.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(13, null);
 							btnhumano14.setEnabled(false);
 							btn_17.setEnabled(true);
 							btn_17.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
@@ -40489,8 +40855,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -40565,12 +40930,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p14.getLadoDireito(), p14.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(13, null);
 							btnhumano14.setEnabled(false);
 							btn_18.setEnabled(true);
 							btn_18.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p14) == 2) {
 								arrayTabuleiro.add(p14);
+								arrayH.set(13, null);
 								btnhumano14.setEnabled(false);
 								btn_18.setEnabled(true);
 								btn_18.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l14 + ".png"));
@@ -40596,8 +40963,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -40672,12 +41038,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p14.getLadoDireito(), p14.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(13, null);
 							btnhumano14.setEnabled(false);
 							btn_19.setEnabled(true);
 							btn_19.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p14) == 2) {
 								arrayTabuleiro.add(p14);
+								arrayH.set(13, null);
 								btnhumano14.setEnabled(false);
 								btn_19.setEnabled(true);
 								btn_19.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l14 + ".png"));
@@ -40703,8 +41071,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -40779,12 +41146,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p14.getLadoDireito(), p14.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(13, null);
 							btnhumano14.setEnabled(false);
 							btn_20.setEnabled(true);
 							btn_20.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p14) == 2) {
 								arrayTabuleiro.add(p14);
+								arrayH.set(13, null);
 								btnhumano14.setEnabled(false);
 								btn_20.setEnabled(true);
 								btn_20.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l14 + ".png"));
@@ -40810,8 +41179,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -40886,12 +41254,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p14.getLadoDireito(), p14.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(13, null);
 							btnhumano14.setEnabled(false);
 							btn_21.setEnabled(true);
 							btn_21.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p14) == 2) {
 								arrayTabuleiro.add(p14);
+								arrayH.set(13, null);
 								btnhumano14.setEnabled(false);
 								btn_21.setEnabled(true);
 								btn_21.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l14 + ".png"));
@@ -40917,8 +41287,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -40993,12 +41362,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p14.getLadoDireito(), p14.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(13, null);
 							btnhumano14.setEnabled(false);
 							btn_22.setEnabled(true);
 							btn_22.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p14) == 2) {
 								arrayTabuleiro.add(p14);
+								arrayH.set(13, null);
 								btnhumano14.setEnabled(false);
 								btn_22.setEnabled(true);
 								btn_22.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l14 + ".png"));
@@ -41024,8 +41395,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -41100,12 +41470,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p14.getLadoDireito(), p14.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(13, null);
 							btnhumano14.setEnabled(false);
 							btn_23.setEnabled(true);
 							btn_23.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p14) == 2) {
 								arrayTabuleiro.add(p14);
+								arrayH.set(13, null);
 								btnhumano14.setEnabled(false);
 								btn_23.setEnabled(true);
 								btn_23.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l14 + ".png"));
@@ -41131,8 +41503,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -41207,12 +41578,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p14.getLadoDireito(), p14.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(13, null);
 							btnhumano14.setEnabled(false);
 							btn_24.setEnabled(true);
 							btn_24.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p14) == 2) {
 								arrayTabuleiro.add(p14);
+								arrayH.set(13, null);
 								btnhumano14.setEnabled(false);
 								btn_24.setEnabled(true);
 								btn_24.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l14 + ".png"));
@@ -41238,8 +41611,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -41314,12 +41686,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p14.getLadoDireito(), p14.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(13, null);
 							btnhumano14.setEnabled(false);
 							btn_25.setEnabled(true);
 							btn_25.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p14) == 2) {
 								arrayTabuleiro.add(p14);
+								arrayH.set(13, null);
 								btnhumano14.setEnabled(false);
 								btn_25.setEnabled(true);
 								btn_25.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l14 + ".png"));
@@ -41345,8 +41719,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -41421,12 +41794,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p14.getLadoDireito(), p14.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(13, null);
 							btnhumano14.setEnabled(false);
 							btn_26.setEnabled(true);
 							btn_26.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p14) == 2) {
 								arrayTabuleiro.add(p14);
+								arrayH.set(13, null);
 								btnhumano14.setEnabled(false);
 								btn_26.setEnabled(true);
 								btn_26.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l14 + ".png"));
@@ -41452,8 +41827,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -41528,12 +41902,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p14.getLadoDireito(), p14.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(13, null);
 							btnhumano14.setEnabled(false);
 							btn_27.setEnabled(true);
 							btn_27.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p14) == 2) {
 								arrayTabuleiro.add(p14);
+								arrayH.set(13, null);
 								btnhumano14.setEnabled(false);
 								btn_27.setEnabled(true);
 								btn_27.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l14 + ".png"));
@@ -41559,8 +41935,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -41635,12 +42010,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p14.getLadoDireito(), p14.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(13, null);
 							btnhumano14.setEnabled(false);
 							btn_28.setEnabled(true);
 							btn_28.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p14) == 2) {
 								arrayTabuleiro.add(p14);
+								arrayH.set(13, null);
 								btnhumano14.setEnabled(false);
 								btn_28.setEnabled(true);
 								btn_28.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l14 + ".png"));
@@ -41666,8 +42043,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -41759,12 +42135,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p15) == 1) {
 							Pecas novop = new Pecas(p15.getLadoDireito(), p15.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(14, null);
 							btnhumano15.setEnabled(false);
 							btn_1.setEnabled(true);
 							btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p15) == 2) {
 								arrayTabuleiro.add(p15);
+								arrayH.set(14, null);
 								btnhumano15.setEnabled(false);
 								btn_1.setEnabled(true);
 								btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l15 + ".png"));
@@ -41789,8 +42167,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -41860,12 +42237,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p15) == 1) {
 							Pecas novop = new Pecas(p15.getLadoDireito(), p15.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(14, null);
 							btnhumano15.setEnabled(false);
 							btn_2.setEnabled(true);
 							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p15) == 2) {
 								arrayTabuleiro.add(p15);
+								arrayH.set(14, null);
 								btnhumano15.setEnabled(false);
 								btn_2.setEnabled(true);
 								btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l15 + ".png"));
@@ -41890,8 +42269,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -41961,12 +42339,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p15) == 1) {
 							Pecas novop = new Pecas(p15.getLadoDireito(), p15.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(14, null);
 							btnhumano15.setEnabled(false);
 							btn_3.setEnabled(true);
 							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p15) == 2) {
 								arrayTabuleiro.add(p15);
+								arrayH.set(14, null);
 								btnhumano15.setEnabled(false);
 								btn_3.setEnabled(true);
 								btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l15 + ".png"));
@@ -41991,8 +42371,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -42062,12 +42441,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p15) == 1) {
 							Pecas novop = new Pecas(p15.getLadoDireito(), p15.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(14, null);
 							btnhumano15.setEnabled(false);
 							btn_4.setEnabled(true);
 							btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p15) == 2) {
 								arrayTabuleiro.add(p15);
+								arrayH.set(14, null);
 								btnhumano15.setEnabled(false);
 								btn_4.setEnabled(true);
 								btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l15 + ".png"));
@@ -42092,8 +42473,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -42163,12 +42543,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p15) == 1) {
 							Pecas novop = new Pecas(p15.getLadoDireito(), p15.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(14, null);
 							btnhumano15.setEnabled(false);
 							btn_5.setEnabled(true);
 							btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p15) == 2) {
 								arrayTabuleiro.add(p15);
+								arrayH.set(14, null);
 								btnhumano15.setEnabled(false);
 								btn_5.setEnabled(true);
 								btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l15 + ".png"));
@@ -42193,8 +42575,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -42265,12 +42646,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p15) == 1) {
 							Pecas novop = new Pecas(p15.getLadoDireito(), p15.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(14, null);
 							btnhumano15.setEnabled(false);
 							btn_6.setEnabled(true);
 							btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p15) == 2) {
 								arrayTabuleiro.add(p15);
+								arrayH.set(14, null);
 								btnhumano15.setEnabled(false);
 								btn_6.setEnabled(true);
 								btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l15 + ".png"));
@@ -42296,8 +42679,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -42368,12 +42750,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p15) == 1) {
 							Pecas novop = new Pecas(p15.getLadoDireito(), p15.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(14, null);
 							btnhumano15.setEnabled(false);
 							btn_7.setEnabled(true);
 							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p15) == 2) {
 								arrayTabuleiro.add(p15);
+								arrayH.set(14, null);
 								btnhumano15.setEnabled(false);
 								btn_7.setEnabled(true);
 								btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l15 + ".png"));
@@ -42398,8 +42782,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -42470,12 +42853,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p15) == 1) {
 							Pecas novop = new Pecas(p15.getLadoDireito(), p15.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(14, null);
 							btnhumano15.setEnabled(false);
 							btn_8.setEnabled(true);
 							btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p15) == 2) {
 								arrayTabuleiro.add(p15);
+								arrayH.set(14, null);
 								btnhumano15.setEnabled(false);
 								btn_8.setEnabled(true);
 								btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l15 + ".png"));
@@ -42500,8 +42885,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -42573,12 +42957,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p15) == 1) {
 							Pecas novop = new Pecas(p15.getLadoDireito(), p15.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(14, null);
 							btnhumano15.setEnabled(false);
 							btn_9.setEnabled(true);
 							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p15) == 2) {
 								arrayTabuleiro.add(p15);
+								arrayH.set(14, null);
 								btnhumano15.setEnabled(false);
 								btn_9.setEnabled(true);
 								btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l15 + ".png"));
@@ -42603,8 +42989,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -42676,12 +43061,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p15) == 1) {
 							Pecas novop = new Pecas(p15.getLadoDireito(), p15.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(14, null);
 							btnhumano15.setEnabled(false);
 							btn_10.setEnabled(true);
 							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p15) == 2) {
 								arrayTabuleiro.add(p15);
+								arrayH.set(14, null);
 								btnhumano15.setEnabled(false);
 								btn_10.setEnabled(true);
 								btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l15 + ".png"));
@@ -42706,8 +43093,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -42779,12 +43165,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p15) == 1) {
 							Pecas novop = new Pecas(p15.getLadoDireito(), p15.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(14, null);
 							btnhumano15.setEnabled(false);
 							btn_11.setEnabled(true);
 							btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p15) == 2) {
 								arrayTabuleiro.add(p15);
+								arrayH.set(14, null);
 								btnhumano15.setEnabled(false);
 								btn_11.setEnabled(true);
 								btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l15 + ".png"));
@@ -42809,8 +43197,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -42882,12 +43269,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p15) == 1) {
 							Pecas novop = new Pecas(p15.getLadoDireito(), p15.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(14, null);
 							btnhumano15.setEnabled(false);
 							btn_12.setEnabled(true);
 							btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p15) == 2) {
 								arrayTabuleiro.add(p15);
+								arrayH.set(14, null);
 								btnhumano15.setEnabled(false);
 								btn_12.setEnabled(true);
 								btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l15 + ".png"));
@@ -42911,8 +43300,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -42984,6 +43372,7 @@ public class TelaDoJogo extends JFrame {
 					} else {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p15) == 1) {
 							arrayTabuleiro.add(p15);
+							arrayH.set(14, null);
 							btnhumano15.setEnabled(false);
 							btn_13.setEnabled(true);
 							btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l15 + ".png"));
@@ -42996,6 +43385,7 @@ public class TelaDoJogo extends JFrame {
 								// no array.
 								Pecas novop = new Pecas(p15.getLadoDireito(), p15.getLadoEsquerdo());
 								arrayTabuleiro.add(novop);
+								arrayH.set(14, null);
 								btnhumano15.setEnabled(false);
 								btn_13.setEnabled(true);
 								btn_13.setIcon(
@@ -43021,8 +43411,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -43097,12 +43486,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p15.getLadoDireito(), p15.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(14, null);
 							btnhumano15.setEnabled(false);
 							btn_14.setEnabled(true);
 							btn_14.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p15) == 2) {
 								arrayTabuleiro.add(p15);
+								arrayH.set(14, null);
 								btnhumano15.setEnabled(false);
 								btn_14.setEnabled(true);
 								btn_14.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l15 + ".png"));
@@ -43127,8 +43518,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -43204,12 +43594,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p15.getLadoDireito(), p15.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(14, null);
 							btnhumano15.setEnabled(false);
 							btn_15.setEnabled(true);
 							btn_15.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p15) == 2) {
 								arrayTabuleiro.add(p15);
+								arrayH.set(14, null);
 								btnhumano15.setEnabled(false);
 								btn_15.setEnabled(true);
 								btn_15.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l15 + ".png"));
@@ -43234,8 +43626,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -43310,12 +43701,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p15.getLadoDireito(), p15.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(14, null);
 							btnhumano15.setEnabled(false);
 							btn_16.setEnabled(true);
 							btn_16.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p15) == 2) {
 								arrayTabuleiro.add(p15);
+								arrayH.set(14, null);
 								btnhumano15.setEnabled(false);
 								btn_16.setEnabled(true);
 								btn_16.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l15 + ".png"));
@@ -43340,8 +43733,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -43416,12 +43808,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p15.getLadoDireito(), p15.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(14, null);
 							btnhumano15.setEnabled(false);
 							btn_17.setEnabled(true);
 							btn_17.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p15) == 2) {
 								arrayTabuleiro.add(p15);
+								arrayH.set(14, null);
 								btnhumano15.setEnabled(false);
 								btn_17.setEnabled(true);
 								btn_17.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l15 + ".png"));
@@ -43447,8 +43841,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -43523,12 +43916,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p15.getLadoDireito(), p15.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(14, null);
 							btnhumano15.setEnabled(false);
 							btn_18.setEnabled(true);
 							btn_18.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p15) == 2) {
 								arrayTabuleiro.add(p15);
+								arrayH.set(14, null);
 								btnhumano15.setEnabled(false);
 								btn_18.setEnabled(true);
 								btn_18.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l15 + ".png"));
@@ -43554,8 +43949,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -43630,12 +44024,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p15.getLadoDireito(), p15.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(14, null);
 							btnhumano15.setEnabled(false);
 							btn_19.setEnabled(true);
 							btn_19.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p15) == 2) {
 								arrayTabuleiro.add(p15);
+								arrayH.set(14, null);
 								btnhumano15.setEnabled(false);
 								btn_19.setEnabled(true);
 								btn_19.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l15 + ".png"));
@@ -43661,8 +44057,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -43737,12 +44132,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p15.getLadoDireito(), p15.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(14, null);
 							btnhumano15.setEnabled(false);
 							btn_20.setEnabled(true);
 							btn_20.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p15) == 2) {
 								arrayTabuleiro.add(p15);
+								arrayH.set(14, null);
 								btnhumano15.setEnabled(false);
 								btn_20.setEnabled(true);
 								btn_20.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l15 + ".png"));
@@ -43768,8 +44165,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -43844,12 +44240,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p15.getLadoDireito(), p15.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(14, null);
 							btnhumano15.setEnabled(false);
 							btn_21.setEnabled(true);
 							btn_21.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p15) == 2) {
 								arrayTabuleiro.add(p15);
+								arrayH.set(14, null);
 								btnhumano15.setEnabled(false);
 								btn_21.setEnabled(true);
 								btn_21.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l15 + ".png"));
@@ -43875,8 +44273,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -43951,12 +44348,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p15.getLadoDireito(), p15.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(14, null);
 							btnhumano15.setEnabled(false);
 							btn_22.setEnabled(true);
 							btn_22.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p15) == 2) {
 								arrayTabuleiro.add(p15);
+								arrayH.set(14, null);
 								btnhumano15.setEnabled(false);
 								btn_22.setEnabled(true);
 								btn_22.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l15 + ".png"));
@@ -43982,8 +44381,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -44058,12 +44456,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p15.getLadoDireito(), p15.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(14, null);
 							btnhumano15.setEnabled(false);
 							btn_23.setEnabled(true);
 							btn_23.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p15) == 2) {
 								arrayTabuleiro.add(p15);
+								arrayH.set(14, null);
 								btnhumano15.setEnabled(false);
 								btn_23.setEnabled(true);
 								btn_23.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l15 + ".png"));
@@ -44089,8 +44489,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -44165,12 +44564,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p15.getLadoDireito(), p15.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(14, null);
 							btnhumano15.setEnabled(false);
 							btn_24.setEnabled(true);
 							btn_24.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p15) == 2) {
 								arrayTabuleiro.add(p15);
+								arrayH.set(14, null);
 								btnhumano15.setEnabled(false);
 								btn_24.setEnabled(true);
 								btn_24.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l15 + ".png"));
@@ -44196,8 +44597,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -44272,12 +44672,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p15.getLadoDireito(), p15.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(14, null);
 							btnhumano15.setEnabled(false);
 							btn_25.setEnabled(true);
 							btn_25.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p15) == 2) {
 								arrayTabuleiro.add(p15);
+								arrayH.set(14, null);
 								btnhumano15.setEnabled(false);
 								btn_25.setEnabled(true);
 								btn_25.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l15 + ".png"));
@@ -44303,8 +44705,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -44379,12 +44780,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p15.getLadoDireito(), p15.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(14, null);
 							btnhumano15.setEnabled(false);
 							btn_26.setEnabled(true);
 							btn_26.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p15) == 2) {
 								arrayTabuleiro.add(p15);
+								arrayH.set(14, null);
 								btnhumano15.setEnabled(false);
 								btn_26.setEnabled(true);
 								btn_26.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l15 + ".png"));
@@ -44410,8 +44813,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -44486,12 +44888,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p15.getLadoDireito(), p15.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(14, null);
 							btnhumano15.setEnabled(false);
 							btn_27.setEnabled(true);
 							btn_27.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p15) == 2) {
 								arrayTabuleiro.add(p15);
+								arrayH.set(14, null);
 								btnhumano15.setEnabled(false);
 								btn_27.setEnabled(true);
 								btn_27.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l15 + ".png"));
@@ -44517,8 +44921,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -44593,12 +44996,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p15.getLadoDireito(), p15.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(14, null);
 							btnhumano15.setEnabled(false);
 							btn_28.setEnabled(true);
 							btn_28.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p15) == 2) {
 								arrayTabuleiro.add(p15);
+								arrayH.set(14, null);
 								btnhumano15.setEnabled(false);
 								btn_28.setEnabled(true);
 								btn_28.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l15 + ".png"));
@@ -44623,8 +45028,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -44715,12 +45119,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p16) == 1) {
 							Pecas novop = new Pecas(p16.getLadoDireito(), p16.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(15, null);
 							btnhumano16.setEnabled(false);
 							btn_1.setEnabled(true);
 							btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p16) == 2) {
 								arrayTabuleiro.add(p16);
+								arrayH.set(15, null);
 								btnhumano16.setEnabled(false);
 								btn_1.setEnabled(true);
 								btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l16 + ".png"));
@@ -44745,8 +45151,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -44816,12 +45221,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p16) == 1) {
 							Pecas novop = new Pecas(p16.getLadoDireito(), p16.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(15, null);
 							btnhumano16.setEnabled(false);
 							btn_2.setEnabled(true);
 							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p16) == 2) {
 								arrayTabuleiro.add(p16);
+								arrayH.set(15, null);
 								btnhumano16.setEnabled(false);
 								btn_2.setEnabled(true);
 								btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l16 + ".png"));
@@ -44846,8 +45253,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -44917,12 +45323,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p16) == 1) {
 							Pecas novop = new Pecas(p16.getLadoDireito(), p16.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(15, null);
 							btnhumano16.setEnabled(false);
 							btn_3.setEnabled(true);
 							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p16) == 2) {
 								arrayTabuleiro.add(p16);
+								arrayH.set(15, null);
 								btnhumano16.setEnabled(false);
 								btn_3.setEnabled(true);
 								btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l16 + ".png"));
@@ -44947,8 +45355,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -45018,12 +45425,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p16) == 1) {
 							Pecas novop = new Pecas(p16.getLadoDireito(), p16.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(15, null);
 							btnhumano16.setEnabled(false);
 							btn_4.setEnabled(true);
 							btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p16) == 2) {
 								arrayTabuleiro.add(p16);
+								arrayH.set(15, null);
 								btnhumano16.setEnabled(false);
 								btn_4.setEnabled(true);
 								btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l16 + ".png"));
@@ -45048,8 +45457,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -45119,12 +45527,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p16) == 1) {
 							Pecas novop = new Pecas(p16.getLadoDireito(), p16.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(15, null);
 							btnhumano16.setEnabled(false);
 							btn_5.setEnabled(true);
 							btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p16) == 2) {
 								arrayTabuleiro.add(p16);
+								arrayH.set(15, null);
 								btnhumano16.setEnabled(false);
 								btn_5.setEnabled(true);
 								btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l16 + ".png"));
@@ -45149,8 +45559,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -45221,12 +45630,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p16) == 1) {
 							Pecas novop = new Pecas(p16.getLadoDireito(), p16.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(15, null);
 							btnhumano16.setEnabled(false);
 							btn_6.setEnabled(true);
 							btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p16) == 2) {
 								arrayTabuleiro.add(p16);
+								arrayH.set(15, null);
 								btnhumano16.setEnabled(false);
 								btn_6.setEnabled(true);
 								btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l16 + ".png"));
@@ -45252,8 +45663,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -45324,12 +45734,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p16) == 1) {
 							Pecas novop = new Pecas(p16.getLadoDireito(), p16.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(15, null);
 							btnhumano16.setEnabled(false);
 							btn_7.setEnabled(true);
 							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p16) == 2) {
 								arrayTabuleiro.add(p16);
+								arrayH.set(15, null);
 								btnhumano16.setEnabled(false);
 								btn_7.setEnabled(true);
 								btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l16 + ".png"));
@@ -45354,8 +45766,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -45426,12 +45837,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p16) == 1) {
 							Pecas novop = new Pecas(p16.getLadoDireito(), p16.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(15, null);
 							btnhumano16.setEnabled(false);
 							btn_8.setEnabled(true);
 							btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p16) == 2) {
 								arrayTabuleiro.add(p16);
+								arrayH.set(15, null);
 								btnhumano16.setEnabled(false);
 								btn_8.setEnabled(true);
 								btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l16 + ".png"));
@@ -45456,8 +45869,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -45529,12 +45941,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p16) == 1) {
 							Pecas novop = new Pecas(p16.getLadoDireito(), p16.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(15, null);
 							btnhumano16.setEnabled(false);
 							btn_9.setEnabled(true);
 							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p16) == 2) {
 								arrayTabuleiro.add(p16);
+								arrayH.set(15, null);
 								btnhumano16.setEnabled(false);
 								btn_9.setEnabled(true);
 								btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l16 + ".png"));
@@ -45559,8 +45973,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -45632,12 +46045,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p16) == 1) {
 							Pecas novop = new Pecas(p16.getLadoDireito(), p16.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(15, null);
 							btnhumano16.setEnabled(false);
 							btn_10.setEnabled(true);
 							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p16) == 2) {
 								arrayTabuleiro.add(p16);
+								arrayH.set(15, null);
 								btnhumano16.setEnabled(false);
 								btn_10.setEnabled(true);
 								btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l16 + ".png"));
@@ -45662,8 +46077,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -45735,12 +46149,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p16) == 1) {
 							Pecas novop = new Pecas(p16.getLadoDireito(), p16.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(15, null);
 							btnhumano16.setEnabled(false);
 							btn_11.setEnabled(true);
 							btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p16) == 2) {
 								arrayTabuleiro.add(p16);
+								arrayH.set(15, null);
 								btnhumano16.setEnabled(false);
 								btn_11.setEnabled(true);
 								btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l16 + ".png"));
@@ -45765,8 +46181,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -45838,12 +46253,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p16) == 1) {
 							Pecas novop = new Pecas(p16.getLadoDireito(), p16.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(15, null);
 							btnhumano16.setEnabled(false);
 							btn_12.setEnabled(true);
 							btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p16) == 2) {
 								arrayTabuleiro.add(p16);
+								arrayH.set(15, null);
 								btnhumano16.setEnabled(false);
 								btn_12.setEnabled(true);
 								btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l16 + ".png"));
@@ -45867,8 +46284,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -45940,6 +46356,7 @@ public class TelaDoJogo extends JFrame {
 					} else {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p16) == 1) {
 							arrayTabuleiro.add(p16);
+							arrayH.set(15, null);
 							btnhumano16.setEnabled(false);
 							btn_13.setEnabled(true);
 							btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l16 + ".png"));
@@ -45951,6 +46368,7 @@ public class TelaDoJogo extends JFrame {
 								// no array.
 								Pecas novop = new Pecas(p16.getLadoDireito(), p16.getLadoEsquerdo());
 								arrayTabuleiro.add(novop);
+								arrayH.set(15, null);
 								btnhumano16.setEnabled(false);
 								btn_13.setEnabled(true);
 								btn_13.setIcon(
@@ -45976,8 +46394,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -46052,12 +46469,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p16.getLadoDireito(), p16.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(15, null);
 							btnhumano16.setEnabled(false);
 							btn_14.setEnabled(true);
 							btn_14.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p16) == 2) {
 								arrayTabuleiro.add(p16);
+								arrayH.set(15, null);
 								btnhumano16.setEnabled(false);
 								btn_14.setEnabled(true);
 								btn_14.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l16 + ".png"));
@@ -46082,8 +46501,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -46159,12 +46577,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p16.getLadoDireito(), p16.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(15, null);
 							btnhumano16.setEnabled(false);
 							btn_15.setEnabled(true);
 							btn_15.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p16) == 2) {
 								arrayTabuleiro.add(p16);
+								arrayH.set(15, null);
 								btnhumano16.setEnabled(false);
 								btn_15.setEnabled(true);
 								btn_15.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l16 + ".png"));
@@ -46189,8 +46609,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -46265,12 +46684,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p16.getLadoDireito(), p16.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(15, null);
 							btnhumano16.setEnabled(false);
 							btn_16.setEnabled(true);
 							btn_16.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p16) == 2) {
 								arrayTabuleiro.add(p16);
+								arrayH.set(15, null);
 								btnhumano16.setEnabled(false);
 								btn_16.setEnabled(true);
 								btn_16.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l16 + ".png"));
@@ -46295,8 +46716,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -46371,12 +46791,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p16.getLadoDireito(), p16.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(15, null);
 							btnhumano16.setEnabled(false);
 							btn_17.setEnabled(true);
 							btn_17.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p16) == 2) {
 								arrayTabuleiro.add(p16);
+								arrayH.set(15, null);
 								btnhumano16.setEnabled(false);
 								btn_17.setEnabled(true);
 								btn_17.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l16 + ".png"));
@@ -46402,8 +46824,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -46478,12 +46899,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p16.getLadoDireito(), p16.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(15, null);
 							btnhumano16.setEnabled(false);
 							btn_18.setEnabled(true);
 							btn_18.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p16) == 2) {
 								arrayTabuleiro.add(p16);
+								arrayH.set(15, null);
 								btnhumano16.setEnabled(false);
 								btn_18.setEnabled(true);
 								btn_18.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l16 + ".png"));
@@ -46509,8 +46932,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -46585,12 +47007,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p16.getLadoDireito(), p16.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(15, null);
 							btnhumano16.setEnabled(false);
 							btn_19.setEnabled(true);
 							btn_19.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p16) == 2) {
 								arrayTabuleiro.add(p16);
+								arrayH.set(15, null);
 								btnhumano16.setEnabled(false);
 								btn_19.setEnabled(true);
 								btn_19.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l16 + ".png"));
@@ -46616,8 +47040,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -46692,12 +47115,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p16.getLadoDireito(), p16.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(15, null);
 							btnhumano16.setEnabled(false);
 							btn_20.setEnabled(true);
 							btn_20.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p16) == 2) {
 								arrayTabuleiro.add(p16);
+								arrayH.set(15, null);
 								btnhumano16.setEnabled(false);
 								btn_20.setEnabled(true);
 								btn_20.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l16 + ".png"));
@@ -46723,8 +47148,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -46799,12 +47223,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p16.getLadoDireito(), p16.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(15, null);
 							btnhumano16.setEnabled(false);
 							btn_21.setEnabled(true);
 							btn_21.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p16) == 2) {
 								arrayTabuleiro.add(p16);
+								arrayH.set(15, null);
 								btnhumano16.setEnabled(false);
 								btn_21.setEnabled(true);
 								btn_21.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l16 + ".png"));
@@ -46830,8 +47256,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -46906,12 +47331,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p16.getLadoDireito(), p16.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(15, null);
 							btnhumano16.setEnabled(false);
 							btn_22.setEnabled(true);
 							btn_22.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p16) == 2) {
 								arrayTabuleiro.add(p16);
+								arrayH.set(15, null);
 								btnhumano16.setEnabled(false);
 								btn_22.setEnabled(true);
 								btn_22.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l16 + ".png"));
@@ -46937,8 +47364,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -47013,12 +47439,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p16.getLadoDireito(), p16.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(15, null);
 							btnhumano16.setEnabled(false);
 							btn_23.setEnabled(true);
 							btn_23.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p16) == 2) {
 								arrayTabuleiro.add(p16);
+								arrayH.set(15, null);
 								btnhumano16.setEnabled(false);
 								btn_23.setEnabled(true);
 								btn_23.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l16 + ".png"));
@@ -47044,8 +47472,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -47120,12 +47547,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p16.getLadoDireito(), p16.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(15, null);
 							btnhumano16.setEnabled(false);
 							btn_24.setEnabled(true);
 							btn_24.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p16) == 2) {
 								arrayTabuleiro.add(p16);
+								arrayH.set(15, null);
 								btnhumano16.setEnabled(false);
 								btn_24.setEnabled(true);
 								btn_24.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l16 + ".png"));
@@ -47151,8 +47580,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -47227,12 +47655,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p16.getLadoDireito(), p16.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(15, null);
 							btnhumano16.setEnabled(false);
 							btn_25.setEnabled(true);
 							btn_25.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p16) == 2) {
 								arrayTabuleiro.add(p16);
+								arrayH.set(15, null);
 								btnhumano16.setEnabled(false);
 								btn_25.setEnabled(true);
 								btn_25.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l16 + ".png"));
@@ -47258,8 +47688,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -47334,12 +47763,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p16.getLadoDireito(), p16.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(15, null);
 							btnhumano16.setEnabled(false);
 							btn_26.setEnabled(true);
 							btn_26.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p16) == 2) {
 								arrayTabuleiro.add(p16);
+								arrayH.set(15, null);
 								btnhumano16.setEnabled(false);
 								btn_26.setEnabled(true);
 								btn_26.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l16 + ".png"));
@@ -47365,8 +47796,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -47441,12 +47871,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p16.getLadoDireito(), p16.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(15, null);
 							btnhumano16.setEnabled(false);
 							btn_27.setEnabled(true);
 							btn_27.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p16) == 2) {
 								arrayTabuleiro.add(p16);
+								arrayH.set(15, null);
 								btnhumano16.setEnabled(false);
 								btn_27.setEnabled(true);
 								btn_27.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l16 + ".png"));
@@ -47472,8 +47904,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -47548,12 +47979,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p16.getLadoDireito(), p16.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(15, null);
 							btnhumano16.setEnabled(false);
 							btn_28.setEnabled(true);
 							btn_28.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p16) == 2) {
 								arrayTabuleiro.add(p16);
+								arrayH.set(15, null);
 								btnhumano16.setEnabled(false);
 								btn_28.setEnabled(true);
 								btn_28.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l16 + ".png"));
@@ -47578,8 +48011,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -47671,12 +48103,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p17) == 1) {
 							Pecas novop = new Pecas(p17.getLadoDireito(), p17.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(16, null);
 							btnhumano17.setEnabled(false);
 							btn_1.setEnabled(true);
 							btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p17) == 2) {
 								arrayTabuleiro.add(p17);
+								arrayH.set(16, null);
 								btnhumano17.setEnabled(false);
 								btn_1.setEnabled(true);
 								btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l17 + ".png"));
@@ -47701,8 +48135,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -47772,12 +48205,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p17) == 1) {
 							Pecas novop = new Pecas(p17.getLadoDireito(), p17.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(16, null);
 							btnhumano17.setEnabled(false);
 							btn_2.setEnabled(true);
 							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p17) == 2) {
 								arrayTabuleiro.add(p17);
+								arrayH.set(16, null);
 								btnhumano17.setEnabled(false);
 								btn_2.setEnabled(true);
 								btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l17 + ".png"));
@@ -47802,8 +48237,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -47873,12 +48307,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p17) == 1) {
 							Pecas novop = new Pecas(p17.getLadoDireito(), p17.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(16, null);
 							btnhumano17.setEnabled(false);
 							btn_3.setEnabled(true);
 							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p17) == 2) {
 								arrayTabuleiro.add(p17);
+								arrayH.set(16, null);
 								btnhumano17.setEnabled(false);
 								btn_3.setEnabled(true);
 								btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l17 + ".png"));
@@ -47903,8 +48339,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -47974,12 +48409,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p17) == 1) {
 							Pecas novop = new Pecas(p17.getLadoDireito(), p17.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(16, null);
 							btnhumano17.setEnabled(false);
 							btn_4.setEnabled(true);
 							btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p17) == 2) {
 								arrayTabuleiro.add(p17);
+								arrayH.set(16, null);
 								btnhumano17.setEnabled(false);
 								btn_4.setEnabled(true);
 								btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l17 + ".png"));
@@ -48003,8 +48440,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -48074,12 +48510,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p17) == 1) {
 							Pecas novop = new Pecas(p17.getLadoDireito(), p17.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(16, null);
 							btnhumano17.setEnabled(false);
 							btn_5.setEnabled(true);
 							btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p17) == 2) {
 								arrayTabuleiro.add(p17);
+								arrayH.set(16, null);
 								btnhumano17.setEnabled(false);
 								btn_5.setEnabled(true);
 								btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l17 + ".png"));
@@ -48104,8 +48542,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -48176,12 +48613,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p17) == 1) {
 							Pecas novop = new Pecas(p17.getLadoDireito(), p17.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(16, null);
 							btnhumano17.setEnabled(false);
 							btn_6.setEnabled(true);
 							btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p17) == 2) {
 								arrayTabuleiro.add(p17);
+								arrayH.set(16, null);
 								btnhumano17.setEnabled(false);
 								btn_6.setEnabled(true);
 								btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l17 + ".png"));
@@ -48207,8 +48646,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -48279,12 +48717,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p17) == 1) {
 							Pecas novop = new Pecas(p17.getLadoDireito(), p17.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(16, null);
 							btnhumano17.setEnabled(false);
 							btn_7.setEnabled(true);
 							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p17) == 2) {
 								arrayTabuleiro.add(p17);
+								arrayH.set(16, null);
 								btnhumano17.setEnabled(false);
 								btn_7.setEnabled(true);
 								btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l17 + ".png"));
@@ -48309,8 +48749,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -48381,12 +48820,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p17) == 1) {
 							Pecas novop = new Pecas(p17.getLadoDireito(), p17.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(16, null);
 							btnhumano17.setEnabled(false);
 							btn_8.setEnabled(true);
 							btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p17) == 2) {
 								arrayTabuleiro.add(p17);
+								arrayH.set(16, null);
 								btnhumano17.setEnabled(false);
 								btn_8.setEnabled(true);
 								btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l17 + ".png"));
@@ -48411,8 +48852,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -48484,12 +48924,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p17) == 1) {
 							Pecas novop = new Pecas(p17.getLadoDireito(), p17.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(16, null);
 							btnhumano17.setEnabled(false);
 							btn_9.setEnabled(true);
 							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p17) == 2) {
 								arrayTabuleiro.add(p17);
+								arrayH.set(16, null);
 								btnhumano17.setEnabled(false);
 								btn_9.setEnabled(true);
 								btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l17 + ".png"));
@@ -48514,8 +48956,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -48587,12 +49028,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p17) == 1) {
 							Pecas novop = new Pecas(p17.getLadoDireito(), p17.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(16, null);
 							btnhumano17.setEnabled(false);
 							btn_10.setEnabled(true);
 							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p17) == 2) {
 								arrayTabuleiro.add(p17);
+								arrayH.set(16, null);
 								btnhumano17.setEnabled(false);
 								btn_10.setEnabled(true);
 								btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l17 + ".png"));
@@ -48617,8 +49060,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -48690,12 +49132,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p17) == 1) {
 							Pecas novop = new Pecas(p17.getLadoDireito(), p17.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(16, null);
 							btnhumano17.setEnabled(false);
 							btn_11.setEnabled(true);
 							btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p17) == 2) {
 								arrayTabuleiro.add(p17);
+								arrayH.set(16, null);
 								btnhumano17.setEnabled(false);
 								btn_11.setEnabled(true);
 								btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l17 + ".png"));
@@ -48720,8 +49164,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -48793,12 +49236,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p17) == 1) {
 							Pecas novop = new Pecas(p17.getLadoDireito(), p17.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(16, null);
 							btnhumano17.setEnabled(false);
 							btn_12.setEnabled(true);
 							btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p17) == 2) {
 								arrayTabuleiro.add(p17);
+								arrayH.set(16, null);
 								btnhumano17.setEnabled(false);
 								btn_12.setEnabled(true);
 								btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l17 + ".png"));
@@ -48822,8 +49267,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -48895,6 +49339,7 @@ public class TelaDoJogo extends JFrame {
 					} else {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p17) == 1) {
 							arrayTabuleiro.add(p17);
+							arrayH.set(16, null);
 							btnhumano17.setEnabled(false);
 							btn_13.setEnabled(true);
 							btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l17 + ".png"));
@@ -48906,6 +49351,7 @@ public class TelaDoJogo extends JFrame {
 								// no array.
 								Pecas novop = new Pecas(p17.getLadoDireito(), p17.getLadoEsquerdo());
 								arrayTabuleiro.add(novop);
+								arrayH.set(16, null);
 								btnhumano17.setEnabled(false);
 								btn_13.setEnabled(true);
 								btn_13.setIcon(
@@ -48931,8 +49377,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -49007,12 +49452,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p17.getLadoDireito(), p17.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(16, null);
 							btnhumano17.setEnabled(false);
 							btn_14.setEnabled(true);
 							btn_14.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p17) == 2) {
 								arrayTabuleiro.add(p17);
+								arrayH.set(16, null);
 								btnhumano17.setEnabled(false);
 								btn_14.setEnabled(true);
 								btn_14.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l17 + ".png"));
@@ -49037,8 +49484,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -49114,12 +49560,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p17.getLadoDireito(), p17.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(16, null);
 							btnhumano17.setEnabled(false);
 							btn_15.setEnabled(true);
 							btn_15.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p17) == 2) {
 								arrayTabuleiro.add(p17);
+								arrayH.set(16, null);
 								btnhumano17.setEnabled(false);
 								btn_15.setEnabled(true);
 								btn_15.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l17 + ".png"));
@@ -49144,8 +49592,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -49220,12 +49667,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p17.getLadoDireito(), p17.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(16, null);
 							btnhumano17.setEnabled(false);
 							btn_16.setEnabled(true);
 							btn_16.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p17) == 2) {
 								arrayTabuleiro.add(p17);
+								arrayH.set(16, null);
 								btnhumano17.setEnabled(false);
 								btn_16.setEnabled(true);
 								btn_16.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l17 + ".png"));
@@ -49250,8 +49699,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -49326,12 +49774,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p17.getLadoDireito(), p17.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(16, null);
 							btnhumano17.setEnabled(false);
 							btn_17.setEnabled(true);
 							btn_17.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p17) == 2) {
 								arrayTabuleiro.add(p17);
+								arrayH.set(16, null);
 								btnhumano17.setEnabled(false);
 								btn_17.setEnabled(true);
 								btn_17.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l17 + ".png"));
@@ -49357,8 +49807,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -49433,12 +49882,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p17.getLadoDireito(), p17.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(16, null);
 							btnhumano17.setEnabled(false);
 							btn_18.setEnabled(true);
 							btn_18.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p17) == 2) {
 								arrayTabuleiro.add(p17);
+								arrayH.set(16, null);
 								btnhumano17.setEnabled(false);
 								btn_18.setEnabled(true);
 								btn_18.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l17 + ".png"));
@@ -49464,8 +49915,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -49540,12 +49990,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p17.getLadoDireito(), p17.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(16, null);
 							btnhumano17.setEnabled(false);
 							btn_19.setEnabled(true);
 							btn_19.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p17) == 2) {
 								arrayTabuleiro.add(p17);
+								arrayH.set(16, null);
 								btnhumano17.setEnabled(false);
 								btn_19.setEnabled(true);
 								btn_19.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l17 + ".png"));
@@ -49571,8 +50023,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -49647,12 +50098,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p17.getLadoDireito(), p17.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(16, null);
 							btnhumano17.setEnabled(false);
 							btn_20.setEnabled(true);
 							btn_20.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p17) == 2) {
 								arrayTabuleiro.add(p17);
+								arrayH.set(16, null);
 								btnhumano17.setEnabled(false);
 								btn_20.setEnabled(true);
 								btn_20.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l17 + ".png"));
@@ -49678,8 +50131,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -49754,12 +50206,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p17.getLadoDireito(), p17.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(16, null);
 							btnhumano17.setEnabled(false);
 							btn_21.setEnabled(true);
 							btn_21.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p17) == 2) {
 								arrayTabuleiro.add(p17);
+								arrayH.set(16, null);
 								btnhumano17.setEnabled(false);
 								btn_21.setEnabled(true);
 								btn_21.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l17 + ".png"));
@@ -49785,8 +50239,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -49861,12 +50314,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p17.getLadoDireito(), p17.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(16, null);
 							btnhumano17.setEnabled(false);
 							btn_22.setEnabled(true);
 							btn_22.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p17) == 2) {
 								arrayTabuleiro.add(p17);
+								arrayH.set(16, null);
 								btnhumano17.setEnabled(false);
 								btn_22.setEnabled(true);
 								btn_22.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l17 + ".png"));
@@ -49892,8 +50347,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -49968,12 +50422,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p17.getLadoDireito(), p17.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(16, null);
 							btnhumano17.setEnabled(false);
 							btn_23.setEnabled(true);
 							btn_23.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p17) == 2) {
 								arrayTabuleiro.add(p17);
+								arrayH.set(16, null);
 								btnhumano17.setEnabled(false);
 								btn_23.setEnabled(true);
 								btn_23.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l17 + ".png"));
@@ -49999,8 +50455,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -50075,12 +50530,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p17.getLadoDireito(), p17.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(16, null);
 							btnhumano17.setEnabled(false);
 							btn_24.setEnabled(true);
 							btn_24.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p17) == 2) {
 								arrayTabuleiro.add(p17);
+								arrayH.set(16, null);
 								btnhumano17.setEnabled(false);
 								btn_24.setEnabled(true);
 								btn_24.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l17 + ".png"));
@@ -50106,8 +50563,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -50182,12 +50638,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p17.getLadoDireito(), p17.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(16, null);
 							btnhumano17.setEnabled(false);
 							btn_25.setEnabled(true);
 							btn_25.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p17) == 2) {
 								arrayTabuleiro.add(p17);
+								arrayH.set(16, null);
 								btnhumano17.setEnabled(false);
 								btn_25.setEnabled(true);
 								btn_25.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l17 + ".png"));
@@ -50213,8 +50671,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -50289,12 +50746,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p17.getLadoDireito(), p17.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(16, null);
 							btnhumano17.setEnabled(false);
 							btn_26.setEnabled(true);
 							btn_26.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p17) == 2) {
 								arrayTabuleiro.add(p17);
+								arrayH.set(16, null);
 								btnhumano17.setEnabled(false);
 								btn_26.setEnabled(true);
 								btn_26.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l17 + ".png"));
@@ -50320,8 +50779,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -50396,12 +50854,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p17.getLadoDireito(), p17.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(16, null);
 							btnhumano17.setEnabled(false);
 							btn_27.setEnabled(true);
 							btn_27.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p17) == 2) {
 								arrayTabuleiro.add(p17);
+								arrayH.set(16, null);
 								btnhumano17.setEnabled(false);
 								btn_27.setEnabled(true);
 								btn_27.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l17 + ".png"));
@@ -50427,8 +50887,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -50503,6 +50962,7 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p17.getLadoDireito(), p17.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(16, null);
 							btnhumano17.setEnabled(false);
 							btn_28.setEnabled(true);
 							btn_28.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
@@ -50533,8 +50993,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -50626,12 +51085,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p18) == 1) {
 							Pecas novop = new Pecas(p18.getLadoDireito(), p18.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(17, null);
 							btnhumano18.setEnabled(false);
 							btn_1.setEnabled(true);
 							btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p18) == 2) {
 								arrayTabuleiro.add(p18);
+								arrayH.set(17, null);
 								btnhumano18.setEnabled(false);
 								btn_1.setEnabled(true);
 								btn_1.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l18 + ".png"));
@@ -50656,8 +51117,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -50727,12 +51187,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p18) == 1) {
 							Pecas novop = new Pecas(p18.getLadoDireito(), p18.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(17, null);
 							btnhumano18.setEnabled(false);
 							btn_2.setEnabled(true);
 							btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p18) == 2) {
 								arrayTabuleiro.add(p18);
+								arrayH.set(17, null);
 								btnhumano18.setEnabled(false);
 								btn_2.setEnabled(true);
 								btn_2.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l18 + ".png"));
@@ -50757,8 +51219,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -50828,12 +51289,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p18) == 1) {
 							Pecas novop = new Pecas(p18.getLadoDireito(), p18.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(17, null);
 							btnhumano18.setEnabled(false);
 							btn_3.setEnabled(true);
 							btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p18) == 2) {
 								arrayTabuleiro.add(p18);
+								arrayH.set(17, null);
 								btnhumano18.setEnabled(false);
 								btn_3.setEnabled(true);
 								btn_3.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l18 + ".png"));
@@ -50858,8 +51321,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -50929,12 +51391,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p18) == 1) {
 							Pecas novop = new Pecas(p18.getLadoDireito(), p18.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(17, null);
 							btnhumano18.setEnabled(false);
 							btn_4.setEnabled(true);
 							btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p18) == 2) {
 								arrayTabuleiro.add(p18);
+								arrayH.set(17, null);
 								btnhumano18.setEnabled(false);
 								btn_4.setEnabled(true);
 								btn_4.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l18 + ".png"));
@@ -50959,8 +51423,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -51030,12 +51493,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p18) == 1) {
 							Pecas novop = new Pecas(p18.getLadoDireito(), p18.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(17, null);
 							btnhumano18.setEnabled(false);
 							btn_5.setEnabled(true);
 							btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p18) == 2) {
 								arrayTabuleiro.add(p18);
+								arrayH.set(17, null);
 								btnhumano18.setEnabled(false);
 								btn_5.setEnabled(true);
 								btn_5.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l18 + ".png"));
@@ -51060,8 +51525,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -51132,12 +51596,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p18) == 1) {
 							Pecas novop = new Pecas(p18.getLadoDireito(), p18.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(17, null);
 							btnhumano18.setEnabled(false);
 							btn_6.setEnabled(true);
 							btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p18) == 2) {
 								arrayTabuleiro.add(p18);
+								arrayH.set(17, null);
 								btnhumano18.setEnabled(false);
 								btn_6.setEnabled(true);
 								btn_6.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l18 + ".png"));
@@ -51163,8 +51629,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -51235,12 +51700,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p18) == 1) {
 							Pecas novop = new Pecas(p18.getLadoDireito(), p18.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(17, null);
 							btnhumano18.setEnabled(false);
 							btn_7.setEnabled(true);
 							btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p18) == 2) {
 								arrayTabuleiro.add(p18);
+								arrayH.set(17, null);
 								btnhumano18.setEnabled(false);
 								btn_7.setEnabled(true);
 								btn_7.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l18 + ".png"));
@@ -51265,8 +51732,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -51337,12 +51803,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p18) == 1) {
 							Pecas novop = new Pecas(p18.getLadoDireito(), p18.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(17, null);
 							btnhumano18.setEnabled(false);
 							btn_8.setEnabled(true);
 							btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p18) == 2) {
 								arrayTabuleiro.add(p18);
+								arrayH.set(17, null);
 								btnhumano18.setEnabled(false);
 								btn_8.setEnabled(true);
 								btn_8.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l18 + ".png"));
@@ -51367,8 +51835,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -51440,12 +51907,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p18) == 1) {
 							Pecas novop = new Pecas(p18.getLadoDireito(), p18.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(17, null);
 							btnhumano18.setEnabled(false);
 							btn_9.setEnabled(true);
 							btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p18) == 2) {
 								arrayTabuleiro.add(p18);
+								arrayH.set(17, null);
 								btnhumano18.setEnabled(false);
 								btn_9.setEnabled(true);
 								btn_9.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l18 + ".png"));
@@ -51470,8 +51939,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -51543,12 +52011,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p18) == 1) {
 							Pecas novop = new Pecas(p18.getLadoDireito(), p18.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(17, null);
 							btnhumano18.setEnabled(false);
 							btn_10.setEnabled(true);
 							btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p18) == 2) {
 								arrayTabuleiro.add(p18);
+								arrayH.set(17, null);
 								btnhumano18.setEnabled(false);
 								btn_10.setEnabled(true);
 								btn_10.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l18 + ".png"));
@@ -51573,8 +52043,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -51646,12 +52115,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p18) == 1) {
 							Pecas novop = new Pecas(p18.getLadoDireito(), p18.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(17, null);
 							btnhumano18.setEnabled(false);
 							btn_11.setEnabled(true);
 							btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p18) == 2) {
 								arrayTabuleiro.add(p18);
+								arrayH.set(17, null);
 								btnhumano18.setEnabled(false);
 								btn_11.setEnabled(true);
 								btn_11.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l18 + ".png"));
@@ -51676,8 +52147,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -51749,12 +52219,14 @@ public class TelaDoJogo extends JFrame {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p18) == 1) {
 							Pecas novop = new Pecas(p18.getLadoDireito(), p18.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(17, null);
 							btnhumano18.setEnabled(false);
 							btn_12.setEnabled(true);
 							btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p18) == 2) {
 								arrayTabuleiro.add(p18);
+								arrayH.set(17, null);
 								btnhumano18.setEnabled(false);
 								btn_12.setEnabled(true);
 								btn_12.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l18 + ".png"));
@@ -51778,8 +52250,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -51851,6 +52322,7 @@ public class TelaDoJogo extends JFrame {
 					} else {
 						if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p18) == 1) {
 							arrayTabuleiro.add(p18);
+							arrayH.set(17, null);
 							btnhumano18.setEnabled(false);
 							btn_13.setEnabled(true);
 							btn_13.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l18 + ".png"));
@@ -51860,7 +52332,9 @@ public class TelaDoJogo extends JFrame {
 
 								Pecas novop = new Pecas(p18.getLadoDireito(), p18.getLadoEsquerdo());
 								arrayTabuleiro.add(novop);
-								arrayTabuleiro.add(p18);
+								arrayH.set(17, null);
+								//arrayTabuleiro.add(p18);
+								//arrayH.set(17, null);
 								btnhumano18.setEnabled(false);
 								btn_13.setEnabled(true);
 								btn_13.setIcon(
@@ -51886,8 +52360,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -51962,12 +52435,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p18.getLadoDireito(), p18.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(17, null);
 							btnhumano18.setEnabled(false);
 							btn_14.setEnabled(true);
 							btn_14.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p18) == 2) {
 								arrayTabuleiro.add(p18);
+								arrayH.set(17, null);
 								btnhumano18.setEnabled(false);
 								btn_14.setEnabled(true);
 								btn_14.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l18 + ".png"));
@@ -51992,8 +52467,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -52069,12 +52543,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p18.getLadoDireito(), p18.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(17, null);
 							btnhumano18.setEnabled(false);
 							btn_15.setEnabled(true);
 							btn_15.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p18) == 2) {
 								arrayTabuleiro.add(p18);
+								arrayH.set(17, null);
 								btnhumano18.setEnabled(false);
 								btn_15.setEnabled(true);
 								btn_15.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l18 + ".png"));
@@ -52099,8 +52575,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -52175,12 +52650,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p18.getLadoDireito(), p18.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(17, null);
 							btnhumano18.setEnabled(false);
 							btn_16.setEnabled(true);
 							btn_16.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p18) == 2) {
 								arrayTabuleiro.add(p18);
+								arrayH.set(17, null);
 								btnhumano18.setEnabled(false);
 								btn_16.setEnabled(true);
 								btn_16.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + l18 + ".png"));
@@ -52205,8 +52682,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -52281,12 +52757,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p18.getLadoDireito(), p18.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(17, null);
 							btnhumano18.setEnabled(false);
 							btn_17.setEnabled(true);
 							btn_17.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p18) == 2) {
 								arrayTabuleiro.add(p18);
+								arrayH.set(17, null);
 								btnhumano18.setEnabled(false);
 								btn_17.setEnabled(true);
 								btn_17.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l18 + ".png"));
@@ -52312,8 +52790,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -52388,12 +52865,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p18.getLadoDireito(), p18.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(17, null);
 							btnhumano18.setEnabled(false);
 							btn_18.setEnabled(true);
 							btn_18.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p18) == 2) {
 								arrayTabuleiro.add(p18);
+								arrayH.set(17, null);
 								btnhumano18.setEnabled(false);
 								btn_18.setEnabled(true);
 								btn_18.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l18 + ".png"));
@@ -52419,8 +52898,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -52495,12 +52973,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p18.getLadoDireito(), p18.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(17, null);
 							btnhumano18.setEnabled(false);
 							btn_19.setEnabled(true);
 							btn_19.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p18) == 2) {
 								arrayTabuleiro.add(p18);
+								arrayH.set(17, null);
 								btnhumano18.setEnabled(false);
 								btn_19.setEnabled(true);
 								btn_19.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l18 + ".png"));
@@ -52526,8 +53006,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -52602,12 +53081,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p18.getLadoDireito(), p18.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(17, null);
 							btnhumano18.setEnabled(false);
 							btn_20.setEnabled(true);
 							btn_20.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p18) == 2) {
 								arrayTabuleiro.add(p18);
+								arrayH.set(17, null);
 								btnhumano18.setEnabled(false);
 								btn_20.setEnabled(true);
 								btn_20.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l18 + ".png"));
@@ -52633,8 +53114,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -52709,12 +53189,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p18.getLadoDireito(), p18.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(17, null);
 							btnhumano18.setEnabled(false);
 							btn_21.setEnabled(true);
 							btn_21.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p18) == 2) {
 								arrayTabuleiro.add(p18);
+								arrayH.set(17, null);
 								btnhumano18.setEnabled(false);
 								btn_21.setEnabled(true);
 								btn_21.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l18 + ".png"));
@@ -52739,8 +53221,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -52815,12 +53296,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p18.getLadoDireito(), p18.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(17, null);
 							btnhumano18.setEnabled(false);
 							btn_22.setEnabled(true);
 							btn_22.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p18) == 2) {
 								arrayTabuleiro.add(p18);
+								arrayH.set(17, null);
 								btnhumano18.setEnabled(false);
 								btn_22.setEnabled(true);
 								btn_22.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l18 + ".png"));
@@ -52846,8 +53329,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -52922,12 +53404,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p18.getLadoDireito(), p18.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(17, null);
 							btnhumano18.setEnabled(false);
 							btn_23.setEnabled(true);
 							btn_23.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p18) == 2) {
 								arrayTabuleiro.add(p18);
+								arrayH.set(17, null);
 								btnhumano18.setEnabled(false);
 								btn_23.setEnabled(true);
 								btn_23.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l18 + ".png"));
@@ -52953,8 +53437,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -53029,12 +53512,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p18.getLadoDireito(), p18.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(17, null);
 							btnhumano18.setEnabled(false);
 							btn_24.setEnabled(true);
 							btn_24.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p18) == 2) {
 								arrayTabuleiro.add(p18);
+								arrayH.set(17, null);
 								btnhumano18.setEnabled(false);
 								btn_24.setEnabled(true);
 								btn_24.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l18 + ".png"));
@@ -53059,8 +53544,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -53135,12 +53619,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p18.getLadoDireito(), p18.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(17, null);
 							btnhumano18.setEnabled(false);
 							btn_25.setEnabled(true);
 							btn_25.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p18) == 2) {
 								arrayTabuleiro.add(p18);
+								arrayH.set(17, null);
 								btnhumano18.setEnabled(false);
 								btn_25.setEnabled(true);
 								btn_25.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l18 + ".png"));
@@ -53166,8 +53652,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -53242,12 +53727,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p18.getLadoDireito(), p18.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(17, null);
 							btnhumano18.setEnabled(false);
 							btn_26.setEnabled(true);
 							btn_26.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p18) == 2) {
 								arrayTabuleiro.add(p18);
+								arrayH.set(17, null);
 								btnhumano18.setEnabled(false);
 								btn_26.setEnabled(true);
 								btn_26.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l18 + ".png"));
@@ -53273,8 +53760,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -53349,12 +53835,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p18.getLadoDireito(), p18.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(17, null);
 							btnhumano18.setEnabled(false);
 							btn_27.setEnabled(true);
 							btn_27.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p18) == 2) {
 								arrayTabuleiro.add(p18);
+								arrayH.set(17, null);
 								btnhumano18.setEnabled(false);
 								btn_27.setEnabled(true);
 								btn_27.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l18 + ".png"));
@@ -53379,8 +53867,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no
@@ -53455,12 +53942,14 @@ public class TelaDoJogo extends JFrame {
 							// no array.
 							Pecas novop = new Pecas(p18.getLadoDireito(), p18.getLadoEsquerdo());
 							arrayTabuleiro.add(novop);
+							arrayH.set(17, null);
 							btnhumano18.setEnabled(false);
 							btn_28.setEnabled(true);
 							btn_28.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + ladob + ladoa + ".png"));
 						} else {
 							if (ac.verificaLadosPedraDireita(arrayTabuleiro, p18) == 2) {
 								arrayTabuleiro.add(p18);
+								arrayH.set(17, null);
 								btnhumano18.setEnabled(false);
 								btn_28.setEnabled(true);
 								btn_28.setIcon(new ImageIcon(".//resource//pecas//horizontais//" + l18 + ".png"));
@@ -53485,8 +53974,7 @@ public class TelaDoJogo extends JFrame {
 							} else {
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
-								
-								
+
 								desabilitaBotoesCompradosMaquina(ac.compraPecaAleatorio(array, arrayM));
 
 								// testa se a pedra comprada pode ser jogada no

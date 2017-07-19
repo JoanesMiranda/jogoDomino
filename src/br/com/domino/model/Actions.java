@@ -284,7 +284,7 @@ public class Actions {
 		return valorPeca;
 	}
 
-	// verifica se alguem venceu o jogo - obs: ainda não está pronto
+	// verifica se alguem venceu o jogo - obs: terminado
 	public int VerificaVencedor(ArrayList<Pecas> humano, ArrayList<Pecas> maquina) {
 		int hu = 0;
 		int retorno = 10;
