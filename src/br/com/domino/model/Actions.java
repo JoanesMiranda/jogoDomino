@@ -179,14 +179,16 @@ public class Actions {
 				valorPeca = m.getLadoEsquerdo().toString() + m.getLadoDireito().toString();
 				// apaga a pedra encontra no array da maquina
 				maquina.remove(maquina.indexOf(m));
+				System.out.println("caso 1");
 				break;
 			} else if (m.getLadoDireito() == tabuleiro.get(tabuleiro.size() - 1).getLadoEsquerdo()) {
 
 				Pecas p = new Pecas(m.getLadoDireito(), m.getLadoEsquerdo());
-				tabuleiro.add(m);
+				tabuleiro.add(p);
 				valorPeca = p.getLadoEsquerdo().toString() + p.getLadoDireito().toString();
 				// apaga a pedra encontra no array da maquina
 				maquina.remove(maquina.indexOf(m));
+				System.out.println("caso 2");
 				break;
 			}
 		}
