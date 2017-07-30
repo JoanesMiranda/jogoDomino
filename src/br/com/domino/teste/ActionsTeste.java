@@ -25,7 +25,7 @@ public class ActionsTeste {
 		action = Actions.getInstance();
 		
 		pecas = new Pecas(4,3);
-		pecaTeste = new Pecas(4,2);
+		pecaTeste = new Pecas(2,4);
 		
 		arrayH = new ArrayList<Pecas>();
 		arrayH.add(pecas);
@@ -60,7 +60,7 @@ public class ActionsTeste {
 	*/
 	@Test
 	public void testVerificaLadosPedraEsquerda() {
-		assertEquals(1, action.verificaLadosPedraEsquerda(tabuleiro, pecaTeste));
+		assertEquals(2, action.verificaLadosPedraEsquerda(tabuleiro, pecaTeste));
 	}
 	
 }
