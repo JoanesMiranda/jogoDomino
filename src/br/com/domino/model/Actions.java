@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
+
 public class Actions {
 
 	private static Actions instance;
@@ -288,15 +289,18 @@ public class Actions {
 
 	// verifica se alguem venceu o jogo - obs: terminado
 	public int VerificaVencedor(ArrayList<Pecas> humano, ArrayList<Pecas> maquina) {
-		int cont = 0;
+//		int cont = 0;
 		int retorno = 10;
 
-		for (Pecas h : humano) {
-			if (h == null) {
-				cont++;
-			}
-		}
-		if (humano.size() == cont) {
+//		for (Pecas h : humano) {
+//			if (h == null) {
+//				cont++;
+//			}
+//		}
+//		if (humano.size() == cont) {
+//			retorno = 1;		
+//		}
+		if(humano.isEmpty()){
 			retorno = 1;
 		}
 

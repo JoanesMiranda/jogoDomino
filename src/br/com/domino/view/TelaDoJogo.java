@@ -19524,17 +19524,21 @@ public class TelaDoJogo extends JFrame {
 						}
 					}
 					/** Inteligência simples da maquina **/
-					if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p7) != 0) {
+					if (ac.verificaLadosPedraEsquerda(arrayTabuleiro, p7) != 0)
+					{
 						String valor = ac.escolhePedraMaquinaVertical(arrayTabuleiro, arrayM);
 
 						/** logica para a compra de peças do jogador maquina **/
-						if (valor == "") {
+						if (valor == "")
+						{
 							//////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 							int i = ac.maquinaCompraPassa();
 							if (i == 0) {
 								JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
-							} else {
+							}
+							else
+							{
 								// escolhe a primeira pedra que encontrar no
 								// array e pega
 
@@ -19544,7 +19548,8 @@ public class TelaDoJogo extends JFrame {
 								// tabuleiro
 								String p = ac.testaPedraCompraMaquinaVertical(arrayTabuleiro, arrayM);
 
-								if (p == "") {
+								if (p == "")
+								{
 									/**
 									 * caso a pedra comprada não possa ser
 									 * jogada no tabuleiro a maquina passa a
@@ -19554,7 +19559,9 @@ public class TelaDoJogo extends JFrame {
 									insereImagenNoBotao(contadorCompraMaquina);
 									JOptionPane.showMessageDialog(null, "Maquina: Passa Jogada ");
 
-								} else {
+								} 
+								else
+								{
 									/**
 									 * caso a pedra comprada possa ser jogada no
 									 * tabuleiro a maquina a insere no
@@ -19578,7 +19585,9 @@ public class TelaDoJogo extends JFrame {
 							 * maquina
 							 **/
 
-						} else {
+						} 
+						else
+						{
 							JOptionPane.showMessageDialog(null, "Jogador da vez: CPU");
 							btn_14.setEnabled(true);
 							btn_14.setIcon(new ImageIcon(".//resource//pecas//verticais2//" + valor + ".png"));
@@ -19586,13 +19595,17 @@ public class TelaDoJogo extends JFrame {
 							JOptionPane.showMessageDialog(null, "Jogador da vez: Homen");
 						}
 					}
-					if (ac.VerificaVencedor(arrayH, arrayM) == 1) {
+					if (ac.VerificaVencedor(arrayH, arrayM) == 1)
+					{
 						JOptionPane.showMessageDialog(null, "Você Venceu o jogo");
-					} else if (ac.VerificaVencedor(arrayH, arrayM) == 0) {
+					} 
+					else if (ac.VerificaVencedor(arrayH, arrayM) == 0)
+					{
 						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
-					for (Pecas i : arrayTabuleiro) {
-						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
+					for (Pecas i : arrayTabuleiro)
+					{
+						System.out.println("Array tabuleiro: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
 					break;
 
@@ -19699,7 +19712,7 @@ public class TelaDoJogo extends JFrame {
 						JOptionPane.showMessageDialog(null, "CPU Venceu o jogo");
 					}
 					for (Pecas i : arrayTabuleiro) {
-						System.out.println("Array tabuliero: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
+						System.out.println("Array tabuleiro: " + i.getLadoEsquerdo() + " " + i.getLadoDireito());
 					}
 					break;
 

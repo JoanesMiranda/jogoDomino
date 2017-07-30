@@ -4,7 +4,7 @@ public class Login {
 
 	private String login;
 	private String senha;
-	private int usuario;
+	private Integer usuario;
 
 	public String getLogin() {
 		return login;
@@ -22,12 +22,13 @@ public class Login {
 		this.senha = senha;
 	}
 
-	public int getUsuario() {
+	public Integer getUsuario() {
 		return usuario;
 	}
 
-	public void setUsuario(int usuario) {
+	public void setUsuario(Integer usuario) {
 		this.usuario = usuario;
 	}
+
 
 }
