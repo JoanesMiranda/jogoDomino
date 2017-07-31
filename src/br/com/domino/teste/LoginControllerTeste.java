@@ -59,11 +59,16 @@ public class LoginControllerTeste {
 
 	// teste 5
 	@Test
+	public void testLoginUsuarioSenhaMenor() throws Exception {
+		assertEquals(true, loginC.loginUsuario("janderson", "12345"));
+	}
+	//teste 6
+	@Test
 	public void testLoginUsuarioCamposVazios() throws Exception {
 		assertEquals(true, loginC.loginUsuario("", ""));
 	}
 
-	// teste 6
+	// teste 7
 	@Test
 	public void testLoginUsuarioSqlInjection() throws Exception {
 		assertEquals(true, loginC.loginUsuario("sqlinjection", " ' OR '1'='1 "));

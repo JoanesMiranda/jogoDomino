@@ -31,14 +31,14 @@ public class ActionsTeste {
 		arrayH.add(pecas);
 		
 		arrayM = new ArrayList<Pecas>();
-		//arrayM.add(pecas);
+		arrayM.add(pecas);
 		
 		tabuleiro = new ArrayList<Pecas>();
 		tabuleiro.add(pecas);		
 		
 	}
 
-	/* teste 7
+	/* teste 8
 	 Se o array humano estiver vazio return 1
 	 */
 	@Test
@@ -46,7 +46,7 @@ public class ActionsTeste {
 		assertEquals(1, action.VerificaVencedor(arrayH, arrayM));
 	}
 	
-	/* teste 8
+	/* teste 9
 	 	Se o array Maquina estiver vazio return 0
 	 */
 	@Test
@@ -54,7 +54,7 @@ public class ActionsTeste {
 		assertEquals(0, action.VerificaVencedor(arrayH, arrayM));
 	}
 	
-	/* teste 9
+	/* teste 10
 	  se o lado esquerdo  ==  ao lado esquerdo return 1
 	  se o lado direito == ao lado esquerdo return 2 
 	*/
